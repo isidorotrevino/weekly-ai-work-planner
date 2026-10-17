@@ -55,4 +55,6 @@ Esto significa que hay una corrección o contrato ejecutable para los hallazgos 
 
 El trabajo técnico se entrega como candidato de D2 para revisión. Cierre de D2, promoción de migraciones y comienzo de implementación completa conservan aprobación explícita del usuario.
 
-Las respuestas explícitas y consultas pendientes están en el [registro de decisiones](../design/D2-DECISIONS.md).
+**Aprobado D2-A09:** retención MVP sin borrado automático hasta política D6. **Aprobado D2-A10:** alcance sintético de D2 e integraciones reales D3–D6, manteniendo SemVer completo como requisito de cierre. No quedan consultas de diseño sin respuesta; queda la validación SemVer y la aprobación final de cierre.
+
+Las respuestas explícitas y el trabajo pendiente están en el [registro de decisiones](../design/D2-DECISIONS.md).

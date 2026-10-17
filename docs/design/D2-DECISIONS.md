@@ -16,15 +16,14 @@ Este registro recoge respuestas explícitas del usuario y distingue propuestas p
 | D2-A06 | SemVer 2.0.0 y rangos compatibles con npm/node-semver | Comparadores, AND/OR, guiones, comodines, caret y tilde; prereleases solo cuando el rango las admite expresamente. Respuesta del usuario: «SemVer 2.0.0 y rangos npm». |
 | D2-A07 | Vocabularios MVP propuestos en V10 | Requisitos: DRAFT/READY/APPROVED/REJECTED/ARCHIVED. Épicas: BACKLOG/READY/IN_PROGRESS/BLOCKED/VERIFYING/DONE/CANCELLED/FAILED/DEFERRED. Intentos: LEASED/RUNNING/VERIFYING/COMPLETED/FAILED/CANCELLED/RECONCILING. Entradas del plan: PLANNED/DEFERRED/CANCELLED. Respuesta: «Aprobar los estados propuestos». |
 | D2-A08 | Separar propietario/migrador, control plane, verificador y administrador de capacidad | Workers sin credenciales SQL; permisos concretos de despliegue por validar en D6. Respuesta del usuario: «Aprobar la separación de roles». |
+| D2-A09 | Retención MVP sin borrado automático hasta aprobar la política de D6 | Conservar metadatos, revisiones, diario y evidencia referenciada; archivar agregados. La política de duración, acceso y recuperación se aprobará en D6 antes de habilitar borrado automático. Respuesta del usuario: «Aprobar la retención propuesta». |
+| D2-A10 | Reparto de validación: persistencia y concurrencia sintéticas en D2; integraciones reales en D3–D6 | Cuotas comerciales, workers/CLI y APIs reales se validarán en D3–D6. SemVer completo sigue siendo obligatorio antes del cierre. Esta aceptación no aprueba cerrar D2. Respuesta del usuario: «Aceptar este reparto de validación». |
 
 Las propuestas V8/V9 ya ejercitan A01–A04 con pruebas sintéticas. A05 es un requisito aprobado cuya validación sigue pendiente. Esta aprobación no cambia los bytes de las migraciones ni afirma que los adaptadores reales estén validados.
 
-## Decisiones consultadas, pendientes de respuesta
+## Estado de las consultas
 
-| ID | Propuesta | Alternativa presentada |
-|---|---|---|
-| D2-P06 | Conservar metadatos, revisiones, diario y evidencia; archivar agregados; no borrar automáticamente hasta aprobar política D6 | Definir el borrado antes de cerrar D2 |
-| D2-P07 | Aceptar persistencia/concurrencia sintéticas en D2, integraciones reales D3–D6; SemVer completo sigue siendo obligatorio | Exigir alguna integración real antes del cierre |
+Todas las consultas de diseño presentadas hasta ahora tienen respuesta. P06 quedó aprobado como A09 y P07 como A10. No hay consultas de diseño pendientes de respuesta; sí trabajo técnico pendiente y una aprobación final de cierre todavía no solicitada.
 
 ## Trabajo técnico obligatorio antes del cierre
 
@@ -33,6 +32,4 @@ Las propuestas V8/V9 ya ejercitan A01–A04 con pruebas sintéticas. A05 es un r
 
 ## Revisión restante
 
-- Retención MVP sin borrado automático hasta definir la política operativa en D6.
-- Aceptación del alcance de simulación de D2 y de las comprobaciones reales que deberán realizarse en D3–D6.
 - Aprobación expresa del cierre de D2, en un paso separado al finalizar estas decisiones.

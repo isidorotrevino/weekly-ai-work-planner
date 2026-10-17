@@ -42,7 +42,9 @@
     "D2-A05: full SemVer interpreter required before D2 closure",
     "D2-A06: SemVer 2.0.0 and npm-compatible ranges",
     "D2-A07: MVP state vocabularies",
-    "D2-A08: deployment role separation; workers without SQL credentials"
+    "D2-A08: deployment role separation; workers without SQL credentials",
+    "D2-A09: preserve referenced records and archive aggregates; no automatic deletion before approved D6 policy",
+    "D2-A10: synthetic persistence/concurrency validation in D2; real integrations in D3-D6; full SemVer still required before closure"
   ],
   "pending_validation": [
     "Full SemVer interpreter and npm-compatible ranges; existing 147 tests only validate the bounded prototype"
