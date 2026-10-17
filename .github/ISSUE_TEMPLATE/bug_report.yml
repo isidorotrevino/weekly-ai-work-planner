@@ -1,0 +1,20 @@
+name: Bug report / Error
+description: Report a reproducible schema, harness, or documentation problem.
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic data. Do not include credentials or private logs. / Usa datos sintéticos; no incluyas credenciales ni logs privados. See SECURITY.md for sensitive reports."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Problema
+      description: Expected and observed behavior, with safe reproduction steps.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / Entorno
+      description: Relevant versions only; omit hostnames, usernames, tokens, and private paths.

@@ -1,0 +1,50 @@
+{
+  "recorded_date": "2026-10-17",
+  "stage": "D2 consolidated draft; review pending",
+  "D1": "approved",
+  "D2_closed": false,
+  "environment": {
+    "postgresql": "16.15",
+    "java": "21",
+    "flyway": "13.10.3",
+    "execution": "Docker"
+  },
+  "tests": {
+    "tests": 147,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_classes": {
+    "audit.ContractAuditTest": 20,
+    "audit.IntegrityContractAuditTest": 15,
+    "audit.LifecycleContractAuditTest": 7,
+    "audit.OwnershipAuditTest": 25,
+    "audit.ProvenanceContractAuditTest": 12,
+    "audit.RecoveryContractAuditTest": 15,
+    "audit.SchemaAuditTest": 53
+  },
+  "scope": "Historical schema characterization and proposed persistence, concurrency and recovery contracts; synthetic data and simulated adapters.",
+  "migrations": {
+    "baseline": "V1-V4",
+    "proposals": "V5-V10"
+  },
+  "full_application_implemented": false,
+  "live_external_integrations_tested": false,
+  "reproduce": "bash testing/D2/run-docker-audit.sh",
+  "raw_evidence": "Generated locally under ignored work/docker-audit/; not distributed in Git.",
+  "recorded_time": "20:31 Europe/Madrid",
+  "approved_D2_decisions": [
+    "D2-A01: physical accounts and immutable journal",
+    "D2-A02: guarded return to reconciliation with new evidence",
+    "D2-A03: three total attempts by default, configurable maximum twenty",
+    "D2-A04: conservative global transaction lock for MVP, no external calls under locks",
+    "D2-A05: full SemVer interpreter required before D2 closure",
+    "D2-A06: SemVer 2.0.0 and npm-compatible ranges",
+    "D2-A07: MVP state vocabularies",
+    "D2-A08: deployment role separation; workers without SQL credentials"
+  ],
+  "pending_validation": [
+    "Full SemVer interpreter and npm-compatible ranges; existing 147 tests only validate the bounded prototype"
+  ]
+}

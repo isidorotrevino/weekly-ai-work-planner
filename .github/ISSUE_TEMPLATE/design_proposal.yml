@@ -1,0 +1,19 @@
+name: Design proposal / Propuesta de diseño
+description: Propose a bounded change to the design or validation contracts.
+title: "[Design]: "
+labels: []
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal and rationale / Propuesta y motivo
+      description: Reference the relevant D1/D2 section and explain the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and validation / Compatibilidad y validación
+      description: Describe invariants, migration impact, and how the proposal can be checked.
+    validations:
+      required: true
