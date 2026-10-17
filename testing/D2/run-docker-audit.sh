@@ -33,7 +33,7 @@ for attempt in {1..30}; do
  sleep 1
 done
 if [[ "$pg_ready" != true ]]; then echo 'PostgreSQL container did not become ready' >&2; exit 1; fi
-for db in d2_baseline d2_proposed d2_hardened d2_upgrade d2_contract; do
+for db in d2_baseline d2_proposed d2_hardened d2_upgrade d2_contract d2_semver_upgrade; do
  docker exec "$pg_container" psql -X -U d2_auditor -d postgres -v ON_ERROR_STOP=1 -c "CREATE DATABASE $db"
 done
 docker exec "$pg_container" psql -X -U d2_auditor -d postgres -At -c 'SELECT version()' > "$audit_work/postgresql-version.txt"

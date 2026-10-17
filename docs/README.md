@@ -7,15 +7,15 @@
 | Document | Purpose / Propósito |
 |---|---|
 | [D1 architecture baseline](design/D1-architecture-baseline.md) | Approved functional architecture / Arquitectura funcional aprobada |
-| [D2 decision register](design/D2-DECISIONS.md) | Approved decisions and pending choices / Decisiones aprobadas y pendientes |
-| [D2 consolidated review](design/D2.8-consolidated-review.md) | Current domain/PostgreSQL draft, in Spanish / Borrador vigente, pendiente de revisión |
+| [D2 decision register](design/D2-DECISIONS.md) | Approved decisions and closure / Decisiones y cierre aprobados |
+| [D2 approved design](design/D2.9-approved.md) | Approved domain/PostgreSQL design, in Spanish / Diseño vigente aprobado |
 | [Validation overview](validation/README.md) | How to interpret and reproduce the checks / Alcance y reproducción |
 | [D2 validation matrix](validation/D2-VALIDATION-MATRIX.md) | Requirements, evidence, and limitations / Requisitos, evidencia y límites |
 | [Portable results](validation/latest-results.json) | Recorded environment and counts, without machine-specific data / Resumen sin datos del equipo |
 
-D1 is approved. D2 remains a draft. Older documents contain statements that were accurate when written; use the consolidated review and validation overview for the current status. Migration paths in the design documents are relative to the repository root.
+D1 and D2 are approved; D2 closed after successful validation and conditional user approval. Older documents contain statements that were accurate when written; use the consolidated review and validation overview for the current status. Migration paths in the design documents are relative to the repository root.
 
-D1 está aprobado y D2 sigue en borrador. Los documentos históricos reflejan su momento de redacción; consulta la consolidación y la validación para el estado vigente. Las rutas de migraciones indicadas en los documentos parten de la raíz del repositorio.
+D1 y D2 están aprobados; D2 se cerró tras validar la condición de aprobación del usuario. Los documentos históricos reflejan su momento de redacción; consulta la consolidación y la validación para el estado vigente. Las rutas de migraciones indicadas en los documentos parten de la raíz del repositorio.
 
 ## Design history / Historial
 
@@ -25,6 +25,7 @@ D1 está aprobado y D2 sigue en borrador. Los documentos históricos reflejan su
 - [D2.5 — integrity proposal](design/history/D2.5-integrity-proposal.md).
 - [D2.6 — physical capacity and transactions](design/history/D2.6-capacity-transaction-contract.md).
 - [D2.7 — relational corrections](design/history/D2.7-relational-corrections.md).
+- [D2.8 — consolidated review before SemVer validation](design/D2.8-consolidated-review.md).
 - [Archived SQL mirrors](archive/sql-markdown/README.md).
 
 The original D1, D2 v0.4 documents, V1–V4 SQL, and SQL mirrors retain their content after relocation. Original import manifests, handoffs, and raw evidence remain local in ignored directories. The test harness reads the relocated D2.4 transition specification directly.

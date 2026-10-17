@@ -6,7 +6,7 @@
 
 Weekly AI Work Planner explora cómo convertir planes de ingeniería en sesiones breves y trazables de trabajo con IA, respetando límites de recursos, dependencias, incidentes y aprobaciones humanas.
 
-**Estado actual: diseño técnico y prototipo ejecutable de validación PostgreSQL.** La arquitectura funcional (D1) está aprobada. El diseño de dominio consolidado (D2) está pendiente de revisión. Todavía no hay una aplicación de planificación, una flota de workers ni una interfaz web ejecutables.
+**Estado actual: diseño técnico y prototipo ejecutable de validación PostgreSQL.** La arquitectura funcional (D1) está aprobada. El diseño de dominio (D2) está aprobado y cerrado tras su validación. Todavía no hay una aplicación de planificación, una flota de workers ni una interfaz web ejecutables.
 
 ## Qué problema aborda
 
@@ -26,7 +26,7 @@ Las entradas previstas son planes Markdown de Gentle-AI y documentos de negocio/
 
 El repositorio incluye migraciones PostgreSQL, propuestas de contratos de persistencia y una batería Java/JUnit. Comprueba contabilidad de capacidad, relaciones, concurrencia, estados, recuperación y procedencia con **datos sintéticos y adaptadores simulados**.
 
-La ejecución registrada del **17 de octubre de 2026** completó **147 comprobaciones sin fallos, errores ni omisiones**, con PostgreSQL 16.15 y Java 21. Algunas pruebas históricas reproducen deliberadamente huecos de versiones anteriores. Consulta el [resumen de validación](docs/validation/README.md) para conocer el alcance y los límites.
+La ejecución registrada del **17 de octubre de 2026** completó **157 comprobaciones sin fallos, errores ni omisiones**, con PostgreSQL 16.15 y Java 21. La batería incluye 29.829 vectores de conformidad SemVer/npm dentro de una prueba JUnit. Algunas pruebas históricas reproducen deliberadamente huecos de versiones anteriores. Consulta el [resumen de validación](docs/validation/README.md) para conocer el alcance y los límites.
 
 ### Ejecutar la auditoría
 
@@ -38,7 +38,7 @@ cd weekly-ai-work-planner
 bash testing/D2/run-docker-audit.sh
 ```
 
-El ejecutor crea cinco bases desechables en un contenedor PostgreSQL temporal, ejecuta Flyway/JUnit y elimina sus contenedores y red al terminar. No publica puertos del host. Guarda logs, metadatos y reportes en `work/docker-audit/`, excluido de Git. Utiliza la batería únicamente con datos de prueba desechables.
+El ejecutor crea seis bases desechables en un contenedor PostgreSQL temporal, ejecuta Flyway/JUnit y elimina sus contenedores y red al terminar. No publica puertos del host. Guarda logs, metadatos y reportes en `work/docker-audit/`, excluido de Git. Utiliza la batería únicamente con datos de prueba desechables.
 
 La [guía de auditoría](testing/D2/README.md) explica la alternativa con PostgreSQL local y cómo seleccionar otras imágenes.
 
@@ -71,12 +71,12 @@ El MVP propuesto no requiere Kafka, Temporal ni Kubernetes. Los worktrees aísla
 .
 ├── README.md / README.es.md    Presentación en inglés y español
 ├── docs/
-│   ├── design/                D1 aprobado y borrador D2 consolidado
+│   ├── design/                Diseños D1 y D2 aprobados
 │   │   └── history/           Iteraciones anteriores
 │   ├── validation/            Cobertura, límites y resultados portables
 │   └── archive/sql-markdown/  Mirrors históricos de V1–V4
 ├── migrations/                SQL V1–V4 preservado
-├── migrations-proposed/       Correcciones y contratos V5–V10 en borrador
+├── migrations-proposed/       Correcciones y contratos V5–V11 en borrador
 ├── testing/D2/                Batería Java/JUnit y ejecutores
 ├── scripts/                   Comprobaciones previas a publicación
 └── .github/                   Plantillas de issues y pull requests
@@ -88,17 +88,17 @@ Los adjuntos originales, notas de continuidad, evidencia bruta, credenciales, ca
 
 1. [Índice de documentación](docs/README.md).
 2. [Arquitectura aprobada — D1](docs/design/D1-architecture-baseline.md).
-3. [Borrador consolidado de D2](docs/design/D2.8-consolidated-review.md).
+3. [Diseño aprobado de D2](docs/design/D2.9-approved.md).
 4. [Matriz de validación](docs/validation/D2-VALIDATION-MATRIX.md) y [resultados portables](docs/validation/latest-results.json).
 
-Las migraciones originales V1–V4 y las propuestas V5–V10 se mantienen separadas. Superar las pruebas no aprueba una propuesta ni la convierte en migración de producción.
+Las migraciones originales V1–V4 y las propuestas V5–V11 se mantienen separadas. La aprobación del diseño no promueve estas propuestas a migraciones de producción; sigue siendo necesaria una revisión previa al despliegue.
 
 ## Hoja de ruta
 
 | Etapa | Alcance | Estado |
 |---|---|---|
 | D1 | Arquitectura funcional | Aprobada |
-| D2 | Dominio y contratos PostgreSQL | Borrador consolidado; revisión pendiente |
+| D2 | Dominio y contratos PostgreSQL | Aprobado y cerrado; prototipo de validación |
 | D3 | Planificación consciente de capacidad | Prevista |
 | D4 | Protocolo de workers y recuperación real | Prevista |
 | D5 | Ingestión e integraciones | Prevista |
@@ -121,3 +121,5 @@ La comprobación revisa archivos versionados y no ignorados para detectar patron
 Este proyecto utiliza la **GNU General Public License, versión 3 exclusivamente** (`GPL-3.0-only`). Consulta [LICENSE](LICENSE), [NOTICE](NOTICE) y la [guía bilingüe de licencia](LICENSING.md).
 
 Puedes usarlo, modificarlo y redistribuirlo, también comercialmente. Al distribuir una versión modificada cubierta por la GPL, debe conservarse esa licencia y proporcionarse el código fuente correspondiente según sus condiciones. Se permiten modificaciones privadas que no se distribuyan; GPLv3 no incorpora la obligación de ofrecer fuentes por uso en red propia de AGPL.
+
+Las atribuciones de terceros se conservan en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

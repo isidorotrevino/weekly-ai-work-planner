@@ -52,7 +52,7 @@ class SchemaAuditTest {
   String a=insert(c,"capacity_allocations","planning_run_id,resource_id,project_id,pool,budget_id",q(run)+","+q(r)+","+q(p)+",'PLANNED',"+q(b));
   String o=insert(c,"operations","task_id,operation_type,idempotency_key,lease_generation",q(t)+",'AUDIT',"+q(key)+",1");
   String o2=insert(c,"operations","task_id,operation_type,idempotency_key",q(t2)+",'AUDIT',"+q(key+"b"));
-  if(c.getCatalog().equals("d2_contract"))sql(c,"UPDATE operations SET context_pack_sha256=repeat('a',64),context_pack_ref='synthetic-context-v1' WHERE id="+q(o));
+  if(Set.of("d2_contract","d2_semver_upgrade").contains(c.getCatalog()))sql(c,"UPDATE operations SET context_pack_sha256=repeat('a',64),context_pack_ref='synthetic-context-v1' WHERE id="+q(o));
   String attempt=insert(c,"execution_attempts","operation_id,attempt_no,worker_id,resource_id,lease_generation,state",q(o)+",1,"+q(w)+","+q(r)+",1,'RUNNING'");
   return new F(p,p2,t,t2,w,w2,r,r2,run,b,b2,b3,a,o,o2,attempt);
  }

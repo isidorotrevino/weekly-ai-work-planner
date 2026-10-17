@@ -2,9 +2,9 @@
 
 ## English
 
-This repository is currently a design and database-validation project. Start with the [documentation index](docs/README.md), the approved D1 baseline, and the consolidated D2 draft.
+This repository is currently a design and database-validation project. Start with the [documentation index](docs/README.md), the approved D1 baseline, and the approved D2 design.
 
-- Discuss architectural changes in an issue before expanding scope. D1 changes need a recorded decision and maintainer approval; D2 remains a draft until explicitly approved.
+- Discuss architectural changes in an issue before expanding scope. D1 changes need a recorded decision and maintainer approval; D2 is approved; changes to approved design decisions require maintainer approval.
 - Keep historical V1–V4 migrations unchanged. Put new SQL proposals in `migrations-proposed/` and describe compatibility and backfill behavior.
 - Add meaningful validation for changes to persistence contracts. Run `bash testing/D2/run-docker-audit.sh` when changing SQL, the harness, or documentation consumed by tests.
 - Explain the problem, resulting behavior, validation performed, and relevant limitations in your pull request.
@@ -15,9 +15,9 @@ For a security concern, follow [SECURITY.md](SECURITY.md) rather than posting se
 
 ## Español
 
-Este repositorio está en fase de diseño y validación de base de datos. Empieza por el [índice](docs/README.md), D1 aprobado y el borrador consolidado de D2.
+Este repositorio está en fase de diseño y validación de base de datos. Empieza por el [índice](docs/README.md), D1 aprobado y el diseño aprobado de D2.
 
-- Comenta cambios de arquitectura en un issue antes de ampliar el alcance. Modificar D1 requiere una decisión registrada y aprobación del mantenedor; D2 sigue en borrador hasta su aprobación expresa.
+- Comenta cambios de arquitectura en un issue antes de ampliar el alcance. Modificar D1 requiere una decisión registrada y aprobación del mantenedor; D2 está aprobado; cambiar decisiones aprobadas requiere aprobación del mantenedor.
 - Conserva V1–V4 sin cambios. Añade SQL propuesto en `migrations-proposed/` y explica compatibilidad y backfill.
 - Verifica los cambios de contratos con pruebas significativas. Ejecuta `bash testing/D2/run-docker-audit.sh` si modificas SQL, la batería o documentación que consumen las pruebas.
 - Describe en el pull request el problema, el comportamiento resultante, las comprobaciones y sus límites.

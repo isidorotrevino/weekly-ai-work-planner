@@ -1,0 +1,110 @@
+{
+  "recorded_date": "2026-10-17",
+  "recorded_timezone": "Europe/Madrid",
+  "result": "PASS",
+  "suites": {
+    "audit.ContractAuditTest": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.IntegrityContractAuditTest": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.LifecycleContractAuditTest": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.OwnershipAuditTest": {
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.ProvenanceContractAuditTest": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.RecoveryContractAuditTest": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.SchemaAuditTest": {
+      "tests": 53,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "audit.SemverContractAuditTest": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "semver_vectors": 29829,
+  "reference": {
+    "reference": "npm/node-semver",
+    "version": "7.7.2",
+    "commit": "281055e7716ef0415a8826972471331989ede58c",
+    "options": {
+      "loose": false,
+      "includePrerelease": false
+    },
+    "stored_versions": "Strict SemVer 2.0.0, no v/= prefix or surrounding whitespace",
+    "upstream_rows": 175,
+    "excluded_upstream_rows": 42,
+    "excluded_options": "loose/includePrerelease, noncanonical stored versions, invalid ranges",
+    "ranges": 231,
+    "versions": 129,
+    "vectors": 29829,
+    "license": "ISC; see THIRD-PARTY-NOTICES.md"
+  },
+  "input_sha256": {
+    "migrations/V1__core_domain.sql": "dc83508b858edcebac48d563bf6e782e782657fbf82ec086a083d3f0660fdd02",
+    "migrations/V2__planning_execution_governance.sql": "566719cda7386e0963cd271435d91aec15daa39f90aa69d547a95ba0cf7ce981",
+    "migrations/V3__capacity_ledger_and_state_history.sql": "170b0c0b3990d8cabcb900523e6c773d0365b99cc404f159b3e76041aba91313",
+    "migrations/V4__transition_rules_and_integrity.sql": "c7529cff6316c4e7bd0934514d47efb0dff7a76ba2d13a0cb4db9f50f4588f14",
+    "migrations-proposed/V10__provenance_and_delivery_contract_draft.sql": "a1e95ecc4b0e8a468cb6145c97b37dcfd375d83036599319e4e8923d9c88becb",
+    "migrations-proposed/V11__semver_contract_draft.sql": "7e0043397faee0f72df810b99d7ba13e86052c33cd532c6fde898fe6abf82673",
+    "migrations-proposed/V5__relational_integrity_draft.sql": "2320f2fde3e77efdf969f56a11402b11dc54b5637f12672cd9a30065b51f739c",
+    "migrations-proposed/V6__movement_and_epic_ownership_draft.sql": "34a784fe3a5318b4c194b6c790dcbcbee3257cff72bf4bb23c6a3d773fa60a4c",
+    "migrations-proposed/V7__sources_pools_and_snapshots_draft.sql": "ee6aa13eac2762e6b2336cd513a50ef05e46101a86135b6f351ecf44f5d56a8a",
+    "migrations-proposed/V8__capacity_contract_draft.sql": "0c7454bc8c5895c51c8acf10798727bb422c0beadda68c58f79078aeeee0b186",
+    "migrations-proposed/V9__execution_guards_contract_draft.sql": "8d80f14535a2c87dd3fd6cbe87698709ff3a45bba532c1f24c744769eaacfa82",
+    "testing/D2/generate-semver-fixtures.cjs": "d0ac80ea16efa3c86f9068894e785ad14f7552e228f57a1f05714baa543e850c",
+    "testing/D2/pom.xml": "63bfa81dc14b66529e40444af82be9fa941d49ea03de73cc47db5b1634435eb2",
+    "testing/D2/run-audit.sh": "e0a45b653acd76ebb767778214938bc8e3370e296359d5416b73f0fc2d731d13",
+    "testing/D2/run-docker-audit.sh": "c3c0c4d360692c9d2885e47c404db5bdc9cf6f88add0b693091fee5f5e255fa1",
+    "testing/D2/src/test/java/audit/ContractAuditTest.java": "f96ddc1d0da416d4b43a1481ffed6fdd8e7b778d3c81732f8b36b764c95d129e",
+    "testing/D2/src/test/java/audit/IntegrityContractAuditTest.java": "735ca6030b3cf84defccb4e07e6a583c849c34fae788e9ee594251f08f835324",
+    "testing/D2/src/test/java/audit/LifecycleContractAuditTest.java": "08c32e56013be0a2c5853be8b6a1c1709667c22a8dde6f17eddad4ca44dcf3b4",
+    "testing/D2/src/test/java/audit/OwnershipAuditTest.java": "7f3e4946145355c732f3569fa525443f285a1581fcd5292753b4e1179ef29c3d",
+    "testing/D2/src/test/java/audit/ProvenanceContractAuditTest.java": "605a725e5231a97990d72bc560e80737e69228dc5a3dd0e1f733217296b27323",
+    "testing/D2/src/test/java/audit/RecoveryContractAuditTest.java": "44754be83761c734654be031a46288aaa50e3e1cc1b04a1e9b31fc7aa785594b",
+    "testing/D2/src/test/java/audit/SchemaAuditTest.java": "a4e966cede99cb93aca4e493accc82520c5bc7b71651aac4efab4ca55f39ed45",
+    "testing/D2/src/test/java/audit/SemverContractAuditTest.java": "4603ad6f672deb4e42bca6dabcedc4edfa22caadfb6eaf27d20002020af40c3b",
+    "testing/D2/src/test/resources/semver/conformance-01.json": "67af5e5d0244f85036afc79f3ef7219a0e6fb7cab45eb6e64deefa6c07180846",
+    "testing/D2/src/test/resources/semver/conformance-02.json": "9da7205b070f4f344fbe11f4aa29ebbdd2b309b3176820df17e75723fc37d515",
+    "testing/D2/src/test/resources/semver/conformance-03.json": "6bb69441846981b14500dc68fdc51cbd06fc609dfab65621ea99538a8396399a",
+    "testing/D2/src/test/resources/semver/conformance-04.json": "2f7c39ece719a5d582892dc3cf7cef5a63e4d34b0a1b06b642c22c3781b6a8b4",
+    "testing/D2/src/test/resources/semver/conformance-05.json": "ea86dca7d3543ee105be1584cbe375423bf41d2e1220e1f65727192891c6a4d4",
+    "testing/D2/src/test/resources/semver/conformance-06.json": "ba915caa4b5b6d5615fa51d6e6407bc24b3a1dccc16b43b76a42d229c529058c",
+    "testing/D2/src/test/resources/semver/metadata.json": "bdb97d36c177a8938eb3ed33dbe0b7f0f0e1777c3bd63e184ccec6a3960d2d24"
+  },
+  "raw_evidence": "Local ignored work/docker-audit/d2-20261017210224-1942107/evidence/",
+  "limitations": [
+    "Synthetic data and effects; no production readiness or live provider/API validation",
+    "Explicit SemVer input and numeric limits documented in D2-SEMVER-VALIDATION.md"
+  ]
+}

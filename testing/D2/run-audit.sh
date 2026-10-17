@@ -14,7 +14,7 @@ mkdir "$audit_run/socket"
 cleanup() { "$pg_bin/pg_ctl" -D "$audit_run/data" -m fast stop > "$audit_run/stop.log" 2>&1 || true; }
 trap cleanup EXIT
 "$pg_bin/pg_ctl" -D "$audit_run/data" -l "$audit_run/postgres.log" -o "-h 127.0.0.1 -p $audit_port -k $audit_run/socket" start
-for db in d2_baseline d2_proposed d2_hardened d2_upgrade d2_contract; do
+for db in d2_baseline d2_proposed d2_hardened d2_upgrade d2_contract d2_semver_upgrade; do
  psql -X -h 127.0.0.1 -p "$audit_port" -U d2_auditor -d postgres -v ON_ERROR_STOP=1 -c "CREATE DATABASE $db"
 done
 cd "$project_root/testing/D2"

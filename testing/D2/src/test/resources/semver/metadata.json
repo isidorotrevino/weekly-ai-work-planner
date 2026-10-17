@@ -1,0 +1,17 @@
+{
+  "reference": "npm/node-semver",
+  "version": "7.7.2",
+  "commit": "281055e7716ef0415a8826972471331989ede58c",
+  "options": {
+    "loose": false,
+    "includePrerelease": false
+  },
+  "stored_versions": "Strict SemVer 2.0.0, no v/= prefix or surrounding whitespace",
+  "upstream_rows": 175,
+  "excluded_upstream_rows": 42,
+  "excluded_options": "loose/includePrerelease, noncanonical stored versions, invalid ranges",
+  "ranges": 231,
+  "versions": 129,
+  "vectors": 29829,
+  "license": "ISC; see THIRD-PARTY-NOTICES.md"
+}

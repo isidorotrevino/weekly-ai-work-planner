@@ -1,40 +1,56 @@
-# D2 — validación pendiente de SemVer
+# D2 — validación de SemVer completada
 
-Estado: requisito de cierre aprobado (D2-A05); gramática de rangos aprobada (D2-A06). D2 permanece abierto. Este documento especifica trabajo pendiente; no afirma que esté implementado ni probado.
+Estado: D2-A05/A06 validados el 2026-10-17. La auditoría Docker completa pasó con **157 pruebas JUnit**, cero fallos, errores u omisiones. Una de esas pruebas contrasta **29.829 vectores** con una referencia independiente; los vectores no se suman al conteo JUnit.
 
-## Alcance normativo y propuesta
+## Contrato y referencia
 
-Las versiones deberán cumplir [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html): tres componentes numéricos sin ceros iniciales, identificadores prerelease y metadatos de build. El orden compara números y luego prereleases; una versión estable supera a sus prereleases y los metadatos de build no afectan a la precedencia.
+Versiones almacenadas conforme a [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html), con prereleases y metadatos de build. Los metadatos no afectan a la precedencia. La identidad persistida del artefacto y su evidencia siguen siendo exactas.
 
-SemVer no proporciona una gramática de rangos. Se aprueba la documentada por [npm/node-semver](https://github.com/npm/node-semver#ranges): comparadores, intersecciones, uniones `||`, rangos con guion, parciales/comodines, tilde y caret. La admisión de prereleases será explícita según las reglas del rango. Esta elección fue aprobada por el usuario en D2-A06.
+Rangos conforme a [npm/node-semver 7.7.2](https://github.com/npm/node-semver/tree/v7.7.2#ranges): comparadores, intersecciones, uniones, guiones, parciales, comodines, caret y tilde. Las prereleases requieren admisión expresa por las reglas del rango. No se habilitan `loose`, `coerce` ni `includePrerelease` global.
 
-No se exige usar Node en producción. La implementación Java/PostgreSQL y cualquier dependencia se elegirán a partir del contrato aprobado, revisando licencia, mantenimiento y resultados de conformidad. La gramática normativa y su versión deberán quedar fijadas; una actualización de librería no cambiará silenciosamente decisiones de admisión.
+La referencia queda fijada en el commit `281055e7716ef0415a8826972471331989ede58c`. Se utiliza para generar resultados esperados; PostgreSQL ejecuta el código bajo prueba. Node no es una dependencia del prototipo en ejecución. La adaptación del algoritmo conserva el aviso ISC en [THIRD-PARTY-NOTICES.md](../../THIRD-PARTY-NOTICES.md).
 
-## Cambios necesarios en el prototipo
+## Corrección y diagnóstico
 
-1. Inventariar `d2.compatible`, sus llamadas de admisión y finalización, y la persistencia de versiones y restricciones. No reemplazar únicamente la comprobación inicial: todas las guardas deberán coincidir.
-2. Distinguir entradas inválidas de versiones válidas que no satisfacen el rango. Ambas bloquean la dependencia; conservar una razón comprensible en la capa de resolución.
-3. Conservar el texto original, la identidad exacta de la versión y el contrato/hash verificado. Igual precedencia no autoriza reutilizar evidencia de otro artefacto o build.
-4. Definir límites de tamaño y coste de análisis con errores explícitos. No truncar ni convertir valores fuera de rango; no afirmar soporte ilimitado si se usan enteros de tamaño fijo.
-5. Revisar los datos existentes antes de promover una migración. Las restricciones previas deben interpretarse igual o generar una discrepancia visible para revisión.
-6. Añadir una propuesta de migración y pruebas de contrato sin alterar las migraciones históricas. No promoverla a la línea aprobada ni iniciar la aplicación completa por esta tarea.
+[V11 propuesta](../../migrations-proposed/V11__semver_contract_draft.sql) sustituye `d2.compatible` sin cambiar las migraciones V1–V10. CLAIM, elegibilidad HARD, integración MOCKABLE y VERIFY conservan las llamadas compartidas al mismo contrato. No se añade un segundo intérprete en otra capa.
 
-## Matriz que deberá ejecutarse
+`d2.compatibility_result` distingue `MATCH`, `NO_MATCH`, `INVALID_VERSION`, `INVALID_RANGE` y `LIMIT_EXCEEDED`. Solo MATCH permite compatibilidad. Un brazo OR inválido invalida el rango completo. Los helpers quedan revocados a PUBLIC; los entrypoints de ejecución conservan sus permisos restringidos.
 
-| Grupo | Casos y resultado a comprobar |
+Los límites operativos son explícitos:
+
+| Entrada | Límite y comportamiento |
 |---|---|
-| Sintaxis | Versiones estables, prereleases y builds válidos; rechazo de identificadores vacíos, ceros iniciales prohibidos, caracteres inválidos y versiones incompletas |
-| Orden | Comparación numérica, orden de identificadores prerelease y estable posterior; builds con igual precedencia |
-| Rangos básicos | Exactos y comparadores; intersección, unión y límites abiertos/cerrados |
-| Rangos abreviados | Parciales, comodines, guiones, caret con major cero y tilde; expansión en límites inferiores/superiores |
-| Prereleases | Admisión explícita y exclusión por defecto; cambios de núcleo numérico y comparación entre candidatos |
-| Errores y coste | Restricciones malformadas, números grandes y entradas largas; rechazo determinista sin desbordamientos ni admisión accidental |
-| Integración SQL | HARD bloquea si no satisface el rango; MOCKABLE conserva su regla de finalización; CLAIM y VERIFY coinciden |
-| Identidad y evidencia | Builds de igual precedencia conservan versión, entorno, hash y generación de evidencia exactos |
-| Regresión | Subconjunto ya admitido, invalidación y concurrencia; ninguna pérdida de garantías previas |
+| Versión | 256 bytes; mayor tamaño produce LIMIT_EXCEEDED |
+| Núcleo numérico | Componentes entre 0 y 9007199254740991, alineados con la referencia npm; fuera de ese dominio la versión produce INVALID_VERSION |
+| Rango | 4096 bytes, hasta 32 brazos OR y 128 tokens por brazo; exceso produce LIMIT_EXCEEDED |
+| Límites expandidos | Si la expansión requiere un núcleo fuera del dominio numérico, produce LIMIT_EXCEEDED |
+| Identificadores prerelease numéricos | Comparación exacta por longitud y dígitos, sin redondeo de coma flotante, dentro del límite de versión |
 
-Las filas de rangos se rigen por D2-A06. Se requieren resultados esperados independientes del código bajo prueba y pruebas a través de los entrypoints SQL, además de los casos del parser. La ejecución completa debe conservar el informe anterior y publicar un nuevo resumen con conteos y limitaciones reales.
+Las versiones almacenadas son canónicas: se rechazan prefijos `v`/`=` y espacios alrededor de la versión. Los prefijos y espacios permitidos por la gramática npm sí se aceptan en rangos. No se afirma soporte ilimitado de enteros o tamaños de entrada.
 
-## Puerta de cierre
+## Evidencia ejecutada
 
-A05 seguirá pendiente de validación hasta que el contrato completo acordado tenga evidencia ejecutable satisfactoria. Las **147 pruebas existentes** validan el prototipo anterior, no esta ampliación. Resolver este requisito tampoco cierra D2: continúan las demás decisiones del [registro](D2-DECISIONS.md) y la aprobación final expresa del usuario.
+- Corpus: 231 rangos por 129 versiones, más entradas inválidas; 29.829 resultados esperados contrastados, sin discrepancias. Incluye 175 filas oficiales aplicables de include/exclude y casos de análisis de rangos. Se excluyen 42 filas con otros modos, versiones almacenadas no canónicas o rangos inválidos; los errores de sintaxis se prueban por separado. [Metadatos](../../testing/D2/src/test/resources/semver/metadata.json).
+- Orden: comparaciones por pares de la secuencia normativa de prereleases, builds con igual precedencia y números prerelease grandes sin redondeo.
+- Integración: HARD bloquea CLAIM y VERIFY cuando corresponde; MOCKABLE puede desarrollar pero no completar una integración incompatible; una prerelease requiere rango explícito.
+- Evidencia: builds de igual precedencia no comparten pruebas de versión, entorno, hash o generación. Las regresiones existentes de invalidación y concurrencia pasan.
+- Upgrade: Flyway migra V10→V11, valida y no repite migraciones aplicadas. Las entradas previas inválidas se preservan y aparecen en el inventario `d2.semver_preflight`; no se normalizan ni sobrescriben a ciegas.
+- Regresión completa: todas las clases históricas y de contratos pasan en PostgreSQL 16.15, Java 21 y Flyway 13.10.3.
+
+La primera ejecución detectó el rango vacío y una expectativa antigua sobre `*`; ambos quedaron corregidos. Otra ejecución detectó un Context Pack ausente en los datos sintéticos del upgrade; se completó la fixture respetando la guarda existente. El informe vigente corresponde a la ejecución posterior satisfactoria.
+
+## Reproducción y despliegue posterior
+
+```bash
+bash testing/D2/run-docker-audit.sh
+```
+
+Los fixtures están versionados; reproducir la auditoría no necesita descargar npm. Para regenerarlos, clonar el tag 7.7.2 en el directorio local ignorado indicado y ejecutar:
+
+```bash
+node testing/D2/generate-semver-fixtures.cjs work/semver-reference
+```
+
+El generador comprueba el commit de referencia. La [evidencia portable](../validation/semver-evidence.json) conserva hashes de entradas y conteos; los logs y XML originales permanecen locales.
+
+Antes de promover V11 a una instalación con datos reales, el propietario/migrador deberá revisar `SELECT * FROM d2.semver_preflight WHERE status <> 'VALID'` y las resoluciones incompatibles. El upgrade sintético no sustituye esa revisión real. El cierre de diseño no aprueba despliegue ni inicia la aplicación completa; véanse el [registro de decisiones](D2-DECISIONS.md) y [D2 aprobado](D2.9-approved.md).
