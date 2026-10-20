@@ -1,0 +1,380 @@
+{
+  "recorded_date": "2026-10-19",
+  "timezone": "Europe/Madrid",
+  "stage": "D3 optimization authorized by 2A; conservative forecast scope accepted by 1A; D3 open",
+  "result": "PASS_SAFETY_CHECKS",
+  "baseline_D2_commit": "69d71c3877e79bdfef088956b090d4eb6b447be9",
+  "environment": {
+    "java.version": "21.0.12.1",
+    "java.vendor": "Eclipse Adoptium",
+    "postgresql": "16.15 (Debian 16.15-1.pgdg12+2)",
+    "execution": "Disposable Docker PostgreSQL 16 + Maven/Java 21; no published host ports"
+  },
+  "test_groups": {
+    "core": {
+      "totals": {
+        "tests": 62,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.scheduler.CapacitySchedulerTest": {
+          "tests": 56,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "io.github.isidorotrevino.planner.scheduler.ReplanPolicyTest": {
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "scale_review": {
+      "totals": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.scheduler.ScaleReviewTest": {
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "optimization_parity": {
+      "totals": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.scheduler.OptimizationParityTest": {
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "postgres_I2": {
+      "totals": {
+        "tests": 33,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.postgres.PlanningStoreTest": {
+          "tests": 33,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "dispatch_I3": {
+      "totals": {
+        "tests": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.postgres.DispatchStoreTest": {
+          "tests": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "coordinator": {
+      "totals": {
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.postgres.CoordinatorTest": {
+          "tests": 25,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "acceptance_V15": {
+      "totals": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.postgres.AcceptanceTest": {
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "D2_regression": {
+      "totals": {
+        "tests": 157,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "audit.ContractAuditTest": {
+          "tests": 20,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.IntegrityContractAuditTest": {
+          "tests": 15,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.LifecycleContractAuditTest": {
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.OwnershipAuditTest": {
+          "tests": 25,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.ProvenanceContractAuditTest": {
+          "tests": 12,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.RecoveryContractAuditTest": {
+          "tests": 15,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.SchemaAuditTest": {
+          "tests": 53,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.SemverContractAuditTest": {
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "migrations-d3-coordinator-proposed/V14__planning_coordinator.sql": "28f87f654f982723d7eacd62a22b87bfa9a8cfe88d46a2e2bc4dfaadc8797882",
+    "migrations-d3-dispatch-proposed/V13__guarded_dispatch.sql": "be319a5a90c7b522f370f72f3e407af605a39449829115e7bf51844f915ad0ef",
+    "migrations-d3-proposed/V12__planning_snapshot_and_publication.sql": "dc745993cdccddb9d1e7aa332e4771339c7cb9c0d9757ed0128ba07d88d8526e",
+    "migrations-d3-review-proposed/V15__critical_incident_reopening.sql": "d08c5a6961b0422b72ebc65eb8580eb254a751bb8b1be4a0ccc27532c744b9db",
+    "pom.xml": "b56ec654f3b90d703e97acee0f7643a4b0ead39d10274e041d2f5e5bb6358121",
+    "scheduler-core/pom.xml": "0b53bcba6014e33b447de83907b7415b4344e03784e42f08a1eed57c5b05dda9",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java": "ece6474aa887ea3f90c766dd35897c925893bf378e6e1d1ebd09feffa8cbbff0",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java": "e74230eb892aa4d6ea9c58960867b1a2abb0e34d74955530e0dc35d19b4b7c50",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java": "9b926f87fb1e33544659aa1aa6b5805505e3b1a08e1f22b736270802312a34c4",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java": "4ebc16404936099b62696aa8e0524108dd5d4fe09491be491621d7bcdf1e6f69",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java": "a92c3d129ae199aff726af2f7e92ec325ac584141839779e357c528489b935de",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/OptimizationParityTest.java": "f4022abd71bda1941ab3def9dc416e38be824b7069605d1d3cbcce7695c43705",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java": "536ba587a0df7e329cb5533c2355bf8576d1b8d870cb361b7923412b63270fec",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ScaleReviewTest.java": "2fb6dfc25e35594724be5c50dc07d41e43a0f26f8ba553ae24b85d9bb2bfcc32",
+    "scheduler-core/src/test/resources/d3-baseline/CapacityScheduler.java": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced",
+    "scheduler-postgres/pom.xml": "c15a38b6898b04b838231526cfa8a3855f7683b66cf1f87ae56a741af9c95c0e",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/DispatchStore.java": "c516cd94eae23dcc90e3e02f263b12f34007c79252bb4d0b91eb00dce9cbc164",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/Json.java": "177f8bae378081782367115f3da9ceb1ad89d5861d85dbc884bec27da12a5b62",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningCoordinator.java": "d159c1daac15053653885c4439eddf3c9b1fe677bb10e248c25ee268b18552c2",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningStore.java": "0c0ffe85174f9c5dd332f44dbd3d7755ea908315d433c4db01fa85223b2c89fb",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/AcceptanceTest.java": "54c8942cb8e4bb4473c4a4504d44c9aacd6be227ade71cbbb802b5cdd2e50f30",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/CoordinatorTest.java": "620c0b7f9497097c5dd4c07d799b6b2503d99de6e23341148cee60f9c5dbd112",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/DispatchStoreTest.java": "9874aa559692513fdfbf5f2b485290626547c6177b612365c9f8742f1e7274a4",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/PlanningStoreTest.java": "a35b088b571c9667b23ea419d008ab523e74e6429f4331d32ea41d08ed1ee3b0",
+    "testing/D3/run-postgres-tests.sh": "509ca806f51374d65464473a6c9a75bc5a484b66a49804f45cc16e2dd49ab601"
+  },
+  "D2_historical_inputs_unchanged": true,
+  "historical_input_comparison": {
+    "I1": {
+      "authorized_changes": [
+        "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java"
+      ],
+      "all_other_recorded_inputs_unchanged": true,
+      "original_core_sha256": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced"
+    },
+    "I2": {
+      "authorized_changes": [
+        "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java"
+      ],
+      "all_other_recorded_inputs_unchanged": true,
+      "original_core_sha256": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced"
+    },
+    "I3": {
+      "authorized_changes": [
+        "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java"
+      ],
+      "all_other_recorded_inputs_unchanged": true,
+      "original_core_sha256": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced"
+    },
+    "coordinator": {
+      "authorized_changes": [
+        "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java"
+      ],
+      "all_other_recorded_inputs_unchanged": true,
+      "original_core_sha256": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced"
+    },
+    "review": {
+      "authorized_changes": [
+        "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java"
+      ],
+      "all_other_recorded_inputs_unchanged": true,
+      "original_core_sha256": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced"
+    }
+  },
+  "semver": {
+    "vectors": 29829,
+    "included_within": "D2 regression JUnit; not additional JUnit tests"
+  },
+  "migrations": {
+    "D2": "V1-V11, unchanged",
+    "D3": "V12-V15 isolated proposals, not promoted; V15 replaces only D3 event classification and appends pending-reopening correction events"
+  },
+  "scale_measurements": {
+    "scope": "single measured run per synthetic fixture; no SLA; per-fixture 5 s or 30 s safety budget",
+    "fixtures": [
+      {
+        "name": "dag",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 5000,
+        "compute_budget_s": 5,
+        "elapsed_ns": 34637024,
+        "status": "PARTIAL",
+        "tentative": 1
+      },
+      {
+        "name": "independent-1000-30s",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 0,
+        "compute_budget_s": 30,
+        "elapsed_ns": 6575458955,
+        "status": "COMPLETE",
+        "tentative": 1000
+      },
+      {
+        "name": "independent-1000-5s",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 0,
+        "compute_budget_s": 5,
+        "elapsed_ns": 5002219849,
+        "status": "LIMIT_EXCEEDED",
+        "tentative": 0
+      },
+      {
+        "name": "independent-200-5s",
+        "operations": 200,
+        "resources": 4,
+        "candidates": 800,
+        "edges": 0,
+        "compute_budget_s": 5,
+        "elapsed_ns": 251753162,
+        "status": "COMPLETE",
+        "tentative": 200
+      }
+    ]
+  },
+  "scale_measurements_sha256": "04f27039fc69b662d702fcb2a19d427f8180dbd5f2196338a0cfe364eff0d082",
+  "prior_scale_measurements": {
+    "scope": "single measured run per synthetic fixture; no SLA; per-fixture 5 s or 30 s safety budget",
+    "fixtures": [
+      {
+        "name": "dag",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 5000,
+        "compute_budget_s": 5,
+        "elapsed_ns": 39099631,
+        "status": "PARTIAL",
+        "tentative": 1
+      },
+      {
+        "name": "independent-1000-30s",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 0,
+        "compute_budget_s": 30,
+        "elapsed_ns": 30000428892,
+        "status": "LIMIT_EXCEEDED",
+        "tentative": 0
+      },
+      {
+        "name": "independent-1000-5s",
+        "operations": 1000,
+        "resources": 4,
+        "candidates": 4000,
+        "edges": 0,
+        "compute_budget_s": 5,
+        "elapsed_ns": 5004689806,
+        "status": "LIMIT_EXCEEDED",
+        "tentative": 0
+      },
+      {
+        "name": "independent-200-5s",
+        "operations": 200,
+        "resources": 4,
+        "candidates": 800,
+        "edges": 0,
+        "compute_budget_s": 5,
+        "elapsed_ns": 1947837653,
+        "status": "COMPLETE",
+        "tentative": 200
+      }
+    ]
+  },
+  "forecast_scope": "1A accepted: currently eligible work only, lower-bound risk, no CONDITIONAL or full critical calendar",
+  "review_gate": "OPEN: 1A and 2A accepted; closure/deployment require separate explicit approval",
+  "summary_generator_sha256": "b6b43d4d6567a46a275c9a146e33046c8c54055caaacd056b88f1a8cef570bd6",
+  "scope": "Behavior-preserving core optimization, differential full-result comparisons against the exact saved baseline and the same bounded scale measurements; all PostgreSQL and D2 regression groups rerun.",
+  "limitations": [
+    "D3 SQL/JDBC dispatch/lifecycle entrypoints exercised synthetically; no running service, real worker or provider executed.",
+    "Publication validates safety and freshness, not a second implementation of greedy optimization.",
+    "Eligibility is sampled on event receipt, scheduled sweep and preparation when explicit ticks run; no background daemon is running.",
+    "Runtime role is NOLOGIN and test-only; production logins/scopes remain D6 work.",
+    "The coordinator is callable SQL/JDBC only; hosting, checkpoint execution and HTTP worker authentication are not implemented.",
+    "Blocked HARD consumers have no CONDITIONAL forecast slots; deadline propagation remains a lower bound, not a full critical calendar.",
+    "Scale tests permit safe LIMIT_EXCEEDED aborts; inspect per-fixture status and tentative counts for completion.",
+    "Before/after observations are separate audit runs with uncontrolled JIT/host effects, not a statistical speedup claim.",
+    "Single measured execution per fixture; no throughput SLA, deployment approval or D3 closure is implied."
+  ],
+  "reproduce": "bash testing/D3/run-postgres-tests.sh",
+  "raw_evidence": "Local ignored work/d3-postgres/ and module target/surefire-reports/ directories"
+}

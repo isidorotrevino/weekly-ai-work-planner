@@ -1,0 +1,147 @@
+{
+  "recorded_date": "2026-10-19",
+  "timezone": "Europe/Madrid",
+  "stage": "D3 I2 snapshot/publication prototype; I3 pending; D3 open",
+  "result": "PASS",
+  "baseline_D2_commit": "69d71c3877e79bdfef088956b090d4eb6b447be9",
+  "environment": {
+    "java.version": "21.0.12.1",
+    "java.vendor": "Eclipse Adoptium",
+    "postgresql": "16.15 (Debian 16.15-1.pgdg12+2)",
+    "execution": "Disposable Docker PostgreSQL 16 + Maven/Java 21; no published host ports"
+  },
+  "test_groups": {
+    "core": {
+      "totals": {
+        "tests": 62,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.scheduler.CapacitySchedulerTest": {
+          "tests": 56,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "io.github.isidorotrevino.planner.scheduler.ReplanPolicyTest": {
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "postgres": {
+      "totals": {
+        "tests": 33,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "io.github.isidorotrevino.planner.postgres.PlanningStoreTest": {
+          "tests": 33,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "D2_regression": {
+      "totals": {
+        "tests": 157,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "classes": {
+        "audit.ContractAuditTest": {
+          "tests": 20,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.IntegrityContractAuditTest": {
+          "tests": 15,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.LifecycleContractAuditTest": {
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.OwnershipAuditTest": {
+          "tests": 25,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.ProvenanceContractAuditTest": {
+          "tests": 12,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.RecoveryContractAuditTest": {
+          "tests": 15,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.SchemaAuditTest": {
+          "tests": 53,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "audit.SemverContractAuditTest": {
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "migrations-d3-proposed/V12__planning_snapshot_and_publication.sql": "dc745993cdccddb9d1e7aa332e4771339c7cb9c0d9757ed0128ba07d88d8526e",
+    "pom.xml": "b56ec654f3b90d703e97acee0f7643a4b0ead39d10274e041d2f5e5bb6358121",
+    "scheduler-core/pom.xml": "0b53bcba6014e33b447de83907b7415b4344e03784e42f08a1eed57c5b05dda9",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java": "e74230eb892aa4d6ea9c58960867b1a2abb0e34d74955530e0dc35d19b4b7c50",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java": "9b926f87fb1e33544659aa1aa6b5805505e3b1a08e1f22b736270802312a34c4",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java": "4ebc16404936099b62696aa8e0524108dd5d4fe09491be491621d7bcdf1e6f69",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java": "a92c3d129ae199aff726af2f7e92ec325ac584141839779e357c528489b935de",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java": "536ba587a0df7e329cb5533c2355bf8576d1b8d870cb361b7923412b63270fec",
+    "scheduler-postgres/pom.xml": "c15a38b6898b04b838231526cfa8a3855f7683b66cf1f87ae56a741af9c95c0e",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/Json.java": "177f8bae378081782367115f3da9ceb1ad89d5861d85dbc884bec27da12a5b62",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningStore.java": "0c0ffe85174f9c5dd332f44dbd3d7755ea908315d433c4db01fa85223b2c89fb",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/PlanningStoreTest.java": "a35b088b571c9667b23ea419d008ab523e74e6429f4331d32ea41d08ed1ee3b0",
+    "testing/D3/run-postgres-tests.sh": "509ca806f51374d65464473a6c9a75bc5a484b66a49804f45cc16e2dd49ab601"
+  },
+  "D2_historical_inputs_unchanged": true,
+  "semver": {
+    "vectors": 29829,
+    "included_within": "D2 regression JUnit; not additional JUnit tests"
+  },
+  "migrations": {
+    "D2": "V1-V11, unchanged",
+    "D3": "V12 isolated additive proposal, not promoted"
+  },
+  "summary_generator_sha256": "1c5b771ed6829387c6c715cefc70de8ff4ba7afe331248937472ddd999313c63",
+  "scope": "Synthetic PostgreSQL publication, immutable snapshots, CAS, metadata, bounded eligibility samples and two-connection races.",
+  "limitations": [
+    "No dispatcher/claim entrypoint for D3 or real worker/provider executed; direct D2 CLAIMs in tests are synthetic.",
+    "Publication validates safety and freshness, not a second implementation of greedy optimization.",
+    "Eligibility history uses explicit bounded observations; no background event consumer or daemon is running.",
+    "Runtime role is NOLOGIN and test-only; production logins/scopes remain D6 work.",
+    "No throughput SLA, deployment approval or D3 closure is implied."
+  ],
+  "reproduce": "bash testing/D3/run-postgres-tests.sh",
+  "raw_evidence": "Local ignored work/d3-postgres/ and module target/surefire-reports/ directories"
+}

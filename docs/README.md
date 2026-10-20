@@ -2,13 +2,49 @@
 
 [Project introduction](../README.md) · [Presentación en español](../README.es.md)
 
+## Continuity / Continuidad
+
+[D4 session handoff / Handoff para D4](../HANDOFF-D4.md): closed D3 baseline, worker contracts, pending decisions and next-session prompt. [Docker lab preparation / Preparación del laboratorio Docker](../testing/D4/README.md): existing regression runner and the separate synthetic D4 Compose laboratory.
+
+[D3 session handoff / Handoff para iniciar D3](../HANDOFF-D3.md): approved baseline, reading order, scheduler scope, deliverables and a ready-to-use prompt.
+
 ## Current design / Diseño vigente
+
+D4 en diseño: [workers y contratos](design/D4-workers-draft.md),
+[decisiones aceptadas y pendientes](design/D4-DECISIONS.md),
+[preparación ejecutable del laboratorio](../testing/D4/FIRST-CUT.md).
+Sin promoción, despliegue ni cierre. [I2 HTTPS/mTLS](design/D4-I2-HTTPS.md) entrega
+un adaptador sintético probado sobre V17.
+[I3 componentes de proceso/efectos](design/D4-I3-PROCESS-EFFECTS.md) añade supervisor
+y diario sintético probados; [I4](design/D4-I4-LAB.md) los conecta con D2/HTTPS,
+Compose y un verificador independiente.
+[I1 entrega durable y validación](design/D4-I1-DELIVERY.md) implementa persistencia
+propuesta V16; [continuidad parcial](design/D4-CHECKPOINT-CONTINUATION.md) tiene una
+implementación acotada aprobada en I5; su generalización sigue pendiente.
 
 | Document | Purpose / Propósito |
 |---|---|
 | [D1 architecture baseline](design/D1-architecture-baseline.md) | Approved functional architecture / Arquitectura funcional aprobada |
 | [D2 decision register](design/D2-DECISIONS.md) | Approved decisions and closure / Decisiones y cierre aprobados |
 | [D2 approved design](design/D2.9-approved.md) | Approved domain/PostgreSQL design, in Spanish / Diseño vigente aprobado |
+| [D3 approved conservative MVP 1.0](design/D3-approved.md) | Approved and closed on 2026-10-19 / Aprobado y cerrado; sin despliegue |
+| [D3 closure manifest](validation/D3-CLOSURE.json) | Explicit approval and evidence hashes / Aprobación y hashes de evidencia |
+| [D3 capacity scheduler v0.2](design/D3-capacity-scheduler-draft.md) | Design baseline with historical approval sequence / Base de diseño e historial; estado vigente en D3 aprobado |
+| [D3 accepted scope and optimization](design/D3-OPTIMIZATION.md) | 1A/2A accepted, equivalent slot optimization and repeated measurements / Alcance aceptado, optimización y nuevas medidas |
+| [D3 optimization evidence](validation/D3-OPTIMIZATION-results.json) | Differential comparison, scale and regression groups / Comparación diferencial, escala y regresiones |
+| [D3 integrated review](design/D3-REVIEW.md) | Contract coverage, V15 reopening fix and historical scope/performance proposals / Cobertura, corrección V15 y propuestas históricas |
+| [D3 review evidence](validation/D3-REVIEW-results.json) | Separate integration/regression groups and measured scale fixtures / Integración y mediciones separadas |
+| [D3 implementation status](design/D3-IMPLEMENTATION.md) | Core, publication, dispatch and callable coordination / Núcleo, publicación, despacho y coordinación invocable |
+| [D3 I2 persistence](design/D3-I2-PERSISTENCE.md) | Immutable snapshots and transactional publication / Snapshots inmutables y publicación transaccional |
+| [D3 I3 dispatch](design/D3-I3-DISPATCH.md) | Guarded mapping/CLAIM and lifecycle / Mapping/CLAIM y ejecución protegidos |
+| [D3 coordinator](design/D3-COORDINATOR.md) | Durable callable ticks, batching, recovery and bounded retries / Ticks, agrupación, recuperación y recálculos acotados |
+| [D3 coordinator results](validation/D3-COORDINATOR-results.json) | Separate core/I2/I3/coordinator/D2 groups / Grupos separados |
+| [D3 I3 results](validation/D3-I3-results.json) | Historical dispatch evidence / Evidencia histórica de despacho |
+| [D3 I2 results](validation/D3-I2-results.json) | PostgreSQL integration and separate D2 regression / Integración PostgreSQL y regresión D2 separada |
+| [D3 Java test results](validation/D3-I1-results.json) | JUnit evidence for the implemented core / Evidencia JUnit del núcleo implementado |
+| [D3 decision register](design/D3-DECISIONS.md) | Approved rules and implementation authorization / Reglas y autorización de implementación aprobadas |
+| [D3 synthetic experiment](../testing/D3/README.md) | Bounded arithmetic validation and limitations / Validación aritmética acotada y límites |
+| [D3 portable results](validation/D3-v0.2-results.json) | New evidence kept separate from D2 / Evidencia nueva separada de D2 |
 | [Validation overview](validation/README.md) | How to interpret and reproduce the checks / Alcance y reproducción |
 | [D2 validation matrix](validation/D2-VALIDATION-MATRIX.md) | Requirements, evidence, and limitations / Requisitos, evidencia y límites |
 | [Portable results](validation/latest-results.json) | Recorded environment and counts, without machine-specific data / Resumen sin datos del equipo |
@@ -31,3 +67,37 @@ D1 y D2 están aprobados; D2 se cerró tras validar la condición de aprobación
 The original D1, D2 v0.4 documents, V1–V4 SQL, and SQL mirrors retain their content after relocation. Original import manifests, handoffs, and raw evidence remain local in ignored directories. The test harness reads the relocated D2.4 transition specification directly.
 
 El contenido de D1, los documentos originales de D2 v0.4, SQL V1–V4 y sus mirrors se conserva tras la reorganización. Los manifiestos de importación, handoffs y evidencia bruta permanecen locales, fuera de Git. Las pruebas leen directamente la especificación D2.4 reubicada.
+
+[D4 I4 integrado](design/D4-I4-LAB.md): control plane HTTPS/D2, dos workers, receptor
+durable y verificador separados en Compose; [resultados I4](validation/D4-I4-results.json).
+D4 abierto; I5 añade continuidad de checkpoint acotada. Sin promoción/despliegue.
+
+[D4 I5: contrato aprobado A/A](design/D4-I5-REVIEW.md) e
+[implementación sintética acotada](design/D4-I5-CHECKPOINT-LAB.md): checkpoint parcial
+y continuación con nueva generación, sin cierre de D4.
+
+[D4 I6: ejecución prolongada y cooperación](design/D4-I6-LONG-RUNNING-LAB.md):
+renovación D2/HTTPS, watchdog independiente y checkpoint con proceso vivo;
+[resultados S01–S09](validation/D4-I6-results.json), 283 comprobaciones y 416 pruebas
+JUnit separadas D4/D3/D2. D4 sigue abierto; generalización y
+verificadores genéricos permanecen pendientes. I7 incorpora el polling normal.
+
+[D4 I7: polling normal](design/D4-I7-POLLING-LAB.md) y
+[resultados S01–S12](validation/D4-I7-results.json): 367 comprobaciones, 92 pruebas
+D4 y regresión histórica separada D3/D2. Polling vacío con backoff, espera de
+aceptación independiente, retirada y recuperación explícita; A12 exige pausa
+completa tras checkpoint y rearme explícito, con [evidencia S13 separada](validation/D4-I7-A12-results.json). Sin cierre de D4.
+
+[I8.1: componentes de generalización y verificadores](design/D4-I8-COMPONENTS.md)
+bajo A13–A15; aquel corte mantiene evidencia de componentes.
+[I8.2: integración multicuentas](design/D4-I8-INTEGRATION.md) añade el puente
+SQL/HTTPS V24 y la campaña Compose acotada, con D4 abierto.
+
+[Revisión de V24 y corrección aditiva V25](design/D4-V25-BOUNDARY-LAB.md):
+tipos JSON, esquema cerrado aprobado A16 y comprobación de lease después de liquidar;
+V24 permanece intacta.
+
+[I9: reconciliación concluyente](design/D4-I9-RECONCILIATION-LAB.md) implementa A17–A19 con V26 propuesta y evidencia separada; D4 abierto.
+
+[I10.1 D4: ausencia sin progreso y retry explícito](design/D4-I10-ABSENCE-LAB.md)
+separa la implementación A20 de las revisiones/cuarentena A21/A22 pendientes.

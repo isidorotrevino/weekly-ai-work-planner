@@ -1,5 +1,22 @@
 # Third-party notices
 
+## D4 synthetic HTTPS adapter
+
+`worker-control-plane/pom.xml` pins Spring Boot 4.1.1 and PostgreSQL JDBC 42.7.13.
+The Bootstrap artifact contains Spring Framework 7.0.9, Tomcat 11.0.24 and Jackson
+3.1.5 as managed dependencies. Their downloaded Maven metadata identifies Apache
+License 2.0 for Spring/Boot, Tomcat and Jackson, and BSD-2-Clause for PostgreSQL JDBC.
+Other managed runtime libraries retain their own licenses/notices in their nested
+JARs. No upstream implementation was copied into repository source. Generated
+artifacts and dependency caches stay in ignored `work/`; preserve their upstream
+license/notice files if distributing a built application later. The D4 I2 evidence
+records the observed packaged dependency names and hashes separately from tests.
+
+The I4 synthetic lab also packages the already-pinned Flyway 13.10.3 core and
+PostgreSQL module used by the validation harness. Preserve the license and notice
+files embedded in those JARs; the laboratory image is a local validation artifact,
+not a reviewed distribution. OpenSSL and Docker/Compose are host tooling.
+
 ## npm/node-semver 7.7.2
 
 The proposed PostgreSQL SemVer range expansion in V11 follows the algorithm in

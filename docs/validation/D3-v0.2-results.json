@@ -1,0 +1,198 @@
+{
+  "recorded_date": "2026-10-18",
+  "timezone": "Europe/Madrid",
+  "stage": "D3 v0.2 design experiment; design and implementation start approved; D3 closure pending",
+  "baseline_D2_commit": "69d71c3",
+  "result": "PASS",
+  "checks": 44,
+  "failures": 0,
+  "cases": [
+    {
+      "id": "split_70_20_10",
+      "result": "PASS"
+    },
+    {
+      "id": "unknown_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "simultaneous_windows_block_atomically",
+      "result": "PASS"
+    },
+    {
+      "id": "distinct_dimensions_all_bind",
+      "result": "PASS"
+    },
+    {
+      "id": "overspend_preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "recalibration_deficit_preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "deficit_blocks_new_admission",
+      "result": "PASS"
+    },
+    {
+      "id": "plan_links_no_new_commitment",
+      "result": "PASS"
+    },
+    {
+      "id": "tentative_then_claim_charges_once",
+      "result": "PASS"
+    },
+    {
+      "id": "retry_only_top_up",
+      "result": "PASS"
+    },
+    {
+      "id": "loan_return_bounded_by_free_and_debt",
+      "result": "PASS"
+    },
+    {
+      "id": "incident_after_return_not_fully_restored",
+      "result": "PASS"
+    },
+    {
+      "id": "uncertainty_unchanged",
+      "result": "PASS"
+    },
+    {
+      "id": "weighted_unit_hypothesis",
+      "result": "PASS"
+    },
+    {
+      "id": "resource_independence",
+      "result": "PASS"
+    },
+    {
+      "id": "zero_weight_excluded",
+      "result": "PASS"
+    },
+    {
+      "id": "blocking_path_only",
+      "result": "PASS"
+    },
+    {
+      "id": "unblocked_path_loses_inheritance",
+      "result": "PASS"
+    },
+    {
+      "id": "100_input_permutations",
+      "result": "PASS"
+    },
+    {
+      "id": "age_lane_cannot_reset_each_plan",
+      "result": "PASS"
+    },
+    {
+      "id": "large_aged_operation_has_no_guarantee",
+      "result": "PASS"
+    },
+    {
+      "id": "incompatible_deadlines_do_not_create_capacity",
+      "result": "PASS"
+    },
+    {
+      "id": "civil_week_dst_is_169_hours",
+      "result": "PASS"
+    },
+    {
+      "id": "manual_documented_estimate_at_threshold",
+      "result": "PASS"
+    },
+    {
+      "id": "low_limit_confidence_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "unknown_limit_confidence_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "low_estimate_confidence_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "missing_calibration_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "expired_estimate_blocks_at_boundary",
+      "result": "PASS"
+    },
+    {
+      "id": "future_observation_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "nonpositive_duration_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "adjacent_slots_do_not_overlap",
+      "result": "PASS"
+    },
+    {
+      "id": "shared_worker_or_exclusive_workspace_conflicts",
+      "result": "PASS"
+    },
+    {
+      "id": "keep_resource_at_three_minute_delay",
+      "result": "PASS"
+    },
+    {
+      "id": "switch_resource_above_three_minute_delay",
+      "result": "PASS"
+    },
+    {
+      "id": "heartbeat_90_seconds_inclusive",
+      "result": "PASS"
+    },
+    {
+      "id": "critical_incident_uses_incident_pool",
+      "result": "PASS"
+    },
+    {
+      "id": "minor_incident_requires_active_triage",
+      "result": "PASS"
+    },
+    {
+      "id": "follow_up_always_planned",
+      "result": "PASS"
+    },
+    {
+      "id": "incident_shortfall_does_not_use_planned",
+      "result": "PASS"
+    },
+    {
+      "id": "recalibration_reconstructs_service_without_erasing_facts",
+      "result": "PASS"
+    },
+    {
+      "id": "retry_service_uses_projected_increment",
+      "result": "PASS"
+    },
+    {
+      "id": "urgent_lane_settlement_does_not_double_charge",
+      "result": "PASS"
+    },
+    {
+      "id": "urgent_lane_overspend_is_preserved",
+      "result": "PASS"
+    }
+  ],
+  "input_sha256": {
+    "testing/D3/validate_design.py": "91e72fe5a4616f609b8fffe6645427b15e69c9e9fee10f3055c8a82eedabfc9f",
+    "docs/design/D3-capacity-scheduler-draft.md": "8db81c970a650f7d6fe24607bb97d423c478de0901eaea5a4a7a6ed2232a4edd",
+    "docs/design/D3-DECISIONS.md": "3ec4ff2b8f9ca9fa2b4f1e07a73c06a170b28a8924c1b24919b511feb39bd8f1"
+  },
+  "limitations": [
+    "Arithmetic and small independent models only; not a complete scheduler.",
+    "No PostgreSQL, publication concurrency, CLAIM, workers or provider integration executed.",
+    "Only small interval and estimate-policy oracles; no complete scheduler, historical fairness proof or performance benchmark.",
+    "Does not rerun or extend the recorded D2 audit; parameter approvals are scoped in D3-DECISIONS.md; D3 closure remains unapproved."
+  ]
+}

@@ -6,7 +6,7 @@ English · [Español](README.es.md)
 
 Weekly AI Work Planner explores how to turn engineering plans into short, traceable AI work sessions while respecting resource limits, project dependencies, incidents, and human approval boundaries.
 
-**Current stage: technical design and an executable PostgreSQL validation prototype.** The functional architecture (D1) is approved. The domain design (D2) is approved and closed after validation. There is no runnable planner application, worker fleet, or web interface yet.
+**Current stage: technical design, PostgreSQL validation prototype, and an initial Java 21 planning core.** The functional architecture (D1) is approved. The domain design (D2) is approved and closed after validation. There is no runnable planner application, worker fleet, or web interface yet.
 
 ## Why this project exists
 
@@ -27,6 +27,14 @@ The intended inputs are Gentle-AI Markdown plans and business/technical document
 The repository includes PostgreSQL migrations, proposed persistence contracts, and a Java/JUnit audit harness. It validates capacity accounting, relationships, concurrency, state changes, recovery decisions, and provenance using **synthetic data and simulated adapters**.
 
 The recorded validation run on **October 17, 2026** completed **157 checks with zero failures, errors, or skipped checks** on PostgreSQL 16.15 and Java 21. The suite includes 29,829 SemVer/npm conformance vectors within one JUnit check. Some historical checks deliberately reproduce gaps in older schema versions. See the [validation overview](docs/validation/README.md) for the scope and limitations.
+
+### Test the planning core
+
+The [scheduler-core](scheduler-core/README.md) module computes deterministic proposals over synthetic snapshots, without executing operations or publishing plans. Run `bash testing/D3/run-core-tests.sh` with Java 21/Maven, or `bash testing/D3/run-core-docker-tests.sh`. See [D3 implementation status](docs/design/D3-IMPLEMENTATION.md) and [JUnit evidence](docs/validation/D3-I1-results.json). The [PostgreSQL adapter](scheduler-postgres/README.md) now adds immutable snapshots and transactional publication and [guarded dispatch](docs/design/D3-I3-DISPATCH.md). Run its isolated suite with `bash testing/D3/run-postgres-tests.sh`.
+
+The [callable durable coordinator](docs/design/D3-COORDINATOR.md) batches events, persists sweeps and fences publication with bounded recalculation. No worker, daemon or service is deployed.
+
+The [integrated D3 review](docs/design/D3-REVIEW.md) fixes critical incident reopening in V15 and records bounded scale measurements. The conservative scope was accepted as 1A; [optimization 2A](docs/design/D3-OPTIMIZATION.md) now completes the 1,000-operation fixture with its 30 s budget. D3 is [approved and closed as the conservative MVP](docs/design/D3-approved.md), without deployment approval.
 
 ### Run the database audit
 
@@ -77,6 +85,11 @@ Kafka, Temporal, and Kubernetes are not required for the proposed MVP. Worktrees
 │   └── archive/sql-markdown/  Historical readable mirrors of V1–V4
 ├── migrations/                Preserved V1–V4 SQL
 ├── migrations-proposed/       Draft V5–V11 corrections and contracts
+├── scheduler-core/            Java 21 planning core / Núcleo Java 21
+├── scheduler-postgres/        JDBC snapshot and publication adapter / Adaptador JDBC
+├── migrations-d3-proposed/    I2 V12 isolated proposal / Propuesta I2 aislada
+├── migrations-d3-dispatch-proposed/  I3 V13 dispatch / Despacho
+├── migrations-d3-coordinator-proposed/  V14 callable coordination / Coordinación
 ├── testing/D2/                Java/JUnit audit harness and runners
 ├── scripts/                   Publication hygiene checks
 └── .github/                   Issue and pull request templates
@@ -99,8 +112,8 @@ The original V1–V4 migrations and the V5–V11 proposals are kept separate on 
 |---|---|---|
 | D1 | Functional architecture | Approved |
 | D2 | Domain model and PostgreSQL contracts | Approved and closed; validation prototype |
-| D3 | Capacity-aware scheduling | Planned |
-| D4 | Worker protocol and real recovery | Planned |
+| D3 | Capacity-aware scheduling | Approved and closed; conservative MVP 1.0, validated libraries/SQL |
+| D4 | Worker protocol and synthetic recovery lab | In progress; review open |
 | D5 | Source ingestion and integrations | Planned |
 | D6 | Governance and operations | Planned |
 
@@ -123,3 +136,12 @@ This project is licensed under the **GNU General Public License v3.0 only** (`GP
 You may use, modify, and redistribute it, including commercially. When conveying a covered modified version, the GPL requires that it remain under the GPL and that the corresponding source be provided as required by the license. Private modifications that are not conveyed are allowed; ordinary GPLv3 does not impose AGPL-style source-offer obligations merely for network use.
 
 Third-party attribution is maintained in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+
+[D4 I4 integrated Compose laboratory](docs/design/D4-I4-LAB.md) and [separate evidence](docs/validation/D4-I4-results.json). D4 remains open; no deployment or migration promotion.
+
+[D4 I6 renewal and cooperative checkpoint](docs/design/D4-I6-LONG-RUNNING-LAB.md):
+nine synthetic scenarios and [separate results](docs/validation/D4-I6-results.json).
+D4 remains open; bounded scope, no real providers.
+
+[D4 I7 normal polling and verified retirement](docs/design/D4-I7-POLLING-LAB.md),
+with [twelve recorded scenarios](docs/validation/D4-I7-results.json).

@@ -1,0 +1,114 @@
+{
+  "recorded_date": "2026-10-18",
+  "timezone": "Europe/Madrid",
+  "stage": "D3 v0.1 design experiment; partially approved parameters; closure pending",
+  "baseline_D2_commit": "69d71c3",
+  "result": "PASS",
+  "checks": 23,
+  "failures": 0,
+  "cases": [
+    {
+      "id": "split_70_20_10",
+      "result": "PASS"
+    },
+    {
+      "id": "unknown_blocks",
+      "result": "PASS"
+    },
+    {
+      "id": "simultaneous_windows_block_atomically",
+      "result": "PASS"
+    },
+    {
+      "id": "distinct_dimensions_all_bind",
+      "result": "PASS"
+    },
+    {
+      "id": "overspend_preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "recalibration_deficit_preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "deficit_blocks_new_admission",
+      "result": "PASS"
+    },
+    {
+      "id": "plan_links_no_new_commitment",
+      "result": "PASS"
+    },
+    {
+      "id": "tentative_then_claim_charges_once",
+      "result": "PASS"
+    },
+    {
+      "id": "retry_only_top_up",
+      "result": "PASS"
+    },
+    {
+      "id": "loan_return_bounded_by_free_and_debt",
+      "result": "PASS"
+    },
+    {
+      "id": "incident_after_return_not_fully_restored",
+      "result": "PASS"
+    },
+    {
+      "id": "uncertainty_unchanged",
+      "result": "PASS"
+    },
+    {
+      "id": "weighted_unit_hypothesis",
+      "result": "PASS"
+    },
+    {
+      "id": "resource_independence",
+      "result": "PASS"
+    },
+    {
+      "id": "zero_weight_excluded",
+      "result": "PASS"
+    },
+    {
+      "id": "blocking_path_only",
+      "result": "PASS"
+    },
+    {
+      "id": "unblocked_path_loses_inheritance",
+      "result": "PASS"
+    },
+    {
+      "id": "100_input_permutations",
+      "result": "PASS"
+    },
+    {
+      "id": "age_lane_cannot_reset_each_plan",
+      "result": "PASS"
+    },
+    {
+      "id": "large_aged_operation_has_no_guarantee",
+      "result": "PASS"
+    },
+    {
+      "id": "incompatible_deadlines_do_not_create_capacity",
+      "result": "PASS"
+    },
+    {
+      "id": "civil_week_dst_is_169_hours",
+      "result": "PASS"
+    }
+  ],
+  "input_sha256": {
+    "testing/D3/validate_design.py": "64ef978cb87ad7c4cfe704e1086dd3efbeded1b5ba012b8a2c48f9fa867df6fc",
+    "docs/design/D3-capacity-scheduler-draft.md": "037e7ccd829f7e835917ad671e9f70d408cf77bf0a704b0883041745b9678e76",
+    "docs/design/D3-DECISIONS.md": "1be33657364306052105737559255accb147cd4d00f62e3848459a876423b83c"
+  },
+  "limitations": [
+    "Arithmetic and small independent models only; not a complete scheduler.",
+    "No PostgreSQL, publication concurrency, CLAIM, workers or provider integration executed.",
+    "No deadline/slot/estimator implementation, historical fairness proof or performance benchmark.",
+    "Does not rerun or extend the recorded D2 audit; parameter approvals are scoped in D3-DECISIONS.md; D3 closure remains unapproved."
+  ]
+}

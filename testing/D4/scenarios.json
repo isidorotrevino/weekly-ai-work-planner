@@ -1,0 +1,286 @@
+{
+  "schema_version": "d4.lab.scenarios.v1",
+  "status": "IMPLEMENTED_VALIDATED_I9_D4_OPEN",
+  "seed": null,
+  "per_scenario_timeout_seconds": null,
+  "initial_campaign": [
+    {
+      "id": "D4-S01",
+      "name": "camino_feliz",
+      "status": "PASS_RECORDED_I4",
+      "assertions": [
+        "plan vigente y CLAIM protegido",
+        "ACK no autoriza spawn",
+        "START vigente e identidad exacta",
+        "un efecto durable",
+        "aceptación independiente antes de VERIFY",
+        "reserva única y consumo trazable"
+      ]
+    },
+    {
+      "id": "D4-S02",
+      "name": "competencia",
+      "status": "PASS_RECORDED_I4",
+      "assertions": [
+        "worker ajeno no confirma ni inicia entrega ajena",
+        "dos solicitudes rivales no duplican intento ni reserva",
+        "cuenta física no se duplica entre planes",
+        "exclusión de tarea y workspace entre workers",
+        "recursos independientes pueden progresar sin inventar saldo"
+      ]
+    },
+    {
+      "id": "D4-S03",
+      "name": "efecto_aplicado_callback_perdido",
+      "status": "PASS_RECORDED_I4",
+      "assertions": [
+        "APPLIED confirmado antes del corte",
+        "misma clave lógica entre retries",
+        "consulta directa del verificador",
+        "EXPIRE y recuperación con identidad exacta",
+        "efecto y consumo no duplicados"
+      ]
+    },
+    {
+      "id": "D4-S04",
+      "name": "lease_expirada_proceso_superviviente",
+      "status": "PASS_RECORDED_I4",
+      "assertions": [
+        "expiración real PostgreSQL sin alterar reloj host",
+        "proceso observable tras expiración",
+        "receptor rechaza autoridad caducada",
+        "UNKNOWN conserva compromiso y exclusión",
+        "callback antiguo no modifica intento vigente",
+        "parada del grupo comprobada sin liberar compromiso UNKNOWN"
+      ]
+    }
+  ],
+  "required_transport_guards": [
+    "certificado expirado, revocado o ajeno rechazado",
+    "capacidades anunciadas no conceden permisos",
+    "mismo command_id y otro contenido rechazado",
+    "replay de START antiguo no habilita spawn ni efecto",
+    "worker sin SQL ni autoaceptación"
+  ],
+  "deferred": [
+    "ampliación más allá del corte I8: varios receptores/canales y costes variables",
+    "campaña Compose completa de negativos, resets y dependencias",
+    "proveedores y máquinas físicos fuera de alcance",
+    "integración SQL/HTTPS de verificadores genéricos de artefactos, Git y restauración",
+    "resolución sin progreso/todos ABSENT o reapertura tras nuevos hechos en CANCELLED/COMPLETED"
+  ],
+  "identifier_generation": "Fresh UUIDs; fixed synthetic topology per scenario",
+  "bounded_waits": {
+    "compose_startup_seconds": 180,
+    "worker_phase_seconds": 30,
+    "restart_health_seconds": 90,
+    "request_seconds": 8,
+    "postgres_execution_lease_seconds": 60,
+    "cleanup_seconds": 60,
+    "long_running_phase_seconds": 100,
+    "watchdog_poll_milliseconds": 100,
+    "renewal_interval_seconds": 10,
+    "authority_stop_margin_seconds": 10,
+    "checkpoint_cooperation_seconds": 15,
+    "loop_max_operations": 4,
+    "loop_max_admission_seconds": 240,
+    "idle_backoff_max_milliseconds": 5000,
+    "idle_jitter_max_milliseconds": 100
+  },
+  "evidence": "docs/validation/D4-I4-results.json",
+  "transport_guard_evidence": "Separate I2/component suite; this list does not claim every guard was tested in Compose",
+  "checkpoint_campaign": {
+    "scenario": "D4-S05",
+    "name": "checkpoint_parcial_y_continuacion",
+    "status": "PASS_RECORDED_I5",
+    "scope": "One checkpoint, two ordered synthetic steps and one binding physical account",
+    "assertions": [
+      "Intención congelada y ligada al contexto antes de CLAIM",
+      "Prefijo APPLIED y sufijo ABSENT con cierre firmado",
+      "Consumo parcial 4 y liberación 6 atómicos",
+      "CANCELLED→READY solo con procedencia y autorización",
+      "TOP_UP conservador 10 sobre misma reserva",
+      "Nuevo intento/generación y grant exclusivo del sufijo",
+      "Callback y grant anteriores fenced",
+      "Consumo final 10 y aceptación independiente del segundo intento"
+    ],
+    "evidence": "docs/validation/D4-I5-results.json"
+  },
+  "long_running_campaign": {
+    "scenarios": [
+      "D4-S06",
+      "D4-S07",
+      "D4-S08",
+      "D4-S09"
+    ],
+    "status": "PASS_RECORDED_I6",
+    "scope": "Trusted long-running fixtures; D2 lease renewal, independent watchdog, cooperative checkpoint and refusal timeout",
+    "command": "bash testing/D4/run-long-running-lab.sh",
+    "migration_target": 22,
+    "evidence": "docs/validation/D4-I6-results.json",
+    "assertions": 283,
+    "full_regression_scenarios": [
+      "D4-S01",
+      "D4-S02",
+      "D4-S03",
+      "D4-S04",
+      "D4-S05",
+      "D4-S06",
+      "D4-S07",
+      "D4-S08",
+      "D4-S09"
+    ],
+    "worker_virtual_carriers": 1
+  },
+  "polling_campaign": {
+    "scenarios": [
+      "D4-S10",
+      "D4-S11",
+      "D4-S12"
+    ],
+    "full_regression_scenarios": [
+      "D4-S01",
+      "D4-S02",
+      "D4-S03",
+      "D4-S04",
+      "D4-S05",
+      "D4-S06",
+      "D4-S07",
+      "D4-S08",
+      "D4-S09",
+      "D4-S10",
+      "D4-S11",
+      "D4-S12"
+    ],
+    "status": "PASS_RECORDED_I7_NORMAL_POLLING",
+    "evidence": "docs/validation/D4-I7-results.json",
+    "assertions": 367,
+    "migration_target": 23,
+    "command": "bash testing/D4/run-polling-lab.sh",
+    "checkpoint_loop_policy": "PENDING A/B at original I7 campaign; superseded prospectively by approved A12 and separate S13 evidence"
+  },
+  "checkpoint_polling_campaign": {
+    "scenario": "D4-S13",
+    "name": "checkpoint_pausa_y_rearme_explicito",
+    "status": "PASS_RECORDED_I7_A12",
+    "decision": "A12: pause entire loop; sealing/authorization never rearms polling",
+    "migration_target": 23,
+    "command": "bash testing/D4/run-checkpoint-polling-lab.sh",
+    "evidence": "docs/validation/D4-I7-A12-results.json",
+    "assertions": 51
+  },
+  "generalization_components": {
+    "status": "PASS_COMPONENTS_ONLY_D4_OPEN",
+    "decisions": [
+      "D4-A13",
+      "D4-A14",
+      "D4-A15"
+    ],
+    "new_accounting_component_tests": 26,
+    "local_verifier_tests": 25,
+    "evidence": "docs/validation/D4-I8-COMPONENTS-results.json",
+    "SQL_HTTPS_generalization_enabled": false,
+    "new_Compose_scenarios_executed": 0
+  },
+  "multicount_campaign": {
+    "scenario": "D4-S14",
+    "status": "PASS_RECORDED_I8_INTEGRATION",
+    "decisions": [
+      "D4-A13",
+      "D4-A14",
+      "D4-A15"
+    ],
+    "migration_target": 24,
+    "scenarios": [
+      "S14",
+      "S05",
+      "S13"
+    ],
+    "command": "bash testing/D4/run-multicount-lab.sh",
+    "evidence": "docs/validation/D4-I8-INTEGRATION-results.json",
+    "steps": 3,
+    "binding_accounts": 2,
+    "checkpoints": 2,
+    "attempts": 3,
+    "cost_vectors": [
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "original_vector": [
+      10,
+      6
+    ],
+    "assertions": 186,
+    "JUnit_tests": 469,
+    "local_verifier_tests": 25
+  },
+  "v24_boundary_correction": {
+    "status": "PASS_BOUNDED_PROVISIONAL_BEFORE_A16",
+    "migration_target": 25,
+    "scenarios": [
+      "S15",
+      "S14",
+      "S13"
+    ],
+    "command": "bash testing/D4/run-v24-boundary-lab.sh",
+    "evidence": "docs/validation/D4-V24-BOUNDARY-results.json",
+    "assertions": 181,
+    "JUnit_tests": 483,
+    "local_verifier_tests": 25,
+    "diagnostic_V24_reproductions_excluded": 2,
+    "extra_field_policy_approved": null,
+    "historical": true
+  },
+  "v25_closed_schema": {
+    "authorization": "D4-A16: A, closed schema",
+    "migration_target": 25,
+    "scenarios": [
+      "S15",
+      "S14",
+      "S13"
+    ],
+    "command": "bash testing/D4/run-v24-boundary-lab.sh",
+    "evidence": "docs/validation/D4-V25-CLOSED-SCHEMA-results.json",
+    "status": "PASS_BOUNDED_D4_OPEN",
+    "assertions": 181,
+    "JUnit_tests": 485,
+    "local_verifier_tests": 25,
+    "positive_tests": 510
+  },
+  "reconciliation_campaign": {
+    "status": "PASS_BOUNDED_D4_OPEN",
+    "migration_target": 26,
+    "decisions": [
+      "D4-A17",
+      "D4-A18",
+      "D4-A19"
+    ],
+    "scenarios": [
+      "S19",
+      "S18",
+      "S17",
+      "S16",
+      "S15",
+      "S14"
+    ],
+    "command": "bash testing/D4/run-reconciliation-lab.sh",
+    "evidence": "docs/validation/D4-I9-RECONCILIATION-results.json",
+    "historical_receipts_preserved": true,
+    "terminal_acceptance_separate": true,
+    "local_retirement_explicit": true,
+    "assertions": 318,
+    "JUnit_tests": 507,
+    "local_verifier_tests": 25,
+    "total_positive_tests": 532
+  }
+}

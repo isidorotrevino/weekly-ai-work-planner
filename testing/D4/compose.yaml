@@ -1,0 +1,121 @@
+# SPDX-License-Identifier: GPL-3.0-only
+x-app: &app
+  image: ${LAB_IMAGE:?build first}
+  pull_policy: never
+  user: "${LAB_UID}:${LAB_GID}"
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: ["/tmp:size=64m,mode=1777"]
+  cpus: 1.0
+  mem_limit: 384m
+  pids_limit: 128
+  stop_grace_period: 10s
+  command: [serve]
+  healthcheck:
+    test: [CMD, java, -Xmx64m, -cp, '/app/classes:/app/lib/*', io.github.isidorotrevino.planner.lab.LabMain, health]
+    interval: 5s
+    timeout: 8s
+    start_period: 20s
+    retries: 12
+services:
+  db:
+    image: ${PG_IMAGE:?pinned image required}
+    pull_policy: never
+    env_file: ["${LAB_CASE_DIR}/postgres.env"]
+    volumes: [db-state:/var/lib/postgresql/data]
+    networks: [persistence]
+    mem_limit: 256m
+    cpus: 1.0
+    pids_limit: 128
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, pg_isready, -U, d4_owner, -d, postgres]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  migrate:
+    <<: *app
+    user: "0:${LAB_GID}"
+    cap_add: [CHOWN]
+    environment: {LAB_UID: "${LAB_UID}", LAB_GID: "${LAB_GID}"}
+    command: [bootstrap]
+    healthcheck: {disable: true}
+    depends_on: {db: {condition: service_healthy}}
+    networks: [persistence]
+    volumes:
+      - ${LAB_CASE_DIR}/config/bootstrap:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public
+      - receiver-state:/receiver-state
+      - worker-a-state:/worker-a-state
+      - worker-b-state:/worker-b-state
+  control-plane:
+    <<: *app
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    networks: [persistence, workers]
+    volumes:
+      - ${LAB_CASE_DIR}/config/control:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+  effect-receiver:
+    <<: *app
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    networks: [effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/receiver:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - receiver-state:/state
+  worker-a:
+    <<: *app
+    environment: {JAVA_TOOL_OPTIONS: '-Djdk.virtualThreadScheduler.parallelism=1 -Djdk.virtualThreadScheduler.maxPoolSize=1'}
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/worker-a:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - worker-a-state:/state
+  worker-b:
+    <<: *app
+    environment: {JAVA_TOOL_OPTIONS: '-Djdk.virtualThreadScheduler.parallelism=1 -Djdk.virtualThreadScheduler.maxPoolSize=1'}
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/worker-b:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - worker-b-state:/state
+  verifier:
+    <<: *app
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [persistence, workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/verifier:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - ${LAB_CASE_DIR}/observations:/observations:ro
+      - worker-a-state:/worker-a:ro
+      - worker-b-state:/worker-b:ro
+  driver:
+    <<: *app
+    command: [driver]
+    healthcheck: {disable: true}
+    depends_on:
+      verifier: {condition: service_healthy}
+      worker-a: {condition: service_healthy}
+      worker-b: {condition: service_healthy}
+    networks: [persistence, workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/driver:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+networks:
+  persistence: {internal: true}
+  workers: {internal: true}
+  effects: {internal: true}
+volumes:
+  db-state: {}
+  receiver-state: {}
+  worker-a-state: {}
+  worker-b-state: {}

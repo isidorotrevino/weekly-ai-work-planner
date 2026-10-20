@@ -1,0 +1,106 @@
+{
+  "stage": "D3",
+  "version": "1.0",
+  "status": "APPROVED_CLOSED",
+  "approval_date": "2026-10-19",
+  "timezone": "Europe/Madrid",
+  "user_approval_literal": "si, cierra D3",
+  "scope": "MVP conservador de diseño y bibliotecas Java/SQL; 1A sin CONDITIONAL/calendario crítico completo y optimización 2A aceptados",
+  "canonical_document": "docs/design/D3-approved.md",
+  "evidence": {
+    "path": "docs/validation/D3-OPTIMIZATION-results.json",
+    "sha256": "0161766bdcf67e17fc27f0f346e2007dcf329b234e62cd4c14dd1981e3fff770"
+  },
+  "verified_executable_input_sha256": {
+    "migrations-d3-coordinator-proposed/V14__planning_coordinator.sql": "28f87f654f982723d7eacd62a22b87bfa9a8cfe88d46a2e2bc4dfaadc8797882",
+    "migrations-d3-dispatch-proposed/V13__guarded_dispatch.sql": "be319a5a90c7b522f370f72f3e407af605a39449829115e7bf51844f915ad0ef",
+    "migrations-d3-proposed/V12__planning_snapshot_and_publication.sql": "dc745993cdccddb9d1e7aa332e4771339c7cb9c0d9757ed0128ba07d88d8526e",
+    "migrations-d3-review-proposed/V15__critical_incident_reopening.sql": "d08c5a6961b0422b72ebc65eb8580eb254a751bb8b1be4a0ccc27532c744b9db",
+    "pom.xml": "b56ec654f3b90d703e97acee0f7643a4b0ead39d10274e041d2f5e5bb6358121",
+    "scheduler-core/pom.xml": "0b53bcba6014e33b447de83907b7415b4344e03784e42f08a1eed57c5b05dda9",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java": "ece6474aa887ea3f90c766dd35897c925893bf378e6e1d1ebd09feffa8cbbff0",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java": "e74230eb892aa4d6ea9c58960867b1a2abb0e34d74955530e0dc35d19b4b7c50",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java": "9b926f87fb1e33544659aa1aa6b5805505e3b1a08e1f22b736270802312a34c4",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java": "4ebc16404936099b62696aa8e0524108dd5d4fe09491be491621d7bcdf1e6f69",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java": "a92c3d129ae199aff726af2f7e92ec325ac584141839779e357c528489b935de",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/OptimizationParityTest.java": "f4022abd71bda1941ab3def9dc416e38be824b7069605d1d3cbcce7695c43705",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java": "536ba587a0df7e329cb5533c2355bf8576d1b8d870cb361b7923412b63270fec",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ScaleReviewTest.java": "2fb6dfc25e35594724be5c50dc07d41e43a0f26f8ba553ae24b85d9bb2bfcc32",
+    "scheduler-core/src/test/resources/d3-baseline/CapacityScheduler.java": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced",
+    "scheduler-postgres/pom.xml": "c15a38b6898b04b838231526cfa8a3855f7683b66cf1f87ae56a741af9c95c0e",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/DispatchStore.java": "c516cd94eae23dcc90e3e02f263b12f34007c79252bb4d0b91eb00dce9cbc164",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/Json.java": "177f8bae378081782367115f3da9ceb1ad89d5861d85dbc884bec27da12a5b62",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningCoordinator.java": "d159c1daac15053653885c4439eddf3c9b1fe677bb10e248c25ee268b18552c2",
+    "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningStore.java": "0c0ffe85174f9c5dd332f44dbd3d7755ea908315d433c4db01fa85223b2c89fb",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/AcceptanceTest.java": "54c8942cb8e4bb4473c4a4504d44c9aacd6be227ade71cbbb802b5cdd2e50f30",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/CoordinatorTest.java": "620c0b7f9497097c5dd4c07d799b6b2503d99de6e23341148cee60f9c5dbd112",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/DispatchStoreTest.java": "9874aa559692513fdfbf5f2b485290626547c6177b612365c9f8742f1e7274a4",
+    "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/PlanningStoreTest.java": "a35b088b571c9667b23ea419d008ab523e74e6429f4331d32ea41d08ed1ee3b0",
+    "testing/D3/run-postgres-tests.sh": "509ca806f51374d65464473a6c9a75bc5a484b66a49804f45cc16e2dd49ab601"
+  },
+  "test_groups": {
+    "core": {
+      "tests": 62,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scale_review": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "optimization_parity": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "postgres_I2": {
+      "tests": 33,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "dispatch_I3": {
+      "tests": 39,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "coordinator": {
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "acceptance_V15": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "D2_regression": {
+      "tests": 157,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "verification": "Current executable hashes and unchanged D2 historical inputs checked at closure; no new test run for documentation-only closure",
+  "performance": "Single synthetic observations, no SLA; 1000 independent operations COMPLETE at 6.575 s under 30 s budget; 5 s still LIMIT_EXCEEDED safely",
+  "historical_reports_preserved": true,
+  "D2_baseline_commit": "69d71c3877e79bdfef088956b090d4eb6b447be9",
+  "migration_promotion_approved": false,
+  "deployment_approved": false,
+  "D4_started": false,
+  "published_D3_commit": null,
+  "limitations": [
+    "No live workers/providers or resident service",
+    "Sampled eligibility, no unobserved-history guarantee",
+    "No unsafe checkpoint continuation or window rollover",
+    "No performance SLA",
+    "Real identities, hosting, retention and deployment remain future work"
+  ]
+}

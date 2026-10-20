@@ -1,0 +1,6 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.isidorotrevino</groupId><artifactId>weekly-ai-work-planner</artifactId><version>0.1.0-SNAPSHOT</version><packaging>pom</packaging>
+  <modules><module>scheduler-core</module><module>scheduler-postgres</module></modules>
+  <licenses><license><name>GPL-3.0-only</name><url>https://www.gnu.org/licenses/gpl-3.0.html</url><distribution>repo</distribution></license></licenses>
+</project>

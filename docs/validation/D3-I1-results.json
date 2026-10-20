@@ -1,0 +1,54 @@
+{
+  "recorded_date": "2026-10-18",
+  "timezone": "Europe/Madrid",
+  "stage": "D3 I1 initial Java implementation; D3 open; I2/I3 pending",
+  "baseline_D2_commit": "69d71c3877e79bdfef088956b090d4eb6b447be9",
+  "result": "PASS",
+  "environment": {
+    "java.version": "21.0.12.1",
+    "java.vendor": "Eclipse Adoptium"
+  },
+  "tests": {
+    "tests": 62,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_classes": {
+    "io.github.isidorotrevino.planner.scheduler.CapacitySchedulerTest": {
+      "tests": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "io.github.isidorotrevino.planner.scheduler.ReplanPolicyTest": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "input_sha256": {
+    "scheduler-core/pom.xml": "0b53bcba6014e33b447de83907b7415b4344e03784e42f08a1eed57c5b05dda9",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java": "3d0858cb29997ab01396c76d1987b54f7d92aa9f55d921b6542a32e13b561ced",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java": "e74230eb892aa4d6ea9c58960867b1a2abb0e34d74955530e0dc35d19b4b7c50",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java": "9b926f87fb1e33544659aa1aa6b5805505e3b1a08e1f22b736270802312a34c4",
+    "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java": "4ebc16404936099b62696aa8e0524108dd5d4fe09491be491621d7bcdf1e6f69",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java": "a92c3d129ae199aff726af2f7e92ec325ac584141839779e357c528489b935de",
+    "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java": "536ba587a0df7e329cb5533c2355bf8576d1b8d870cb361b7923412b63270fec",
+    "scripts/summarize-d3-core.py": "b9e012dcab69ac56f83ee425640e7d3c410bea868522ab22c4655b5382aee296",
+    "testing/D3/run-core-docker-tests.sh": "1637e6a0b37cde3e42bbb0db32f7eafdf31c5bc2991b0b738c97c7db1db355a9",
+    "testing/D3/run-core-tests.sh": "56a5845fe988c105945bc6c4f616eb8a57bf9711543b8e8681bcd83bd27fb530"
+  },
+  "scope": "Pure Java planning and event-policy tests with synthetic snapshots. No SQL, provider calls or workers.",
+  "limitations": [
+    "No transactional publication/CLAIM, runtime service, deployment or real quota validation.",
+    "D2 eligibility, evidence and compatibility enter as trusted snapshot diagnostics; adapter parity is pending.",
+    "Fairness projections are local to a run; persistence/epochs/outbox acknowledgements remain I2 work.",
+    "Only currently eligible work is assigned; HARD-dependent future work stays blocked, with no executable forecast.",
+    "Downstream duration projection is a lower bound and does not prove deadline feasibility under contention.",
+    "No performance SLA or D3 closure inferred from passing unit tests."
+  ],
+  "reproduce": "bash testing/D3/run-core-tests.sh",
+  "raw_evidence": "Generated under ignored scheduler-core/target/surefire-reports/"
+}
