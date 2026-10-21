@@ -252,3 +252,19 @@ Creates synthetic BACKLOG tasks only; no worker execution or deployment.
 Crea solo tareas BACKLOG sintéticas; no ejecuta workers ni despliega.
 The previous runners keep their original targets. Los runners anteriores conservan
 sus targets originales; Compose dev y D4 permanecen separados.
+
+## I10 — initial import / carga inicial
+
+Run the separate bootstrap campaign / Ejecuta la campaña separada de bootstrap:
+
+```bash
+python3 -m testing.D5.run_bootstrap_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I10-BOOTSTRAP-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I10-results.md).
+Imports selected rows from one real snapshot into synthetic BACKLOG tasks, with
+a separate manifest review. Importa filas seleccionadas de un único snapshot real
+a tareas BACKLOG sintéticas, con revisión propia del manifiesto.
+No activation or deployment. Sin activación ni despliegue; dev/D4 y campañas
+anteriores permanecen separados.

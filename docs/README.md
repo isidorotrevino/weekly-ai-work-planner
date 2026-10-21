@@ -45,6 +45,9 @@ desechable, tareas BACKLOG sin activación; ajuste de fecha registrado en D5.
 [I9: contrato de bootstrap inicial](design/D5-I9-BOOTSTRAP-DESIGN.md) y
 [matriz B01–B28 para revisión](design/D5-I9-BOOTSTRAP-REVIEW.md): diseño solamente,
 sin SQL nuevo ni tareas; selección explícita y revisión propia del manifiesto.
+[I10: bootstrap sintético aprobado](design/D5-I10-BOOTSTRAP-LAB.md), con
+[evidencia propia](validation/D5-I10-results.md): V34 solo en otro laboratorio
+V30 desechable, con continuidad hacia I8 y sin activar trabajo.
 
 ## Current design / Diseño vigente
 
