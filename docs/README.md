@@ -42,6 +42,9 @@ SQL nuevo ni escrituras en tareas. D5 abierto; D6 pendiente.
 [I8: implementación sintética del contrato aprobado](design/D5-I8-SYNTHETIC-TASK-LAB.md),
 con [evidencia nueva](validation/D5-I8-results.md): V33 solo en laboratorio V30
 desechable, tareas BACKLOG sin activación; ajuste de fecha registrado en D5.
+[I9: contrato de bootstrap inicial](design/D5-I9-BOOTSTRAP-DESIGN.md) y
+[matriz B01–B28 para revisión](design/D5-I9-BOOTSTRAP-REVIEW.md): diseño solamente,
+sin SQL nuevo ni tareas; selección explícita y revisión propia del manifiesto.
 
 ## Current design / Diseño vigente
 
