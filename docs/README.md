@@ -51,6 +51,9 @@ V30 desechable, con continuidad hacia I8 y sin activar trabajo.
 [I11: contrato de reaparición de IDs](design/D5-I11-REAPPEARANCE-DESIGN.md) y
 [matriz R01–R30](design/D5-I11-REAPPEARANCE-REVIEW.md): diseño para revisión,
 sin SQL nuevo; identidad declarada y ausencia aplicada con control de versión.
+[I12: reaparición sintética aprobada](design/D5-I12-REAPPEARANCE-LAB.md), con
+[evidencia propia](validation/D5-I12-results.md): V35 solo en otro laboratorio V30,
+sin crear tareas durante la reaparición ni activar trabajo.
 
 ## Current design / Diseño vigente
 

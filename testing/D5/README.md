@@ -268,3 +268,18 @@ a separate manifest review. Importa filas seleccionadas de un único snapshot re
 a tareas BACKLOG sintéticas, con revisión propia del manifiesto.
 No activation or deployment. Sin activación ni despliegue; dev/D4 y campañas
 anteriores permanecen separados.
+
+## I12 — reviewed reappearance / reaparición revisada
+
+Run the separate campaign / Ejecuta la campaña separada:
+
+```bash
+python3 -m testing.D5.run_reappearance_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I12-REAPPEARANCE-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I12-results.md).
+Reuses existing synthetic BACKLOG tasks after a confirmed absence and explicit
+review. Reutiliza tareas BACKLOG sintéticas tras ausencia confirmada y revisión
+expresa, sin crear otra tarea o activar trabajo. Dev/D4 and previous campaigns
+remain separate. Dev/D4 y campañas anteriores permanecen separados.
