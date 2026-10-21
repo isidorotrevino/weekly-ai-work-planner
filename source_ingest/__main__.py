@@ -11,7 +11,7 @@ def main():
     parser.add_argument('--project-id', required=True, help='caller-selected project UUID; no database lookup')
     parser.add_argument('--document-id', required=True, help='stable caller-selected document UUID')
     parser.add_argument('--revision', required=True, help='caller-supplied observation label, not Git attestation')
-    parser.add_argument('--profile', choices=['markdown-structure.v1', 'task-register.v1'], default='markdown-structure.v1')
+    parser.add_argument('--profile', choices=['markdown-structure.v1', 'task-register.v1', 'task-register-compat.v1'], default='markdown-structure.v1')
     parser.add_argument('--store', default='work/d5/previews', help='private local artifact directory')
     args = parser.parse_args()
     try:

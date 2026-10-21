@@ -22,7 +22,9 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 autorizado, sin activar tareas ni conectar proveedores. [Uso](../testing/D5/README.md)
 y [evidencia I1](validation/D5-I1-results.md).
 [I2: registro tabular y comparación](design/D5-REGISTER-COMPARISON.md), con
-[evidencia propia](validation/D5-I2-results.md). D5 abierto; D6 pendiente.
+[evidencia propia](validation/D5-I2-results.md).
+[I3: compatibilidad optativa y anotaciones](design/D5-REGISTER-COMPATIBILITY.md),
+con [evidencia independiente](validation/D5-I3-results.md). D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 

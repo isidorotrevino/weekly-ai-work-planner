@@ -4,6 +4,7 @@ import re
 from .preview import MAX_ITEMS, structure
 
 PROFILE = 'task-register.v1'
+COMPAT_PROFILE = 'task-register-compat.v1'
 HEADERS = ('ID', 'Item', 'Component(s)', 'Objective', 'Blocked on', 'Status', 'Verified', 'Source')
 FIELDS = ('id', 'item', 'components', 'objective', 'blocked_on', 'status', 'verified', 'source')
 KEY = re.compile(r'[A-Z][A-Z0-9_]*-[0-9]+')
@@ -32,13 +33,30 @@ def source_key(raw):
     return (key, struck) if KEY.fullmatch(key) else (None, struck)
 
 
-def parse(content):
+def annotated_cells(line):
+    """Exactly eight closed cells followed by an opaque suffix, no extra pipes."""
+    boundaries, slashes = [], 0
+    for index, char in enumerate(line):
+        if char == '|' and slashes % 2 == 0:
+            boundaries.append(index)
+        slashes = slashes + 1 if char == '\\' else 0
+    if len(boundaries) != 9 or line[:boundaries[0]].strip():
+        return None, None
+    suffix = line[boundaries[-1] + 1:]
+    if not suffix.strip():
+        return None, None
+    values = [line[a + 1:b].strip() for a, b in zip(boundaries, boundaries[1:])]
+    return values, {'text': suffix, 'column_start': boundaries[-1] + 2, 'column_end': len(line)}
+
+
+def parse(content, *, compatibility=False):
     sections, _, structural = structure(content)
     lines = content.decode('utf-8-sig').splitlines()
     proposals, diagnostics, seen = [], [], {}
     fence, active, expect_separator = None, False, False
     recognized, other_lines, row_count = 0, 0, 0
     heading_index, heading_path = 0, []
+    pending_blanks, continued_gaps, annotation_rows = [], 0, 0
 
     def block(code, line, **details):
         diagnostics.append({'code': code, 'line': line, 'blocking': True, **details})
@@ -58,6 +76,7 @@ def parse(content):
             if expect_separator:
                 block('REGISTER_SEPARATOR_REQUIRED', number)
             fence, active, expect_separator = (marker[1][0], len(marker[1])), False, False
+            pending_blanks = []
             continue
         if line.lstrip().startswith('<'):
             block('HTML_BLOCK_UNSUPPORTED', number)
@@ -65,10 +84,14 @@ def parse(content):
             block('INDENTED_TABLE_UNSUPPORTED', number)
             active, expect_separator = False, False
             continue
+        if compatibility and active and not line.strip():
+            pending_blanks.append(number)
+            continue
         values = cells(line)
         if values is not None and tuple(values) == HEADERS:
             if expect_separator:
                 block('REGISTER_SEPARATOR_REQUIRED', number)
+            pending_blanks = []
             recognized += 1
             active, expect_separator = False, True
             continue
@@ -82,6 +105,7 @@ def parse(content):
                 continue
         looks_like_row = line.lstrip().startswith('|')
         if not looks_like_row:
+            pending_blanks = []
             active = False
             continue
         if not active:
@@ -92,6 +116,14 @@ def parse(content):
             elif values is not None and len(values) == len(HEADERS):
                 block('UNRECOGNIZED_EIGHT_COLUMN_ROW', number)
             continue
+        if pending_blanks:
+            diagnostics.append({'code': 'REGISTER_BLANK_CONTINUATION', 'blank_lines': pending_blanks,
+                                'next_row_line': number, 'blocking': False})
+            continued_gaps += 1
+            pending_blanks = []
+        annotation = None
+        if compatibility and values is None:
+            values, annotation = annotated_cells(line)
         row_count += 1
         if row_count > MAX_ITEMS:
             raise ValueError('Register exceeds row limits')
@@ -106,9 +138,15 @@ def parse(content):
             block('REGISTER_KEY_DUPLICATE', number, first_line=seen[key], source_key=key)
         else:
             seen[key] = number
+        if annotation is not None:
+            annotation['line'] = number
+            annotation_rows += 1
+            diagnostics.append({'code': 'REGISTER_SOURCE_ANNOTATION', 'line': number, 'blocking': False})
         proposals.append({'kind': 'REGISTER_ROW_CANDIDATE', 'source_key': key, 'source_struck': struck,
                           'fields': dict(zip(FIELDS, values)), 'line_start': number, 'line_end': number,
                           'heading_lines': [s['line'] for s in heading_path], 'activation_allowed': False})
+        if compatibility:
+            proposals[-1]['source_annotation'] = annotation
     if expect_separator:
         block('REGISTER_SEPARATOR_REQUIRED', len(lines))
     if not recognized:
@@ -117,6 +155,9 @@ def parse(content):
         block('UNCLOSED_FENCE', len(lines))
     if other_lines:
         diagnostics.append({'code': 'OTHER_TABLE_LINES_UNINTERPRETED', 'line_count': other_lines, 'blocking': False})
-    diagnostics.append({'code': 'REGISTER_PREVIEW_ONLY', 'blocking': False})
-    return sections, proposals, diagnostics, {'recognized_tables': recognized, 'row_count': row_count,
-                                              'comparison_eligible': not any(d.get('blocking') for d in diagnostics)}
+    diagnostics.append({'code': 'REGISTER_COMPAT_PREVIEW_ONLY' if compatibility else 'REGISTER_PREVIEW_ONLY', 'blocking': False})
+    metadata = {'recognized_tables': recognized, 'row_count': row_count,
+                'comparison_eligible': not any(d.get('blocking') for d in diagnostics)}
+    if compatibility:
+        metadata.update(continued_blank_gaps=continued_gaps, annotation_rows=annotation_rows)
+    return sections, proposals, diagnostics, metadata

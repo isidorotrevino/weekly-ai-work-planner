@@ -92,3 +92,33 @@ duplicado o una fila ambigua bloquea toda la comparación. Una tabla fragmentada
 por líneas vacías no se recompone automáticamente; tampoco se recuperan filas
 fuera de cabeceras reconocidas. Las variaciones del registro real se mantienen
 bloqueadas hasta una decisión explícita sobre formato o normalización.
+
+## I3 — compatibilidad optativa y anotaciones
+
+[Decisiones y contrato I3](../../docs/design/D5-REGISTER-COMPATIBILITY.md) ·
+[Resultados I3](../../docs/validation/D5-I3-results.md).
+Conserva los perfiles I1/I2. Para probar blancos entre filas bajo una cabecera y
+anotaciones separadas después de las ocho celdas:
+
+```bash
+python3 -m testing.D5.demo_register --profile task-register-compat.v1
+python3 -m source_ingest \
+  --root testing/D5/fixtures --file register-compat-before.md \
+  --project-id 00000000-0000-4000-8000-000000000001 \
+  --document-id 00000000-0000-4000-8000-000000000002 \
+  --revision fixture-v1 --profile task-register-compat.v1
+```
+
+La demo conserva dos filas y detecta una anotación cambiada y una fila sin cambio
+que se desplazó. Usa el comparador I2 con las rutas impresas para repetir la
+comparación. Los dos extremos deben tener el mismo perfil; estricto y compatible
+no se mezclan automáticamente. El sufijo se guarda como `source_annotation`, con
+texto y posiciones Unicode de origen; no se incorpora a Status/Verified/Source ni
+se interpreta como permiso o evidencia.
+
+Solo se toleran blancos dentro de una tabla ya reconocida. Narrativa, encabezados
+y fences terminan su continuidad; duplicados, columnas ambiguas u otras guardas
+siguen bloqueando el informe completo. Un pipe adicional sin escapar en una
+anotación también bloquea. El original nunca se modifica. La captura compatible
+del registro real puede compararse estructuralmente, pero sus afirmaciones de
+estado o verificación continúan siendo datos no acreditados.

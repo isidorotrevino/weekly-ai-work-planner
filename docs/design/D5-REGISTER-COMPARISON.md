@@ -1,6 +1,7 @@
 # D5 I2 — registro tabular y comparación entre observaciones
 
 Fecha: 2026-10-21. **Implementado y validado localmente; D5 abierto.**
+Continuación: [I3 optativo, con D5-A04/A05](D5-REGISTER-COMPATIBILITY.md); el perfil estricto de este documento se conserva.
 [I1 y fronteras](D5-LOCAL-PREVIEW.md) · [Uso](../../testing/D5/README.md) ·
 [Evidencia I2](../validation/D5-I2-results.md).
 
@@ -102,7 +103,7 @@ y ciertas filas no conformes al perfil no se reparan para obtener un resultado
 verde. Las filas válidas son previsualizaciones parciales; el informe completo
 permanece bloqueado. [Conteos y pruebas](../validation/D5-I2-results.md).
 
-Siguiente decisión material: aprobar un perfil versionado de compatibilidad para
+Decisión pendiente al emitir I2 (resuelta para el nuevo perfil I3 por D5-A04/A05): aprobar un perfil versionado de compatibilidad para
 esas variaciones concretas, o mantener el contrato estricto y preparar una copia
 normalizada revisada por el propietario. La fuente original permanece intacta.
 La gramática Gentle-AI completa y cualquier aplicación persistente de propuestas

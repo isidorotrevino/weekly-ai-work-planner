@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import stat
 from .preview import MAX_BYTES, MAX_PREVIEW_BYTES, _directory, _identity, build_observation, canonical, save_preview
-from .register import PROFILE
+from .register import COMPAT_PROFILE, PROFILE
 
 
 def _unique_keys(pairs):
@@ -67,9 +67,9 @@ def compare_previews(before_path, after_path):
     for field in ['project_id', 'document_id', 'profile']:
         if before[field] != after[field]:
             raise ValueError('Incompatible preview ' + field)
-    if before['profile'] != PROFILE:
-        raise ValueError('Comparison requires explicit task-register.v1 snapshots')
-    report = {'schema': 'd5.local-comparison.v1', 'profile': PROFILE, 'state': 'PREVIEW_ONLY', 'activation_allowed': False,
+    if before['profile'] not in (PROFILE, COMPAT_PROFILE):
+        raise ValueError('Comparison requires explicit register-profile snapshots')
+    report = {'schema': 'd5.local-comparison.v1', 'profile': before['profile'], 'state': 'PREVIEW_ONLY', 'activation_allowed': False,
               'project_id': before['project_id'], 'document_id': before['document_id'],
               'before_preview_sha256': before_hash, 'after_preview_sha256': after_hash,
               'before_content_sha256': before['content_sha256'], 'after_content_sha256': after['content_sha256'],
@@ -88,12 +88,24 @@ def compare_previews(before_path, after_path):
     for key in sorted(old.keys() | new.keys()):
         a, b = old.get(key), new.get(key)
         changed = [field for field in a['fields'] if a['fields'][field] != b['fields'][field]] if a and b else []
+        if a and b and before['profile'] == COMPAT_PROFILE:
+            old_note, new_note = a['source_annotation'], b['source_annotation']
+            if (old_note['text'] if old_note else None) != (new_note['text'] if new_note else None):
+                changed.append('source_annotation')
         status = 'ADDED' if a is None else 'ABSENT_IN_OBSERVATION' if b is None else 'CHANGED' if changed else 'UNCHANGED'
         entry = {'source_key': key, 'source_identity_id': (a or b)['source_identity_id'], 'change': status,
                  'changed_fields': changed, 'activation_allowed': False}
         for name, row in [('before', a), ('after', b)]:
             entry[name] = {'candidate_id': row['candidate_id'], 'source_locator': row['source_locator']} if row else None
         entry['location_changed'] = bool(a and b and a['line_start'] != b['line_start'])
+        if before['profile'] == COMPAT_PROFILE:
+            for name, row in [('before', a), ('after', b)]:
+                if row and row['source_annotation']:
+                    note = row['source_annotation']
+                    entry[name]['annotation_locator'] = {'line': note['line'], 'column_start': note['column_start'], 'column_end': note['column_end']}
+            entry['annotation_location_changed'] = bool(a and b and a['source_annotation'] and b['source_annotation'] and
+                                                        {k: v for k, v in a['source_annotation'].items() if k != 'text'} !=
+                                                        {k: v for k, v in b['source_annotation'].items() if k != 'text'})
         report['changes'].append(entry)
     return report
 

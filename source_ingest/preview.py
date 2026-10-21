@@ -146,9 +146,9 @@ def build_observation(content, relative, project_id, document_id, revision, prof
     register = None
     if profile == PROFILE:
         sections, proposals, diagnostics = structure(content)
-    elif profile == 'task-register.v1':
+    elif profile in ('task-register.v1', 'task-register-compat.v1'):
         from .register import parse
-        sections, proposals, diagnostics, register = parse(content)
+        sections, proposals, diagnostics, register = parse(content, compatibility=profile == 'task-register-compat.v1')
     else:
         raise ValueError('Unsupported observation profile')
     digest = hashlib.sha256(content).hexdigest()
