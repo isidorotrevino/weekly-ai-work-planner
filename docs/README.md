@@ -16,6 +16,12 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 [D3 session handoff / Handoff para iniciar D3](../HANDOFF-D3.md): approved baseline, reading order, scheduler scope, deliverables and a ready-to-use prompt.
 
+## D5 iniciado / D5 started
+
+[Ingesta local y previsualización I1](design/D5-LOCAL-PREVIEW.md): primer corte
+autorizado, sin activar tareas ni conectar proveedores. [Uso](../testing/D5/README.md)
+y [evidencia independiente](validation/D5-I1-results.md). D5 abierto; D6 pendiente.
+
 ## Current design / Diseño vigente
 
 **D4 sintético aprobado y cerrado:** [diseño vigente](design/D4-approved.md) y

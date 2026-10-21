@@ -58,7 +58,8 @@ D1–D4 are **approved and closed within their recorded scope**. Their designs,
 manifests and historical evidence remain in the [documentation index](docs/README.md)
 and [validation overview](docs/validation/README.md). The
 [D4 closure manifest](docs/validation/D4-CLOSURE.json) defines the synthetic boundary.
-Source ingestion/integrations (D5) and governance/operations (D6) remain future work.
+D5 has started with a [local ingestion preview](testing/D5/README.md), without task
+activation; real integrations and governance/operations (D6) remain future work.
 Local development does not promote SQL proposals or authorize deployment.
 
 ## Explore and contribute

@@ -4,8 +4,9 @@
 
 This guide describes the development fixture, not a production application. / Esta
 guía describe la fixture de desarrollo, no una aplicación de producción.
-D1–D4 remain approved and closed. No D5/D6, real provider, migration promotion or
-deployment is included. [Validation of this environment](validation/DEV-ENV-results.md).
+D1–D4 remain approved and closed. This environment includes no real provider, migration promotion or deployment.
+The separate [D5 local preview](../testing/D5/README.md) has now started; it does
+not change the Compose fixture or start D6. [Validation of this environment](validation/DEV-ENV-results.md).
 
 ## Requirements / Requisitos
 
@@ -256,7 +257,7 @@ The local fixture does not implement that entire proposed product.
 | D2 | Domain and SQL contracts approved and closed / Dominio y SQL cerrados |
 | D3 | Conservative capacity scheduler MVP 1.0 approved and closed |
 | D4 | Synthetic worker/recovery scope approved and closed |
-| D5 | Source ingestion and integrations planned / Pendientes |
+| D5 | Local preview I1 started; real integrations pending / Iniciado |
 | D6 | Governance and operations planned / Pendientes |
 
 D2's recorded 157 checks (including 29,829 SemVer vectors inside one JUnit check)
