@@ -58,6 +58,9 @@ sin crear tareas durante la reaparición ni activar trabajo.
 y [matriz L01–L32](design/D5-I13-LOCAL-EDIT-REVIEW.md): diseño para revisión,
 sin SQL nuevo; elección completa origen/local para cambios presentes, sin excepción
 permanente ni extensión a reaparición con edición local.
+[I14: resolución local sintética aprobada](design/D5-I14-LOCAL-EDIT-LAB.md), con
+[evidencia propia](validation/D5-I14-results.md): V36 solo en otro laboratorio V30,
+elección revisada origen/local y continuidad bajo los controles anteriores.
 
 ## Current design / Diseño vigente
 

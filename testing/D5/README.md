@@ -283,3 +283,19 @@ Reuses existing synthetic BACKLOG tasks after a confirmed absence and explicit
 review. Reutiliza tareas BACKLOG sintéticas tras ausencia confirmada y revisión
 expresa, sin crear otra tarea o activar trabajo. Dev/D4 and previous campaigns
 remain separate. Dev/D4 y campañas anteriores permanecen separados.
+
+## I14 — local edit resolution / resolución de ediciones locales
+
+Run the separate campaign / Ejecuta la campaña separada:
+
+```bash
+python3 -m testing.D5.run_local_edit_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I14-LOCAL-EDIT-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I14-results.md).
+Reviews the full source or local text for existing synthetic BACKLOG tasks.
+Revisa texto completo del origen o local para tareas BACKLOG sintéticas existentes,
+sin excepción permanente ni extensión a reaparición con edición local.
+No activation or deployment; dev/D4 and prior campaigns remain separate.
+Sin activación ni despliegue; dev/D4 y campañas anteriores permanecen separados.
