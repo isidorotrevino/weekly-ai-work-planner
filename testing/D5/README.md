@@ -237,3 +237,18 @@ sin heartbeat, tareas ni operaciones. Se comprueban conservación del estado
 D2/D3/D4, límites de permisos y coexistencia de sus locks con el flujo D5. La
 captura D3 del caso T05 es un artefacto de test, sin publicación de planes.
 Este runner no ofrece aplicación operativa D2, proveedores, promoción o despliegue.
+
+## I8 — synthetic BACKLOG mapping / mapeo BACKLOG sintético
+
+Run the new disposable campaign / Ejecuta la campaña desechable nueva:
+
+```bash
+python3 -m testing.D5.run_mapping_lab
+```
+
+[Contract, command files and boundaries / Contrato, archivos de comando y límites](../../docs/design/D5-I8-SYNTHETIC-TASK-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I8-results.md).
+Creates synthetic BACKLOG tasks only; no worker execution or deployment.
+Crea solo tareas BACKLOG sintéticas; no ejecuta workers ni despliega.
+The previous runners keep their original targets. Los runners anteriores conservan
+sus targets originales; Compose dev y D4 permanecen separados.

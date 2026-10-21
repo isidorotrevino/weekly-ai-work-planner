@@ -39,6 +39,9 @@ en otro laboratorio desechable.
 [I7: contrato propuesto de mapeo a tareas D2](design/D5-I7-TASK-MAPPING-DESIGN.md) y
 [matriz para revisión](design/D5-I7-TASK-MAPPING-REVIEW.md): diseño solamente, sin
 SQL nuevo ni escrituras en tareas. D5 abierto; D6 pendiente.
+[I8: implementación sintética del contrato aprobado](design/D5-I8-SYNTHETIC-TASK-LAB.md),
+con [evidencia nueva](validation/D5-I8-results.md): V33 solo en laboratorio V30
+desechable, tareas BACKLOG sin activación; ajuste de fecha registrado en D5.
 
 ## Current design / Diseño vigente
 
