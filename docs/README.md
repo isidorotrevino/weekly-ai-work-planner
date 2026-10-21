@@ -65,6 +65,9 @@ elección revisada origen/local y continuidad bajo los controles anteriores.
 [matriz A01–A34](design/D5-I15-ADOPTION-REVIEW.md): diseño para revisión,
 sin SQL nuevo; conservar tarea existente y materializar correspondencia/procedencia
 solo al aplicar el paquete aprobado.
+[I16: adopción sintética aprobada](design/D5-I16-ADOPTION-LAB.md), con
+[evidencia propia](validation/D5-I16-results.md): V37 solo en otro laboratorio V30,
+correspondencia/procedencia atómicas y ninguna escritura en la tarea adoptada.
 
 ## Current design / Diseño vigente
 

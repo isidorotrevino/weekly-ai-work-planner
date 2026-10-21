@@ -299,3 +299,19 @@ Revisa texto completo del origen o local para tareas BACKLOG sintéticas existen
 sin excepción permanente ni extensión a reaparición con edición local.
 No activation or deployment; dev/D4 and prior campaigns remain separate.
 Sin activación ni despliegue; dev/D4 y campañas anteriores permanecen separados.
+
+## I16 — existing task adoption / adopción de tareas existentes
+
+Run the separate campaign / Ejecuta la campaña separada:
+
+```bash
+python3 -m testing.D5.run_adoption_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I16-ADOPTION-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I16-results.md).
+Adopts existing synthetic BACKLOG tasks after explicit source/task review, preserving
+the whole task row. Adopta tareas BACKLOG sintéticas existentes tras revisión
+expresa de origen y destino, conservando íntegra la tarea. No activation or
+deployment; dev/D4 and previous campaigns remain separate. Sin activación ni
+despliegue; dev/D4 y campañas anteriores permanecen separados.
