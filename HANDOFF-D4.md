@@ -1,5 +1,9 @@
 # Handoff D4 — workers y laboratorio Docker
 
+**Estado vigente, 2026-10-20: D4 sintético aprobado y cerrado por el usuario.**
+Consultar [alcance aprobado](docs/design/D4-approved.md) y [manifiesto](docs/validation/D4-CLOSURE.json).
+El handoff y sus cortes siguientes conservan el estado histórico de su emisión.
+
 Fecha: 2026-10-19. Estado: preparación documental de D4; implementación de D4 pendiente.
 
 Este es el handoff histórico de arranque. El estado posterior y las autorizaciones
@@ -115,4 +119,12 @@ El hosting, los timers de producción, las identidades LOGIN reales, secretos de
 
 A20–A22 posteriores aprueban ausencia sin progreso, revisión con delta cero y caso
 separado con cuarentena. [I10.1](docs/design/D4-I10-ABSENCE-LAB.md) distingue la
-ruta de ausencia implementada de las barreras de revisión/reapertura pendientes.
+ruta de ausencia implementada de las barreras de revisión/reapertura entonces pendientes.
+
+[I11](docs/design/D4-I11-REVIEW-QUARANTINE-LAB.md) implementa A21/A22 mediante
+revisión de delta cero y cuarentena separada con contención independiente. V28
+sigue propuesta de laboratorio; consultar su evidencia y límites, sin cerrar D4.
+
+[I12](docs/design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md) porta verificadores a Java
+bajo A23=B e incorpora presencia durable A24=A. La revisión final y evidencia
+actual se consultan junto a su tabla de aceptación; D4 sigue abierto.

@@ -14,7 +14,7 @@ import java.util.*;
 
 @RestController
 class LabHealth {
- @GetMapping("/lab/health") Map<String,Object> health(){return Map.of("ready",true,"role",LabSupport.config("role"));}
+ @GetMapping("/lab/health") Map<String,Object> health(){if(LabSupport.config("role").equals("worker")&&!LabWorker.presenceInitialized.get())throw new LabSupport.Denied("PRESENCE_INITIALIZATION_PENDING");return Map.of("ready",true,"role",LabSupport.config("role"));}
 }
 @RestControllerAdvice
 class LabErrors {
@@ -37,7 +37,7 @@ class LabControl {
  @PostMapping("/lab/checkpoint/commit") Object checkpointCommit(HttpServletRequest r) throws Exception {LabSupport.require(r,"verifier");var b=LabSupport.body(r);return LabSupport.sql("SELECT d4.commit_checkpoint(?,?,?,?)::text",LabSupport.uuid(b,"command_id"),LabSupport.uuid(b,"request_id"),LabSupport.uuid(b,"proof_id"),b.path("expected_version").asLong());}
  @PostMapping("/lab/checkpoint/authorize") Object authorize(HttpServletRequest r) throws Exception {LabSupport.require(r,"driver");var b=LabSupport.body(r);return LabSupport.sql("SELECT d4.authorize_continuation(?,?,?,?)::text",LabSupport.uuid(b,"command_id"),LabSupport.uuid(b,"checkpoint_id"),b.path("expected_version").asLong(),LabSupport.text(b,"reason"));}
  @PostMapping({"/lab/checkpoint/replan","/lab/plan"}) Object continuationPlan(HttpServletRequest r) throws Exception {
-  LabSupport.require(r,"driver");var store=new io.github.isidorotrevino.planner.postgres.AbsencePlanningStore();
+  LabSupport.require(r,"driver");var store=new io.github.isidorotrevino.planner.postgres.ReviewPlanningStore();
   for(int retry=0;;retry++)try(var c=LabSupport.connection()){
    store.observeEligibility(c,UUID.randomUUID());var capture=store.capture(c,UUID.randomUUID());var result=new io.github.isidorotrevino.planner.scheduler.CapacityScheduler().plan(capture.request(),capture.snapshot());var plan=store.publish(c,UUID.randomUUID(),UUID.randomUUID(),capture,result);return Map.of("schema","d4.continuation.snapshot.v1","plan",plan.toString(),"cas_retries",retry);
   }catch(java.sql.SQLException ex){if(!"40001".equals(ex.getSQLState())||retry>=2)throw ex;}

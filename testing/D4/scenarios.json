@@ -1,6 +1,6 @@
 {
   "schema_version": "d4.lab.scenarios.v1",
-  "status": "IMPLEMENTED_VALIDATED_I9_D4_OPEN",
+  "status": "APPROVED_CLOSED_SYNTHETIC_D4",
   "seed": null,
   "per_scenario_timeout_seconds": null,
   "initial_campaign": [
@@ -282,5 +282,112 @@
     "JUnit_tests": 507,
     "local_verifier_tests": 25,
     "total_positive_tests": 532
+  },
+  "absence_campaign": {
+    "status": "PASS_BOUNDED_D4_OPEN",
+    "historical": true,
+    "migration_target": 27,
+    "decisions": [
+      "D4-A20"
+    ],
+    "scenarios": [
+      "S20",
+      "S21",
+      "S16",
+      "S19"
+    ],
+    "command": "bash testing/D4/run-absence-lab.sh",
+    "evidence": "docs/validation/D4-I10-ABSENCE-results.json",
+    "assertions": 169,
+    "positive_tests": 226
+  },
+  "review_quarantine_campaign": {
+    "status": "PASS_BOUNDED_D4_OPEN",
+    "migration_target": 28,
+    "decisions": [
+      "D4-A21",
+      "D4-A22"
+    ],
+    "scenarios": [
+      "S22",
+      "S25",
+      "S23",
+      "S24",
+      "S20",
+      "S16"
+    ],
+    "command": "bash testing/D4/run-review-lab.sh",
+    "evidence": "docs/validation/D4-I11-REVIEW-QUARANTINE-results.json",
+    "canonical_and_accounting_delta_zero": true,
+    "historical_terminal_state_and_PASS_preserved": true,
+    "closure_and_continuation_explicit": true,
+    "all_historical_scenarios_rerun_on_V28": false,
+    "assertions": 231,
+    "JUnit_tests": 554,
+    "local_verifier_tests": 25,
+    "total_positive_tests": 579
+  },
+  "latest_integrated_campaign": {
+    "status": "PASS_BOUNDED_READY_FOR_USER_REVIEW_D4_OPEN",
+    "migration_target": 30,
+    "decisions": [
+      "D4-A23",
+      "D4-A24"
+    ],
+    "scenarios": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30"
+    ],
+    "command": "bash testing/D4/run-latest-matrix.sh",
+    "evidence": "docs/validation/D4-I12-INTEGRATED-results.json",
+    "assertions": 1085,
+    "D4_unique_tests": 281,
+    "D4_full_suite_tests": 280,
+    "additional_tree_checkpoint_unique_test": 1,
+    "D3_regression_tests": 175,
+    "D2_regression_tests": 157,
+    "local_Python_verifier_tests": 25,
+    "total_positive_tests": 638,
+    "all_S01_through_S30_executed_on_current_target": true,
+    "max_parallel_compose_projects": 2,
+    "final_closure_requires_explicit_user_approval": true
+  },
+  "closure": {
+    "status": "APPROVED_CLOSED_SYNTHETIC",
+    "approval_date": "2026-10-20",
+    "user_approval_literal": "A: aprobar cierre de D4 sintético",
+    "canonical_document": "docs/design/D4-approved.md",
+    "manifest": "docs/validation/D4-CLOSURE.json",
+    "historical_campaign_status_preserved": true,
+    "migration_promotion_approved": false,
+    "deployment_approved": false
   }
 }

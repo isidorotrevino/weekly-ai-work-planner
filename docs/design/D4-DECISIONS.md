@@ -1,6 +1,6 @@
 # D4 — decisiones y alcance de preparación
 
-Actualizado: 2026-10-20, Europe/Madrid. **D4 abierto, contratos y laboratorios en revisión; sin cierre.**
+Actualizado: 2026-10-20, Europe/Madrid. **D4 sintético aprobado y cerrado.** [Alcance vigente](D4-approved.md) y [manifiesto](../validation/D4-CLOSURE.json).
 
 Autoridad: petición de iniciar diseño y preparar el primer corte del laboratorio,
 tras leer [HANDOFF-D4](../../HANDOFF-D4.md). D1/D2/D3 siguen cerrados y aprobados.
@@ -33,6 +33,8 @@ D2 publicado: `69d71c3877e79bdfef088956b090d4eb6b447be9`; D3 conserva su
 | D4-A20 | «A: sello de ausencia y retry explícito» (2026-10-20) | RECONCILING→RETRY_PENDING con parada y cierre independientes; autorización expresa a READY. Misma operación/reserva/contador y TOP_UP original, sin checkpoint ficticio |
 | D4-A21 | «A: revisión verificada con delta cero» (2026-10-20) | Revisión append-only sin volver a CONSUME/RELEASE, invalida autorizaciones anteriores; no levanta cuarentena ni rearma por sí sola |
 | D4-A22 | «A: caso separado y cuarentena» (2026-10-20) | Conserva CANCELLED/COMPLETED, PASS y consumo históricos; suspende aceptación efectiva, bloquea admisiones/consumidores afectados y exige contención física independiente antes del cierre explícito del caso |
+| D4-A23 | «B: portar verificadores a Java» (2026-10-20) | Verificación dentro del servicio HTTPS; Git sintético del verificador, sin importar .git del worker ni compensar APPLIED |
+| D4-A24 | «A: sesión y secuencia durable» (2026-10-20) | Incarnación autorizada y secuencia monotónica; vencimiento/reemplazo bloquea nuevas admisiones, no libera reservas/leases ni acredita parada; rearme explícito |
 
 Las alternativas B de identidad y aislamiento quedan descartadas para este corte.
 No se vuelven a consultar proveedores reales ni máquinas físicas: están excluidos
@@ -84,4 +86,25 @@ A17–A19 amplían A04/A09 mediante la [ruta I9](D4-I9-RECONCILIATION-LAB.md): r
 
 A20–A22 registran las opciones A de [I10](D4-I10-REOPENING-REVIEW.md).
 [I10.1](D4-I10-ABSENCE-LAB.md) concreta la implementación de ausencia sin progreso;
-A21/A22 siguen aprobadas y pendientes de integración y validación.
+En ese corte A21/A22 seguían pendientes de integración y validación; I11 recoge
+la ampliación posterior.
+
+A21/A22 se concretan en [I11: revisiones y cuarentena](D4-I11-REVIEW-QUARANTINE-LAB.md),
+con V28 propuesta y campañas separadas. A20/I10.1 e informes anteriores mantienen
+su alcance histórico. D4 no queda cerrado por esta ampliación.
+
+A23=B y A24=A se implementan en [I12](D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md):
+port Java integrado con aceptación SQL/HTTPS, sesiones durables, matriz sobre V30
+y polling/reinicio con revisiones. La aprobación de estas opciones no cierra D4.
+
+## D4-CLOSE-01 — aprobación expresa del cierre sintético
+
+El 2026-10-20 el usuario respondió **«A: aprobar cierre de D4 sintético»** a la
+revisión final I12 (638 pruebas, 1.085 comprobaciones, 30 escenarios V30 y limpieza
+confirmada). Cierra únicamente el [alcance sintético documentado](D4-approved.md),
+sin promoción ni despliegue. Esta decisión posterior satisface la condición de
+cierre pendiente en los cortes históricos; A01–A24 conservan sus límites.
+
+Ratificación y publicación, 2026-10-21: el usuario solicita «publica en git, y se
+aprueba el cierre de D4». Ratifica D4-CLOSE-01 sin ampliar su alcance y autoriza
+publicar los cambios pendientes y preparar el [handoff de desarrollo](../../HANDOFF-DEV-ENV.md).

@@ -104,7 +104,7 @@ class Case:
   a=self.audit();self.ledger(a,self.fixture['account_a'],0,8);self.ledger(a,self.fixture['account_b'],0,0)
   self.check('single_attempt_reservation_effect',len(a['attempts'])==len(a['reservations'])==len(a['effects'])==1,a)
   cid=s['callback_command_id'];entries=[{'account_id':x['account_id'],'settled':x['units'],'consumed':s['info']['consumed_units']} for x in s['info']['accounts']]
-  envelope={'schema_version':'d4.worker.v1','command_id':cid,'correlation_id':cid,'request':{'action':'CALLBACK','delivery_id':s['delivery_id'],'payload':{'entries':entries}}}
+  envelope={'schema_version':'d4.worker.v1','command_id':cid,'correlation_id':cid,'request':{'action':'CALLBACK','delivery_id':s['delivery_id'],'session_id':next(x['session_id'] for x in a['presence_delivery'] if x['delivery_id']==s['delivery_id']),'payload':{'entries':entries}}}
   original=self.api('control-plane','/d4/v1/commands/'+cid,caller='worker-a')
   replay=self.api('control-plane','/d4/v1/commands',envelope,caller='worker-a');self.check('callback_replay_returns_original_receipt',original==replay)
   envelope['correlation_id']=str(uuid.uuid4());self.api('control-plane','/d4/v1/commands',envelope,caller='worker-a',expected=409);self.check('command_changed_content_denied',True)
@@ -511,6 +511,112 @@ class Case:
    if all(r['State'].get('Health',{}).get('Status')=='healthy' for r in rows):return
    time.sleep(2)
   raise TimeoutError('Restart health checks failed')
+ def review_capture(self,state,step):
+  body={'command_id':str(uuid.uuid4()),'delivery_id':state['delivery_id'],'step':step}
+  answer=self.api('verifier','/lab/review/capture',body);self.check('captured_receiver_fact_replay_'+step,answer==self.api('verifier','/lab/review/capture',body));return answer['candidate_id']
+ def review_info(self,state):return self.api('verifier','/lab/review/info',{'delivery_id':state['delivery_id']})
+ def review_ingest(self,candidate):
+  body={'command_id':str(uuid.uuid4()),'candidate_id':candidate};answer=self.api('verifier','/lab/review/ingest',body);self.check('late_fact_replay_no_second_case',answer==self.api('verifier','/lab/review/ingest',body));return answer['case_ids'][0]
+ def review_revise(self,state):
+  i=self.review_info(state);self.observation(state);body={'command_id':str(uuid.uuid4()),'delivery_id':state['delivery_id'],'expected_head':i['head'],'expected_version':i['row_version']}
+  answer=self.api('verifier','/lab/review/revise',body);self.check('verified_revision_replay_zero_accounting',answer['accounting_delta']==0 and answer==self.api('verifier','/lab/review/revise',body));return answer
+ def review_close(self,case,revision):
+  body={'command_id':str(uuid.uuid4()),'case_id':case,'revision_id':revision['revision_id'],'reason':'Explicit close after independent proof and every affected stop barrier'}
+  answer=self.api('control-plane','/lab/review/close',body);self.check('explicit_case_closure_replay',answer['closed'] and answer==self.api('control-plane','/lab/review/close',body));return answer
+ def scenario22(self):
+  self.api('worker-a','/lab/run',{});first=self.phase(['CHECKPOINT_READY']);candidates=[self.review_capture(first,step) for step in ['step-2','step-3']]
+  rid=str(uuid.uuid4());self.api('control-plane','/lab/multi/request',{'command_id':rid,'delivery_id':first['delivery_id'],'expected_version':self.inspect(first['delivery_id'])['row_version']});self.observation(first)
+  cp=self.api('verifier','/lab/multi/verify',{'delivery_id':first['delivery_id'],'request_id':rid,'proof_id':str(uuid.uuid4()),'commit_id':str(uuid.uuid4())})
+  self.api('control-plane','/lab/multi/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'expected_version':cp['row_version'],'reason':'Authority issued before late receipt'})
+  self.api('control-plane','/lab/checkpoint/replan',{});baseline=self.audit()['journal'];old=None
+  for candidate in candidates:
+   case=self.review_ingest(candidate);i=self.review_info(first);self.check('quarantine_suspends_effective_acceptance',not i['effective_task_eligible'] and len(i['cases'])==1)
+   self.api('worker-a','/lab/raw',{'action':'POLL'},expected=409);self.check('quarantine_blocks_stale_admission',len(self.audit()['attempts'])==1)
+   revision=self.review_revise(first);self.check('revision_never_consumes_or_releases_again',self.audit()['journal']==baseline)
+   if old is not None:self.check('revision_chain_retains_previous_head',next(x for x in self.audit()['review_revisions'] if x['id']==revision['revision_id'])['parent_id']==old['revision_id'])
+   self.review_close(case,revision);old=revision
+  a=self.audit();self.check('reopened_separate_cases_keep_history',len(a['review_cases'])==len(a['review_closures'])==len(a['review_revisions'])==2 and a['operations'][0]['state']=='READY' and len(a['multi_authorizations'])==1 and not a['review_authorizations'])
+  self.api('control-plane','/lab/multi/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'expected_version':self.inspect(first['delivery_id'])['row_version'],'reason':'Old authority cannot revive'},expected=409)
+  self.api('control-plane','/lab/review/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'revision_id':old['revision_id'],'expected_version':self.inspect(first['delivery_id'])['row_version'],'reason':'Explicit fresh A21 continuation'})
+  self.check('fresh_authority_does_not_rearm',self.state()['phase']=='CHECKPOINT_READY');self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-a','/lab/next',{});self.api('worker-a','/lab/run',{});second=self.phase(['CHECKPOINT_READY'])
+  rid=str(uuid.uuid4());self.api('control-plane','/lab/multi/request',{'command_id':rid,'delivery_id':second['delivery_id'],'expected_version':self.inspect(second['delivery_id'])['row_version']});self.observation(second)
+  cp2=self.api('verifier','/lab/multi/verify',{'delivery_id':second['delivery_id'],'request_id':rid,'proof_id':str(uuid.uuid4()),'commit_id':str(uuid.uuid4())})
+  self.api('control-plane','/lab/multi/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp2['checkpoint_id'],'expected_version':cp2['row_version'],'reason':'Explicit final suffix'})
+  self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-a','/lab/next',{});self.api('worker-a','/lab/run',{});last=self.phase(['CALLBACK_CONFIRMED']);self.observation(last)
+  done=self.api('verifier','/lab/multi/finish',{'delivery_id':last['delivery_id'],'proof_id':str(uuid.uuid4()),'command_id':str(uuid.uuid4())});a=self.audit();self.check('reviewed_chain_completed_once',done['state']=='COMPLETED' and len(a['attempts'])==3 and len(a['reservations'])==1 and len(a['acceptance'])==1 and len(a['review_links'])==1)
+  self.ledger(a,self.fixture['account_a'],0,10);self.ledger(a,self.fixture['account_a2'],0,6)
+ def terminal_review_source(self):
+  self.api('worker-a','/lab/run',{});waiting=self.phase(['WAITING_EFFECT']);candidate=self.review_capture(waiting,'step-1');self.check('candidate_not_yet_ingested',not self.audit()['effects'])
+  self.api('worker-a','/lab/continue',{});state=self.phase(['CALLBACK_CONFIRMED']);self.complete(state);self.check('historical_pass_before_reopen',len(self.audit()['acceptance'])==1)
+  return state,candidate
+ def scenario23(self):
+  state,candidate=self.terminal_review_source();baseline=self.audit()['journal'];case=self.review_ingest(candidate);i=self.review_info(state)
+  self.check('completed_state_and_pass_retained_but_suspended',i['info']['state']=='COMPLETED' and not i['effective_task_eligible'] and len(self.audit()['acceptance'])==1 and not self.audit()['leases'])
+  self.api('control-plane','/lab/review/close',{'command_id':str(uuid.uuid4()),'case_id':case,'revision_id':str(uuid.uuid4()),'reason':'Unverified cannot close'},expected=409)
+  self.api('verifier','/lab/review/revise',{'command_id':str(uuid.uuid4()),'delivery_id':state['delivery_id'],'expected_head':None,'expected_version':i['row_version']},caller='worker-b',expected=403);self.check('worker_cannot_mint_revision',True)
+  self.api('verifier','/lab/review/revise',{'command_id':str(uuid.uuid4()),'delivery_id':state['delivery_id'],'expected_head':None,'expected_version':i['row_version'],'proof':{}},expected=403);self.check('driver_cannot_supply_review_proof',True)
+  rev=self.review_revise(state);self.check('revision_alone_does_not_lift_quarantine',not self.review_info(state)['effective_task_eligible']);self.review_close(case,rev)
+  a=self.audit();self.check('explicit_close_restores_effective_acceptance_without_new_pass_or_journal',self.review_info(state)['effective_task_eligible'] and a['journal']==baseline and len(a['acceptance'])==1 and len(a['attempts'])==1 and not a['leases']);self.ledger(a,self.fixture['account_a'],0,8)
+ def scenario24(self):
+  state,candidate=self.terminal_review_source()
+  # Host fixture administration marks the source task DONE only after independent
+  # PASS; workers/verifier cannot change task status or invent acceptance.
+  self.compose('exec','-T','db','psql','-X','-U','d4_owner','-d','postgres','-v','ON_ERROR_STOP=1','-c',"UPDATE tasks SET status='DONE' WHERE id='"+self.fixture['task_a']+"'")
+  self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-b','/lab/run',{});actor=self.phase(['PROCESS_RUNNING'],worker='worker-b');self.check('hard_consumer_running_before_late_fact',actor['identity']['operation']==self.fixture['actor'] and not self.observation(actor,'worker-b')['process_stopped'])
+  baseline=self.audit()['journal'];case=self.review_ingest(candidate);a=self.audit();self.check('quarantine_captures_existing_executor_and_closes_receiver',len(a['review_affected'])==len(a['review_containments'])==1 and not a['review_barriers'] and len(a['leases'])==1)
+  self.api('verifier','/lab/review/barriers',{'case_id':case},expected=403);self.check('live_host_observation_cannot_mint_stop_barrier',not self.audit()['review_barriers'])
+  payload=base64.b64encode(('synthetic-effect:'+actor['identity']['operation']).encode()).decode();self.api('effect-receiver','/lab/effect',{'authorization':actor['authorization'],'step':'step-1','payload':payload},caller='worker-b',expected=409);self.check('receiver_rejects_old_actor_grant_after_durable_close',self.query(actor)['status']=='ABSENT' and self.query(actor)['closed'])
+  stopped=self.phase(['BLOCKED_UNKNOWN'],worker='worker-b',timeout=35);self.check('quarantine_renewal_failure_stops_real_process',self.observation(stopped,'worker-b')['process_stopped'] and 'authority_failure' in stopped)
+  rev=self.review_revise(state);self.api('control-plane','/lab/review/close',{'command_id':str(uuid.uuid4()),'case_id':case,'revision_id':rev['revision_id'],'reason':'Need independent actor stop barrier'},expected=409)
+  body={'case_id':case};barriers=self.api('verifier','/lab/review/barriers',body);self.check('independent_barrier_is_durable_and_idempotent',len(barriers['barriers'])==1 and barriers==self.api('verifier','/lab/review/barriers',body))
+  self.api('control-plane','/lab/review/close',{'command_id':str(uuid.uuid4()),'case_id':case,'revision_id':rev['revision_id'],'reason':'Live lease still needs expiry/reconciliation'},expected=409)
+  self.wait_expired(actor['delivery_id']);self.api('verifier','/lab/review/expire',{'case_id':case});self.review_close(case,rev)
+  a=self.audit();self.check('quarantine_close_keeps_actor_reconciling_and_commitment',next(o for o in a['operations'] if o['id']==self.fixture['actor'])['state']=='RECONCILING' and len(a['leases'])==1 and len(a['acceptance'])==1 and a['journal']==baseline)
+  self.check('original_completed_acceptance_restored_without_auto_rearm',self.review_info(state)['effective_task_eligible'] and self.state('worker-b')['phase']=='BLOCKED_UNKNOWN');self.ledger(a,self.fixture['account_a'],0,8);self.ledger(a,self.fixture['account_b'],10,0)
+
+ def scenario25(self):
+  self.api('worker-a','/lab/run',{});state=self.phase(['CHECKPOINT_READY']);candidate=self.review_capture(state,'step-2')
+  request=self.api('control-plane','/lab/checkpoint/request',{'command_id':str(uuid.uuid4()),'delivery_id':state['delivery_id'],'expected_version':self.inspect(state['delivery_id'])['row_version']});self.observation(state)
+  cp=self.api('verifier','/lab/checkpoint/verify',{'request_id':request['request_id'],'proof_id':str(uuid.uuid4()),'commit_id':str(uuid.uuid4())})
+  self.api('control-plane','/lab/checkpoint/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'expected_version':cp['row_version'],'reason':'Original v1 authority before late fact'});baseline=self.audit()['journal'];case=self.review_ingest(candidate)
+  self.check('v1_partial_keeps_pass_absent_and_acceptance_suspended',not self.review_info(state)['effective_task_eligible'] and not self.audit()['acceptance'])
+  rev=self.review_revise(state);self.review_close(case,rev);self.check('v1_revision_and_close_have_zero_journal_delta',self.audit()['journal']==baseline)
+  self.api('control-plane','/lab/review/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'revision_id':rev['revision_id'],'expected_version':self.inspect(state['delivery_id'])['row_version'],'reason':'Explicit reviewed v1 suffix'})
+  self.check('v1_review_authority_does_not_rearm',self.state()['phase']=='CHECKPOINT_READY');self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-a','/lab/next',{});self.api('worker-a','/lab/run',{});last=self.phase(['CALLBACK_CONFIRMED']);self.observation(last)
+  done=self.api('verifier','/lab/checkpoint/finish',{'delivery_id':last['delivery_id'],'proof_id':str(uuid.uuid4()),'command_id':str(uuid.uuid4())});a=self.audit();self.check('v1_reviewed_continuation_completed_same_reservation',done['state']=='COMPLETED' and len(a['attempts'])==2 and len(a['reservations'])==1 and len(a['acceptance'])==1 and len(a['review_links'])==1 and len(a['continuation_links'])==1);self.ledger(a,self.fixture['account_a'],0,10)
+
+ def scenario26(self):
+  self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':1,'duration_seconds':180});state=self.phase(['CALLBACK_CONFIRMED']);self.loop_phase(['WAITING_ACCEPTANCE']);self.check('tree_candidate_alone_never_accepts',not self.audit()['acceptance'] and not self.audit()['tree_proofs'])
+  result=self.verify(state);self.check('java_files_git_and_https_acceptance',result['accepted'] and len(self.audit()['tree_proofs'])==1)
+  self.loop_phase(['COMPLETED']);self.check('verified_tree_allows_normal_polling_retirement',self.state()['phase']=='IDLE');a=self.audit();self.ledger(a,self.fixture['account_a'],0,8);self.check('one_operation_one_attempt_one_reservation',len(a['attempts'])==len(a['reservations'])==len(a['acceptance'])==1)
+ def scenario27(self):
+  self.api('worker-a','/lab/run',{});state=self.phase(['CALLBACK_CONFIRMED']);before=self.audit()['journal'];self.observation(state)
+  self.api('verifier','/lab/verify',{'delivery_id':state['delivery_id'],'proof_id':str(uuid.uuid4())},expected=409);self.check('unrestored_tree_cannot_mint_pass',not self.audit()['acceptance'] and not self.audit()['tree_proofs'] and self.inspect(state['delivery_id'])['state']=='VERIFYING')
+  self.api('worker-a','/lab/tree/restore',{});self.check('local_restoration_does_not_undo_external_effect',self.query(state)['status']=='APPLIED' and self.audit()['journal']==before)
+  result=self.verify(state);a=self.audit();self.check('java_restoration_verified_independently_before_pass',result['accepted'] and len(a['tree_proofs'])==1 and a['tree_proofs'][0]['proof']['restoration']);self.check('restoration_preserves_accounting_and_attempt',a['journal']==before and len(a['attempts'])==len(a['reservations'])==len(a['acceptance'])==1);self.ledger(a,self.fixture['account_a'],0,8)
+ def scenario28(self):
+  self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':2,'duration_seconds':180});first=self.phase(['CHECKPOINT_READY']);self.loop_phase(['PAUSED_CHECKPOINT_READY']);candidate=self.review_capture(first,'step-2')
+  rid=str(uuid.uuid4());self.api('control-plane','/lab/checkpoint/request',{'command_id':rid,'delivery_id':first['delivery_id'],'expected_version':self.inspect(first['delivery_id'])['row_version']});self.observation(first)
+  cp=self.api('verifier','/lab/checkpoint/verify',{'request_id':rid,'proof_id':str(uuid.uuid4()),'commit_id':str(uuid.uuid4())});before=self.audit()['journal'];case=self.review_ingest(candidate);rev=self.review_revise(first);self.review_close(case,rev)
+  self.api('control-plane','/lab/review/authorize',{'command_id':str(uuid.uuid4()),'checkpoint_id':cp['checkpoint_id'],'revision_id':rev['revision_id'],'expected_version':self.inspect(first['delivery_id'])['row_version'],'reason':'Explicit reviewed polling continuation'})
+  self.api('control-plane','/lab/checkpoint/replan',{});old=self.api('control-plane','/lab/presence',caller='worker-a');self.compose('restart','worker-a','control-plane','verifier',timeout=60);self.healthy(['worker-a','control-plane','verifier']);self.check('restart_requires_explicit_rearm_after_reviewed_checkpoint',self.state()['phase']=='RECOVERY_REQUIRED' and self.api('worker-a','/lab/loop/state')['phase']=='RECOVERY_REQUIRED' and len(self.audit()['attempts'])==1 and self.audit()['journal']==before)
+  head=self.api('control-plane','/lab/presence',caller='worker-a');self.check('restart_has_new_durable_incarnation',head['session_id']!=old['session_id'] and len(self.audit()['presence_sessions'])>=5)
+  cid=str(uuid.uuid4());self.api('control-plane','/d4/v1/commands',{'schema_version':'d4.worker.v1','command_id':cid,'correlation_id':cid,'request':{'action':'PRESENCE','session_id':old['session_id'],'sequence':old['sequence']+1}},caller='worker-a',expected=409);self.check('superseded_session_cannot_refresh_presence',self.api('control-plane','/lab/presence',caller='worker-a')['session_id']==head['session_id'])
+  self.api('worker-a','/lab/next',{});self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':1,'duration_seconds':180});last=self.phase(['CALLBACK_CONFIRMED']);self.loop_phase(['WAITING_ACCEPTANCE']);self.observation(last)
+  done=self.api('verifier','/lab/checkpoint/finish',{'delivery_id':last['delivery_id'],'proof_id':str(uuid.uuid4()),'command_id':str(uuid.uuid4())});self.loop_phase(['COMPLETED']);a=self.audit();self.check('reviewed_restart_completes_same_operation_and_reservation',done['state']=='COMPLETED' and last['identity']['operation']==first['identity']['operation'] and len(a['attempts'])==2 and len(a['reservations'])==len(a['acceptance'])==len(a['review_links'])==1);self.ledger(a,self.fixture['account_a'],0,10)
+ def scenario29(self):
+  self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':1,'duration_seconds':180});state=self.phase(['WAITING_EFFECT']);candidate=self.review_capture(state,'step-1');self.api('worker-a','/lab/continue',{});state=self.phase(['CALLBACK_CONFIRMED']);self.verify(state);self.loop_phase(['COMPLETED']);self.check('producer_completed_before_late_fact',self.state()['phase']=='IDLE' and len(self.audit()['acceptance'])==1)
+  before=self.audit()['journal'];case=self.review_ingest(candidate);self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':1,'duration_seconds':10});self.loop_phase(['BUDGET_EXHAUSTED'],timeout=20);self.check('normal_polling_cannot_admit_quarantined_physical_resource',len(self.audit()['attempts'])==1 and self.audit()['journal']==before and not self.review_info(state)['effective_task_eligible'])
+  rev=self.review_revise(state);self.review_close(case,rev);self.check('closure_does_not_rearm_finished_polling_loop',self.api('worker-a','/lab/loop/state')['phase']=='BUDGET_EXHAUSTED' and self.state()['phase']=='IDLE' and len(self.audit()['attempts'])==1)
+  self.api('control-plane','/lab/checkpoint/replan',{});self.api('worker-a','/lab/loop/start',{'command_id':str(uuid.uuid4()),'max_operations':1,'duration_seconds':180});next_state=self.phase(['CALLBACK_CONFIRMED']);self.verify(next_state);self.loop_phase(['COMPLETED']);a=self.audit();self.check('explicit_rearm_admits_next_operation_after_case_closure',next_state['identity']['operation']==self.fixture['operation_next'] and len(a['attempts'])==len(a['reservations'])==len(a['acceptance'])==2);self.ledger(a,self.fixture['account_a'],0,16)
+
+ def scenario30(self):
+  assignment=self.api('worker-a','/lab/raw',{'action':'POLL'})['assignment'];old=self.api('control-plane','/lab/presence',caller='worker-a');before=self.audit();self.check('presence_fixture_holds_one_lease_before_restart',len(before['attempts'])==len(before['leases'])==len(before['reservations'])==1 and not before['acceptance'])
+  self.compose('restart','db',timeout=40);self.healthy(['db']);head=self.api('control-plane','/lab/presence',caller='worker-a');after=self.audit();self.check('database_restart_preserves_session_sequence_and_delivery_binding',head['session_id']==old['session_id'] and head['sequence']>=old['sequence'] and after['presence_sessions']==before['presence_sessions'] and after['presence_delivery']==before['presence_delivery'] and after['journal']==before['journal'])
+  self.compose('restart','worker-a',timeout=40);self.healthy(['worker-a']);current=self.api('control-plane','/lab/presence',caller='worker-a');self.check('new_worker_boot_replaces_only_presence_authority',current['session_id']!=old['session_id'] and self.state()['phase']=='IDLE' and len(self.audit()['attempts'])==1 and self.audit()['journal']==before['journal'])
+  self.api('control-plane','/lab/grant',{'command_id':str(uuid.uuid4()),'delivery_id':assignment['delivery_id']},caller='worker-a',expected=409);self.api('worker-a','/lab/raw',{'action':'START','delivery_id':assignment['delivery_id']},expected=409)
+  a=self.audit();self.check('new_session_cannot_adopt_old_delivery_or_manufacture_stop',len(a['leases'])==len(a['attempts'])==len(a['reservations'])==1 and a['operations'][0]['state']=='LEASED' and a['journal']==before['journal'] and not a['acceptance'] and not a['review_barriers']);self.ledger(a,self.fixture['account_a'],10,0)
+
  def finish(self,error=None):
   try:
    (self.path/'containers.log').write_text(self.compose('logs','--no-color',check=False).stdout)
@@ -529,15 +635,17 @@ class Case:
   (self.path/'result.json').write_text(json.dumps(report,indent=2)+'\n');return report
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('run',type=Path);parser.add_argument('--scenarios',nargs='+',default=['S01','S02','S03','S04']);args=parser.parse_args();run=args.run.resolve();image=(run/'image-tag.txt').read_text().strip();results=[]
+ parser=argparse.ArgumentParser();parser.add_argument('run',type=Path);parser.add_argument('--scenarios',nargs='+',default=['S01','S02','S03','S04']);parser.add_argument('--keep-going',action='store_true');args=parser.parse_args();run=args.run.resolve();image=(run/'image-tag.txt').read_text().strip();results=[]
  for scenario in args.scenarios:
   case=Case(run,scenario,image);error=None
   try:
    case.start();getattr(case,'scenario'+str(int(scenario[1:])))()
+  except KeyboardInterrupt:
+   error=RuntimeError('CAMPAIGN_INTERRUPTED');raise
   except Exception as ex:error=ex;print(scenario+': FAIL '+str(ex),flush=True)
   finally:result=case.finish(error);results.append(result)
   print(scenario+': '+result['status']+' ('+str(len(result['checks']))+' comprobaciones)',flush=True)
-  if result['status']!='PASS':break
+  if result['status']!='PASS' and not args.keep_going:break
  (run/'scenario-results.json').write_text(json.dumps(results,indent=2)+'\n')
  if len(results)!=len(args.scenarios) or any(r['status']!='PASS' for r in results):raise SystemExit(1)
 if __name__=='__main__':main()

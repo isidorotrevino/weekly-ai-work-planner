@@ -6,7 +6,9 @@
 
 Weekly AI Work Planner explora cómo convertir planes de ingeniería en sesiones breves y trazables de trabajo con IA, respetando límites de recursos, dependencias, incidentes y aprobaciones humanas.
 
-**Estado actual: diseño técnico, prototipo PostgreSQL y núcleo inicial de planificación Java 21.** La arquitectura funcional (D1) está aprobada. El diseño de dominio (D2) está aprobado y cerrado tras su validación. Todavía no hay una aplicación de planificación, una flota de workers ni una interfaz web ejecutables.
+**Estado actual: núcleo de planificación Java 21, contratos PostgreSQL y laboratorio Docker sintético ejecutable.** D1, D2 y D3 están aprobados y cerrados. D4 incluye workers de fixture, transporte HTTPS, verificación independiente, checkpoints y recuperación; su alcance sintético acotado está aprobado y cerrado. Consulta el [alcance D4 aprobado](docs/design/D4-approved.md) y el [manifiesto de cierre](docs/validation/D4-CLOSURE.json). Proveedores reales, despliegue físico y aplicación web de producción quedan para etapas posteriores.
+
+Próxima sesión: [entorno de desarrollo Docker Compose y simplificación del README](HANDOFF-DEV-ENV.md). Es un handoff; el entorno de desarrollo está pendiente de implementar.
 
 ## Qué problema aborda
 
@@ -113,7 +115,7 @@ Las migraciones originales V1–V4 y las propuestas V5–V11 se mantienen separa
 | D1 | Arquitectura funcional | Aprobada |
 | D2 | Dominio y contratos PostgreSQL | Aprobado y cerrado; prototipo de validación |
 | D3 | Planificación consciente de capacidad | Aprobado y cerrado; MVP conservador 1.0, bibliotecas/SQL validados |
-| D4 | Protocolo de workers y laboratorio de recuperación sintética | En curso; revisión abierta |
+| D4 | Protocolo de workers y laboratorio de recuperación sintética | Aprobado y cerrado; alcance sintético |
 | D5 | Ingestión e integraciones | Prevista |
 | D6 | Gobierno y operación | Prevista |
 
@@ -137,11 +139,18 @@ Puedes usarlo, modificarlo y redistribuirlo, también comercialmente. Al distrib
 
 Las atribuciones de terceros se conservan en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
-[D4 I4: laboratorio Compose integrado](docs/design/D4-I4-LAB.md) y [evidencia propia](docs/validation/D4-I4-results.json). D4 sigue abierto; sin despliegue ni migraciones promovidas.
+[D4 I4: laboratorio Compose integrado](docs/design/D4-I4-LAB.md) y [evidencia propia](docs/validation/D4-I4-results.json). En la emisión de I4 D4 seguía abierto; el cierre vigente está enlazado arriba. Sin despliegue ni migraciones promovidas.
 
 [D4 I6: renovación y checkpoint cooperativo](docs/design/D4-I6-LONG-RUNNING-LAB.md):
 nueve escenarios sintéticos y [resultados separados](docs/validation/D4-I6-results.json).
-D4 permanece abierto; alcance acotado, sin proveedores reales.
+En la emisión de I6 D4 permanecía abierto; alcance acotado, sin proveedores reales.
 
 [D4 I7: polling normal y retirada verificada](docs/design/D4-I7-POLLING-LAB.md),
 con [doce escenarios registrados](docs/validation/D4-I7-results.json).
+
+[D4 I11: revisiones verificadas A21 y cuarentena física A22](docs/design/D4-I11-REVIEW-QUARANTINE-LAB.md),
+con [campaña sintética y regresiones acotadas](docs/validation/D4-I11-REVIEW-QUARANTINE-results.json).
+En la emisión de I11 D4 seguía abierto; su cierre expreso posterior está registrado arriba.
+
+[D4 I12: verificadores Java y presencia durable](docs/design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md),
+con matriz integrada sobre V30. La revisión y aprobación expresa final de D4 constan en el manifiesto de cierre.

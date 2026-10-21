@@ -6,7 +6,9 @@ English · [Español](README.es.md)
 
 Weekly AI Work Planner explores how to turn engineering plans into short, traceable AI work sessions while respecting resource limits, project dependencies, incidents, and human approval boundaries.
 
-**Current stage: technical design, PostgreSQL validation prototype, and an initial Java 21 planning core.** The functional architecture (D1) is approved. The domain design (D2) is approved and closed after validation. There is no runnable planner application, worker fleet, or web interface yet.
+**Current stage: Java 21 planning core, PostgreSQL contracts and a runnable synthetic Docker laboratory.** D1, D2 and D3 are approved and closed. D4 includes fixture workers, HTTPS transport, independent verification, checkpoints and recovery; its bounded synthetic scope is approved and closed. See the [approved D4 scope](docs/design/D4-approved.md) and [closure manifest](docs/validation/D4-CLOSURE.json). Real providers, physical deployment and a production web application remain future work.
+
+Next session: [Docker Compose development environment and README simplification](HANDOFF-DEV-ENV.md). This is a handoff; the development environment is pending implementation.
 
 ## Why this project exists
 
@@ -113,7 +115,7 @@ The original V1–V4 migrations and the V5–V11 proposals are kept separate on 
 | D1 | Functional architecture | Approved |
 | D2 | Domain model and PostgreSQL contracts | Approved and closed; validation prototype |
 | D3 | Capacity-aware scheduling | Approved and closed; conservative MVP 1.0, validated libraries/SQL |
-| D4 | Worker protocol and synthetic recovery lab | In progress; review open |
+| D4 | Worker protocol and synthetic recovery lab | Approved and closed; synthetic scope |
 | D5 | Source ingestion and integrations | Planned |
 | D6 | Governance and operations | Planned |
 
@@ -137,11 +139,18 @@ You may use, modify, and redistribute it, including commercially. When conveying
 
 Third-party attribution is maintained in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
-[D4 I4 integrated Compose laboratory](docs/design/D4-I4-LAB.md) and [separate evidence](docs/validation/D4-I4-results.json). D4 remains open; no deployment or migration promotion.
+[D4 I4 integrated Compose laboratory](docs/design/D4-I4-LAB.md) and [separate evidence](docs/validation/D4-I4-results.json). At I4 issuance D4 remained open; see the current closure above. No deployment or migration promotion.
 
 [D4 I6 renewal and cooperative checkpoint](docs/design/D4-I6-LONG-RUNNING-LAB.md):
 nine synthetic scenarios and [separate results](docs/validation/D4-I6-results.json).
-D4 remains open; bounded scope, no real providers.
+At I6 issuance D4 remained open; bounded scope, no real providers.
 
 [D4 I7 normal polling and verified retirement](docs/design/D4-I7-POLLING-LAB.md),
 with [twelve recorded scenarios](docs/validation/D4-I7-results.json).
+
+[D4 I11: A21 verified revisions and A22 physical quarantine](docs/design/D4-I11-REVIEW-QUARANTINE-LAB.md),
+with [bounded synthetic campaigns and regressions](docs/validation/D4-I11-REVIEW-QUARANTINE-results.json).
+At I11 issuance D4 remained open; the later explicit closure is recorded above.
+
+[D4 I12: Java verifiers and durable worker presence](docs/design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md),
+with the integrated V30 matrix. Final D4 review and explicit user approval are recorded in the closure manifest.

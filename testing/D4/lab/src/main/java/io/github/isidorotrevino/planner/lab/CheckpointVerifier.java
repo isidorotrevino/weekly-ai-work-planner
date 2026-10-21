@@ -19,15 +19,20 @@ class CheckpointVerifier {
  private JsonNode signed(JsonNode envelope,String authority) throws Exception {
   var text=LabSupport.text(envelope,"facts");var signature=Signature.getInstance("Ed25519");signature.initVerify(LabSupport.publicKey(authority));signature.update(text.getBytes(java.nio.charset.StandardCharsets.UTF_8));if(!signature.verify(Base64.getDecoder().decode(LabSupport.text(envelope,"signature"))))throw new LabSupport.Denied("SIGNED_FACTS_REQUIRED");return LabSupport.JSON.readTree(text);
  }
- Map<String,Object> stoppedArtifact(JsonNode info,String fixture) throws Exception {
+ Map<String,Object> stoppedObservation(JsonNode info) throws Exception {
   var identity=LabSupport.identity(info);var envelope=LabSupport.JSON.readTree(Files.readString(Path.of("/observations/"+identity.attempt()+".json")));var facts=signed(envelope,"observer");
   if(!LabSupport.identity(facts).equals(identity)||!facts.path("process_stopped").asBoolean()||!facts.path("identity_match").asBoolean()||!LabSupport.text(facts,"campaign").equals(LabSupport.config("campaign"))||Duration.between(Instant.parse(LabSupport.text(facts,"observed_at")),Instant.now()).abs().compareTo(Duration.ofSeconds(20))>0)throw new LabSupport.Denied("FRESH_STOP_OBSERVATION_REQUIRED");
+  var proof=new LinkedHashMap<String,Object>(LabSupport.identityMap(identity));proof.putAll(Map.of("process_stopped",true,"context_hash",LabSupport.text(info,"context_hash"),"policy_hash",LabSupport.text(info,"policy_hash"),"host_observation_hash",LabSupport.hash(LabSupport.text(envelope,"facts").getBytes(java.nio.charset.StandardCharsets.UTF_8))));return proof;
+ }
+ Map<String,Object> stoppedArtifact(JsonNode info,String fixture) throws Exception {
+  TreeEvidence.verify(info,this);
+  var observed=stoppedObservation(info);var identity=LabSupport.identity(info);
   byte[] context=Base64.getMimeDecoder().decode(LabSupport.text(info,"context_b64"));if(!LabSupport.hash(context).equals(LabSupport.text(info,"context_hash"))||!Set.of("PARTIAL","SUCCESS").contains(LabSupport.JSON.readTree(context).path("fixture").asText()))throw new LabSupport.Denied("FROZEN_CHECKPOINT_CONTEXT_REQUIRED");
   Path work=Path.of(identity.worker().toString().equals(LabSupport.config("worker.a"))?"/worker-a":"/worker-b").resolve("supervisor/attempts/"+identity.attempt());
   for(var file:List.of("stdout.bin","stderr.bin"))if(Files.size(work.resolve(file))>65536)throw new LabSupport.Denied("ARTIFACT_TOO_LARGE");
   byte[] out=Files.readAllBytes(work.resolve("stdout.bin")),err=Files.readAllBytes(work.resolve("stderr.bin"));var exited=new Properties();try(var in=Files.newInputStream(work.resolve("0003-EXITED.properties"))){exited.load(in);}
   if(!new String(out,java.nio.charset.StandardCharsets.UTF_8).strip().equals("{\"fixture\":\""+fixture+"\",\"candidate\":true}")||err.length!=0||!LabSupport.hash(out).equals(exited.getProperty("stdout_sha256"))||!LabSupport.hash(err).equals(exited.getProperty("stderr_sha256"))||!"false".equals(exited.getProperty("stdout_truncated"))||!"false".equals(exited.getProperty("stderr_truncated")))throw new LabSupport.Denied("INDEPENDENT_ARTIFACT_MISMATCH");
-  var proof=new LinkedHashMap<String,Object>(LabSupport.identityMap(identity));proof.putAll(Map.of("schema","d4.checkpoint.proof.v1","context_hash",LabSupport.text(info,"context_hash"),"policy_hash",LabSupport.text(info,"policy_hash"),"manifest_hash",LabSupport.text(info,"manifest_hash"),"process_stopped",true,"artifact_valid",true,"host_observation_hash",LabSupport.hash(LabSupport.text(envelope,"facts").getBytes(java.nio.charset.StandardCharsets.UTF_8)),"stdout_hash",LabSupport.hash(out),"stderr_hash",LabSupport.hash(err)));return proof;
+  var proof=new LinkedHashMap<String,Object>(LabSupport.identityMap(identity));proof.putAll(Map.of("schema","d4.checkpoint.proof.v1","context_hash",LabSupport.text(info,"context_hash"),"policy_hash",LabSupport.text(info,"policy_hash"),"manifest_hash",LabSupport.text(info,"manifest_hash"),"process_stopped",true,"artifact_valid",true,"host_observation_hash",observed.get("host_observation_hash"),"stdout_hash",LabSupport.hash(out),"stderr_hash",LabSupport.hash(err)));return proof;
  }
  JsonNode seal(UUID delivery,UUID command,JsonNode info) throws Exception {
   var token=LabSupport.request(client,"POST","https://control-plane:8443/lab/close-token",Map.of("delivery_id",delivery.toString(),"command_id",command.toString()));

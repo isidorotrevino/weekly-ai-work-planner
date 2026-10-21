@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: GPL-3.0-only
+package io.github.isidorotrevino.planner.postgres;
+import org.junit.jupiter.api.*;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static io.github.isidorotrevino.planner.postgres.DeliveryStoreTest.*;
+class ReviewV1StoreTest {
+ RecoveryV1StoreTest r;CheckpointStoreTest f;
+ @BeforeEach void setup(TestInfo info)throws Exception{r=new RecoveryV1StoreTest();r.setup(info);f=r.f;assertEquals(2,migrations(f.f.db,"28").migrate().migrationsExecuted);}
+ @AfterEach void cleanup()throws Exception{if(r!=null)r.cleanup();}
+ UUID revise()throws Exception{try(var c=f.f.owner()){var p=value(c,"SELECT (a->'proof'||jsonb_build_object('schema','d4.review.proof.v1','receipt_basis',a->'current_basis','receiver_seal',(a->'proof'->'receiver_seal')||jsonb_build_object('command',a->'close_command')))::text FROM (SELECT d4.review_anchor(?) a) x",f.delivery);var cid=id();value(c,"SELECT d4.review_revise(?,?,NULL,?,?::jsonb)::text",cid,f.delivery,Long.parseLong(value(c,"SELECT row_version FROM operations")),p);var caseId=UUID.fromString(value(c,"SELECT id FROM d4.open_reviews"));f.call(c,"review_close",id(),caseId,cid,"Explicit verified v1 closure");return cid;}}
+ void receipt(String step)throws Exception{try(var c=f.f.owner()){sql(c,"INSERT INTO d2.effect_receipts(operation_id,generation,effect_key,status,evidence_ref) SELECT id,1,id||'/'||context_pack_sha256||'/'||?,'UNKNOWN','late-v1' FROM operations",step);}}
+ @Test void partialV1ReviewAuthorizesNewAttemptInSameReservation()throws Exception{var cp=r.settle(false);receipt("step-2");var rev=revise();try(var c=f.f.owner()){f.call(c,"review_authorize",id(),cp,rev,Long.parseLong(value(c,"SELECT row_version FROM operations")),"Explicit reviewed v1 suffix");var store=new ReviewPlanningStore();store.observeEligibility(c,id());var capture=store.capture(c,id());var result=new io.github.isidorotrevino.planner.scheduler.CapacityScheduler().plan(capture.request(),capture.snapshot());f.f.plan=store.publish(c,id(),id(),capture,result);var next=id();f.f.call(c,"deliver_continuation",next,f.f.worker,f.f.request());assertEquals("2/1/1",value(c,"SELECT (SELECT count(*) FROM execution_attempts)||'/'||(SELECT count(*) FROM d2.reservations)||'/'||(SELECT count(*) FROM d4.review_links)"));assertEquals("10/4",value(c,"SELECT outstanding::int||'/'||consumed::int FROM d2.reservation_balances"));}}
+ @Test void terminalV1ReviewKeepsPassAndConsumptionExactlyOnce()throws Exception{var sid=r.settle(true);String journal;try(var c=f.f.owner()){f.call(c,"recovery_accept",id(),sid);journal=value(c,"SELECT jsonb_agg(to_jsonb(j) ORDER BY id)::text FROM d2.journal j");}receipt("step-1");revise();try(var c=f.f.owner()){assertEquals(journal,value(c,"SELECT jsonb_agg(to_jsonb(j) ORDER BY id)::text FROM d2.journal j"));assertEquals("COMPLETED",value(c,"SELECT state FROM operations"));assertEquals("1",value(c,"SELECT count(*) FROM execution_evidence"));assertEquals("0/10",value(c,"SELECT outstanding::int||'/'||consumed::int FROM d2.reservation_balances"));}}
+}

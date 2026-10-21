@@ -40,3 +40,12 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
 IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+## Git in the D4 I12 laboratory
+
+The Java fixture verifier invokes the native Git executable already present in
+the pinned Maven/Temurin laboratory image as a separate process. No Git source
+implementation is copied into this repository. Its observed version is recorded
+with the I12 evidence. Preserve the image/package's upstream copyright, license
+and notice files if distributing a laboratory image; the current image remains
+a local synthetic validation artifact, not a reviewed distribution.

@@ -1,6 +1,10 @@
 # D4 — preparación del laboratorio Docker
 
-Estado a 2026-10-20: **vertical sintética integrada; D4 abierto para revisión**.
+Estado a 2026-10-20: **alcance sintético aprobado y cerrado**.
+[Documento aprobado](../../docs/design/D4-approved.md) ·
+[Manifiesto](../../docs/validation/D4-CLOSURE.json).
+Los cortes siguientes conservan su estado histórico al emitirse; el cierre vigente
+no promueve migraciones ni autoriza despliegue.
 [Contrato I4](../../docs/design/D4-I4-LAB.md) describe la conexión D2/HTTPS,
 supervisor, receptor durable y verificador independiente. Los resultados efectivos
 se registran en [evidencia I4](../../docs/validation/D4-I4-results.json).
@@ -203,10 +207,30 @@ El primer corte estará listo para revisión cuando otro entorno con caché prep
 
 [I10.1, ausencia sin progreso](../../docs/design/D4-I10-ABSENCE-LAB.md), A20.
 Runner: `bash testing/D4/run-absence-lab.sh` (S20/S21 y regresiones S16/S19), V27
-propuesta, build offline y proyectos desechables. A21/A22 están aprobadas, pero
-las revisiones y cuarentena siguen sin habilitarse: `sql/review-core.sql` es un
+propuesta, build offline y proyectos desechables. En ese corte A21/A22 estaban
+aprobadas, pero aún no se habilitaban las revisiones y cuarentena: `sql/review-core.sql` es un
 borrador excluido de migraciones y bootstrap. D4 permanece abierto.
 
 [Evidencia I10.1](../../docs/validation/D4-I10-ABSENCE-results.json): 226 pruebas
 D4/locales y 169 comprobaciones Compose positivas; no vuelve a contar las suites
 D2/D3 históricas. La cuarentena/reapertura no forma parte de V27.
+
+[I11, A21/A22](../../docs/design/D4-I11-REVIEW-QUARANTINE-LAB.md):
+`bash testing/D4/run-review-lab.sh`, V28 propuesta. S22/S25/S23/S24 cubren
+revisiones parciales v2/v1, terminal y ejecutor afectado; S20/S16 son regresiones.
+El antiguo `sql/review-core.sql` sigue siendo un borrador histórico excluido del
+bootstrap; la derivación nueva usa `sql/review-active.sql` y todas sus guardas.
+
+[I12: verificadores Java y presencia durable](../../docs/design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md),
+A23=B/A24=A. `bash testing/D4/run-latest-matrix.sh` revalida la matriz actual sobre
+V30 con imágenes locales, build offline y hasta dos proyectos Compose simultáneos.
+Los verificadores Python y las baterías Docker históricas permanecen separados;
+la campaña nueva ejercita HTTPS, procesos, Git/archivos y reinicios reales.
+
+El bootstrap Compose común actual fija V30. Volver a ejecutar hoy un runner
+histórico del laboratorio usa ese bootstrap actual; no reproduce automáticamente
+el target ni los hashes del informe antiguo. Para reproducir exactamente un
+resultado anterior, usar sus fuentes/snapshot y hashes registrados. Las baterías
+SQL históricas conservan sus targets propios y no descubren V29/V30 por defecto.
+
+La revisión final del alcance está en [tabla de aceptación D4](../../docs/design/D4-I12-ACCEPTANCE-REVIEW.md).

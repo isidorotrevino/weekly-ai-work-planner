@@ -16,6 +16,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 @RestController @ConditionalOnProperty(name="lab.role",havingValue="worker")
 class LabWorker {
+ static final AtomicBoolean presenceInitialized=new AtomicBoolean();
  private final HttpClient client=LabSupport.client();
  private final FixtureSupervisor supervisor=FixtureSupervisor.open(Path.of("/state/supervisor"));
  private final Map<String,Object> state=new ConcurrentHashMap<>();
@@ -26,16 +27,33 @@ class LabWorker {
  private final ReentrantLock lifecycle=new ReentrantLock();
  private final Map<String,Object> loopState=new ConcurrentHashMap<>();
  private volatile LoopSession loop;
+ private final UUID presenceSession=UUID.randomUUID();private final AtomicLong presenceSequence=new AtomicLong();private final AtomicBoolean presenceReady=new AtomicBoolean();private Map<String,Object> openingPresence;
  LabWorker() throws Exception {
   var path=Path.of("/state/job.json");if(Files.exists(path)){state.putAll(LabSupport.JSON.convertValue(LabSupport.JSON.readTree(Files.readString(path)),Map.class));state.put("phase","RECOVERY_REQUIRED");launched.set(true);}else state.put("phase","IDLE");
   var loopPath=Path.of("/state/loop.json");if(Files.exists(loopPath)){loopState.putAll(LabSupport.JSON.convertValue(LabSupport.JSON.readTree(Files.readString(loopPath)),Map.class));loopState.put("phase","RECOVERY_REQUIRED");state.put("phase","RECOVERY_REQUIRED");launched.set(true);}
   if(Files.isDirectory(Path.of("/state/loop-commands"))){state.put("phase","RECOVERY_REQUIRED");launched.set(true);}
-  Thread.startVirtualThread(()->{for(;;){try{command(Map.of("action","PRESENCE"),false);Thread.sleep(15000);}catch(Exception e){try{Thread.sleep(1000);}catch(InterruptedException stop){return;}}}});
+  Thread.startVirtualThread(()->{for(;;){try{presence();Thread.sleep(15000);}catch(Exception e){try{Thread.sleep(1000);}catch(InterruptedException stop){return;}}}});
  }
+ private synchronized void presence() throws Exception {
+  if(!presenceReady.get()){
+   if(openingPresence==null){var head=LabSupport.request(client,"GET","https://control-plane:8443/lab/presence",null);openingPresence=new HashMap<>();openingPresence.put("command_id",presenceSession.toString());openingPresence.put("session_id",presenceSession.toString());openingPresence.put("expected_session",head.isNull()?null:LabSupport.text(head,"session_id"));}
+   retry("https://control-plane:8443/lab/presence/open",openingPresence);presenceReady.set(true);
+  }
+  long next=presenceSequence.get()+1;var cid=UUID.nameUUIDFromBytes((presenceSession+":"+next).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+  var response=retry("https://control-plane:8443/d4/v1/commands",Map.of("schema_version","d4.worker.v1","command_id",cid.toString(),"correlation_id",cid.toString(),"request",Map.of("action","PRESENCE","session_id",presenceSession.toString(),"sequence",next))).path("result");
+  if(response.path("sequence").asLong()!=next)throw new IllegalStateException("PRESENCE_SEQUENCE_MISMATCH");presenceSequence.set(next);presenceInitialized.set(true);
+ }
+ private void fixtureTree(JsonNode context,boolean restore) throws Exception {
+  if(!context.has("tree_fixture"))return;var identity=LabSupport.identity(LabSupport.JSON.valueToTree(state.get("identity")));if(!"EXITED".equals(supervisor.observe(identity).phase()))throw new LabSupport.Denied("EXITED_TREE_WRITER_REQUIRED");var root=Path.of("/state/trees/"+identity.attempt());Files.createDirectories(root);
+  for(var e:context.path("tree_fixture").path(restore?"base_files":"candidate_files").properties()){TreeVerifier.path(e.getKey());var p=root.resolve(e.getKey());Files.createDirectories(p.getParent());Files.write(p,Base64.getDecoder().decode(e.getValue().asText()));}forceDirectory(root);
+ }
+ @PostMapping("/lab/tree/restore") Object restoreTree(HttpServletRequest r)throws Exception{LabSupport.require(r,"driver");lifecycle.lock();try{if(!"CALLBACK_CONFIRMED".equals(state.get("phase")))throw new LabSupport.Denied("CONFIRMED_EXIT_REQUIRED");var i=LabSupport.JSON.valueToTree(state.get("info"));var ctx=LabSupport.JSON.readTree(Base64.getMimeDecoder().decode(LabSupport.text(i,"context_b64")));fixtureTree(ctx,true);return Map.of("candidate_restored",true);}finally{lifecycle.unlock();}}
  private static void forceDirectory(Path path) throws Exception {try(var c=java.nio.channels.FileChannel.open(path,StandardOpenOption.READ)){c.force(true);}}
  private void save(String phase) throws Exception {lifecycle.lock();try{state.put("phase",phase);LabSupport.atomic(Path.of("/state/job.json"),new TreeMap<>(state));forceDirectory(Path.of("/state"));}finally{lifecycle.unlock();}}
  private JsonNode command(Map<String,?> request,boolean persist) throws Exception {
-  var id=UUID.randomUUID();var envelope=Map.of("schema_version","d4.worker.v1","command_id",id.toString(),"correlation_id",id.toString(),"request",request);
+  if(!presenceReady.get())throw new LabSupport.Denied("PRESENCE_SESSION_NOT_READY");
+  var sessionRequest=new HashMap<String,Object>(request);sessionRequest.put("session_id",presenceSession.toString());
+  var id=UUID.randomUUID();var envelope=Map.of("schema_version","d4.worker.v1","command_id",id.toString(),"correlation_id",id.toString(),"request",sessionRequest);
   if(persist){state.put("command_id",id.toString());if("CALLBACK".equals(request.get("action")))state.put("callback_command_id",id.toString());save(state.get("phase").toString());}
   Exception failure=null;for(int i=0;i<2;i++){try{return LabSupport.request(client,"POST","https://control-plane:8443/d4/v1/commands",envelope).path("result");}catch(Exception ex){failure=ex;Thread.sleep(200);}}throw failure;
  }
@@ -119,8 +137,9 @@ class LabWorker {
    running=supervisor.start(grant.grant().identity(),fixture);state.put("pid",running.pid());save("PROCESS_RUNNING");
    if(fixture==FixtureSupervisor.Fixture.SURVIVOR)return;
    if(prolonged){authority.start();long limit=System.nanoTime()+Duration.ofSeconds(120).toNanos();while(!running.awaitExit(Duration.ofMillis(200))){authority.check();if(System.nanoTime()>limit)throw new IllegalStateException("LAB_EXECUTION_LIMIT");}authority.check();}
-   var outcome=running.await(prolonged?Duration.ZERO:Duration.ofSeconds(15));state.put("outcome",outcome);if(!outcome.stoppedObserved()||outcome.exitCode()!=0)throw new IllegalStateException("FIXTURE_FAILED");save("PROCESS_EXITED");
+   var outcome=running.await(prolonged?Duration.ZERO:Duration.ofSeconds(15));state.put("outcome",outcome);if(!outcome.stoppedObserved()||outcome.exitCode()!=0)throw new IllegalStateException("FIXTURE_FAILED");save("PROCESS_EXITED");fixtureTree(manifest,false);
    if(manifest.path("fault_absent_first_generation").asBoolean()&&grant.grant().identity().generation()==1){save("ABSENCE_READY");return;}
+   if(manifest.path("fault_pause_effect_first").asBoolean()&&grant.grant().identity().generation()==1){save("WAITING_EFFECT");if(!continueCallback.await(90,TimeUnit.SECONDS))throw new IllegalStateException("EFFECT_BARRIER_TIMEOUT");}
    effect();save("EFFECT_APPLIED");
    if(info.path("multi_checkpoint").asBoolean()?info.path("needs_checkpoint").asBoolean():info.path("is_checkpoint_fixture").asBoolean()&&!info.path("continuation").asBoolean()){if(authority!=null)authority.check();save("CHECKPOINT_READY");return;}
    if(authority!=null)authority.active.set(false); // no more process/effects; callback hands off to verification

@@ -1,5 +1,11 @@
 # Validation / Validación
 
+Estado vigente D4: **alcance sintético aprobado y cerrado** el 2026-10-20.
+[Documento aprobado](../design/D4-approved.md) · [Manifiesto](D4-CLOSURE.json).
+Los informes D4 siguientes conservan sus estados al emitirse, incluidos OPEN y
+aprobación pendiente; la decisión posterior consta en el manifiesto, sin reescribir
+resultados ni autorizar promoción o despliegue.
+
 Estado vigente: [D3 aprobado y cerrado como MVP conservador 1.0](../design/D3-approved.md), con [manifiesto de cierre](D3-CLOSURE.json). Los informes y notas «D3 abierto» siguientes conservan el estado al emitirse; no implican falta de aprobación actual. No hay despliegue aprobado.
 The recorded D2 audit completed **157 checks, zero failures, zero errors, and zero skipped checks** on October 17, 2026, with PostgreSQL 16.15, Java 21, and Flyway 13.10.3 in Docker.
 
@@ -100,3 +106,17 @@ y mantiene D4 abierto bajo A17–A19.
 registra A20: 201 pruebas D4, 25 verificadores locales y 169 comprobaciones
 Compose S20/S21/S16/S19, con limpieza de sus cuatro proyectos. A21/A22 continúan
 aprobadas y pendientes de integración; D4 permanece abierto.
+
+## D4 I11 — A21/A22
+
+[Resultados independientes](D4-I11-REVIEW-QUARANTINE-results.json) de revisiones sin
+nueva liquidación, cuarentena separada, contención y cierre explícito.
+[Contrato y límites](../design/D4-I11-REVIEW-QUARANTINE-LAB.md). Los informes previos
+conservan sus resultados y targets históricos; D4 sigue abierto.
+
+## D4 I12 — verificadores Java, presencia y aceptación final
+
+[Informe I12](D4-I12-INTEGRATED-results.json), con pruebas D4 y regresión D2/D3
+separadas, matriz actual V30, pilotos excluidos y cleanup selectivo.
+[Revisión final del alcance](../design/D4-I12-ACCEPTANCE-REVIEW.md).
+El informe prepara la decisión del usuario; no constituye cierre D4 ni promoción.

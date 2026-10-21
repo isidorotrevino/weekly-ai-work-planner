@@ -87,3 +87,6 @@ kernel ni una retención administrativa con reserva de capacidad.
 A21/A22 como siguientes pendientes ya autorizados. El SQL de revisión/cuarentena
 es un borrador separado excluido de migraciones y bootstrap; no se cuenta como
 implementación ni como validación. No se infiere cierre D4.
+
+La implementación posterior A21/A22 está en [I11](D4-I11-REVIEW-QUARANTINE-LAB.md),
+con SQL aditivo V28 y campañas propias; el borrador inicial no se aplica.

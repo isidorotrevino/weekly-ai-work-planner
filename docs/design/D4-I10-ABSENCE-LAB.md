@@ -99,3 +99,6 @@ del recuento positivo, sin sobrescribir I9.
 Estas decisiones no necesitan consultarse de nuevo: A21/A22 ya están aprobadas.
 Ni este incremento ni una campaña verde autorizan cerrar D4, promover migraciones,
 utilizar proveedores reales o desplegar fuera del laboratorio desechable.
+
+Estado posterior: [I11](D4-I11-REVIEW-QUARANTINE-LAB.md) implementa A21/A22 con
+evidencia separada. La lista anterior conserva lo que quedaba pendiente en I10.1.

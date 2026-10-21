@@ -16,7 +16,7 @@ public class LabMain {
     if(args.length>0&&args[0].equals("probe")){System.out.println(LabSupport.JSON.writeValueAsString(LabProbe.run(args)));return;}
     LabSupport.load();String mode=args.length==0?"serve":args[0];
     if(mode.equals("bootstrap")){LabBootstrap.run();return;}
-    if(mode.equals("audit")){System.out.println(LabSupport.sql("SELECT d4.absence_audit()::text"));return;}
+    if(mode.equals("audit")){System.out.println(LabSupport.sql("SELECT d4.tree_audit()::text"));return;}
     if(mode.equals("inspect")){System.out.println(LabSupport.sql("SELECT d4.multi_inspect(?)::text",UUID.fromString(args[1])));return;}
     if(mode.equals("request")){
       try(var client=LabSupport.client()){

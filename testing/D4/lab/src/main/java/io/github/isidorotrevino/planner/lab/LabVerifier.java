@@ -14,13 +14,14 @@ import java.util.*;
 @RestController @ConditionalOnProperty(name="lab.role",havingValue="verifier")
 class LabVerifier {
  private final HttpClient client=LabSupport.client();
- LabVerifier() throws Exception {}
+ private final CheckpointVerifier independent;
+ LabVerifier(CheckpointVerifier independent) throws Exception {this.independent=independent;}
  private JsonNode admin(UUID delivery,String action,UUID proof) throws Exception {
   var body=new HashMap<String,Object>(Map.of("command_id",UUID.randomUUID().toString(),"delivery_id",delivery.toString(),"action",action));if(proof!=null)body.put("proof_id",proof.toString());return LabSupport.request(client,"POST","https://control-plane:8443/lab/admin",body);
  }
  @PostMapping("/lab/verify") Object verify(HttpServletRequest r) throws Exception {
   LabSupport.require(r,"driver");var request=LabSupport.body(r);var delivery=LabSupport.uuid(request,"delivery_id");var proofId=LabSupport.uuid(request,"proof_id");
-  var info=LabSupport.sql("SELECT d4.lab_inspect(?)::text",delivery);var identity=LabSupport.identity(info);
+  var info=LabSupport.sql("SELECT d4.lab_inspect(?)::text",delivery);TreeEvidence.verify(info,independent);var identity=LabSupport.identity(info);
   var observed=LabSupport.JSON.readTree(Files.readString(Path.of("/observations/"+identity.attempt()+".json")));
   var factsText=LabSupport.text(observed,"facts");var signature=Signature.getInstance("Ed25519");signature.initVerify(LabSupport.publicKey("observer"));signature.update(factsText.getBytes(java.nio.charset.StandardCharsets.UTF_8));if(!signature.verify(Base64.getDecoder().decode(LabSupport.text(observed,"signature"))))throw new LabSupport.Denied("HOST_PROOF_SIGNATURE_INVALID");
   var facts=LabSupport.JSON.readTree(factsText);if(!LabSupport.identity(facts).equals(identity)||!LabSupport.text(facts,"campaign").equals(LabSupport.config("campaign"))||Duration.between(Instant.parse(LabSupport.text(facts,"observed_at")),Instant.now()).abs().compareTo(Duration.ofSeconds(20))>0)throw new LabSupport.Denied("HOST_PROOF_STALE_OR_MISMATCH");

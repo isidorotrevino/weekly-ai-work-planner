@@ -4,23 +4,30 @@
 
 ## Continuity / Continuidad
 
+[Next session: Docker Compose development environment and friendlier README / Próxima sesión: entorno de desarrollo Docker Compose y README más amigable](../HANDOFF-DEV-ENV.md). Trabajo preparado; entorno pendiente de implementar.
+
 [D4 session handoff / Handoff para D4](../HANDOFF-D4.md): closed D3 baseline, worker contracts, pending decisions and next-session prompt. [Docker lab preparation / Preparación del laboratorio Docker](../testing/D4/README.md): existing regression runner and the separate synthetic D4 Compose laboratory.
 
 [D3 session handoff / Handoff para iniciar D3](../HANDOFF-D3.md): approved baseline, reading order, scheduler scope, deliverables and a ready-to-use prompt.
 
 ## Current design / Diseño vigente
 
-D4 en diseño: [workers y contratos](design/D4-workers-draft.md),
+**D4 sintético aprobado y cerrado:** [diseño vigente](design/D4-approved.md) y
+[manifiesto](validation/D4-CLOSURE.json). Los cortes siguientes y sus informes
+conservan el estado histórico al emitirse. Implementación: [workers y contratos](design/D4-workers-draft.md),
 [decisiones aceptadas y pendientes](design/D4-DECISIONS.md),
 [preparación ejecutable del laboratorio](../testing/D4/FIRST-CUT.md).
-Sin promoción, despliegue ni cierre. [I2 HTTPS/mTLS](design/D4-I2-HTTPS.md) entrega
+Sin promoción ni despliegue. [I2 HTTPS/mTLS](design/D4-I2-HTTPS.md) entrega
 un adaptador sintético probado sobre V17.
 [I3 componentes de proceso/efectos](design/D4-I3-PROCESS-EFFECTS.md) añade supervisor
 y diario sintético probados; [I4](design/D4-I4-LAB.md) los conecta con D2/HTTPS,
 Compose y un verificador independiente.
 [I1 entrega durable y validación](design/D4-I1-DELIVERY.md) implementa persistencia
 propuesta V16; [continuidad parcial](design/D4-CHECKPOINT-CONTINUATION.md) tiene una
-implementación acotada aprobada en I5; su generalización sigue pendiente.
+implementación acotada aprobada en I5. I8/I9/I11 amplían multicuentas y reconciliación;
+[I12](design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md) integra verificadores Java y presencia
+durable. La [revisión final](design/D4-I12-ACCEPTANCE-REVIEW.md) precede a la
+aprobación expresa registrada en el manifiesto de cierre.
 
 | Document | Purpose / Propósito |
 |---|---|
@@ -101,3 +108,8 @@ V24 permanece intacta.
 
 [I10.1 D4: ausencia sin progreso y retry explícito](design/D4-I10-ABSENCE-LAB.md)
 separa la implementación A20 de las revisiones/cuarentena A21/A22 pendientes.
+
+[I11 D4: revisiones A21 y cuarentena A22](design/D4-I11-REVIEW-QUARANTINE-LAB.md)
+integra la reapertura separada y las campañas de contención; D4 permanece abierto.
+
+[D4 I12 — verificadores Java, presencia durable y matriz actual](design/D4-I12-INTEGRATED-VERIFIERS-PRESENCE.md).
