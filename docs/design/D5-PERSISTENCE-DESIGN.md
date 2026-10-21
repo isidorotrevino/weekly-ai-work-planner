@@ -1,5 +1,9 @@
 # D5 I4 — diseño de persistencia sintética de fuentes
 
+Estado histórico de esta revisión. La aprobación posterior D5-A09 y la ejecución
+sintética se registran por separado en el [laboratorio I4](D5-I4-PERSISTENCE-LAB.md);
+las restricciones originales de este documento se leen en su fecha de emisión.
+
 Fecha: 2026-10-21. **Propuesta concreta para revisión; no implementada ni aplicada.**
 Base: `fa333bc`, D5 I3 publicado. D5 sigue abierto; D1–D4 permanecen cerrados.
 [Alcance I3](D5-REGISTER-COMPATIBILITY.md) · [Revisión y criterios](D5-PERSISTENCE-REVIEW.md).

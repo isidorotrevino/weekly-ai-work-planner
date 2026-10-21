@@ -25,9 +25,11 @@ y [evidencia I1](validation/D5-I1-results.md).
 [evidencia propia](validation/D5-I2-results.md).
 [I3: compatibilidad optativa y anotaciones](design/D5-REGISTER-COMPATIBILITY.md),
 con [evidencia independiente](validation/D5-I3-results.md).
-[I4: diseño de persistencia sintética](design/D5-PERSISTENCE-DESIGN.md) y
-[revisión para decidir el laboratorio](design/D5-PERSISTENCE-REVIEW.md): contrato
-preparado, sin implementar ni aplicar migraciones. D5 abierto; D6 pendiente.
+[I4: contrato de persistencia](design/D5-PERSISTENCE-DESIGN.md),
+[revisión](design/D5-PERSISTENCE-REVIEW.md) e
+[implementación del laboratorio sintético](design/D5-I4-PERSISTENCE-LAB.md), con
+[evidencia propia](validation/D5-I4-results.md). Propuesta V31 aplicada únicamente
+en bases D5 desechables; sin promoción. D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 

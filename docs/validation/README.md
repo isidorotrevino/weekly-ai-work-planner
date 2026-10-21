@@ -120,3 +120,13 @@ conservan sus resultados y targets históricos; D4 sigue abierto.
 separadas, matriz actual V30, pilotos excluidos y cleanup selectivo.
 [Revisión final del alcance](../design/D4-I12-ACCEPTANCE-REVIEW.md).
 El informe prepara la decisión del usuario; no constituye cierre D4 ni promoción.
+
+## D5 — local source persistence / persistencia local de fuentes
+
+[D5 I4](D5-I4-results.md) records a separate synthetic PostgreSQL campaign and D2
+regression. [Implementation and limits](../design/D5-I4-PERSISTENCE-LAB.md).
+D5 remains open; no task activation, migration promotion or deployment.
+
+[D5 I4](D5-I4-results.md) registra una campaña PostgreSQL sintética independiente
+y regresión D2. [Implementación y límites](../design/D5-I4-PERSISTENCE-LAB.md).
+D5 sigue abierto; sin activación de tareas, promoción ni despliegue.

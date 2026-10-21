@@ -122,3 +122,48 @@ siguen bloqueando el informe completo. Un pipe adicional sin escapar en una
 anotación también bloquea. El original nunca se modifica. La captura compatible
 del registro real puede compararse estructuralmente, pero sus afirmaciones de
 estado o verificación continúan siendo datos no acreditados.
+
+## I4 — laboratorio PostgreSQL desechable
+
+[Contrato aprobado e implementación](../../docs/design/D5-I4-PERSISTENCE-LAB.md)
+· [Resultados propios](../../docs/validation/D5-I4-results.md).
+Este laboratorio es opcional e independiente de las 47 pruebas locales de parser,
+comparación y adaptador. Requiere Linux, Python 3 y Docker Engine accesible por el
+usuario. No requiere psql en el host, JDK o Maven para D5.
+
+Desde la raíz del repositorio:
+
+```bash
+# Preparar esta dependencia solo si falta; el runner no descarga imágenes.
+docker pull postgres:16-bookworm
+python3 -m testing.D5.run_postgres_lab
+```
+
+El runner arranca un contenedor único sin red, sin puertos y con socket SQL solo
+interno. Crea la base y roles sintéticos, aplica V1–V11 y la propuesta D5 V31,
+ejecuta P01–P10 y elimina su contenedor y volumen anónimo, también si fallan las
+pruebas. Durante la campaña reinicia esa base para comprobar recuperación. No usa
+Compose, `run_data`, el bootstrap D4 ni proyectos o datos existentes. No ejecuta
+V12–V30 ni promociona V31. El retorno 0 indica que las pruebas pasaron; un fallo
+devuelve no cero y conserva diagnóstico privado bajo `work/d5/postgres/d5-pg-*/`.
+La limpieza no borra esos diagnósticos ni ejecuta podas globales de Docker.
+
+El flujo comprobado registra una fuente, ingiere una previsualización sintética,
+lee la referencia vacía, selecciona con versión esperada y recupera el recibo.
+Las pruebas incluyen comandos concurrentes, conflictos, replay, bytes exactos,
+aborto antes del commit, respuesta descartada y recuperación tras reinicio.
+
+El adaptador ofrece `python3 -m source_ingest.postgres --help` con comandos
+`register`, `ingest`, `select`, `reference` y `receipt`. Solo acepta un contenedor
+D5 etiquetado y aislado, nunca una URL SQL arbitraria ni credenciales. Estos
+comandos se ejercitan dentro de la campaña; al terminar ya no existe su base.
+No son instrucciones para apuntar a desarrollo o producción. Las lecturas de
+bytes están disponibles en la API Python `LabClient.recover`; el CLI solo imprime
+metadatos/recibos, sin contenido fuente. Un conflicto confirmado devuelve código 2;
+un fallo de verificación o SQL, código 1. Consultar un recibo inexistente devuelve
+`null`, sin inferir éxito.
+
+Ingerir no mueve ninguna referencia. Seleccionar no activa trabajo y una captura
+BLOCKED conserva su bloqueo. El recibo identifica el resultado histórico; la
+referencia actual requiere otra lectura. Los artefactos originales I1–I3 y las
+etiquetas del llamante conservan sus límites de autoridad.
