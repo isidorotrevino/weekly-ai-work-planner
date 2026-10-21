@@ -20,7 +20,9 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 [Ingesta local y previsualización I1](design/D5-LOCAL-PREVIEW.md): primer corte
 autorizado, sin activar tareas ni conectar proveedores. [Uso](../testing/D5/README.md)
-y [evidencia independiente](validation/D5-I1-results.md). D5 abierto; D6 pendiente.
+y [evidencia I1](validation/D5-I1-results.md).
+[I2: registro tabular y comparación](design/D5-REGISTER-COMPARISON.md), con
+[evidencia propia](validation/D5-I2-results.md). D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 

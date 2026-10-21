@@ -45,3 +45,50 @@ usuario y sus snapshots se guardan solo localmente; `fixtures/plan.md` es sinté
 
 Estas pruebas son independientes de `testing/D2`, `testing/D3`, `testing/D4` y del
 entorno `compose.dev.yaml`; no cambian targets, bootstrap ni evidencias anteriores.
+
+## I2 — perfil tabular y comparación
+
+[Contrato I2](../../docs/design/D5-REGISTER-COMPARISON.md) ·
+[Resultados I2](../../docs/validation/D5-I2-results.md).
+El perfil por defecto conserva el comportamiento I1. Para optar por las ocho
+columnas del registro:
+
+```bash
+python3 -m source_ingest \
+  --root testing/D5/fixtures --file register-before.md \
+  --project-id 00000000-0000-4000-8000-000000000001 \
+  --document-id 00000000-0000-4000-8000-000000000002 \
+  --revision fixture-v1 --profile task-register.v1
+```
+
+Una demo sintética repetible crea las dos capturas y su comparación, e imprime
+sus rutas privadas:
+
+```bash
+python3 -m testing.D5.demo_register
+```
+
+El resultado tiene un elemento añadido, uno cambiado, uno sin cambio desplazado
+y una ausencia. Ninguno activa o elimina trabajo. Para usar el CLI comparador con
+otras capturas, pasar las rutas JSON impresas por la ingesta:
+
+```bash
+python3 -m source_ingest.compare --before "$BEFORE_PREVIEW" --after "$AFTER_PREVIEW"
+```
+
+`BEFORE_PREVIEW` y `AFTER_PREVIEW` deben contener las rutas explícitas a las dos
+capturas del mismo proyecto/documento/perfil. La herramienta no selecciona una
+revisión vigente. Primero comprueba sus hashes y reconstruye el contenido. Las
+etiquetas del llamante no prueban commits ni orden remoto.
+
+El resumen de ingesta incluye `comparison_eligible`; un perfil tabular con errores
+puede capturarse para diagnóstico, pero no comparar cambios. La comparación guarda
+un informe privado en `work/d5/comparisons/` y devuelve 0 para PREVIEW_ONLY, 2 para
+BLOCKED (sin cambios parciales) y 1 para entradas inválidas/incompatibles. El retorno
+0 nunca es permiso de importar o ejecutar. Los artefactos están limitados a 32 MiB.
+
+El perfil conserva filas tachadas y estados de origen sin deducir DONE. Un ID
+duplicado o una fila ambigua bloquea toda la comparación. Una tabla fragmentada
+por líneas vacías no se recompone automáticamente; tampoco se recuperan filas
+fuera de cabeceras reconocidas. Las variaciones del registro real se mantienen
+bloqueadas hasta una decisión explícita sobre formato o normalización.

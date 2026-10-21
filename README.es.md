@@ -62,8 +62,8 @@ D1–D4 están **aprobados y cerrados dentro de su alcance registrado**. Sus dis
 manifiestos y evidencias históricas se conservan en el [índice documental](docs/README.md)
 y el [resumen de validación](docs/validation/README.md). El
 [manifiesto de cierre D4](docs/validation/D4-CLOSURE.json) delimita el alcance
-sintético. D5 ha comenzado con [ingesta local y previsualización](testing/D5/README.md), sin
-activar tareas; las integraciones reales y gobierno/operación (D6) siguen pendientes.
+sintético. D5 incluye [ingesta local, previsualización y comparación de registros](testing/D5/README.md),
+sin activar tareas; las integraciones reales y gobierno/operación (D6) siguen pendientes.
 El desarrollo local no promueve propuestas SQL ni autoriza despliegues.
 
 ## Explorar y contribuir

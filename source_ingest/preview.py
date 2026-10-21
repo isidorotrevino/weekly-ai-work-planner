@@ -15,6 +15,7 @@ MAX_LINES = 20000
 MAX_ITEMS = 2000
 MAX_LINE_CHARS = 65536
 PROFILE = 'markdown-structure.v1'
+MAX_PREVIEW_BYTES = 32 * 1024 * 1024
 
 
 def canonical(value):
@@ -128,27 +129,49 @@ def structure(content):
     return sections, proposals, diagnostics
 
 
-def observe(root, relative, project_id, document_id, revision):
+def observe(root, relative, project_id, document_id, revision, profile=PROFILE):
+    content = read_source(root, relative)
+    return build_observation(content, relative, project_id, document_id, revision, profile)
+
+
+def build_observation(content, relative, project_id, document_id, revision, profile=PROFILE):
     project_id, document_id = str(uuid.UUID(project_id)), str(uuid.UUID(document_id))
     if not revision or len(revision) > 256 or any(ord(c) < 32 or ord(c) == 127 for c in revision):
         raise ValueError('Revision must be a nonempty opaque label of at most 256 characters')
-    content = read_source(root, relative)
-    sections, proposals, diagnostics = structure(content)
+    # Used for both fresh observations and deterministic artifact verification.
+    if len(content) > MAX_BYTES:
+        raise ValueError('Source exceeds 2 MiB')
+    if not relative or relative.startswith('/') or '\\' in relative or any(p in ('', '.', '..') for p in relative.split('/')) or not relative.lower().endswith('.md'):
+        raise ValueError('Invalid source path in observation')
+    register = None
+    if profile == PROFILE:
+        sections, proposals, diagnostics = structure(content)
+    elif profile == 'task-register.v1':
+        from .register import parse
+        sections, proposals, diagnostics, register = parse(content)
+    else:
+        raise ValueError('Unsupported observation profile')
     digest = hashlib.sha256(content).hexdigest()
-    observation = {'schema': 'd5.local-preview.v1', 'profile': PROFILE, 'state': 'PREVIEW_ONLY', 'activation_allowed': False,
+    observation = {'schema': 'd5.local-preview.v2' if register is not None else 'd5.local-preview.v1', 'profile': profile, 'state': 'PREVIEW_ONLY', 'activation_allowed': False,
                    'project_id': project_id, 'document_id': document_id, 'source_kind': 'LOCAL_MARKDOWN',
                    'source_path': relative, 'observed_revision': revision, 'revision_authority': 'CALLER_LABEL_ONLY',
                    'content_sha256': digest, 'content_bytes': len(content), 'content_base64': base64.b64encode(content).decode('ascii'),
                    'sections': sections, 'proposals': proposals, 'diagnostics': diagnostics}
     for proposal in proposals:
-        proposal['candidate_id'] = str(uuid.uuid5(uuid.UUID(document_id), f'{project_id}:{digest}:{PROFILE}:{proposal["line_start"]}'))
+        proposal['candidate_id'] = str(uuid.uuid5(uuid.UUID(document_id), f'{project_id}:{digest}:{profile}:{proposal["line_start"]}'))
         proposal['source_locator'] = f'sha256:{digest}#L{proposal["line_start"]}'
+        if register is not None:
+            proposal['source_identity_id'] = str(uuid.uuid5(uuid.UUID(document_id), f'{project_id}:{profile}:{proposal["source_key"]}'))
+    if register is not None:
+        observation['register'] = register
     return observation
 
 
 def save_preview(store, observation):
     """Immutable, content-addressed artifact. No mutable head or sync cursor."""
     payload = canonical(observation)
+    if len(payload) > MAX_PREVIEW_BYTES:
+        raise ValueError('Artifact exceeds 32 MiB')
     preview_hash = hashlib.sha256(payload).hexdigest()
     path = Path(store)
     path.mkdir(parents=True, mode=0o700, exist_ok=True)

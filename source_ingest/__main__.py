@@ -11,16 +11,17 @@ def main():
     parser.add_argument('--project-id', required=True, help='caller-selected project UUID; no database lookup')
     parser.add_argument('--document-id', required=True, help='stable caller-selected document UUID')
     parser.add_argument('--revision', required=True, help='caller-supplied observation label, not Git attestation')
+    parser.add_argument('--profile', choices=['markdown-structure.v1', 'task-register.v1'], default='markdown-structure.v1')
     parser.add_argument('--store', default='work/d5/previews', help='private local artifact directory')
     args = parser.parse_args()
     try:
-        observation = observe(args.root, args.file, args.project_id, args.document_id, args.revision)
+        observation = observe(args.root, args.file, args.project_id, args.document_id, args.revision, args.profile)
         path, digest = save_preview(args.store, observation)
     except (OSError, ValueError, UnicodeError) as ex:
         parser.exit(1, 'Preview rejected: ' + str(ex) + '\n')
-    print(json.dumps({'state': observation['state'], 'activation_allowed': False, 'preview': str(path), 'preview_sha256': digest,
+    print(json.dumps({'profile': observation['profile'], 'comparison_eligible': observation.get('register', {}).get('comparison_eligible'), 'state': observation['state'], 'activation_allowed': False, 'preview': str(path), 'preview_sha256': digest,
                       'content_sha256': observation['content_sha256'], 'sections': len(observation['sections']),
-                      'proposals': len(observation['proposals']), 'diagnostics': [d['code'] for d in observation['diagnostics']]}))
+                      'proposals': len(observation['proposals']), 'diagnostics': list(dict.fromkeys(d['code'] for d in observation['diagnostics']))}))
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 # D5 I1 — ingesta local y previsualización
 
-Fecha: 2026-10-21. **D5 iniciado; primer incremento local implementado. D5 abierto.**
+Fecha: 2026-10-21. **D5 iniciado; I1 implementado. D5 abierto.**
+Continuación actual: [I2 tabular y comparación, aprobado por D5-A03](D5-REGISTER-COMPARISON.md).
 D1–D4 conservan sus aprobaciones, manifiestos y evidencias. D6 no se inicia.
 
 ## Decisiones y autoridad
@@ -98,7 +99,7 @@ CAS transaccional y backfill antes de cualquier propuesta de migración.
 No se vuelven a contar pruebas históricas D4. No hay red, credenciales reales,
 Drive/Plane, activación, promoción ni despliegue.
 
-Siguiente decisión material pendiente: perfil tabular explícito para previsualizar
+Decisión pendiente al emitir I1 (resuelta después por D5-A03 en I2): perfil tabular explícito para previsualizar
 filas con identidad y procedencia frente a formalizar primero una muestra concreta
 Gentle-AI. Cualquiera requiere definir campos, ambigüedades, versiones y cambios
 entre revisiones antes de persistir o activar tareas. D5 no se declara terminado
