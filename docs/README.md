@@ -61,6 +61,10 @@ permanente ni extensión a reaparición con edición local.
 [I14: resolución local sintética aprobada](design/D5-I14-LOCAL-EDIT-LAB.md), con
 [evidencia propia](validation/D5-I14-results.md): V36 solo en otro laboratorio V30,
 elección revisada origen/local y continuidad bajo los controles anteriores.
+[I15: contrato de adopción explícita](design/D5-I15-ADOPTION-DESIGN.md) y
+[matriz A01–A34](design/D5-I15-ADOPTION-REVIEW.md): diseño para revisión,
+sin SQL nuevo; conservar tarea existente y materializar correspondencia/procedencia
+solo al aplicar el paquete aprobado.
 
 ## Current design / Diseño vigente
 
