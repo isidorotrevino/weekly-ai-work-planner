@@ -214,3 +214,26 @@ Aceptar no importa una tarea. Simular no escribe requisitos/tareas D2 ni selecci
 el «después». Una ausencia aceptada produce KEEP_EXISTING_NO_DELETE. Si cambian la
 referencia o las versiones de decisión esperadas, hay conflicto sin simulación
 parcial; repetir un recibo antiguo no revierte esos cambios.
+
+## I6 — coexistencia SQL sobre V30
+
+[Alcance A13 y matriz](../../docs/design/D5-I6-V30-COMPATIBILITY.md) ·
+[Evidencia propia](../../docs/validation/D5-I6-results.md).
+Con los mismos requisitos Linux/Python/Docker e imagen PostgreSQL local:
+
+```bash
+python3 -m testing.D5.run_v30_lab
+```
+
+El runner crea una base nueva, aplica V1–V30 y después V31/V32, ejecuta 36 pruebas
+D5 anteriores y cinco casos de coexistencia. Su configuración, contenedor y volumen
+son exclusivos y se eliminan al terminar; el resumen privado queda en
+`work/d5/postgres/d5-pg-*/v30-results.json`. Retorno 0 significa PASS de esa campaña;
+un fallo devuelve no cero y conserva diagnóstico privado. No se cambia ningún
+runner anterior ni se arranca el laboratorio HTTPS D4 o el entorno persistente.
+
+Los controles de estado tienen un worker OFFLINE y recursos/catálogo deshabilitados,
+sin heartbeat, tareas ni operaciones. Se comprueban conservación del estado
+D2/D3/D4, límites de permisos y coexistencia de sus locks con el flujo D5. La
+captura D3 del caso T05 es un artefacto de test, sin publicación de planes.
+Este runner no ofrece aplicación operativa D2, proveedores, promoción o despliegue.

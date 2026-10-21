@@ -1,6 +1,7 @@
 # D5 I5 — comparaciones persistidas, revisión y simulación
 
 Fecha: 2026-10-21. **Implementado y validado en laboratorio sintético; D5 abierto.**
+Continuación posterior: [I6 valida coexistencia SQL sobre V30](D5-I6-V30-COMPATIBILITY.md).
 [I4 y sus límites](D5-I4-PERSISTENCE-LAB.md) ·
 [Uso](../../testing/D5/README.md#i5--comparación-persistida-revisión-y-simulación) ·
 [Evidencia propia](../validation/D5-I5-results.md).

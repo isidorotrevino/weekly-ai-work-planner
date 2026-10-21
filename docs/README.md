@@ -32,7 +32,10 @@ con [evidencia independiente](validation/D5-I3-results.md).
 en bases D5 desechables; sin promoción.
 [I5: comparación SQL, revisión por fila y simulación](design/D5-I5-REVIEW-SIMULATION.md),
 con [evidencia independiente](validation/D5-I5-results.md). Sin aplicación operativa
-a tareas o requisitos. D5 abierto; D6 pendiente.
+a tareas o requisitos.
+[I6: coexistencia SQL D5/V30](design/D5-I6-V30-COMPATIBILITY.md), con
+[evidencia propia](validation/D5-I6-results.md), valida V1–V30 seguido de V31/V32
+en otro laboratorio desechable. D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 

@@ -136,3 +136,9 @@ simulation, with separate evidence. No operational application to D2 tasks.
 
 [D5 I5](D5-I5-results.md) añade comparaciones persistidas, revisión por fila y
 simulación de aplicación, con evidencia propia. Sin aplicación operativa a tareas D2.
+
+[D5 I6](D5-I6-results.md) records fresh V30 → V31/V32 SQL coexistence, with D5
+regressions and five new compatibility cases. D4 process/HTTPS evidence stays historical.
+
+[D5 I6](D5-I6-results.md) registra coexistencia SQL V30 → V31/V32 en una base nueva,
+con regresiones D5 y cinco casos nuevos. La evidencia de procesos/HTTPS D4 se conserva.
