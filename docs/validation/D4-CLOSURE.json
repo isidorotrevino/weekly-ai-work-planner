@@ -9,7 +9,7 @@
   "approval_record": "docs/design/D4-DECISIONS.md#d4-close-01--aprobación-expresa-del-cierre-sintético",
   "scope": "Bounded synthetic D4 contracts and disposable Docker laboratory, I1-I12, decisions A01-A24; no production or real providers",
   "canonical_document": "docs/design/D4-approved.md",
-  "canonical_document_sha256": "d9c3ca488c491a12f0ef84f3111f63ab98c40426d09d72cc769e0bc75cc1c8ba",
+  "canonical_document_sha256": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
   "acceptance_review": "docs/design/D4-I12-ACCEPTANCE-REVIEW.md",
   "evidence": {
     "path": "docs/validation/D4-I12-INTEGRATED-results.json",
@@ -271,8 +271,8 @@
   "historical_reports_preserved": true,
   "repository_reference": {
     "base_commit": "90061785d084ea2107b5605bdd0d38f731445090",
-    "closure_state": "local working tree",
-    "published_D4_commit": null
+    "closure_state": "published to origin/main",
+    "published_D4_commit": "dc8e542b28c55fafd8ec155e2b8ebf7e8aa80f94"
   },
   "D2_baseline_commit": "69d71c3877e79bdfef088956b090d4eb6b447be9",
   "migration_promotion_approved": false,
@@ -289,5 +289,16 @@
     "Incompatible hashes, APPLIED revocation, variable costs, lost journal, multiple receivers, or legacy/unbound executions remain blocked",
     "Historical SQL batteries keep their own declared targets; only the final Compose matrix S01-S30 is wholly V30 evidence",
     "No production SLA, external exactly-once guarantee, migration promotion or deployment; D5/D6 outside scope"
-  ]
+  ],
+  "publication": {
+    "date": "2026-10-21",
+    "timezone": "Europe/Madrid",
+    "remote": "origin",
+    "branch": "main",
+    "commit": "dc8e542b28c55fafd8ec155e2b8ebf7e8aa80f94",
+    "confirmed_by": "successful git push origin main",
+    "user_authorization": "publica en git, y se aprueba el cierre de D4",
+    "recorded_at_utc": "2026-10-21T07:23:26.991617+00:00",
+    "note": "Publication metadata is recorded after the closure commit; no executable or historical evidence was changed."
+  }
 }

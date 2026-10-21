@@ -72,7 +72,10 @@ reales, operación física y despliegue quedan fuera. Este cierre no inicia D5/D
 ## Referencia de repositorio
 
 Base de la sesión: `90061785d084ea2107b5605bdd0d38f731445090`.
-El cierre y los incrementos locales posteriores se registran mediante sus hashes;
-`published_D4_commit` es `null`. No se atribuye un commit publicado a este cierre.
+El cierre y los incrementos I11/I12 se publicaron en `origin/main` el 2026-10-21:
+`dc8e542b28c55fafd8ec155e2b8ebf7e8aa80f94`. El manifiesto registra esa referencia en
+`repository_reference.published_D4_commit`; las fuentes ejecutables y los informes
+conservan sus hashes originales. La anotación de publicación es posterior al commit
+de cierre para evitar una referencia circular.
 No quedan pendientes de aprobación ni técnicos identificados dentro de este
 alcance sintético aceptado; ampliaciones requieren su propio alcance y validación.

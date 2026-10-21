@@ -1,6 +1,6 @@
 # D4 — decisiones y alcance de preparación
 
-Actualizado: 2026-10-20, Europe/Madrid. **D4 sintético aprobado y cerrado.** [Alcance vigente](D4-approved.md) y [manifiesto](../validation/D4-CLOSURE.json).
+Actualizado: 2026-10-21, Europe/Madrid. **D4 sintético aprobado y cerrado.** [Alcance vigente](D4-approved.md) y [manifiesto](../validation/D4-CLOSURE.json).
 
 Autoridad: petición de iniciar diseño y preparar el primer corte del laboratorio,
 tras leer [HANDOFF-D4](../../HANDOFF-D4.md). D1/D2/D3 siguen cerrados y aprobados.

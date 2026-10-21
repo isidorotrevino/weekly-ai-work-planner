@@ -20,6 +20,10 @@ y su [manifiesto](docs/validation/D4-CLOSURE.json). Las referencias publicadas s
 consultan en ese manifiesto y en Git; no usar este handoff como un SHA mutable.
 El nuevo trabajo no inicia D5/D6 ni reabre D4.
 
+Cierre D4 y handoff publicados en `origin/main`: `dc8e542b28c55fafd8ec155e2b8ebf7e8aa80f94`.
+Una anotación posterior registra esta publicación en el manifiesto; consultar
+`git log` para obtener el HEAD más reciente.
+
 ## Lectura inicial
 
 1. [README en inglés](README.md), [README en español](README.es.md),
