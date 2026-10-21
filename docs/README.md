@@ -24,7 +24,10 @@ y [evidencia I1](validation/D5-I1-results.md).
 [I2: registro tabular y comparación](design/D5-REGISTER-COMPARISON.md), con
 [evidencia propia](validation/D5-I2-results.md).
 [I3: compatibilidad optativa y anotaciones](design/D5-REGISTER-COMPATIBILITY.md),
-con [evidencia independiente](validation/D5-I3-results.md). D5 abierto; D6 pendiente.
+con [evidencia independiente](validation/D5-I3-results.md).
+[I4: diseño de persistencia sintética](design/D5-PERSISTENCE-DESIGN.md) y
+[revisión para decidir el laboratorio](design/D5-PERSISTENCE-REVIEW.md): contrato
+preparado, sin implementar ni aplicar migraciones. D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 
