@@ -54,6 +54,10 @@ sin SQL nuevo; identidad declarada y ausencia aplicada con control de versión.
 [I12: reaparición sintética aprobada](design/D5-I12-REAPPEARANCE-LAB.md), con
 [evidencia propia](validation/D5-I12-results.md): V35 solo en otro laboratorio V30,
 sin crear tareas durante la reaparición ni activar trabajo.
+[I13: contrato de resolución de ediciones locales](design/D5-I13-LOCAL-EDIT-DESIGN.md)
+y [matriz L01–L32](design/D5-I13-LOCAL-EDIT-REVIEW.md): diseño para revisión,
+sin SQL nuevo; elección completa origen/local para cambios presentes, sin excepción
+permanente ni extensión a reaparición con edición local.
 
 ## Current design / Diseño vigente
 
