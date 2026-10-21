@@ -29,7 +29,10 @@ con [evidencia independiente](validation/D5-I3-results.md).
 [revisión](design/D5-PERSISTENCE-REVIEW.md) e
 [implementación del laboratorio sintético](design/D5-I4-PERSISTENCE-LAB.md), con
 [evidencia propia](validation/D5-I4-results.md). Propuesta V31 aplicada únicamente
-en bases D5 desechables; sin promoción. D5 abierto; D6 pendiente.
+en bases D5 desechables; sin promoción.
+[I5: comparación SQL, revisión por fila y simulación](design/D5-I5-REVIEW-SIMULATION.md),
+con [evidencia independiente](validation/D5-I5-results.md). Sin aplicación operativa
+a tareas o requisitos. D5 abierto; D6 pendiente.
 
 ## Current design / Diseño vigente
 

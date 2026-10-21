@@ -130,3 +130,9 @@ D5 remains open; no task activation, migration promotion or deployment.
 [D5 I4](D5-I4-results.md) registra una campaña PostgreSQL sintética independiente
 y regresión D2. [Implementación y límites](../design/D5-I4-PERSISTENCE-LAB.md).
 D5 sigue abierto; sin activación de tareas, promoción ni despliegue.
+
+[D5 I5](D5-I5-results.md) adds stored comparisons, per-row review and application
+simulation, with separate evidence. No operational application to D2 tasks.
+
+[D5 I5](D5-I5-results.md) añade comparaciones persistidas, revisión por fila y
+simulación de aplicación, con evidencia propia. Sin aplicación operativa a tareas D2.

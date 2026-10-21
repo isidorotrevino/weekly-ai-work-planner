@@ -167,3 +167,50 @@ Ingerir no mueve ninguna referencia. Seleccionar no activa trabajo y una captura
 BLOCKED conserva su bloqueo. El recibo identifica el resultado histórico; la
 referencia actual requiere otra lectura. Los artefactos originales I1–I3 y las
 etiquetas del llamante conservan sus límites de autoridad.
+
+## I5 — comparación persistida, revisión y simulación
+
+[Decisiones A10–A12 y contrato](../../docs/design/D5-I5-REVIEW-SIMULATION.md)
+· [Evidencia I5](../../docs/validation/D5-I5-results.md).
+Con los mismos requisitos Docker/Python del laboratorio I4:
+
+```bash
+python3 -m testing.D5.run_review_lab
+```
+
+Este runner propio aplica V1–V11, V31 y V32 solo en su contenedor desechable sin red
+ni puertos. Ejecuta la regresión I4 y el flujo nuevo, comprueba la recuperación y
+elimina su contenedor/volumen. Conserva diagnóstico privado en
+`work/d5/postgres/d5-pg-*/review-results.json`. No modifica el runner I4 ni el entorno
+de desarrollo. El retorno no cero indica fallo de la campaña, sin promoción.
+
+El caso R15 prueba el CLI `python3 -m source_ingest.review --help` dentro del
+laboratorio, con este flujo completo:
+
+1. `compare`: dos IDs explícitos de observación SQL; guarda informe y hashes.
+2. `export`: recupera, reconstruye y exporta el informe a un archivo privado
+   direccionado por hash; destino por defecto `work/d5/reviews/`.
+3. `row`: muestra el cambio completo de una fila y su revisión actual. Este comando
+   **imprime contenido de origen** por solicitud expresa; no compartirlo como log.
+4. `decide`: ACCEPT/REJECT con ID/hash de comparación, ID/hash de fila, versión
+   esperada, etiqueta del revisor y motivo; conserva decisión y recibo.
+5. `simulate`: filas elegidas mediante `--item ID:HASH:DECISION_UUID:VERSION`,
+   repetible, y `--expected-reference-version`. El CLI ordena los pins por ID.
+
+Los subcomandos exigen proyecto/documento y contenedor D5 etiquetado sin red.
+`compare`, `decide` y `simulate` exigen command_id explícito. Usar `--help` en cada
+subcomando para ver todos sus parámetros. La referencia debe seleccionarse antes
+con el `select` I4, apuntando al ID «antes»; no se mueve al comparar, aceptar o
+simular. Al terminar la campaña su base deja de existir; estos comandos no se
+ofrecen como conexión a dev/producción ni como un servicio persistente nuevo.
+
+Un conflicto o comparación BLOCKED devuelve 2; fallo de verificación/SQL devuelve 1.
+Las respuestas ordinarias muestran metadatos y recibos. `export` y `row` dan acceso
+explícito a datos privados; el informe incluye las filas completas codificadas en
+base64 y `row` las decodifica para revisión. El recibo se consulta con `receipt`
+del CLI I4 y siempre representa un resultado histórico.
+
+Aceptar no importa una tarea. Simular no escribe requisitos/tareas D2 ni selecciona
+el «después». Una ausencia aceptada produce KEEP_EXISTING_NO_DELETE. Si cambian la
+referencia o las versiones de decisión esperadas, hay conflicto sin simulación
+parcial; repetir un recibo antiguo no revierte esos cambios.
