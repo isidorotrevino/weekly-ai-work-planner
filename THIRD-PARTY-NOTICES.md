@@ -49,3 +49,11 @@ implementation is copied into this repository. Its observed version is recorded
 with the I12 evidence. Preserve the image/package's upstream copyright, license
 and notice files if distributing a laboratory image; the current image remains
 a local synthetic validation artifact, not a reviewed distribution.
+
+## Local development diagnostic relay
+
+The development Compose entry point additionally uses the digest-pinned official
+Python 3.12 slim image for a repository-owned TCP relay built with Python's standard
+library. It terminates no TLS and includes no third-party Python packages. Preserve
+the runtime image's Python and operating-system license/notice files if distributing
+an image later; this environment is currently a local development artifact.

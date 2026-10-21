@@ -1,0 +1,150 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# Development entry point; historical D4 Compose stays unchanged.
+x-app: &app
+  image: ${LAB_IMAGE:?build first}
+  pull_policy: never
+  user: "${LAB_UID}:${LAB_GID}"
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: ["/tmp:size=64m,mode=1777"]
+  cpus: 1.0
+  mem_limit: 384m
+  pids_limit: 128
+  stop_grace_period: 10s
+  command: [serve]
+  healthcheck:
+    test: [CMD, java, -Xmx64m, -cp, '/app/classes:/app/lib/*', io.github.isidorotrevino.planner.lab.LabMain, health]
+    interval: 5s
+    timeout: 8s
+    start_period: 20s
+    retries: 12
+services:
+  db:
+    image: ${PG_IMAGE:?pinned image required}
+    pull_policy: never
+    env_file: ["${LAB_CASE_DIR}/postgres.env"]
+    volumes: ["${DEV_STATE}/db:/var/lib/postgresql/data"]
+    networks: [persistence]
+    mem_limit: 256m
+    cpus: 1.0
+    pids_limit: 128
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, pg_isready, -U, d4_owner, -d, postgres]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  migrate:
+    <<: *app
+    user: "0:${LAB_GID}"
+    cap_add: [CHOWN]
+    environment: {LAB_UID: "${LAB_UID}", LAB_GID: "${LAB_GID}"}
+    profiles: [bootstrap]
+    command: [bootstrap]
+    healthcheck: {disable: true}
+    depends_on: {db: {condition: service_healthy}}
+    networks: [persistence]
+    volumes:
+      - ${LAB_CASE_DIR}/config/bootstrap:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public
+      - ${DEV_STATE}/receiver:/receiver-state
+      - ${DEV_STATE}/worker-a:/worker-a-state
+      - ${DEV_STATE}/worker-b:/worker-b-state
+  control-plane:
+    <<: *app
+    depends_on: {db: {condition: service_healthy}}
+    networks: [persistence, workers]
+    volumes:
+      - ${LAB_CASE_DIR}/config/control:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+  effect-receiver:
+    <<: *app
+    depends_on: {db: {condition: service_healthy}}
+    networks: [effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/receiver:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - ${DEV_STATE}/receiver:/state
+  worker-a:
+    <<: *app
+    environment: {JAVA_TOOL_OPTIONS: '-Djdk.virtualThreadScheduler.parallelism=1 -Djdk.virtualThreadScheduler.maxPoolSize=1'}
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/worker-a:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - ${DEV_STATE}/worker-a:/state
+  worker-b:
+    <<: *app
+    environment: {JAVA_TOOL_OPTIONS: '-Djdk.virtualThreadScheduler.parallelism=1 -Djdk.virtualThreadScheduler.maxPoolSize=1'}
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/worker-b:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - ${DEV_STATE}/worker-b:/state
+  verifier:
+    <<: *app
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+    networks: [persistence, workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/verifier:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+      - ${LAB_CASE_DIR}/observations:/observations:ro
+      - ${DEV_STATE}/worker-a:/worker-a:ro
+      - ${DEV_STATE}/worker-b:/worker-b:ro
+  driver:
+    <<: *app
+    entrypoint: [sleep, infinity]
+    command: []
+    healthcheck: {disable: true}
+    depends_on:
+      verifier: {condition: service_healthy}
+      worker-a: {condition: service_healthy}
+      worker-b: {condition: service_healthy}
+    networks: [persistence, workers, effects]
+    volumes:
+      - ${LAB_CASE_DIR}/config/driver:/config/service:ro
+      - ${LAB_CASE_DIR}/public:/public:ro
+  diagnostics:
+    image: python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+    pull_policy: never
+    user: "${LAB_UID}:${LAB_GID}"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.5
+    pids_limit: 64
+    entrypoint: [python3, -B, /proxy.py]
+    volumes: ["./dev/tcp-proxy.py:/proxy.py:ro"]
+    networks: [diagnostics, workers, effects]
+    depends_on:
+      control-plane: {condition: service_healthy}
+      effect-receiver: {condition: service_healthy}
+      worker-a: {condition: service_healthy}
+      worker-b: {condition: service_healthy}
+      verifier: {condition: service_healthy}
+    ports:
+      - "127.0.0.1:${DEV_CONTROL_PLANE_PORT:-18443}:8443"
+      - "127.0.0.1:${DEV_EFFECT_RECEIVER_PORT:-18444}:8444"
+      - "127.0.0.1:${DEV_WORKER_A_PORT:-18445}:8445"
+      - "127.0.0.1:${DEV_WORKER_B_PORT:-18446}:8446"
+      - "127.0.0.1:${DEV_VERIFIER_PORT:-18447}:8447"
+    healthcheck:
+      test: [CMD, python3, -c, "import socket; [socket.create_connection(('127.0.0.1', p), 2).close() for p in range(8443,8448)]"]
+      interval: 5s
+      timeout: 4s
+      retries: 10
+networks:
+  diagnostics: {}
+  persistence: {internal: true}
+  workers: {internal: true}
+  effects: {internal: true}

@@ -166,3 +166,6 @@ reports/
 ._*
 Thumbs.db
 Desktop.ini
+
+# Persistent synthetic development instances, private identities and build cache
+/run_data/
