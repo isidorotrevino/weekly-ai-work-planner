@@ -360,3 +360,19 @@ The fixed synthetic demo reads a tracked fixture, writes no artifacts and loses 
 state on exit. Its receipts are simulated, not remote acknowledgments. D5 global
 remains open; 17 other synthetic criteria and seven real-evidence criteria remain
 pending. La demo no recibe rutas/URLs/credenciales del operador y no modifica D2.
+
+## I26 — incremental fixture capture / captura incremental sintética
+
+[I25 aprobado e implementación I26](../../docs/design/D5-I26-DRIVE-INCREMENTAL-LAB.md)
+y [resultados DI01–DI28](../../docs/validation/D5-I26-results.md): inventario/feed de
+fixtures, commits por página, cursor y reinicio con filesystem temporal propio.
+
+```bash
+python3 -m testing.D5.run_incremental_lab
+```
+
+The runner uses only Python's standard library on Linux, emits sanitized JSON,
+and removes its own temporary labs after waiting for its own child processes.
+Fault tests kill only children created by this harness. No Google/HTTP, SQL,
+Docker, reference selection, persistent D2 effects or real-provider conformance.
+G01–G07 remain open. No usar estas fixtures como cliente de una cuenta real.

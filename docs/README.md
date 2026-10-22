@@ -110,6 +110,11 @@ con carpeta temporal propia, commits por página y recuperación de cursor;
 [comprobaciones documentales](validation/D5-I25-design-review.json).
 Sin código/SQL nuevos ni validación real Drive.
 
+[I26: captura incremental y recuperación sintéticas](design/D5-I26-DRIVE-INCREMENTAL-LAB.md),
+con [resultados DI01–DI28](validation/D5-I26-results.md): I25 aprobado por A63;
+commits por página y procesos propios sobre carpeta temporal, con limpieza
+selectiva. GI07/GI08/GI09/GI11 validados solo en fixtures; G01–G07 siguen abiertos.
+
 ## Current design / Diseño vigente
 
 **Hito local D5 sintético aceptado (A52):** [alcance vigente](design/D5-LOCAL-SYNTHETIC-approved.md)
