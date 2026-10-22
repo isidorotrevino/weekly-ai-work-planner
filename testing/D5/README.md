@@ -417,3 +417,24 @@ executes previous regressions: Linux/fsync/flock, temporary roots and child-proc
 cleanup belong to I26, not to durable batch recovery. G01–G07 remain open.
 La demo no recibe rutas/URL/credenciales ni activa trabajo; sus snapshots completos
 son privados, y la salida publicada contiene solo estados/contadores saneados.
+
+## I32 — versioned profiles and quota model / perfiles y cuotas versionados
+
+[I31 aprobado e implementación I32](../../docs/design/D5-I32-PROFILES-QUOTAS-LAB.md)
+y [resultados PQ01–PQ34](../../docs/validation/D5-I32-results.md): selección explícita
+de perfil/observaciones, revisión propia y todas las dimensiones/ventanas necesarias
+de una cuenta; sin convertir mappings ni consumir/reservar capacidad D3.
+
+```bash
+python3 -m testing.D5.demo_profiles_quotas
+python3 -m unittest discover -s testing/D5 -p test_profiles_quotas.py -v
+python3 -m testing.D5.run_eligibility_lab
+```
+
+The new model is volatile and uses unchanged local parsers. A positive synthetic
+result grants no execution authority; replay is explicitly historical and a new
+command checks current facts/time. No HTTP, real providers, SQL, D2 writes or D3
+changes. The complete runner also executes previous regressions: I26 owns the
+Linux/fsync/flock temporary labs and child-process cleanup; these are not durable
+quota recovery. G01–G07 remain open. La demo no recibe rutas/URL/credenciales y
+publica solo estados/contadores; los snapshots completos de fixture son privados.

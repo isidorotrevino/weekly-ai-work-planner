@@ -24,6 +24,10 @@ GI04/GI20/GI22 en memoria, versiones y observaciones ligadas a revisión propia;
 **diseño para revisión, sin implementación ni ejecución nueva**.
 [Comprobaciones documentales / documentary checks](validation/D5-I31-design-review.json).
 Sin cambiar D3, consumir cuota o crear reservas; G01–G07 siguen abiertos.
+[I32: implementación sintética de I31 aprobado / synthetic profile and quota lab](design/D5-I32-PROFILES-QUOTAS-LAB.md)
+y [resultados propios / results](validation/D5-I32-results.md): PQ01–PQ34 en memoria,
+38 pruebas nuevas y 195 regresiones Python; GI04/GI20/GI22 con evidencia de modelo,
+sin proveedores reales, cambios D3 o cierre G01–G07.
 
 [I29: propuesta de relaciones y lotes / proposed relational batch](design/D5-I29-RELATIONAL-BATCH-DESIGN.md)
 y [matriz RB01–RB34 / review matrix](design/D5-I29-RELATIONAL-BATCH-REVIEW.md):
