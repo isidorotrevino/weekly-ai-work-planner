@@ -396,3 +396,24 @@ Linux/fsync/flock requirements still apply to that regression group. JSON output
 labels evidence as synthetic; real Plane capabilities and global G01–G07 remain
 open. La demo imprime estados/contadores y pierde su estado al salir; no es un
 cliente Plane ni una autorización de activación, promoción o despliegue.
+
+## I30 — relational batch model / modelo de relaciones y lotes
+
+[I29 aprobado e implementación I30](../../docs/design/D5-I30-RELATIONAL-BATCH-LAB.md)
+y [resultados RB01–RB34](../../docs/validation/D5-I30-results.md): entidades tipadas,
+vínculos explícitos del mismo proyecto, guardas locales y un commit atómico de
+fixture con datos, procedencia y recibo juntos.
+
+```bash
+python3 -m testing.D5.demo_relational_batch
+python3 -m unittest discover -s testing/D5 -p test_relational_batch.py -v
+python3 -m testing.D5.run_batch_lab
+```
+
+The new model uses volatile memory and owned threads. Source and whole-batch
+reviews remain separate; lost-response replay does not repeat effects. No SQL,
+HTTP, persistent D2 writes or real-provider conformance. The complete runner also
+executes previous regressions: Linux/fsync/flock, temporary roots and child-process
+cleanup belong to I26, not to durable batch recovery. G01–G07 remain open.
+La demo no recibe rutas/URL/credenciales ni activa trabajo; sus snapshots completos
+son privados, y la salida publicada contiene solo estados/contadores saneados.

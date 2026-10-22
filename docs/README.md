@@ -24,6 +24,10 @@ GI28–GI29 en memoria, relaciones explícitas del mismo proyecto y confirmació
 atómica; **diseño para revisión, sin código ni ejecución nueva**.
 [Comprobaciones documentales / documentary checks](validation/D5-I29-design-review.json).
 G01–G07 siguen abiertos; sin SQL, proveedores reales o activación.
+[I30: implementación sintética de I29 aprobado / synthetic atomic batch](design/D5-I30-RELATIONAL-BATCH-LAB.md)
+y [resultados propios / results](validation/D5-I30-results.md): RB01–RB34 en memoria,
+38 pruebas nuevas y 157 regresiones Python; GI28–GI29 con evidencia de modelo,
+sin SQL, efectos persistentes D2 ni cierre G01–G07.
 
 [I27: propuesta de conciliación Plane / proposed Plane reconciliation](design/D5-I27-PLANE-RECONCILIATION-DESIGN.md)
 y [matriz PC01–PC32 / review matrix](design/D5-I27-PLANE-RECONCILIATION-REVIEW.md):
