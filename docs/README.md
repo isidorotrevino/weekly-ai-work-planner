@@ -18,6 +18,13 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 ## D5 iniciado / D5 started
 
+[I31: propuesta de perfiles y cuotas / proposed profiles and quotas](design/D5-I31-PROFILES-QUOTAS-DESIGN.md)
+y [matriz PQ01–PQ34 / review matrix](design/D5-I31-PROFILES-QUOTAS-REVIEW.md):
+GI04/GI20/GI22 en memoria, versiones y observaciones ligadas a revisión propia;
+**diseño para revisión, sin implementación ni ejecución nueva**.
+[Comprobaciones documentales / documentary checks](validation/D5-I31-design-review.json).
+Sin cambiar D3, consumir cuota o crear reservas; G01–G07 siguen abiertos.
+
 [I29: propuesta de relaciones y lotes / proposed relational batch](design/D5-I29-RELATIONAL-BATCH-DESIGN.md)
 y [matriz RB01–RB34 / review matrix](design/D5-I29-RELATIONAL-BATCH-REVIEW.md):
 GI28–GI29 en memoria, relaciones explícitas del mismo proyecto y confirmación
