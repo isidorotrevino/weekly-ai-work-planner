@@ -24,6 +24,10 @@ GI15–GI17 en memoria, identidad estable y resultados inciertos separados de la
 vigencia de aprobación; **diseño para revisión, sin implementación ni pruebas nuevas**.
 [Comprobaciones documentales / documentary checks](validation/D5-I27-design-review.json).
 G01–G07 siguen abiertos; sin Plane real, SQL, activación, promoción o despliegue.
+[I28: implementación sintética de I27 aprobado / synthetic reconciliation lab](design/D5-I28-PLANE-RECONCILIATION-LAB.md)
+y [resultados propios / results](validation/D5-I28-results.md): PC01–PC32 en memoria,
+41 pruebas nuevas y 116 regresiones Python; GI15–GI17 con evidencia de modelo,
+sin acreditar Plane real ni cerrar G01–G07.
 
 [Ingesta local y previsualización I1](design/D5-LOCAL-PREVIEW.md): primer corte
 autorizado, sin activar tareas ni conectar proveedores. [Uso](../testing/D5/README.md)

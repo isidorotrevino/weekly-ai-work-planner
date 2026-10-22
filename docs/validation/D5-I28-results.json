@@ -1,0 +1,860 @@
+{
+  "schema": "d5.i28-plane-fixture-results.v1",
+  "increment": "D5-I28",
+  "date": "2026-10-22",
+  "status": "PASS_SYNTHETIC_MEMORY_RECONCILIATION",
+  "base_commit": "26559404a7b8853973ab9c29e021a542710fae4a",
+  "authority": "D5-A67 approve I27 and implement/validate PC01-PC32 in memory with synthetic fixtures, preserving A64-A66; no HTTP, persistent D2, activation, promotion, deployment or D6",
+  "I27_contract_approved": true,
+  "I27_publication_verified": true,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Linux",
+    "new_model_dependencies": "Python standard library; volatile memory and owned threads",
+    "regression_dependencies": "I26 Linux local filesystem rename/fsync/flock and own child processes"
+  },
+  "groups": {
+    "I28_reconciliation": {
+      "tests": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "I26_capture_regression": {
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "I24_offline_regression": {
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "prior_local_python_regression": {
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "tests_run": 157,
+  "elapsed_seconds": 0.81,
+  "passed": [
+    "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+    "test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+    "test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+    "test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+    "test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+    "test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+    "test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+    "test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+    "test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+    "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+    "test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+    "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+    "test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+    "test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+    "test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+    "test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+    "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+    "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+    "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+    "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+    "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+    "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+    "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+    "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC01_stable_key_across_payload_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC02_binding_uniqueness_and_remote_destination_uniqueness",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC03_reviewed_create_has_one_exact_effect_and_sanitized_receipt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC04_lost_creation_response_blocks_another_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC05_exact_query_recovers_creation_without_send",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC06_eventual_zero_never_authorizes_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC07_strong_zero_with_inflight_ticket_stays_unknown",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_later_remote_edit_cannot_clear_prior_identity_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_multiple_and_foreign_results_are_sticky_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC09_fixture_unique_key_same_payload_recovers_other_payload_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_fixture_creation_uniqueness_is_atomic_under_two_threads",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC11_unproven_match_and_proven_historical_edit_differ",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC12_local_change_before_send_invalidates_approval",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC13_review_revocation_and_replacement_require_exact_version",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC14_binding_policy_and_capability_changes_invalidate_manifest",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_contradictory_negative_cannot_replace_confirmed_effect",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_invalid_query_proof_or_body_never_confirms",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_mutation_hash_and_command_request_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC16_local_edit_during_send_preserves_actual_effect_as_stale",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC17_revocation_during_lost_response_allows_only_historical_read",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC18_confirmed_historical_effect_does_not_become_current",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC19_replay_never_restores_old_text",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_domain_lock_is_released_during_provider_callback",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_query_callback_can_edit_domain_outside_lock",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC21_new_reviewed_update_keeps_created_identity_and_foreign_fields",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC22_precondition_detects_before_during_and_ABA_remote_edits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC23_timeout_malformed_and_local_ack_remain_unknown_and_sanitized",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_unknown_update_blocks_newer_reviewed_update",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_update_lost_response_then_remote_edit_recovers_without_patch",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC25_conclusive_rejection_is_not_an_effect_or_automatic_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC26_429_requires_no_effect_and_logical_retry_tick",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC27_invalid_retry_delay_budget_and_stale_state_block",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC28_explicit_retry_keeps_key_payload_and_history_new_attempt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC29_query_budget_and_missing_confirmed_destination_do_not_recreate",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC30_no_memory_restart_or_missing_capability_authority",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_actual_utf8_manifest_byte_limit_blocks_without_truncation",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_binding_and_command_budget_are_not_truncated",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_closed_schemas_types_text_and_manifest_limits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC32_summary_has_no_operational_authority_or_real_effects",
+    "test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+    "test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+    "test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+    "test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+    "test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+    "test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+    "test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+    "test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+    "test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+    "test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+    "test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+    "test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+    "test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+    "test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+    "test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+    "test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+    "test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+    "test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+    "test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+    "test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+    "test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+    "test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+    "test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+    "test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+    "test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+    "test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+    "test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert"
+  ],
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "case_test_map": {
+    "PC01": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC01_stable_key_across_payload_package_and_command"
+    ],
+    "PC02": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC02_binding_uniqueness_and_remote_destination_uniqueness"
+    ],
+    "PC03": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC03_reviewed_create_has_one_exact_effect_and_sanitized_receipt"
+    ],
+    "PC04": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC04_lost_creation_response_blocks_another_package_and_command"
+    ],
+    "PC05": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC05_exact_query_recovers_creation_without_send"
+    ],
+    "PC06": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC06_eventual_zero_never_authorizes_retry"
+    ],
+    "PC07": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC07_strong_zero_with_inflight_ticket_stays_unknown"
+    ],
+    "PC08": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_later_remote_edit_cannot_clear_prior_identity_conflict",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_multiple_and_foreign_results_are_sticky_conflicts"
+    ],
+    "PC09": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC09_fixture_unique_key_same_payload_recovers_other_payload_conflicts"
+    ],
+    "PC10": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_fixture_creation_uniqueness_is_atomic_under_two_threads",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete"
+    ],
+    "PC11": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC11_unproven_match_and_proven_historical_edit_differ"
+    ],
+    "PC12": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC12_local_change_before_send_invalidates_approval"
+    ],
+    "PC13": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC13_review_revocation_and_replacement_require_exact_version"
+    ],
+    "PC14": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC14_binding_policy_and_capability_changes_invalidate_manifest"
+    ],
+    "PC15": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_contradictory_negative_cannot_replace_confirmed_effect",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_invalid_query_proof_or_body_never_confirms",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_mutation_hash_and_command_request_conflict"
+    ],
+    "PC16": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC16_local_edit_during_send_preserves_actual_effect_as_stale"
+    ],
+    "PC17": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC17_revocation_during_lost_response_allows_only_historical_read"
+    ],
+    "PC18": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC18_confirmed_historical_effect_does_not_become_current"
+    ],
+    "PC19": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC19_replay_never_restores_old_text"
+    ],
+    "PC20": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_domain_lock_is_released_during_provider_callback",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_query_callback_can_edit_domain_outside_lock"
+    ],
+    "PC21": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC21_new_reviewed_update_keeps_created_identity_and_foreign_fields"
+    ],
+    "PC22": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC22_precondition_detects_before_during_and_ABA_remote_edits"
+    ],
+    "PC23": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC23_timeout_malformed_and_local_ack_remain_unknown_and_sanitized"
+    ],
+    "PC24": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_unknown_update_blocks_newer_reviewed_update",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_update_lost_response_then_remote_edit_recovers_without_patch"
+    ],
+    "PC25": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC25_conclusive_rejection_is_not_an_effect_or_automatic_retry"
+    ],
+    "PC26": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC26_429_requires_no_effect_and_logical_retry_tick"
+    ],
+    "PC27": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC27_invalid_retry_delay_budget_and_stale_state_block"
+    ],
+    "PC28": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC28_explicit_retry_keeps_key_payload_and_history_new_attempt"
+    ],
+    "PC29": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC29_query_budget_and_missing_confirmed_destination_do_not_recreate"
+    ],
+    "PC30": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC30_no_memory_restart_or_missing_capability_authority"
+    ],
+    "PC31": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_actual_utf8_manifest_byte_limit_blocks_without_truncation",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_binding_and_command_budget_are_not_truncated",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_closed_schemas_types_text_and_manifest_limits"
+    ],
+    "PC32": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC32_summary_has_no_operational_authority_or_real_effects"
+    ]
+  },
+  "criterion_test_map": {
+    "GI15": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC01_stable_key_across_payload_package_and_command",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC02_binding_uniqueness_and_remote_destination_uniqueness",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC03_reviewed_create_has_one_exact_effect_and_sanitized_receipt",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC04_lost_creation_response_blocks_another_package_and_command",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC05_exact_query_recovers_creation_without_send",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC06_eventual_zero_never_authorizes_retry",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC07_strong_zero_with_inflight_ticket_stays_unknown",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_later_remote_edit_cannot_clear_prior_identity_conflict",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_multiple_and_foreign_results_are_sticky_conflicts",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC09_fixture_unique_key_same_payload_recovers_other_payload_conflicts",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_fixture_creation_uniqueness_is_atomic_under_two_threads",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC11_unproven_match_and_proven_historical_edit_differ"
+    ],
+    "GI16": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC12_local_change_before_send_invalidates_approval",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC13_review_revocation_and_replacement_require_exact_version",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC14_binding_policy_and_capability_changes_invalidate_manifest",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_contradictory_negative_cannot_replace_confirmed_effect",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_invalid_query_proof_or_body_never_confirms",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_mutation_hash_and_command_request_conflict",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC16_local_edit_during_send_preserves_actual_effect_as_stale",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC17_revocation_during_lost_response_allows_only_historical_read",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC18_confirmed_historical_effect_does_not_become_current",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC19_replay_never_restores_old_text",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_domain_lock_is_released_during_provider_callback",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_query_callback_can_edit_domain_outside_lock",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC21_new_reviewed_update_keeps_created_identity_and_foreign_fields",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC22_precondition_detects_before_during_and_ABA_remote_edits"
+    ],
+    "GI17": [
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC23_timeout_malformed_and_local_ack_remain_unknown_and_sanitized",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_unknown_update_blocks_newer_reviewed_update",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_update_lost_response_then_remote_edit_recovers_without_patch",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC25_conclusive_rejection_is_not_an_effect_or_automatic_retry",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC26_429_requires_no_effect_and_logical_retry_tick",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC27_invalid_retry_delay_budget_and_stale_state_block",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC28_explicit_retry_keeps_key_payload_and_history_new_attempt",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC29_query_budget_and_missing_confirmed_destination_do_not_recreate",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC30_no_memory_restart_or_missing_capability_authority",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_actual_utf8_manifest_byte_limit_blocks_without_truncation",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_binding_and_command_budget_are_not_truncated",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_closed_schemas_types_text_and_manifest_limits",
+      "test_plane_reconciliation.PlaneReconciliationTest.test_PC32_summary_has_no_operational_authority_or_real_effects"
+    ]
+  },
+  "I23_criteria": [
+    {
+      "id": "GI01",
+      "gap": "G01",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI02",
+      "gap": "G01",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI03",
+      "gap": "G01",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI04",
+      "gap": "G01",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI05",
+      "gap": "G01",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI06",
+      "gap": "G01",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI07",
+      "gap": "G02",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_FILESYSTEM_REGRESSION"
+    },
+    {
+      "id": "GI08",
+      "gap": "G02",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_FILESYSTEM_REGRESSION"
+    },
+    {
+      "id": "GI09",
+      "gap": "G02",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_FILESYSTEM_REGRESSION"
+    },
+    {
+      "id": "GI10",
+      "gap": "G02",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI11",
+      "gap": "G02",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_FILESYSTEM_REGRESSION"
+    },
+    {
+      "id": "GI12",
+      "gap": "G02",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI13",
+      "gap": "G03",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI14",
+      "gap": "G03",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI15",
+      "gap": "G03",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MEMORY_RECONCILIATION"
+    },
+    {
+      "id": "GI16",
+      "gap": "G03",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MEMORY_RECONCILIATION"
+    },
+    {
+      "id": "GI17",
+      "gap": "G03",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MEMORY_RECONCILIATION"
+    },
+    {
+      "id": "GI18",
+      "gap": "G03",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI19",
+      "gap": "G04",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI20",
+      "gap": "G04",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI21",
+      "gap": "G04",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI22",
+      "gap": "G04",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI23",
+      "gap": "G04",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI24",
+      "gap": "G04",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI25",
+      "gap": "G05",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI26",
+      "gap": "G05",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI27",
+      "gap": "G05",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI28",
+      "gap": "G05",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI29",
+      "gap": "G05",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI30",
+      "gap": "G05",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI31",
+      "gap": "G06",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI32",
+      "gap": "G06",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI33",
+      "gap": "G06",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI34",
+      "gap": "G06",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI35",
+      "gap": "G06",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI36",
+      "gap": "G06",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    },
+    {
+      "id": "GI37",
+      "gap": "G07",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI38",
+      "gap": "G07",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI39",
+      "gap": "G07",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI40",
+      "gap": "G07",
+      "layer": "synthetic",
+      "status": "NOT_RUN_IN_I28"
+    },
+    {
+      "id": "GI41",
+      "gap": "G07",
+      "layer": "synthetic",
+      "status": "PASS_SYNTHETIC_MODEL_REGRESSION"
+    },
+    {
+      "id": "GI42",
+      "gap": "G07",
+      "layer": "real_evidence",
+      "status": "REAL_VALIDATION_PENDING"
+    }
+  ],
+  "bounded_synthetic_criteria_with_evidence": 25,
+  "other_synthetic_criteria_not_run": 10,
+  "real_evidence_criteria_not_run": 7,
+  "new_owned_threads_started": 8,
+  "new_owned_threads_alive": 0,
+  "new_owned_data_roots_created": 0,
+  "new_fixture_children_started": 0,
+  "regression_owned_roots_created": 33,
+  "regression_owned_roots_remaining": 0,
+  "regression_fixture_children_started": 7,
+  "regression_fixture_children_alive": 0,
+  "regression_fixture_child_exitcodes": [
+    0,
+    -9,
+    -9,
+    -9,
+    -9,
+    0,
+    0
+  ],
+  "cleanup_verified": true,
+  "actual_limit_exercises": {
+    "bindings_created": 64,
+    "commands_created": 128,
+    "write_attempts": 3,
+    "reconciliation_queries": 6,
+    "manifest_bytes": "UTF-8 multibyte manifest above 65536 bytes rejected; reduced-budget early rejection also tested",
+    "field_characters": "8193 rejected, valid 8192-character multibyte fields used in byte-limit test"
+  },
+  "demo_command": "python3 -m testing.D5.demo_plane_reconciliation",
+  "demo": {
+    "D5_closed": false,
+    "bindings": 1,
+    "commands": 2,
+    "fixture_objects": 1,
+    "fixture_query_calls": 1,
+    "fixture_write_calls": 2,
+    "global_gaps_open": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07"
+    ],
+    "initial_result": "UNKNOWN",
+    "mode": "SYNTHETIC_ONLY",
+    "operational_activation": false,
+    "persistent_D2_writes": 0,
+    "real_remote_requests": 0,
+    "recovered_result": "EFFECT_CONFIRMED",
+    "recovered_validity": [
+      "STALE_LOCAL"
+    ],
+    "remote_edit_preserved": true,
+    "replay_result": "EFFECT_CONFIRMED",
+    "schema": "d5.plane-fixture-demo.v1",
+    "storage": "VOLATILE_MEMORY",
+    "update_result": "EFFECT_CONFIRMED"
+  },
+  "lost_response_not_process_restart": true,
+  "concurrent_fixture_creation_uniqueness": true,
+  "concurrent_local_ticket_and_query_CAS": true,
+  "query_during_inflight_send_recovered": true,
+  "provider_calls_outside_domain_lock_verified": true,
+  "projected_ABA_conflict_verified": true,
+  "identity_conflict_write_block_sticky": true,
+  "new_SQL": false,
+  "SQL_D2_D3_D4_campaigns_reexecuted": false,
+  "HTTP_client": false,
+  "Docker_invoked": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "private_corpus_reread": false,
+  "persistent_D2_writes": 0,
+  "real_remote_requests": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "documentary_checks": {
+    "existing_tracked_files_preserved_except_two_READMEs": 427,
+    "allowed_documentation_changes": [
+      "docs/README.md",
+      "testing/D5/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified": true,
+    "D5_prior_input_hash_entries_verified_current": 560,
+    "historical_reports_verified_at_commits": {
+      "docs/validation/D5-I21-audit.json": {
+        "commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+        "input_hash_entries_verified": 303,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I22-acceptance-review.json": {
+        "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+        "input_hash_entries_verified": 307,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": {
+        "commit": "148c6567795d376b427340aef5b65c68fbe77fd8",
+        "input_hash_entries_verified": 17,
+        "expected_current_documentation_differences": [
+          "docs/README.md"
+        ]
+      },
+      "docs/validation/D5-I23-design-review.json": {
+        "commit": "5a7ee951616a06a707b86ce3de6ff0984212a16c",
+        "input_hash_entries_verified": 25,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I24-results.json": {
+        "commit": "17e4318b27b76ebaab991bdac57601aafb8933ab",
+        "input_hash_entries_verified": 40,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I25-design-review.json": {
+        "commit": "e66a42c00d8953b77dd9a91d307da94ff4f9172a",
+        "input_hash_entries_verified": 24,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I26-results.json": {
+        "commit": "9944ee593342009a9841074ca1721aa5d0b535fa",
+        "input_hash_entries_verified": 48,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I27-design-review.json": {
+        "commit": "26559404a7b8853973ab9c29e021a542710fae4a",
+        "input_hash_entries_verified": 32,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      }
+    },
+    "local_Markdown_links_checked": 172,
+    "publication_text_files_checked": 436,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true
+  },
+  "limitations": [
+    "Volatile trusted fixture model only; no real Plane conformance, atomicity, identity, permission or API capability proof.",
+    "Lost responses and in-process races are exercised; no durable outbox/process restart, power loss, hostile caller or external-state recovery is claimed.",
+    "One live ledger per fixture avoids treating a second lab as durable recovery; it is not external-provider authentication or persistence.",
+    "Fixture no-effect responses and retry ticks do not establish real HTTP code semantics or provider quota capacity.",
+    "Historical runtime campaigns are not new SQL/D2-D4 executions. I26 filesystem/process counts are regression evidence distinct from new I28 memory tests.",
+    "GI18 and GI38/GI39/GI40 general integrated criteria remain pending; no global gap or accepted local milestone is expanded.",
+    "Publication scan covers configured patterns only."
+  ],
+  "inputs": {
+    "docs/README.md": "3a5e5c39a9685ba3b159232b170293abc4d4fef57ebe8a31aba91f83f35e4361",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md": "5a6401941de7198094f31060277ef8dc64521deb3caccba351d6b051716bc1e7",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-DESIGN.md": "935c8356da6d9067f2d2653033220dc49d8bff34db191cdc5633baf3fbf3d591",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-REVIEW.md": "6f31ce23acf6e276ca58de07a8e1932881170802ca3e37b97c2ec5b3a28a4d42",
+    "docs/design/D5-I26-DRIVE-INCREMENTAL-LAB.md": "9819d609b37c0888b0c13e5b448e5f5f9176aa855469c2151b32246be25751db",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-DESIGN.md": "f132e65ce68fc84d1f71475a04cdaf10a8089e3706a85651a3bd785ae0d8338c",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-REVIEW.md": "405cacc58ade6de13288b3b605d883cca67ec968497f587f087c5de8ccc2d8ee",
+    "docs/design/D5-I28-PLANE-RECONCILIATION-LAB.md": "a2c4582fbd57d2490fc7af15b2786cb783901984b053d9b3b16d068e4a545968",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I23-design-review.json": "70edddac278a6ec692829685867907dd78444f7c6c35887d3b97c56d7956eaee",
+    "docs/validation/D5-I24-results.md": "3c16eeb7a66fcc1b5594986f5a944e92bf80f3140518496105065a4b94dac21e",
+    "docs/validation/D5-I25-design-review.json": "9cf620dbfa8b1cb6aeb971b208d7fdb00c74260ee04ba2ebd547bf1c3015bbc0",
+    "docs/validation/D5-I26-results.json": "13427b1f097d730faab3ec975cbd751859a7318031027cae9ef5b67fe6e9024c",
+    "docs/validation/D5-I26-results.md": "32647c14b2e1a515bf5986d822c93b13a920ed189a507cf7e5dac571ccfa0c67",
+    "docs/validation/D5-I27-design-review.json": "a314abcd9adab4dfd6a9d0d14150f3b3ebd5d0c72d23e1a285c9636b9a89fd01",
+    "docs/validation/D5-I28-results.md": "48c14fd23919ff396f09c0fefc1925b9241b8592910e740966c646b7791a0b1e",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/README.md": "7c9fccd9f7b2610b7a5bca26181835aae3701e988ef31d49ad71c1c3a7ac807f",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6"
+  }
+}

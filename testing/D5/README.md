@@ -376,3 +376,23 @@ and removes its own temporary labs after waiting for its own child processes.
 Fault tests kill only children created by this harness. No Google/HTTP, SQL,
 Docker, reference selection, persistent D2 effects or real-provider conformance.
 G01–G07 remain open. No usar estas fixtures como cliente de una cuenta real.
+
+## I28 — Plane reconciliation model / modelo de conciliación Plane
+
+[Contrato I27 aprobado e implementación I28](../../docs/design/D5-I28-PLANE-RECONCILIATION-LAB.md)
+y [resultados PC01–PC32](../../docs/validation/D5-I28-results.md): clave estable de
+creación, envíos inciertos, revisión propia y conciliación histórica en memoria.
+
+```bash
+python3 -m testing.D5.demo_plane_reconciliation
+python3 -m unittest discover -s testing/D5 -p test_plane_reconciliation.py -v
+python3 -m testing.D5.run_plane_lab
+```
+
+The new model/demo use volatile memory and owned threads, with no HTTP, provider
+credentials, durable outbox or D2 writes. The complete runner also executes I26's
+separate filesystem/process regressions and verifies their selective cleanup;
+Linux/fsync/flock requirements still apply to that regression group. JSON output
+labels evidence as synthetic; real Plane capabilities and global G01–G07 remain
+open. La demo imprime estados/contadores y pierde su estado al salir; no es un
+cliente Plane ni una autorización de activación, promoción o despliegue.
