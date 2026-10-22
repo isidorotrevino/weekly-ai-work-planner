@@ -104,6 +104,12 @@ con [evidencia propia](validation/D5-I24-results.md): I23 aprobado por A59;
 18 criterios modelados en memoria, 35 pruebas nuevas y regresiones Python separadas.
 Sin efectos D2 persistentes ni conectores reales; G01–G07 siguen abiertos.
 
+[I25: contrato de Drive incremental sintético](design/D5-I25-DRIVE-INCREMENTAL-DESIGN.md)
+y [matriz DI01–DI28](design/D5-I25-DRIVE-INCREMENTAL-REVIEW.md): diseño para revisión,
+con carpeta temporal propia, commits por página y recuperación de cursor;
+[comprobaciones documentales](validation/D5-I25-design-review.json).
+Sin código/SQL nuevos ni validación real Drive.
+
 ## Current design / Diseño vigente
 
 **Hito local D5 sintético aceptado (A52):** [alcance vigente](design/D5-LOCAL-SYNTHETIC-approved.md)

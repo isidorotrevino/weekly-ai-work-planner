@@ -1,0 +1,256 @@
+{
+  "schema": "d5.incremental-drive-design-review.v1",
+  "increment": "D5-I25",
+  "date": "2026-10-22",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "17e4318b27b76ebaab991bdac57601aafb8933ab",
+  "authority": "D5-A60 prioritize design of synthetic Drive inventory/pages/journal/cursor/restart; A61 owned temporary lab; A62 recoverable terminal diagnostics allow page commit, transients do not",
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "target_synthetic_criteria": [
+    "GI07",
+    "GI08",
+    "GI09",
+    "GI11"
+  ],
+  "proposed_cases": [
+    {
+      "id": "DI01",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI02",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI03",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI04",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI05",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI06",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI07",
+      "criterion": "GI07",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI08",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI09",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI10",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI11",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI12",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI13",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI14",
+      "criterion": "GI08",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI15",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI16",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI17",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI18",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI19",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI20",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI21",
+      "criterion": "GI09",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI22",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI23",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI24",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI25",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI26",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI27",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "DI28",
+      "criterion": "GI11",
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "runtime_tests_run": 0,
+  "I24_runtime_tests_reexecuted": false,
+  "SQL_campaigns_reexecuted": false,
+  "new_source_code": false,
+  "new_SQL": false,
+  "filesystem_store_implemented": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "private_corpus_reread": false,
+  "persistent_D2_writes": 0,
+  "reference_auto_selected": false,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "proposed_storage": {
+    "type": "Owned marked temporary filesystem lab",
+    "cleanup": "Harness finally removes only its own root",
+    "commit_unit": "One complete page with bytes or terminal diagnostics, receipt and cursor; immutable object then atomic head pointer",
+    "page_events_max": 16,
+    "commit_JSON_bytes_max": 33554432,
+    "reachable_commits_max": 1024,
+    "source_bytes_max": 2097152,
+    "token_characters_max": 256,
+    "dependencies": "Linux Python standard library with local filesystem rename, fsync and flock",
+    "power_loss_or_hostile_filesystem_guarantee": false
+  },
+  "terminal_diagnostic_policy": "Explicit per-event recoverable terminal diagnostics may advance capture cursor, never D5 reference or D2 state; transient/global authorization/protocol failures block the whole page",
+  "primary_sources_consulted_date": "2026-10-22",
+  "primary_sources": [
+    "https://developers.google.com/workspace/drive/api/guides/manage-changes",
+    "https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/list",
+    "https://developers.google.com/workspace/drive/api/reference/rest/v3/changes"
+  ],
+  "documentary_checks": {
+    "existing_tracked_files_preserved_except_documentation_index": 416,
+    "allowed_documentation_change": [
+      "docs/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified": true,
+    "D5_prior_input_hash_entries_verified_current": 560,
+    "I24_input_hash_entries_verified_at_commit": 40,
+    "I24_current_expected_documentation_differences": [
+      "docs/README.md"
+    ],
+    "proposed_case_count": 28,
+    "proposed_synthetic_criterion_count": 4,
+    "local_Markdown_links_checked": 133,
+    "publication_text_files_checked": 420,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true
+  },
+  "limitations": [
+    "Design-only increment; no DI cases executed and no filesystem store created.",
+    "Synthetic provider envelopes and filesystem fault tests would not prove Google Drive real conformance.",
+    "Process-restart/fault injection would not prove power-loss, hardware, network filesystem or hostile rollback resistance.",
+    "No reference selection, D2 application, real providers or implicit GI38/GI39/GI40 completion.",
+    "Historical reports remain unchanged; documentary inputs are anchored to their commits when indexes evolve.",
+    "Publication scanning covers configured patterns only."
+  ],
+  "inputs": {
+    "docs/README.md": "65aff51a96594d4b57eb9aee1563c02a30bd8f6dd8f59c93c23dce9958867400",
+    "docs/design/D1-architecture-baseline.md": "c9e5674bdabbddcfe0d3d4ff81a11f2593355949d538a5b8dc6e1a9408adbc0c",
+    "docs/design/D2.9-approved.md": "1ab49071b25f06f1669f72de84d9fcd2795624b44a755ce726400d29479ada1d",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md": "5a6401941de7198094f31060277ef8dc64521deb3caccba351d6b051716bc1e7",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-DESIGN.md": "935c8356da6d9067f2d2653033220dc49d8bff34db191cdc5633baf3fbf3d591",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-REVIEW.md": "6f31ce23acf6e276ca58de07a8e1932881170802ca3e37b97c2ec5b3a28a4d42",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I23-design-review.json": "70edddac278a6ec692829685867907dd78444f7c6c35887d3b97c56d7956eaee",
+    "docs/validation/D5-I24-results.json": "d1a3d33f77862ed2e4be656ebea5a4bc9565173d40f430fb305c33574585f848",
+    "docs/validation/D5-I24-results.md": "3c16eeb7a66fcc1b5594986f5a944e92bf80f3140518496105065a4b94dac21e",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "testing/D5/README.md": "874ce8ae98a6cd523a0db164d47894663e843f8dd7574676bee256bd3ac47821",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c"
+  }
+}
