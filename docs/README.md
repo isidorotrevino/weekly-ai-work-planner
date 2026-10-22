@@ -68,6 +68,10 @@ solo al aplicar el paquete aprobado.
 [I16: adopción sintética aprobada](design/D5-I16-ADOPTION-LAB.md), con
 [evidencia propia](validation/D5-I16-results.md): V37 solo en otro laboratorio V30,
 correspondencia/procedencia atómicas y ninguna escritura en la tarea adoptada.
+[I17: contrato de reaparición con divergencia local](design/D5-I17-LOCAL-REAPPEARANCE-DESIGN.md)
+y [matriz LR01–LR36](design/D5-I17-LOCAL-REAPPEARANCE-REVIEW.md): diseño para revisión,
+sin SQL nuevo; prueba de ausencia e identidad conservadas y resolución origen/local
+mediante una revisión conjunta del manifiesto completo.
 
 ## Current design / Diseño vigente
 
