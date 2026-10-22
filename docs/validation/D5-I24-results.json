@@ -1,0 +1,695 @@
+{
+  "schema": "d5.i24-offline-results.v1",
+  "increment": "D5-I24",
+  "date": "2026-10-22",
+  "status": "PASS_SYNTHETIC_OFFLINE",
+  "authority": "D5-A59: approve I23 and implement/validate exclusively the first 18 offline criteria; G01-G07 remain open",
+  "base_commit": "5a7ee951616a06a707b86ce3de6ff0984212a16c",
+  "I23_publication_verified": true,
+  "I23_contract_approved": true,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Linux",
+    "dependencies": "Python standard library"
+  },
+  "groups": {
+    "new_offline": {
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "local_python_regression": {
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "tests_run": 86,
+  "elapsed_seconds": 0.18,
+  "passed": [
+    "test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+    "test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+    "test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+    "test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+    "test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+    "test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+    "test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+    "test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+    "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+    "test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+    "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+    "test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+    "test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+    "test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+    "test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+    "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+    "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+    "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+    "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+    "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+    "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+    "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+    "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+    "test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+    "test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+    "test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+    "test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+    "test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+    "test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+    "test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+    "test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+    "test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+    "test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+    "test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+    "test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+    "test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+    "test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+    "test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+    "test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+    "test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+    "test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+    "test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+    "test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+    "test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+    "test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+    "test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+    "test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+    "test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+    "test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+    "test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert"
+  ],
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "SQL_campaigns_reexecuted": false,
+  "D2_D3_D4_campaigns_reexecuted": false,
+  "new_SQL": false,
+  "HTTP_client": false,
+  "Docker_invoked": false,
+  "real_provider_CLI_invoked": false,
+  "real_provider_access": false,
+  "real_credentials_used": false,
+  "private_corpus_reread": false,
+  "persistent_D2_writes": 0,
+  "remote_requests": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "storage": "VOLATILE_MEMORY",
+  "demo_repeated_identically": true,
+  "demo_result": {
+    "schema": "d5.offline-demo.v1",
+    "capture_sha256": "e645b1418c7e865b7f8b6008b402578d80a9242e142739466ab3639704f7364f",
+    "effect_receipt": {
+      "schema": "d5.offline-receipt.v1",
+      "mode": "SYNTHETIC_ONLY",
+      "command_id": "00000000-0000-4000-8000-000000000006",
+      "stage": "EFFECT",
+      "manifest_sha256": "03e284abb415b98d6f136b448adc1eeb4fc7fc99f0edb5a33aba8cd1e9b4c01e",
+      "request_sha256": "899ab9ab32b15492b63c7e2e26f0afb75f0e503284744d0ca528b762f2ddbf56",
+      "result": "SIMULATED_APPLIED",
+      "activation_allowed": false,
+      "persistent_D2_writes": 0,
+      "remote_requests": 0
+    },
+    "projection_receipt": {
+      "schema": "d5.offline-receipt.v1",
+      "mode": "SYNTHETIC_ONLY",
+      "command_id": "00000000-0000-4000-8000-000000000007",
+      "stage": "PROJECTION",
+      "manifest_sha256": "fb6c512328344297e27cc5e7a8816940c501c4429a8122a48c3d821885b8bf71",
+      "request_sha256": "68b1f7fbd8c45def9b75f5488f4a8c3b33ebc3e1b54a4e4558e6fa21fcb9f416",
+      "result": "SIMULATED_PROJECTED",
+      "activation_allowed": false,
+      "persistent_D2_writes": 0,
+      "remote_requests": 0
+    },
+    "route": {
+      "schema": "d5.offline-route-result.v1",
+      "result": "SIMULATED_ELIGIBLE",
+      "permission_authority": "SYNTHETIC_ONLY",
+      "activation_allowed": false,
+      "fallback_allowed": false,
+      "quota_consumed": 0
+    },
+    "projected_fields": [
+      "name",
+      "description"
+    ],
+    "preserved_fields": [
+      "labels"
+    ],
+    "summary": {
+      "schema": "d5.offline-summary.v1",
+      "mode": "SYNTHETIC_ONLY",
+      "D5_closed": false,
+      "global_gaps_open": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "activation_allowed": false,
+      "persistent_D2_writes": 0,
+      "remote_requests": 0,
+      "storage": "VOLATILE_MEMORY",
+      "effects": 1,
+      "receipts": 2,
+      "real_validation_pending": [
+        "GI06",
+        "GI12",
+        "GI18",
+        "GI24",
+        "GI30",
+        "GI36",
+        "GI42"
+      ],
+      "criteria": {
+        "GI01": "SYNTHETIC_MODEL_ONLY",
+        "GI02": "SYNTHETIC_MODEL_ONLY",
+        "GI03": "SYNTHETIC_MODEL_ONLY",
+        "GI04": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI05": "SYNTHETIC_MODEL_ONLY",
+        "GI06": "REAL_VALIDATION_PENDING",
+        "GI07": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI08": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI09": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI10": "SYNTHETIC_MODEL_ONLY",
+        "GI11": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI12": "REAL_VALIDATION_PENDING",
+        "GI13": "SYNTHETIC_MODEL_ONLY",
+        "GI14": "SYNTHETIC_MODEL_ONLY",
+        "GI15": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI16": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI17": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI18": "REAL_VALIDATION_PENDING",
+        "GI19": "SYNTHETIC_MODEL_ONLY",
+        "GI20": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI21": "SYNTHETIC_MODEL_ONLY",
+        "GI22": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI23": "SYNTHETIC_MODEL_ONLY",
+        "GI24": "REAL_VALIDATION_PENDING",
+        "GI25": "SYNTHETIC_MODEL_ONLY",
+        "GI26": "SYNTHETIC_MODEL_ONLY",
+        "GI27": "SYNTHETIC_MODEL_ONLY",
+        "GI28": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI29": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI30": "REAL_VALIDATION_PENDING",
+        "GI31": "SYNTHETIC_MODEL_ONLY",
+        "GI32": "SYNTHETIC_MODEL_ONLY",
+        "GI33": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI34": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI35": "SYNTHETIC_MODEL_ONLY",
+        "GI36": "REAL_VALIDATION_PENDING",
+        "GI37": "SYNTHETIC_MODEL_ONLY",
+        "GI38": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI39": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI40": "NOT_IMPLEMENTED_THIS_CUT",
+        "GI41": "SYNTHETIC_MODEL_ONLY",
+        "GI42": "REAL_VALIDATION_PENDING"
+      }
+    }
+  },
+  "criterion_test_map": {
+    "GI01": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+      "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+      "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+      "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed"
+    ],
+    "GI02": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source"
+    ],
+    "GI03": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks"
+    ],
+    "GI05": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute"
+    ],
+    "GI10": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+      "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+      "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles"
+    ],
+    "GI13": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+      "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance"
+    ],
+    "GI14": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+      "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+      "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+      "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved"
+    ],
+    "GI19": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+      "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work"
+    ],
+    "GI21": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback"
+    ],
+    "GI23": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+      "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text"
+    ],
+    "GI25": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies"
+    ],
+    "GI26": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+      "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+      "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only"
+    ],
+    "GI27": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+      "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+      "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+      "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow"
+    ],
+    "GI31": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses"
+    ],
+    "GI32": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages"
+    ],
+    "GI35": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6"
+    ],
+    "GI37": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+      "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls"
+    ],
+    "GI41": [
+      "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "GI01",
+      "gap": "G01",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI02",
+      "gap": "G01",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI03",
+      "gap": "G01",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI04",
+      "gap": "G01",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI05",
+      "gap": "G01",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI06",
+      "gap": "G01",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI07",
+      "gap": "G02",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI08",
+      "gap": "G02",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI09",
+      "gap": "G02",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI10",
+      "gap": "G02",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI11",
+      "gap": "G02",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI12",
+      "gap": "G02",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI13",
+      "gap": "G03",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI14",
+      "gap": "G03",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI15",
+      "gap": "G03",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI16",
+      "gap": "G03",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI17",
+      "gap": "G03",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI18",
+      "gap": "G03",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI19",
+      "gap": "G04",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI20",
+      "gap": "G04",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI21",
+      "gap": "G04",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI22",
+      "gap": "G04",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI23",
+      "gap": "G04",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI24",
+      "gap": "G04",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI25",
+      "gap": "G05",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI26",
+      "gap": "G05",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI27",
+      "gap": "G05",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI28",
+      "gap": "G05",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI29",
+      "gap": "G05",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI30",
+      "gap": "G05",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI31",
+      "gap": "G06",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI32",
+      "gap": "G06",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI33",
+      "gap": "G06",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI34",
+      "gap": "G06",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI35",
+      "gap": "G06",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI36",
+      "gap": "G06",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    },
+    {
+      "id": "GI37",
+      "gap": "G07",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI38",
+      "gap": "G07",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI39",
+      "gap": "G07",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI40",
+      "gap": "G07",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI41",
+      "gap": "G07",
+      "status": "PASS_SYNTHETIC_MODEL",
+      "layer": "synthetic"
+    },
+    {
+      "id": "GI42",
+      "gap": "G07",
+      "status": "NOT_RUN_IN_I24",
+      "layer": "real_evidence"
+    }
+  ],
+  "documentary_checks": {
+    "existing_tracked_files_preserved_except_two_READMEs": 409,
+    "allowed_documentation_changes": [
+      "docs/README.md",
+      "testing/D5/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified": true,
+    "D5_prior_input_hash_entries_verified_current": 560,
+    "historical_reviews_verified_at_commits": {
+      "docs/validation/D5-I21-audit.json": {
+        "commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+        "entries_verified_at_commit": 303,
+        "expected_documentation_changes": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I22-acceptance-review.json": {
+        "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+        "entries_verified_at_commit": 307,
+        "expected_documentation_changes": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": {
+        "commit": "148c6567795d376b427340aef5b65c68fbe77fd8",
+        "entries_verified_at_commit": 17,
+        "expected_documentation_changes": [
+          "docs/README.md"
+        ]
+      },
+      "docs/validation/D5-I23-design-review.json": {
+        "commit": "5a7ee951616a06a707b86ce3de6ff0984212a16c",
+        "entries_verified_at_commit": 25,
+        "expected_documentation_changes": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      }
+    },
+    "local_Markdown_links_checked": 158,
+    "publication_text_files_checked": 417,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true
+  },
+  "limitations": [
+    "35 tests cover 18 synthetic contract criteria, not 18 complete global integration requirements.",
+    "17 other synthetic criteria and seven real-evidence criteria were not run in I24.",
+    "In-memory models prove no persistent recovery, real provider behavior, SQL concurrency or authenticated review.",
+    "Raw capture/manifest objects contain full source bytes; reports/receipts do not echo them. No universal text secret detector is claimed.",
+    "The I/O guard observes a supported in-memory workflow, not every possible hostile Python caller.",
+    "Historical SQL and D2-D4 runtime evidence is preserved, not recounted as new executions.",
+    "Publication scanning covers configured patterns only."
+  ],
+  "inputs": {
+    "docs/README.md": "59f30c0f9f3f17df268921c43e19fb2469f4d93c3e7cc8b02373d66a28620e13",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md": "5a6401941de7198094f31060277ef8dc64521deb3caccba351d6b051716bc1e7",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I23-design-review.json": "70edddac278a6ec692829685867907dd78444f7c6c35887d3b97c56d7956eaee",
+    "docs/validation/D5-I24-results.md": "3c16eeb7a66fcc1b5594986f5a944e92bf80f3140518496105065a4b94dac21e",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/README.md": "874ce8ae98a6cd523a0db164d47894663e843f8dd7574676bee256bd3ac47821",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6"
+  }
+}

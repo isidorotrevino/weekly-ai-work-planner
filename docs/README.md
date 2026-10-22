@@ -99,6 +99,11 @@ decisiones A53–A58 incorporadas, contrato para revisión y primer corte offlin
 propuesto; [comprobaciones documentales](validation/D5-I23-design-review.json).
 Sin SQL, conectores reales ni cierre de brechas globales.
 
+[I24: contratos y dobles offline](design/D5-I24-OFFLINE-INTEGRATION-LAB.md),
+con [evidencia propia](validation/D5-I24-results.md): I23 aprobado por A59;
+18 criterios modelados en memoria, 35 pruebas nuevas y regresiones Python separadas.
+Sin efectos D2 persistentes ni conectores reales; G01–G07 siguen abiertos.
+
 ## Current design / Diseño vigente
 
 **Hito local D5 sintético aceptado (A52):** [alcance vigente](design/D5-LOCAL-SYNTHETIC-approved.md)

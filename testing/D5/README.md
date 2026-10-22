@@ -344,3 +344,19 @@ a una fila seleccionada sin cambio semántico, con prueba de cabeza aplicada.
 Own V30 + V31–V39 disposable lab; no fabricated I5 comparisons or activation.
 Laboratorio desechable V30 + V31–V39 propio, separado de dev/D4; sin comparaciones
 I5 ficticias, activación, promoción ni despliegue.
+
+## I24 — offline integration contracts / contratos de integración offline
+
+[I23 aprobado e implementación I24](../../docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md)
+y [resultados propios](../../docs/validation/D5-I24-results.md). Dobles Python en
+memoria para el primer corte de 18 criterios; sin HTTP, SQL, Docker ni proveedores.
+
+```bash
+python3 -m unittest discover -s testing/D5 -p test_offline_integration.py -v
+python3 -m testing.D5.demo_offline_integration
+```
+
+The fixed synthetic demo reads a tracked fixture, writes no artifacts and loses all
+state on exit. Its receipts are simulated, not remote acknowledgments. D5 global
+remains open; 17 other synthetic criteria and seven real-evidence criteria remain
+pending. La demo no recibe rutas/URLs/credenciales del operador y no modifica D2.
