@@ -83,6 +83,11 @@ avance de versión conservando la base del origen; ausencia aplicada vigente blo
 con [evidencia propia](validation/D5-I20-results.md): V39 solo en otra base V30
 sintética, prueba de cabeza aplicada y elección revisada sin comparaciones I5 ficticias.
 
+[I21: auditoría de alcance y aceptación D5](design/D5-I21-SCOPE-AUDIT.md) y
+[matriz de revisión](design/D5-I21-ACCEPTANCE-REVIEW.md): distingue el laboratorio
+local sintético, las brechas de integración global y las extensiones opcionales;
+[comprobaciones documentales](validation/D5-I21-audit.json). Sin SQL nuevo ni cierre D5.
+
 ## Current design / Diseño vigente
 
 **D4 sintético aprobado y cerrado:** [diseño vigente](design/D4-approved.md) y

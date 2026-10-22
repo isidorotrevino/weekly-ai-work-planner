@@ -58,8 +58,10 @@ D1–D4 are **approved and closed within their recorded scope**. Their designs,
 manifests and historical evidence remain in the [documentation index](docs/README.md)
 and [validation overview](docs/validation/README.md). The
 [D4 closure manifest](docs/validation/D4-CLOSURE.json) defines the synthetic boundary.
-D5 includes [local source previews, stored comparisons and review simulations](testing/D5/README.md),
-without task activation; real integrations and governance/operations (D6) remain future work.
+The [D5 synthetic lab](testing/D5/README.md) supports source previews, reviewed BACKLOG
+imports and conflict resolution, without task activation. The [scope audit](docs/design/D5-I21-SCOPE-AUDIT.md)
+separates this local baseline from the remaining D5 integrations; D5 remains open.
+Governance and operations (D6) remain future work.
 Local development does not promote SQL proposals or authorize deployment.
 
 ## Explore and contribute
