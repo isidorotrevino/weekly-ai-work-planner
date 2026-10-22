@@ -79,6 +79,9 @@ sintética, elección origen/local conjunta y conservación de identidad y ausen
 y [matriz IL01–IL36](design/D5-I19-ISOLATED-LOCAL-EDIT-REVIEW.md): diseño para revisión,
 sin SQL nuevo; snapshot presente idéntico a la base aplicada, revisión propia y
 avance de versión conservando la base del origen; ausencia aplicada vigente bloqueada.
+[I20: laboratorio de resolución local aislada](design/D5-I20-ISOLATED-LOCAL-EDIT-LAB.md),
+con [evidencia propia](validation/D5-I20-results.md): V39 solo en otra base V30
+sintética, prueba de cabeza aplicada y elección revisada sin comparaciones I5 ficticias.
 
 ## Current design / Diseño vigente
 

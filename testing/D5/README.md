@@ -329,3 +329,18 @@ Revisión conjunta de identidad y texto origen/local ante un ID reaparecido con
 ausencia I8 aplicada. Own V30 + V31–V38 disposable lab, synthetic BACKLOG fixtures;
 separate from dev/D4. Laboratorio desechable propio V30 + V31–V38, fixtures BACKLOG
 sintéticas; separado de dev/D4, sin activación, promoción ni despliegue.
+
+## I20 — isolated local edits / Ediciones locales aisladas
+
+```bash
+python3 -m testing.D5.run_isolated_local_edit_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I20-ISOLATED-LOCAL-EDIT-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I20-results.md).
+Resolve a reviewed whole source/local choice against an unchanged selected source
+row, with confirmed head provenance. Resolver la pareja origen/local revisada frente
+a una fila seleccionada sin cambio semántico, con prueba de cabeza aplicada.
+Own V30 + V31–V39 disposable lab; no fabricated I5 comparisons or activation.
+Laboratorio desechable V30 + V31–V39 propio, separado de dev/D4; sin comparaciones
+I5 ficticias, activación, promoción ni despliegue.
