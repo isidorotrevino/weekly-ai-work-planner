@@ -75,6 +75,10 @@ mediante una revisión conjunta del manifiesto completo.
 [I18: laboratorio de resolución local de reaparición](design/D5-I18-LOCAL-REAPPEARANCE-LAB.md),
 con [evidencia propia](validation/D5-I18-results.md): V38 solo en otra base V30
 sintética, elección origen/local conjunta y conservación de identidad y ausencia.
+[I19: contrato de resolución local aislada](design/D5-I19-ISOLATED-LOCAL-EDIT-DESIGN.md)
+y [matriz IL01–IL36](design/D5-I19-ISOLATED-LOCAL-EDIT-REVIEW.md): diseño para revisión,
+sin SQL nuevo; snapshot presente idéntico a la base aplicada, revisión propia y
+avance de versión conservando la base del origen; ausencia aplicada vigente bloqueada.
 
 ## Current design / Diseño vigente
 
