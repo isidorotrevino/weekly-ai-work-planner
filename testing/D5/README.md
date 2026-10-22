@@ -315,3 +315,17 @@ the whole task row. Adopta tareas BACKLOG sintéticas existentes tras revisión
 expresa de origen y destino, conservando íntegra la tarea. No activation or
 deployment; dev/D4 and previous campaigns remain separate. Sin activación ni
 despliegue; dev/D4 y campañas anteriores permanecen separados.
+
+## I18 — local reappearance / Reaparición con divergencia local
+
+```bash
+python3 -m testing.D5.run_local_reappearance_lab
+```
+
+[Guide and explicit commands / Guía y comandos explícitos](../../docs/design/D5-I18-LOCAL-REAPPEARANCE-LAB.md) ·
+[Evidence / Evidencia](../../docs/validation/D5-I18-results.md).
+Joint identity and source/local review on a reappeared ID with confirmed I8 absence.
+Revisión conjunta de identidad y texto origen/local ante un ID reaparecido con
+ausencia I8 aplicada. Own V30 + V31–V38 disposable lab, synthetic BACKLOG fixtures;
+separate from dev/D4. Laboratorio desechable propio V30 + V31–V38, fixtures BACKLOG
+sintéticas; separado de dev/D4, sin activación, promoción ni despliegue.

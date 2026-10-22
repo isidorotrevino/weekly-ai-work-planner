@@ -72,6 +72,9 @@ correspondencia/procedencia atómicas y ninguna escritura en la tarea adoptada.
 y [matriz LR01–LR36](design/D5-I17-LOCAL-REAPPEARANCE-REVIEW.md): diseño para revisión,
 sin SQL nuevo; prueba de ausencia e identidad conservadas y resolución origen/local
 mediante una revisión conjunta del manifiesto completo.
+[I18: laboratorio de resolución local de reaparición](design/D5-I18-LOCAL-REAPPEARANCE-LAB.md),
+con [evidencia propia](validation/D5-I18-results.md): V38 solo en otra base V30
+sintética, elección origen/local conjunta y conservación de identidad y ausencia.
 
 ## Current design / Diseño vigente
 
