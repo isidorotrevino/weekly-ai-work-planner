@@ -1,0 +1,473 @@
+{
+  "schema": "d5.global-integration-design-review.v1",
+  "increment": "D5-I23",
+  "date": "2026-10-22",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "148c6567795d376b427340aef5b65c68fbe77fd8",
+  "authority": "A53 continue G01-G07; material choices A54-A58 explicitly selected; integrated contract and implementation approval pending",
+  "material_decisions": {
+    "A54": "Deterministic explicit elements only; no inferred epics/dependencies",
+    "A55": "D2 approved content authoritative; remote edits block overwrite pending review",
+    "A56": "Separate observed register/checklist profiles; missing full Gentle-AI samples/routing remain explicit",
+    "A57": "Drive Markdown/text and Google Docs text exports only; PDF/DOCX outside first profile",
+    "A58": "Remote Plane writes blocked until atomic condition capability proven; no implicit server gateway"
+  },
+  "contract_approved": false,
+  "first_offline_increment_authorized": false,
+  "D5_closed": false,
+  "local_milestone_formally_accepted": true,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "new_SQL": false,
+  "runtime_reexecuted": false,
+  "runtime_tests_run": 0,
+  "provider_services_contacted": false,
+  "private_corpus_bytes_read_for_hash_comparison": true,
+  "private_corpus_parsed_again": false,
+  "private_content_or_paths_published": false,
+  "credentials_read": false,
+  "external_checkout_code_executed": false,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "discovery_summary": {
+    "historical_samples_available": 3,
+    "same_as_I1": [
+      "narrative",
+      "checklist"
+    ],
+    "changed_since_I1": [
+      "register"
+    ],
+    "routing_tests_found_are_not_full_Gentle_AI_contract": true,
+    "Plane_declared_image_release": "v1.4.2",
+    "deployed_release_verified": false,
+    "public_documentation_consulted_date": "2026-10-22",
+    "public_primary_sources": [
+      "https://developers.google.com/workspace/drive/api/guides/manage-changes",
+      "https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/list",
+      "https://developers.google.com/workspace/drive/api/reference/rest/v3/files",
+      "https://developers.google.com/workspace/drive/api/guides/manage-downloads",
+      "https://developers.google.com/workspace/drive/api/guides/manage-revisions",
+      "https://developers.plane.so/api-reference/introduction",
+      "https://developers.plane.so/api-reference/v2/introduction",
+      "https://developers.plane.so/api-reference/issue/update-issue-detail"
+    ],
+    "documentation_proves_target_Plane_atomic_write_capability": false
+  },
+  "matrix": {
+    "total_proposed_criteria": 42,
+    "synthetic_criteria": 35,
+    "real_evidence_criteria": 7,
+    "first_offline_criteria": [
+      "GI01",
+      "GI02",
+      "GI03",
+      "GI05",
+      "GI10",
+      "GI13",
+      "GI14",
+      "GI19",
+      "GI21",
+      "GI23",
+      "GI25",
+      "GI26",
+      "GI27",
+      "GI31",
+      "GI32",
+      "GI35",
+      "GI37",
+      "GI41"
+    ],
+    "synthetic_criteria_remaining_outside_first_cut": 17,
+    "criteria": [
+      {
+        "id": "GI01",
+        "gap": "G01",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI02",
+        "gap": "G01",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI03",
+        "gap": "G01",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI04",
+        "gap": "G01",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI05",
+        "gap": "G01",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI06",
+        "gap": "G01",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI07",
+        "gap": "G02",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI08",
+        "gap": "G02",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI09",
+        "gap": "G02",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI10",
+        "gap": "G02",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI11",
+        "gap": "G02",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI12",
+        "gap": "G02",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI13",
+        "gap": "G03",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI14",
+        "gap": "G03",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI15",
+        "gap": "G03",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI16",
+        "gap": "G03",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI17",
+        "gap": "G03",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI18",
+        "gap": "G03",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI19",
+        "gap": "G04",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI20",
+        "gap": "G04",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI21",
+        "gap": "G04",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI22",
+        "gap": "G04",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI23",
+        "gap": "G04",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI24",
+        "gap": "G04",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI25",
+        "gap": "G05",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI26",
+        "gap": "G05",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI27",
+        "gap": "G05",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI28",
+        "gap": "G05",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI29",
+        "gap": "G05",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI30",
+        "gap": "G05",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI31",
+        "gap": "G06",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI32",
+        "gap": "G06",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI33",
+        "gap": "G06",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI34",
+        "gap": "G06",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI35",
+        "gap": "G06",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI36",
+        "gap": "G06",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI37",
+        "gap": "G07",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI38",
+        "gap": "G07",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI39",
+        "gap": "G07",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI40",
+        "gap": "G07",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      },
+      {
+        "id": "GI41",
+        "gap": "G07",
+        "layer": "synthetic",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": true
+      },
+      {
+        "id": "GI42",
+        "gap": "G07",
+        "layer": "real_evidence",
+        "status": "DESIGN_NOT_EXECUTED",
+        "in_first_offline_proposal": false
+      }
+    ]
+  },
+  "first_offline_proposal": {
+    "scope": "Reuse existing profiles; typed envelopes/proposals and in-memory Drive/Plane/quota doubles; no real D2 effects",
+    "persistent_D2_writes": false,
+    "SQL": false,
+    "HTTP_client": false,
+    "Docker": false,
+    "daemon": false,
+    "real_provider_CLI_calls": false,
+    "requires_explicit_contract_and_scope_approval": true
+  },
+  "documentary_checks": {
+    "existing_tracked_files_preserved_except_documentation_index": 407,
+    "allowed_documentation_change": [
+      "docs/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified": true,
+    "D5_prior_input_hash_entries_verified_current": 560,
+    "historical_reviews_verified_at_commits": {
+      "docs/validation/D5-I21-audit.json": {
+        "commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+        "verified_hash_entries": 303,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md"
+        ]
+      },
+      "docs/validation/D5-I22-acceptance-review.json": {
+        "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+        "verified_hash_entries": 307,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md"
+        ]
+      },
+      "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": {
+        "commit": "148c6567795d376b427340aef5b65c68fbe77fd8",
+        "verified_hash_entries": 17,
+        "expected_current_documentation_differences": [
+          "docs/README.md"
+        ]
+      }
+    },
+    "local_Markdown_links_checked": 127,
+    "publication_text_files_checked": 411,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true
+  },
+  "limitations": [
+    "Design review only; no executed GI criteria or global acceptance.",
+    "API documentation is not conformance evidence for the declared local Plane release.",
+    "In-memory prototypes do not prove durability, SQL concurrency or real effects.",
+    "Historical corpus inspection publishes no private snapshots, paths, routing code or credentials.",
+    "Input hashes bind documentary sources, not new runtime results.",
+    "Configured publication scanning patterns are not exhaustive."
+  ],
+  "inputs": {
+    "docs/README.md": "d2e46b7104d419c45edfdff637e45e7348be021ca83f792ae787d39211df3298",
+    "docs/design/D1-architecture-baseline.md": "c9e5674bdabbddcfe0d3d4ff81a11f2593355949d538a5b8dc6e1a9408adbc0c",
+    "docs/design/D2.9-approved.md": "1ab49071b25f06f1669f72de84d9fcd2795624b44a755ce726400d29479ada1d",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I21-ACCEPTANCE-REVIEW.md": "aee940b2d81f682bb6cbe09947173b014529c49979793ec57d3bfa240792994b",
+    "docs/design/D5-I21-SCOPE-AUDIT.md": "2be409b1632be2db494fdfcae79349347322c0ed019775b045f35357b1ebbfc3",
+    "docs/design/D5-I22-LOCAL-MILESTONE-ACCEPTANCE.md": "227f019fa6db01db98b7c033e89a6c292fa3a9ddc443c12b499bedf774b1a424",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-LOCAL-PREVIEW.md": "72958ae59d49b597c229c684891b00a9056da2311217c30356edda4e7bc89764",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I1-results.md": "15e326eb4820749a2b57e76480dac3b784155000657a1800df630e235ba336bd",
+    "docs/validation/D5-I20-results.json": "50212e742bf57cac17e54a87fb9467578232975d648794712b14d0c20b031b19",
+    "docs/validation/D5-I20-results.md": "b0d856494e2cc03a3906b297eb3534fbdd466deafe7e9ec9bda9fb4d40f568a8",
+    "docs/validation/D5-I21-audit.json": "99d7423d2eaf7ad954015defbafd2866832890f9c97a80a3085ec6da6930e205",
+    "docs/validation/D5-I22-acceptance-review.json": "79499600d61adc7c5b26294f0fbd73d7e1c26a52f2e7a5c9f1d59e14828de2f5",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "migrations-proposed/V10__provenance_and_delivery_contract_draft.sql": "a1e95ecc4b0e8a468cb6145c97b37dcfd375d83036599319e4e8923d9c88becb",
+    "migrations-proposed/V6__movement_and_epic_ownership_draft.sql": "34a784fe3a5318b4c194b6c790dcbcbee3257cff72bf4bb23c6a3d773fa60a4c",
+    "migrations/V1__core_domain.sql": "dc83508b858edcebac48d563bf6e782e782657fbf82ec086a083d3f0660fdd02",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "testing/D5/README.md": "4b0f88eabd0b7b7a370c76b97a20e26318d062a7a6caadf4b60cf62a6e1e094b"
+  }
+}

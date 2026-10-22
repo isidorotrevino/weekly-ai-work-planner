@@ -93,6 +93,12 @@ y [comprobaciones documentales](validation/D5-I22-acceptance-review.json): clasi
 I21 aceptada; aceptación formal del hito todavía pendiente. D5 global conserva
 G01–G07 abiertos; sin SQL nuevo ni cierre global.
 
+[I23: contrato integrado G01–G07](design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md) y
+[matriz de 42 criterios propuestos](design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md):
+decisiones A53–A58 incorporadas, contrato para revisión y primer corte offline
+propuesto; [comprobaciones documentales](validation/D5-I23-design-review.json).
+Sin SQL, conectores reales ni cierre de brechas globales.
+
 ## Current design / Diseño vigente
 
 **Hito local D5 sintético aceptado (A52):** [alcance vigente](design/D5-LOCAL-SYNTHETIC-approved.md)
