@@ -18,6 +18,13 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 ## D5 iniciado / D5 started
 
+[I29: propuesta de relaciones y lotes / proposed relational batch](design/D5-I29-RELATIONAL-BATCH-DESIGN.md)
+y [matriz RB01–RB34 / review matrix](design/D5-I29-RELATIONAL-BATCH-REVIEW.md):
+GI28–GI29 en memoria, relaciones explícitas del mismo proyecto y confirmación
+atómica; **diseño para revisión, sin código ni ejecución nueva**.
+[Comprobaciones documentales / documentary checks](validation/D5-I29-design-review.json).
+G01–G07 siguen abiertos; sin SQL, proveedores reales o activación.
+
 [I27: propuesta de conciliación Plane / proposed Plane reconciliation](design/D5-I27-PLANE-RECONCILIATION-DESIGN.md)
 y [matriz PC01–PC32 / review matrix](design/D5-I27-PLANE-RECONCILIATION-REVIEW.md):
 GI15–GI17 en memoria, identidad estable y resultados inciertos separados de la
