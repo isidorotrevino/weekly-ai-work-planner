@@ -88,6 +88,11 @@ sintética, prueba de cabeza aplicada y elección revisada sin comparaciones I5 
 local sintético, las brechas de integración global y las extensiones opcionales;
 [comprobaciones documentales](validation/D5-I21-audit.json). Sin SQL nuevo ni cierre D5.
 
+[I22: propuesta de aceptación del hito local sintético](design/D5-I22-LOCAL-MILESTONE-ACCEPTANCE.md)
+y [comprobaciones documentales](validation/D5-I22-acceptance-review.json): clasificación
+I21 aceptada; aceptación formal del hito todavía pendiente. D5 global conserva
+G01–G07 abiertos; sin SQL nuevo ni cierre global.
+
 ## Current design / Diseño vigente
 
 **D4 sintético aprobado y cerrado:** [diseño vigente](design/D4-approved.md) y
