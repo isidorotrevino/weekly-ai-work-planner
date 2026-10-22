@@ -1,0 +1,190 @@
+{
+  "schema": "d5.local-synthetic-milestone-acceptance.v1",
+  "version": "1.0",
+  "date": "2026-10-22",
+  "timezone": "Europe/Madrid",
+  "status": "ACCEPTED_LOCAL_SYNTHETIC_MILESTONE",
+  "milestone_id": "D5-LOCAL-SYNTHETIC-I1-I20",
+  "local_milestone_formally_accepted": true,
+  "D5_closed": false,
+  "decision": {
+    "id": "D5-A52",
+    "authority": "Explicit user reply to the I22 local milestone acceptance question",
+    "user_response": "A: aceptar exclusivamente el hito local descrito y registrar esta decisión, manteniendo D5 global abierto (recomendada).",
+    "scope": "Only the I1-I20 bounded local synthetic milestone, H01-H12, evidence and exclusions in I22; global D5 remains open with G01-G07",
+    "publication_is_acceptance": false
+  },
+  "canonical_document": "docs/design/D5-LOCAL-SYNTHETIC-approved.md",
+  "canonical_document_sha256": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+  "executable_baseline_commit": "d20f375f3eb45213d0d759f0530c056dd5ac251b",
+  "proposal_commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+  "audit_commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+  "proposal_publication_verified": {
+    "repository": "https://github.com/isidorotrevino/weekly-ai-work-planner",
+    "branch": "main",
+    "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7"
+  },
+  "accepted_criteria": [
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06",
+    "H07",
+    "H08",
+    "H09",
+    "H10",
+    "H11",
+    "H12"
+  ],
+  "accepted_environment": "Local Linux/Python CLI and own disposable synthetic PostgreSQL V30 plus proposed V31-V39, separate from dev/D4",
+  "accepted_projection": {
+    "Item": "title",
+    "Objective": "description",
+    "tasks": "synthetic BACKLOG only"
+  },
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "extensions_outside_milestone": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07"
+  ],
+  "permissions_granted_by_acceptance": {
+    "new_features": false,
+    "new_SQL": false,
+    "real_provider_access": false,
+    "real_credentials": false,
+    "operational_activation": false,
+    "migration_promotion": false,
+    "deployment": false,
+    "D6_expansion": false
+  },
+  "recorded_runtime_evidence": {
+    "source": "docs/validation/D5-I20-results.json",
+    "source_sha256": "50212e742bf57cac17e54a87fb9467578232975d648794712b14d0c20b031b19",
+    "new_execution_for_acceptance": false,
+    "groups": {
+      "D2_independent": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "target": "historical harness, not V30",
+        "tests": 157
+      },
+      "D5_V30": {
+        "I10_regression": 28,
+        "I12_regression": 30,
+        "I14_regression": 32,
+        "I16_regression": 34,
+        "I18_regression": 36,
+        "I4_regression": 21,
+        "I5_regression": 15,
+        "I6_regression": 5,
+        "I8_regression": 27,
+        "errors": 0,
+        "failures": 0,
+        "new_isolated_local_edit": 36,
+        "tests": 264
+      },
+      "local_python": {
+        "errors": 0,
+        "failures": 0,
+        "tests": 51
+      }
+    },
+    "final_counts": {
+      "attempts": 0,
+      "deliveries": 0,
+      "operations": 0,
+      "outbox": 0,
+      "plan_reservations": 0,
+      "reservations": 0,
+      "tasks": 259
+    },
+    "own_container_and_volume_removed": true,
+    "cumulative_SQL_campaigns_overlap": true
+  },
+  "documentary_verification": {
+    "runtime_reexecuted": false,
+    "private_corpus_reread": false,
+    "existing_tracked_files_preserved_except_three_READMEs": 403,
+    "current_documentation_changes": [
+      "README.es.md",
+      "README.md",
+      "docs/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified_current": true,
+    "D5_prior_input_entries_verified_current": 560,
+    "historical_review_inputs": {
+      "21": {
+        "commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+        "report": "docs/validation/D5-I21-audit.json",
+        "report_sha256": "99d7423d2eaf7ad954015defbafd2866832890f9c97a80a3085ec6da6930e205",
+        "input_hash_entries_verified_at_commit": 303,
+        "inputs_also_matching_current_tree": 300,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md"
+        ]
+      },
+      "22": {
+        "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+        "report": "docs/validation/D5-I22-acceptance-review.json",
+        "report_sha256": "79499600d61adc7c5b26294f0fbd73d7e1c26a52f2e7a5c9f1d59e14828de2f5",
+        "input_hash_entries_verified_at_commit": 307,
+        "inputs_also_matching_current_tree": 304,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md"
+        ]
+      }
+    },
+    "local_Markdown_links_checked": 157,
+    "publication_text_files_checked": 408,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true,
+    "standard_global_D5_approved_and_closure_paths_absent": true
+  },
+  "limitations": [
+    "Acceptance records a bounded local milestone, not global D5 closure.",
+    "No new runtime or exhaustive security/code review; historical results are not reexecutions.",
+    "Historical I21/I22 report hashes remain anchored to their commits while README indexes evolve.",
+    "Configured publication scanning patterns are not exhaustive.",
+    "The acceptance record commit requires its own publication authorization."
+  ],
+  "inputs": {
+    "README.es.md": "b68c1135827416267a997add0eb22aaf0df77e1a3dcefce0af05fc1f8d944bf8",
+    "README.md": "33e062999ed8f38997d36d5d0c6755b9d8f2cd5ac551583375c743b881c407e8",
+    "docs/README.md": "e7b48a1f8e08448ff804c8fbb990beb4c99627eb79928eec4770aec29f3e0204",
+    "docs/design/D1-architecture-baseline.md": "c9e5674bdabbddcfe0d3d4ff81a11f2593355949d538a5b8dc6e1a9408adbc0c",
+    "docs/design/D2.9-approved.md": "1ab49071b25f06f1669f72de84d9fcd2795624b44a755ce726400d29479ada1d",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I21-ACCEPTANCE-REVIEW.md": "aee940b2d81f682bb6cbe09947173b014529c49979793ec57d3bfa240792994b",
+    "docs/design/D5-I21-SCOPE-AUDIT.md": "2be409b1632be2db494fdfcae79349347322c0ed019775b045f35357b1ebbfc3",
+    "docs/design/D5-I22-LOCAL-MILESTONE-ACCEPTANCE.md": "227f019fa6db01db98b7c033e89a6c292fa3a9ddc443c12b499bedf774b1a424",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I20-results.json": "50212e742bf57cac17e54a87fb9467578232975d648794712b14d0c20b031b19",
+    "docs/validation/D5-I20-results.md": "b0d856494e2cc03a3906b297eb3534fbdd466deafe7e9ec9bda9fb4d40f568a8",
+    "docs/validation/D5-I21-audit.json": "99d7423d2eaf7ad954015defbafd2866832890f9c97a80a3085ec6da6930e205",
+    "docs/validation/D5-I22-acceptance-review.json": "79499600d61adc7c5b26294f0fbd73d7e1c26a52f2e7a5c9f1d59e14828de2f5"
+  }
+}

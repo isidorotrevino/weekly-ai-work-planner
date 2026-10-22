@@ -64,7 +64,8 @@ y el [resumen de validación](docs/validation/README.md). El
 [manifiesto de cierre D4](docs/validation/D4-CLOSURE.json) delimita el alcance
 sintético. El [laboratorio D5](testing/D5/README.md) permite previsualizar fuentes, importar
 tareas BACKLOG con revisión y resolver conflictos, sin activar tareas. La [auditoría de alcance](docs/design/D5-I21-SCOPE-AUDIT.md)
-separa esta base local de las integraciones D5 pendientes; D5 sigue abierto.
+separa las integraciones D5 pendientes del [hito local aceptado](docs/design/D5-LOCAL-SYNTHETIC-approved.md).
+D5 global sigue abierto.
 Gobierno y operación (D6) siguen pendientes.
 El desarrollo local no promueve propuestas SQL ni autoriza despliegues.
 

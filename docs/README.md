@@ -95,6 +95,11 @@ G01–G07 abiertos; sin SQL nuevo ni cierre global.
 
 ## Current design / Diseño vigente
 
+**Hito local D5 sintético aceptado (A52):** [alcance vigente](design/D5-LOCAL-SYNTHETIC-approved.md)
+y [registro de aceptación](validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json). Se aceptan
+I1–I20/H01–H12 como hito parcial; D5 global sigue abierto con G01–G07.
+I21/I22 conservan sus estados históricos anteriores a esta decisión.
+
 **D4 sintético aprobado y cerrado:** [diseño vigente](design/D4-approved.md) y
 [manifiesto](validation/D4-CLOSURE.json). Los cortes siguientes y sus informes
 conservan el estado histórico al emitirse. Implementación: [workers y contratos](design/D4-workers-draft.md),
