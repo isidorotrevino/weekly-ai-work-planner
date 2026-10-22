@@ -18,6 +18,13 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 ## D5 iniciado / D5 started
 
+[I27: propuesta de conciliación Plane / proposed Plane reconciliation](design/D5-I27-PLANE-RECONCILIATION-DESIGN.md)
+y [matriz PC01–PC32 / review matrix](design/D5-I27-PLANE-RECONCILIATION-REVIEW.md):
+GI15–GI17 en memoria, identidad estable y resultados inciertos separados de la
+vigencia de aprobación; **diseño para revisión, sin implementación ni pruebas nuevas**.
+[Comprobaciones documentales / documentary checks](validation/D5-I27-design-review.json).
+G01–G07 siguen abiertos; sin Plane real, SQL, activación, promoción o despliegue.
+
 [Ingesta local y previsualización I1](design/D5-LOCAL-PREVIEW.md): primer corte
 autorizado, sin activar tareas ni conectar proveedores. [Uso](../testing/D5/README.md)
 y [evidencia I1](validation/D5-I1-results.md).

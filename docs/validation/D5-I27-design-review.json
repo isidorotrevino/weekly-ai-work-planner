@@ -1,0 +1,328 @@
+{
+  "schema": "d5.plane-reconciliation-design-review.v1",
+  "increment": "D5-I27",
+  "date": "2026-10-22",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "9944ee593342009a9841074ca1721aa5d0b535fa",
+  "authority": "D5-A64 prioritize synthetic Plane GI15-GI17 design; A65 stable creation key per explicit binding identity and atomic fixture uniqueness; A66 historical reconciliation allowed after local change/revocation without new writes",
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "target_synthetic_criteria": [
+    "GI15",
+    "GI16",
+    "GI17"
+  ],
+  "proposed_cases": [
+    {
+      "id": "PC01",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC02",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC03",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC04",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC05",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC06",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC07",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC08",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC09",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC10",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC11",
+      "criterion": "GI15",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC12",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC13",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC14",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC15",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC16",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC17",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC18",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC19",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC20",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC21",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC22",
+      "criterion": "GI16",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC23",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC24",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC25",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC26",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC27",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC28",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC29",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC30",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC31",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "PC32",
+      "criterion": "GI17",
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "runtime_tests_run": 0,
+  "prior_runtime_campaigns_reexecuted": false,
+  "new_source_code": false,
+  "new_SQL": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "private_corpus_reread": false,
+  "HTTP_client": false,
+  "Docker_invoked": false,
+  "persistent_D2_writes": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "proposed_storage": "VOLATILE_MEMORY",
+  "process_restart_recovery_claimed": false,
+  "proposed_limits": {
+    "write_attempts_per_package": 3,
+    "reconciliation_queries_per_command": 6,
+    "bindings_per_run": 64,
+    "commands_per_run": 128,
+    "manifest_bytes": 65536,
+    "text_characters_per_field": 8192
+  },
+  "documentary_checks": {
+    "existing_tracked_files_preserved_except_documentation_index": 425,
+    "allowed_documentation_changes": [
+      "docs/README.md"
+    ],
+    "D3_D4_closure_hash_entries_verified_current": 245,
+    "D4_canonical_hash_verified": true,
+    "D5_prior_input_hash_entries_verified_current": 560,
+    "historical_reports_verified_at_commits": {
+      "docs/validation/D5-I21-audit.json": {
+        "commit": "2b18d6c40ee19217a3a95136a2cf0a7203b509a4",
+        "input_hash_entries_verified": 303,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I22-acceptance-review.json": {
+        "commit": "b556193d52484cf88cbd1ca2bb9bf96f9d94afd7",
+        "input_hash_entries_verified": 307,
+        "expected_current_documentation_differences": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": {
+        "commit": "148c6567795d376b427340aef5b65c68fbe77fd8",
+        "input_hash_entries_verified": 17,
+        "expected_current_documentation_differences": [
+          "docs/README.md"
+        ]
+      },
+      "docs/validation/D5-I23-design-review.json": {
+        "commit": "5a7ee951616a06a707b86ce3de6ff0984212a16c",
+        "input_hash_entries_verified": 25,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I24-results.json": {
+        "commit": "17e4318b27b76ebaab991bdac57601aafb8933ab",
+        "input_hash_entries_verified": 40,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I25-design-review.json": {
+        "commit": "e66a42c00d8953b77dd9a91d307da94ff4f9172a",
+        "input_hash_entries_verified": 24,
+        "expected_current_documentation_differences": [
+          "docs/README.md",
+          "testing/D5/README.md"
+        ]
+      },
+      "docs/validation/D5-I26-results.json": {
+        "commit": "9944ee593342009a9841074ca1721aa5d0b535fa",
+        "input_hash_entries_verified": 48,
+        "expected_current_documentation_differences": [
+          "docs/README.md"
+        ]
+      }
+    },
+    "proposed_case_count": 32,
+    "proposed_synthetic_criterion_count": 3,
+    "local_Markdown_links_checked": 137,
+    "publication_text_files_checked": 429,
+    "publication_configured_patterns_found": false,
+    "git_diff_check_passed": true
+  },
+  "limitations": [
+    "Design only: no PC cases executed, no implementation or provider conformance claimed.",
+    "Volatile model would test lost responses and controlled concurrency, not durable crash recovery.",
+    "Capabilities and conclusive no-effect responses are fixture contracts, not proven Plane semantics.",
+    "GI18 real and GI38/GI39/GI40 general integrated criteria remain pending; no global gap closes.",
+    "Publication scan covers configured patterns only; historical reports are preserved and checked at their commits."
+  ],
+  "inputs": {
+    "docs/README.md": "71ce6a00f6b44a7cc8b06ba1618a759bfc5c3098b9427b51fc8db19c45dab4a0",
+    "docs/design/D1-architecture-baseline.md": "c9e5674bdabbddcfe0d3d4ff81a11f2593355949d538a5b8dc6e1a9408adbc0c",
+    "docs/design/D2.9-approved.md": "1ab49071b25f06f1669f72de84d9fcd2795624b44a755ce726400d29479ada1d",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md": "5a6401941de7198094f31060277ef8dc64521deb3caccba351d6b051716bc1e7",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-DESIGN.md": "935c8356da6d9067f2d2653033220dc49d8bff34db191cdc5633baf3fbf3d591",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-REVIEW.md": "6f31ce23acf6e276ca58de07a8e1932881170802ca3e37b97c2ec5b3a28a4d42",
+    "docs/design/D5-I26-DRIVE-INCREMENTAL-LAB.md": "9819d609b37c0888b0c13e5b448e5f5f9176aa855469c2151b32246be25751db",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-DESIGN.md": "f132e65ce68fc84d1f71475a04cdaf10a8089e3706a85651a3bd785ae0d8338c",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-REVIEW.md": "405cacc58ade6de13288b3b605d883cca67ec968497f587f087c5de8ccc2d8ee",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I23-design-review.json": "70edddac278a6ec692829685867907dd78444f7c6c35887d3b97c56d7956eaee",
+    "docs/validation/D5-I24-results.json": "d1a3d33f77862ed2e4be656ebea5a4bc9565173d40f430fb305c33574585f848",
+    "docs/validation/D5-I24-results.md": "3c16eeb7a66fcc1b5594986f5a944e92bf80f3140518496105065a4b94dac21e",
+    "docs/validation/D5-I26-results.json": "13427b1f097d730faab3ec975cbd751859a7318031027cae9ef5b67fe6e9024c",
+    "docs/validation/D5-I26-results.md": "32647c14b2e1a515bf5986d822c93b13a920ed189a507cf7e5dac571ccfa0c67",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "testing/D5/README.md": "c52e89c6b2e8dd6bedb5a707ca4881a8d3f9fd9eeb548e3d467daced09203294",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c"
+  }
+}
