@@ -1,0 +1,1002 @@
+{
+  "schema": "d5.integrated-evidence-design-review.v1",
+  "increment": "D5-I33",
+  "date": "2026-10-23",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "79c696a66f85923173650f271995c69569b50b0d",
+  "authority": {
+    "user_responses": [
+      "P0 + A",
+      "F"
+    ],
+    "scope": "Prepare integrated contract/matrix, then complete F durable synthetic design and restart matrix; no implementation or publication approval"
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "publication_held_commits": [
+    "7b64d87ef45b4973a5ea80dc676f1bd2eca220f7",
+    "79c696a66f85923173650f271995c69569b50b0d"
+  ],
+  "remote_main_observed": "8e90a87cce7edbefc6c854a73ff1f60a20ae8485",
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "target_synthetic_criteria": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "proposed_cases": [
+    {
+      "id": "UI01",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI02",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI03",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI04",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI05",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI06",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI07",
+      "criterion": "GI33",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI08",
+      "criterion": "GI34",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI09",
+      "criterion": "GI34",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI10",
+      "criterion": "GI34",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI11",
+      "criterion": "GI34",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI12",
+      "criterion": "GI34",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI13",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI14",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI15",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI16",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI17",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI18",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI19",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI20",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI21",
+      "criterion": "GI38",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI22",
+      "criterion": "GI38",
+      "scope": "F",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI23",
+      "criterion": "GI38",
+      "scope": "F",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI24",
+      "criterion": "GI38",
+      "scope": "F",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI25",
+      "criterion": "GI38",
+      "scope": "R",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI26",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI27",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI28",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI29",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI30",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI31",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI32",
+      "criterion": "GI39",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI33",
+      "criterion": "GI39",
+      "scope": "F",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI34",
+      "criterion": "GI39",
+      "scope": "R",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI35",
+      "criterion": "GI40",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI36",
+      "criterion": "GI40",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI37",
+      "criterion": "GI40",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI38",
+      "criterion": "GI40",
+      "scope": "F",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI39",
+      "criterion": "GI40",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "UI40",
+      "criterion": "GI40",
+      "scope": "M",
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "case_counts_by_criterion": {
+    "GI33": 7,
+    "GI34": 5,
+    "GI38": 13,
+    "GI39": 9,
+    "GI40": 6
+  },
+  "case_counts_by_scope": {
+    "M": 33,
+    "F": 5,
+    "R": 2
+  },
+  "storage_decision": "F_SELECTED_FOR_DESIGN_ONLY",
+  "proposed_first_path": "T_TASK_REGISTER",
+  "relational_path": "R_SEPARATE_NOT_IN_FIRST_IMPLEMENTATION",
+  "durable_contract_complete": true,
+  "process_restart_recovery_claimed": false,
+  "runtime_tests_run": 0,
+  "prior_runtime_campaigns_reexecuted": false,
+  "new_source_code": false,
+  "new_SQL": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "private_corpus_reread": false,
+  "Docker_invoked": false,
+  "persistent_D2_writes": 0,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "current_bounded_synthetic_criteria_with_evidence_unchanged": 30,
+  "synthetic_criteria_still_pending": 5,
+  "real_evidence_criteria_still_pending": 7,
+  "documentary_checks": {
+    "tracked_baseline_files_preserved_except_index": 456,
+    "allowed_existing_file_changes": [
+      "docs/README.md"
+    ],
+    "closure_executable_hash_entries_verified_current": {
+      "docs/validation/D3-CLOSURE.json": 25,
+      "docs/validation/D4-CLOSURE.json": 161
+    },
+    "local_acceptance_canonical_hash_verified": true,
+    "I32_historical_commit": "7b64d87ef45b4973a5ea80dc676f1bd2eca220f7",
+    "I32_historical_input_hashes_verified": 84,
+    "current_differences_from_I32_inputs": [
+      "docs/README.md"
+    ],
+    "local_Markdown_links_checked": 169,
+    "git_diff_check_passed": true,
+    "publication_scan_output": "Publication check passed: 462 text files reviewed; no configured patterns found.\nReview the staged diff before publishing; this check is not exhaustive.",
+    "durable_matrix_case_count": 48,
+    "runtime_tests_run_for_this_design": 0
+  },
+  "limitations": [
+    "Documentary checks only; 40 UI design rows and 48 DF design rows are not executed tests and are not added as test counts.",
+    "F is a new durable fixture state machine; no private restoration of I24/I28/I32 objects, and no existing durable implementation is claimed.",
+    "Remote settle_or_close is an explicit new synthetic capability, not actual Plane capability or conformance.",
+    "Only TASK Markdown path T is proposed; relational R and Docs export remain outside. Global GI38/GI39 and all gaps remain pending.",
+    "No integrated runtime/regression reexecution, process recovery proof, real credentials/providers, activation, promotion, deployment or D6.",
+    "Configured publication patterns and link/hash checks are not exhaustive security or correctness reviews."
+  ],
+  "inputs": {
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/README.md": "675d9f271d5c2044dc0028a7af2e8eb7713befcc7eaf507be5244ca6c1707429",
+    "docs/design/D3-DECISIONS.md": "e512db3668109ac4afa9578f31fe7ae582234b0cc763068e6f34c70c377b1232",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I24-OFFLINE-INTEGRATION-LAB.md": "5a6401941de7198094f31060277ef8dc64521deb3caccba351d6b051716bc1e7",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-DESIGN.md": "935c8356da6d9067f2d2653033220dc49d8bff34db191cdc5633baf3fbf3d591",
+    "docs/design/D5-I25-DRIVE-INCREMENTAL-REVIEW.md": "6f31ce23acf6e276ca58de07a8e1932881170802ca3e37b97c2ec5b3a28a4d42",
+    "docs/design/D5-I26-DRIVE-INCREMENTAL-LAB.md": "9819d609b37c0888b0c13e5b448e5f5f9176aa855469c2151b32246be25751db",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-DESIGN.md": "f132e65ce68fc84d1f71475a04cdaf10a8089e3706a85651a3bd785ae0d8338c",
+    "docs/design/D5-I27-PLANE-RECONCILIATION-REVIEW.md": "405cacc58ade6de13288b3b605d883cca67ec968497f587f087c5de8ccc2d8ee",
+    "docs/design/D5-I28-PLANE-RECONCILIATION-LAB.md": "a2c4582fbd57d2490fc7af15b2786cb783901984b053d9b3b16d068e4a545968",
+    "docs/design/D5-I29-RELATIONAL-BATCH-DESIGN.md": "8c7a93211592edd7a1dea495e539e33683c98df13b4551532ab34d2c22bd80a4",
+    "docs/design/D5-I29-RELATIONAL-BATCH-REVIEW.md": "bb080e750385eca2aff952d723fe303d7e18859ef0c1044df0e29298826dd492",
+    "docs/design/D5-I30-RELATIONAL-BATCH-LAB.md": "f900891f496d35d135f7526d2397e177ec9ec7b4bbc37c14875880e4c649069a",
+    "docs/design/D5-I31-PROFILES-QUOTAS-DESIGN.md": "e3b0a913b1a2e8010b7fc390f09a4eb8a7577d29530f73dab990b324a2f8d7a7",
+    "docs/design/D5-I31-PROFILES-QUOTAS-REVIEW.md": "ffc303024153362863547bb5b0d17f313a4b16fbe39a216fbeff03c31c0789d4",
+    "docs/design/D5-I32-PROFILES-QUOTAS-LAB.md": "8dbdf4574686f69b5c61c658e6d88e6ce1b74bdc33ddff0104996ffc2cf1bfa6",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-DESIGN.md": "ecc203dfe23f0090de02b231510affa4a4da9e5a351761d099a4e4c3171f58d5",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-DESIGN.md": "b966520a125024b25ef3ee271f559fbbc2e24c3e040c5826474ca8467cd2159b",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I23-design-review.json": "70edddac278a6ec692829685867907dd78444f7c6c35887d3b97c56d7956eaee",
+    "docs/validation/D5-I24-results.md": "3c16eeb7a66fcc1b5594986f5a944e92bf80f3140518496105065a4b94dac21e",
+    "docs/validation/D5-I25-design-review.json": "9cf620dbfa8b1cb6aeb971b208d7fdb00c74260ee04ba2ebd547bf1c3015bbc0",
+    "docs/validation/D5-I26-results.json": "13427b1f097d730faab3ec975cbd751859a7318031027cae9ef5b67fe6e9024c",
+    "docs/validation/D5-I26-results.md": "32647c14b2e1a515bf5986d822c93b13a920ed189a507cf7e5dac571ccfa0c67",
+    "docs/validation/D5-I27-design-review.json": "a314abcd9adab4dfd6a9d0d14150f3b3ebd5d0c72d23e1a285c9636b9a89fd01",
+    "docs/validation/D5-I28-results.json": "7126ae202d54b31b6fca157df2662cc0636db8e856f66c98a61b47818cc210fb",
+    "docs/validation/D5-I28-results.md": "48c14fd23919ff396f09c0fefc1925b9241b8592910e740966c646b7791a0b1e",
+    "docs/validation/D5-I29-design-review.json": "9ad34ce454b315d48d26feee2ebe7922b6312a6ec5005a30f5c024518047de44",
+    "docs/validation/D5-I30-results.json": "41288c11fde7fca8cff7fd7668a236d534ceaa0434fcc92bd6c72f0e3346e79d",
+    "docs/validation/D5-I30-results.md": "945bdcda52d70b7eb978b4165b1a3cd2cfc7ed158d421f95547edc8e55e86811",
+    "docs/validation/D5-I31-design-review.json": "495918f25433297f27936b8416d1f68a6669e8353225079ab45598bd98e44359",
+    "docs/validation/D5-I32-results.json": "c978bd0a370a918e2999e07a4520a5a7e89513b61b1695112e96f71caac15eef",
+    "docs/validation/D5-I32-results.md": "ea8de5268f0452d1a76a1144158e87c709bf7ae4d26a80b59363004b77dc11cf",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "migrations-proposed/V10__provenance_and_delivery_contract_draft.sql": "a1e95ecc4b0e8a468cb6145c97b37dcfd375d83036599319e4e8923d9c88becb",
+    "migrations-proposed/V6__movement_and_epic_ownership_draft.sql": "34a784fe3a5318b4c194b6c790dcbcbee3257cff72bf4bb23c6a3d773fa60a4c",
+    "migrations-proposed/V9__execution_guards_contract_draft.sql": "8d80f14535a2c87dd3fd6cbe87698709ff3a45bba532c1f24c744769eaacfa82",
+    "migrations/V1__core_domain.sql": "dc83508b858edcebac48d563bf6e782e782657fbf82ec086a083d3f0660fdd02",
+    "scripts/check-publication.py": "b0051091b8a5c26bbfc501d6d84cbe2c1f3b1219a358dec88f15a4a9cba5a609",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/README.md": "4abf9da639fb799cac217ee3edc16e001bcf5e120bc13bce8979ebe76910c9ab",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6"
+  },
+  "durable_contract_complete_meaning": "Specification prepared for review in the bounded T fixture scope; not approved, implemented or validated. Does not claim complete global GI38/GI39 coverage.",
+  "durable_design_documents": [
+    "docs/design/D5-I33-DURABLE-INTEGRATION-DESIGN.md",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md"
+  ],
+  "durable_proposed_cases": [
+    {
+      "id": "DF01",
+      "criteria": [
+        "GI33"
+      ],
+      "related_UI_design": "UI01–UI07",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Inventario y cambio de input",
+      "required_oracle": "Código/config/esquema/capabilities/parser/árbol real ligados a campaña; input cambiado marca STALE_INPUTS; histórico intacto"
+    },
+    {
+      "id": "DF02",
+      "criteria": [
+        "GI34"
+      ],
+      "related_UI_design": "UI08–UI12",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Preservación y contabilidad",
+      "required_oracle": "Cierres/aceptación/targets/hashes intactos; nuevos, regresiones y hashes históricos separados; UI+DF no duplican tests"
+    },
+    {
+      "id": "DF03",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI13",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "A confirmado, C aún sin importación; reiniciar C",
+      "required_oracle": "Mismo pin/bytes/ámbito/grado, sin aceptación automática; A no se modifica"
+    },
+    {
+      "id": "DF04",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI14",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Importar commit no alcanzable, hash/evento/ámbito distinto",
+      "required_oracle": "Bloqueo antes de fuente/efecto; no elegir otra captura por fecha"
+    },
+    {
+      "id": "DF05",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI14",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Perfil desconocido/ambigüedad/checklist o Docs",
+      "required_oracle": "Preview/bloqueo, cero efecto; no interpretar envelope relacional como registro"
+    },
+    {
+      "id": "DF06",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI15",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "SOURCE/EVALUATION/EFFECT/PROJECTION",
+      "required_oracle": "Revisiones durable nuevas independientes; falta/revocación de una no se reemplaza con ACCEPT de otra"
+    },
+    {
+      "id": "DF07",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI22–UI24",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Creación interrumpida antes de HEAD",
+      "required_oracle": "INITIALIZATION_INCOMPLETE al abrir; no génesis automática ni adopción por ruta"
+    },
+    {
+      "id": "DF08",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill antes de escribir objeto F1/F2",
+      "required_oracle": "HEAD previo íntegro; ningún comando/manifest/revisión parcial"
+    },
+    {
+      "id": "DF09",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill tras objeto durable antes de HEAD",
+      "required_oracle": "Huérfano ignorado; reapertura no lo promueve ni acepta fuente"
+    },
+    {
+      "id": "DF10",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill con HEAD temporal previo a replace",
+      "required_oracle": "HEAD anterior; temporal no es autoridad ni recibo"
+    },
+    {
+      "id": "DF11",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C replace completado, fsync directorio falla",
+      "required_oracle": "COMMIT_UNKNOWN; no llamadas P hasta recuperación validada/fsync; fallo persistente no confirma"
+    },
+    {
+      "id": "DF12",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI21–UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill tras fsync HEAD antes de respuesta",
+      "required_oracle": "Proceso nuevo recupera mismo recibo histórico; otro request bajo command_id bloquea"
+    },
+    {
+      "id": "DF13",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI16/UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill antes/después de commit F3",
+      "required_oracle": "Entidad+mapping+base+procedencia+recibo todos o ninguno; replay no reaplica"
+    },
+    {
+      "id": "DF14",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI17/UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill entre F3 y F4",
+      "required_oracle": "Efecto local único y fase pendiente, cero efecto P hasta revisión PROJECTION"
+    },
+    {
+      "id": "DF15",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI18/UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C intento F5 con objeto huérfano/HEAD previo",
+      "required_oracle": "No emitir ticket no confirmado; P vacío; recibo local no prueba efecto remoto"
+    },
+    {
+      "id": "DF16",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI18/UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C kill tras F5 confirmado antes de llamada P",
+      "required_oracle": "Reinicio lista UNKNOWN; no autoenvío; lookup vacío mantiene UNKNOWN"
+    },
+    {
+      "id": "DF17",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI19/UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "P kill antes de su commit de efecto F6",
+      "required_oracle": "C UNKNOWN; P reabre íntegro sin efecto; cierre explícito puede concluir NO_EFFECT"
+    },
+    {
+      "id": "DF18",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI19/UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "P objeto durable, sin replace HEAD",
+      "required_oracle": "Huérfano P no prueba efecto; settle_or_close tras reabrir confirma cierre desde cabeza válida"
+    },
+    {
+      "id": "DF19",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI19/UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "P replace con fsync incierto",
+      "required_oracle": "No prueba concluyente hasta reabrir/fsync; C UNKNOWN; no retry por excepción"
+    },
+    {
+      "id": "DF20",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI19/UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "P efecto+ticket fsync, respuesta perdida y C muerto",
+      "required_oracle": "Proceso C nuevo concilia prueba exacta de P superviviente; un efecto, sin reenvío"
+    },
+    {
+      "id": "DF21",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI19/UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C recibe prueba, kill antes de commit F7",
+      "required_oracle": "P conserva prueba; C UNKNOWN; otra consulta explícita recupera mismo efecto"
+    },
+    {
+      "id": "DF22",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI21–UI23",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "C F7 fsync, respuesta al operador perdida",
+      "required_oracle": "Replay histórico conserva recibo; cambio posterior local/remoto no restaura payload viejo"
+    },
+    {
+      "id": "DF23",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI20/UI24",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Ticket ausente / lookup vacío / eventual vacío",
+      "required_oracle": "UNKNOWN estable; ninguna espera ni lectura cero acredita no efecto"
+    },
+    {
+      "id": "DF24",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI22",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "settle_or_close ticket ausente y llegada tardía",
+      "required_oracle": "Tombstone durable CLOSED_NO_EFFECT; execute tardío rechaza sin efecto, incluso tras reiniciar P"
+    },
+    {
+      "id": "DF25",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI32/UI33",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "execute y settle_or_close desde dos procesos",
+      "required_oracle": "Bajo lock P gana efecto o cierre, nunca ambos; prueba terminal estable y un solo destino"
+    },
+    {
+      "id": "DF26",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI20",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Prueba ticket/hash/key/store_id equivocada o múltiples identidades",
+      "required_oracle": "CONFLICT persistente; no adoptar primer/último resultado ni borrar conflicto con otro paquete"
+    },
+    {
+      "id": "DF27",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI20/UI21",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Rechazo concluyente/429 conocido, retry explícito",
+      "required_oracle": "Nuevo ticket, mismo paquete/clave/payload, tres intentos máximos; tick mínimo válido y guardas actuales"
+    },
+    {
+      "id": "DF28",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI20",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Timeout/429 ambiguo o intento previo aún UNKNOWN",
+      "required_oracle": "Ningún retry ni nuevo envío del binding, aun con command_id/manifest nuevo"
+    },
+    {
+      "id": "DF29",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI24",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "HEAD inválido/objeto alcanzable ausente/cadena rota",
+      "required_oracle": "CORRUPT/RECOVERY_REQUIRED; no fallback a padre ni génesis; evidencia conservada"
+    },
+    {
+      "id": "DF30",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI24",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Marca/role/store_id/schema extra/JSON duplicado/symlink",
+      "required_oracle": "Apertura bloqueada; no migración automática ni lectura de rutas externas"
+    },
+    {
+      "id": "DF31",
+      "criteria": [
+        "GI38"
+      ],
+      "related_UI_design": "UI24",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Reiniciar C con tick persistido, luego avanzar explícitamente",
+      "required_oracle": "Tick no retrocede; caducidad durante parada solo se representa por avance; bloquea evaluación/efecto/envío al cruzar límite"
+    },
+    {
+      "id": "DF32",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI26/UI27",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Selección de origen/perfil/política/revisión A→B→A",
+      "required_oracle": "Generaciones/revisiones exactas impiden revivir manifest; mapping histórico intacto"
+    },
+    {
+      "id": "DF33",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI27/UI28",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Cuenta/observación/revocación/horizonte",
+      "required_oracle": "Todas restricciones vigentes de cuenta única; no sumas ni conversiones; nuevo hecho o reloj invalida sin consumo/reserva"
+    },
+    {
+      "id": "DF34",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI29",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Edición de TASK/campo ajeno tras preparar F4",
+      "required_oracle": "C dueño detecta snapshot obsoleto antes F5; ningún envío bajo copia vieja"
+    },
+    {
+      "id": "DF35",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI30",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Revocar antes F5 vs después de su emisión durable",
+      "required_oracle": "Antes bloquea; después permite hecho en vuelo y registra STALE, sin fingir rollback ni nueva autorización de recuperación"
+    },
+    {
+      "id": "DF36",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI31",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Editar P entre preparación y CAS, incluido ABA",
+      "required_oracle": "UPDATE rechaza base/version/hash obsoletos y conserva campos ajenos; nuevo paquete/revisión exigidos"
+    },
+    {
+      "id": "DF37",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI31/UI33",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "CREATE repetido/tickets concurrentes misma creation_key",
+      "required_oracle": "Índice único durable, sin adopción; mismo ticket devuelve prueba, hash distinto bloquea; reinicio no duplica destino"
+    },
+    {
+      "id": "DF38",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI32/UI33",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Dos C con mismo expected_head, incluso revisión vs efecto",
+      "required_oracle": "Una transición confirma; otra CONFLICT_HEAD sin rebase; ninguna revisión/recibo perdido"
+    },
+    {
+      "id": "DF39",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI32/UI33",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Respuesta F7 vs consulta/concurrencia de revisión",
+      "required_oracle": "Ledger CAS impide sobrescritura; prueba perdida por CAS exige consulta explícita; preserva STALE/conflicto"
+    },
+    {
+      "id": "DF40",
+      "criteria": [
+        "GI39"
+      ],
+      "related_UI_design": "UI33",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Kill del dueño de flock, otro escritor preparado",
+      "required_oracle": "Lock se libera por muerte; segundo valida HEAD nuevo; timeout no concede propiedad ni permite saltar CAS"
+    },
+    {
+      "id": "DF41",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI35/UI36",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Auditoría de recorrido completo y negativos",
+      "required_oracle": "Cero HTTP/SQL/SDK/CLI reales, operaciones/intentos operativos, consumo/reservas/activación; tickets P contados solo como fixture"
+    },
+    {
+      "id": "DF42",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI37/UI38",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Kill/reinicio C y P, cierre del harness",
+      "required_oracle": "Todos hijos/hilos propios terminados, exitcodes identificados; tres raíces propias eliminadas, sentinel hermano intacto"
+    },
+    {
+      "id": "DF43",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI38",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Marca incoherente/symlink al limpiar",
+      "required_oracle": "No borrado por heurística; residuo reportado; sin tocar dev/D4/evidencia ajena"
+    },
+    {
+      "id": "DF44",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI39",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Límites de conteo/bytes/historia/disco lógico",
+      "required_oracle": "Siguiente entrada bloquea sin truncar ni efecto parcial; tamaños completos y presupuesto reducido se informan separados"
+    },
+    {
+      "id": "DF45",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI39",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Capacidad restante con intentos/consultas pendientes",
+      "required_oracle": "Headroom por todos los resultados pendientes protegido frente a otro escritor; no emitir sin sitio para resultado; error físico → UNKNOWN"
+    },
+    {
+      "id": "DF46",
+      "criteria": [
+        "GI33",
+        "GI38"
+      ],
+      "related_UI_design": "UI04/UI15",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Comparación controlada con modelos I24/I28/I32",
+      "required_oracle": "Misma identidad/proyección/guardas/revisiones/cuota/replay en casos declarados; divergencias durables/cierre ticket explícitas, sin afirmar paridad completa"
+    },
+    {
+      "id": "DF47",
+      "criteria": [
+        "GI40"
+      ],
+      "related_UI_design": "UI36/UI40",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Errores/recibos/reporte y reapertura",
+      "required_oracle": "Sin texto fuente, cuerpos privados ni paths en salida; historical separado de CURRENT/STALE; reopen no envía/consulta/cierra solo"
+    },
+    {
+      "id": "DF48",
+      "criteria": [
+        "GI34",
+        "GI40"
+      ],
+      "related_UI_design": "UI11/UI40",
+      "status": "DESIGN_NOT_EXECUTED",
+      "process_or_input": "Informe de campaña y exclusiones",
+      "required_oracle": "Mapa UI/DF→tests reales, regresiones propias sin sumas históricas; R/Docs y siete R reales pendientes; G01–G07 abiertos"
+    }
+  ],
+  "durable_proposed_case_count": 48,
+  "base_UI_obligations_applied_to_F": [
+    "UI01",
+    "UI02",
+    "UI03",
+    "UI04",
+    "UI05",
+    "UI06",
+    "UI07",
+    "UI08",
+    "UI09",
+    "UI10",
+    "UI11",
+    "UI12",
+    "UI13",
+    "UI14",
+    "UI15",
+    "UI16",
+    "UI17",
+    "UI18",
+    "UI19",
+    "UI20",
+    "UI21",
+    "UI26",
+    "UI27",
+    "UI28",
+    "UI29",
+    "UI30",
+    "UI31",
+    "UI32",
+    "UI35",
+    "UI36",
+    "UI37",
+    "UI39",
+    "UI40"
+  ],
+  "UI_durable_cases_expanded": [
+    "UI22",
+    "UI23",
+    "UI24",
+    "UI33",
+    "UI38"
+  ],
+  "UI_relational_cases_not_in_scope": [
+    "UI25",
+    "UI34"
+  ],
+  "new_remote_fixture_capability_proposed": "Durable atomic settle_or_close ticket operation; not an I28 or real Plane capability claim",
+  "durable_roles": [
+    "CAPTURE_I26_UNCHANGED",
+    "CLIENT_NEW_FIXTURE",
+    "REMOTE_NEW_INDEPENDENT_FIXTURE"
+  ],
+  "legacy_volatile_state_restoration_proposed": false,
+  "automatic_recovery_send_query_close": false,
+  "source_profile": "task-register.v1",
+  "durable_limits": {
+    "scenarios_per_campaign": 8,
+    "tasks_per_scenario": 16,
+    "bindings": 16,
+    "client_commands": 128,
+    "revisions": 128,
+    "manifests": 128,
+    "attempts_per_manifest": 3,
+    "queries_per_send": 6,
+    "remote_tickets": 384,
+    "source_bytes": 2097152,
+    "text_characters": 8192,
+    "manifest_bytes": 1048576,
+    "commit_bytes": 33554432,
+    "commits_per_store": 256,
+    "store_file_bytes": 268435456,
+    "proof_bytes": 65536
+  }
+}

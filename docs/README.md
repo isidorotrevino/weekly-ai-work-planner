@@ -23,6 +23,16 @@ preservada y decisiones para la próxima sesión.
 
 ## D5 iniciado / D5 started
 
+[I33: propuesta de unión y evidencia integrada / proposed integration boundaries](design/D5-I33-INTEGRATED-EVIDENCE-DESIGN.md)
+y [matriz UI01–UI40 / review matrix](design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md):
+GI33/GI34/GI38/GI39/GI40, inventario, vigencia entre fronteras y decisiones
+explícitas sobre almacenamiento/reinicio; **solo diseño para revisión, sin implementación**.
+[Comprobaciones documentales](validation/D5-I33-design-review.json).
+F seleccionado únicamente para completar el [contrato durable](design/D5-I33-DURABLE-INTEGRATION-DESIGN.md)
+y [matriz DF01–DF48 de reinicio](design/D5-I33-DURABLE-INTEGRATION-REVIEW.md),
+preparados para revisión, sin código o ejecución. P0 conserva I32 y handoff sin publicar. Cinco S integrados y G01–G07 pendientes;
+no se deduce recuperación integrada de PASS aislados ni se amplía el hito I1–I20.
+
 [I31: propuesta de perfiles y cuotas / proposed profiles and quotas](design/D5-I31-PROFILES-QUOTAS-DESIGN.md)
 y [matriz PQ01–PQ34 / review matrix](design/D5-I31-PROFILES-QUOTAS-REVIEW.md):
 GI04/GI20/GI22 en memoria, versiones y observaciones ligadas a revisión propia;
