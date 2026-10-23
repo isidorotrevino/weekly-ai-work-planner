@@ -1,0 +1,62 @@
+{
+  "schema": "d5.i38-evidence-audit-results.v1",
+  "increment": "D5-I38",
+  "date": "2026-10-23",
+  "timezone": "Europe/Madrid",
+  "status": "PASS",
+  "base_commit": "4eb9de6119bd6fe709981692282153c358040531",
+  "authority": {
+    "user_response": "A",
+    "approved_contract_commit": "4eb9de6119bd6fe709981692282153c358040531",
+    "scope": "Implement/validate auditor, fixed registry and EA01-EA36; local read only; no T/R or SQL rerun"
+  },
+  "campaign_raw": {
+    "path": "docs/validation/D5-I38-raw.json",
+    "sha256": "d56b5c28012544c8402dbadf94e3e29aa1acc3f5dfc9bd0bd3677e29abd99ac7",
+    "schema": "d5.i38-evidence-audit-campaign.v1"
+  },
+  "summary": {
+    "new_auditor_tests": 36,
+    "functional_regression_tests_reexecuted": 0,
+    "audit_exit_code_expected": 1,
+    "current_findings": 9,
+    "historic_entries_integrity_MATCH": 11,
+    "I34_applicability": "STALE",
+    "I36_applicability": "CURRENT_RECORDED_SCOPE",
+    "historical_raw_binding": "NOT_RECORDED",
+    "raw_binding_campaigns": 2,
+    "sufficiency": "REVIEW_PENDING"
+  },
+  "documentary_checks": {
+    "local_links_verified": 12,
+    "I37_input_hashes_verified_current": 13,
+    "I36_runtime_inputs_verified_current": 78,
+    "I36_documentary_inputs_verified_current": 7,
+    "prior_tracked_files_modified": false,
+    "runtime_reports_rewritten": false
+  },
+  "documentary_inputs": {
+    "docs/design/D5-I38-EVIDENCE-AUDIT-LAB.md": "d3ef7962d56b2222efdaf8ae8e8d55990261784bb76ded4d5758b2b7ff4c5b16",
+    "docs/validation/D5-I38-results.md": "83656ad597af36edc7d3eb50bc420ebd60842a0af171b0ba285331c5ccf5d9ce"
+  },
+  "publication_authorized": false,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false
+}

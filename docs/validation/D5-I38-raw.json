@@ -1,0 +1,2194 @@
+{
+  "D5_closed": false,
+  "D6_started": false,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "audit": {
+    "D1_D2_preservation": "EXPLICIT_REFERENCES_ONLY_NOT_EXHAUSTIVE",
+    "D1_D2_target_extensions": "NOT_RECORDED",
+    "D5_closed": false,
+    "SQL_D1_D2_D3_D4_reexecuted": false,
+    "UI_inventory": [
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI01",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI02",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI03",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01",
+                  "test_durable_integration.DurableIntegrationTest.test_DF46"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI04",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI05",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI06",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI33",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF01"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI07",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI34",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF02"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI08",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI34",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF02"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI09",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI34",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF02"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI10",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI34",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF02",
+                  "test_durable_integration.DurableIntegrationTest.test_DF48"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI11",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI34",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF02"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI12",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF03"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI13",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF04",
+                  "test_durable_integration.DurableIntegrationTest.test_DF05"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI14",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF06",
+                  "test_durable_integration.DurableIntegrationTest.test_DF46"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI15",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF13"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI16",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF14"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI17",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF15",
+                  "test_durable_integration.DurableIntegrationTest.test_DF16"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI18",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF17",
+                  "test_durable_integration.DurableIntegrationTest.test_DF18",
+                  "test_durable_integration.DurableIntegrationTest.test_DF19",
+                  "test_durable_integration.DurableIntegrationTest.test_DF20",
+                  "test_durable_integration.DurableIntegrationTest.test_DF21"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI19",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF23",
+                  "test_durable_integration.DurableIntegrationTest.test_DF26",
+                  "test_durable_integration.DurableIntegrationTest.test_DF27",
+                  "test_durable_integration.DurableIntegrationTest.test_DF28"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI20",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF12",
+                  "test_durable_integration.DurableIntegrationTest.test_DF22",
+                  "test_durable_integration.DurableIntegrationTest.test_DF27"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI21",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "durable_UI_expansion_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF07",
+                  "test_durable_integration.DurableIntegrationTest.test_DF12",
+                  "test_durable_integration.DurableIntegrationTest.test_DF13",
+                  "test_durable_integration.DurableIntegrationTest.test_DF14",
+                  "test_durable_integration.DurableIntegrationTest.test_DF16",
+                  "test_durable_integration.DurableIntegrationTest.test_DF17",
+                  "test_durable_integration.DurableIntegrationTest.test_DF20",
+                  "test_durable_integration.DurableIntegrationTest.test_DF22",
+                  "test_durable_integration.DurableIntegrationTest.test_DF24"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI22",
+        "mode": "F",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "durable_UI_expansion_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF07",
+                  "test_durable_integration.DurableIntegrationTest.test_DF08",
+                  "test_durable_integration.DurableIntegrationTest.test_DF09",
+                  "test_durable_integration.DurableIntegrationTest.test_DF10",
+                  "test_durable_integration.DurableIntegrationTest.test_DF11",
+                  "test_durable_integration.DurableIntegrationTest.test_DF12",
+                  "test_durable_integration.DurableIntegrationTest.test_DF15",
+                  "test_durable_integration.DurableIntegrationTest.test_DF18",
+                  "test_durable_integration.DurableIntegrationTest.test_DF19",
+                  "test_durable_integration.DurableIntegrationTest.test_DF21",
+                  "test_durable_integration.DurableIntegrationTest.test_DF22"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI23",
+        "mode": "F",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "durable_UI_expansion_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF07",
+                  "test_durable_integration.DurableIntegrationTest.test_DF23",
+                  "test_durable_integration.DurableIntegrationTest.test_DF29",
+                  "test_durable_integration.DurableIntegrationTest.test_DF30",
+                  "test_durable_integration.DurableIntegrationTest.test_DF31"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI24",
+        "mode": "F",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI38",
+        "declared_sources": [
+          {
+            "campaign": "I36",
+            "maps": [
+              {
+                "field": "UI_test_map",
+                "test_ids": [
+                  "test_durable_relational.DurableRelationalTest.test_DR03",
+                  "test_durable_relational.DurableRelationalTest.test_DR04",
+                  "test_durable_relational.DurableRelationalTest.test_DR05",
+                  "test_durable_relational.DurableRelationalTest.test_DR06",
+                  "test_durable_relational.DurableRelationalTest.test_DR07",
+                  "test_durable_relational.DurableRelationalTest.test_DR08",
+                  "test_durable_relational.DurableRelationalTest.test_DR09",
+                  "test_durable_relational.DurableRelationalTest.test_DR10",
+                  "test_durable_relational.DurableRelationalTest.test_DR13",
+                  "test_durable_relational.DurableRelationalTest.test_DR14",
+                  "test_durable_relational.DurableRelationalTest.test_DR15",
+                  "test_durable_relational.DurableRelationalTest.test_DR16",
+                  "test_durable_relational.DurableRelationalTest.test_DR17",
+                  "test_durable_relational.DurableRelationalTest.test_DR18",
+                  "test_durable_relational.DurableRelationalTest.test_DR21",
+                  "test_durable_relational.DurableRelationalTest.test_DR22",
+                  "test_durable_relational.DurableRelationalTest.test_DR23",
+                  "test_durable_relational.DurableRelationalTest.test_DR24",
+                  "test_durable_relational.DurableRelationalTest.test_DR25",
+                  "test_durable_relational.DurableRelationalTest.test_DR26",
+                  "test_durable_relational.DurableRelationalTest.test_DR27",
+                  "test_durable_relational.DurableRelationalTest.test_DR29",
+                  "test_durable_relational.DurableRelationalTest.test_DR30",
+                  "test_durable_relational.DurableRelationalTest.test_DR35"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI25",
+        "mode": "R",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF32"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI26",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF32",
+                  "test_durable_integration.DurableIntegrationTest.test_DF33"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI27",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF33"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI28",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF34"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI29",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF35"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI30",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF36",
+                  "test_durable_integration.DurableIntegrationTest.test_DF37"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI31",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF25",
+                  "test_durable_integration.DurableIntegrationTest.test_DF38",
+                  "test_durable_integration.DurableIntegrationTest.test_DF39"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI32",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "durable_UI_expansion_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF25",
+                  "test_durable_integration.DurableIntegrationTest.test_DF37",
+                  "test_durable_integration.DurableIntegrationTest.test_DF38",
+                  "test_durable_integration.DurableIntegrationTest.test_DF39",
+                  "test_durable_integration.DurableIntegrationTest.test_DF40"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI33",
+        "mode": "F",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI39",
+        "declared_sources": [
+          {
+            "campaign": "I36",
+            "maps": [
+              {
+                "field": "UI_test_map",
+                "test_ids": [
+                  "test_durable_relational.DurableRelationalTest.test_DR11",
+                  "test_durable_relational.DurableRelationalTest.test_DR12",
+                  "test_durable_relational.DurableRelationalTest.test_DR19",
+                  "test_durable_relational.DurableRelationalTest.test_DR20",
+                  "test_durable_relational.DurableRelationalTest.test_DR28",
+                  "test_durable_relational.DurableRelationalTest.test_DR31",
+                  "test_durable_relational.DurableRelationalTest.test_DR32",
+                  "test_durable_relational.DurableRelationalTest.test_DR33",
+                  "test_durable_relational.DurableRelationalTest.test_DR34"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI34",
+        "mode": "R",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF41"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI35",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF41",
+                  "test_durable_integration.DurableIntegrationTest.test_DF47"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI36",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF42"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI37",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "durable_UI_expansion_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF42",
+                  "test_durable_integration.DurableIntegrationTest.test_DF43"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI38",
+        "mode": "F",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF44",
+                  "test_durable_integration.DurableIntegrationTest.test_DF45"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI39",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      },
+      {
+        "GI": "GI40",
+        "declared_sources": [
+          {
+            "campaign": "I34",
+            "maps": [
+              {
+                "field": "applicable_UI_test_map",
+                "test_ids": [
+                  "test_durable_integration.DurableIntegrationTest.test_DF47",
+                  "test_durable_integration.DurableIntegrationTest.test_DF48"
+                ]
+              }
+            ]
+          }
+        ],
+        "evidence": "DECLARED_BOUNDED_FIXTURE",
+        "id": "UI40",
+        "mode": "M",
+        "obligation_reference": "I33_UI_MATRIX",
+        "sufficiency": "REVIEW_PENDING"
+      }
+    ],
+    "audit_status": "FINDINGS",
+    "bytes_read": 11212008,
+    "campaign_intersections": [
+      {
+        "left": "I34",
+        "right": "I36",
+        "shared_test_ids": 281,
+        "totals_must_not_be_added": true
+      }
+    ],
+    "entries": [
+      {
+        "applicability": "STALE",
+        "declarations": "CONSISTENT",
+        "declared_execution": "HISTORICAL_PYTHON_NOT_RERUN",
+        "declared_new": 48,
+        "declared_regressions": 233,
+        "declared_result": "PASS",
+        "declared_tests": 281,
+        "discovery_added": [
+          "source_ingest/durable_relational_fixture.py",
+          "source_ingest/relational_planner.py",
+          "testing/D5/demo_durable_relational.py",
+          "testing/D5/relational_support.py",
+          "testing/D5/run_relational_durable_lab.py",
+          "testing/D5/test_durable_relational.py"
+        ],
+        "discovery_now": "ADDED",
+        "discovery_removed": [],
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I34",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "CHANGED",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "MATCH_DECLARED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Python Linux synthetic T durable",
+        "verified_hash_entries": 81
+      },
+      {
+        "applicability": "CURRENT_RECORDED_SCOPE",
+        "declarations": "CONSISTENT",
+        "declared_execution": "HISTORICAL_PYTHON_NOT_RERUN",
+        "declared_new": 40,
+        "declared_regressions": 281,
+        "declared_result": "PASS",
+        "declared_tests": 321,
+        "discovery_added": [],
+        "discovery_now": "SAME",
+        "discovery_removed": [],
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I36",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "MATCH_DECLARED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Python Linux synthetic R durable and T regressions",
+        "verified_hash_entries": 86
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I33_UI",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I33_CONTRACT",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I33_DURABLE",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I33_DF",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I35_CONTRACT",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "NOT_RECORDED",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "id": "I35_DR",
+        "preservation_paths": [],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "Design obligations only",
+        "verified_hash_entries": 1
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "CONSISTENT",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "historical_test_groups": {
+          "D2_regression": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 157
+          },
+          "acceptance_V15": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 9
+          },
+          "coordinator": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 25
+          },
+          "core": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 62
+          },
+          "dispatch_I3": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 39
+          },
+          "optimization_parity": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 3
+          },
+          "postgres_I2": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 33
+          },
+          "scale_review": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "NOT_RECORDED",
+            "tests": 4
+          }
+        },
+        "id": "D3",
+        "preservation_paths": [
+          "docs/design/D3-approved.md",
+          "docs/validation/D3-OPTIMIZATION-results.json",
+          "migrations-d3-coordinator-proposed/V14__planning_coordinator.sql",
+          "migrations-d3-dispatch-proposed/V13__guarded_dispatch.sql",
+          "migrations-d3-proposed/V12__planning_snapshot_and_publication.sql",
+          "migrations-d3-review-proposed/V15__critical_incident_reopening.sql",
+          "pom.xml",
+          "scheduler-core/pom.xml",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/OptimizationParityTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ScaleReviewTest.java",
+          "scheduler-core/src/test/resources/d3-baseline/CapacityScheduler.java",
+          "scheduler-postgres/pom.xml",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/DispatchStore.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/Json.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningCoordinator.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningStore.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/AcceptanceTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/CoordinatorTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/DispatchStoreTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/PlanningStoreTest.java",
+          "testing/D3/run-postgres-tests.sh"
+        ],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "D3 historical Java SQL fixtures not rerun",
+        "verified_hash_entries": 28
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "CONSISTENT",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "historical_test_groups": {},
+        "id": "D4",
+        "preservation_paths": [
+          "docs/design/D4-approved.md",
+          "docs/validation/D3-CLOSURE.json",
+          "docs/validation/D3-COORDINATOR-results.json",
+          "docs/validation/D3-I1-results.json",
+          "docs/validation/D3-I2-results.json",
+          "docs/validation/D3-I3-results.json",
+          "docs/validation/D3-OPTIMIZATION-results.json",
+          "docs/validation/D3-REVIEW-results.json",
+          "docs/validation/D3-v0.1-results.json",
+          "docs/validation/D3-v0.2-results.json",
+          "docs/validation/D4-DESIGN-PREPARATION-results.json",
+          "docs/validation/D4-I1-results.json",
+          "docs/validation/D4-I10-ABSENCE-results.json",
+          "docs/validation/D4-I11-REVIEW-QUARANTINE-results.json",
+          "docs/validation/D4-I12-INTEGRATED-results.json",
+          "docs/validation/D4-I2-dependencies.json",
+          "docs/validation/D4-I2-results.json",
+          "docs/validation/D4-I3-results.json",
+          "docs/validation/D4-I4-results.json",
+          "docs/validation/D4-I5-results.json",
+          "docs/validation/D4-I6-results.json",
+          "docs/validation/D4-I7-A12-results.json",
+          "docs/validation/D4-I7-results.json",
+          "docs/validation/D4-I8-COMPONENTS-results.json",
+          "docs/validation/D4-I8-INTEGRATION-results.json",
+          "docs/validation/D4-I9-RECONCILIATION-results.json",
+          "docs/validation/D4-V24-BOUNDARY-results.json",
+          "docs/validation/D4-V25-CLOSED-SCHEMA-results.json",
+          "docs/validation/latest-results.json",
+          "docs/validation/semver-evidence.json",
+          "migrations-d3-coordinator-proposed/V14__planning_coordinator.sql",
+          "migrations-d3-dispatch-proposed/V13__guarded_dispatch.sql",
+          "migrations-d3-proposed/V12__planning_snapshot_and_publication.sql",
+          "migrations-d3-review-proposed/V15__critical_incident_reopening.sql",
+          "migrations-d4-proposed/V16__durable_worker_delivery.sql",
+          "migrations-d4-proposed/V17__worker_transport_commands.sql",
+          "migrations-d4-proposed/V18__synthetic_lab_bridge.sql",
+          "migrations-d4-proposed/V19__sealed_checkpoint_continuation.sql",
+          "migrations-d4-proposed/V20__continuation_admission_adapters.sql",
+          "migrations-d4-proposed/V21__checkpoint_laboratory_bridge.sql",
+          "migrations-d4-proposed/V22__worker_checkpoint_signal.sql",
+          "migrations-d4-proposed/V23__worker_execution_status.sql",
+          "migrations-d4-proposed/V24__linear_multicount_checkpoints.sql",
+          "migrations-d4-proposed/V25__checkpoint_boundary_guards.sql",
+          "migrations-d4-proposed/V26__conclusive_reconciliation.sql",
+          "migrations-d4-proposed/V27__sealed_absence_retry.sql",
+          "migrations-d4-proposed/V28__verified_revision_and_quarantine.sql",
+          "migrations-d4-proposed/V29__durable_worker_incarnation.sql",
+          "migrations-d4-proposed/V30__independent_tree_verification.sql",
+          "migrations-proposed/V10__provenance_and_delivery_contract_draft.sql",
+          "migrations-proposed/V11__semver_contract_draft.sql",
+          "migrations-proposed/V5__relational_integrity_draft.sql",
+          "migrations-proposed/V6__movement_and_epic_ownership_draft.sql",
+          "migrations-proposed/V7__sources_pools_and_snapshots_draft.sql",
+          "migrations-proposed/V8__capacity_contract_draft.sql",
+          "migrations-proposed/V9__execution_guards_contract_draft.sql",
+          "migrations/V1__core_domain.sql",
+          "migrations/V2__planning_execution_governance.sql",
+          "migrations/V3__capacity_ledger_and_state_history.sql",
+          "migrations/V4__transition_rules_and_integrity.sql",
+          "pom.xml",
+          "scheduler-core/pom.xml",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/CapacityScheduler.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/PlanningModel.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/Rational.java",
+          "scheduler-core/src/main/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicy.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/CapacitySchedulerTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/OptimizationParityTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ReplanPolicyTest.java",
+          "scheduler-core/src/test/java/io/github/isidorotrevino/planner/scheduler/ScaleReviewTest.java",
+          "scheduler-core/src/test/resources/d3-baseline/CapacityScheduler.java",
+          "scheduler-postgres/pom.xml",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/DispatchStore.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/Json.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningCoordinator.java",
+          "scheduler-postgres/src/main/java/io/github/isidorotrevino/planner/postgres/PlanningStore.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/AcceptanceTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/CoordinatorTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/DispatchStoreTest.java",
+          "scheduler-postgres/src/test/java/io/github/isidorotrevino/planner/postgres/PlanningStoreTest.java",
+          "scripts/check-publication.py",
+          "scripts/summarize-d3-core.py",
+          "scripts/summarize-d3-postgres.py",
+          "testing/D2/pom.xml",
+          "testing/D2/run-audit.sh",
+          "testing/D2/run-docker-audit.sh",
+          "testing/D2/src/test/java/audit/ContractAuditTest.java",
+          "testing/D2/src/test/java/audit/IntegrityContractAuditTest.java",
+          "testing/D2/src/test/java/audit/LifecycleContractAuditTest.java",
+          "testing/D2/src/test/java/audit/OwnershipAuditTest.java",
+          "testing/D2/src/test/java/audit/ProvenanceContractAuditTest.java",
+          "testing/D2/src/test/java/audit/RecoveryContractAuditTest.java",
+          "testing/D2/src/test/java/audit/SchemaAuditTest.java",
+          "testing/D2/src/test/java/audit/SemverContractAuditTest.java",
+          "testing/D3/run-core-docker-tests.sh",
+          "testing/D3/run-core-tests.sh",
+          "testing/D3/run-postgres-tests.sh",
+          "testing/D3/validate_design.py",
+          "testing/D4/build-lab.sh",
+          "testing/D4/compose.yaml",
+          "testing/D4/generate-absence-admission.py",
+          "testing/D4/generate-continuation-admission.py",
+          "testing/D4/generate-presence-admission.py",
+          "testing/D4/generate-recovery-admission.py",
+          "testing/D4/generate-review-admission.py",
+          "testing/D4/generate-v25-boundaries.py",
+          "testing/D4/lab-config.py",
+          "testing/D4/lab-scenarios.py",
+          "testing/D4/lab/pom.xml",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/AbsenceVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/CheckpointVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabBootstrap.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabControllers.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabMain.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabProbe.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabSupport.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/LabWorker.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/MultiCheckpointVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/PresenceControl.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/RecoveryVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/ReviewVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/TreeEvidence.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/lab/TreeVerifier.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/postgres/AbsencePlanningStore.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/postgres/ContinuationPlanningStore.java",
+          "testing/D4/lab/src/main/java/io/github/isidorotrevino/planner/postgres/ReviewPlanningStore.java",
+          "testing/D4/lab/src/main/resources/lab.properties",
+          "testing/D4/pom.xml",
+          "testing/D4/preflight.py",
+          "testing/D4/run-absence-lab.sh",
+          "testing/D4/run-checkpoint-lab.sh",
+          "testing/D4/run-checkpoint-polling-lab.sh",
+          "testing/D4/run-delivery-tests.sh",
+          "testing/D4/run-lab.sh",
+          "testing/D4/run-latest-matrix.sh",
+          "testing/D4/run-long-running-lab.sh",
+          "testing/D4/run-multicount-lab.sh",
+          "testing/D4/run-polling-lab.sh",
+          "testing/D4/run-process-tests.sh",
+          "testing/D4/run-reconciliation-lab.sh",
+          "testing/D4/run-remaining-lab.sh",
+          "testing/D4/run-review-lab.sh",
+          "testing/D4/run-transport-tests.sh",
+          "testing/D4/run-v24-boundary-lab.sh",
+          "testing/D4/sql/absence-core.sql",
+          "testing/D4/sql/presence-active.sql",
+          "testing/D4/sql/recovery-core.sql",
+          "testing/D4/sql/review-active.sql",
+          "testing/D4/sql/review-core.sql",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/lab/TreeVerifierTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/AbsenceAccountingTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/AbsenceStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/AbsenceV1StoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/CheckpointAccountingTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/CheckpointStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/DeliveryStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/HttpsTransportTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/LabBridgeTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/LatestBoundaryTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/LatestResetTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/LatestReviewTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/LongRunningStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/MultiCheckpointStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/PollingStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/PresenceStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/ProcessRuntimeTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/RecoveryStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/RecoveryV1StoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/ReviewStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/ReviewV1StoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/SupervisorStopProbe.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/TlsFixture.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/TreeStoreTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/V24BoundaryReproductionTest.java",
+          "testing/D4/src/test/java/io/github/isidorotrevino/planner/postgres/V25BoundaryTest.java",
+          "testing/D4/test_verifiers.py",
+          "testing/D4/verifiers.py",
+          "worker-control-plane/pom.xml",
+          "worker-control-plane/src/main/java/io/github/isidorotrevino/planner/worker/TransportStore.java",
+          "worker-control-plane/src/main/java/io/github/isidorotrevino/planner/worker/WorkerControlPlane.java",
+          "worker-control-plane/src/main/java/io/github/isidorotrevino/planner/worker/WorkerController.java",
+          "worker-control-plane/src/main/java/io/github/isidorotrevino/planner/worker/WorkerIdentityFilter.java",
+          "worker-control-plane/src/main/resources/application.properties",
+          "worker-runtime/pom.xml",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/AbsenceCheckpointAccounting.java",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/CheckpointAccounting.java",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/EffectJournal.java",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/ExecutionIdentity.java",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/FixtureSupervisor.java",
+          "worker-runtime/src/main/java/io/github/isidorotrevino/planner/runtime/SyntheticFixtureMain.java"
+        ],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "MATCH",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "D4 historical Java SQL fixtures not rerun",
+        "verified_hash_entries": 220
+      },
+      {
+        "applicability": "NOT_APPLICABLE_HISTORICAL_REFERENCE",
+        "declarations": "CONSISTENT",
+        "declared_execution": "HISTORICAL_NOT_RERUN",
+        "discovery_now": "NOT_RECORDED",
+        "embedded_configuration": "BOUND_TO_RECORDED_BYTES_ONLY",
+        "external_capabilities": "NOT_RECORDED",
+        "historical_inputs_verified": true,
+        "historical_integrity": "MATCH",
+        "historical_test_groups": {
+          "D2_independent": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "historical harness, not V30",
+            "tests": 157
+          },
+          "D5_V30": {
+            "I10_regression": 28,
+            "I12_regression": 30,
+            "I14_regression": 32,
+            "I16_regression": 34,
+            "I18_regression": 36,
+            "I4_regression": 21,
+            "I5_regression": 15,
+            "I6_regression": 5,
+            "I8_regression": 27,
+            "errors": 0,
+            "failures": 0,
+            "new_isolated_local_edit": 36,
+            "target": "NOT_RECORDED",
+            "tests": 264
+          },
+          "local_python": {
+            "errors": 0,
+            "failures": 0,
+            "target": "NOT_RECORDED",
+            "tests": 51
+          }
+        },
+        "id": "A52",
+        "preservation_paths": [
+          "README.es.md",
+          "README.md",
+          "docs/README.md",
+          "docs/design/D1-architecture-baseline.md",
+          "docs/design/D2.9-approved.md",
+          "docs/design/D3-approved.md",
+          "docs/design/D4-approved.md",
+          "docs/design/D5-I21-ACCEPTANCE-REVIEW.md",
+          "docs/design/D5-I21-SCOPE-AUDIT.md",
+          "docs/design/D5-I22-LOCAL-MILESTONE-ACCEPTANCE.md",
+          "docs/design/D5-LOCAL-SYNTHETIC-approved.md",
+          "docs/validation/D3-CLOSURE.json",
+          "docs/validation/D4-CLOSURE.json",
+          "docs/validation/D5-I20-results.json",
+          "docs/validation/D5-I20-results.md",
+          "docs/validation/D5-I21-audit.json",
+          "docs/validation/D5-I22-acceptance-review.json"
+        ],
+        "raw_binding": "NOT_RECORDED",
+        "recorded_files_now": {
+          "documentary": "CHANGED",
+          "preserved": "MATCH",
+          "runtime": "MATCH"
+        },
+        "runtime_context": "NOT_RECORDED",
+        "sufficiency": "REVIEW_PENDING",
+        "target": "D5 I1-I20 accepted local milestone Python and distinct SQL targets",
+        "verified_hash_entries": 18
+      }
+    ],
+    "exit_code": 1,
+    "external_capabilities": "NOT_RECORDED",
+    "findings": [
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "source_ingest/durable_relational_fixture.py"
+      },
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "source_ingest/relational_planner.py"
+      },
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "testing/D5/demo_durable_relational.py"
+      },
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "testing/D5/relational_support.py"
+      },
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "testing/D5/run_relational_durable_lab.py"
+      },
+      {
+        "code": "DISCOVERY_CHANGED",
+        "entry": "I34",
+        "path": "testing/D5/test_durable_relational.py"
+      },
+      {
+        "code": "CURRENT_BYTES_CHANGED",
+        "entry": "I34",
+        "path": "docs/README.md"
+      },
+      {
+        "code": "CURRENT_BYTES_CHANGED",
+        "entry": "I34",
+        "path": "testing/D5/README.md"
+      },
+      {
+        "code": "CURRENT_BYTES_CHANGED",
+        "entry": "A52",
+        "path": "docs/README.md"
+      }
+    ],
+    "functional_campaigns_reexecuted": false,
+    "git_calls": 19,
+    "global_gaps_open": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07"
+    ],
+    "operational_activation": false,
+    "publication_authorized": false,
+    "raw_binding_counts": {
+      "MATCH": 0,
+      "MISMATCH": 0,
+      "NOT_RECORDED": 2,
+      "UNAVAILABLE": 0
+    },
+    "real_evidence_criteria_not_run": 7,
+    "schema": "d5.evidence-audit.v1",
+    "sufficiency": "REVIEW_PENDING"
+  },
+  "audit_exit_code": 1,
+  "audit_findings_expected": true,
+  "case_test_map": {
+    "EA01": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA01"
+    ],
+    "EA02": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA02"
+    ],
+    "EA03": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA03"
+    ],
+    "EA04": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA04"
+    ],
+    "EA05": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA05"
+    ],
+    "EA06": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA06"
+    ],
+    "EA07": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA07"
+    ],
+    "EA08": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA08"
+    ],
+    "EA09": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA09"
+    ],
+    "EA10": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA10"
+    ],
+    "EA11": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA11"
+    ],
+    "EA12": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA12"
+    ],
+    "EA13": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA13"
+    ],
+    "EA14": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA14"
+    ],
+    "EA15": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA15"
+    ],
+    "EA16": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA16"
+    ],
+    "EA17": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA17"
+    ],
+    "EA18": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA18"
+    ],
+    "EA19": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA19"
+    ],
+    "EA20": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA20"
+    ],
+    "EA21": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA21"
+    ],
+    "EA22": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA22"
+    ],
+    "EA23": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA23"
+    ],
+    "EA24": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA24"
+    ],
+    "EA25": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA25"
+    ],
+    "EA26": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA26"
+    ],
+    "EA27": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA27"
+    ],
+    "EA28": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA28"
+    ],
+    "EA29": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA29"
+    ],
+    "EA30": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA30"
+    ],
+    "EA31": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA31"
+    ],
+    "EA32": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA32"
+    ],
+    "EA33": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA33"
+    ],
+    "EA34": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA34"
+    ],
+    "EA35": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA35"
+    ],
+    "EA36": [
+      "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA36"
+    ]
+  },
+  "cleanup_verified": true,
+  "credentials_used": false,
+  "deployment": false,
+  "elapsed_seconds": 3.344,
+  "errors": [],
+  "failures": [],
+  "fixture_audit_observations": [
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA01",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA02",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA03",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA03",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA04",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA05",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA06",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA06",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA06",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA06",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA07",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA08",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA08",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA09",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA10",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA10",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA10",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA11",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA12",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA13",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA13",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA13",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA13",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA14",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA14",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA15",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA15",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA15",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA15",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA16",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA17",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA18",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA20",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA20",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA21",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA22",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA25",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA26",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA27",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA27",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA27",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA27",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "FINDINGS",
+      "case": "test_EA28",
+      "exit_code": 1
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA29",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA30",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA30",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "INVALID",
+      "case": "test_EA31",
+      "exit_code": 2
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA32",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA33",
+      "exit_code": 0
+    },
+    {
+      "audit_status": "CONSISTENT",
+      "case": "test_EA36",
+      "exit_code": 0
+    }
+  ],
+  "functional_campaigns_reexecuted": false,
+  "functional_regression_tests_run": 0,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "increment": "D5-I38",
+  "inputs": {
+    "docs/design/D5-I37-EVIDENCE-AUDIT-DESIGN.md": "d75c428fdc7f10c87281b69bf022a3b9fe399e859dab28f4e835285fd6c5e069",
+    "docs/design/D5-I37-EVIDENCE-AUDIT-REVIEW.md": "87960b20103bee6d1ef5bf38a37a2cd031a38b239d2e14831903c71be6b832b7",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c",
+    "scripts/audit-d5-evidence.py": "9b301f8d6c45fe8626991598f344e739c03c8f3ab854365a95c83c30bebcb3a4",
+    "testing/evidence_audit/README.md": "cb7c74026a578b4fe8dff4e3ec0f03282382f7b94e3795ba4a4cf4feaffe0e2e",
+    "testing/evidence_audit/run_audit_lab.py": "0474d3a9948d4ea3f96d1b1e87c0f4df7aa82844e18d44833c6b90cf844bc124",
+    "testing/evidence_audit/test_evidence_audit.py": "7507d82c2a01dd750c2c97497cbe5329fa8f9d1ed9c47c6208094d3ce817ad94"
+  },
+  "inputs_unchanged_during_campaign": true,
+  "limit_tests": "Reduced budgets explicitly used; not all full maxima or a performance benchmark",
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "migration_promotion": false,
+  "mode": "LOCAL_READ_ONLY_AND_SYNTHETIC_AUDITOR_FIXTURES",
+  "new_tests": 36,
+  "operational_activation": false,
+  "operational_attempts": 0,
+  "operations": 0,
+  "own_subprocess_exitcodes": {
+    "-9": 1,
+    "0": 715,
+    "1": 1,
+    "128": 1
+  },
+  "own_subprocesses_alive": 0,
+  "own_subprocesses_by_program": {
+    "git": 716,
+    "python": 2
+  },
+  "own_subprocesses_started": 718,
+  "owned_roots_created": 36,
+  "owned_roots_remaining": 0,
+  "passed": [
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA01",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA02",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA03",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA04",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA05",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA06",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA07",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA08",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA09",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA10",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA11",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA12",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA13",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA14",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA15",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA16",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA17",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA18",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA19",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA20",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA21",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA22",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA23",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA24",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA25",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA26",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA27",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA28",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA29",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA30",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA31",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA32",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA33",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA34",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA35",
+    "testing.evidence_audit.test_evidence_audit.EvidenceAuditTest.test_EA36"
+  ],
+  "platform": "Linux",
+  "publication_authorized": false,
+  "python": "3.14.4",
+  "quota_consumed": 0,
+  "real_provider_access": false,
+  "remote_requests": 0,
+  "reservations_created": 0,
+  "schema": "d5.i38-evidence-audit-campaign.v1",
+  "skipped": [],
+  "status": "PASS",
+  "subcases_observed_not_additional_tests": 33,
+  "sufficiency": "REVIEW_PENDING",
+  "tests_run": 36
+}
