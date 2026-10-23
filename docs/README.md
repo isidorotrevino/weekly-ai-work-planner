@@ -10,6 +10,11 @@ Compose environment, loopback HTTPS, manual rebuild and selective reset.
 
 ## Continuity / Continuidad
 
+[Continue D5 after I32 / Continuar D5 después de I32](../HANDOFF-D5-I32.md):
+local I32 commit and pending publication, sealed evidence, remaining integrated
+criteria and next decisions / commit local, publicación pendiente, evidencia
+preservada y decisiones para la próxima sesión.
+
 [Next session: Docker Compose development environment and friendlier README / Próxima sesión: entorno de desarrollo Docker Compose y README más amigable](../HANDOFF-DEV-ENV.md). Handoff de origen; implementación y límites vigentes en la guía de desarrollo.
 
 [D4 session handoff / Handoff para D4](../HANDOFF-D4.md): closed D3 baseline, worker contracts, pending decisions and next-session prompt. [Docker lab preparation / Preparación del laboratorio Docker](../testing/D4/README.md): existing regression runner and the separate synthetic D4 Compose laboratory.
