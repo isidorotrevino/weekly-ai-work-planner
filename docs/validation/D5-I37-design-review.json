@@ -1,0 +1,415 @@
+{
+  "schema": "d5.evidence-audit-design-review.v1",
+  "increment": "D5-I37",
+  "date": "2026-10-23",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "af31fd7f4d70c23ad84ac5b8258c05aba029a58a",
+  "authority": {
+    "user_selection": "A — Auditoría ejecutable de inventario y aplicabilidad GI33/GI34: hashes, targets, mapas de cobertura y detección de evidencia obsoleta.",
+    "scope": "Contract and matrix only; P0 remains in effect"
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "target_criteria": [
+    "GI33",
+    "GI34"
+  ],
+  "supporting_criterion": "GI40_READ_ONLY_AUDIT_SCOPE",
+  "proposed_cases": [
+    {
+      "id": "EA01",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Registro fijo y campaña válida",
+      "required_oracle": "Commit completo/path/hash/schema/target anclados; dimensiones separadas; no aceptación global o autoridad operacional",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA02",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Bytes históricos alterados",
+      "required_oracle": "MISMATCH aunque el JSON interno y sus hashes sean autoconsistentes; no actualizar registro para aprobar",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA03",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Commit/blob ausente o repositorio incompleto",
+      "required_oracle": "UNAVAILABLE/UNDETERMINED, salida no exitosa; sin HEAD alternativo, fetch, checkout o red",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA04",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Input runtime actual modificado",
+      "required_oracle": "Histórico intacto, recorded_files_now CHANGED y applicability STALE; path/hash/código saneados",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA05",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Input actual eliminado",
+      "required_oracle": "MISSING y discovery REMOVED cuando corresponda; sin fallback a histórico como archivo actual",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA06",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Nuevo .py/fixture/contrato en namespace",
+      "required_oracle": "ADDED y STALE aunque todos los hashes previos coincidan; incluir no tracked; parametrizar reglas I34/I36",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA07",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Cambio documental aislado",
+      "required_oracle": "Hallazgo documental separado; runtime no se invalida automáticamente; informe histórico no se reescribe",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA08",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Nuevos paths exactos del auditor fuera de discovery",
+      "required_oracle": "No alteran conjunto I34/I36; inputs propios sí inventariados; nueva entrada dentro de discovery no se excluye por ser auditoría",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA09",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Runner o regla de selección cambiados",
+      "required_oracle": "Hash detectado y STALE; no importar o ejecutar runner para aprender reglas nuevas",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA10",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Python/plataforma distintos o ausentes",
+      "required_oracle": "DIFFERENT→STALE, ausente→UNDETERMINED; versión declarada no acredita fsync/API/CLI/proveedor real",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA11",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Perfil/schema/config/capacidad sin referencia",
+      "required_oracle": "NOT_RECORDED explícito; sin valor inventado, import o equivalencia de API externa; bytes embebidos ligados a inputs",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA12",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "PASS/grupos/cuentas consistentes",
+      "required_oracle": "Grupos partición exacta, nuevos/regresión coherentes; status funcional legado conservado sin llamarlo resultado de auditoría",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA13",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "Duplicados, IDs vacíos, grupos solapados o cuentas booleanas",
+      "required_oracle": "INCONSISTENT/INVALID según schema; no deduplicar para ocultar exceso o error",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA14",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "Failures/errors/skips o status incompatibles",
+      "required_oracle": "Contradicción detectada; resultado histórico no PASS no genera pruebas exitosas ficticias",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA15",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "DF/DR ausente, desconocido, vacío o ID no PASS",
+      "required_oracle": "Cobertura declarada inconsistente; comprobar exactamente 48 DF y 40 DR por adapter",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA16",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Mismo test cubre varias filas",
+      "required_oracle": "Referencia permitida, cuenta de IDs distintos estable; número de filas no incrementa pruebas",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA17",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Mapas UI base/expansión I34 y R I36",
+      "required_oracle": "UI01–UI40 inventariadas con modalidad, mapa o pendiente; UI25/UI34 R no atribuidas a T; UI sin mapa no recibe PASS implícito",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA18",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Suma de campañas y subcasos",
+      "required_oracle": "281 y 321 se muestran por campaña con intersección; nunca 602 nuevas, ni raíces/procesos/oráculos como tests",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA19",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "Cierres D3/D4 y A52 válidos",
+      "required_oracle": "Verificar campos de hashes admitidos, canónicos/evidencia/referencias y targets; HISTORICAL_NOT_RERUN separado de Python",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA20",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "Falta/cambio en input o target histórico",
+      "required_oracle": "Hallazgo exacto en su dimensión/target; no reejecutar SQL ni equiparar D1/D2/V30/dev por nombres",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA21",
+      "criteria": [
+        "GI34"
+      ],
+      "trigger": "D1/D2 sin manifiesto homogéneo o referencia ausente",
+      "required_oracle": "Límite explícito NOT_RECORDED; no crear cierres, marcar reapertura o afirmar inventario exhaustivo",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA22",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "I34/I36 sin salida bruta anclada",
+      "required_oracle": "raw_binding NOT_RECORDED visible; no leer /tmp, reconstruir raw o confundir reejecución con original",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA23",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Paquete sintético con raw/registrado concordantes",
+      "required_oracle": "MATCH solo para campos comunes/normalizaciones enumeradas; enriquecimiento documental permitido no altera runtime",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA24",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Raw contradice registrado o añade campo desconocido",
+      "required_oracle": "MISMATCH/INVALID; no ignorar divergencia; orden de claves irrelevante, duplicados rechazados antes de comparar",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA25",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "JSON duplicado/truncado/no finito/schema incorrecto",
+      "required_oracle": "INVALID y exit 2, sin volcar valores o traceback privado; campos extras no se aceptan silenciosamente",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA26",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "trigger": "Path absoluto/traversal/URL/controles/privado",
+      "required_oracle": "Rechazo antes de lectura; sin abrir .env, corpus, dev/run_data/D4 operativo o enlaces arbitrarios",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA27",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "trigger": "Symlink intermedio/final, FIFO o dispositivo",
+      "required_oracle": "INVALID antes de leer destino o bloquear en FIFO; también modos Git no regulares; sin seguir enlaces",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA28",
+      "criteria": [
+        "GI33"
+      ],
+      "trigger": "Mutación durante hash o discovery",
+      "required_oracle": "UNSTABLE_SNAPSHOT/UNDETERMINED; controles coordinados por harness, sin sleeps como oráculo ni mezcla de reintentos",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA29",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "trigger": "Límites de archivos/bytes/paths/IDs/mapas/JSON",
+      "required_oracle": "Bloqueo explícito antes de exceso; presupuestos reducidos etiquetados, no prueba de todos los máximos",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA30",
+      "criteria": [
+        "GI40"
+      ],
+      "trigger": "Git excede tiempo/presupuesto o devuelve error",
+      "required_oracle": "Salida no exitosa saneada, hijo propio terminado/esperado; no stderr arbitrario o conclusión parcial confirmada",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA31",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "trigger": "Datos inválidos con marcadores sensibles",
+      "required_oracle": "Salida no contiene valores fuente/credenciales/home/temporales; solo paths públicos/códigos/hashes/versiones/cuentas permitidos",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA32",
+      "criteria": [
+        "GI40"
+      ],
+      "trigger": "Auditoría sobre checkout quieto",
+      "required_oracle": "Bytes Git/index/config/archivos de entrada conservados; sin escritura/cache/limpieza o ejecución de módulos de campaña",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA33",
+      "criteria": [
+        "GI40"
+      ],
+      "trigger": "Fixtures negativas y fallos del harness",
+      "required_oracle": "Solo temporales/hijos propios limpiados/terminados; sentinel hermano intacto; cero operaciones/red/consumo/reservas/activación",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA34",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "trigger": "Combinaciones de estados y exits",
+      "required_oracle": "Precedencia INVALID>STALE>UNDETERMINED>CURRENT_RECORDED_SCOPE; exits 2/1/0 coherentes; raw legado ausente visible sin falsear ejecución",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA35",
+      "criteria": [
+        "GI33",
+        "GI34",
+        "GI40"
+      ],
+      "trigger": "Auditoría del repositorio real de lectura",
+      "required_oracle": "Informe de hallazgos esperado independiente, I34 no forzado a CURRENT ante ampliación I36; 78+7 I36 verificados si bytes siguen iguales; sin campaña T/R/SQL nueva",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "EA36",
+      "criteria": [
+        "GI33",
+        "GI34",
+        "GI40"
+      ],
+      "trigger": "Informe propio final y exclusiones",
+      "required_oracle": "Inputs/herramienta/registro/tests/resultados propios ligados, mapa EA a IDs ejecutados y regresiones separadas; REVIEW_PENDING, P0/D1–D4/A52/D5/G01–G07 preservados",
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "new_tests_executed": 0,
+  "functional_campaigns_reexecuted": false,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "documentary_checks": {
+    "local_links_verified": 10,
+    "I36_current_hashes_verified": {
+      "inputs": 78,
+      "documentary_inputs": 7
+    },
+    "I36_distinct_PASS_IDs": 321,
+    "I36_case_map_rows": 40,
+    "I36_UI_map_rows": 2,
+    "runtime_code_modified": false,
+    "historical_reports_modified": false
+  },
+  "inputs": {
+    "docs/design/D5-I37-EVIDENCE-AUDIT-DESIGN.md": "d75c428fdc7f10c87281b69bf022a3b9fe399e859dab28f4e835285fd6c5e069",
+    "docs/design/D5-I37-EVIDENCE-AUDIT-REVIEW.md": "87960b20103bee6d1ef5bf38a37a2cd031a38b239d2e14831903c71be6b832b7",
+    "docs/design/D5-I37-NEXT-CUT-SCOPE.md": "2a79d40ab84fae16cfb6e046702f5bd5b61078aed1f4010475201270b9c96d30",
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D5-I34-results.json": "a05f204d0029df2aebcad1a17638b7c3850d7ad2161fd52a95f785ac6be2715b",
+    "docs/validation/D5-I36-results.json": "888acc79c377242fae29598a456f2b436d9f0be992f40869cf04cd0ff07d0f4b"
+  },
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "limitations": [
+    "Documentary design checks only; no implementation or new test PASS.",
+    "Historical raw output absent: proposal must preserve NOT_RECORDED.",
+    "No global sufficiency, API attestation or integrated recovery inferred from isolated PASS."
+  ]
+}
