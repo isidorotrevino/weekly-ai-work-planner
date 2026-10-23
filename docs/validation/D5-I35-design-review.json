@@ -1,0 +1,702 @@
+{
+  "schema": "d5.durable-relational-design-review.v1",
+  "increment": "D5-I35",
+  "date": "2026-10-23",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "6a9932acec47f422249c94bc55bf83dc9a38b80b",
+  "authority": {
+    "user_selection": "A — Diseñar la integración relacional durable R (UI25/UI34; GI38/GI39), con TASK derivada de un lote y proyección revisada.",
+    "scope": "Design and matrix only; P0 remains in effect"
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "path": "R_RELATIONAL_FIXTURE_NOT_REAL_EVIDENCE",
+  "target_UI": [
+    "UI25",
+    "UI34"
+  ],
+  "target_criteria": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "proposed_cases": [
+    {
+      "id": "DR01",
+      "criteria": [
+        "GI33"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Inventario R",
+      "required_oracle": "Código/kernel/planner/esquemas/config/contrato/campaña ligados por hashes; versión declarada no acredita API real"
+    },
+    {
+      "id": "DR02",
+      "criteria": [
+        "GI34"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Preservación y grupos",
+      "required_oracle": "Código/SQL/harness I1–I34, cierres D1–D4 y A52 intactos; regresiones reales vs históricos por hash, sin sumas acumulativas"
+    },
+    {
+      "id": "DR03",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Captura JSON I30 exacta",
+      "required_oracle": "SHA de bytes originales/base64/localizadores; no recanonicalización de fuente ni parser Markdown I32 o captura Drive ficticia"
+    },
+    {
+      "id": "DR04",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Campos extra/duplicados/UUID/tipo/ámbito/perfil inválidos",
+      "required_oracle": "Bloqueo sin reparar ni entidades, vínculos o aceptación parcial"
+    },
+    {
+      "id": "DR05",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Selección y SOURCE",
+      "required_oracle": "Capturar no selecciona/aprueba; generación CAS, revisión propia y cambio A→B→A invalidan paquete antiguo"
+    },
+    {
+      "id": "DR06",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Destinos e identidad",
+      "required_oracle": "Mapping exacto fuente/tipo/proyecto, claves por tipo, sin adopción/renombre/conversión T↔R por UUID/nombre"
+    },
+    {
+      "id": "DR07",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Tipos y claims",
+      "required_oracle": "REQUIREMENT DRAFT, EPIC/TASK BACKLOG; description EPIC solo evidencia; null/empty TASK exactos; Status/Verified inertes"
+    },
+    {
+      "id": "DR08",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Referencias y endpoints",
+      "required_oracle": "Extremos tipados registrados o del lote; inexistentes/cross-project y capabilities bloquean sin prefijo"
+    },
+    {
+      "id": "DR09",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Relaciones aditivas",
+      "required_oracle": "EPIC_REQUIREMENT/TASK_EPIC/DEPENDENCY exactos; no-op conserva identidad; cambio de épica/kind/retirada bloqueados"
+    },
+    {
+      "id": "DR10",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Grafo resultante",
+      "required_oracle": "Ciclo HARD con aristas previas y varias nuevas bloquea todo; self-loop cualquier kind bloquea; otros kinds no se elevan a HARD"
+    },
+    {
+      "id": "DR11",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Divergencia local previa",
+      "required_oracle": "Base completa de entidad/versión/campos ajenos/relaciones de cada participante, incluido endpoint de lectura; todo lote bloqueado"
+    },
+    {
+      "id": "DR12",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Guardas de trabajo/estado",
+      "required_oracle": "Requisito/épica comprueban tareas relacionadas y flag histórico; no crear operaciones o reservas para negativos"
+    },
+    {
+      "id": "DR13",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "SOURCE/BATCH y revisiones ajenas",
+      "required_oracle": "Versiones propias, aceptación íntegra; revocación/reemplazo invalida; aceptar otro paquete no altera datos ni sustituye su aprobación"
+    },
+    {
+      "id": "DR14",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Publicación BATCH",
+      "required_oracle": "Entidades+relaciones+mappings+bases+procedencia+recibo durables juntos; fallo previo ninguno, posterior recibo único sin replay de ACCEPT"
+    },
+    {
+      "id": "DR15",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Versiones/no-op/procedencia",
+      "required_oracle": "Row_version una vez por cambio real, base/cabeza una vez por participante, endpoint de lectura preserva source_base; generación avanza por lote"
+    },
+    {
+      "id": "DR16",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Replay tras cambios posteriores",
+      "required_oracle": "Mismo request devuelve hecho histórico; otro request bloquea; no rebobina cabeza, selección, relaciones o proyecciones"
+    },
+    {
+      "id": "DR17",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Selección de TASK aplicada",
+      "required_oracle": "Solo TASK participante de recibo exacto; manifiesto sin recibo/UUID ajeno/requisito/épica bloquea; selección no envía"
+    },
+    {
+      "id": "DR18",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "PROJECTION por TASK",
+      "required_oracle": "Fija recibo BATCH, selección, snapshot y contexto exactos; aprobación de una no autoriza otra; sin EVALUATION Markdown ficticia"
+    },
+    {
+      "id": "DR19",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Cambio local o relacional después de preparar",
+      "required_oracle": "Incluso otro vínculo/no-op con nuevo lote invalida generación/hash completos; no enviar desde copia obsoleta o igualdad solo de payload"
+    },
+    {
+      "id": "DR20",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Fuente/selección/revisiones ABA",
+      "required_oracle": "Paquetes no emitidos bloquean; ticket ya emitido conserva efecto posible y STALE, sin rollback o aprobación transferida"
+    },
+    {
+      "id": "DR21",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Múltiples TASK y envío parcial",
+      "required_oracle": "A confirmada/B UNKNOWN conserva vector por TASK y lote local aplicado; no rollback compensatorio o éxito grupal ficticio"
+    },
+    {
+      "id": "DR22",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Namespace/binding/payload remoto",
+      "required_oracle": "Nuevo esquema R y clave estable; T rechazado/adopción bloqueada; solo name/description TASK, con null/empty preservados y campos ajenos intactos"
+    },
+    {
+      "id": "DR23",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "C caída antes/después de HEAD",
+      "required_oracle": "Parametrizar BATCH, selección, PROJECTION, ISSUE, QUERY/RESULT: antes ninguno; después recibo/historia íntegros, huérfanos no se promueven"
+    },
+    {
+      "id": "DR24",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "fsync incierto C/P",
+      "required_oracle": "COMMIT_UNKNOWN/RECOVERY_REQUIRED; reapertura valida/fsync antes de confirmar; error persistente no implica rollback o recibo confirmado"
+    },
+    {
+      "id": "DR25",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Ticket C durable, caída antes de P",
+      "required_oracle": "UNKNOWN al reabrir; sin autoenvío/lookup/cierre/retry; consulta vacía no prueba no efecto"
+    },
+    {
+      "id": "DR26",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "P efecto durable, respuesta perdida y C muerto",
+      "required_oracle": "Proceso nuevo concilia ticket/identidad/hash exactos; un efecto y recibo histórico, sin duplicar tarea ni reenviar"
+    },
+    {
+      "id": "DR27",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "P crash CREATE/UPDATE/cierre",
+      "required_oracle": "Parametrizar before_object/after_object/before_replace/after_head y fsync incierto; estado/prueba conjuntos, CLIENT independiente"
+    },
+    {
+      "id": "DR28",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Execute frente a cierre",
+      "required_oracle": "Procesos concurrentes confirman efecto o tombstone, nunca ambos; llegada tardía cerrada no ejecuta, también tras reinicio"
+    },
+    {
+      "id": "DR29",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Prueba incompatible o múltiples destinos",
+      "required_oracle": "CONFLICT persistente; no escoger por fecha ni borrar bloqueo con otro lote/paquete"
+    },
+    {
+      "id": "DR30",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "NO_EFFECT/rate limit/retry",
+      "required_oracle": "Ticket nuevo solo con no efecto concluyente, mismo payload/clave/paquete, guardas/tick y presupuesto persistidos; precondición exige revisión/base nuevas"
+    },
+    {
+      "id": "DR31",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Dos lotes mismo expected_head/datos",
+      "required_oracle": "Solo uno confirma, otro conflicto sin prefijo ni rebase; revisiones/catálogos conservados"
+    },
+    {
+      "id": "DR32",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Respuesta frente a conciliación y revocación",
+      "required_oracle": "CAS ledger evita sobrescribir; prueba histórica y vigencia actual separados; conflicto/STALE no desaparece al consultar"
+    },
+    {
+      "id": "DR33",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Cambio remoto antes/durante UPDATE, incluido ABA",
+      "required_oracle": "Precondición atómica rechaza paquete; campos ajenos intactos; no retry ciego por GET/fecha"
+    },
+    {
+      "id": "DR34",
+      "criteria": [
+        "GI39"
+      ],
+      "UI": [
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Nuevo lote local con ticket previo UNKNOWN",
+      "required_oracle": "Puede aplicar local si cumple guardas, conserva ticket conciliable/STALE y bloquea nuevo envío de ese binding; no restaura payload previo"
+    },
+    {
+      "id": "DR35",
+      "criteria": [
+        "GI38"
+      ],
+      "UI": [
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Corrupción/esquema/layout",
+      "required_oracle": "HEAD/objeto/cadena/marca/IDs/symlink inválidos bloquean; no elegir padre, migrar T→R, crear génesis o reconstruir privados I30"
+    },
+    {
+      "id": "DR36",
+      "criteria": [
+        "GI33",
+        "GI38"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Comparación pública con I30",
+      "required_oracle": "Positivos y negativos de mapping/lote/grafo/no-op/guardas/procedencia comparados por API; diferencias durables/revisiones R declaradas, sin equivalencia total"
+    },
+    {
+      "id": "DR37",
+      "criteria": [
+        "GI40"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Límites y margen pendiente",
+      "required_oracle": "Conteos/bytes/historia/pruebas bloquean antes de efecto o emisión; otros escritores no consumen margen de resultados; presupuesto reducido etiquetado"
+    },
+    {
+      "id": "DR38",
+      "criteria": [
+        "GI40"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Procesos, locks y limpieza",
+      "required_oracle": "Spawn real, caída libera flock sin omitir CAS; lector independiente; todos hijos/hilos propios terminados y raíces propias eliminadas; sentinel intacto"
+    },
+    {
+      "id": "DR39",
+      "criteria": [
+        "GI40"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Auditoría de autoridad/salida",
+      "required_oracle": "Cero HTTP/SQL/SDK/CLI real, operaciones/intentos operativos, consumo/reservas/activación; salida sin texto/paths privados; fixtures negativas identificadas"
+    },
+    {
+      "id": "DR40",
+      "criteria": [
+        "GI33",
+        "GI34",
+        "GI40"
+      ],
+      "UI": [],
+      "status": "DESIGN_NOT_EXECUTED",
+      "trigger": "Informe y exclusiones",
+      "required_oracle": "Mapa DR/UI→tests realmente ejecutados, hashes de cada combinación, regresiones separadas; R relacional no se confunde con siete R reales ni cierra G01–G07"
+    }
+  ],
+  "proposed_case_count": 40,
+  "runtime_tests_run": 0,
+  "prior_runtime_campaigns_reexecuted": false,
+  "new_source_code": false,
+  "new_SQL": false,
+  "HTTP_client": false,
+  "Docker_invoked": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "private_corpus_reread": false,
+  "persistent_D2_writes": 0,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "durable_protocol_implemented_in_I35": false,
+  "I30_private_restoration_proposed": false,
+  "I34_schema_changed": false,
+  "distributed_atomicity_claimed": false,
+  "quota_EVALUATION_R_proposed": false,
+  "proposed_storage": "NEW_R_CLIENT_AND_R_REMOTE_USING_UNCHANGED_I34_PUBLIC_KERNEL",
+  "proposed_review_stages": [
+    "SOURCE_BOUND_TO_SELECTION_GENERATION",
+    "BATCH",
+    "PROJECTION_PER_TASK"
+  ],
+  "proposed_projection_fields": [
+    "TASK.title -> name",
+    "TASK.description -> description, preserving null/empty"
+  ],
+  "proposed_context_invalidation": "Whole project data_generation and data hash, source selection, exact SOURCE/BATCH/PROJECTION reviews; any change blocks unissued packages; issued tickets remain historical/UNKNOWN/STALE and explicitly reconcilable",
+  "proposed_limits": {
+    "projects_per_run": 1,
+    "documents_per_run": 1,
+    "scenarios_per_run": 1,
+    "elements_per_batch": 32,
+    "declarations_per_batch": 64,
+    "source_bytes": 2097152,
+    "text_characters": 8192,
+    "batch_manifest_bytes": 4194304,
+    "projection_manifest_bytes": 1048576,
+    "entities": 128,
+    "relations": 256,
+    "selected_TASKs": 16,
+    "bindings": 16,
+    "remote_TASKs": 16,
+    "source_artifacts": 128,
+    "manifests": 128,
+    "revisions": 128,
+    "client_commands": 128,
+    "attempts_per_projection": 3,
+    "queries_per_send": 6,
+    "remote_tickets": 384,
+    "commit_bytes": 33554432,
+    "commits_per_store": 256,
+    "store_file_bytes": 268435456,
+    "proof_bytes": 65536
+  },
+  "current_prior_bounded_synthetic_criteria_with_evidence_unchanged": 30,
+  "integrated_global_criteria_still_pending": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "real_evidence_criteria_still_pending": 7,
+  "documentary_checks": {
+    "preserved_baseline_files_except_index": 470,
+    "allowed_existing_changes": [
+      "docs/README.md"
+    ],
+    "I34_runtime_inputs_verified_current": 73,
+    "I34_inputs_verified_at_commit": {
+      "inputs": 73,
+      "documentary_inputs": 7
+    },
+    "I34_current_documentary_differences": [
+      "docs/README.md"
+    ],
+    "I34_coverage_map_test_references_present_in_recorded_PASS": true,
+    "closure_executable_hash_entries_verified_current": {
+      "docs/validation/D3-CLOSURE.json": 25,
+      "docs/validation/D4-CLOSURE.json": 161
+    },
+    "local_acceptance_canonical_hash_verified": true,
+    "local_Markdown_links_checked": 166,
+    "git_diff_check_passed": true,
+    "publication_scan_output": "Publication check passed: 475 text files reviewed; no configured patterns found.\nReview the staged diff before publishing; this check is not exhaustive."
+  },
+  "limitations": [
+    "Design only: 40 DR rows have not executed; no new code or restart/relational recovery proof.",
+    "I30 volatile PASS plus I34 TASK durable PASS does not satisfy UI25/UI34.",
+    "R typed fixture is not an I32 Markdown profile, Drive export or empirical provider evidence.",
+    "Local batch is atomic; remote TASK projections are separate effects and partial outcomes do not roll back the batch.",
+    "New R remote protocol admits nullable/empty TASK descriptions; old T schema remains unchanged, without fictitious evaluation records.",
+    "Global D5/G01-G07, seven real-evidence criteria and Docs remain pending. No publication, activation, promotion, deployment or D6.",
+    "Link/hash/publication-pattern checks are not exhaustive security/correctness validation."
+  ],
+  "inputs": {
+    "docs/README.md": "6c4616ab852a2d4c5771639f14c78ce76e363bf617b056388051cbe279d8aa86",
+    "docs/design/D3-approved.md": "79253b87bffd103165af69683ef5b54a7227ec2e626c22b1ccbb1a42a6778650",
+    "docs/design/D4-approved.md": "4b414d1d84e73f0be5956927efde4eff77d5f3b090a8a9a4817c3bae46310e98",
+    "docs/design/D5-I29-RELATIONAL-BATCH-DESIGN.md": "8c7a93211592edd7a1dea495e539e33683c98df13b4551532ab34d2c22bd80a4",
+    "docs/design/D5-I29-RELATIONAL-BATCH-REVIEW.md": "bb080e750385eca2aff952d723fe303d7e18859ef0c1044df0e29298826dd492",
+    "docs/design/D5-I30-RELATIONAL-BATCH-LAB.md": "f900891f496d35d135f7526d2397e177ec9ec7b4bbc37c14875880e4c649069a",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-DESIGN.md": "ecc203dfe23f0090de02b231510affa4a4da9e5a351761d099a4e4c3171f58d5",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-DESIGN.md": "b966520a125024b25ef3ee271f559fbbc2e24c3e040c5826474ca8467cd2159b",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/design/D5-I34-DURABLE-TASK-LAB.md": "1ea896ee59a98636be673b71aa6150b85a5894848bd247e2c6b72b1db506b5ae",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+    "docs/design/D5-I35-NEXT-CUT-SCOPE.md": "8f4be298d849da615280909cf25968ed271eedfceece6713735b598bbd30be90",
+    "docs/design/D5-LOCAL-SYNTHETIC-approved.md": "314d433ef72c8bb9d2695b1829336244c06f5e248a5b7131af119fdac5ffda03",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D5-I34-results.json": "a05f204d0029df2aebcad1a17638b7c3850d7ad2161fd52a95f785ac6be2715b",
+    "docs/validation/D5-I34-results.md": "09dbc4eef0b5d922fe489e16d94b2968e2b0aca2447fbf3ab642f1766bc6f91b",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/README.md": "53e0f61b3f84b8215d8d64e0b1d80748666f123a7463e16be56689f15406fa42",
+    "testing/D5/adoption_scenarios.py": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+    "testing/D5/bootstrap_scenarios.py": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+    "testing/D5/demo_durable_integration.py": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_register.py": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/isolated_local_edit_scenarios.py": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+    "testing/D5/local_edit_scenarios.py": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+    "testing/D5/local_reappearance_scenarios.py": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+    "testing/D5/mapping_scenarios.py": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+    "testing/D5/postgres_scenarios.py": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+    "testing/D5/reappearance_scenarios.py": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+    "testing/D5/review_scenarios.py": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+    "testing/D5/run_adoption_lab.py": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_bootstrap_lab.py": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_isolated_local_edit_lab.py": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+    "testing/D5/run_local_edit_lab.py": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+    "testing/D5/run_local_reappearance_lab.py": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+    "testing/D5/run_mapping_lab.py": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/run_postgres_lab.py": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+    "testing/D5/run_reappearance_lab.py": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+    "testing/D5/run_review_lab.py": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+    "testing/D5/run_v30_lab.py": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+    "testing/D5/v30_scenarios.py": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e"
+  }
+}

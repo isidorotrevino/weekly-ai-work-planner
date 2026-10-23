@@ -23,6 +23,14 @@ preservada y decisiones para la próxima sesión.
 
 ## D5 iniciado / D5 started
 
+[I35: contrato relacional durable R / proposed durable relational path](design/D5-I35-DURABLE-RELATIONAL-DESIGN.md)
+y [matriz DR01–DR40](design/D5-I35-DURABLE-RELATIONAL-REVIEW.md): UI25/UI34,
+lote local atómico y proyecciones TASK individualmente revisadas, sin atomicidad
+remota del conjunto. [Alcance](design/D5-I35-NEXT-CUT-SCOPE.md) y
+[comprobaciones documentales](validation/D5-I35-design-review.json).
+**Preparado para revisión; sin implementación ni ejecución nueva.** P0 vigente;
+D5 global y G01–G07 abiertos, sin ampliar A52 o atribuir evidencia real a R.
+
 [I34: TASK durable sintética / durable synthetic TASK lab](design/D5-I34-DURABLE-TASK-LAB.md)
 y [resultados propios / results](validation/D5-I34-results.md): implementación del
 contrato I33-F aprobado, captura I26 separada, estado CLIENT/REMOTE nuevo y
