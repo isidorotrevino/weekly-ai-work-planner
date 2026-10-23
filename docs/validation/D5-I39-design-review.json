@@ -1,0 +1,990 @@
+{
+  "schema": "d5.sufficiency-review-design.v1",
+  "increment": "D5-I39",
+  "date": "2026-10-23",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "a956daf33681838f10bfb1c9c6c4a35722be0e77",
+  "authority": {
+    "user_selection": "A — Revisión conjunta de suficiencia GI33/GI34/GI38/GI39/GI40: contrastar cada obligación con código, pruebas y límites T/R, identificando pendientes sin cierre automático.",
+    "scope": "Design and matrix only; documentary review execution not yet authorized; P0 remains."
+  },
+  "contract_approved": false,
+  "review_execution_authorized": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "target_criteria": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "UI_review_plan": [
+    {
+      "id": "UI01",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Inventario liga bytes de código/config/harness/perfil/esquema/entorno/comandos a run_id y resultados, incluyendo diff y archivos nuevos",
+      "review_focus": "Contrastar inventario, comando y vínculo escenario/campaña; distinguir código/config embebida de versiones externas no registradas.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI02",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Cambiar código o config relevante marca evidencia actual STALE_INPUTS; informe histórico conserva sus bytes/hash",
+      "review_focus": "Comprobar invalidación por cambio y por input nuevo; explicar I34 histórico MATCH con discovery actual STALE.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI03",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Cambio de perfil/política/observación/versiones invalida paquete; etiqueta de versión o fecha reciente no sustituye hash/generación",
+      "review_focus": "Seguir pins de perfil/política/observación y generaciones en T; en R declarar ausencia de EVALUATION sin equivalencia ficticia.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI04",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Relación escenario→frontera→inputs→oráculo→resultado completa; input faltante/incompatible produce NOT_RUN/BLOCKED, sin PASS heredado",
+      "review_focus": "Desglosar escenario/frontera/oráculo/resultado; detectar mapa completo con caso parcial o detalle empírico ausente.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01",
+            "test_durable_integration.DurableIntegrationTest.test_DF46"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI05",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Bytes/evento/commit I26 exactos alcanzables; cursor no acepta fuente; OBSERVED_EXPORT no se eleva y queda fuera del T Markdown inicial",
+      "review_focus": "Seguir bytes/IDs/procedencia entre captura I26 y T; distinguir captura JSON propia R y Docs OBSERVED_EXPORT pendiente.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI06",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Inventario distingue API de fixture, código real y versión declarada; ninguna capacidad Plane/Gentle-AI/proveedor real se deduce",
+      "review_focus": "Delimitar API de fixture y capacidad real; no elevar CAS/cierre de ticket o versión declarada a capacidad Plane.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI07",
+      "criterion": "GI33",
+      "original_mode": "M",
+      "obligation": "Cambio solo de índice se explica por separado; se verifica evidencia sellada en commit y aplicabilidad ejecutable actual sin reescribirla",
+      "review_focus": "Contrastar documentos emisores con los actuales; separar cambios de índices de cambios ejecutables y raw ausente.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI08",
+      "criterion": "GI34",
+      "original_mode": "M",
+      "obligation": "Cierres D1–D4, aceptación A52 y código/SQL/harness históricos preservados; diferencias documentales permitidas identificadas",
+      "review_focus": "Enumerar preservación pública de cierres/A52 y sus límites D1/D2; no inferir inspección de dev/D4 operativo.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI09",
+      "criterion": "GI34",
+      "original_mode": "M",
+      "obligation": "Cada grupo conserva target y comando/versiones propios; no etiquetar todas las regresiones como V30",
+      "review_focus": "Identificar targets/comandos/versiones de cada grupo efectivamente registrados; ausencias quedan NOT_RECORDED.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI10",
+      "criterion": "GI34",
+      "original_mode": "M",
+      "obligation": "Suite acumulativa/IDs repetidos/filas/assertions no inflan tests distintos dentro de campaña; ejecuciones anteriores no se suman como nuevas",
+      "review_focus": "Verificar IDs distintos y campañas separadas; intersección de 281 no suma 602 y casos/subcasos no añaden tests.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI11",
+      "criterion": "GI34",
+      "original_mode": "M",
+      "obligation": "Históricos comprobados por hash, regresiones reejecutadas y escenarios nuevos en grupos separados; NOT_RUN SQL/D2–D4 explícito",
+      "review_focus": "Separar nuevos/regresiones ejecutadas y referencias históricas por hash; SQL/Java no reejecutados.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF02",
+            "test_durable_integration.DurableIntegrationTest.test_DF48"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI12",
+      "criterion": "GI34",
+      "original_mode": "M",
+      "obligation": "Recursos/hijos/hilos de I26/I28/I30/I32 separados de los de unión; recuperación I26 no se atribuye a unión",
+      "review_focus": "Identificar recursos de T/R y regresiones; no atribuir persistencia al modelo volátil por recuperación I26.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI13",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F0→F1: fallo tras commit I26 y antes/después de importación no acepta fuente ni duplica identidad al repetir; bytes/ámbito/grado exactos",
+      "review_focus": "Localizar fallo antes/después de importación I26 a T y oráculo exacto; no confundir cursor capturado con fuente aceptada.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI14",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F1→F2: captura/perfil desconocido, fuente ambigua o discrepancia de hashes bloquea todos los efectos posteriores sin reparar datos",
+      "review_focus": "Leer negativos de captura/perfil/hash/ámbito y comprobar bloqueo de efectos y ausencia de reparación silenciosa.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF04",
+            "test_durable_integration.DurableIntegrationTest.test_DF05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI15",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "Revisiones SOURCE/EVALUATION/EFFECT/Plane independientes; falta/revocación/reemplazo de una no se cubre con otra aceptación",
+      "review_focus": "Contrastar SOURCE/EVALUATION/EFFECT/PROJECTION T y SOURCE/BATCH/PROJECTION R; autoridad de revisión independiente.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF06",
+            "test_durable_integration.DurableIntegrationTest.test_DF46"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI16",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F2→F3: fallo previo conserva estado local; fallo posterior/respuesta perdida recupera recibo histórico exacto en memoria sin aplicar dos veces",
+      "review_focus": "Verificar commit local y recibo juntos, fallos antes/después y replay histórico sin restauración o doble efecto.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI17",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F3→F4: fallo entre efecto local y binding conserva efecto local y fase pendiente; no inventa proyección ni recibo final exitoso",
+      "review_focus": "Examinar corte entre efecto local, binding y proyección; fase pendiente durable sin recibo final ficticio.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI18",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F4→F5: guardas fallidas antes de entrega producen NOT_SENT; entrega sin resultado concluyente preserva UNKNOWN, nunca retry ciego",
+      "review_focus": "Verificar guardas antes del ISSUE y ticket UNKNOWN durable antes de REMOTE; distinguir NOT_SENT de efecto posible.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF15",
+            "test_durable_integration.DurableIntegrationTest.test_DF16"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI19",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "F5→F6→F7: efecto simulado con respuesta perdida se concilia por clave/ticket/hash; un destino, cero restauración del payload viejo",
+      "review_focus": "Seguir respuesta perdida y conciliación explícita con ticket/identidad/hash; prueba independiente de efecto único.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF17",
+            "test_durable_integration.DurableIntegrationTest.test_DF18",
+            "test_durable_integration.DurableIntegrationTest.test_DF19",
+            "test_durable_integration.DurableIntegrationTest.test_DF20",
+            "test_durable_integration.DurableIntegrationTest.test_DF21"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI20",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "Consulta eventual vacía/múltiple/incompatible y 429 ambiguo no prueban ausencia; conservar UNKNOWN/conflicto aunque cambie el paquete",
+      "review_focus": "Leer lookup vacío/múltiple/incompatible y 429; acreditar incertidumbre persistente y retry solo con no efecto concluyente.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF23",
+            "test_durable_integration.DurableIntegrationTest.test_DF26",
+            "test_durable_integration.DurableIntegrationTest.test_DF27",
+            "test_durable_integration.DurableIntegrationTest.test_DF28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI21",
+      "criterion": "GI38",
+      "original_mode": "M",
+      "obligation": "Mismo command_id/request_hash recupera hecho histórico; request distinto bloquea; replay después de cambios no rebobina cabeza/revisiones",
+      "review_focus": "Contrastar command_id/request_hash, replay histórico y conflicto de payload; ningún rebobinado tras cambios posteriores.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF12",
+            "test_durable_integration.DurableIntegrationTest.test_DF22",
+            "test_durable_integration.DurableIntegrationTest.test_DF27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI22",
+      "criterion": "GI38",
+      "original_mode": "F",
+      "obligation": "Caída/reinicio de cliente antes/después de cada F1–F7 con doble remoto superviviente; restaurar estado/recibos/conflictos sin duplicar efectos",
+      "review_focus": "Expandir cada frontera y rol a puntos antes/después de crash/reinicio; no aceptar contador SIGKILL como cobertura completa.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "durable_UI_expansion_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF07",
+            "test_durable_integration.DurableIntegrationTest.test_DF12",
+            "test_durable_integration.DurableIntegrationTest.test_DF13",
+            "test_durable_integration.DurableIntegrationTest.test_DF14",
+            "test_durable_integration.DurableIntegrationTest.test_DF16",
+            "test_durable_integration.DurableIntegrationTest.test_DF17",
+            "test_durable_integration.DurableIntegrationTest.test_DF20",
+            "test_durable_integration.DurableIntegrationTest.test_DF22",
+            "test_durable_integration.DurableIntegrationTest.test_DF24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI23",
+      "criterion": "GI38",
+      "original_mode": "F",
+      "obligation": "Commit local incierto, intento durable previo al envío y respuesta perdida: recuperar raíz íntegra o bloquear; no inferir éxito de ACK local",
+      "review_focus": "Verificar COMMIT_UNKNOWN/fsync, bloqueo de handle y reopen; ACK o excepción no prueban rollback o éxito.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "durable_UI_expansion_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF07",
+            "test_durable_integration.DurableIntegrationTest.test_DF08",
+            "test_durable_integration.DurableIntegrationTest.test_DF09",
+            "test_durable_integration.DurableIntegrationTest.test_DF10",
+            "test_durable_integration.DurableIntegrationTest.test_DF11",
+            "test_durable_integration.DurableIntegrationTest.test_DF12",
+            "test_durable_integration.DurableIntegrationTest.test_DF15",
+            "test_durable_integration.DurableIntegrationTest.test_DF18",
+            "test_durable_integration.DurableIntegrationTest.test_DF19",
+            "test_durable_integration.DurableIntegrationTest.test_DF21",
+            "test_durable_integration.DurableIntegrationTest.test_DF22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI24",
+      "criterion": "GI38",
+      "original_mode": "F",
+      "obligation": "Ledger/snapshot faltante/corrupto/incompatible y reloj reiniciado → bloqueo conservador, sin regenerar aceptación ni renovar frescura",
+      "review_focus": "Leer corrupción/cadena/schema/huérfanos y reloj persistido; no génesis, fallback o frescura comercial inventada.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "durable_UI_expansion_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF07",
+            "test_durable_integration.DurableIntegrationTest.test_DF23",
+            "test_durable_integration.DurableIntegrationTest.test_DF29",
+            "test_durable_integration.DurableIntegrationTest.test_DF30",
+            "test_durable_integration.DurableIntegrationTest.test_DF31"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI25",
+      "criterion": "GI38",
+      "original_mode": "R",
+      "obligation": "Lote relacional completo o sin prefijo; TASK proyectada deriva del recibo/generación exactos; sin proyección de requisitos/épicas/relaciones ni conversión a perfil I32",
+      "review_focus": "Seguir lote R íntegro, recibo y generación exactos hasta TASK seleccionada y proyección; sin atomicidad remota distribuida.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I36",
+          "field": "UI_test_map",
+          "test_ids": [
+            "test_durable_relational.DurableRelationalTest.test_DR03",
+            "test_durable_relational.DurableRelationalTest.test_DR04",
+            "test_durable_relational.DurableRelationalTest.test_DR05",
+            "test_durable_relational.DurableRelationalTest.test_DR06",
+            "test_durable_relational.DurableRelationalTest.test_DR07",
+            "test_durable_relational.DurableRelationalTest.test_DR08",
+            "test_durable_relational.DurableRelationalTest.test_DR09",
+            "test_durable_relational.DurableRelationalTest.test_DR10",
+            "test_durable_relational.DurableRelationalTest.test_DR13",
+            "test_durable_relational.DurableRelationalTest.test_DR14",
+            "test_durable_relational.DurableRelationalTest.test_DR15",
+            "test_durable_relational.DurableRelationalTest.test_DR16",
+            "test_durable_relational.DurableRelationalTest.test_DR17",
+            "test_durable_relational.DurableRelationalTest.test_DR18",
+            "test_durable_relational.DurableRelationalTest.test_DR21",
+            "test_durable_relational.DurableRelationalTest.test_DR22",
+            "test_durable_relational.DurableRelationalTest.test_DR23",
+            "test_durable_relational.DurableRelationalTest.test_DR24",
+            "test_durable_relational.DurableRelationalTest.test_DR25",
+            "test_durable_relational.DurableRelationalTest.test_DR26",
+            "test_durable_relational.DurableRelationalTest.test_DR27",
+            "test_durable_relational.DurableRelationalTest.test_DR29",
+            "test_durable_relational.DurableRelationalTest.test_DR30",
+            "test_durable_relational.DurableRelationalTest.test_DR35"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI26",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Origen/selección/revisión cambia antes del efecto: puerta de unión invalida snapshot copiado; ningún efecto bajo paquete viejo",
+      "review_focus": "Contrastar fuente/selección/revisiones antes de efecto, incluidos cambios ABA; copia vieja no conserva autoridad.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI27",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Perfil/política/observación cambian o sufren ABA antes de confirmar: nuevas generaciones bloquean sin reutilizar revisión",
+      "review_focus": "Examinar perfil/política/observación T y revocación/ABA; declarar diferencias de R sin forzar contrato Markdown.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF32",
+            "test_durable_integration.DurableIntegrationTest.test_DF33"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI28",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Reloj cruza caducidad/horizonte con generación igual: evaluación bloquea y no concede capacidad/permiso",
+      "review_focus": "Leer caducidad y horizonte con generación igual y reloj lógico persistido; no permiso operacional o renovación al reiniciar.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF33"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI29",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Edición de entidad local tras copiar a I28 y antes de entregar ticket detectada por vínculo con almacén dueño, sin envío obsoleto",
+      "review_focus": "Contrastar dueño del snapshot local T/R frente a paquete preparado; justificar sustitución de objetos volátiles I28.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF34"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI30",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Revocación/cambio local durante envío conserva efecto histórico + STALE/UNKNOWN y exige conciliación; no presume rollback remoto",
+      "review_focus": "Leer cambio/revocación durante envío y conciliación; conservar efecto histórico, STALE y UNKNOWN según frontera.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF35"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI31",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Edición Plane antes/durante CAS, incluido ABA, bloquea sobrescritura; campos ajenos/sentinels se conservan",
+      "review_focus": "Examinar cambio remoto y ABA frente a UPDATE/CAS; campos ajenos y base exacta, sin GET seguido de escritura incondicional.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF36",
+            "test_durable_integration.DurableIntegrationTest.test_DF37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI32",
+      "criterion": "GI39",
+      "original_mode": "M",
+      "obligation": "Dos comandos/paquetes y respuesta vs conciliación compiten con barreras: CAS conserva un resultado coherente y todos los conflictos, sin elegir por fecha",
+      "review_focus": "Identificar ordenaciones forzadas por barreras y resultados CAS; distinguir carrera real de interleaving secuencial.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF25",
+            "test_durable_integration.DurableIntegrationTest.test_DF38",
+            "test_durable_integration.DurableIntegrationTest.test_DF39"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI33",
+      "criterion": "GI39",
+      "original_mode": "F",
+      "obligation": "Dos procesos sobre el estado durable no pierden revisiones/recibos ni duplican intento; CAS/locks y puntos de crash requieren contrato F previo",
+      "review_focus": "Verificar procesos sobre mismo estado, lock/CAS/revisiones/intentos; incluir oráculo independiente y resultados perdedores.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "durable_UI_expansion_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF25",
+            "test_durable_integration.DurableIntegrationTest.test_DF37",
+            "test_durable_integration.DurableIntegrationTest.test_DF38",
+            "test_durable_integration.DurableIntegrationTest.test_DF39",
+            "test_durable_integration.DurableIntegrationTest.test_DF40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI34",
+      "criterion": "GI39",
+      "original_mode": "R",
+      "obligation": "Cambio local/relacional invalida lote y snapshot de TASK hacia I28; sin rebase parcial ni revisión I32 ficticia",
+      "review_focus": "Contrastar cambios locales/relacionales y nuevo lote no-op frente a snapshot R; incertidumbre previa bloquea nuevo envío.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I36",
+          "field": "UI_test_map",
+          "test_ids": [
+            "test_durable_relational.DurableRelationalTest.test_DR11",
+            "test_durable_relational.DurableRelationalTest.test_DR12",
+            "test_durable_relational.DurableRelationalTest.test_DR19",
+            "test_durable_relational.DurableRelationalTest.test_DR20",
+            "test_durable_relational.DurableRelationalTest.test_DR28",
+            "test_durable_relational.DurableRelationalTest.test_DR31",
+            "test_durable_relational.DurableRelationalTest.test_DR32",
+            "test_durable_relational.DurableRelationalTest.test_DR33",
+            "test_durable_relational.DurableRelationalTest.test_DR34"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI35",
+      "criterion": "GI40",
+      "original_mode": "M",
+      "obligation": "Auditoría registra cero activación, operaciones/intentos operativos, consumo/reservas y permisos de ejecución; separa intentos Plane de fixture",
+      "review_focus": "Separar declaraciones de cero actividad, guardas estáticas y observaciones; no elegibilidad como ejecución o reserva.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI36",
+      "criterion": "GI40",
+      "original_mode": "M",
+      "obligation": "No HTTP/SDK/CLI real, SQL/Docker nuevos ni lecturas de credenciales/corpus/dev; salidas evitan texto crudo/errores privados",
+      "review_focus": "Comprobar alcance de lectura/comandos/salida saneada; cero proveedores reales no equivale a revisión exhaustiva de seguridad.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF41",
+            "test_durable_integration.DurableIntegrationTest.test_DF47"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI37",
+      "criterion": "GI40",
+      "original_mode": "M",
+      "obligation": "Hilos nuevos terminan; regresiones identifican sus propios recursos; limpieza solo de raíces creadas con sentinels sintéticos hermanos intactos",
+      "review_focus": "Leer creación/terminación de hilos y ownership de raíces/sentinels; regresiones y recursos nuevos separados.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF42"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI38",
+      "criterion": "GI40",
+      "original_mode": "F",
+      "obligation": "Hijos de crash/reinicio terminados y raíces cliente/remoto propias limpiadas tras conservar evidencia saneada; nada de dev/D4 afectado por comandos",
+      "review_focus": "Contrastar tabla de hijos/exitcodes/raíces y limpieza selectiva con harness; no inferir estado operativo dev/D4.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "durable_UI_expansion_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF42",
+            "test_durable_integration.DurableIntegrationTest.test_DF43"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI39",
+      "criterion": "GI40",
+      "original_mode": "M",
+      "obligation": "Límites propios y del componente más restrictivo bloquean sin truncar ni efecto parcial; presupuesto reducido no se presenta a tamaño completo",
+      "review_focus": "Enumerar límites realmente ejercitados y presupuestos reducidos; no capacidad simultánea máxima o benchmark.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF44",
+            "test_durable_integration.DurableIntegrationTest.test_DF45"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UI40",
+      "criterion": "GI40",
+      "original_mode": "M",
+      "obligation": "Informe final enumera qué corrió/no corrió, recursos, exclusiones y aplicabilidad; 30/35 previo no se convierte en 35/35 ni cierra G01–G07 por sumar PASS",
+      "review_focus": "Contrastar resumen, casos no ejecutados, aplicabilidad, raw ausente y bloqueos; conservar D5/G01–G07 abiertos.",
+      "status": "REVIEW_NOT_EXECUTED",
+      "declared_candidates": [
+        {
+          "campaign": "I34",
+          "field": "applicable_UI_test_map",
+          "test_ids": [
+            "test_durable_integration.DurableIntegrationTest.test_DF47",
+            "test_durable_integration.DurableIntegrationTest.test_DF48"
+          ]
+        }
+      ]
+    }
+  ],
+  "crosscutting_review_controls": [
+    {
+      "id": "SR01",
+      "criteria": [
+        "GI33",
+        "GI34"
+      ],
+      "focus": "Autoridad, versiones y continuidad",
+      "required_record": "Relacionar contratos emitidos, aprobaciones posteriores y namespaces; no restauración de privados o ampliación de A52.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR02",
+      "criteria": [
+        "GI33"
+      ],
+      "focus": "Inventario y aplicabilidad",
+      "required_record": "Fijar commits/bytes leídos, discovery histórico/actual y diferencias pertinentes; no rebaselinar.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR03",
+      "criteria": [
+        "GI33"
+      ],
+      "focus": "Fuerza y trazabilidad de evidencia",
+      "required_record": "Conservar raw I34/I36 NOT_RECORDED y raw propio I38 anclado; detalle empírico ausente no se reconstruye desde código.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR04",
+      "criteria": [
+        "GI33",
+        "GI34",
+        "GI38",
+        "GI39",
+        "GI40"
+      ],
+      "focus": "Exhaustividad por cláusula y recorrido",
+      "required_record": "UI01–UI40 completas, todas sus subcláusulas y modalidades; EXCLUDED local no elimina obligación global.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR05",
+      "criteria": [
+        "GI33",
+        "GI38",
+        "GI39"
+      ],
+      "focus": "Escenario y oráculo",
+      "required_record": "Resolver cada candidato a función/escenario/assert/harness; distinguir lector independiente de uso del propio estado calculado.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR06",
+      "criteria": [
+        "GI38"
+      ],
+      "focus": "Fronteras y puntos de fallo",
+      "required_record": "Tabla operación/rol/punto antes-después y resultados; comparar parametrización exigida y presente, sin sumar crashes.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR07",
+      "criteria": [
+        "GI38",
+        "GI39"
+      ],
+      "focus": "Incertidumbre y recuperación",
+      "required_record": "UNKNOWN/CONFLICT, reapertura pasiva, conciliación/retry y no efecto acreditado; ninguna consulta vacía prueba ausencia.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR08",
+      "criteria": [
+        "GI39"
+      ],
+      "focus": "Ordenaciones concurrentes y ABA",
+      "required_record": "Fuente/local/remoto, CAS y respuestas frente a revocación; evidencia de barreras y resultados de ambas ramas, no ganador por fecha.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR09",
+      "criteria": [
+        "GI38",
+        "GI39"
+      ],
+      "focus": "Autoridad R y transacciones",
+      "required_record": "BATCH local entero, selección desde recibo y proyección por TASK; vector parcial remoto sin rollback distribuido; T y R no intercambiables.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR10",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "focus": "Elegibilidad y autoridad operacional",
+      "required_record": "Pins/reloj/cuotas solo de fixture; positivo o recibo histórico no crea capacidad/reserva, permiso de ejecución o frescura real.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR11",
+      "criteria": [
+        "GI34"
+      ],
+      "focus": "Targets y contabilidad",
+      "required_record": "Separar 281/321/36 por campaña; intersección de IDs y SQL/Java históricos por hash; no cifra única de tests integrados.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR12",
+      "criteria": [
+        "GI34",
+        "GI40"
+      ],
+      "focus": "Recursos y preservación pública",
+      "required_record": "Hijos/hilos/raíces y sentinels por campaña, ownership/limpieza; conservar límites de prueba sobre D1–D4 sin inspección operativa.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR13",
+      "criteria": [
+        "GI33",
+        "GI40"
+      ],
+      "focus": "Límites, privacidad y contexto",
+      "required_record": "Máximos vs presupuestos reducidos; contexto Linux/fsync y exclusiones de caller hostil/energía; escaneo y hashes no garantía exhaustiva.",
+      "status": "REVIEW_NOT_EXECUTED"
+    },
+    {
+      "id": "SR14",
+      "criteria": [
+        "GI33",
+        "GI34",
+        "GI38",
+        "GI39",
+        "GI40"
+      ],
+      "focus": "Dictamen y decisiones posteriores",
+      "required_record": "Resumen de cinco GI trazable a subcláusulas/hallazgos; global_review OPEN, closure false y próximos pasos propuestos sin implementarlos.",
+      "status": "REVIEW_NOT_EXECUTED"
+    }
+  ],
+  "planned_UI_rows": 40,
+  "planned_crosscutting_controls": 14,
+  "semantic_verdicts_issued": 0,
+  "new_tests_executed": 0,
+  "functional_campaigns_reexecuted": false,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "documentary_checks": {
+    "local_links_verified": 13,
+    "I38_campaign_inputs_verified_current": 7,
+    "I38_documentary_inputs_verified_current": 2,
+    "I38_raw_hash_verified": true,
+    "declared_UI_candidates_resolve_to_registered_PASS": true,
+    "map_validation_is_not_semantic_sufficiency": true
+  },
+  "inputs": {
+    "docs/design/D5-I39-NEXT-CUT-SCOPE.md": "8394e6e46b6060dd72712e6bd373c148a4c263cf874fdc907125d84f8516d7f8",
+    "docs/design/D5-I39-SUFFICIENCY-REVIEW-DESIGN.md": "a3cd43ce596e417282f20d9635adf5cc80a9d8111cf36509e190fb4aec01ab22",
+    "docs/design/D5-I39-SUFFICIENCY-REVIEW-MATRIX.md": "87d0a693cdbb75ce3d935bb36d52612be392336bea53986e2e0a23d7ccde6326",
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-DESIGN.md": "7f676a31f3a364d7335ab588c2805a5ebd711629346a52ffd4b25bc8ccf5e96e",
+    "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-DESIGN.md": "ecc203dfe23f0090de02b231510affa4a4da9e5a351761d099a4e4c3171f58d5",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+    "docs/design/D5-I37-EVIDENCE-AUDIT-DESIGN.md": "d75c428fdc7f10c87281b69bf022a3b9fe399e859dab28f4e835285fd6c5e069",
+    "docs/design/D5-I37-EVIDENCE-AUDIT-REVIEW.md": "87960b20103bee6d1ef5bf38a37a2cd031a38b239d2e14831903c71be6b832b7",
+    "docs/design/D5-I34-DURABLE-TASK-LAB.md": "1ea896ee59a98636be673b71aa6150b85a5894848bd247e2c6b72b1db506b5ae",
+    "docs/design/D5-I36-DURABLE-RELATIONAL-LAB.md": "acd796a07acecd447764b464d9de2f08264cacbefd5da30dee7663db3da358f1",
+    "docs/design/D5-I38-EVIDENCE-AUDIT-LAB.md": "d3ef7962d56b2222efdaf8ae8e8d55990261784bb76ded4d5758b2b7ff4c5b16",
+    "docs/validation/D5-I34-results.json": "a05f204d0029df2aebcad1a17638b7c3850d7ad2161fd52a95f785ac6be2715b",
+    "docs/validation/D5-I36-results.json": "888acc79c377242fae29598a456f2b436d9f0be992f40869cf04cd0ff07d0f4b",
+    "docs/validation/D5-I38-raw.json": "d56b5c28012544c8402dbadf94e3e29aa1acc3f5dfc9bd0bd3677e29abd99ac7",
+    "docs/validation/D5-I38-results.json": "22e912bf1eb03a9d71c9f8f2cb816d2564e61b2ac73d7e9b359d6c03e99198aa",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c"
+  },
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "limitations": [
+    "Design only; no semantic review performed or new tests run.",
+    "Candidate maps from registered reports do not establish coverage or sufficiency.",
+    "I34/I36 historical raw is NOT_RECORDED; no reconstruction.",
+    "No global criterion closure, D1-D4 reopening or expansion of accepted I1-I20 milestone."
+  ]
+}
