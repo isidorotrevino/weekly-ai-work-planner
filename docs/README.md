@@ -23,6 +23,13 @@ preservada y decisiones para la próxima sesión.
 
 ## D5 iniciado / D5 started
 
+[I34: TASK durable sintética / durable synthetic TASK lab](design/D5-I34-DURABLE-TASK-LAB.md)
+y [resultados propios / results](validation/D5-I34-results.md): implementación del
+contrato I33-F aprobado, captura I26 separada, estado CLIENT/REMOTE nuevo y
+recuperación explícita con tickets durables. [JSON](validation/D5-I34-results.json).
+Solo T Markdown; R relacional, Docs y siete criterios reales pendientes.
+GI33/GI34/GI38/GI39/GI40 con evidencia acotada; D5 y G01–G07 abiertos. Sin publicación.
+
 [I33: propuesta de unión y evidencia integrada / proposed integration boundaries](design/D5-I33-INTEGRATED-EVIDENCE-DESIGN.md)
 y [matriz UI01–UI40 / review matrix](design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md):
 GI33/GI34/GI38/GI39/GI40, inventario, vigencia entre fronteras y decisiones

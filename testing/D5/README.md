@@ -438,3 +438,26 @@ changes. The complete runner also executes previous regressions: I26 owns the
 Linux/fsync/flock temporary labs and child-process cleanup; these are not durable
 quota recovery. G01–G07 remain open. La demo no recibe rutas/URL/credenciales y
 publica solo estados/contadores; los snapshots completos de fixture son privados.
+
+
+## I34: unión TASK durable sintética
+
+Implementa el [contrato I33-F](../../docs/design/D5-I33-DURABLE-INTEGRATION-DESIGN.md)
+para T Markdown; [alcance y límites](../../docs/design/D5-I34-DURABLE-TASK-LAB.md)
+y [resultados](../../docs/validation/D5-I34-results.md). Python estándar y Linux local
+con fsync/rename/flock. Sin Docker/SQL, proveedores o credenciales reales.
+
+```bash
+python3 -m testing.D5.demo_durable_integration
+python3 -m unittest testing.D5.test_durable_integration -v
+python3 -m testing.D5.run_durable_lab
+```
+
+La batería nueva mata solo hijos spawn propios en puntos notificados por pipe y
+comprueba recuperación en procesos nuevos, incluyendo efecto/ticket remoto durable.
+El runner completo también reejecuta las regresiones I26/I28/I30/I32 y Python
+anterior, identificadas aparte. Limpia exclusivamente raíces propias con marcas y
+sentinels; no tocar dev/run_data/D4. No hay daemon o recuperación/envío automáticos.
+La capacidad settle_or_close es propia del doble, no de Plane real. R relacional,
+Docs y siete criterios reales no corrieron; D5 global/G01–G07 siguen abiertos.
+Capturas/inspect/estado de disco son privados; demo/runner imprimen datos saneados.
