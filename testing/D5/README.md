@@ -461,3 +461,27 @@ sentinels; no tocar dev/run_data/D4. No hay daemon o recuperación/envío autom�
 La capacidad settle_or_close es propia del doble, no de Plane real. R relacional,
 Docs y siete criterios reales no corrieron; D5 global/G01–G07 siguen abiertos.
 Capturas/inspect/estado de disco son privados; demo/runner imprimen datos saneados.
+
+
+## I36: recorrido relacional durable R
+
+[Contrato I35](../../docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md),
+[alcance de implementación](../../docs/design/D5-I36-DURABLE-RELATIONAL-LAB.md)
+y [resultados](../../docs/validation/D5-I36-results.md). Python estándar/Linux local,
+fsync/rename/flock; nuevos almacenes R, kernel I34 sin cambios y entrada tipada I30.
+
+```bash
+python3 -m testing.D5.demo_durable_relational
+python3 -m unittest testing.D5.test_durable_relational -v
+python3 -m testing.D5.run_relational_durable_lab
+```
+
+El lote confirma entidades/relaciones/procedencia/recibo juntos. Cada TASK seleccionada
+desde ese recibo requiere proyección/revisión propia; resultados parciales remotos
+no deshacen el lote ni se convierten en éxito distribuido. Restart no envía/consulta/
+cierra/reintenta automáticamente. Spawn/SIGKILL solo de hijos propios con señal de
+punto de fallo y limpieza selectiva de raíces propias; sin tocar dev/run_data/D4.
+El runner completo reejecuta T I34 y regresiones anteriores en grupos separados.
+No HTTP/SQL/Docker, proveedores/credenciales reales o activación. R relacional no
+acredita los siete criterios reales pendientes. D5 global/G01–G07 abiertos; P0 vigente.
+Inspecciones/estado contienen texto de fixture privado; demo y runner emiten resúmenes.

@@ -23,6 +23,13 @@ preservada y decisiones para la próxima sesión.
 
 ## D5 iniciado / D5 started
 
+[I36: unión relacional durable / durable relational integration](design/D5-I36-DURABLE-RELATIONAL-LAB.md)
+y [resultados propios](validation/D5-I36-results.md): I35 aprobado, lote local atómico,
+selección de TASK desde recibo y proyecciones revisadas con ledger R independiente.
+[JSON](validation/D5-I36-results.json). Kernel I34 e I30 preservados; UI25/UI34 con
+unión de fixture propia, sin atomicidad remota distribuida o prueba de proveedor real.
+D5 global y G01–G07 abiertos; P0 vigente, sin ampliar A52 o iniciar D6.
+
 [I35: contrato relacional durable R / proposed durable relational path](design/D5-I35-DURABLE-RELATIONAL-DESIGN.md)
 y [matriz DR01–DR40](design/D5-I35-DURABLE-RELATIONAL-REVIEW.md): UI25/UI34,
 lote local atómico y proyecciones TASK individualmente revisadas, sin atomicidad
