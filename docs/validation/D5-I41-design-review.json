@@ -1,0 +1,423 @@
+{
+  "schema": "d5.durable-concurrency-design.v1",
+  "increment": "D5-I41",
+  "date": "2026-10-24",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "900e837edfdd97d0b85f1b8c8b455f5797f24fa0",
+  "authority": {
+    "user_selection": "A — Diseñar carreras H03 de respuesta/consulta/revocación y EDIT frente a UPDATE en T/R",
+    "scope": "Contract and matrix preparation only; concrete future implementation approval pending."
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_increment": "I42",
+  "product_changes_authorized": false,
+  "historical_tests_runners_registry_changes_authorized": false,
+  "cases": [
+    {
+      "id": "HC01",
+      "path": "T",
+      "initial_state": "L: UNKNOWN, ledger 1; QUERY confirmada, P remota, HEAD E común",
+      "order": "RESULT directo primero; otro RESULT pierde HEAD",
+      "required_oracle": "Ronda 1: ledger 2, P exacta, EFFECT_CONFIRMED, pendientes consumidos y un efecto. Ronda 2: HEAD fresca + ledger viejo → CONFLICT_LEDGER sin recibo/cambio. Ronda 3: reconcile nuevo → ledger 3, misma P y REMOTE intacto.",
+      "UI": [
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC02",
+      "path": "T",
+      "initial_state": "L: UNKNOWN, ledger 1; QUERY confirmada, P remota, HEAD E común",
+      "order": "RESULT de reconcile primero; otro RESULT pierde HEAD",
+      "required_oracle": "Ronda 1: ledger 2, P exacta, EFFECT_CONFIRMED, pendientes consumidos y un efecto. Ronda 2: HEAD fresca + ledger viejo → CONFLICT_LEDGER sin recibo/cambio. Ronda 3: reconcile nuevo → ledger 3, misma P y REMOTE intacto.",
+      "UI": [
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC03",
+      "path": "R",
+      "initial_state": "L: UNKNOWN, ledger 1; QUERY confirmada, P remota, HEAD E común",
+      "order": "RESULT directo primero; otro RESULT pierde HEAD",
+      "required_oracle": "Ronda 1: ledger 2, P exacta, EFFECT_CONFIRMED, pendientes consumidos y un efecto. Ronda 2: HEAD fresca + ledger viejo → CONFLICT_LEDGER sin recibo/cambio. Ronda 3: reconcile nuevo → ledger 3, misma P y REMOTE intacto.",
+      "UI": [
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC04",
+      "path": "R",
+      "initial_state": "L: UNKNOWN, ledger 1; QUERY confirmada, P remota, HEAD E común",
+      "order": "RESULT de reconcile primero; otro RESULT pierde HEAD",
+      "required_oracle": "Ronda 1: ledger 2, P exacta, EFFECT_CONFIRMED, pendientes consumidos y un efecto. Ronda 2: HEAD fresca + ledger viejo → CONFLICT_LEDGER sin recibo/cambio. Ronda 3: reconcile nuevo → ledger 3, misma P y REMOTE intacto.",
+      "UI": [
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC05",
+      "path": "T",
+      "initial_state": "V: UNKNOWN, P remota, PROJECTION ACCEPT v1, HEAD E común",
+      "order": "RESULT primero; otro comando pierde HEAD",
+      "required_oracle": "Separar ronda competida y acción posterior explícita: RESULT primero conserva CURRENT hasta REVOKE nuevo; REVOKE primero deja UNKNOWN/STALE hasta reconcile nuevo. Final histórico EFFECT_CONFIRMED + STALE, REVOKE v2, un efecto, ningún envío nuevo.",
+      "UI": [
+        "UI30",
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC06",
+      "path": "T",
+      "initial_state": "V: UNKNOWN, P remota, PROJECTION ACCEPT v1, HEAD E común",
+      "order": "REVIEW REVOKE primero; otro comando pierde HEAD",
+      "required_oracle": "Separar ronda competida y acción posterior explícita: RESULT primero conserva CURRENT hasta REVOKE nuevo; REVOKE primero deja UNKNOWN/STALE hasta reconcile nuevo. Final histórico EFFECT_CONFIRMED + STALE, REVOKE v2, un efecto, ningún envío nuevo.",
+      "UI": [
+        "UI30",
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC07",
+      "path": "R",
+      "initial_state": "V: UNKNOWN, P remota, PROJECTION ACCEPT v1, HEAD E común",
+      "order": "RESULT primero; otro comando pierde HEAD",
+      "required_oracle": "Separar ronda competida y acción posterior explícita: RESULT primero conserva CURRENT hasta REVOKE nuevo; REVOKE primero deja UNKNOWN/STALE hasta reconcile nuevo. Final histórico EFFECT_CONFIRMED + STALE, REVOKE v2, un efecto, ningún envío nuevo.",
+      "UI": [
+        "UI30",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC08",
+      "path": "R",
+      "initial_state": "V: UNKNOWN, P remota, PROJECTION ACCEPT v1, HEAD E común",
+      "order": "REVIEW REVOKE primero; otro comando pierde HEAD",
+      "required_oracle": "Separar ronda competida y acción posterior explícita: RESULT primero conserva CURRENT hasta REVOKE nuevo; REVOKE primero deja UNKNOWN/STALE hasta reconcile nuevo. Final histórico EFFECT_CONFIRMED + STALE, REVOKE v2, un efecto, ningún envío nuevo.",
+      "UI": [
+        "UI30",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC09",
+      "path": "T",
+      "initial_state": "U: entidad v/payload A/foreign sentinel; UPDATE aprobado base B; EDIT fijado a v",
+      "order": "EDIT primero; versiones preparadas antes de competir",
+      "required_oracle": "EDIT primero: UPDATE NO_EFFECT/REMOTE_PRECONDITION, retry_tick=None, HEAD +2 y entidad +1. UPDATE primero: EDIT REMOTE_CAS sin recibo, HEAD +1 y entidad +1. Publicar prueba UPDATE explícitamente; foreign preservado; paquete viejo no reintentable.",
+      "UI": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC10",
+      "path": "T",
+      "initial_state": "U: entidad v/payload A/foreign sentinel; UPDATE aprobado base B; EDIT fijado a v",
+      "order": "UPDATE primero; versiones preparadas antes de competir",
+      "required_oracle": "EDIT primero: UPDATE NO_EFFECT/REMOTE_PRECONDITION, retry_tick=None, HEAD +2 y entidad +1. UPDATE primero: EDIT REMOTE_CAS sin recibo, HEAD +1 y entidad +1. Publicar prueba UPDATE explícitamente; foreign preservado; paquete viejo no reintentable.",
+      "UI": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC11",
+      "path": "R",
+      "initial_state": "U: entidad v/payload A/foreign sentinel; UPDATE aprobado base B; EDIT fijado a v",
+      "order": "EDIT primero; versiones preparadas antes de competir",
+      "required_oracle": "EDIT primero: UPDATE NO_EFFECT/REMOTE_PRECONDITION, retry_tick=None, HEAD +2 y entidad +1. UPDATE primero: EDIT REMOTE_CAS sin recibo, HEAD +1 y entidad +1. Publicar prueba UPDATE explícitamente; foreign preservado; paquete viejo no reintentable.",
+      "UI": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC12",
+      "path": "R",
+      "initial_state": "U: entidad v/payload A/foreign sentinel; UPDATE aprobado base B; EDIT fijado a v",
+      "order": "UPDATE primero; versiones preparadas antes de competir",
+      "required_oracle": "EDIT primero: UPDATE NO_EFFECT/REMOTE_PRECONDITION, retry_tick=None, HEAD +2 y entidad +1. UPDATE primero: EDIT REMOTE_CAS sin recibo, HEAD +1 y entidad +1. Publicar prueba UPDATE explícitamente; foreign preservado; paquete viejo no reintentable.",
+      "UI": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "kind": "FORCED_PROCESS_ORDER",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC13",
+      "path": "T",
+      "initial_state": "L: efecto P remoto; CLIENT UNKNOWN",
+      "order": "RESULT con prueba incompatible; después consulta pública con P correcta",
+      "required_oracle": "CONFLICT/hard_conflict persiste, sin adoptar binding desde prueba incompatible ni habilitar envío nuevo; un efecto remoto histórico. Registrar entrada alterada sintética y posterior P real sin fabricar autoridad.",
+      "UI": [
+        "UI32"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC14",
+      "path": "R",
+      "initial_state": "L: efecto P remoto; CLIENT UNKNOWN",
+      "order": "RESULT con prueba incompatible; después consulta pública con P correcta",
+      "required_oracle": "CONFLICT/hard_conflict persiste, sin adoptar binding desde prueba incompatible ni habilitar envío nuevo; un efecto remoto histórico. Registrar entrada alterada sintética y posterior P real sin fabricar autoridad.",
+      "UI": [
+        "UI32",
+        "UI34"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC15",
+      "path": "T",
+      "initial_state": "U: base B contiene entidad v/payload A",
+      "order": "EDIT A→B; EDIT B→A; después UPDATE con base vieja",
+      "required_oracle": "Entidad v+2 antes del UPDATE; igualdad de payload no restaura base. NO_EFFECT/REMOTE_PRECONDITION, sin sobrescritura; dos EDIT y sus recibos/versiones explícitos. No se denomina carrera ABA simultánea.",
+      "UI": [
+        "UI31"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC16",
+      "path": "R",
+      "initial_state": "U: base B contiene entidad v/payload A",
+      "order": "EDIT A→B; EDIT B→A; después UPDATE con base vieja",
+      "required_oracle": "Entidad v+2 antes del UPDATE; igualdad de payload no restaura base. NO_EFFECT/REMOTE_PRECONDITION, sin sobrescritura; dos EDIT y sus recibos/versiones explícitos. No se denomina carrera ABA simultánea.",
+      "UI": [
+        "UI31",
+        "UI34"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC17",
+      "path": "T",
+      "initial_state": "U: base B incluye foreign inicial",
+      "order": "EDIT solo foreign; después UPDATE con base B",
+      "required_oracle": "Base completa obsoleta: UPDATE NO_EFFECT/REMOTE_PRECONDITION; payload y foreign editado conservados, entidad solo sube por EDIT. No equiparar a conflicto solo de payload.",
+      "UI": [
+        "UI31"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC18",
+      "path": "R",
+      "initial_state": "U: base B incluye foreign inicial",
+      "order": "EDIT solo foreign; después UPDATE con base B",
+      "required_oracle": "Base completa obsoleta: UPDATE NO_EFFECT/REMOTE_PRECONDITION; payload y foreign editado conservados, entidad solo sube por EDIT. No equiparar a conflicto solo de payload.",
+      "UI": [
+        "UI31",
+        "UI34"
+      ],
+      "kind": "CONTROLLED_SEQUENCE",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC19",
+      "path": "T",
+      "initial_state": "PROJECTION preparada y ACCEPT, todavía sin ISSUE",
+      "order": "REVOKE confirma antes de ISSUE",
+      "required_oracle": "ISSUE bloqueado; cero nuevos sends/tickets/efectos y revisión revocada. Distinguir esta guarda del efecto ya posible tras ISSUE de HC05–HC08.",
+      "UI": [
+        "UI30"
+      ],
+      "kind": "NEGATIVE_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC20",
+      "path": "R",
+      "initial_state": "PROJECTION preparada y ACCEPT, todavía sin ISSUE",
+      "order": "REVOKE confirma antes de ISSUE",
+      "required_oracle": "ISSUE bloqueado; cero nuevos sends/tickets/efectos y revisión revocada. Distinguir esta guarda del efecto ya posible tras ISSUE de HC05–HC08.",
+      "UI": [
+        "UI30",
+        "UI34"
+      ],
+      "kind": "NEGATIVE_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC21",
+      "path": "T/R harness",
+      "initial_state": "Labs propios y hooks existentes",
+      "order": "READY ambos → W before_object con lock → C probe EAGAIN/EWOULDBLOCK → liberar W",
+      "required_oracle": "ACK causal completo, operaciones/gates identificados; negativas de evento ausente/timeout/probe inesperado fallan sin PASS parcial; hijos propios terminados/esperados. No afirma que C ya ejecutó flock bloqueante ni demuestra recuperación H02.",
+      "UI": [
+        "UI33",
+        "UI38"
+      ],
+      "kind": "HARNESS_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC22",
+      "path": "T/R harness",
+      "initial_state": "Ownership/marker/inodo y sentinels propios",
+      "order": "Creación/terminación/limpieza propia; controles de ownership/enlace",
+      "required_oracle": "Máximo 4 hijos vivos/caso; 20 s/gate, 120 s/caso, 900 s campaña propia; 256 eventos/caso, raw 8 MiB, evento 16 KiB. Cero recursos propios restantes en éxito. Ownership inválido impide borrar y registra residuo/fallo. Sin inspección operativa.",
+      "UI": [
+        "UI12",
+        "UI35",
+        "UI36",
+        "UI37",
+        "UI38",
+        "UI39",
+        "UI40"
+      ],
+      "kind": "RESOURCE_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC23",
+      "path": "Campaña propia",
+      "initial_state": "Inventario nuevo, históricos preservados",
+      "order": "Hashes pre/post y raw nuevo anclado con contexto",
+      "required_oracle": "Registrar Python/plataforma/optimize/__debug__, caso/path/actor/rol/operación/modo/punto/orden/ronda/oráculo. Hashes pertinentes coinciden o invalidan resultado; sin depender de assert deshabilitado. Raw I34/I36 sigue NOT_RECORDED; registro I38 intacto.",
+      "UI": [
+        "UI01",
+        "UI02",
+        "UI04",
+        "UI06",
+        "UI07",
+        "UI39"
+      ],
+      "kind": "EVIDENCE_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HC24",
+      "path": "Campaña y regresiones",
+      "initial_state": "HC previstos, sin ejecuciones actuales",
+      "order": "Runner propio; después runner histórico sin modificar, campaña separada",
+      "required_oracle": "IDs HC→tests/subcasos/órdenes/resultados reales; conteos sin inflar. 321 regresiones Python previstas con raw nuevo separado, sin llamarlo raw histórico; fallos/NOT_RUN explícitos. P0, D5/G01–G07 abiertos, exclusiones y pendientes H03 conservados.",
+      "UI": [
+        "UI08",
+        "UI09",
+        "UI10",
+        "UI11",
+        "UI12",
+        "UI40"
+      ],
+      "kind": "REPORT_CONTROL",
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "planned_case_rows": 24,
+  "new_tests_executed": 0,
+  "functional_campaigns_reexecuted": false,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "proposed_regression_campaign": {
+    "expected_existing_python_tests": 321,
+    "runner": "testing/D5/run_relational_durable_lab.py",
+    "separate_new_raw": true,
+    "not_historical_raw": true,
+    "executed": false
+  },
+  "documentary_checks": {
+    "I40_public_inputs_verified": 42,
+    "I40_documentary_inputs_verified": 3,
+    "local_links_verified": 11,
+    "historical_files_modified": false
+  },
+  "inputs": {
+    "docs/design/D5-I41-NEXT-CUT-SCOPE.md": "cb8a2ec6ace6880dd672b301b6b5e83d81f70427b7ec2d164c2a2125ac5b3f19",
+    "docs/design/D5-I41-DURABLE-CONCURRENCY-DESIGN.md": "bd1a0c846284dca680af4b947673d308d751069271c3c88f48654aa7a6a5a491",
+    "docs/design/D5-I41-DURABLE-CONCURRENCY-REVIEW.md": "c3e391d3cd132a73eea8d3b1ed1d2165e376cb1067bcfc139011d31fcc11cada",
+    "docs/validation/D5-I40-results.json": "8725b3c1a970839b93dfbd0f03986ac5bc52cf383980628156071d8aefa88317",
+    "docs/validation/D5-I40-results.md": "c53d8d43b4a6f7b3e7e4a5e1f1712692c2f1bac344326bf64f6ee7a9fa3d8c45",
+    "docs/validation/D5-I40-matrix.md": "b3a8716c2d01b423def46b6d7bd4f1f5fa6120f48dcfe5714f100d68b9bccc9a",
+    "docs/validation/D5-I40-integrity.json": "4b6ba5810f653f8e6c76c2a38920cf511e526e9e70a8c2128d6c892109948723",
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c"
+  },
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "D1_D4_closed_unchanged": true,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "limitations": [
+    "Design only; no empirical concurrency results.",
+    "HC rows, events and rounds are not distinct-test counts.",
+    "No full H03 or UI/GI closure; excluded races and H02/H07 remain pending.",
+    "I34/I36 original raw remains NOT_RECORDED.",
+    "No inference of integrated persistence/recovery from isolated PASS.",
+    "Git tracking reference is local; remote not freshly queried."
+  ]
+}
