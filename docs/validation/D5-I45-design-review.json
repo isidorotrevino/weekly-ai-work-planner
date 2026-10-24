@@ -1,0 +1,937 @@
+{
+  "schema": "d5.durable-issue-create-design.v1",
+  "increment": "D5-I45",
+  "date": "2026-10-24",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "71d142898ecedb4f1c44fc89ecedaa5d31bb81f5",
+  "authority": {
+    "user_selection": "A — Doble ISSUE/CREATE H03/GI39 en T/R",
+    "scope": "Contract/matrix preparation only; implementation and test execution not yet authorized."
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_increment": "I46",
+  "product_changes_authorized": false,
+  "historical_tests_runners_I42_I44_registry_changes_authorized": false,
+  "rows": [
+    {
+      "id": "IC01",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C1_EXACT",
+      "input_identity": "Mismo cid/send/ticket/args/expected E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro histórico idéntico; un commit/recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Sin segundo ISSUE activo; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC02",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C1_EXACT",
+      "input_identity": "Mismo cid/send/ticket/args/expected E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro histórico idéntico; un commit/recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Sin segundo ISSUE activo; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC03",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C1_EXACT",
+      "input_identity": "Mismo cid/send/ticket/args/expected E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro histórico idéntico; un commit/recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Sin segundo ISSUE activo; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC04",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C1_EXACT",
+      "input_identity": "Mismo cid/send/ticket/args/expected E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro histórico idéntico; un commit/recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Sin segundo ISSUE activo; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC05",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C2_DISTINCT",
+      "input_identity": "Cid/send/ticket distintos, mismo M/B y E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; sin nuevo recibo/ticket; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC06",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C2_DISTINCT",
+      "input_identity": "Cid/send/ticket distintos, mismo M/B y E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; sin nuevo recibo/ticket; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC07",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C2_DISTINCT",
+      "input_identity": "Cid/send/ticket distintos, mismo M/B y E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; sin nuevo recibo/ticket; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC08",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C2_DISTINCT",
+      "input_identity": "Cid/send/ticket distintos, mismo M/B y E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; un send/attempt/pending UNKNOWN ledger 1; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; sin nuevo recibo/ticket; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC09",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C3_BUSINESS_REPEAT",
+      "input_identity": "Cid distintos, mismo send/ticket/args y E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; repetición de negocio no equivale a replay de cid; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; guardia anterior a TICKET_EXISTS; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC10",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C3_BUSINESS_REPEAT",
+      "input_identity": "Cid distintos, mismo send/ticket/args y E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; repetición de negocio no equivale a replay de cid; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; guardia anterior a TICKET_EXISTS; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC11",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C3_BUSINESS_REPEAT",
+      "input_identity": "Cid distintos, mismo send/ticket/args y E",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; repetición de negocio no equivale a replay de cid; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; guardia anterior a TICKET_EXISTS; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC12",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C3_BUSINESS_REPEAT",
+      "input_identity": "Cid distintos, mismo send/ticket/args y E",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro CONFLICT_HEAD sin recibo; repetición de negocio no equivale a replay de cid; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Petición posterior del perdedor con HEAD fresca → BINDING_UNRESOLVED; guardia anterior a TICKET_EXISTS; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC13",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C4_COMMAND_COLLISION",
+      "input_identity": "Mismo cid/send, tickets distintos; M/B/E iguales",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro COMMAND_CONFLICT por request distinto antes de CAS; un solo recibo; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Repetición incompatible con expected original conserva COMMAND_CONFLICT, sin cambio; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC14",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C4_COMMAND_COLLISION",
+      "input_identity": "Mismo cid/send, tickets distintos; M/B/E iguales",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro COMMAND_CONFLICT por request distinto antes de CAS; un solo recibo; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Repetición incompatible con expected original conserva COMMAND_CONFLICT, sin cambio; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC15",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C4_COMMAND_COLLISION",
+      "input_identity": "Mismo cid/send, tickets distintos; M/B/E iguales",
+      "order": "A_FIRST",
+      "required_oracle": "Ganador confirma; otro COMMAND_CONFLICT por request distinto antes de CAS; un solo recibo; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Repetición incompatible con expected original conserva COMMAND_CONFLICT, sin cambio; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC16",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "ISSUE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "C4_COMMAND_COLLISION",
+      "input_identity": "Mismo cid/send, tickets distintos; M/B/E iguales",
+      "order": "B_FIRST",
+      "required_oracle": "Ganador confirma; otro COMMAND_CONFLICT por request distinto antes de CAS; un solo recibo; REMOTE aún vacío, revisiones/TASK/generaciones intactas",
+      "explicit_followup": "Repetición incompatible con expected original conserva COMMAND_CONFLICT, sin cambio; ejecutar solo ticket emitido ganador una vez y reconcile explícita → EFFECT_CONFIRMED ledger 2; replay del ganador viejo devuelve historia UNKNOWN sin rebobinar HEAD/estado",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC17",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R1_ISSUED_DELIVERY_REPEAT",
+      "input_identity": "Un ISSUE T0 emitido, dos execute(T0,M) idénticos, cid/request deterministas iguales",
+      "order": "A_FIRST",
+      "required_oracle": "Ambos retornan P idéntica; HEAD/recibos/tickets REMOTE +1; una entidad versión 1, K/payload exactos; CLIENT UNKNOWN ledger 1 durante carrera",
+      "explicit_followup": "Read_command del cid exacto; reconcile del send emitido sin execute/close → ledger 2/P exacta, pendientes vacíos y REMOTE intacto",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC18",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R1_ISSUED_DELIVERY_REPEAT",
+      "input_identity": "Un ISSUE T0 emitido, dos execute(T0,M) idénticos, cid/request deterministas iguales",
+      "order": "B_FIRST",
+      "required_oracle": "Ambos retornan P idéntica; HEAD/recibos/tickets REMOTE +1; una entidad versión 1, K/payload exactos; CLIENT UNKNOWN ledger 1 durante carrera",
+      "explicit_followup": "Read_command del cid exacto; reconcile del send emitido sin execute/close → ledger 2/P exacta, pendientes vacíos y REMOTE intacto",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC19",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R1_ISSUED_DELIVERY_REPEAT",
+      "input_identity": "Un ISSUE T0 emitido, dos execute(T0,M) idénticos, cid/request deterministas iguales",
+      "order": "A_FIRST",
+      "required_oracle": "Ambos retornan P idéntica; HEAD/recibos/tickets REMOTE +1; una entidad versión 1, K/payload exactos; CLIENT UNKNOWN ledger 1 durante carrera",
+      "explicit_followup": "Read_command del cid exacto; reconcile del send emitido sin execute/close → ledger 2/P exacta, pendientes vacíos y REMOTE intacto",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC20",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R1_ISSUED_DELIVERY_REPEAT",
+      "input_identity": "Un ISSUE T0 emitido, dos execute(T0,M) idénticos, cid/request deterministas iguales",
+      "order": "B_FIRST",
+      "required_oracle": "Ambos retornan P idéntica; HEAD/recibos/tickets REMOTE +1; una entidad versión 1, K/payload exactos; CLIENT UNKNOWN ledger 1 durante carrera",
+      "explicit_followup": "Read_command del cid exacto; reconcile del send emitido sin execute/close → ledger 2/P exacta, pendientes vacíos y REMOTE intacto",
+      "kind": "FORCED_PROCESS_ORDER",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC21",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R2_REMOTE_ONLY_EXTRA_UNISSUED_TICKET",
+      "input_identity": "A=T0 emitido; B=T1 extra NO emitido por CLIENT; mismo M/K; cid/request diferentes",
+      "order": "A_FIRST",
+      "required_oracle": "Primero EFFECT_CONFIRMED; segundo NO_EFFECT/CREATION_KEY_CONFLICT/retry_tick=None; HEAD/recibos/tickets +2; una entidad versión 1. No dos envíos autorizados",
+      "explicit_followup": "Ninguna reconcile/RESULT: CLIENT conserva UNKNOWN ledger 1 con única tentativa T0; jamás adoptar prueba T1 por igualdad de K/payload. Solo control REMOTE, sin conclusión integrada",
+      "kind": "FORCED_PROCESS_ORDER_REMOTE_NEGATIVE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC22",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R2_REMOTE_ONLY_EXTRA_UNISSUED_TICKET",
+      "input_identity": "A=T0 emitido; B=T1 extra NO emitido por CLIENT; mismo M/K; cid/request diferentes",
+      "order": "B_FIRST",
+      "required_oracle": "Primero EFFECT_CONFIRMED; segundo NO_EFFECT/CREATION_KEY_CONFLICT/retry_tick=None; HEAD/recibos/tickets +2; una entidad versión 1. No dos envíos autorizados",
+      "explicit_followup": "Ninguna reconcile/RESULT: CLIENT conserva UNKNOWN ledger 1 con única tentativa T0; jamás adoptar prueba T1 por igualdad de K/payload. Solo control REMOTE, sin conclusión integrada",
+      "kind": "FORCED_PROCESS_ORDER_REMOTE_NEGATIVE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC23",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R2_REMOTE_ONLY_EXTRA_UNISSUED_TICKET",
+      "input_identity": "A=T0 emitido; B=T1 extra NO emitido por CLIENT; mismo M/K; cid/request diferentes",
+      "order": "A_FIRST",
+      "required_oracle": "Primero EFFECT_CONFIRMED; segundo NO_EFFECT/CREATION_KEY_CONFLICT/retry_tick=None; HEAD/recibos/tickets +2; una entidad versión 1. No dos envíos autorizados",
+      "explicit_followup": "Ninguna reconcile/RESULT: CLIENT conserva UNKNOWN ledger 1 con única tentativa T0; jamás adoptar prueba T1 por igualdad de K/payload. Solo control REMOTE, sin conclusión integrada",
+      "kind": "FORCED_PROCESS_ORDER_REMOTE_NEGATIVE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC24",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "R2_REMOTE_ONLY_EXTRA_UNISSUED_TICKET",
+      "input_identity": "A=T0 emitido; B=T1 extra NO emitido por CLIENT; mismo M/K; cid/request diferentes",
+      "order": "B_FIRST",
+      "required_oracle": "Primero EFFECT_CONFIRMED; segundo NO_EFFECT/CREATION_KEY_CONFLICT/retry_tick=None; HEAD/recibos/tickets +2; una entidad versión 1. No dos envíos autorizados",
+      "explicit_followup": "Ninguna reconcile/RESULT: CLIENT conserva UNKNOWN ledger 1 con única tentativa T0; jamás adoptar prueba T1 por igualdad de K/payload. Solo control REMOTE, sin conclusión integrada",
+      "kind": "FORCED_PROCESS_ORDER_REMOTE_NEGATIVE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI33",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC25",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "MUTATED_REQUEST_AFTER_VALID_CREATE",
+      "input_identity": "Primero T0 emitido/M correctos → P; después copia negativa de M cambia task.title/payload.name, mismo T0/K",
+      "order": "VALID_CREATE_THEN_MUTATION",
+      "required_oracle": "TICKET_CONFLICT por M hash distinto con esquema válido; sin nuevo commit/recibo/efecto y P/entidad originales intactos",
+      "explicit_followup": "Read_command/lector exactos; paquete alterado nunca ganador concurrente, revisado o adoptado por CLIENT",
+      "kind": "CONTROLLED_NEGATIVE_SEQUENCE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC26",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "MUTATED_REQUEST_AFTER_VALID_CREATE",
+      "input_identity": "Primero T0 emitido/M correctos → P; después copia negativa de M cambia task.title/payload.name, mismo T0/K",
+      "order": "VALID_CREATE_THEN_MUTATION",
+      "required_oracle": "TICKET_CONFLICT por M hash distinto con esquema válido; sin nuevo commit/recibo/efecto y P/entidad originales intactos",
+      "explicit_followup": "Read_command/lector exactos; paquete alterado nunca ganador concurrente, revisado o adoptado por CLIENT",
+      "kind": "CONTROLLED_NEGATIVE_SEQUENCE",
+      "UI_targets_partial": [
+        "UI31",
+        "UI32",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC27",
+      "path": "T",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "BAD_KEY_AND_COMMAND_HASH",
+      "input_identity": "M/T0 emitidos, REMOTE vacío; K falsa con formato válido; cid ISSUE existente",
+      "order": "SERIAL_NEGATIVES",
+      "required_oracle": "Execute con K falsa → REMOTE_SCOPE antes de crear; read_command ISSUE con request hash falso → COMMAND_CONFLICT, sin mutación",
+      "explicit_followup": "Read_command con hash exacto devuelve historia UNKNOWN sin activar; no fabricar segunda TASK ni inferir aislamiento de creaciones válidas distintas",
+      "kind": "CONTROLLED_NEGATIVE_SEQUENCE",
+      "UI_targets_partial": [
+        "UI21",
+        "UI31",
+        "UI32"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC28",
+      "path": "R",
+      "role": "REMOTE",
+      "operation": "EXECUTE",
+      "mode": "CREATE",
+      "stage": "PROJECTION",
+      "family": "BAD_KEY_AND_COMMAND_HASH",
+      "input_identity": "M/T0 emitidos, REMOTE vacío; K falsa con formato válido; cid ISSUE existente",
+      "order": "SERIAL_NEGATIVES",
+      "required_oracle": "Execute con K falsa → REMOTE_SCOPE antes de crear; read_command ISSUE con request hash falso → COMMAND_CONFLICT, sin mutación",
+      "explicit_followup": "Read_command con hash exacto devuelve historia UNKNOWN sin activar; no fabricar segunda TASK ni inferir aislamiento de creaciones válidas distintas",
+      "kind": "CONTROLLED_NEGATIVE_SEQUENCE",
+      "UI_targets_partial": [
+        "UI21",
+        "UI31",
+        "UI32",
+        "UI34"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC29",
+      "path": "T/R harness",
+      "role": "HARNESS",
+      "operation": "CONTROL",
+      "mode": "NONE",
+      "stage": "NONE",
+      "family": "PROTOCOL_OWNERSHIP",
+      "input_identity": "Labs/actores/markers/inodos/sentinels propios; hooks existentes",
+      "order": "CONTROL_NEGATIVES",
+      "required_oracle": "READY incorrecto/ausente, probe libre, EOF, salida inesperada o timeout no prueban carrera; ownership/enlace bloquean borrado inseguro; límites de hijos/gates/eventos/salida y cero recursos propios en éxito",
+      "explicit_followup": "Terminar/esperar solo hijos propios; residuo de ownership hace fallar sin limpiar estado operativo; negativas reducidas no cuentan como recovery",
+      "kind": "TRANSVERSE_CONTROL",
+      "UI_targets_partial": [
+        "UI12",
+        "UI35",
+        "UI36",
+        "UI37",
+        "UI38",
+        "UI39",
+        "UI40"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "IC30",
+      "path": "Campañas",
+      "role": "HARNESS",
+      "operation": "CONTROL",
+      "mode": "NONE",
+      "stage": "NONE",
+      "family": "EVIDENCE_COUNTS",
+      "input_identity": "Contrato/M/IDs de emisión/procedencia T0/T1 y discovery/bytes/contexto pertinentes",
+      "order": "PRE_POST_RAW_REPORT",
+      "required_oracle": "Inputs cambiados/añadidos o raw ausente/incompatible invalidan PASS; IC→IDs/rol/modo/stage/punto/orden/oráculo; cuatro grupos separados, sin inflar tests/retornos",
+      "explicit_followup": "Raw/contexto/pre-post nuevos; distinguir CLIENT integrado de REMOTE negativo; preservar históricos, P0 y D5/G01–G07 abiertos",
+      "kind": "TRANSVERSE_CONTROL",
+      "UI_targets_partial": [
+        "UI01",
+        "UI02",
+        "UI04",
+        "UI08",
+        "UI09",
+        "UI10",
+        "UI11",
+        "UI12",
+        "UI39",
+        "UI40"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "planned_rows": 30,
+  "planned_forced_process_order_rows": 24,
+  "new_tests_executed": 0,
+  "functional_campaigns_reexecuted": false,
+  "source_anchors": [
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store._next",
+      "line": 218,
+      "end_line": 246,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store._publish",
+      "line": 312,
+      "end_line": 353,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store.transact",
+      "line": 360,
+      "end_line": 373,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store.read_command",
+      "line": 375,
+      "end_line": 383,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "client_reduce",
+      "line": 150,
+      "end_line": 369,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "creation_key",
+      "line": 378,
+      "end_line": 379,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "remote_manifest",
+      "line": 389,
+      "end_line": 400,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "remote_reduce",
+      "line": 426,
+      "end_line": 474,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Remote.execute",
+      "line": 484,
+      "end_line": 490,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.perform",
+      "line": 523,
+      "end_line": 535,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.dispatch",
+      "line": 562,
+      "end_line": 576,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.reconcile",
+      "line": 578,
+      "end_line": 588,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "creation_key",
+      "line": 153,
+      "end_line": 154,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "client_reduce",
+      "line": 157,
+      "end_line": 281,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "ledger_transition",
+      "line": 284,
+      "end_line": 340,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "remote_manifest",
+      "line": 353,
+      "end_line": 376,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "remote_reduce",
+      "line": 398,
+      "end_line": 446,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Client.perform",
+      "line": 466,
+      "end_line": 469,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "symbol": "DurableIntegrationTest.df37",
+      "line": 399,
+      "end_line": 404,
+      "file_sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "symbol": "DurableIntegrationTest.df38",
+      "line": 406,
+      "end_line": 413,
+      "file_sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "symbol": "DurableRelationalTest.dr28",
+      "line": 276,
+      "end_line": 284,
+      "file_sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "symbol": "DurableRelationalTest.dr31",
+      "line": 300,
+      "end_line": 307,
+      "file_sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+    }
+  ],
+  "proposed_regression_campaigns": [
+    {
+      "scope": "HC",
+      "existing_test_count": 24,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.durable_concurrency.run_concurrency_lab"
+      ],
+      "separate_new_raw": true,
+      "executed": false
+    },
+    {
+      "scope": "HF",
+      "existing_test_count": 40,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.durable_crash_boundaries.run_crash_boundaries_lab"
+      ],
+      "separate_new_raw": true,
+      "executed": false
+    },
+    {
+      "scope": "Python",
+      "existing_test_count": 321,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.D5.run_relational_durable_lab"
+      ],
+      "separate_new_raw": true,
+      "executed": false
+    }
+  ],
+  "remote_negative_extra_ticket": {
+    "rows": [
+      "IC21",
+      "IC22",
+      "IC23",
+      "IC24"
+    ],
+    "T0": "ISSUED_BY_CLIENT",
+    "T1": "NOT_ISSUED_BY_CLIENT",
+    "reconcile_authorized_in_these_rows": false,
+    "integrated_claim_allowed": false
+  },
+  "documentary_checks": {
+    "historical_seals_verified_current": {
+      "I44_inputs": 100,
+      "I44_raw_artifacts": 5,
+      "I43_inputs": 26,
+      "I42_inputs": 91,
+      "I42_raw_artifacts": 5,
+      "I40_inputs": 42,
+      "I40_documentary_inputs": 3
+    },
+    "source_anchors_verified": 22,
+    "local_links_verified": 12,
+    "whitespace_verified": true,
+    "publication_hygiene": "PASS_CONFIGURED_PATTERNS_541_TEXT_FILES_NOT_EXHAUSTIVE"
+  },
+  "inputs": {
+    "docs/design/D5-I45-NEXT-CUT-SCOPE.md": "34b60a3d120395218ac51a87cb233458ed66796a3d2a2f5dfd5039b1181d7831",
+    "docs/design/D5-I45-DURABLE-ISSUE-CREATE-DESIGN.md": "1e2e10d0c8b6f39a73dcee28b62e75c4de229a1375fb7c80c14f5572548679ea",
+    "docs/design/D5-I45-DURABLE-ISSUE-CREATE-REVIEW.md": "c0fd4484dc85bb0a707d77e7663b1602b0f57a99b67372235555f88fdf5b665e",
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/validation/D5-I40-results.json": "8725b3c1a970839b93dfbd0f03986ac5bc52cf383980628156071d8aefa88317",
+    "docs/validation/D5-I42-results.json": "d84d108980ba49ed6786e1a12bec4d85f105184c2a11405e5fb258500ca27583",
+    "docs/validation/D5-I44-results.json": "058c1a39147c249c90b317dc5b9bbd95bdc44683bef59b58cb165ad9d5ebb249",
+    "docs/validation/D5-I44-results.md": "6877efcaa161e72784c0dd66cc260ccf56a2324629cb034808956a86e6e3dbbb",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/durable_concurrency/support.py": "b18e520169e527bfe4b94344c87f2b5a0b20167f3a46d98e657878ec526dc0ee",
+    "testing/durable_concurrency/test_durable_concurrency.py": "6a06ae85dd6efc3ecc921ba1e6a9f6c9530cdf007c2cc68094664591e8575345",
+    "testing/durable_concurrency/run_concurrency_lab.py": "0141c6b239e69d137aa2f0208941704a26006460c70a1cbc4edbdbdb6074fafc",
+    "testing/durable_crash_boundaries/support.py": "831f5e390d9714990aae26e403f8cb27a097970e4078f37fd1037f379ea04dd3",
+    "testing/durable_crash_boundaries/test_durable_crash_boundaries.py": "a9c4d08e16d290fa4ac30a1458ce88f2475884bd892d17abb318b02c9d4d2623",
+    "testing/durable_crash_boundaries/run_crash_boundaries_lab.py": "2c93102a605274f8bc253eaaed25cce78c9a0ff53f37a3c9528b92dbb79d1d1e"
+  },
+  "D5_closed": false,
+  "H03_closed": false,
+  "global_review": "OPEN",
+  "closure": {
+    "GI33": false,
+    "GI34": false,
+    "GI38": false,
+    "GI39": false,
+    "GI40": false
+  },
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "limitations": [
+    "Design only; no runtime tests executed.",
+    "Rows/actors/returns are not test or PASS counts.",
+    "REMOTE extra unissued ticket is a negative domain control, not integrated CLIENT authority.",
+    "Mutated manifest/key requests are serial negative controls without new review.",
+    "Only same approved M/target CREATE competition; other packages/targets/modes remain outside.",
+    "Probe observes exclusion, not entry into blocking flock.",
+    "Historical controls retain their original scope and absent raw/context limits.",
+    "No integrated persistence/recovery or global criterion closure from isolated PASS.",
+    "Git tracking is local; remote not freshly queried."
+  ]
+}
