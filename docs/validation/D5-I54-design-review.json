@@ -1,0 +1,601 @@
+{
+  "schema": "d5.native-ambiguity-design.v1",
+  "increment": "D5-I54",
+  "proposed_increment": "I55",
+  "date": "2026-10-24",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a",
+  "authority": {
+    "selection": "A — Diseñar ambigüedad durable nativa para UI20.3/H07: múltiples coincidencias y respuesta 429",
+    "scope": "Contrato y matriz antes de implementar"
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "publication": {
+    "verified_published_through": "ce44158ebaa603d61c266fe106b0dfc068ff2c80",
+    "I53_local": "131a37e26bf4d01c684d289c0031c8efdfcc960a",
+    "I54_published": false
+  },
+  "new_model_proposed": true,
+  "existing_product_or_fixture_changed": false,
+  "case_count": 36,
+  "domain_cases": 32,
+  "control_cases": 4,
+  "cases": [
+    {
+      "id": "NA01",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "EMPTY_VIEW",
+      "trigger": "Vista eventual vacía sin P; ISSUE sin entrega → QUERY/OBSERVE",
+      "oracle": "UNKNOWN/ledger2/queries1, pending send conservado; no efecto ni retry; reopen pasivo idéntico.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA02",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "EMPTY_VIEW",
+      "trigger": "Vista eventual vacía sin P; ISSUE sin entrega → QUERY/OBSERVE",
+      "oracle": "UNKNOWN/ledger2/queries1, pending send conservado; no efecto ni retry; reopen pasivo idéntico.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA03",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "SINGLE_UNPROVEN",
+      "trigger": "Una coincidencia del catálogo válida sin P de ticket",
+      "oracle": "UNKNOWN/2/1, no adopción; catálogo no es efecto emitido; ausencia de P bloquea retry.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA04",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "SINGLE_UNPROVEN",
+      "trigger": "Una coincidencia del catálogo válida sin P de ticket",
+      "oracle": "UNKNOWN/2/1, no adopción; catálogo no es efecto emitido; ausencia de P bloquea retry.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA05",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "SINGLE_EXACT_PROOF",
+      "trigger": "ISSUE sin entrega → execute_response SUCCESS real → query normal → OBSERVE",
+      "oracle": "P exacta + match compatible, EFFECT_CONFIRMED/2/1, entidad única v1, pending vacío; consulta no escribe REMOTE.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA06",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "SINGLE_EXACT_PROOF",
+      "trigger": "ISSUE sin entrega → execute_response SUCCESS real → query normal → OBSERVE",
+      "oracle": "P exacta + match compatible, EFFECT_CONFIRMED/2/1, entidad única v1, pending vacío; consulta no escribe REMOTE.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA07",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "MULTIPLE_UNPROVEN",
+      "trigger": "DECLARE_VIEW con dos IDs distintos; subvariante ID repetido; sin P",
+      "oracle": "CONFLICT/hard_conflict/2/1, una observación con colección íntegra; no selección ni efecto core; retry bloqueado.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA08",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "MULTIPLE_UNPROVEN",
+      "trigger": "DECLARE_VIEW con dos IDs distintos; subvariante ID repetido; sin P",
+      "oracle": "CONFLICT/hard_conflict/2/1, una observación con colección íntegra; no selección ni efecto core; retry bloqueado.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA09",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "MULTIPLE_WITH_PROOF",
+      "trigger": "CREATE real del ticket; catálogo múltiple con P exacta; después vista limpia y otra query",
+      "oracle": "Primer OBSERVE CONFLICT/2/1, P no adoptada; segundo CONFLICT/3/2, historial intacto y un único efecto core.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA10",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "MULTIPLE_WITH_PROOF",
+      "trigger": "CREATE real del ticket; catálogo múltiple con P exacta; después vista limpia y otra query",
+      "oracle": "Primer OBSERVE CONFLICT/2/1, P no adoptada; segundo CONFLICT/3/2, historial intacto y un único efecto core.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA11",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "FOREIGN_MATCH",
+      "trigger": "Un match de key/scope ajeno, envelope exterior correlacionado",
+      "oracle": "CONFLICT/hard_conflict/2/1, sin adopción; registrar identidad ajena; sólo operaciones de catálogo modifican catálogo.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA12",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "FOREIGN_MATCH",
+      "trigger": "Un match de key/scope ajeno, envelope exterior correlacionado",
+      "oracle": "CONFLICT/hard_conflict/2/1, sin adopción; registrar identidad ajena; sólo operaciones de catálogo modifican catálogo.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA13",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "FOREIGN_PROOF",
+      "trigger": "Envelope bien formado pero prueba de otro ticket/M/store/variante",
+      "oracle": "CONFLICT/hard_conflict/2/1, nunca cruzar T/R ni adoptar; reapertura conserva conflicto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA14",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "FOREIGN_PROOF",
+      "trigger": "Envelope bien formado pero prueba de otro ticket/M/store/variante",
+      "oracle": "CONFLICT/hard_conflict/2/1, nunca cruzar T/R ni adoptar; reapertura conserva conflicto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA15",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_429_BEFORE",
+      "trigger": "Dispatch con AMBIGUOUS_429_BEFORE nativo → reapertura → query vacía explícita",
+      "oracle": "UNKNOWN/2/0 sin pending send ni P/entidad; luego UNKNOWN/3/1; registro transporte durable no prueba NO_EFFECT.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA16",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_429_BEFORE",
+      "trigger": "Dispatch con AMBIGUOUS_429_BEFORE nativo → reapertura → query vacía explícita",
+      "oracle": "UNKNOWN/2/0 sin pending send ni P/entidad; luego UNKNOWN/3/1; registro transporte durable no prueba NO_EFFECT.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA17",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_429_AFTER",
+      "trigger": "Dispatch AMBIGUOUS_429_AFTER con efecto real oculto → reopen → query normal",
+      "oracle": "UNKNOWN/2/0 con entidad/P reales; luego EFFECT_CONFIRMED/3/1 del mismo ticket y cero execute en reconcile.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA18",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_429_AFTER",
+      "trigger": "Dispatch AMBIGUOUS_429_AFTER con efecto real oculto → reopen → query normal",
+      "oracle": "UNKNOWN/2/0 con entidad/P reales; luego EFFECT_CONFIRMED/3/1 del mismo ticket y cero execute en reconcile.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA19",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "QUERY_429_WITH_PROOF_HIDDEN",
+      "trigger": "ISSUE sin entrega; execute SUCCESS real; DECLARE_VIEW modo query429; luego restaurar modo normal",
+      "oracle": "Primera query UNKNOWN/2/1, segunda EFFECT_CONFIRMED/3/2; P oculta no adoptada antes; ambas consultas sin efectos.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA20",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "QUERY_429_WITH_PROOF_HIDDEN",
+      "trigger": "ISSUE sin entrega; execute SUCCESS real; DECLARE_VIEW modo query429; luego restaurar modo normal",
+      "oracle": "Primera query UNKNOWN/2/1, segunda EFFECT_CONFIRMED/3/2; P oculta no adoptada antes; ambas consultas sin efectos.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA21",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_RETRY_AFTER",
+      "trigger": "Dispatch 429 BEFORE con retry_after_tick=5 → CLOCK5 → retry expreso y nuevo paquete/cid del binding",
+      "oracle": "UNKNOWN/2/0; ningún retry/ISSUE nuevo aunque tick cumpla; rechazo BINDING_UNRESOLVED, HEAD sin cambio frente a cada petición.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA22",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "AMBIGUOUS_RETRY_AFTER",
+      "trigger": "Dispatch 429 BEFORE con retry_after_tick=5 → CLOCK5 → retry expreso y nuevo paquete/cid del binding",
+      "oracle": "UNKNOWN/2/0; ningún retry/ISSUE nuevo aunque tick cumpla; rechazo BINDING_UNRESOLVED, HEAD sin cambio frente a cada petición.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA23",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "CONCLUSIVE_RATE_LIMIT",
+      "trigger": "Dispatch 429 con P NO_EFFECT RATE_LIMIT exacta y tick5; retry antes/después CLOCK5",
+      "oracle": "NO_EFFECT/2/0; antes RETRY_NOT_ELIGIBLE; después retry expreso mismo M/send, ticket nuevo, EFFECT_CONFIRMED/4/0, dos intentos y un efecto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA24",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "CONCLUSIVE_RATE_LIMIT",
+      "trigger": "Dispatch 429 con P NO_EFFECT RATE_LIMIT exacta y tick5; retry antes/después CLOCK5",
+      "oracle": "NO_EFFECT/2/0; antes RETRY_NOT_ELIGIBLE; después retry expreso mismo M/send, ticket nuevo, EFFECT_CONFIRMED/4/0, dos intentos y un efecto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA25",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "INVALID_ENVELOPE",
+      "trigger": "Estructura/tipos/status no admitido, hash response_id incorrecto, límite8/+1 y bytes; 429+P positiva o tick incoherente",
+      "oracle": "Estructura inválida: error sin OBSERVE ni cambio HEAD/ledger (QUERY pendiente); combinación bien formada incompatible: CONFLICT; no confundir ambos resultados.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA26",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "INVALID_ENVELOPE",
+      "trigger": "Estructura/tipos/status no admitido, hash response_id incorrecto, límite8/+1 y bytes; 429+P positiva o tick incoherente",
+      "oracle": "Estructura inválida: error sin OBSERVE ni cambio HEAD/ledger (QUERY pendiente); combinación bien formada incompatible: CONFLICT; no confundir ambos resultados.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA27",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "OBSERVATION_REPLAY",
+      "trigger": "Query con P exacta; OBSERVE cid fijo; replay idéntico y cid con envelope cambiado",
+      "oracle": "Un recibo/observación/incremento; replay no rebobina; solicitud cambiada rechazada; ledger CAS vieja rechaza segundo OBSERVE distinto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA28",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "OBSERVATION_REPLAY",
+      "trigger": "Query con P exacta; OBSERVE cid fijo; replay idéntico y cid con envelope cambiado",
+      "oracle": "Un recibo/observación/incremento; replay no rebobina; solicitud cambiada rechazada; ledger CAS vieja rechaza segundo OBSERVE distinto.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA29",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "CRASH_BEFORE_OBSERVE",
+      "trigger": "QUERY emitida, P recibida, READY before_observe; SIGKILL y reopen; reconcile explícita nueva",
+      "oracle": "Al abrir UNKNOWN/1/1 con send+qid pending, cero OBSERVE; continuación EFFECT_CONFIRMED/2/2, sin execute ni nuevas entidades.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA30",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "CRASH_BEFORE_OBSERVE",
+      "trigger": "QUERY emitida, P recibida, READY before_observe; SIGKILL y reopen; reconcile explícita nueva",
+      "oracle": "Al abrir UNKNOWN/1/1 con send+qid pending, cero OBSERVE; continuación EFFECT_CONFIRMED/2/2, sin execute ni nuevas entidades.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA31",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CREATE",
+      "family": "CRASH_AFTER_OBSERVE_HEAD",
+      "trigger": "OBSERVE con P, READY dentro Store after_head, SIGKILL; reopen y replay cid",
+      "oracle": "EFFECT_CONFIRMED/2/1, un recibo/observación alcanzable; replay exacto sin cambio HEAD ni repetir transporte.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA32",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CREATE",
+      "family": "CRASH_AFTER_OBSERVE_HEAD",
+      "trigger": "OBSERVE con P, READY dentro Store after_head, SIGKILL; reopen y replay cid",
+      "oracle": "EFFECT_CONFIRMED/2/1, un recibo/observación alcanzable; replay exacto sin cambio HEAD ni repetir transporte.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA33",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CONTROL",
+      "family": "PROTOCOL_OWNERSHIP",
+      "trigger": "Controles READY identidad/rol/variant/op/ticket/punto, EOF/normal/timeout e inode/marker/sentinel/symlink",
+      "oracle": "Rechazo de mensajes/falsas caídas y limpieza insegura; restauración antes de limpiar propio; cero residuos.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA34",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CONTROL",
+      "family": "PROTOCOL_OWNERSHIP",
+      "trigger": "Controles READY identidad/rol/variant/op/ticket/punto, EOF/normal/timeout e inode/marker/sentinel/symlink",
+      "oracle": "Rechazo de mensajes/falsas caídas y limpieza insegura; restauración antes de limpiar propio; cero residuos.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA35",
+      "path": "T",
+      "variant": "NATIVE_T",
+      "operation": "CONTROL",
+      "family": "INVENTORY_RAW",
+      "trigger": "Controles mapas NA36, inputs/raw/hash/schema/skip/budgets; aislamiento config T/R v1 y namespaces nuevos",
+      "oracle": "Fallo explícito ante cambio/omisión/duplicado/límite, no sumar controles internos; seis regresiones separadas y rechazo de namespace cruzado.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    },
+    {
+      "id": "NA36",
+      "path": "R",
+      "variant": "NATIVE_R",
+      "operation": "CONTROL",
+      "family": "INVENTORY_RAW",
+      "trigger": "Controles mapas NA36, inputs/raw/hash/schema/skip/budgets; aislamiento config T/R v1 y namespaces nuevos",
+      "oracle": "Fallo explícito ante cambio/omisión/duplicado/límite, no sumar controles internos; seis regresiones separadas y rechazo de namespace cruzado.",
+      "status": "NOT_RUN",
+      "semantic_status": "NOT_REVIEWED"
+    }
+  ],
+  "model_gaps": {
+    "MG01": "MODEL_GAP_CURRENT_EXTENSION_PROPOSED",
+    "MG02": "MODEL_GAP_CURRENT_EXTENSION_PROPOSED_SYNTHETIC_PROTOCOL_ONLY",
+    "MG03": "OUT_OF_SCOPE_NO_ADOPTION"
+  },
+  "semantic_status": {
+    "UI20.3": "PARTIAL_UNCHANGED",
+    "H07": "OPEN",
+    "D5": "OPEN"
+  },
+  "source_anchors": [
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store",
+      "line": 113,
+      "end_line": 383,
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "client_reduce",
+      "line": 150,
+      "end_line": 369,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "proof_ok",
+      "line": 403,
+      "end_line": 423,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "remote_reduce",
+      "line": 426,
+      "end_line": 474,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Remote",
+      "line": 477,
+      "end_line": 500,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client",
+      "line": 503,
+      "end_line": 606,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "client_reduce",
+      "line": 157,
+      "end_line": 281,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "proof_ok",
+      "line": 379,
+      "end_line": 395,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "remote_reduce",
+      "line": 398,
+      "end_line": 446,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Remote",
+      "line": 454,
+      "end_line": 456,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Client",
+      "line": 459,
+      "end_line": 525,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "symbol": "PlaneFixture",
+      "line": 157,
+      "end_line": 325,
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "commit": "131a37e26bf4d01c684d289c0031c8efdfcc960a"
+    }
+  ],
+  "inputs": {
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+    "docs/design/D5-I28-PLANE-RECONCILIATION-LAB.md": "a2c4582fbd57d2490fc7af15b2786cb783901984b053d9b3b16d068e4a545968",
+    "docs/design/D5-I49-DURABLE-UNCERTAINTY-DESIGN.md": "44d7c02b1c4e9c833d1984bf315a405f24b553415e88d73d57f288125316975a",
+    "docs/design/D5-I49-DURABLE-UNCERTAINTY-REVIEW.md": "2452d9e88531bef1609a54a7d41a2efe7bbebd38e768e6764014c93b9d8d42c5",
+    "docs/design/D5-I51-CLOSURE-PLAN.md": "f640c702127b6865f2ba67e7e6d921578d9895888c4824767785f7b4e4b892c7",
+    "docs/validation/D5-I53-results.md": "11f18234d4577e20ccbbf02dfb5cf00d3fac2cd900ea1046f45185ad69f6722f",
+    "docs/validation/D5-I53-matrix.md": "96e17ad209020d09bfbb6b32c1daaaf10b0ab59f32694258a26266758a2f5c76",
+    "docs/validation/D5-I53-results.json": "c2efd6a1d8f24f243735a06e3e21841e25e38ea84c3a4fb274fd0ffff124ef24",
+    "docs/validation/D5-I53-integrity.json": "b38ac68ccfeabcfdc1d1bd5f71c41cda8cb266277b927fbfd3b6a3ed850e7f01",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "testing/durable_uncertainty/README.md": "3778583c9e6952e1277e9d6d6b348faed5f6a35215745b7d99a48a780e0f961f",
+    "testing/durable_uncertainty/run_uncertainty_lab.py": "d4471d9dc9804e3fca07c34962290d4c26aab9cecc59e47eefdce8c704dca416",
+    "testing/durable_inflight_revocation/README.md": "0e809e6a177f22b753113123fadf97772ddf7623bf6b247323db81f4241a677f"
+  },
+  "documentary_inputs": {
+    "docs/design/D5-I54-NATIVE-AMBIGUITY-DESIGN.md": "307591efeaf4b2ac5348039bc3e0199efffa8e4456805de4fc247697a47bd9c0",
+    "docs/design/D5-I54-NATIVE-AMBIGUITY-REVIEW.md": "d6e8ddab4e7f7460ebdabea1d5edc16ab80c0c6da7c02997adf662089e71bf43"
+  },
+  "documentary_checks": {
+    "status": "PASS",
+    "input_hashes_verified": 18,
+    "source_anchors_verified": 12,
+    "local_links_verified": 6,
+    "matrix_ids_verified": 36,
+    "whitespace_verified": true,
+    "source_and_harness_unchanged": true,
+    "publication_hygiene": {
+      "status": "PASS",
+      "text_files_reviewed": 616,
+      "does_not_authorize_publication": true
+    },
+    "independent_validator": "PASS",
+    "new_tests_executed": 0
+  },
+  "D5_closed": false,
+  "closure": {
+    "GI33": false,
+    "GI34": false,
+    "GI38": false,
+    "GI39": false,
+    "GI40": false
+  },
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "new_tests_executed": 0
+}
