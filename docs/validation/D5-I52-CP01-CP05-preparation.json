@@ -1,0 +1,1249 @@
+{
+  "schema": "d5.i52-cp01-cp05-review-preparation.v1",
+  "date": "2026-10-24",
+  "status": "PREPARED_FOR_SUFFICIENCY_REVIEW",
+  "base_commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98",
+  "CP01": {
+    "I32_historical_inputs_verified": 84,
+    "I32_inputs_current_differences": [
+      "docs/README.md",
+      "testing/D5/README.md"
+    ],
+    "target_catalog": [
+      {
+        "manifest": "docs/validation/D3-CLOSURE.json",
+        "version": "1.0",
+        "evidence": "docs/validation/D3-OPTIMIZATION-results.json",
+        "evidence_sha256": "0161766bdcf67e17fc27f0f346e2007dcf329b234e62cd4c14dd1981e3fff770",
+        "target": "NOT_RECORDED_AT_REPORT_ROOT",
+        "command": "NOT_RECORDED_AT_REPORT_ROOT",
+        "versions_reference": "NOT_RECORDED_AT_REPORT_ROOT",
+        "groups": {
+          "core": {
+            "tests": 62,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "scale_review": {
+            "tests": 4,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "optimization_parity": {
+            "tests": 3,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "postgres_I2": {
+            "tests": 33,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "dispatch_I3": {
+            "tests": 39,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "coordinator": {
+            "tests": 25,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "acceptance_V15": {
+            "tests": 9,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          "D2_regression": {
+            "tests": 157,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        },
+        "execution_in_I52": "NOT_RUN",
+        "does_not_reopen_prior_closure": true
+      },
+      {
+        "manifest": "docs/validation/D4-CLOSURE.json",
+        "version": "1.0",
+        "evidence": "docs/validation/D4-I12-INTEGRATED-results.json",
+        "evidence_sha256": "b2d9cf036623adeb6a9f9789f2417692a73b0228e996d6d0cb4c101e58e61e9c",
+        "target": 30,
+        "command": "bash testing/D4/run-latest-matrix.sh",
+        "versions_reference": "docs/validation/D4-I12-INTEGRATED-results.json#/versions",
+        "groups": {
+          "D4_unique": 281,
+          "D3": 175,
+          "D2": 157,
+          "local_Python": 25,
+          "positive_total": 638,
+          "repeated_tests_excluded": 5,
+          "scope": "SQL owner proofs validate structure and atomicity, not signatures/process facts. Independent Java/HTTPS, process/receiver closure and restart facts are demonstrated in Compose. Older D4 and D3/D2 groups keep their own declared targets; their counts are not V30 evidence."
+        },
+        "execution_in_I52": "NOT_RUN",
+        "does_not_reopen_prior_closure": true
+      },
+      {
+        "manifest": "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json",
+        "version": "1.0",
+        "evidence": "docs/validation/D5-I20-results.json",
+        "evidence_sha256": "50212e742bf57cac17e54a87fb9467578232975d648794712b14d0c20b031b19",
+        "target": "fresh V1-V30 then V31-V39; no promotion or deployment",
+        "command": "NOT_RECORDED_AT_REPORT_ROOT",
+        "versions_reference": "NOT_RECORDED_AT_REPORT_ROOT",
+        "groups": {
+          "D2_independent": {
+            "errors": 0,
+            "failures": 0,
+            "skipped": 0,
+            "target": "historical harness, not V30",
+            "tests": 157
+          },
+          "D5_V30": {
+            "I10_regression": 28,
+            "I12_regression": 30,
+            "I14_regression": 32,
+            "I16_regression": 34,
+            "I18_regression": 36,
+            "I4_regression": 21,
+            "I5_regression": 15,
+            "I6_regression": 5,
+            "I8_regression": 27,
+            "errors": 0,
+            "failures": 0,
+            "new_isolated_local_edit": 36,
+            "tests": 264
+          },
+          "local_python": {
+            "errors": 0,
+            "failures": 0,
+            "tests": 51
+          }
+        },
+        "execution_in_I52": "NOT_RUN",
+        "does_not_reopen_prior_closure": true
+      },
+      {
+        "group": "D1",
+        "manifest": "NO_STANDALONE_TARGET_MANIFEST_IN_THIS_PREPARATION",
+        "target": "NOT_RECORDED",
+        "command": "NOT_RECORDED",
+        "versions_reference": "NOT_RECORDED",
+        "execution_in_I52": "NOT_RUN",
+        "scope": "D2 references/groups in D3/D4/A52 are preserved, not promoted to exhaustive D1/D2 target inventory."
+      },
+      {
+        "group": "D2",
+        "manifest": "NO_STANDALONE_TARGET_MANIFEST_IN_THIS_PREPARATION",
+        "target": "NOT_RECORDED",
+        "command": "NOT_RECORDED",
+        "versions_reference": "NOT_RECORDED",
+        "execution_in_I52": "NOT_RUN",
+        "scope": "D2 references/groups in D3/D4/A52 are preserved, not promoted to exhaustive D1/D2 target inventory."
+      }
+    ],
+    "exhaustive_target_inventory_complete": false,
+    "historical_I34_I36_raw": "NOT_RECORDED",
+    "next_gate": "Explicit public target/version/command set and review of historical limits; no SQL rerun"
+  },
+  "CP05": {
+    "normative_refs": [
+      {
+        "path": "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md",
+        "line": 48,
+        "text": "| UI33 | GI39 | F | Dos procesos sobre el estado durable no pierden revisiones/recibos ni duplican intento; CAS/locks y puntos de crash requieren contrato F previo |",
+        "sha256": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md",
+        "line": 56,
+        "text": "| DF37 | GI39 / UI31/UI33 | CREATE repetido/tickets concurrentes misma creation_key | Índice único durable, sin adopción; mismo ticket devuelve prueba, hash distinto bloquea; reinicio no duplica destino |",
+        "sha256": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "docs/design/D5-I45-DURABLE-ISSUE-CREATE-DESIGN.md",
+        "line": 138,
+        "text": "**R2, tickets distintos para la misma creación:** T0 emitido y un ticket T1 extra",
+        "sha256": "1e2e10d0c8b6f39a73dcee28b62e75c4de229a1375fb7c80c14f5572548679ea",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      }
+    ],
+    "baseline_I40": {
+      "id": "UI33.2",
+      "obligation_part": "Dos tickets CREATE/ISSUE simultáneos sin duplicar intento",
+      "static_review": "PARTIAL",
+      "observed_by_reading": "Unicidad remota está bajo lock; DF37 repite tickets secuencialmente y DF25 combina execute/cierre.",
+      "pending": "No tratar DF37 como prueba de dos CREATE concurrentes ni de dos ISSUE simultáneos.",
+      "source_refs": [
+        "K_CAS",
+        "K_COMMIT",
+        "T_WORKER",
+        "R_WORKER"
+      ],
+      "test_case_refs": [
+        "DF25",
+        "DF37",
+        "DF38",
+        "DF39",
+        "DF40",
+        "DR28",
+        "DR31",
+        "DR38"
+      ],
+      "execution_evidence": "REGISTERED_PASS",
+      "execution_detail_limit": "PASS del método padre en informe registrado, no reejecutado. Una subcláusula NOT_ESTABLISHED no adquiere ejecución por el PASS del padre. Parametrizaciones solo según registros citados.",
+      "findings": [
+        "H03"
+      ],
+      "declared_coverage": "MAPPED",
+      "declaration_granularity": "PARENT_UI_ONLY; subclause map not recorded historically"
+    },
+    "baseline_I48": {
+      "static_review": "PARTIAL",
+      "observed_by_reading": "Unicidad remota está bajo lock; DF37 repite tickets secuencialmente y DF25 combina execute/cierre.",
+      "pending": "No tratar DF37 como prueba de dos CREATE concurrentes ni de dos ISSUE simultáneos.",
+      "findings": [
+        "H03"
+      ],
+      "source_refs": [
+        "K_CAS",
+        "K_COMMIT",
+        "T_WORKER",
+        "R_WORKER"
+      ],
+      "test_case_refs": [
+        "DF25",
+        "DF37",
+        "DF38",
+        "DF39",
+        "DF40",
+        "DR28",
+        "DR31",
+        "DR38"
+      ],
+      "declared_coverage": "MAPPED",
+      "execution_evidence": "REGISTERED_PASS"
+    },
+    "I48_semantic": "PARTIAL",
+    "I48_reason": "IC01–16 acredita dos propuestas ISSUE simultáneas y un único intento emitido; IC17–20 acredita doble entrega del mismo ticket emitido. IC21–24 usa ticket adicional nunca emitido y omite reconcile: su entidad única no completa dos tickets autorizados integrados. Se amplía el soporte pero se conserva PARTIAL y la distinción de autoridad.",
+    "original_full_obligation": "Dos procesos sobre el estado durable no pierden revisiones/recibos ni duplican intento; CAS/locks y puntos de crash requieren contrato F previo",
+    "interpretation_issue": "Determine whether distinct actually authorized tickets is required by UI33 plus DF37/F, or an added premise incompatible with single-unresolved-send guard.",
+    "proposed_distinctions": [
+      "CLIENT competing proposals, only one issuance",
+      "REMOTE duplicate delivery of the issued ticket",
+      "REMOTE distinct-ticket negative with unissued extra, excluded from integrated authority"
+    ],
+    "regression_raw": "docs/validation/D5-I52-IC-regression-raw.json",
+    "case_records": [
+      {
+        "case": "IC01",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/0",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "7ce3a4fa-23d5-4d07-9f06-b8da12cac0e3",
+            "operation": "ISSUE",
+            "request_sha256": "2f475883ed8ae27dd4d2fcda7550f582c6f40367581399381a785c9f7683ea78",
+            "role": "CLIENT",
+            "send_id": "aa088389-b54f-4cd4-a654-d68d228629be",
+            "ticket": "b29c513f-5941-47e1-a0f6-2d9d30d6fa19"
+          },
+          {
+            "actor": "B",
+            "cid": "7ce3a4fa-23d5-4d07-9f06-b8da12cac0e3",
+            "operation": "ISSUE",
+            "request_sha256": "2f475883ed8ae27dd4d2fcda7550f582c6f40367581399381a785c9f7683ea78",
+            "role": "CLIENT",
+            "send_id": "aa088389-b54f-4cd4-a654-d68d228629be",
+            "ticket": "b29c513f-5941-47e1-a0f6-2d9d30d6fa19"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "7ce3a4fa-23d5-4d07-9f06-b8da12cac0e3",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "2f475883ed8ae27dd4d2fcda7550f582c6f40367581399381a785c9f7683ea78",
+          "send_id": "aa088389-b54f-4cd4-a654-d68d228629be",
+          "ticket": "b29c513f-5941-47e1-a0f6-2d9d30d6fa19"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC02",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/1",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "4bf9fa10-0fe6-406d-b7ec-cc2abb46f553",
+            "operation": "ISSUE",
+            "request_sha256": "98ac51adf858be4e92c6f220d7a95e1f1afc9a7650eaf0f677bb3b347453c967",
+            "role": "CLIENT",
+            "send_id": "83a62e49-40d1-4008-93b6-cc63b5aee789",
+            "ticket": "5200e301-30af-4c51-9951-56c01feff410"
+          },
+          {
+            "actor": "B",
+            "cid": "4bf9fa10-0fe6-406d-b7ec-cc2abb46f553",
+            "operation": "ISSUE",
+            "request_sha256": "98ac51adf858be4e92c6f220d7a95e1f1afc9a7650eaf0f677bb3b347453c967",
+            "role": "CLIENT",
+            "send_id": "83a62e49-40d1-4008-93b6-cc63b5aee789",
+            "ticket": "5200e301-30af-4c51-9951-56c01feff410"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "4bf9fa10-0fe6-406d-b7ec-cc2abb46f553",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "98ac51adf858be4e92c6f220d7a95e1f1afc9a7650eaf0f677bb3b347453c967",
+          "send_id": "83a62e49-40d1-4008-93b6-cc63b5aee789",
+          "ticket": "5200e301-30af-4c51-9951-56c01feff410"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC03",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/2",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "20d96db2-1878-43f0-bf70-ed60b341e087",
+            "operation": "ISSUE",
+            "request_sha256": "32ce14059ed290ff02ef156043677e01f1a03a750dfe7df50bb326d7ecd1f18b",
+            "role": "CLIENT",
+            "send_id": "f01fe77c-4d73-4785-b3df-b68e48c913a0",
+            "ticket": "1af13c02-2927-4992-b87e-b93ac2fcc898"
+          },
+          {
+            "actor": "B",
+            "cid": "20d96db2-1878-43f0-bf70-ed60b341e087",
+            "operation": "ISSUE",
+            "request_sha256": "32ce14059ed290ff02ef156043677e01f1a03a750dfe7df50bb326d7ecd1f18b",
+            "role": "CLIENT",
+            "send_id": "f01fe77c-4d73-4785-b3df-b68e48c913a0",
+            "ticket": "1af13c02-2927-4992-b87e-b93ac2fcc898"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "20d96db2-1878-43f0-bf70-ed60b341e087",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "32ce14059ed290ff02ef156043677e01f1a03a750dfe7df50bb326d7ecd1f18b",
+          "send_id": "f01fe77c-4d73-4785-b3df-b68e48c913a0",
+          "ticket": "1af13c02-2927-4992-b87e-b93ac2fcc898"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC04",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/3",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "5a780ab7-7176-405a-bc1e-c10e54852c05",
+            "operation": "ISSUE",
+            "request_sha256": "d2c83ef19099bb040c6ca2f807317f22a9509e1019754c0059794a9a82af643a",
+            "role": "CLIENT",
+            "send_id": "8db3c70e-77a3-4e2b-9f13-f2cb3fa59cfe",
+            "ticket": "230f613f-866c-4536-b5ac-347f1d23f24c"
+          },
+          {
+            "actor": "B",
+            "cid": "5a780ab7-7176-405a-bc1e-c10e54852c05",
+            "operation": "ISSUE",
+            "request_sha256": "d2c83ef19099bb040c6ca2f807317f22a9509e1019754c0059794a9a82af643a",
+            "role": "CLIENT",
+            "send_id": "8db3c70e-77a3-4e2b-9f13-f2cb3fa59cfe",
+            "ticket": "230f613f-866c-4536-b5ac-347f1d23f24c"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "5a780ab7-7176-405a-bc1e-c10e54852c05",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "d2c83ef19099bb040c6ca2f807317f22a9509e1019754c0059794a9a82af643a",
+          "send_id": "8db3c70e-77a3-4e2b-9f13-f2cb3fa59cfe",
+          "ticket": "230f613f-866c-4536-b5ac-347f1d23f24c"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC05",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/4",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "8198ca0c-8583-4df7-b514-9dbb4dc9b893",
+            "operation": "ISSUE",
+            "request_sha256": "ca34d5382765772d524c0c39f2eb2f3939385aadf0e430f47299e9ec2d1023b4",
+            "role": "CLIENT",
+            "send_id": "bd5e8a75-eef0-4183-b9e2-e02849f821a5",
+            "ticket": "c5c1fd19-513f-47cc-a39b-d21581e22697"
+          },
+          {
+            "actor": "B",
+            "cid": "88662687-a2d7-4ff8-bd0d-89bbbb4f6ec7",
+            "operation": "ISSUE",
+            "request_sha256": "2ebb5fd9bcc0761c6dfeefa054449f3a00c27b01aa02cc9cf0b7d6b999133ced",
+            "role": "CLIENT",
+            "send_id": "042857e3-c6ac-4b86-b2da-82c847f33b71",
+            "ticket": "5b57e2da-9fe8-4353-9b84-0a610720059c"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "8198ca0c-8583-4df7-b514-9dbb4dc9b893",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "ca34d5382765772d524c0c39f2eb2f3939385aadf0e430f47299e9ec2d1023b4",
+          "send_id": "bd5e8a75-eef0-4183-b9e2-e02849f821a5",
+          "ticket": "c5c1fd19-513f-47cc-a39b-d21581e22697"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC06",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/5",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "c21cd894-f2cf-4c06-9237-e9d4e4972489",
+            "operation": "ISSUE",
+            "request_sha256": "c0f4820faf98031595aaf54d88758c3f5fd8315fd082b703f4212753e0d1b005",
+            "role": "CLIENT",
+            "send_id": "ea10aa0a-463b-4302-8d0e-09ed0b592dd7",
+            "ticket": "56ddc86b-deb2-4d71-aaa9-f3cbf86286d8"
+          },
+          {
+            "actor": "B",
+            "cid": "c3377fa0-fc00-46b2-aec4-4d4c8e4e0f6f",
+            "operation": "ISSUE",
+            "request_sha256": "734f5d4efdb9a59120b930a1df72b1a320e7025613d63d7bc5fbfaa585399793",
+            "role": "CLIENT",
+            "send_id": "5a62569e-df4d-47ad-add1-29607b75382b",
+            "ticket": "5f2e6cbf-c977-492f-ae17-9d02c2f127f6"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "c3377fa0-fc00-46b2-aec4-4d4c8e4e0f6f",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "734f5d4efdb9a59120b930a1df72b1a320e7025613d63d7bc5fbfaa585399793",
+          "send_id": "5a62569e-df4d-47ad-add1-29607b75382b",
+          "ticket": "5f2e6cbf-c977-492f-ae17-9d02c2f127f6"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC07",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/6",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "6b74a4e1-2e73-44fa-9367-0f77f1ce912e",
+            "operation": "ISSUE",
+            "request_sha256": "cac9597c18ae93cbd3022223ae0c5d3833b0233c097df048c23a2f54f9f0481e",
+            "role": "CLIENT",
+            "send_id": "bcdbe086-542f-4ce1-99e1-46a1140c05aa",
+            "ticket": "1c8c2aa2-b791-4542-8fa4-95ecddfea8cb"
+          },
+          {
+            "actor": "B",
+            "cid": "3323aa30-5215-4d8e-99c4-ddf3f8fc073e",
+            "operation": "ISSUE",
+            "request_sha256": "96903eb9d6cc19b2f801a4b7e30b894d3a6a4f7faca20b18cb5ddad120bd1dbc",
+            "role": "CLIENT",
+            "send_id": "ac8de0d1-045b-45ae-bc06-1b1d8d4e9d96",
+            "ticket": "c6e7ecc9-fa7c-4d24-8a1a-5975a8761937"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "6b74a4e1-2e73-44fa-9367-0f77f1ce912e",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "cac9597c18ae93cbd3022223ae0c5d3833b0233c097df048c23a2f54f9f0481e",
+          "send_id": "bcdbe086-542f-4ce1-99e1-46a1140c05aa",
+          "ticket": "1c8c2aa2-b791-4542-8fa4-95ecddfea8cb"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC08",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/7",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "587753f5-6a6b-44d4-9146-541fb3915c10",
+            "operation": "ISSUE",
+            "request_sha256": "84eebf745511e4ad0809157f6322e1fd3abbc4ed71ad1ff1e988c832e4340537",
+            "role": "CLIENT",
+            "send_id": "18738b49-0bf7-4cd9-923b-d32a6e624723",
+            "ticket": "ec26b4c1-9a47-446e-9de9-17a560501327"
+          },
+          {
+            "actor": "B",
+            "cid": "fad0f3f7-9a43-4350-9d39-0f61df951749",
+            "operation": "ISSUE",
+            "request_sha256": "298f92618ecb9b0856383b952938d75c703b7a05b1355408f5bd2a275eab793a",
+            "role": "CLIENT",
+            "send_id": "cd6b30c2-c6bb-4e5d-86be-7166f2ee8614",
+            "ticket": "150d0544-27bc-442e-8cce-8343696a636c"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "fad0f3f7-9a43-4350-9d39-0f61df951749",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "298f92618ecb9b0856383b952938d75c703b7a05b1355408f5bd2a275eab793a",
+          "send_id": "cd6b30c2-c6bb-4e5d-86be-7166f2ee8614",
+          "ticket": "150d0544-27bc-442e-8cce-8343696a636c"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC09",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/8",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "071b983d-355d-4e86-92c3-589db8d89d83",
+            "operation": "ISSUE",
+            "request_sha256": "96fdc3f4aa9569d1acf66c9d8af77fe488d8c3e46461a489d29bf1d71914c776",
+            "role": "CLIENT",
+            "send_id": "89ae8c07-6aa2-41aa-ba07-14eae361c80b",
+            "ticket": "9fb2f630-a2a3-4bd1-83ae-5fd81801c108"
+          },
+          {
+            "actor": "B",
+            "cid": "c6359b59-bbf0-4dcf-b1c1-d9a611f777ba",
+            "operation": "ISSUE",
+            "request_sha256": "96fdc3f4aa9569d1acf66c9d8af77fe488d8c3e46461a489d29bf1d71914c776",
+            "role": "CLIENT",
+            "send_id": "89ae8c07-6aa2-41aa-ba07-14eae361c80b",
+            "ticket": "9fb2f630-a2a3-4bd1-83ae-5fd81801c108"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "071b983d-355d-4e86-92c3-589db8d89d83",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "96fdc3f4aa9569d1acf66c9d8af77fe488d8c3e46461a489d29bf1d71914c776",
+          "send_id": "89ae8c07-6aa2-41aa-ba07-14eae361c80b",
+          "ticket": "9fb2f630-a2a3-4bd1-83ae-5fd81801c108"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC10",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/9",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "e3022256-e966-45e8-b747-e0f51fddfdba",
+            "operation": "ISSUE",
+            "request_sha256": "663c16f029e6d3d768fe83aa157568a16d888f41d3290a48367357d09f77db0b",
+            "role": "CLIENT",
+            "send_id": "2eda9368-064b-47d6-8317-0bf13a1de6f3",
+            "ticket": "c41a22cb-f192-497c-ac71-3655dafe1b66"
+          },
+          {
+            "actor": "B",
+            "cid": "97382afb-7c8f-4566-b174-14ee30112fe5",
+            "operation": "ISSUE",
+            "request_sha256": "663c16f029e6d3d768fe83aa157568a16d888f41d3290a48367357d09f77db0b",
+            "role": "CLIENT",
+            "send_id": "2eda9368-064b-47d6-8317-0bf13a1de6f3",
+            "ticket": "c41a22cb-f192-497c-ac71-3655dafe1b66"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "97382afb-7c8f-4566-b174-14ee30112fe5",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "663c16f029e6d3d768fe83aa157568a16d888f41d3290a48367357d09f77db0b",
+          "send_id": "2eda9368-064b-47d6-8317-0bf13a1de6f3",
+          "ticket": "c41a22cb-f192-497c-ac71-3655dafe1b66"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC11",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/10",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "d4835f42-e462-444c-8225-c66cba74bd00",
+            "operation": "ISSUE",
+            "request_sha256": "8d185d82f4a65f86c2c9fd5d91788241835c5fd36119385f58ef8c8937e90446",
+            "role": "CLIENT",
+            "send_id": "b318f270-3c70-401d-ae7a-b263dd67e7c0",
+            "ticket": "b7a63323-3f27-42b1-8dfa-4be58f0b52f4"
+          },
+          {
+            "actor": "B",
+            "cid": "8aa50ca8-2ffa-4673-a9f9-2d084cbfb01c",
+            "operation": "ISSUE",
+            "request_sha256": "8d185d82f4a65f86c2c9fd5d91788241835c5fd36119385f58ef8c8937e90446",
+            "role": "CLIENT",
+            "send_id": "b318f270-3c70-401d-ae7a-b263dd67e7c0",
+            "ticket": "b7a63323-3f27-42b1-8dfa-4be58f0b52f4"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "d4835f42-e462-444c-8225-c66cba74bd00",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "8d185d82f4a65f86c2c9fd5d91788241835c5fd36119385f58ef8c8937e90446",
+          "send_id": "b318f270-3c70-401d-ae7a-b263dd67e7c0",
+          "ticket": "b7a63323-3f27-42b1-8dfa-4be58f0b52f4"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC12",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/11",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "57bc925e-6ce6-4457-801a-2f407c583349",
+            "operation": "ISSUE",
+            "request_sha256": "967068a8d325890e5525d9069a2741ac60a0397f2d40c537b6214bbc8dfc0df2",
+            "role": "CLIENT",
+            "send_id": "b6017def-469e-44b0-874d-6793d7e4c1a1",
+            "ticket": "f77865f5-b528-49e4-aeaa-368f43c80a79"
+          },
+          {
+            "actor": "B",
+            "cid": "900f9fee-d7c5-4ad4-b248-3d8c188eec4b",
+            "operation": "ISSUE",
+            "request_sha256": "967068a8d325890e5525d9069a2741ac60a0397f2d40c537b6214bbc8dfc0df2",
+            "role": "CLIENT",
+            "send_id": "b6017def-469e-44b0-874d-6793d7e4c1a1",
+            "ticket": "f77865f5-b528-49e4-aeaa-368f43c80a79"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "900f9fee-d7c5-4ad4-b248-3d8c188eec4b",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "967068a8d325890e5525d9069a2741ac60a0397f2d40c537b6214bbc8dfc0df2",
+          "send_id": "b6017def-469e-44b0-874d-6793d7e4c1a1",
+          "ticket": "f77865f5-b528-49e4-aeaa-368f43c80a79"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC13",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/12",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "8f9a76f8-46b1-40b1-8416-9836a8459faf",
+            "operation": "ISSUE",
+            "request_sha256": "bbba3840bf0cd7719cb62a530aca23c9242dae50936328ebf0fd0923cefab7a6",
+            "role": "CLIENT",
+            "send_id": "017a5d3b-e0c6-48ef-9d79-3287afe9f4bb",
+            "ticket": "dff640ad-168c-40b1-9ddb-9925c2cec6b4"
+          },
+          {
+            "actor": "B",
+            "cid": "8f9a76f8-46b1-40b1-8416-9836a8459faf",
+            "operation": "ISSUE",
+            "request_sha256": "ccee685a35d6c1d081a41d3e059ac95aa36a5ef9d1d0a6dc2c5943741c8ac0d4",
+            "role": "CLIENT",
+            "send_id": "017a5d3b-e0c6-48ef-9d79-3287afe9f4bb",
+            "ticket": "ced69ddf-e692-4ef7-95d9-95b032cb0d56"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "8f9a76f8-46b1-40b1-8416-9836a8459faf",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "bbba3840bf0cd7719cb62a530aca23c9242dae50936328ebf0fd0923cefab7a6",
+          "send_id": "017a5d3b-e0c6-48ef-9d79-3287afe9f4bb",
+          "ticket": "dff640ad-168c-40b1-9ddb-9925c2cec6b4"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC14",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/13",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "0696a95e-1efe-4d6b-bca4-53179974f490",
+            "operation": "ISSUE",
+            "request_sha256": "f64a696406c4ce279234b217856b60c60ab0316b61073f6813ec19dece9b8f27",
+            "role": "CLIENT",
+            "send_id": "9abf24ad-5943-4773-a71b-ac29b4298a26",
+            "ticket": "8bfd110e-0293-4d64-ba52-a987444a67c8"
+          },
+          {
+            "actor": "B",
+            "cid": "0696a95e-1efe-4d6b-bca4-53179974f490",
+            "operation": "ISSUE",
+            "request_sha256": "67acbf7829253825ac1f2a71bb97c352ed93ca52a5aa54cfb67b57050c6e109e",
+            "role": "CLIENT",
+            "send_id": "9abf24ad-5943-4773-a71b-ac29b4298a26",
+            "ticket": "60491a18-6558-49e3-a64f-1301bffa538e"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "0696a95e-1efe-4d6b-bca4-53179974f490",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "67acbf7829253825ac1f2a71bb97c352ed93ca52a5aa54cfb67b57050c6e109e",
+          "send_id": "9abf24ad-5943-4773-a71b-ac29b4298a26",
+          "ticket": "60491a18-6558-49e3-a64f-1301bffa538e"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC15",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/14",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "2d13ee0c-a542-4c45-a0ce-a5e2907f6a9e",
+            "operation": "ISSUE",
+            "request_sha256": "1c73b6e1a0157624621960e2a7541293d518abbfab626b1c5307fab0a943331d",
+            "role": "CLIENT",
+            "send_id": "909541fd-d4bb-4695-a645-1e35e698d261",
+            "ticket": "5745fa83-8471-4db1-960e-cdd72f48c250"
+          },
+          {
+            "actor": "B",
+            "cid": "2d13ee0c-a542-4c45-a0ce-a5e2907f6a9e",
+            "operation": "ISSUE",
+            "request_sha256": "3741ed9b7b3ad63e541f1c3b015a1bd2421729fb7305e8a63a2e44578b7115c6",
+            "role": "CLIENT",
+            "send_id": "909541fd-d4bb-4695-a645-1e35e698d261",
+            "ticket": "3bb7a237-356d-42fa-8f74-34221750f492"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "2d13ee0c-a542-4c45-a0ce-a5e2907f6a9e",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "1c73b6e1a0157624621960e2a7541293d518abbfab626b1c5307fab0a943331d",
+          "send_id": "909541fd-d4bb-4695-a645-1e35e698d261",
+          "ticket": "5745fa83-8471-4db1-960e-cdd72f48c250"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC16",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/15",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "8dbdfbcb-58e0-4283-8b88-3dbc52d95959",
+            "operation": "ISSUE",
+            "request_sha256": "aafc2208268d1290f32ae1ba1039b18a7580a5a6b2621e57ec0d0d1973a74686",
+            "role": "CLIENT",
+            "send_id": "992fed29-b980-429a-aec5-b737eda38550",
+            "ticket": "2abcfaba-3df9-4a21-8877-47db52f7d793"
+          },
+          {
+            "actor": "B",
+            "cid": "8dbdfbcb-58e0-4283-8b88-3dbc52d95959",
+            "operation": "ISSUE",
+            "request_sha256": "3f8861a2fe44b15cbcc4bd6534493bfcc00ed5158802c1d71391c4864332c201",
+            "role": "CLIENT",
+            "send_id": "992fed29-b980-429a-aec5-b737eda38550",
+            "ticket": "9ba28da1-da69-455d-9621-e0c5386cf9c5"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "8dbdfbcb-58e0-4283-8b88-3dbc52d95959",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "3f8861a2fe44b15cbcc4bd6534493bfcc00ed5158802c1d71391c4864332c201",
+          "send_id": "992fed29-b980-429a-aec5-b737eda38550",
+          "ticket": "9ba28da1-da69-455d-9621-e0c5386cf9c5"
+        },
+        "ticket_provenance": null,
+        "integrated_claim_allowed": null,
+        "reconcile_performed": null,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC17",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/16",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "8d5f4942-2a79-5a83-b53b-d1ba6be7422d",
+            "operation": "EXECUTE",
+            "request_sha256": "56572aa5445a7d07b39d50b468dadc6b372e38e0af10848e923d3cb289b022d2",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "85681161-76e4-4734-a441-ef63cd04e67b"
+          },
+          {
+            "actor": "B",
+            "cid": "8d5f4942-2a79-5a83-b53b-d1ba6be7422d",
+            "operation": "EXECUTE",
+            "request_sha256": "56572aa5445a7d07b39d50b468dadc6b372e38e0af10848e923d3cb289b022d2",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "85681161-76e4-4734-a441-ef63cd04e67b"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "cc90461a-d265-433f-9ba8-7a412aca9221",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "5de4a292240ef5c56620fe51b06bfc229b584a604d025c2608d683f324501c03",
+          "send_id": "66fba83d-6e17-446a-86a7-fb21f53c75c5",
+          "ticket": "85681161-76e4-4734-a441-ef63cd04e67b"
+        },
+        "ticket_provenance": {
+          "85681161-76e4-4734-a441-ef63cd04e67b": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": true,
+        "reconcile_performed": true,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC18",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/17",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "7043a465-39b9-571f-adb5-7c5242dd8123",
+            "operation": "EXECUTE",
+            "request_sha256": "73cae0ac13509a6937478da14b03f7fa963ff95593c8dcb479c1fd10fa9ddb5c",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "dedd2463-319b-46e5-bc2f-e882480f7dd9"
+          },
+          {
+            "actor": "B",
+            "cid": "7043a465-39b9-571f-adb5-7c5242dd8123",
+            "operation": "EXECUTE",
+            "request_sha256": "73cae0ac13509a6937478da14b03f7fa963ff95593c8dcb479c1fd10fa9ddb5c",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "dedd2463-319b-46e5-bc2f-e882480f7dd9"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "1976905c-7491-4793-bfed-282dc18c9aa5",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "c4471761d687dd9f3e55eb00037410f4b63681867bea4f2d49dc8b3ada6c6631",
+          "send_id": "901cfa69-d34a-4240-a4b5-ad9eb8378267",
+          "ticket": "dedd2463-319b-46e5-bc2f-e882480f7dd9"
+        },
+        "ticket_provenance": {
+          "dedd2463-319b-46e5-bc2f-e882480f7dd9": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": true,
+        "reconcile_performed": true,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC19",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/18",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "8a8d093c-bb41-5dad-b229-9ba838972e79",
+            "operation": "EXECUTE",
+            "request_sha256": "52182d2ee48166f7514fa0750ddd64d82a90af43cdeced31fe7c109f39b75665",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "e9b71802-a3a4-4d32-b3ea-fc618a9986d7"
+          },
+          {
+            "actor": "B",
+            "cid": "8a8d093c-bb41-5dad-b229-9ba838972e79",
+            "operation": "EXECUTE",
+            "request_sha256": "52182d2ee48166f7514fa0750ddd64d82a90af43cdeced31fe7c109f39b75665",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "e9b71802-a3a4-4d32-b3ea-fc618a9986d7"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "5b743ffc-8101-4835-85d0-c63916b91feb",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "a60c6b70d7f3d4d4b5baf59c055bd4eb094457637cf24064dd8e4abbe8ada984",
+          "send_id": "19f1139d-de9a-4480-a474-e9aa9f05a22f",
+          "ticket": "e9b71802-a3a4-4d32-b3ea-fc618a9986d7"
+        },
+        "ticket_provenance": {
+          "e9b71802-a3a4-4d32-b3ea-fc618a9986d7": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": true,
+        "reconcile_performed": true,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC20",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/19",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "378cb9a8-f109-563e-8922-bc38a3eafa90",
+            "operation": "EXECUTE",
+            "request_sha256": "cf49e8b048b68d810ad1f178d92124cdceff0191810d098b8f004f7ef2503fdf",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "59c38a28-ad86-41c5-a675-989ff01d25bb"
+          },
+          {
+            "actor": "B",
+            "cid": "378cb9a8-f109-563e-8922-bc38a3eafa90",
+            "operation": "EXECUTE",
+            "request_sha256": "cf49e8b048b68d810ad1f178d92124cdceff0191810d098b8f004f7ef2503fdf",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "59c38a28-ad86-41c5-a675-989ff01d25bb"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "e06f0a77-263c-4181-a1fb-f821c5ae38e7",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "0a993bfeccfa2c048027114d23e360f326d8256b74b9492bc88edc48ce61a2cc",
+          "send_id": "2682ba94-dce1-4e37-910e-fbd178ead1a1",
+          "ticket": "59c38a28-ad86-41c5-a675-989ff01d25bb"
+        },
+        "ticket_provenance": {
+          "59c38a28-ad86-41c5-a675-989ff01d25bb": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": true,
+        "reconcile_performed": true,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC21",
+        "path": "T",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/20",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "fcd32bff-eeb0-5715-9733-a508967ff283",
+            "operation": "EXECUTE",
+            "request_sha256": "38e27a9eceba1d349180b01a8f35c892fa0e72549f42da45144493253209bf99",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "d261712a-7c3f-4b59-a19f-3549e3fb3790"
+          },
+          {
+            "actor": "B",
+            "cid": "a3bda3e2-ccda-5941-b62f-73c24d16d46e",
+            "operation": "EXECUTE",
+            "request_sha256": "27e8c6e834ac69209ade6bc09da24f190b7942d9119a5fbb9e7dc673b98ac943",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "f40c4e4a-5f7e-48ee-9bcf-ef9e683e15ee"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "cb930f39-7051-4d5c-8e66-bbd314e89c95",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "3d68e5eac50ca2aefce0263cf551c0e0c2644641c3ec4117a39638f5aa555463",
+          "send_id": "952bed2b-dbfd-432a-8a1d-0a9a6ed569fe",
+          "ticket": "d261712a-7c3f-4b59-a19f-3549e3fb3790"
+        },
+        "ticket_provenance": {
+          "d261712a-7c3f-4b59-a19f-3549e3fb3790": "ISSUED_BY_CLIENT",
+          "f40c4e4a-5f7e-48ee-9bcf-ef9e683e15ee": "NOT_ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": false,
+        "reconcile_performed": false,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC22",
+        "path": "T",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/21",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "154070dd-01a4-505f-b597-c2b83d7aa3b4",
+            "operation": "EXECUTE",
+            "request_sha256": "3846a182019161af71397856a23e9a9b34744400e76aa6077e6a9e383e46a8a6",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "82512cf2-8ac5-42d0-a9fb-d1133c7c0cca"
+          },
+          {
+            "actor": "B",
+            "cid": "5caacfc7-7188-502c-9967-d71381572460",
+            "operation": "EXECUTE",
+            "request_sha256": "d8c8c4f9d0186ee5c39519a86d2fb13da7761f579027b24103e7d2ae9df49817",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "7f9d2ce3-cb3d-457e-b964-030bae5023aa"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "ff1c048e-d475-4534-af7b-0f3ec6197ad4",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "3ef02c5c0da690e9e86352223b4fbabe9a65387bdee96a7aa7e476b48eb5ec78",
+          "send_id": "f6d8d898-5f75-4d5d-9254-c2855e6738df",
+          "ticket": "82512cf2-8ac5-42d0-a9fb-d1133c7c0cca"
+        },
+        "ticket_provenance": {
+          "7f9d2ce3-cb3d-457e-b964-030bae5023aa": "NOT_ISSUED_BY_CLIENT",
+          "82512cf2-8ac5-42d0-a9fb-d1133c7c0cca": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": false,
+        "reconcile_performed": false,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC23",
+        "path": "R",
+        "order": "A_FIRST",
+        "pointer": "/scenarios/22",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "d2efedc9-c14b-5372-a2ae-1cb04e647e44",
+            "operation": "EXECUTE",
+            "request_sha256": "de87b3b483b2192d81de2c88639948adf706030371f79aaa4f81a99366d559e2",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "2d624dce-004d-4ad5-876b-57fde0c9c869"
+          },
+          {
+            "actor": "B",
+            "cid": "c366cdb4-b0fb-51b8-8d69-247d5b4b7ec1",
+            "operation": "EXECUTE",
+            "request_sha256": "04ad71b7ee0f061a3cd1aba8b888c17202afa045074224827f1d0f82f6858e26",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "23faa195-f258-4bfc-b345-50912d7e4a24"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "8a708d12-96bd-40c3-9467-e6240082aeb9",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "422a228eb0144f4d4a59a0210a33358d858dc53d0104e9ab52aa599a7ff2ec2d",
+          "send_id": "fb17d91f-34f0-426b-aed4-6472b386721d",
+          "ticket": "2d624dce-004d-4ad5-876b-57fde0c9c869"
+        },
+        "ticket_provenance": {
+          "23faa195-f258-4bfc-b345-50912d7e4a24": "NOT_ISSUED_BY_CLIENT",
+          "2d624dce-004d-4ad5-876b-57fde0c9c869": "ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": false,
+        "reconcile_performed": false,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      },
+      {
+        "case": "IC24",
+        "path": "R",
+        "order": "B_FIRST",
+        "pointer": "/scenarios/23",
+        "actors": [
+          {
+            "actor": "A",
+            "cid": "d32efec9-9a8a-5a4e-9ada-e43302380de8",
+            "operation": "EXECUTE",
+            "request_sha256": "bc607021430efe86e30a71411fcf86b9a2af87c5e9ad7430a5a87c753382c4b7",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "92fc2895-be69-4668-b606-3721a700e2e4"
+          },
+          {
+            "actor": "B",
+            "cid": "611e6c85-9c8c-5c1b-b3fc-72af410e6065",
+            "operation": "EXECUTE",
+            "request_sha256": "c3f8089781e256970bd8225f1adab14c42594c1a5530fccb0fbde38c6a1b50bc",
+            "role": "REMOTE",
+            "send_id": null,
+            "ticket": "f493cb47-b3a2-4afe-9f94-41c405f3f739"
+          }
+        ],
+        "issued_ticket": {
+          "cid": "347351ff-5fff-4e50-834f-7e5fa040ce9c",
+          "origin": "ISSUED_BY_CLIENT",
+          "request_sha256": "f1c1b8e91ca0c0bceec3d9430b94c0178d7f375b8d00738b34994465354f1750",
+          "send_id": "d7e608de-397e-4dbc-a867-b2e0c1a6503f",
+          "ticket": "92fc2895-be69-4668-b606-3721a700e2e4"
+        },
+        "ticket_provenance": {
+          "92fc2895-be69-4668-b606-3721a700e2e4": "ISSUED_BY_CLIENT",
+          "f493cb47-b3a2-4afe-9f94-41c405f3f739": "NOT_ISSUED_BY_CLIENT"
+        },
+        "integrated_claim_allowed": false,
+        "reconcile_performed": false,
+        "limitation": "Do not infer authorized issuance of extra REMOTE ticket or integrate independent cases into a new lifecycle claim."
+      }
+    ],
+    "static_source_refs": [
+      {
+        "path": "testing/durable_issue_create/test_durable_issue_create.py",
+        "symbol": "client_test",
+        "line": 256,
+        "end_line": 258,
+        "sha256": "92f89318670c0bbe16902f867eb4c5efa881fced37370f4f894cba1e30aeb79a",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "testing/durable_issue_create/test_durable_issue_create.py",
+        "symbol": "remote_test",
+        "line": 261,
+        "end_line": 263,
+        "sha256": "92f89318670c0bbe16902f867eb4c5efa881fced37370f4f894cba1e30aeb79a",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "testing/durable_issue_create/test_durable_issue_create.py",
+        "symbol": "client_competition",
+        "line": 58,
+        "end_line": 101,
+        "sha256": "92f89318670c0bbe16902f867eb4c5efa881fced37370f4f894cba1e30aeb79a",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "testing/durable_issue_create/test_durable_issue_create.py",
+        "symbol": "remote_competition",
+        "line": 113,
+        "end_line": 146,
+        "sha256": "92f89318670c0bbe16902f867eb4c5efa881fced37370f4f894cba1e30aeb79a",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "source_ingest/durable_task_fixture.py",
+        "symbol": "client_reduce",
+        "line": 150,
+        "end_line": 369,
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      },
+      {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "symbol": "client_reduce",
+        "line": 157,
+        "end_line": 281,
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "commit": "21cbfe03342dfaf43b4707d87a7c4a0cd4ba0f98"
+      }
+    ],
+    "decision": "NOT_ISSUED",
+    "semantic_change_authorized": false
+  },
+  "semantic_verdicts_issued": 0,
+  "new_tests_executed_by_CP_review": 0,
+  "SQL_D1_D4_executed": false,
+  "auditor_executed": false,
+  "inputs": {
+    "docs/design/D5-I33-DURABLE-INTEGRATION-REVIEW.md": "aa25d2a020fbcbb8d1d62f839d24be7bdf8865b855d716a2b8be37a1a06010c5",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "docs/design/D5-I45-DURABLE-ISSUE-CREATE-DESIGN.md": "1e2e10d0c8b6f39a73dcee28b62e75c4de229a1375fb7c80c14f5572548679ea",
+    "docs/validation/D3-CLOSURE.json": "a134022a603f76c68f32f1717354c27dddba20afb7369c39dbfeaadc9ccf4687",
+    "docs/validation/D3-OPTIMIZATION-results.json": "0161766bdcf67e17fc27f0f346e2007dcf329b234e62cd4c14dd1981e3fff770",
+    "docs/validation/D4-CLOSURE.json": "52f9eb06272315b9f3c090d72c425084560cbe9e9ee16281e7185d8412fefb8d",
+    "docs/validation/D4-I12-INTEGRATED-results.json": "b2d9cf036623adeb6a9f9789f2417692a73b0228e996d6d0cb4c101e58e61e9c",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c",
+    "docs/validation/D5-I20-results.json": "50212e742bf57cac17e54a87fb9467578232975d648794712b14d0c20b031b19",
+    "docs/validation/D5-I32-results.json": "c978bd0a370a918e2999e07a4520a5a7e89513b61b1695112e96f71caac15eef",
+    "docs/validation/D5-I40-results.json": "8725b3c1a970839b93dfbd0f03986ac5bc52cf383980628156071d8aefa88317",
+    "docs/validation/D5-I48-results.json": "bda555d251be7a6b2aebeef82ee8a95f614bcb7704aa77e305510c009253e203",
+    "docs/validation/D5-I51-design-review.json": "7a35e27f02d39290ad93c42ac2634203857fa9723406ee4df0b1f0dcebfa3c98",
+    "docs/validation/D5-I52-CP01-CP05-preparation.md": "e6f37df7e30cf9911265e1671980278f6cc1aa1f5fb87103be50ca23600693ee",
+    "docs/validation/D5-I52-IC-regression-raw.json": "8df2840faa84f180ce4a07cf812bd8f16da2c3eda0529054d74d503074e4ecb8",
+    "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json": "171463ecae77d99ec5f92500538b812db85352c9e8102c528188c05886fc7957",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "testing/durable_issue_create/test_durable_issue_create.py": "92f89318670c0bbe16902f867eb4c5efa881fced37370f4f894cba1e30aeb79a"
+  },
+  "D5_closed": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "publication_authorized": false,
+  "real_provider_access": false,
+  "D6_started": false
+}
