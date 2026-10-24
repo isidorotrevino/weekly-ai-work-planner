@@ -1,0 +1,1111 @@
+{
+  "schema": "d5.durable-crash-boundaries-design.v1",
+  "increment": "D5-I43",
+  "date": "2026-10-24",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "base_commit": "98df91a05a43313e26c47dc8d80fd3c2f16018d5",
+  "authority": {
+    "user_selection": "A — Fronteras de fallo H02/GI38",
+    "scope": "Prepare contract and matrix only; future I44 implementation and test execution approval pending."
+  },
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_increment": "I44",
+  "product_changes_authorized": false,
+  "historical_tests_runners_I42_registry_changes_authorized": false,
+  "rows": [
+    {
+      "id": "HF01",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "CAPTURE",
+      "stage": "SOURCE",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Genesis R, sin fuentes",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF02",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "CAPTURE",
+      "stage": "SOURCE",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Genesis R, sin fuentes",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF03",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "CAPTURE",
+      "stage": "SOURCE",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Genesis R, sin fuentes",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF04",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "CAPTURE",
+      "stage": "SOURCE",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Genesis R, sin fuentes",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Fuente exacta por SHA256; sources 0→1; selected_source nula; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF05",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "SELECT_SOURCE",
+      "stage": "SOURCE",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente capturada, selección nula, source_generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF06",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "SELECT_SOURCE",
+      "stage": "SOURCE",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente capturada, selección nula, source_generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF07",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "SELECT_SOURCE",
+      "stage": "SOURCE",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente capturada, selección nula, source_generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF08",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "SELECT_SOURCE",
+      "stage": "SOURCE",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente capturada, selección nula, source_generation 0",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Selección exacta y source_generation 1; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF09",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_SOURCE",
+      "stage": "SOURCE",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente seleccionada, sin manifiesto SOURCE",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF10",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_SOURCE",
+      "stage": "SOURCE",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente seleccionada, sin manifiesto SOURCE",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF11",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_SOURCE",
+      "stage": "SOURCE",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente seleccionada, sin manifiesto SOURCE",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF12",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_SOURCE",
+      "stage": "SOURCE",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Fuente seleccionada, sin manifiesto SOURCE",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Manifiesto SOURCE con hash/contexto exactos; sin revisión implícita; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF13",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "SOURCE",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Manifiesto SOURCE, revisión ausente/v0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF14",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "SOURCE",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Manifiesto SOURCE, revisión ausente/v0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF15",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "SOURCE",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Manifiesto SOURCE, revisión ausente/v0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF16",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "SOURCE",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "Manifiesto SOURCE, revisión ausente/v0",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Revisión SOURCE ACCEPT v1; sin BATCH; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF17",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_BATCH",
+      "stage": "BATCH",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "SOURCE ACCEPT v1; data vacía/generation 0; sin BATCH",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF18",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_BATCH",
+      "stage": "BATCH",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "SOURCE ACCEPT v1; data vacía/generation 0; sin BATCH",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF19",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_BATCH",
+      "stage": "BATCH",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "SOURCE ACCEPT v1; data vacía/generation 0; sin BATCH",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF20",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_BATCH",
+      "stage": "BATCH",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "SOURCE ACCEPT v1; data vacía/generation 0; sin BATCH",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Manifiesto BATCH exacto; plan/after no equivalen a data aplicada; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF21",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "BATCH",
+      "point": "before_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "BATCH preparado, revisión ausente/v0; data generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF22",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "BATCH",
+      "point": "after_object",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "BATCH preparado, revisión ausente/v0; data generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF23",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "BATCH",
+      "point": "before_replace",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "BATCH preparado, revisión ausente/v0; data generation 0",
+      "required_oracle": "HEAD/state alcanzables anteriores; sin recibo cid; objeto/HEAD temporal no autorizan commit; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: confirma una vez, generación/revisión/hash exactos",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF24",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "BATCH",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "BATCH preparado, revisión ausente/v0; data generation 0",
+      "required_oracle": "HEAD +1, recibo exacto y transición: Revisión BATCH ACCEPT v1; sin APPLY_BATCH; data no aplicada, selección TASK/bindings/proyección/sends/REMOTE sin efecto; lectura pasiva no cambia estado",
+      "explicit_followup": "Read_command exacto; replay explícito mismo cid/args/expected: historical=True, sin cambio",
+      "UI_targets_partial": [
+        "UI15",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF25",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "CAPTURE",
+      "stage": "SOURCE",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "Genesis R, sin fuentes",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Fuente exacta por SHA256; sources 0→1; selected_source nula; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF26",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "SELECT_SOURCE",
+      "stage": "SOURCE",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "Fuente capturada, selección nula, source_generation 0",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Selección exacta y source_generation 1; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF27",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_SOURCE",
+      "stage": "SOURCE",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "Fuente seleccionada, sin manifiesto SOURCE",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Manifiesto SOURCE con hash/contexto exactos; sin revisión implícita; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF28",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "SOURCE",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "Manifiesto SOURCE, revisión ausente/v0",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Revisión SOURCE ACCEPT v1; sin BATCH; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF29",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "PREPARE_BATCH",
+      "stage": "BATCH",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "SOURCE ACCEPT v1; data vacía/generation 0; sin BATCH",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Manifiesto BATCH exacto; plan/after no equivalen a data aplicada; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF30",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "REVIEW",
+      "stage": "BATCH",
+      "point": "directory_fsync + recovery_fsync",
+      "mode": "LOCAL",
+      "failure": "CONTROLLED_OSERROR",
+      "precondition": "BATCH preparado, revisión ausente/v0; data generation 0",
+      "required_oracle": "OSError tras rename: COMMIT_UNKNOWN y viejo CLIENT RECOVERY_REQUIRED; nuevo con recovery_fsync fallido: COMMIT_UNKNOWN; nuevo sin fault valida/fsync commit visible con recibo y transición Revisión BATCH ACCEPT v1; sin APPLY_BATCH; sin efectos posteriores",
+      "explicit_followup": "Read_command/replay exactos tras apertura válida; historical=True, sin duplicar; no contabilizar SIGKILL/energía",
+      "UI_targets_partial": [
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF31",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "APPLY",
+      "stage": "EFFECT",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "EFFECT revisado, sin APPLY/binding/proyección",
+      "required_oracle": "TASK/mapping/base/provenance y generation +1 exactos; recibo APPLY; sin binding/proyección/send/REMOTE; lectura pasiva idéntica",
+      "explicit_followup": "Read_command y replay histórico sin aplicar otra vez; BIND/PREPARE_PROJECTION/REVIEW nuevos explícitos; final sin ISSUE",
+      "UI_targets_partial": [
+        "UI16",
+        "UI17",
+        "UI21",
+        "UI22",
+        "UI23"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF32",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "APPLY_BATCH",
+      "stage": "BATCH",
+      "point": "after_head",
+      "mode": "LOCAL",
+      "failure": "SIGKILL",
+      "precondition": "BATCH revisado, sin APPLY_BATCH/selección/binding/proyección",
+      "required_oracle": "Lote entero y provenances, generation +1 y recibo; selection nula, sin binding/proyección/send/REMOTE; lectura pasiva idéntica",
+      "explicit_followup": "Read_command/replay histórico sin generación nueva; SELECT_TASKS desde recibo exacto, BIND/PREPARE_PROJECTION/REVIEW explícitos; cero ISSUE",
+      "UI_targets_partial": [
+        "UI16",
+        "UI17",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF33",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "dispatch",
+      "stage": "PROJECTION",
+      "point": "after_remote",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "Proyección CREATE revisada, sin send previo; dispatch real con send_id fijado",
+      "required_oracle": "Al gate: ISSUE durable, UNKNOWN/ledger 1/proof None/queries 0, pendiente send; ticket P y un efecto REMOTE; prueba del proceso se pierde al SIGKILL; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 1/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF34",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "dispatch",
+      "stage": "PROJECTION",
+      "point": "after_remote",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "Proyección CREATE revisada, sin send previo; dispatch real con send_id fijado",
+      "required_oracle": "Al gate: ISSUE durable, UNKNOWN/ledger 1/proof None/queries 0, pendiente send; ticket P y un efecto REMOTE; prueba del proceso se pierde al SIGKILL; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 1/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF35",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "reconcile",
+      "stage": "PROJECTION",
+      "point": "before_result",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "ISSUE sin entrega + EXECUTE remoto explícito una vez; CLIENT UNKNOWN/ledger 1, sin conciliación previa",
+      "required_oracle": "Primera reconcile: QUERY durable, UNKNOWN/ledger 1/proof None/queries 1, pendientes send+query, sin RESULT; lookup público observó P exacta antes de morir; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 2/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF36",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "reconcile",
+      "stage": "PROJECTION",
+      "point": "before_result",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "ISSUE sin entrega + EXECUTE remoto explícito una vez; CLIENT UNKNOWN/ledger 1, sin conciliación previa",
+      "required_oracle": "Primera reconcile: QUERY durable, UNKNOWN/ledger 1/proof None/queries 1, pendientes send+query, sin RESULT; lookup público observó P exacta antes de morir; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 2/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF37",
+      "path": "T",
+      "role": "CLIENT",
+      "operation": "reconcile",
+      "stage": "PROJECTION",
+      "point": "after_query",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "ISSUE sin entrega + EXECUTE remoto explícito una vez; CLIENT UNKNOWN/ledger 1, sin conciliación previa",
+      "required_oracle": "Primera reconcile: QUERY durable, UNKNOWN/ledger 1/proof None/queries 1, pendientes send+query, sin RESULT; lookup todavía no ejecutado; no afirmar respuesta observada; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 2/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF38",
+      "path": "R",
+      "role": "CLIENT",
+      "operation": "reconcile",
+      "stage": "PROJECTION",
+      "point": "after_query",
+      "mode": "CREATE",
+      "failure": "SIGKILL",
+      "precondition": "ISSUE sin entrega + EXECUTE remoto explícito una vez; CLIENT UNKNOWN/ledger 1, sin conciliación previa",
+      "required_oracle": "Primera reconcile: QUERY durable, UNKNOWN/ledger 1/proof None/queries 1, pendientes send+query, sin RESULT; lookup todavía no ejecutado; no afirmar respuesta observada; lector y apertura pasivos no confirman ni ejecutan; un efecto remoto exacto",
+      "explicit_followup": "Nueva reconcile explícita: ledger 2/queries 2/EFFECT_CONFIRMED/P exacta, pendientes vacíos; HEAD/entidad/ticket REMOTE intactos, sin execute/close",
+      "UI_targets_partial": [
+        "UI18",
+        "UI19",
+        "UI21",
+        "UI22",
+        "UI23",
+        "UI25"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF39",
+      "path": "T/R harness",
+      "role": "HARNESS",
+      "operation": "CONTROL",
+      "stage": "NONE",
+      "point": "gate/exit/timeout",
+      "mode": "NONE",
+      "failure": "NEGATIVE_CONTROL",
+      "precondition": "Labs e hijos propios; presupuestos reducidos identificados",
+      "required_oracle": "Gate ausente/equivocado, EOF, salida normal o timeout no dan PASS de caída; comprobar -SIGKILL solo en fronteras reales; ownership/enlace y sentinel bloquean limpieza insegura; cero recursos propios en éxito",
+      "explicit_followup": "Terminar/esperar hijos propios; registrar fallo/residuo si ownership impide borrar; no inspección operativa",
+      "UI_targets_partial": [
+        "UI12",
+        "UI35",
+        "UI36",
+        "UI37",
+        "UI38",
+        "UI39",
+        "UI40"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    },
+    {
+      "id": "HF40",
+      "path": "Campañas",
+      "role": "HARNESS",
+      "operation": "INVENTORY_REPORT",
+      "stage": "NONE",
+      "point": "pre/post/raw/counts",
+      "mode": "NONE",
+      "failure": "EVIDENCE_CONTROL",
+      "precondition": "Inputs/contrato/harness/lector/fixtures/contexto de ejecución registrados",
+      "required_oracle": "Cambios/adiciones de input y raw faltante/incompatible invalidan resultados; HF→IDs/rol/modo/stage/punto/oráculo trazables; tres campañas separadas sin inflar tests; históricos preservados",
+      "explicit_followup": "Raw nuevo y sello; 24 HC y 321 históricas separadas si se aprueba; P0 y D5/G01–G07 abiertos, sin SQL/Java/Docker",
+      "UI_targets_partial": [
+        "UI01",
+        "UI02",
+        "UI04",
+        "UI08",
+        "UI09",
+        "UI10",
+        "UI11",
+        "UI12",
+        "UI39",
+        "UI40"
+      ],
+      "status": "DESIGN_NOT_EXECUTED"
+    }
+  ],
+  "planned_rows": 40,
+  "new_tests_executed": 0,
+  "functional_campaigns_reexecuted": false,
+  "source_anchors": [
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store._load",
+      "line": 248,
+      "end_line": 298,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store._publish",
+      "line": 312,
+      "end_line": 353,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store.transact",
+      "line": 360,
+      "end_line": 373,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "symbol": "Store.read_command",
+      "line": 375,
+      "end_line": 383,
+      "file_sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "client_reduce",
+      "line": 150,
+      "end_line": 369,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.perform",
+      "line": 523,
+      "end_line": 535,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.dispatch",
+      "line": 562,
+      "end_line": 576,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "symbol": "Client.reconcile",
+      "line": 578,
+      "end_line": 588,
+      "file_sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "client_reduce",
+      "line": 157,
+      "end_line": 281,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "ledger_transition",
+      "line": 284,
+      "end_line": 340,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Client.perform",
+      "line": 466,
+      "end_line": 469,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Client.dispatch",
+      "line": 489,
+      "end_line": 499,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "symbol": "Client.reconcile",
+      "line": 501,
+      "end_line": 509,
+      "file_sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "symbol": "DurableIntegrationTest.df14",
+      "line": 184,
+      "end_line": 186,
+      "file_sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "symbol": "DurableIntegrationTest.df21",
+      "line": 248,
+      "end_line": 254,
+      "file_sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "symbol": "DurableRelationalTest.dr23",
+      "line": 228,
+      "end_line": 237,
+      "file_sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "symbol": "DurableRelationalTest.dr24",
+      "line": 238,
+      "end_line": 247,
+      "file_sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "symbol": "DurableRelationalTest.dr26",
+      "line": 252,
+      "end_line": 257,
+      "file_sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+    }
+  ],
+  "proposed_regression_campaigns": [
+    {
+      "scope": "I42 HC",
+      "existing_test_count": 24,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.durable_concurrency.run_concurrency_lab"
+      ],
+      "separate_new_raw": true,
+      "executed": false
+    },
+    {
+      "scope": "Historical Python",
+      "existing_test_count": 321,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.D5.run_relational_durable_lab"
+      ],
+      "separate_new_raw": true,
+      "executed": false
+    }
+  ],
+  "documentary_checks": {
+    "historical_seals_verified_current": {
+      "I42_inputs": 91,
+      "I42_raw_artifacts": 5,
+      "I41_inputs": 20,
+      "I40_inputs": 42,
+      "I40_documentary_inputs": 3
+    },
+    "source_anchors_verified": 18,
+    "local_links_verified": 11,
+    "whitespace_verified": true,
+    "publication_hygiene": "PASS_CONFIGURED_PATTERNS_525_TEXT_FILES_NOT_EXHAUSTIVE"
+  },
+  "inputs": {
+    "docs/design/D5-I43-NEXT-CUT-SCOPE.md": "d45e9db1efb7246cb2f2e45f501ee7f768e81c3391ad803412182edf8ff6b5ad",
+    "docs/design/D5-I43-DURABLE-CRASH-BOUNDARIES-DESIGN.md": "bffa4ce79f94d1d819f055ee44b04af0802b8d3892bfbbc3531bf93e988a47c7",
+    "docs/design/D5-I43-DURABLE-CRASH-BOUNDARIES-REVIEW.md": "cb689735f7d79388c41cfc2abc923e55cff23fc061129125b532d0cee834a574",
+    "HANDOFF-D5-I32.md": "f76d4181a3296401e12af2f9067ce159e606df61f687c895b79f4749a8bf38bf",
+    "docs/validation/D5-I40-results.json": "8725b3c1a970839b93dfbd0f03986ac5bc52cf383980628156071d8aefa88317",
+    "docs/validation/D5-I40-results.md": "c53d8d43b4a6f7b3e7e4a5e1f1712692c2f1bac344326bf64f6ee7a9fa3d8c45",
+    "docs/validation/D5-I41-design-review.json": "14faea99b04e1c0d36a6235b915d597ab5d1c972a0a20d6c8d1636321c338386",
+    "docs/validation/D5-I42-results.json": "d84d108980ba49ed6786e1a12bec4d85f105184c2a11405e5fb258500ca27583",
+    "docs/validation/D5-I42-results.md": "f498e607e52b04dcbf10771141bbb0bbcdd362240c233e09b77c10a8e52b462f",
+    "docs/validation/D5-I42-raw.json": "ef56de46942d9a81f057d3a6b811665c7a85fff39666f9a1cbe50db63dfc4786",
+    "docs/validation/D5-I42-regression-raw.json": "4e71a76f32ad5effec1798a97dda61a8ffc3173fabe98e435e13b0176d0a7bbd",
+    "docs/validation/D5-I42-regression-context.json": "e1c4e497deecd9151de7fbddc40a8e0bd1c79bdd3eec00d213ae6d51ae9c3ad8",
+    "docs/validation/D5-EVIDENCE-REGISTRY.json": "f02d635709bc52d15c1e566cbf07f646f0c250988caf10d766dfdc1b2dbdbd9c",
+    "docs/design/D5-I33-INTEGRATED-EVIDENCE-REVIEW.md": "8814f27e16bacaed3214f09cc05f16a86331b28326751dc594b8255d361f1970",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/durable_concurrency/support.py": "b18e520169e527bfe4b94344c87f2b5a0b20167f3a46d98e657878ec526dc0ee",
+    "testing/durable_concurrency/run_concurrency_lab.py": "0141c6b239e69d137aa2f0208941704a26006460c70a1cbc4edbdbdb6074fafc",
+    "testing/durable_concurrency/test_durable_concurrency.py": "6a06ae85dd6efc3ecc921ba1e6a9f6c9530cdf007c2cc68094664591e8575345"
+  },
+  "D5_closed": false,
+  "global_review": "OPEN",
+  "closure": {
+    "GI33": false,
+    "GI34": false,
+    "GI38": false,
+    "GI39": false,
+    "GI40": false
+  },
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "SQL_D1_D2_D3_D4_reexecuted": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "limitations": [
+    "Design only; no runtime tests executed.",
+    "Forty rows are not test/PASS counts.",
+    "No product changes or hooks proposed; stop and revisit scope if needed.",
+    "Only CREATE uncertainty paths; no UPDATE/CLOSE transfer.",
+    "SIGKILL, OSError and passive reopening are distinct evidence types.",
+    "No power-loss/NFS/Windows/hostile caller claim.",
+    "Remaining H03/H07 and historical H04/H05 limitations preserved.",
+    "No integrated persistence/recovery or global criterion closure inferred from isolated PASS.",
+    "Git tracking is local; remote not freshly queried."
+  ],
+  "historical_overlap_explicit": {
+    "HF33": "DF20 after_remote control",
+    "HF34": "DR26 after_remote control",
+    "HF35": "DF21 before_result UNKNOWN control",
+    "HF36": "R UNKNOWN initial state not established by DR26 second crash",
+    "HF31_HF32": "Existing after_head APPLY hooks; new gap-specific oracle and explicit continuation"
+  }
+}
