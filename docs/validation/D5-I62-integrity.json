@@ -1,0 +1,54 @@
+{
+  "schema": "d5.documentary-integrity.v1",
+  "increment": "I62",
+  "date": "2026-10-25",
+  "base_commit": "64ee83c3ab023af13d379ca676e64830ae29f25f",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "input_hashes": 305,
+    "documentary_hashes": 2,
+    "source_anchors": 595,
+    "matrix_cells": 140,
+    "retained_bounded_cells": 101,
+    "I61_causal_sequences": 39,
+    "logical_cuts": 12,
+    "typed_exclusions": 6,
+    "cell_evidence_references": 142,
+    "pointers_recorded": 1384,
+    "regression_contexts_read": 8,
+    "semantic_parts": 84,
+    "targeted_parts": 1,
+    "inherited_parts": 83,
+    "derived_semantic_counts": {
+      "SUPPORTS_BOUNDED": 78,
+      "PARTIAL": 6
+    },
+    "markdown_links": 7,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "new_tests_executed": 0,
+  "new_runtime": "NOT_RUN",
+  "product_or_harness_imported_by_documentary_validator": false,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/validation/D5-I62-results.md": "51590539fdf1d15f1e7eb72f529f5d329d632551609d247894c8a9e12fcbd6f5",
+    "docs/validation/D5-I62-matrix.md": "d56c2a87f95006ea4f2f703b7648d1576b14f393b7d29cd02801198dda221334",
+    "docs/validation/D5-I62-results.json": "8dec3b6f2d20463e58c1d7f6b41143cc811158159e79c4ff34ae3457ba01aa7e"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 703,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09"
+    },
+    "publication_authorized": false
+  }
+}
