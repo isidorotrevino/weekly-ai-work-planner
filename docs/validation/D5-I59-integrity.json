@@ -1,0 +1,46 @@
+{
+  "schema": "d5.documentary-integrity.v1",
+  "increment": "I59",
+  "date": "2026-10-25",
+  "base_commit": "efe7d355685af2441c40a3ad1e207975abe67edf",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "new_tests_executed": 0,
+  "new_runtime": "NOT_RUN",
+  "checks": {
+    "input_hashes": 272,
+    "documentary_hashes": 2,
+    "AST_anchors": 520,
+    "matrix_cells": 140,
+    "I58_sequences": 60,
+    "prior_logical_cuts": 12,
+    "typed_exclusions": 6,
+    "source_pointer_checks_recorded": 2066,
+    "cell_evidence_references": 190,
+    "markdown_links": 7,
+    "semantic_parts": 84,
+    "targeted_parts": 1,
+    "inherited_parts": 83,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "artifacts": {
+    "docs/validation/D5-I59-results.md": "8437dc5aff7dd75eacded7df3e384d29d1cb9e15547cac8eec837161c07aef1e",
+    "docs/validation/D5-I59-matrix.md": "91bafeb2f9e2a89175e1465672809ad1ade0d1d86441d18f3a61baaa5a9f602a",
+    "docs/validation/D5-I59-results.json": "2980c6705ae8ba54d1468e13d3599899dfb2e081eaa60a017cb0eef799a00b30"
+  },
+  "publication_authorized": false,
+  "published": false,
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "standard_exit_code": 1,
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "checker_persisted_unchanged": true,
+    "temporary_maximum_bytes": 12582912,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7"
+    },
+    "text_files_reviewed": 670,
+    "scope": "Higiene local; no autoriza publicación"
+  }
+}
