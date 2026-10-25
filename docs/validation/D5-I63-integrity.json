@@ -1,0 +1,46 @@
+{
+  "schema": "d5.design-integrity.v1",
+  "increment": "I63",
+  "date": "2026-10-25",
+  "base_commit": "12c5ee13998d9433d9b3a35d2a7270f5ce4c33a5",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "input_hashes": 309,
+    "documentary_hashes": 2,
+    "source_anchors": 470,
+    "mutations": 22,
+    "domain_cases": 86,
+    "controls": 4,
+    "proposed_tests": 90,
+    "regressions_proposed_not_run": 9,
+    "markdown_links": 6,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "new_tests_executed": 0,
+  "new_runtime": "NOT_RUN",
+  "product_or_harness_imported_by_validator": false,
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/design/D5-I63-GI39-INTERLEAVINGS-DESIGN.md": "9617a8cffcc0cd7b52362091a325c7239a0106af07227f2fad177b7413eb1aaa",
+    "docs/design/D5-I63-GI39-INTERLEAVINGS-REVIEW.md": "265708f9fb0011f62977a8bf084bb7de25c4704d60c46a03fa0ef53fbd94eaed",
+    "docs/validation/D5-I63-design-review.json": "9f8b7669527ed79fc4b543037878748391a7ad3cfd8b9e35330e41cf0522af5f"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 707,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09"
+    },
+    "publication_authorized": false
+  }
+}
