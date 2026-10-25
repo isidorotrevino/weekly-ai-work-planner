@@ -1,0 +1,44 @@
+{
+  "schema": "d5.design-integrity.v1",
+  "increment": "I60",
+  "date": "2026-10-25",
+  "base_commit": "47f4cb2050dce6d871abf430c63b25543a83d43b",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "inputs": 276,
+    "documentary_inputs": 2,
+    "AST_anchors": 390,
+    "exact_I59_qualified_cells": 39,
+    "CLIENT_T_cases": 15,
+    "REMOTE_T_R_cases": 24,
+    "controls": 4,
+    "proposed_tests": 43,
+    "proposed_positive_SIGKILLs": 39,
+    "regressions_proposed_not_run": 8,
+    "markdown_links": 6,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "new_tests_executed": 0,
+  "new_runtime": "NOT_RUN",
+  "implementation_authorized": false,
+  "test_execution_authorized": false,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/design/D5-I60-CAUSAL-CELLS-DESIGN.md": "540b7ed75fb0625c369e4e13c7254a5437ca82f9e7879438e9d4409008b6bda4",
+    "docs/design/D5-I60-CAUSAL-CELLS-REVIEW.md": "7f6ffb684232115afeed694c305644cffdabf7682d1905667e8756d70b8cc9b9",
+    "docs/validation/D5-I60-design-review.json": "ff95c0fd9be8c708b1a1016f8bb55b6b0e07dfc2c8a33ff161614f68817834e9"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 674,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7"
+    },
+    "publication_authorized": false
+  }
+}
