@@ -1,0 +1,37 @@
+{
+  "schema": "d5.i76-external-wrapper.v1",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.prospective_capture_typed.run_typed_lab"
+      ],
+      "path": "docs/validation/D5-I76-tests-raw.json",
+      "exit_code": 0,
+      "external_timeout_seconds": 300,
+      "elapsed_seconds": 1.236,
+      "raw_bytes": 113059,
+      "raw_sha256": "1f9c54d641daec9fb90a4cf36fa54d7955ed87ba9f8f854b4c15dd7767d0a2d6",
+      "stderr_bytes": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.prospective_capture_typed.capture"
+      ],
+      "path": "docs/validation/D5-I76-plan-raw.json",
+      "exit_code": 0,
+      "external_timeout_seconds": 30,
+      "elapsed_seconds": 0.076,
+      "raw_bytes": 337,
+      "raw_sha256": "4e3c69bb5818b8a44502a817893d5ecf7db84e3da2c907e67323f24f474b4417",
+      "stderr_bytes": 0
+    }
+  ],
+  "functional_campaigns_executed": 0,
+  "closure": false
+}

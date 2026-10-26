@@ -1,0 +1,1 @@
+{"schema": "d5.typed-capture-plan.v1", "phase": "I76_COMPONENTS_ONLY", "scope": "P01", "expected_tests": 321, "status": "NOT_RUN_I77_AUTHORIZATION_REQUIRED", "functional_execution_authorized": false, "semantic_baseline": {"SUPPORTS_BOUNDED": 81, "PARTIAL": 3}, "closure": false, "global_review": "OPEN", "publication_authorized": false}
