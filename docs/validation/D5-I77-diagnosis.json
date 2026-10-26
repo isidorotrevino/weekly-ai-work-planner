@@ -1,0 +1,340 @@
+{
+  "schema": "d5.i77-stopped-capture-diagnosis.v1",
+  "observed": {
+    "launcher_capture_status": "INVALID_CAPTURE",
+    "launcher_error_code": "INVALID_JSON",
+    "worker_exit_code": 2,
+    "raw_bytes": 0,
+    "sidecar_bytes": 0,
+    "event_pages": 0,
+    "cleanup": "OWN_GROUP_GONE",
+    "worker_stderr_retained": false,
+    "worker_specific_error_code": "NOT_RECORDED",
+    "functional_report": "NOT_RECORDED",
+    "reported_functional_occurrences": 0
+  },
+  "static_evidence": {
+    "method": "AST_LOCAL_IMPORT_OVERAPPROXIMATION_NO_MODULE_EXECUTION",
+    "modules": {
+      "testing.D5.run_relational_durable_lab": {
+        "path": "testing/D5/run_relational_durable_lab.py",
+        "sha256": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431"
+      },
+      "testing.D5.durable_support": {
+        "path": "testing/D5/durable_support.py",
+        "sha256": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8"
+      },
+      "source_ingest.durable_task_fixture": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235"
+      },
+      "source_ingest.incremental_fixture": {
+        "path": "source_ingest/incremental_fixture.py",
+        "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+      },
+      "source_ingest.preview": {
+        "path": "source_ingest/preview.py",
+        "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe"
+      },
+      "source_ingest.register": {
+        "path": "source_ingest/register.py",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7"
+      },
+      "source_ingest.offline": {
+        "path": "source_ingest/offline.py",
+        "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764"
+      },
+      "source_ingest.eligibility_fixture": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9"
+      },
+      "source_ingest": {
+        "path": "source_ingest/__init__.py",
+        "sha256": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e"
+      },
+      "source_ingest.durable_store": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6"
+      },
+      "testing.D5.relational_support": {
+        "path": "testing/D5/relational_support.py",
+        "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06"
+      },
+      "source_ingest.batch_fixture": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c"
+      },
+      "source_ingest.durable_relational_fixture": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90"
+      },
+      "source_ingest.relational_planner": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec"
+      },
+      "testing.D5.run_durable_lab": {
+        "path": "testing/D5/run_durable_lab.py",
+        "sha256": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7"
+      },
+      "testing.D5.run_incremental_lab": {
+        "path": "testing/D5/run_incremental_lab.py",
+        "sha256": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028"
+      }
+    },
+    "edges": [
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "source_ingest.durable_relational_fixture",
+        "line": 10
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 11
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "source_ingest.incremental_fixture",
+        "line": 12
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "testing.D5.run_incremental_lab",
+        "line": 13
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "testing.D5.run_durable_lab",
+        "line": 14
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "testing.D5.relational_support",
+        "line": 15
+      },
+      {
+        "source": "testing.D5.run_relational_durable_lab",
+        "target": "testing.D5.durable_support",
+        "line": 15
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 12
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest",
+        "line": 13
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest.eligibility_fixture",
+        "line": 13
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest.incremental_fixture",
+        "line": 14
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest.durable_store",
+        "line": 123
+      },
+      {
+        "source": "testing.D5.durable_support",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 124
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest.durable_store",
+        "line": 14
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest",
+        "line": 16
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest.eligibility_fixture",
+        "line": 16
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest.preview",
+        "line": 17
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest.incremental_fixture",
+        "line": 614
+      },
+      {
+        "source": "source_ingest.durable_task_fixture",
+        "target": "source_ingest.incremental_fixture",
+        "line": 633
+      },
+      {
+        "source": "source_ingest.incremental_fixture",
+        "target": "source_ingest.offline",
+        "line": 23
+      },
+      {
+        "source": "source_ingest.incremental_fixture",
+        "target": "source_ingest.preview",
+        "line": 24
+      },
+      {
+        "source": "source_ingest.preview",
+        "target": "source_ingest.register",
+        "line": 150
+      },
+      {
+        "source": "source_ingest.register",
+        "target": "source_ingest.preview",
+        "line": 4
+      },
+      {
+        "source": "source_ingest.offline",
+        "target": "source_ingest.preview",
+        "line": 15
+      },
+      {
+        "source": "source_ingest.eligibility_fixture",
+        "target": "source_ingest.preview",
+        "line": 14
+      },
+      {
+        "source": "testing.D5.relational_support",
+        "target": "source_ingest.durable_relational_fixture",
+        "line": 10
+      },
+      {
+        "source": "testing.D5.relational_support",
+        "target": "source_ingest.batch_fixture",
+        "line": 11
+      },
+      {
+        "source": "source_ingest.durable_relational_fixture",
+        "target": "source_ingest.durable_store",
+        "line": 16
+      },
+      {
+        "source": "source_ingest.durable_relational_fixture",
+        "target": "source_ingest.batch_fixture",
+        "line": 17
+      },
+      {
+        "source": "source_ingest.durable_relational_fixture",
+        "target": "source_ingest.relational_planner",
+        "line": 18
+      },
+      {
+        "source": "source_ingest.durable_relational_fixture",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 19
+      },
+      {
+        "source": "source_ingest.durable_relational_fixture",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 451
+      },
+      {
+        "source": "source_ingest.relational_planner",
+        "target": "source_ingest.durable_store",
+        "line": 7
+      },
+      {
+        "source": "source_ingest.relational_planner",
+        "target": "source_ingest.batch_fixture",
+        "line": 8
+      },
+      {
+        "source": "testing.D5.run_durable_lab",
+        "target": "source_ingest.durable_task_fixture",
+        "line": 12
+      },
+      {
+        "source": "testing.D5.run_durable_lab",
+        "target": "source_ingest.incremental_fixture",
+        "line": 13
+      },
+      {
+        "source": "testing.D5.run_durable_lab",
+        "target": "testing.D5.run_incremental_lab",
+        "line": 14
+      },
+      {
+        "source": "testing.D5.run_durable_lab",
+        "target": "testing.D5.durable_support",
+        "line": 15
+      },
+      {
+        "source": "testing.D5.run_incremental_lab",
+        "target": "source_ingest.incremental_fixture",
+        "line": 11
+      }
+    ],
+    "anchors": [
+      {
+        "path": "testing/prospective_capture_typed/worker.py",
+        "function": "main",
+        "line": 63,
+        "end_line": 83,
+        "sha256": "a4afd429c158dda8e18788372e67d13a2bbca9fad67e01fb61f3d5ca5ed48637"
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "function": "loaded_bindings",
+        "line": 148,
+        "end_line": 156,
+        "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+      },
+      {
+        "path": "testing/D5/run_relational_durable_lab.py",
+        "function": "main",
+        "line": 28,
+        "end_line": 56,
+        "sha256": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431"
+      }
+    ],
+    "PlaneError_module_in_runner_import_graph": false,
+    "EligibilityError_module_in_runner_import_graph": true,
+    "runner_discovers_test_modules_inside_main": true,
+    "typed_worker_resolves_all_class_bindings_before_main": true
+  },
+  "inference": {
+    "status": "STATICALLY_SUPPORTED_NOT_RUNTIME_ATTESTED",
+    "candidate": "CLASS_MODULE_NOT_LOADED_FOR_source_ingest.plane_fixture",
+    "mechanism": "El worker exige PlaneError en sys.modules antes de main; el import del runner no carga plane_fixture y discovery ocurre dentro de main.",
+    "launcher_code_scope": "INVALID_JSON describe el intento de leer raw/sidecar vacíos; no identifica la excepción concreta del worker.",
+    "limitations": [
+      "stderr se descarta en DEVNULL; no se conserva código interno ni fase exacta",
+      "sin sidecar/raw no se acredita inventario ni ejecución de tests",
+      "no se reimportaron módulos de producto ni se reejecutó el worker para confirmar"
+    ]
+  },
+  "proposed_adjustment": {
+    "next_design": "I78",
+    "scope": [
+      "Resolver clases permitidas desde módulos ya cargados al llegar al primer operando tipado después del discovery normal, sin imports o discovery extra",
+      "Conservar guardas de identidad/fuente/tipo exacto antes de observar cada operando y fallar si el binding falta o cambia",
+      "Retener fase y código de fallo sanitizados del worker por canal acotado previamente contratado, sin traceback/rutas/payloads",
+      "Validar inicialización temprana/tardía, módulo ausente, reemplazo de clase y fallos antes de raw con suites nuevas sintéticas"
+    ],
+    "implementation_authorized": false,
+    "new_capture_authorized": false,
+    "no_budget_expansion": true,
+    "no_product_fixture_hook_runner_changes": true
+  },
+  "retry_performed": false,
+  "publication_authorized": false,
+  "closure": false,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schema": "d5.typed-capture-results.v1",
+  "increment": "I77",
+  "date": "2026-10-26",
+  "timezone": "Europe/Madrid",
+  "base_commit": "966cc11c1bd35d0d2dc171dcb91743ab34d1670f",
+  "status": "BLOCKED_WORKER_EXIT_WITHOUT_FUNCTIONAL_REPORT",
+  "authority": "Selección A explícita: registrar autorización I77 y ejecutar P01 completo (321 ocurrencias/12 grupos) en destino nuevo con perfil tipado; sin publicar; detener incompatibilidades y presentar ajuste.",
+  "authorization": "docs/validation/D5-I77-capture-authorization.json",
+  "counts": {
+    "functional_campaigns_attempted": 1,
+    "functional_campaigns_completed": 0,
+    "expected_occurrences": 321,
+    "expected_groups": 12,
+    "reported_executed_occurrences": 0,
+    "actual_executed_occurrences": "NOT_ATTESTED_NO_RAW",
+    "functional_PASS_occurrences": 0,
+    "frames_reported": 0,
+    "groups_reported": 0,
+    "events_reported": 0,
+    "pages": 0,
+    "raw_bytes": 0,
+    "sidecar_bytes": 0,
+    "package_bytes": 119270,
+    "new_distinct_functional_tests": 0,
+    "owned_groups_unsettled": 0
+  },
+  "functional_status": "NOT_RECORDED",
+  "functional_status_scope": "RAW_EMPTY_NO_FUNCTIONAL_RESULT_OR_COVERAGE_CREDIT",
+  "capture_status": "INVALID_CAPTURE",
+  "sidecar_status": "NOT_RECORDED_EMPTY_FILE",
+  "capture_errors": [
+    "INVALID_JSON",
+    "WORKER_EXIT_2_WITHOUT_RETAINED_ERROR_CODE"
+  ],
+  "sufficiency_review_executed": false,
+  "elapsed_seconds": 0.427,
+  "worker_exit_code": 2,
+  "entrypoint_exit_code": "NOT_RECORDED",
+  "cleanup": {
+    "status": "OWN_GROUP_GONE",
+    "worker_exit": 2
+  },
+  "input_comparison": {
+    "status": "MATCH",
+    "added": [],
+    "removed": [],
+    "changed_runtime": [],
+    "changed_documentary": []
+  },
+  "structure_does_not_complete_metadata": true,
+  "diagnosis": "docs/validation/D5-I77-diagnosis.json",
+  "proposed_adjustment": {
+    "next_design": "I78",
+    "scope": [
+      "Resolver clases permitidas desde módulos ya cargados al llegar al primer operando tipado después del discovery normal, sin imports o discovery extra",
+      "Conservar guardas de identidad/fuente/tipo exacto antes de observar cada operando y fallar si el binding falta o cambia",
+      "Retener fase y código de fallo sanitizados del worker por canal acotado previamente contratado, sin traceback/rutas/payloads",
+      "Validar inicialización temprana/tardía, módulo ausente, reemplazo de clase y fallos antes de raw con suites nuevas sintéticas"
+    ],
+    "implementation_authorized": false,
+    "new_capture_authorized": false,
+    "no_budget_expansion": true,
+    "no_product_fixture_hook_runner_changes": true
+  },
+  "retry_performed": false,
+  "budgets_changed": false,
+  "product_changed": false,
+  "fixtures_or_hooks_changed": false,
+  "capture_code_or_registry_changed": false,
+  "I38_or_I67_executed": false,
+  "component_tests_reexecuted": false,
+  "I71_P01_status": "BLOCKED_UNCHANGED_77_OF_321_NOT_ADDED_TO_I74",
+  "I71_P02_P10_status": "UNCHANGED_371_OCCURRENCES_PENDING_SUFFICIENCY_REVIEW",
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  },
+  "UI_part_statuses": {
+    "UI01.2": "PARTIAL_UNCHANGED",
+    "UI04.1": "PARTIAL_UNCHANGED",
+    "UI09.2": "PARTIAL_UNCHANGED"
+  },
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "real_or_human_requirements_pending": [
+    "GI06",
+    "GI12",
+    "GI18",
+    "GI24",
+    "GI30",
+    "GI36",
+    "GI42"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "publication_authorized": false,
+  "published_through": "I52",
+  "remote_network_read_performed": false,
+  "artifacts": {
+    "docs/validation/D5-I77-P01/OWNER": "813ddf1ffc15c4075d7d5835370e2b833e2cd27551fb0ab923004747d8eebba6",
+    "docs/validation/D5-I77-P01/context.json": "c856cdf9744c5bd0cd5a6f8999e7c947f1a8d2f500484d70da090885e2650ff5",
+    "docs/validation/D5-I77-P01/runner-raw.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/D5-I77-P01/sidecar.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/D5-I77-capture-authorization.json": "59881d30c29a7efd5777ba241cb0ba9b862d0a29438e1cddf9d1fc10fdfbb342",
+    "docs/validation/D5-I77-P01-launch.json": "c856cdf9744c5bd0cd5a6f8999e7c947f1a8d2f500484d70da090885e2650ff5",
+    "docs/validation/D5-I77-execution-context.json": "386b8a9a2cfbe9b2e1e4fa6756b2bf625d1ef6bd721fcb34a1a948303ef62bc0",
+    "docs/validation/D5-I77-diagnosis.json": "d398585d728316fd8c29932b64cd50210caa99f7669d3ae0557ede2e19b33402"
+  },
+  "post_capture_structure": {
+    "status": "PARTIAL_PACKET_PRESERVED_NOT_VALID_CAPTURE",
+    "files": {
+      "OWNER": 36,
+      "context.json": 59617,
+      "runner-raw.json": 0,
+      "sidecar.json": 0
+    },
+    "zero_length_files": [
+      "runner-raw.json",
+      "sidecar.json"
+    ],
+    "event_pages": 0
+  },
+  "I74_P01_status": "BLOCKED_UNCHANGED_321_PASS_35_INCOMPLETE"
+}
