@@ -1,0 +1,1634 @@
+{
+  "schema": "d5.paged-component-results.v1",
+  "increment": "I73",
+  "date": "2026-10-26",
+  "timezone": "Europe/Madrid",
+  "base_commit": "16f4791774eed931c79690f927b7fc52af274461",
+  "status": "PAGED_COMPONENT_VALIDATED_PENDING_I74",
+  "authority": "Selección A posterior a I72: aprobar contrato, implementar perfil paginado/registro fijo y validar PG64 con suites sintéticas, sin importar producto/runners históricos ni ejecutar campañas funcionales.",
+  "contract_approved": true,
+  "implementation_authorized": true,
+  "component_test_execution_authorized": true,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "counts": {
+    "component_tests": 64,
+    "passed": 64,
+    "temporary_roots_created": 64,
+    "temporary_roots_remaining": 0,
+    "owned_synthetic_children": 4,
+    "owned_children_unsettled": 0,
+    "functional_campaigns_executed": 0,
+    "original_P01_test_bindings": 321,
+    "original_P01_groups": 12,
+    "NO_STORE_CONTROL_policies": 5,
+    "NEGATIVE_DOMAIN_policies": 2
+  },
+  "case_results": [
+    {
+      "id": "PG01",
+      "family": "AUTHORITY",
+      "trigger": "Ausencia de autorización futura I74",
+      "expected_oracle": "Bloquear antes de importar runner/producto o crear worker; aprobar I73 sólo habilita componentes sintéticos.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/0",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG01"
+      ],
+      "method": {
+        "end_line": 109,
+        "line": 105,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG02",
+      "family": "AUTHORITY",
+      "trigger": "Pins I69–I72 o código/registro alterados",
+      "expected_oracle": "STALE_AUTHORITY/STALE_INPUTS sin aprender hashes nuevos durante captura.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/1",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG02"
+      ],
+      "method": {
+        "end_line": 113,
+        "line": 110,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG03",
+      "family": "AUTHORITY",
+      "trigger": "Scope distinto de P01 o argv/path arbitrario",
+      "expected_oracle": "Rechazar; P02–P10 y sus registros I71 permanecen sellados.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/2",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG03"
+      ],
+      "method": {
+        "end_line": 116,
+        "line": 114,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG04",
+      "family": "AUTHORITY",
+      "trigger": "IDs, grupos o multiplicidades distintos",
+      "expected_oracle": "No completar por conteo parcial ni PASS del runner; exigir conjunto Python321 original.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/3",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG04"
+      ],
+      "method": {
+        "end_line": 120,
+        "line": 117,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG05",
+      "family": "AUTHORITY",
+      "trigger": "Discovery añade/elimina fuente o cambia documento pertinente",
+      "expected_oracle": "Comparar conjuntos y bytes pre/post; separar delta documental sin aceptarlo automáticamente.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/4",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG05"
+      ],
+      "method": {
+        "end_line": 126,
+        "line": 121,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG06",
+      "family": "AUTHORITY",
+      "trigger": "Registro I70 o raw I71 reescrito",
+      "expected_oracle": "Rechazar preservación; perfil paginado tiene registro nuevo y destino fijo nuevo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/5",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG06"
+      ],
+      "method": {
+        "end_line": 131,
+        "line": 127,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG07",
+      "family": "AUTHORITY",
+      "trigger": "Import del capturador o modo plan",
+      "expected_oracle": "Sólo stdlib/ayudantes I70 explícitos; cero imports históricos y cero campañas.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/6",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG07"
+      ],
+      "method": {
+        "end_line": 133,
+        "line": 132,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG08",
+      "family": "AUTHORITY",
+      "trigger": "Mismo código y manifest bajo control del caller",
+      "expected_oracle": "Declarar puerta de coherencia; no atestación independiente ni autorización humana por archivo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/7",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG08"
+      ],
+      "method": {
+        "end_line": 138,
+        "line": 134,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG09",
+      "family": "PAGES",
+      "trigger": "Evento que cabe exactamente en página",
+      "expected_oracle": "Aceptar sólo si el documento JSON completo con envelope cabe en 2MiB.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/8",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG09"
+      ],
+      "method": {
+        "end_line": 141,
+        "line": 139,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG10",
+      "family": "PAGES",
+      "trigger": "Evento siguiente rebasa página",
+      "expected_oracle": "Cerrar página no vacía y abrir índice consecutivo; no dividir/truncar evento ni test.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/9",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG10"
+      ],
+      "method": {
+        "end_line": 144,
+        "line": 142,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG11",
+      "family": "PAGES",
+      "trigger": "Evento individual rebasa4KiB",
+      "expected_oracle": "INVALID_CAPTURE; conservar oráculo/retorno original, parar entre tests.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/10",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG11"
+      ],
+      "method": {
+        "end_line": 146,
+        "line": 145,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG12",
+      "family": "PAGES",
+      "trigger": "Página número33 o bytes acumulados >64MiB",
+      "expected_oracle": "Bloquear incluso con menos de131072 eventos; nunca resetear acumulado al rotar.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/11",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG12"
+      ],
+      "method": {
+        "end_line": 151,
+        "line": 147,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG13",
+      "family": "PAGES",
+      "trigger": "Eventos de campaña131072 y131073",
+      "expected_oracle": "Aceptar el primero sólo si otros topes caben; rechazar el excedente, no ocultarlo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/12",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG13"
+      ],
+      "method": {
+        "end_line": 156,
+        "line": 152,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG14",
+      "family": "PAGES",
+      "trigger": "Eventos de test2048 y2049 cruzando páginas",
+      "expected_oracle": "Contador por test continuo; página nueva no reinicia límite.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/13",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG14"
+      ],
+      "method": {
+        "end_line": 161,
+        "line": 157,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG15",
+      "family": "PAGES",
+      "trigger": "Página vacía, duplicada, índice ausente o fuera de orden",
+      "expected_oracle": "Rechazar manifest; cero eventos sólo admite pages=[] en paquete incompleto.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/14",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG15"
+      ],
+      "method": {
+        "end_line": 167,
+        "line": 162,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG16",
+      "family": "PAGES",
+      "trigger": "Hash/bytes/first/last/count/header discrepantes",
+      "expected_oracle": "INVALID_PACKET_BINDING; no aceptar página por nombre o posición aproximada.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/15",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG16"
+      ],
+      "method": {
+        "end_line": 172,
+        "line": 168,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG17",
+      "family": "STREAMING",
+      "trigger": "Secuencia global densa entre páginas",
+      "expected_oracle": "Validar sin huecos/repetición, capture_run_id único y page_index correlacionado.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/16",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG17"
+      ],
+      "method": {
+        "end_line": 175,
+        "line": 173,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG18",
+      "family": "STREAMING",
+      "trigger": "Test cruza múltiples páginas",
+      "expected_oracle": "Frame usa rango global semiabierto y conteo; validador enlaza todos sus eventos.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/17",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG18"
+      ],
+      "method": {
+        "end_line": 179,
+        "line": 176,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG19",
+      "family": "STREAMING",
+      "trigger": "Muchos tests en una página",
+      "expected_oracle": "Conservar test_frame_id exacto; no asignar por cercanía al último resultado.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/18",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG19"
+      ],
+      "method": {
+        "end_line": 181,
+        "line": 180,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG20",
+      "family": "STREAMING",
+      "trigger": "Evento sin frame antes/después del lifecycle",
+      "expected_oracle": "Tipar fuera de test; nunca regalarlo a un frame vecino ni sustituir identidad de dominio.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/19",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG20"
+      ],
+      "method": {
+        "end_line": 184,
+        "line": 182,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG21",
+      "family": "STREAMING",
+      "trigger": "Validación de paquete al máximo permitido",
+      "expected_oracle": "Leer una página acotada cada vez y contabilizar bytes leídos; sin reconstruir lista global.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/20",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG21"
+      ],
+      "method": {
+        "end_line": 188,
+        "line": 185,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG22",
+      "family": "STREAMING",
+      "trigger": "Buffer del recorder durante suite larga",
+      "expected_oracle": "Una página más resúmenes acotados por test; no retener todos los eventos ni slices globales.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/21",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG22"
+      ],
+      "method": {
+        "end_line": 191,
+        "line": 189,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG23",
+      "family": "STREAMING",
+      "trigger": "Fallo escritura/flush/cierre o disco lleno simulado",
+      "expected_oracle": "Latch de invalidez independiente del stream; no pasar excepción instrumental al producto.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/22",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG23"
+      ],
+      "method": {
+        "end_line": 201,
+        "line": 192,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG24",
+      "family": "STREAMING",
+      "trigger": "Completitud calculada con un hijo/evento ausente",
+      "expected_oracle": "Propagar INCOMPLETE a test/grupo/campaña; digest/manifest correcto no reemplaza hijo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/23",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG24"
+      ],
+      "method": {
+        "end_line": 205,
+        "line": 202,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG25",
+      "family": "SEMANTICS",
+      "trigger": "Wrapper retorna objeto/lanza excepción original",
+      "expected_oracle": "Una llamada original, mismos args y misma identidad; no llamadas extra de snapshot/perform.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/24",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG25"
+      ],
+      "method": {
+        "end_line": 210,
+        "line": 206,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG26",
+      "family": "SEMANTICS",
+      "trigger": "Assertions delegadas y subTest fallido",
+      "expected_oracle": "Depth evita duplicación semántica; callbacks y resultado funcional se conservan.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/25",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG26"
+      ],
+      "method": {
+        "end_line": 214,
+        "line": 211,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG27",
+      "family": "SEMANTICS",
+      "trigger": "assertRaises declarado pero __exit__ no observado",
+      "expected_oracle": "Distinguir expectativa de salida real; no inferir excepción desde PASS.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/26",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG27"
+      ],
+      "method": {
+        "end_line": 217,
+        "line": 215,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG28",
+      "family": "SEMANTICS",
+      "trigger": "Operando/retorno de tipo no soportado",
+      "expected_oracle": "NOT_RECORDED y propagación; sin repr, propiedades ni digest ficticio.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/27",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG28"
+      ],
+      "method": {
+        "end_line": 219,
+        "line": 218,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG29",
+      "family": "SEMANTICS",
+      "trigger": "Registro cambia tras stopTest",
+      "expected_oracle": "RECORD_MUTATED_AFTER_TEST; páginas históricas no se reparan para casar.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/28",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG29"
+      ],
+      "method": {
+        "end_line": 223,
+        "line": 220,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG30",
+      "family": "SEMANTICS",
+      "trigger": "Binding de método generado y alias DF/DR",
+      "expected_oracle": "Conservar fuente/factory/args y hash sellados; no crear AST inexistente.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/29",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG30"
+      ],
+      "method": {
+        "end_line": 227,
+        "line": 224,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG31",
+      "family": "SEMANTICS",
+      "trigger": "Raw funcional PASS parcial por stop instrumental",
+      "expected_oracle": "INVALID_TEST_COUNT/INCOMPLETE_TEST_SET; no denominarlo Python321 completo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/30",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG31"
+      ],
+      "method": {
+        "end_line": 229,
+        "line": 228,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG32",
+      "family": "SEMANTICS",
+      "trigger": "Restauración tras éxito/fallo/budget",
+      "expected_oracle": "Restaurar objetos exactos anteriores, incluso constructor; sustitución ajena detectada invalida.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/31",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG32"
+      ],
+      "method": {
+        "end_line": 233,
+        "line": 230,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG33",
+      "family": "APPLICABILITY",
+      "trigger": "DF01 sin Store",
+      "expected_oracle": "N/A sólo identidad de dominio; exige lifecycle/assertions/inventario realmente observados.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/32",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG33"
+      ],
+      "method": {
+        "end_line": 242,
+        "line": 242,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG34",
+      "family": "APPLICABILITY",
+      "trigger": "DF02 sin Store",
+      "expected_oracle": "N/A sólo dominio; no reabrir D3/D4 ni rellenar historia ausente.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/33",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG34"
+      ],
+      "method": {
+        "end_line": 243,
+        "line": 243,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG35",
+      "family": "APPLICABILITY",
+      "trigger": "DF48 sin Store",
+      "expected_oracle": "N/A sólo dominio; cobertura declarada no equivale a escenarios ejecutados.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/34",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG35"
+      ],
+      "method": {
+        "end_line": 244,
+        "line": 244,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG36",
+      "family": "APPLICABILITY",
+      "trigger": "DR01 sin Store",
+      "expected_oracle": "N/A sólo dominio; fuente y manifiesto sellados de inventario relacional.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/35",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG36"
+      ],
+      "method": {
+        "end_line": 245,
+        "line": 245,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG37",
+      "family": "APPLICABILITY",
+      "trigger": "DR02 sin Store",
+      "expected_oracle": "N/A sólo dominio; conserva carácter documental del control.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/36",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG37"
+      ],
+      "method": {
+        "end_line": 246,
+        "line": 246,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG38",
+      "family": "APPLICABILITY",
+      "trigger": "DF07 con construcción declarada pero snapshot rechazado",
+      "expected_oracle": "Exigir evento de constructor exitoso del padre; no HEAD_VERIFIED, no observación instrumental del hijo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/37",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG38"
+      ],
+      "method": {
+        "end_line": 248,
+        "line": 247,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG39",
+      "family": "APPLICABILITY",
+      "trigger": "DF43 con construcción declarada y limpieza rechazada",
+      "expected_oracle": "Exigir identidad observada de construcción y assertions; no inventario saneado ni durabilidad por PASS.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/38",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG39"
+      ],
+      "method": {
+        "end_line": 249,
+        "line": 249,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG40",
+      "family": "APPLICABILITY",
+      "trigger": "Cualquier otro ID sin identidad requerida",
+      "expected_oracle": "INCOMPLETE; sin nuevas excepciones N/A aprendidas del resultado ni reglas por prefijo/grupo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/39",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG40"
+      ],
+      "method": {
+        "end_line": 251,
+        "line": 250,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG41",
+      "family": "CONSTRUCTOR",
+      "trigger": "Store.__init__ público con firma/fuente exactas",
+      "expected_oracle": "Binding AST/hash y inspect de función/firma; no alias ad hoc ni imports en fase componente.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/40",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG41"
+      ],
+      "method": {
+        "end_line": 262,
+        "line": 252,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG42",
+      "family": "CONSTRUCTOR",
+      "trigger": "Retorno normal del constructor sintético",
+      "expected_oracle": "Observar args run_id/store_id/role ya ligados tras original; retorno None preservado.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/41",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG42"
+      ],
+      "method": {
+        "end_line": 264,
+        "line": 263,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG43",
+      "family": "CONSTRUCTOR",
+      "trigger": "Constructor lanza antes de completar",
+      "expected_oracle": "Conservar excepción; registrar fallo sin aceptar identidades como constructor validado.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/42",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG43"
+      ],
+      "method": {
+        "end_line": 266,
+        "line": 265,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG44",
+      "family": "CONSTRUCTOR",
+      "trigger": "IDs inválidos, rol inesperado o tipo custom",
+      "expected_oracle": "No coerción/str/repr/getattr de payload; metadata inválida no altera excepción/retorno original.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/43",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG44"
+      ],
+      "method": {
+        "end_line": 270,
+        "line": 267,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG45",
+      "family": "CONSTRUCTOR",
+      "trigger": "Dos Stores o mismos IDs con objetos distintos",
+      "expected_oracle": "Referencias de objeto y declaraciones separadas; UUID repetido no prueba mismo Store ni mismo head.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/44",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG45"
+      ],
+      "method": {
+        "end_line": 274,
+        "line": 271,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG46",
+      "family": "CONSTRUCTOR",
+      "trigger": "Snapshot posterior de identidad diferente",
+      "expected_oracle": "Conservar ambas autoridades y marcar conflicto, sin sobrescribir declaración para aparentar consistencia.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/45",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG46"
+      ],
+      "method": {
+        "end_line": 280,
+        "line": 275,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG47",
+      "family": "CONSTRUCTOR",
+      "trigger": "Proceso hijo spawn sin wrapper propio",
+      "expected_oracle": "No atribuir callback padre al hijo; sólo protocolo existente y autoridad explícita de su metadata.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/46",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG47"
+      ],
+      "method": {
+        "end_line": 287,
+        "line": 281,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG48",
+      "family": "CONSTRUCTOR",
+      "trigger": "Constructor observado fuera de un frame o reutilizado",
+      "expected_oracle": "No enlazar por proximidad ni dejar que declaración satisfaga política HEAD donde se exige head observado.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/47",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG48"
+      ],
+      "method": {
+        "end_line": 289,
+        "line": 288,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG49",
+      "family": "BOUNDS",
+      "trigger": "Raw original supera12MiB",
+      "expected_oracle": "No truncar ni ampliar; conservar lo producido con estado inválido.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/48",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG49"
+      ],
+      "method": {
+        "end_line": 292,
+        "line": 290,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG50",
+      "family": "BOUNDS",
+      "trigger": "Sidecar/index o contexto supera12MiB",
+      "expected_oracle": "Bloquear; páginas no son permiso para crecimiento de frames/links/contexto sin techo.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/49",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG50"
+      ],
+      "method": {
+        "end_line": 295,
+        "line": 293,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG51",
+      "family": "BOUNDS",
+      "trigger": "Operandos16MiB, profundidad32 y strings4096",
+      "expected_oracle": "Mantener topes I69, sin payload crudo ni escapes que eludan cómputo de bytes.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/50",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG51"
+      ],
+      "method": {
+        "end_line": 300,
+        "line": 296,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG52",
+      "family": "BOUNDS",
+      "trigger": "Frames4096 o referencias16384 excedidos",
+      "expected_oracle": "Rechazar exceso; enlaces por rango no consumen un puntero persistente por evento.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/51",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG52"
+      ],
+      "method": {
+        "end_line": 303,
+        "line": 301,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG53",
+      "family": "BOUNDS",
+      "trigger": "Inputbudget128MiB únicos/256MiB lectura o4096paths",
+      "expected_oracle": "Mantener inputscope separado y bloquear; no gastar contador de evidencia para saltar inputbudget.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/52",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG53"
+      ],
+      "method": {
+        "end_line": 308,
+        "line": 304,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG54",
+      "family": "BOUNDS",
+      "trigger": "Paquete >112MiB+4KiB o lectura de evidencia >256MiB",
+      "expected_oracle": "Contar raw/index/context/launch/pages/OWNER y repeticiones de lectura; no presupuesto por página reiniciable.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/53",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG54"
+      ],
+      "method": {
+        "end_line": 312,
+        "line": 309,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG55",
+      "family": "BOUNDS",
+      "trigger": "Tiempo900s o espera20s excedidos",
+      "expected_oracle": "Límite menor de runner/hijo/hook domina; no alterar alarmas/límites kernel ni añadir actores.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/54",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG55"
+      ],
+      "method": {
+        "end_line": 319,
+        "line": 313,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG56",
+      "family": "BOUNDS",
+      "trigger": "Presupuesto agotado durante stopTest/finalización",
+      "expected_oracle": "Estado inválido fuera del stream con código acotado; no añadir TEST_END ficticio ni cerrar el criterio.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/55",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG56"
+      ],
+      "method": {
+        "end_line": 321,
+        "line": 320,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG57",
+      "family": "OWNERSHIP",
+      "trigger": "Destino D5-I74-P01 existente",
+      "expected_oracle": "Rechazar sin overwrite; no reutilizar D5-I71-P01 ni borrar evidencia.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/56",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG57"
+      ],
+      "method": {
+        "end_line": 330,
+        "line": 322,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG58",
+      "family": "OWNERSHIP",
+      "trigger": "Componente symlink/FIFO/dispositivo o rename ajeno",
+      "expected_oracle": "Rechazar con identidad de fichero comprobada; no seguir links de manifest no confiables.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/57",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG58"
+      ],
+      "method": {
+        "end_line": 337,
+        "line": 331,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG59",
+      "family": "OWNERSHIP",
+      "trigger": "Página no listada o path/manifiesto con traversal",
+      "expected_oracle": "Conjunto cerrado exacto; sólo event-0001.json…event-0032.json bajo root propio.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/58",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG59"
+      ],
+      "method": {
+        "end_line": 342,
+        "line": 338,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG60",
+      "family": "OWNERSHIP",
+      "trigger": "READY/RELEASE con nonce/pid/pgid/fds incorrectos",
+      "expected_oracle": "No liberar worker ni tocar proceso ajeno; correlación proviene del Popen propio.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/59",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG60"
+      ],
+      "method": {
+        "end_line": 345,
+        "line": 343,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG61",
+      "family": "OWNERSHIP",
+      "trigger": "Timeout y recursos no confirmados terminados",
+      "expected_oracle": "Parada sólo grupo propio; registrar BLOCKED y pendientes, nunca cero por inferencia.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/60",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG61"
+      ],
+      "method": {
+        "end_line": 358,
+        "line": 358,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG62",
+      "family": "OWNERSHIP",
+      "trigger": "Sibling ajeno, dev/run_data/D4 operativo",
+      "expected_oracle": "Intactos y no inspeccionados; limpieza sólo temporales nuevos con owner/sentinel comprobados.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/61",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG62"
+      ],
+      "method": {
+        "end_line": 365,
+        "line": 359,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG63",
+      "family": "OWNERSHIP",
+      "trigger": "Resultados de suite sintética I73 usados como campaña",
+      "expected_oracle": "COMPONENT_ONLY; cero ocurrencias Python321 y cero import de runner/producto histórico.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/62",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG63"
+      ],
+      "method": {
+        "end_line": 367,
+        "line": 366,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    },
+    {
+      "id": "PG64",
+      "family": "OWNERSHIP",
+      "trigger": "Paquete íntegro y todos los tests PASS",
+      "expected_oracle": "Como máximo TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW; 81/3 y globales abiertos hasta revisión separada.",
+      "status": "COMPONENT_TEST_PASS",
+      "semantic_status": "PENDING_I74_AND_SUFFICIENCY_REVIEW",
+      "raw": "docs/validation/D5-I73-tests-raw.json",
+      "raw_sha256": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+      "scenario_pointer": "/scenarios/63",
+      "test_ids": [
+        "testing.prospective_capture_paged.test_paged_capture.PagedTest.test_PG64"
+      ],
+      "method": {
+        "end_line": 405,
+        "line": 368,
+        "path": "testing/prospective_capture_paged/test_paged_capture.py",
+        "sha256": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799"
+      },
+      "global_accepted": false
+    }
+  ],
+  "limits": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "limits_validity": "FINITE_SYNTHETIC_COMPONENT_CHECKS_NOT_PYTHON321_CAPACITY_PROOF",
+  "live_runner_compatibility": "NOT_ASSESSED_PENDING_I74",
+  "new_distinct_functional_tests": 0,
+  "inputs": {
+    "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+    "docs/design/D5-I35-NEXT-CUT-SCOPE.md": "8f4be298d849da615280909cf25968ed271eedfceece6713735b598bbd30be90",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-DESIGN.md": "145b7eafb0fbf7b2ea877fffb84593d26486c0436f6b72e6ecbf0635accf640c",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md": "6d0fbaeb2466c9100c1f7e94c8a5c42ef3e064387a9980023ddda769e02ccdb4",
+    "docs/design/D5-I70-PROSPECTIVE-CAPTURE-LAB.md": "2f2028d0a2f4f7bf96173fbfd5bdfb512612690ba7a6847b9dd0760075794ca5",
+    "docs/design/D5-I72-PAGED-CAPTURE-DESIGN.md": "b8d22c1eed08a4e8f87bf601edf36abaaf09ec44751b19ce108d926172d39535",
+    "docs/design/D5-I72-PAGED-CAPTURE-REVIEW.md": "cc33e0621115b23ec3e35dcbbcb5878656ae1345bba15c71bcb096df485fc970",
+    "docs/design/D5-I73-PAGED-CAPTURE-LAB.md": "03b94c71c1c0c5e3ea24f99b7afecb42143369f63a7f87255741b91d5a846057",
+    "docs/validation/D5-I69-design-review.json": "4ad7df4fa45900bd074fc315f84baa98c84cc902f99893a6d4099fcaadc01b85",
+    "docs/validation/D5-I69-integrity.json": "59af0991ee42ef263e40b5655abc150177a32b4019c187bf4c39b01bfde8a2ff",
+    "docs/validation/D5-I70-integrity.json": "e08991789bd161fccb8ef3f6357657b0227719d646eb69183db5a30a5bf4b6a6",
+    "docs/validation/D5-I70-plan-context.json": "2ff218b09154e8c6b0b50f950edb8edba0d421b1f7b9554db1f8a8acba6e6df8",
+    "docs/validation/D5-I70-plan-raw.json": "aff7b5bc007fa7590ac809812bf1fee770de75437065010719ffd23f7b3fd713",
+    "docs/validation/D5-I70-results.json": "1da4f5109851333e333040cf32330f553acb1c6588078b107ffbcae01969fcb0",
+    "docs/validation/D5-I70-results.md": "f83dafb5b004ebc790d7b28a770df0215c6f87111eea2538215abd2160196af9",
+    "docs/validation/D5-I70-tests-raw.json": "c04c60f0aaf151987f1a203bc6e096d14bcd63f54f5d5d5a95e3a9e832d309b7",
+    "docs/validation/D5-I71-P01-launch.json": "65db40b1cc3c2825d352fde3f5347367c86aecd00896b3a077022a83fa276fe4",
+    "docs/validation/D5-I71-P01/OWNER": "87406ff567a1c0e1ce029dd9f49c5a75ec26214774fe6ea61cdd644da281ae6a",
+    "docs/validation/D5-I71-P01/context.json": "bfa3122fa084c017a835f98550910c5086d8f656dfd51d11f612f336397c2cab",
+    "docs/validation/D5-I71-P01/runner-raw.json": "5abae36f52969ba26f921f6ef9a7965adcba5cceae35eb570a778ec59cd5f575",
+    "docs/validation/D5-I71-P01/sidecar.json": "719d1419d7949eacceef8822ce5bfbfdcc1b893fad027d6ad71b5da4b27b2658",
+    "docs/validation/D5-I71-P02-launch.json": "b07d7d3b0f5466b039898c485159ea4c8c5feefe73ecdf20766dda475c4f370a",
+    "docs/validation/D5-I71-P02/OWNER": "fa29aee08fa1f43a0df4bcd7d38491865a327cdd7f169a165d7b7157342dca53",
+    "docs/validation/D5-I71-P02/context.json": "04aaf2c17f9d0a8e290b7290b04c98fa8316ab8f1eaad3577e89988157104dc7",
+    "docs/validation/D5-I71-P02/runner-raw.json": "2e36319424461de448b2875647e4e05bed56d3d064d23c6bc1ebd538b39dfcf2",
+    "docs/validation/D5-I71-P02/sidecar.json": "a022f40ca0e017b2daf964aaa02f3b6b9620cc10f3e15831a2314023aa38a5eb",
+    "docs/validation/D5-I71-P03-launch.json": "65665d5ae556de07b386c2309302cb47209b15c16421cce9866b2027b9d2074c",
+    "docs/validation/D5-I71-P03/OWNER": "0731d22b051f5744fe370a39c125098ae8dcc8167cd9803b6328bf812d3c7e33",
+    "docs/validation/D5-I71-P03/context.json": "1d8df19a52f401ca7cd0bcdc3421da1dccf33e6dafda663582a539be51fd6d2d",
+    "docs/validation/D5-I71-P03/runner-raw.json": "df84f4296c98f49f4a9d4f722bf7a7148f20c0f613198a2954cda7502416332c",
+    "docs/validation/D5-I71-P03/sidecar.json": "9d2b83c9dc650f927efd083278bcf8c0713b2379da401485ef0c5dc0d8d3c851",
+    "docs/validation/D5-I71-P04-launch.json": "fb18fc5025f5c4100953dff114de6fbef9e1d6c23aa2119eb23fbe660c02bb21",
+    "docs/validation/D5-I71-P04/OWNER": "cd00a9668c9bdddd4072d6046170998b54613de93248184a600902890b5e82d8",
+    "docs/validation/D5-I71-P04/context.json": "b6451af9efcf6d74d5e44e3a2bb5bc7c2c8b5e87fb2da966aafe004d6389a396",
+    "docs/validation/D5-I71-P04/runner-raw.json": "21354f79279e3e921754925ab9d189de87de68ea4be3c1348aefb9ebd863b3ab",
+    "docs/validation/D5-I71-P04/sidecar.json": "c2d849765fc3df70463dc47fb2614e0f38747f42bc54106a49f221ac6a6d4587",
+    "docs/validation/D5-I71-P05-launch.json": "c0e93c289ff3c382a0c76ea678fae98af5c92d1fa8e2a861424e72efa3a63281",
+    "docs/validation/D5-I71-P05/OWNER": "eae85dc93dec5f98a08aa21017513b19ffea3ed0deee96d2ef72355296a7fb70",
+    "docs/validation/D5-I71-P05/context.json": "681a1f4d19ac8be5c28d916316926c2a85a9a9f096531900cf3ab64bded18bbd",
+    "docs/validation/D5-I71-P05/runner-raw.json": "34d2e440b9e36fb90027869edbdf568de8dd6b5ca74df85502dc9833a7dc18c6",
+    "docs/validation/D5-I71-P05/sidecar.json": "c93a754c0e22239d5d84709e850d0bb7b987146bef944c8ef03aefc656855c01",
+    "docs/validation/D5-I71-P06-launch.json": "ddbcd87a6702fbab8011af905f5461c16d9908402150da2736de22ab76d0a885",
+    "docs/validation/D5-I71-P06/OWNER": "4958247098e201d96c5964c28b197a6b6420de20f754ea89c481482c43403689",
+    "docs/validation/D5-I71-P06/context.json": "53ffaeac3f8b8c56e1c4be271783384fbea8d283c5125b3f9fad97373c2a7e7f",
+    "docs/validation/D5-I71-P06/runner-raw.json": "71191aad624360f491e143bafa86c6ba196d7b610a1a222711fd4585ae38abe9",
+    "docs/validation/D5-I71-P06/sidecar.json": "8c0e5e63e5ace1475cde18c670677d3b2dc6d5258ec6c35e604649de7d088294",
+    "docs/validation/D5-I71-P07-launch.json": "489057e1955504b3cbc3d54b032fc79cf19e7053425d463ba1eda304cf29d90e",
+    "docs/validation/D5-I71-P07/OWNER": "587ed184f3fc91bf403cdca24ebfcffb6b418e55ae0df4976d7aa22f1dee537f",
+    "docs/validation/D5-I71-P07/context.json": "bb08d5285c2b0f99b58f42c397023178b86d727f475044d58e438cb111c3835b",
+    "docs/validation/D5-I71-P07/runner-raw.json": "e6df8e735110a1f5f860610d498923516f19817555f491c7a17cdee7975d1902",
+    "docs/validation/D5-I71-P07/sidecar.json": "8ddad71319db0d41a9a7961bbeef109398dd6d1a0f5cc581ac6dc60233ced1fd",
+    "docs/validation/D5-I71-P08-launch.json": "1c9834f941e47074f60fc980dc3ed21ddc437e3595a518372561f7a7495ffbe4",
+    "docs/validation/D5-I71-P08/OWNER": "46a7fc0ba260c96c8231638290fd0e666bfdfbdbf036568b4992436bdb2a1549",
+    "docs/validation/D5-I71-P08/context.json": "046de759445e793f8ea991b1f1a45c0cff812c0d98d21c8c115bd66ce9b34209",
+    "docs/validation/D5-I71-P08/runner-raw.json": "d1682dfee3d02b39ae5b13831c2b9aa5cbc0c0c70bf94e4226587a89873e080e",
+    "docs/validation/D5-I71-P08/sidecar.json": "ec5a8a3c0fc76dbcc2f31e11452e9165b161fe17724f96598b5a3827e3d3ebc7",
+    "docs/validation/D5-I71-P09-launch.json": "7879b1d380dcce4d6e5f8f59125fd1e708f56172cea582268bc1eb5d9fc50fd4",
+    "docs/validation/D5-I71-P09/OWNER": "4c9f6e49b913a42c173fe837eec21c246856f01e2b0beb98b23f5ca9a18077fb",
+    "docs/validation/D5-I71-P09/context.json": "324ee02473f0cce082d46f2f20658436754cfe32f0a03bc36bc03ecacd3e7ee9",
+    "docs/validation/D5-I71-P09/runner-raw.json": "95928ff48c0b94e47b88095f78596ac1acb93c189ffcd85c884c7e169e680e24",
+    "docs/validation/D5-I71-P09/sidecar.json": "4f9ac087765a19cc00276f6622ad56c51b51f81ebb98ca5d37acf81c4645841a",
+    "docs/validation/D5-I71-P10-launch.json": "06b0d0363ed6862c00ddeeb5b25a8773fa5593a6a9328761ca2408ffe624438a",
+    "docs/validation/D5-I71-P10/OWNER": "46695bf3b0ff26258a82e42d2a89962a958c59dbcb5cd4b1f4f9a1860aa42298",
+    "docs/validation/D5-I71-P10/context.json": "acb4f7e3b5b1440d647438fb03f0fe28d2f2f37393f91f238c41554d1adfe24a",
+    "docs/validation/D5-I71-P10/runner-raw.json": "2e8e225bab6bee06befc5f14858c2851c9373ef497ee114c2f3fe50913caf17e",
+    "docs/validation/D5-I71-P10/sidecar.json": "b2b4d776791c77378cb22e3331583b5b5df02e439a1730bba06229045fd02251",
+    "docs/validation/D5-I71-capture-authorization.json": "d9a6883f1ccf9b2fd02ccd2b103464cf1793720148bdce81d603dde16710fbf3",
+    "docs/validation/D5-I71-integrity.json": "7c0c30d0e14a173d769f2a7b16ef2928c0b6e1c386acf9e60d7b50760b9e0028",
+    "docs/validation/D5-I71-results.json": "80b2150f3ba3f844b57a6a48da8a611e4e229fc6c905848256d7a68e96ad90b3",
+    "docs/validation/D5-I71-results.md": "746671c96b0d4a1bb324e2f44f7f33148abe57dd92c6e790dac6b166ee41b8ea",
+    "docs/validation/D5-I72-design-review.json": "9b5e9962845d155ac1617be1357ed29089c393339547b3df1af8e6a24805bd5b",
+    "docs/validation/D5-I72-integrity.json": "1ccd5973065cdea24c7e9240ebad0e75cba740d1579fe2d6e80a9f6f9c122712",
+    "docs/validation/D5-PAGED-CAPTURE-REGISTRY.json": "2fbc18644cb683d56184c405efe8307eb0b1b4269ace2b3c7175f0b2a0c04520",
+    "docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json": "84db71ca6f09ec19c6525aedc90f69bf77c0516830060a7065adff19cb139b12",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/durable_ambiguity_fixture.py": "cf8b211c61e1981192c89eb09edc2d8f0435494c285b63e21c705068c2219fd4",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/adoption_scenarios.py": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+    "testing/D5/bootstrap_scenarios.py": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+    "testing/D5/demo_durable_integration.py": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+    "testing/D5/demo_durable_relational.py": "215ce133b3d9c31c2968856cce891694ba98f16f330175d9a12822c653b7fabd",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_register.py": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/isolated_local_edit_scenarios.py": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+    "testing/D5/local_edit_scenarios.py": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+    "testing/D5/local_reappearance_scenarios.py": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+    "testing/D5/mapping_scenarios.py": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+    "testing/D5/postgres_scenarios.py": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+    "testing/D5/reappearance_scenarios.py": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/review_scenarios.py": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+    "testing/D5/run_adoption_lab.py": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_bootstrap_lab.py": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_isolated_local_edit_lab.py": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+    "testing/D5/run_local_edit_lab.py": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+    "testing/D5/run_local_reappearance_lab.py": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+    "testing/D5/run_mapping_lab.py": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/run_postgres_lab.py": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+    "testing/D5/run_reappearance_lab.py": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/D5/run_review_lab.py": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+    "testing/D5/run_v30_lab.py": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+    "testing/D5/v30_scenarios.py": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e",
+    "testing/prospective_capture/README.md": "6b120272d5e668801a3d2ed6eef95ec01b35a988b587c63a4de279609f38f82b",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture/run_capture_lab.py": "f3dc499fbb5370c38f67bbdea3cfddc95dc9020ff725da55d07fdfa5727cf572",
+    "testing/prospective_capture/test_prospective_capture.py": "f94a5fe0a388978afb3045d263dbfbae250a578f08001445beb85a64d550712e",
+    "testing/prospective_capture/worker.py": "dd23ea2e24303e34ec521bf184da8081cc637ca03b1c9cc04ae14256b859e346",
+    "testing/prospective_capture_paged/README.md": "587c3d07e1f3ab87dffe593cd0d37628af5d75449fe867a5b615eb018eba7fc5",
+    "testing/prospective_capture_paged/capture.py": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+    "testing/prospective_capture_paged/run_paged_lab.py": "d8e1b02d2ebec8961f2e6e27dbddc8869e3aea3d5648e84d3db84ffba6768e21",
+    "testing/prospective_capture_paged/test_paged_capture.py": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799",
+    "testing/prospective_capture_paged/worker.py": "bd84b8c726cbf83f43d06a88b98fa9c961ac695488d3f09f61f87b37c89ea338"
+  },
+  "raw_artifacts": {
+    "docs/validation/D5-I73-tests-raw.json": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+    "docs/validation/D5-I73-plan-raw.json": "03db50f661a39a6b6aa013abcb9525b5b9fec2ce7d0d2b4462683d9a3ad0375d"
+  },
+  "historical_runners_or_product_imported": false,
+  "reused_I70_pure_helpers": true,
+  "product_changed": false,
+  "fixtures_or_hooks_changed": false,
+  "historical_tests_helpers_runners_changed": false,
+  "I70_capture_or_registry_changed": false,
+  "I38_or_I67_changed": false,
+  "auditor_I38_executed": false,
+  "tracer_I67_executed": false,
+  "I74_authorization_created": false,
+  "functional_campaigns_executed": 0,
+  "prospective_P01": "NOT_RUN_I74_AUTHORIZATION_REQUIRED",
+  "I71_P01_status": "BLOCKED_UNCHANGED_77_OF_321",
+  "I71_P02_P10_status": "CAPTURED_PENDING_SUFFICIENCY_REVIEW_UNCHANGED_371_OCCURRENCES",
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  },
+  "UI_part_statuses": {
+    "UI01.2": "PARTIAL_UNCHANGED",
+    "UI04.1": "PARTIAL_UNCHANGED",
+    "UI09.2": "PARTIAL_UNCHANGED"
+  },
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "real_or_human_requirements_pending": [
+    "GI06",
+    "GI12",
+    "GI18",
+    "GI24",
+    "GI30",
+    "GI36",
+    "GI42"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "published_through": "I52",
+  "remote_network_read_performed": false
+}

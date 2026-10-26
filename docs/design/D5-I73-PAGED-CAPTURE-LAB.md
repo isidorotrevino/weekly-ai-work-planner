@@ -1,0 +1,17 @@
+# D5 I73 — componentes de captura paginada
+
+[Contrato aprobado I72](D5-I72-PAGED-CAPTURE-DESIGN.md) · [Matriz PG64](D5-I72-PAGED-CAPTURE-REVIEW.md) · [Registro fijo](../validation/D5-PAGED-CAPTURE-REGISTRY.json) · [Resultados](../validation/D5-I73-results.md).
+
+Autoridad: selección A posterior a I72, implementar perfil paginado/registro fijo y validar PG64 con suites sintéticas. No autoriza importar producto/runners históricos, reejecutar P01/P02–P10, crear autorización I74 o publicar. Base local `16f4791774eed931c79690f927b7fc52af274461`.
+
+Nuevo namespace `testing/prospective_capture_paged/`, sin modificar I70 ni sus constantes globales. Reutiliza helpers stdlib I70 para lectura segura, oráculos de digest, callbacks y aislamiento; sobrescribe captura de eventos/agregación por test para conservar sólo página actual y resúmenes. Nuevo registro copia P01/321 IDs/12 grupos/bindings y specs anteriores, siete políticas I72 y constructor pinneado. Source/hash/firma se comprueban sin importar producto en componente; la única importación histórica dinámica queda tras guardas I74 y RELEASE en worker futuro.
+
+Página JSON acotada con bytes UTF-8 exactos del envelope; writer rota sin dividir evento ni reiniciar contadores. Índice con hashes/bytes/conteos/rangos. Reader procesa páginas sucesivas y verifica lifecycle, resultados, rangos y referencias de construcción. Fallo instrumental queda en latch independiente del stream: respeta retorno/excepción original y detiene al límite entre tests; nunca añade TEST_END ficticio. Raw funcional parcial y captura inválida permanecen distintos.
+
+Constructor con llamada original única y firma fija, argumentos UUID/rol sólo tras éxito. Referencia de objeto del capturador separada de UUID; declaración preservada frente a head observado y contradicción bloqueante. N/A sólo para DF01/DF02/DF48/DR01/DR02, sin eximir lifecycle/assertions. DF07/DF43 requieren construcción observada, con autoridad negativa limitada al padre; ningún head o proceso hijo se acredita por ello.
+
+PG64 usa clases/suites propias, raíces temporales con OWNER/sentinel y procesos stdlib nuevos. La integración del launcher inyecta en el test un productor sintético; no habilita módulo/command libre en CLI. Los tests validan límite real131072, rotación entre páginas/tests, cuotas independientes, metadata/predicados/retornos, incompletitud transitiva, ownership/READY/RELEASE/limpieza y guardas I74. Oráculos y checks por caso quedan en raw con contexto actual y hashes pre/post. Cero campañas funcionales y cero imports históricos; el entorno actual no rellena historia ausente.
+
+El modo plan conserva P01 NOT_RUN_I74_AUTHORIZATION_REQUIRED. La captura futura usa destino nuevo fijo sin overwrite de I71, sesión propia, canales correlacionados, guardas de inputs/código y páginas. El paquete I73 no valida capacidad o compatibilidad para todo Python321; cualquier API/oráculo/presupuesto incompatible en I74 vuelve a bloquear el alcance. Autorización funcional posterior exige SHA del componente validado y no está creada en I73.
+
+P0, agregado81/3, UI01.2/UI04.1/UI09.2 PARTIAL y D5 global/G01–G07/GI33/GI34/GI38/GI39/GI40/H07 abiertos. D1–D4 cerrados e hito local I1–I20 aceptado intactos. Sin proveedores/credenciales/corpus reales, consumo/reservas, activación, promoción, despliegue o D6. No inferir persistencia o recuperación integrada de PASS aislados. Publicación separada, sólo I52 publicado.
