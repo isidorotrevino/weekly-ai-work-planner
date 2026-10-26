@@ -1,0 +1,3012 @@
+{
+  "schema": "d5.late-binding-design-review.v1",
+  "increment": "I78",
+  "date": "2026-10-26",
+  "timezone": "Europe/Madrid",
+  "base_commit": "6ffff6c17165fb0e1bcde69af4cfade6715432bf",
+  "status": "PREPARED_FOR_REVIEW",
+  "authority": "Selección A posterior a I77: diseñar contrato y matriz para binding tardío exacto y diagnóstico sanitizado acotado; sin implementar ni reintentar P01.",
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "component_test_execution_authorized": false,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_component_increment": "I79",
+  "proposed_functional_increment": "I80",
+  "scope": "P01_LATE_BINDING_AND_BOUNDED_WORKER_DIAGNOSTIC_DESIGN_ONLY",
+  "expected_tests": 321,
+  "expected_groups": {
+    "test_durable_integration": 48,
+    "test_durable_relational": 40,
+    "test_incremental_capture": 30,
+    "test_local_preview": 17,
+    "test_offline_integration": 35,
+    "test_plane_reconciliation": 41,
+    "test_postgres_adapter": 3,
+    "test_profiles_quotas": 38,
+    "test_register_comparison": 16,
+    "test_register_compat": 11,
+    "test_relational_batch": 38,
+    "test_review_report": 4
+  },
+  "expected_test_ids": [
+    "test_durable_integration.DurableIntegrationTest.test_DF01",
+    "test_durable_integration.DurableIntegrationTest.test_DF02",
+    "test_durable_integration.DurableIntegrationTest.test_DF03",
+    "test_durable_integration.DurableIntegrationTest.test_DF04",
+    "test_durable_integration.DurableIntegrationTest.test_DF05",
+    "test_durable_integration.DurableIntegrationTest.test_DF06",
+    "test_durable_integration.DurableIntegrationTest.test_DF07",
+    "test_durable_integration.DurableIntegrationTest.test_DF08",
+    "test_durable_integration.DurableIntegrationTest.test_DF09",
+    "test_durable_integration.DurableIntegrationTest.test_DF10",
+    "test_durable_integration.DurableIntegrationTest.test_DF11",
+    "test_durable_integration.DurableIntegrationTest.test_DF12",
+    "test_durable_integration.DurableIntegrationTest.test_DF13",
+    "test_durable_integration.DurableIntegrationTest.test_DF14",
+    "test_durable_integration.DurableIntegrationTest.test_DF15",
+    "test_durable_integration.DurableIntegrationTest.test_DF16",
+    "test_durable_integration.DurableIntegrationTest.test_DF17",
+    "test_durable_integration.DurableIntegrationTest.test_DF18",
+    "test_durable_integration.DurableIntegrationTest.test_DF19",
+    "test_durable_integration.DurableIntegrationTest.test_DF20",
+    "test_durable_integration.DurableIntegrationTest.test_DF21",
+    "test_durable_integration.DurableIntegrationTest.test_DF22",
+    "test_durable_integration.DurableIntegrationTest.test_DF23",
+    "test_durable_integration.DurableIntegrationTest.test_DF24",
+    "test_durable_integration.DurableIntegrationTest.test_DF25",
+    "test_durable_integration.DurableIntegrationTest.test_DF26",
+    "test_durable_integration.DurableIntegrationTest.test_DF27",
+    "test_durable_integration.DurableIntegrationTest.test_DF28",
+    "test_durable_integration.DurableIntegrationTest.test_DF29",
+    "test_durable_integration.DurableIntegrationTest.test_DF30",
+    "test_durable_integration.DurableIntegrationTest.test_DF31",
+    "test_durable_integration.DurableIntegrationTest.test_DF32",
+    "test_durable_integration.DurableIntegrationTest.test_DF33",
+    "test_durable_integration.DurableIntegrationTest.test_DF34",
+    "test_durable_integration.DurableIntegrationTest.test_DF35",
+    "test_durable_integration.DurableIntegrationTest.test_DF36",
+    "test_durable_integration.DurableIntegrationTest.test_DF37",
+    "test_durable_integration.DurableIntegrationTest.test_DF38",
+    "test_durable_integration.DurableIntegrationTest.test_DF39",
+    "test_durable_integration.DurableIntegrationTest.test_DF40",
+    "test_durable_integration.DurableIntegrationTest.test_DF41",
+    "test_durable_integration.DurableIntegrationTest.test_DF42",
+    "test_durable_integration.DurableIntegrationTest.test_DF43",
+    "test_durable_integration.DurableIntegrationTest.test_DF44",
+    "test_durable_integration.DurableIntegrationTest.test_DF45",
+    "test_durable_integration.DurableIntegrationTest.test_DF46",
+    "test_durable_integration.DurableIntegrationTest.test_DF47",
+    "test_durable_integration.DurableIntegrationTest.test_DF48",
+    "test_durable_relational.DurableRelationalTest.test_DR01",
+    "test_durable_relational.DurableRelationalTest.test_DR02",
+    "test_durable_relational.DurableRelationalTest.test_DR03",
+    "test_durable_relational.DurableRelationalTest.test_DR04",
+    "test_durable_relational.DurableRelationalTest.test_DR05",
+    "test_durable_relational.DurableRelationalTest.test_DR06",
+    "test_durable_relational.DurableRelationalTest.test_DR07",
+    "test_durable_relational.DurableRelationalTest.test_DR08",
+    "test_durable_relational.DurableRelationalTest.test_DR09",
+    "test_durable_relational.DurableRelationalTest.test_DR10",
+    "test_durable_relational.DurableRelationalTest.test_DR11",
+    "test_durable_relational.DurableRelationalTest.test_DR12",
+    "test_durable_relational.DurableRelationalTest.test_DR13",
+    "test_durable_relational.DurableRelationalTest.test_DR14",
+    "test_durable_relational.DurableRelationalTest.test_DR15",
+    "test_durable_relational.DurableRelationalTest.test_DR16",
+    "test_durable_relational.DurableRelationalTest.test_DR17",
+    "test_durable_relational.DurableRelationalTest.test_DR18",
+    "test_durable_relational.DurableRelationalTest.test_DR19",
+    "test_durable_relational.DurableRelationalTest.test_DR20",
+    "test_durable_relational.DurableRelationalTest.test_DR21",
+    "test_durable_relational.DurableRelationalTest.test_DR22",
+    "test_durable_relational.DurableRelationalTest.test_DR23",
+    "test_durable_relational.DurableRelationalTest.test_DR24",
+    "test_durable_relational.DurableRelationalTest.test_DR25",
+    "test_durable_relational.DurableRelationalTest.test_DR26",
+    "test_durable_relational.DurableRelationalTest.test_DR27",
+    "test_durable_relational.DurableRelationalTest.test_DR28",
+    "test_durable_relational.DurableRelationalTest.test_DR29",
+    "test_durable_relational.DurableRelationalTest.test_DR30",
+    "test_durable_relational.DurableRelationalTest.test_DR31",
+    "test_durable_relational.DurableRelationalTest.test_DR32",
+    "test_durable_relational.DurableRelationalTest.test_DR33",
+    "test_durable_relational.DurableRelationalTest.test_DR34",
+    "test_durable_relational.DurableRelationalTest.test_DR35",
+    "test_durable_relational.DurableRelationalTest.test_DR36",
+    "test_durable_relational.DurableRelationalTest.test_DR37",
+    "test_durable_relational.DurableRelationalTest.test_DR38",
+    "test_durable_relational.DurableRelationalTest.test_DR39",
+    "test_durable_relational.DurableRelationalTest.test_DR40",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+    "test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+    "test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+    "test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+    "test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+    "test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+    "test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+    "test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+    "test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+    "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+    "test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+    "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+    "test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+    "test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+    "test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+    "test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+    "test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+    "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+    "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+    "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+    "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+    "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+    "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+    "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+    "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+    "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+    "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+    "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+    "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+    "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+    "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+    "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+    "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+    "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+    "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC01_stable_key_across_payload_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC02_binding_uniqueness_and_remote_destination_uniqueness",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC03_reviewed_create_has_one_exact_effect_and_sanitized_receipt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC04_lost_creation_response_blocks_another_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC05_exact_query_recovers_creation_without_send",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC06_eventual_zero_never_authorizes_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC07_strong_zero_with_inflight_ticket_stays_unknown",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_later_remote_edit_cannot_clear_prior_identity_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_multiple_and_foreign_results_are_sticky_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC09_fixture_unique_key_same_payload_recovers_other_payload_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_fixture_creation_uniqueness_is_atomic_under_two_threads",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC11_unproven_match_and_proven_historical_edit_differ",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC12_local_change_before_send_invalidates_approval",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC13_review_revocation_and_replacement_require_exact_version",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC14_binding_policy_and_capability_changes_invalidate_manifest",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_contradictory_negative_cannot_replace_confirmed_effect",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_invalid_query_proof_or_body_never_confirms",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_mutation_hash_and_command_request_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC16_local_edit_during_send_preserves_actual_effect_as_stale",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC17_revocation_during_lost_response_allows_only_historical_read",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC18_confirmed_historical_effect_does_not_become_current",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC19_replay_never_restores_old_text",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_domain_lock_is_released_during_provider_callback",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_query_callback_can_edit_domain_outside_lock",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC21_new_reviewed_update_keeps_created_identity_and_foreign_fields",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC22_precondition_detects_before_during_and_ABA_remote_edits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC23_timeout_malformed_and_local_ack_remain_unknown_and_sanitized",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_unknown_update_blocks_newer_reviewed_update",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_update_lost_response_then_remote_edit_recovers_without_patch",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC25_conclusive_rejection_is_not_an_effect_or_automatic_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC26_429_requires_no_effect_and_logical_retry_tick",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC27_invalid_retry_delay_budget_and_stale_state_block",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC28_explicit_retry_keeps_key_payload_and_history_new_attempt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC29_query_budget_and_missing_confirmed_destination_do_not_recreate",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC30_no_memory_restart_or_missing_capability_authority",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_actual_utf8_manifest_byte_limit_blocks_without_truncation",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_binding_and_command_budget_are_not_truncated",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_closed_schemas_types_text_and_manifest_limits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC32_summary_has_no_operational_authority_or_real_effects",
+    "test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+    "test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+    "test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ01_same_bytes_new_profile_have_distinct_capture_preview_and_manifest",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ02_extraction_policy_change_requires_new_review_even_if_text_equal",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ03_unknown_descriptor_or_decoder_retains_bytes_without_execution",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ04_mapping_namespace_is_immutable_and_not_reused",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ05_profile_revocation_and_ABA_never_restore_old_generation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ06_exact_source_review_and_unstable_checklist_remain_separate",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ07_historical_capture_replay_does_not_restore_profile",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ08_all_dimensions_and_windows_evaluated_without_summing",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ09_other_accounts_and_providers_cannot_supply_missing_constraints",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ10_duplicate_resource_or_physical_account_cannot_multiply_capacity",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ11_missing_required_window_blocks_and_no_caller_subset_is_accepted",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ12_duplicate_constraints_units_and_invalid_costs_do_not_convert",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ13_zero_unknown_unlimited_and_revoked_have_distinct_blocking_reasons",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ14_future_observation_or_window_does_not_supply_current_capacity",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ15_half_open_bounds_and_required_horizon_are_revalidated",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ16_rollover_and_fact_replay_never_add_balance_or_reselect",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ17_concurrent_positive_readers_do_not_consume_or_reserve",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ18_source_instructions_cannot_change_binding_policy_or_fallback",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ19_manifest_fixes_adapter_observation_hashes_and_own_review",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ20_identical_new_observation_id_stales_old_package",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ21_adapter_permission_capability_and_online_changes_invalidate",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ22_other_adapter_release_and_incomplete_observation_block",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ23_later_timestamp_does_not_win_without_selection",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ24_restore_old_values_after_revocation_does_not_revive_approval",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ25_review_and_receipt_do_not_modify_facts_or_manifest_hash",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_profile_or_policy_change_before_confirmation_is_stale",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ27_replacement_acceptance_is_not_the_old_review",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ27_review_revocation_during_validation_detected",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ28_time_change_without_fact_generation_blocks_at_confirmation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ29_lost_response_recovers_only_a_historical_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ29_replay_is_historical_after_expiration_and_new_command_revalidates",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ30_command_reuse_with_new_request_conflicts",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ31_closed_shapes_invalid_types_and_no_raw_text_in_public_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ32_constraint_source_manifest_and_label_limits_without_truncation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ32_full_count_limits_and_replay_at_receipt_limit",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ33_new_memory_has_no_prior_reviews_receipts_or_authority",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ34_summary_and_owned_threads_have_no_operational_effects",
+    "test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+    "test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+    "test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+    "test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+    "test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+    "test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+    "test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+    "test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+    "test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+    "test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+    "test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+    "test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+    "test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+    "test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+    "test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+    "test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+    "test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+    "test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+    "test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+    "test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+    "test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+    "test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+    "test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+    "test_relational_batch.RelationalBatchTest.test_RB01_exact_bytes_hash_localizers_and_explicit_targets",
+    "test_relational_batch.RelationalBatchTest.test_RB02_forward_references_and_existing_readonly_endpoints",
+    "test_relational_batch.RelationalBatchTest.test_RB03_missing_unmapped_or_mismatched_reference_blocks_all",
+    "test_relational_batch.RelationalBatchTest.test_RB04_invalid_preexisting_graph_is_not_ignored_outside_package",
+    "test_relational_batch.RelationalBatchTest.test_RB04_reference_type_and_project_rejected",
+    "test_relational_batch.RelationalBatchTest.test_RB05_epic_requirement_set_additions_deduplicate_and_preserve_evidence",
+    "test_relational_batch.RelationalBatchTest.test_RB06_task_epic_assignment_noop_and_reassignment_block",
+    "test_relational_batch.RelationalBatchTest.test_RB07_self_loop_rejected_for_all_kinds",
+    "test_relational_batch.RelationalBatchTest.test_RB08_kinds_preserved_exact_duplicates_no_kind_replacement",
+    "test_relational_batch.RelationalBatchTest.test_RB09_cycle_from_multiple_new_edges_has_no_partial_effects",
+    "test_relational_batch.RelationalBatchTest.test_RB10_cycle_through_preexisting_path_is_blocked",
+    "test_relational_batch.RelationalBatchTest.test_RB11_soft_cycles_do_not_become_hard_cycles",
+    "test_relational_batch.RelationalBatchTest.test_RB12_absent_entities_and_relationships_are_retained",
+    "test_relational_batch.RelationalBatchTest.test_RB13_mixed_create_update_and_links_publish_together",
+    "test_relational_batch.RelationalBatchTest.test_RB14_mapping_uuid_key_and_type_conflicts_leave_data_unchanged",
+    "test_relational_batch.RelationalBatchTest.test_RB15_late_invalid_relationship_does_not_publish_valid_prefix",
+    "test_relational_batch.RelationalBatchTest.test_RB16_preexisting_local_changes_never_become_source_base",
+    "test_relational_batch.RelationalBatchTest.test_RB17_postprepare_managed_and_foreign_change_blocks_entire_commit",
+    "test_relational_batch.RelationalBatchTest.test_RB18_ABA_and_readonly_endpoint_change_invalidate_ticket",
+    "test_relational_batch.RelationalBatchTest.test_RB19_state_and_related_task_work_flags_block_without_operations",
+    "test_relational_batch.RelationalBatchTest.test_RB20_review_changed_after_candidate_build_is_rechecked",
+    "test_relational_batch.RelationalBatchTest.test_RB20_source_and_batch_replacements_invalidate_old_tickets",
+    "test_relational_batch.RelationalBatchTest.test_RB21_approval_preserves_manifest_and_data_generation",
+    "test_relational_batch.RelationalBatchTest.test_RB22_source_manifest_and_request_tampering_blocks",
+    "test_relational_batch.RelationalBatchTest.test_RB23_two_approved_candidates_compete_at_publication",
+    "test_relational_batch.RelationalBatchTest.test_RB24_failure_before_publication_has_no_effect_or_receipt",
+    "test_relational_batch.RelationalBatchTest.test_RB25_lost_response_recovers_receipt_without_duplicate_apply",
+    "test_relational_batch.RelationalBatchTest.test_RB26_historical_replay_does_not_rewind_newer_head",
+    "test_relational_batch.RelationalBatchTest.test_RB27_text_and_epic_change_increment_entity_once",
+    "test_relational_batch.RelationalBatchTest.test_RB28_noop_preserves_row_version_and_adds_evidence_once",
+    "test_relational_batch.RelationalBatchTest.test_RB29_claims_and_epic_description_are_evidence_only",
+    "test_relational_batch.RelationalBatchTest.test_RB30_closed_json_shapes_ids_types_and_duplicates",
+    "test_relational_batch.RelationalBatchTest.test_RB31_actual_manifest_UTF8_byte_budget_not_truncated",
+    "test_relational_batch.RelationalBatchTest.test_RB31_source_element_declaration_and_text_limits_block_closed",
+    "test_relational_batch.RelationalBatchTest.test_RB32_command_limit_does_not_prevent_confirmed_replay",
+    "test_relational_batch.RelationalBatchTest.test_RB32_entity_and_relationship_limits_exercised_at_full_budget",
+    "test_relational_batch.RelationalBatchTest.test_RB33_independent_memory_has_no_receipts_or_inherited_authority",
+    "test_relational_batch.RelationalBatchTest.test_RB34_summary_has_no_operational_authority_or_live_owned_threads",
+    "test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+    "test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+    "test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+    "test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert"
+  ],
+  "expected_passed_ids_sha256": "81934ed7b4535b3de7e9d4e0d6b17efb69022831ec2ab4f66b474a5df6a7115a",
+  "snapshot_adapter": {
+    "module": "source_ingest.incremental_fixture",
+    "class_name": "FixtureStore",
+    "method": "snapshot",
+    "source": {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "snapshot",
+      "line": 480,
+      "end_line": 489,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    "schema": "d5.fixture-drive-snapshot.v1",
+    "fields": [
+      "run_id",
+      "version",
+      "head_sha256"
+    ],
+    "immutable_identity_fields": [
+      "kind",
+      "run_id"
+    ],
+    "observation_fields": [
+      "version",
+      "head_sha256"
+    ],
+    "version_min": 0,
+    "version_max": 1023,
+    "invented_fields_forbidden": [
+      "store_id",
+      "scope_sha256"
+    ],
+    "activation": "EXACT_29_TEST_IDS_ONLY"
+  },
+  "snapshot_scopes": [
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI01_scope_genesis_identity_and_no_reference",
+        "line": 92,
+        "end_line": 99,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "8ba1e52b-5250-4ebd-b774-77ac09585277",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 1,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI02_anchor_before_inventory_and_observed_new_revision",
+        "line": 101,
+        "end_line": 108,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "0fbf8cfa-b7b1-474b-bf90-71a4b127e339",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 4,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+        "line": 110,
+        "end_line": 117,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "669317c7-da10-4c98-a814-6402e98b788e",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI04_feed_continuation_and_terminal_are_separate",
+        "line": 119,
+        "end_line": 129,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "a9b13f51-0fb3-4ef7-b004-3fea3a4616f1",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 7,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+        "line": 131,
+        "end_line": 137,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "ddc7e13c-5229-4343-90e6-50ef9cb867aa",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+        "line": 139,
+        "end_line": 147,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "ccad92b6-bc9a-472a-9f26-6c7526b0b9c7",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI07_fresh_process_recovers_state_from_disk",
+        "line": 149,
+        "end_line": 161,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "b46f9bff-7de5-4c80-94a1-cd785527987c",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 2,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+        "line": 163,
+        "end_line": 173,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "6525b60a-1cd8-46ec-8b8c-79927f749ef0",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 1,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+        "line": 175,
+        "end_line": 182,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "fb1273d4-0cd4-4409-bd1a-615ac2493a31",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 2,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI09_transient_late_event_never_commits_a_prefix",
+        "line": 184,
+        "end_line": 189,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "b776b487-8346-4f43-a57a-404109ec7466",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 3,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+        "line": 191,
+        "end_line": 197,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "d4ca3e18-0a50-448b-9f24-43ff5efb0349",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 4,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+        "line": 199,
+        "end_line": 206,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "9b38d732-bbe8-4621-b603-ac92ab02d06c",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+        "line": 208,
+        "end_line": 219,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "742e7f06-27e5-419f-967f-5a9f9c43c94a",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+        "line": 221,
+        "end_line": 229,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "85bc4d1a-8ec7-4e00-b556-f0679dfda56f",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 5,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+        "line": 231,
+        "end_line": 240,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "40287bf7-bd53-4d05-9f39-16014c604bb1",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 1,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI14_two_writers_cas_and_command_content_conflict",
+        "line": 242,
+        "end_line": 256,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "73cecd47-2678-451b-a783-9f4af1a701c3",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 2,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+        "line": 258,
+        "end_line": 267,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "166480a6-dc57-4516-a23c-ea5c25c09a56",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 4,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+        "line": 269,
+        "end_line": 276,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "3946cb3a-ff6c-4cd3-98de-b6c674e22ae3",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 2,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+        "line": 278,
+        "end_line": 283,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "d3b7426f-2016-40e4-aaed-9963f9def650",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 2,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+        "line": 285,
+        "end_line": 292,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "01101658-f5bb-4a1d-a4a5-8850ab169ad7",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 9,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI19_later_accessible_file_does_not_erase_terminal_history",
+        "line": 294,
+        "end_line": 300,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "81d7d730-7603-4d91-be12-d671cb1694c3",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 3,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+        "line": 302,
+        "end_line": 308,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "433da2f1-c098-498a-9c46-0145bd2efdec",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 3,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+        "line": 310,
+        "end_line": 320,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "57f1225f-01e3-467b-afdd-0e1b348e4657",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 9,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI22_scope_changes_need_a_new_root",
+        "line": 322,
+        "end_line": 334,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "6dc40f95-aec7-4968-ab5b-7778501376ac",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 3,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+        "line": 336,
+        "end_line": 345,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "9e7cc75b-3cc0-48b8-b9a0-483698e8805b",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 3,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI24_limits_reject_whole_page_and_history_without_truncation",
+        "line": 347,
+        "end_line": 358,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "6210ce71-d4af-4cec-8112-be1a22792a8e",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 9,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI25_opaque_tokens_and_continuation_cycles",
+        "line": 360,
+        "end_line": 368,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "1acb0529-13ed-4137-9919-cef0f9dd9a94",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 8,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+        "line": 370,
+        "end_line": 397,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "79eeb418-1176-4e3e-8ed5-7f6e0288fbf1",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 1,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+        "line": 399,
+        "end_line": 415,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "bb3295f7-9293-4802-b458-1fd52ef5d801",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 1,
+      "identity_requirement": "FIXTURE_DRIVE_SNAPSHOT_RETURN_REQUIRED",
+      "allowed_schema": "d5.fixture-drive-snapshot.v1",
+      "accepted_authority": "OBSERVED_FIXTURE_DRIVE_RUN_AND_HEAD_METADATA_NOT_STORE_ID",
+      "constructor_declaration_sufficient": false
+    }
+  ],
+  "negative_DI28": {
+    "criterion": {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "source": {
+        "path": "testing/D5/test_incremental_capture.py",
+        "class_name": "IncrementalCaptureTest",
+        "function": "test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+        "line": 417,
+        "end_line": 430,
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+      },
+      "I74_frame_id": "772d9216-25f3-496a-bfe8-b3e4fcddeb58",
+      "I74_missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "I74_snapshot_return_events": 0,
+      "classification": "NEGATIVE_DOMAIN_FIXTURE_CLEANUP",
+      "identity_requirement": "FIXTURE_DRIVE_CONSTRUCTION_DECLARATION_REQUIRED",
+      "accepted_authority": "OBSERVED_FIXTURE_CONSTRUCTION_ARGUMENTS_AFTER_SUCCESS_NOT_HEAD",
+      "not_applicable": false
+    },
+    "constructor": {
+      "module": "source_ingest.incremental_fixture",
+      "class_name": "FixtureStore",
+      "method": "__init__",
+      "source": {
+        "path": "source_ingest/incremental_fixture.py",
+        "class_name": "FixtureStore",
+        "function": "__init__",
+        "line": 287,
+        "end_line": 294,
+        "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+      },
+      "signature_parameters": [
+        "self",
+        "root",
+        "run_id",
+        "scope",
+        "test_fault",
+        "test_ready"
+      ],
+      "keyword_only_parameters": [
+        "test_fault",
+        "test_ready"
+      ],
+      "observed_fields": [
+        "run_id"
+      ],
+      "forbidden_fields": [
+        "root",
+        "scope",
+        "test_fault",
+        "test_ready"
+      ]
+    },
+    "activation": "EXACT_DI28_FRAME_ONLY"
+  },
+  "previous_I72_policies_preserved": [
+    {
+      "case": "DF01",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF01",
+      "classification": "NO_STORE_CONTROL",
+      "domain_identity_policy": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "Inventario y detección de staleness; no instancia Store.",
+      "source": {
+        "path": "testing/D5/test_durable_integration.py",
+        "class_name": "DurableIntegrationTest",
+        "function": "df01",
+        "line": 45,
+        "end_line": 54,
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DF02",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF02",
+      "classification": "NO_STORE_CONTROL",
+      "domain_identity_policy": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "Lectura de sellos D3/D4 e hito local; no instancia Store.",
+      "source": {
+        "path": "testing/D5/test_durable_integration.py",
+        "class_name": "DurableIntegrationTest",
+        "function": "df02",
+        "line": 56,
+        "end_line": 62,
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DF48",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF48",
+      "classification": "NO_STORE_CONTROL",
+      "domain_identity_policy": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "Contabilidad de grupos y mapa de cobertura; no instancia Store.",
+      "source": {
+        "path": "testing/D5/test_durable_integration.py",
+        "class_name": "DurableIntegrationTest",
+        "function": "df48",
+        "line": 583,
+        "end_line": 588,
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DR01",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR01",
+      "classification": "NO_STORE_CONTROL",
+      "domain_identity_policy": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "Inventario relacional y aplicabilidad; no instancia Store.",
+      "source": {
+        "path": "testing/D5/test_durable_relational.py",
+        "class_name": "DurableRelationalTest",
+        "function": "dr01",
+        "line": 41,
+        "end_line": 45,
+        "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DR02",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR02",
+      "classification": "NO_STORE_CONTROL",
+      "domain_identity_policy": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "Sellos históricos y no cierre D5; no instancia Store.",
+      "source": {
+        "path": "testing/D5/test_durable_relational.py",
+        "class_name": "DurableRelationalTest",
+        "function": "dr02",
+        "line": 46,
+        "end_line": 52,
+        "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DF07",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF07",
+      "classification": "NEGATIVE_DOMAIN",
+      "domain_identity_policy": "OBSERVED_CONSTRUCTION_DECLARATION_REQUIRED",
+      "reason": "Inicialización incompleta y rechazo de snapshot/create; identidad declarada en constructor padre no equivale a head ni observación del hijo.",
+      "source": {
+        "path": "testing/D5/test_durable_integration.py",
+        "class_name": "DurableIntegrationTest",
+        "function": "df07",
+        "line": 103,
+        "end_line": 114,
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    },
+    {
+      "case": "DF43",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF43",
+      "classification": "NEGATIVE_DOMAIN",
+      "domain_identity_policy": "OBSERVED_CONSTRUCTION_DECLARATION_REQUIRED",
+      "reason": "Rechazo de limpieza ante marker/symlink y preservación del sentinel; identidad declarada no acredita persistencia.",
+      "source": {
+        "path": "testing/D5/test_durable_integration.py",
+        "class_name": "DurableIntegrationTest",
+        "function": "df43",
+        "line": 451,
+        "end_line": 457,
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+      },
+      "historical_status_unchanged": "I71_INCOMPLETE",
+      "applies_only_to_future_P01": true
+    }
+  ],
+  "operand_scopes": [
+    {
+      "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "source": {
+        "path": "testing/D5/test_local_preview.py",
+        "class_name": "LocalPreviewTest",
+        "function": "test_new_revision_label_preserves_bytes_without_overwriting_observation",
+        "line": 85,
+        "end_line": 89,
+        "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+      },
+      "helper": "assertNotEqual",
+      "operand_roles": {
+        "0": [
+          "exact-posix-path"
+        ],
+        "1": [
+          "exact-posix-path"
+        ]
+      },
+      "I74_events": [
+        {
+          "sequence": 20662,
+          "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+          "helper": "assertNotEqual",
+          "unsupported_slots": [
+            0,
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND",
+            "UNSUPPORTED_OPERAND"
+          ]
+        }
+      ],
+      "authority": "STATIC_SOURCE_DESIGN_NOT_I74_RUNTIME_TYPE_ATTESTATION",
+      "new_projection_status": "OBSERVED_TYPED_PROJECTION_NOT_FULL_OBJECT_SERIALIZATION",
+      "unknown_types": "NOT_RECORDED_PROPAGATES_INCOMPLETE"
+    },
+    {
+      "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "source": {
+        "path": "testing/D5/test_local_preview.py",
+        "class_name": "LocalPreviewTest",
+        "function": "test_repeated_observation_and_save_are_idempotent",
+        "line": 68,
+        "end_line": 76,
+        "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+      },
+      "helper": "assertEqual",
+      "operand_roles": {
+        "0": [
+          "exact-tuple(exact-posix-path,builtin-str)",
+          "exact-list(exact-posix-path)"
+        ],
+        "1": [
+          "exact-tuple(exact-posix-path,builtin-str)",
+          "exact-list(exact-posix-path)"
+        ]
+      },
+      "I74_events": [
+        {
+          "sequence": 20670,
+          "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+          "helper": "assertEqual",
+          "unsupported_slots": [
+            0,
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND",
+            "UNSUPPORTED_OPERAND"
+          ]
+        },
+        {
+          "sequence": 20674,
+          "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+          "helper": "assertEqual",
+          "unsupported_slots": [
+            0,
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND",
+            "UNSUPPORTED_OPERAND"
+          ]
+        }
+      ],
+      "authority": "STATIC_SOURCE_DESIGN_NOT_I74_RUNTIME_TYPE_ATTESTATION",
+      "new_projection_status": "OBSERVED_TYPED_PROJECTION_NOT_FULL_OBJECT_SERIALIZATION",
+      "unknown_types": "NOT_RECORDED_PROPAGATES_INCOMPLETE"
+    },
+    {
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "source": {
+        "path": "testing/D5/test_plane_reconciliation.py",
+        "class_name": "PlaneReconciliationTest",
+        "function": "test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+        "line": 511,
+        "end_line": 527,
+        "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+      },
+      "helper": "assertIsInstance",
+      "operand_roles": {
+        "0": [
+          "exact-PlaneError-instance-args-projection"
+        ],
+        "1": [
+          "class-source_ingest.plane_fixture.PlaneError"
+        ]
+      },
+      "I74_events": [
+        {
+          "sequence": 21156,
+          "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+          "helper": "assertIsInstance",
+          "unsupported_slots": [
+            0,
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND",
+            "UNSUPPORTED_OPERAND"
+          ]
+        }
+      ],
+      "authority": "STATIC_SOURCE_DESIGN_NOT_I74_RUNTIME_TYPE_ATTESTATION",
+      "new_projection_status": "OBSERVED_TYPED_PROJECTION_NOT_FULL_OBJECT_SERIALIZATION",
+      "unknown_types": "NOT_RECORDED_PROPAGATES_INCOMPLETE"
+    },
+    {
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "source": {
+        "path": "testing/D5/test_plane_reconciliation.py",
+        "class_name": "PlaneReconciliationTest",
+        "function": "test_PC10_two_local_senders_and_two_query_publishers_compete",
+        "line": 185,
+        "end_line": 209,
+        "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+      },
+      "helper": "assertIsInstance",
+      "operand_roles": {
+        "0": [
+          "builtin-only-original-digest"
+        ],
+        "1": [
+          "class-builtins.dict"
+        ]
+      },
+      "I74_events": [
+        {
+          "sequence": 21168,
+          "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+          "helper": "assertIsInstance",
+          "unsupported_slots": [
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND"
+          ]
+        }
+      ],
+      "authority": "STATIC_SOURCE_DESIGN_NOT_I74_RUNTIME_TYPE_ATTESTATION",
+      "new_projection_status": "OBSERVED_TYPED_PROJECTION_NOT_FULL_OBJECT_SERIALIZATION",
+      "unknown_types": "NOT_RECORDED_PROPAGATES_INCOMPLETE"
+    },
+    {
+      "test_id": "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "source": {
+        "path": "testing/D5/test_profiles_quotas.py",
+        "class_name": "ProfilesQuotasTest",
+        "function": "test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+        "line": 303,
+        "end_line": 316,
+        "sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd"
+      },
+      "helper": "assertIsInstance",
+      "operand_roles": {
+        "0": [
+          "exact-EligibilityError-instance-args-projection"
+        ],
+        "1": [
+          "class-source_ingest.eligibility_fixture.EligibilityError"
+        ]
+      },
+      "I74_events": [
+        {
+          "sequence": 21697,
+          "test_id": "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+          "helper": "assertIsInstance",
+          "unsupported_slots": [
+            0,
+            1
+          ],
+          "reasons": [
+            "UNSUPPORTED_OPERAND",
+            "UNSUPPORTED_OPERAND"
+          ]
+        }
+      ],
+      "authority": "STATIC_SOURCE_DESIGN_NOT_I74_RUNTIME_TYPE_ATTESTATION",
+      "new_projection_status": "OBSERVED_TYPED_PROJECTION_NOT_FULL_OBJECT_SERIALIZATION",
+      "unknown_types": "NOT_RECORDED_PROPAGATES_INCOMPLETE"
+    }
+  ],
+  "class_allowlist": [
+    {
+      "id": "builtins.dict",
+      "binding": "EXACT_BUILTIN_CLASS_OBJECT",
+      "source": null
+    },
+    {
+      "id": "source_ingest.plane_fixture.PlaneError",
+      "binding": "ALREADY_LOADED_MODULE_EXACT_CLASS_OBJECT",
+      "source": {
+        "path": "source_ingest/plane_fixture.py",
+        "class_name": "PlaneError",
+        "function": null,
+        "line": 23,
+        "end_line": 24,
+        "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91"
+      }
+    },
+    {
+      "id": "source_ingest.eligibility_fixture.EligibilityError",
+      "binding": "ALREADY_LOADED_MODULE_EXACT_CLASS_OBJECT",
+      "source": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "class_name": "EligibilityError",
+        "function": null,
+        "line": 27,
+        "end_line": 28,
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9"
+      }
+    }
+  ],
+  "path_projection": {
+    "exact_type": "pathlib.PosixPath",
+    "lexical_function": "pathlib.PurePath.as_posix",
+    "runtime_binding": "PIN_STDLIB_IDENTITY_SIGNATURE_ORIGIN_IN_I76_BEFORE_AFTER",
+    "algorithm": "HMAC-SHA256",
+    "key_bytes": 32,
+    "key_scope": "EPHEMERAL_PER_CAPTURE_PARENT_ONLY_NOT_SERIALIZED",
+    "encoding": "UTF-8_SURROGATEPASS",
+    "digest_comparability": "SAME_CAPTURE_ONLY",
+    "raw_paths_published": false,
+    "independently_recomputable_without_key": false,
+    "extra_filesystem_calls": false
+  },
+  "exception_projection": {
+    "exact_classes": [
+      "source_ingest.plane_fixture.PlaneError",
+      "source_ingest.eligibility_fixture.EligibilityError"
+    ],
+    "descriptor": "BaseException.args",
+    "args_type": "EXACT_TUPLE_ONE_EXACT_STR",
+    "allowed_arg_regex": "[A-Z][A-Z0-9_]{0,79}",
+    "authority": "TYPE_AND_ARGS_PROJECTION_NOT_FULL_EXCEPTION_OBJECT",
+    "algorithm": "SHA256_CANONICAL_BUILTIN_TUPLE",
+    "raw_args_published": false
+  },
+  "operand_projection_schema": "d5.typed-operand-projection.v1",
+  "builtin_only_digest_policy": "BYTE_IDENTICAL_I70",
+  "typed_extension_scope": "ASSERTION_OPERANDS_ONLY_NOT_RETURN_OR_RECORD_DIGESTS",
+  "proposed_limits": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "limits_changed": false,
+  "component_external_seconds": 300,
+  "proposed_component_tests": [
+    {
+      "id": "LB01",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Falta autoridad humana futura I80, aunque existe I77",
+      "expected_oracle": "Bloquear antes de importar runner/producto o crear proceso funcional; no reutilizar I77.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB02",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Pins de contrato, registro, código o evidencia alterados",
+      "expected_oracle": "STALE_AUTHORITY/STALE_INPUTS; no aprender hashes durante captura.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB03",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Scope, IDs, grupos o políticas distintos de P01 sellado",
+      "expected_oracle": "Rechazar; conservar 321 IDs/12 grupos, siete políticas I72 y scopes I75.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB04",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Import de componentes o modo plan",
+      "expected_oracle": "NOT_RUN_I80_AUTHORIZATION_REQUIRED, cero imports históricos y cero campañas.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB05",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Sólo se aprueba diseño I78",
+      "expected_oracle": "No crear namespace/registro/autoridad/paquete funcional ni ejecutar componentes.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB06",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "I79 sólo componentes sintéticos",
+      "expected_oracle": "No importar producto/runners, ni reejecutar PG64/AT80 ni P01/P02–P10.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB07",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Autoridad coherente controlada por caller",
+      "expected_oracle": "Puerta de coherencia, no atestación independiente ni autorización humana por JSON.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB08",
+      "family": "AUTHORITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Destino futuro existente, symlink o path arbitrario",
+      "expected_oracle": "Rechazar sin overwrite de I71/I74/I77; nuevo destino fijo exclusivo.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB09",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "PlaneError ausente al importar el runner sintético",
+      "expected_oracle": "Crear resolver con builtin dict; no exigir todas las clases antes de main.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB10",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Discovery normal carga clase antes del primer rol permitido",
+      "expected_oracle": "Resolver entonces desde sys.modules, sin import ni discovery auxiliar.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB11",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "EligibilityError ya estaba cargada",
+      "expected_oracle": "Resolver sólo al rol correspondiente; mismo contrato que carga tardía.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB12",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Operando builtin-only o Path sin referencia a clase",
+      "expected_oracle": "Delegar digest/proyección sin resolver clases innecesarias.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB13",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "ID/helper/slot fuera de whitelist",
+      "expected_oracle": "No resolver ni extender; comportamiento anterior y propagación de missing.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB14",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Módulo sigue ausente al primer uso permitido",
+      "expected_oracle": "CLASS_MODULE_NOT_LOADED en latch; preservar retorno original y detener entre tests.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB15",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Clase permitida nunca requerida por operandos observados",
+      "expected_oracle": "No exigirla en finish por expectativa estática; inventario/missing mantienen sus guardas.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB16",
+      "family": "BINDING_TIMING",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Dos clases se requieren en momentos distintos",
+      "expected_oracle": "Estados independientes UNRESOLVED/BOUND/INVALID; no reset ni cambio por orden.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB17",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Clase exacta y fuente pinneada disponibles",
+      "expected_oracle": "type exactamente type, base ValueError, módulo/nombre y hash de fuente exactos.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB18",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Export sustituido tras primer binding",
+      "expected_oracle": "CLASS_BINDING_CHANGED; conservar primera identidad y no rebind automático.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB19",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Objeto módulo sustituido en sys.modules",
+      "expected_oracle": "Invalidar antes/después de proyección y en finish, aunque nombre/hash coincidan.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB20",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Fuente alterada antes o después del binding",
+      "expected_oracle": "STALE_CLASS_SOURCE/STALE_INPUTS; no resolver desde fuente nueva.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB21",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Subclase, metaclass custom o clase con nombre parecido",
+      "expected_oracle": "Rechazar sin __instancecheck__/__subclasscheck__/repr/str de usuario.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB22",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Dos objetos clase distintos comparten nombre",
+      "expected_oracle": "Aceptar sólo objeto exportado exacto; no homologar por strings.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB23",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Módulo eliminado o clase reemplazada al finalizar",
+      "expected_oracle": "Finalización invalida; no aceptar witnesses anteriores como coherencia global.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB24",
+      "family": "BINDING_IDENTITY",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Resolver consulta varias veces el mismo binding",
+      "expected_oracle": "Comprobar binding original; lector acumulado y referencias acotados, sin reimport.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB25",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Assertion original retorna en rol permitido",
+      "expected_oracle": "Una llamada original; resolver/proyectar después, sin reevaluar predicado.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB26",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Assertion original lanza",
+      "expected_oracle": "Conservar misma excepción y outcome; no generar witness exitoso ni forzar binding.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB27",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Fallo de resolver/proyector durante callback",
+      "expected_oracle": "Latch fuera de stream, sin excepción instrumental al producto; parada segura entre tests.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB28",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Dict builtin y clase dict",
+      "expected_oracle": "Digest I70 del valor intacto; witness sólo para objeto clase permitido.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB29",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Instancias exactas PlaneError/EligibilityError",
+      "expected_oracle": "Sólo tipo/args permitidos, etiqueta de proyección parcial; sin objeto completo.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB30",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Path escalar, tuple(Path,str), list(Path)",
+      "expected_oracle": "Mismos tags, HMAC efímero, encoding y scope I75; sin FS ni claves/rutas publicadas.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB31",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Snapshots Drive y DI28",
+      "expected_oracle": "29 scopes snapshot y constructor negativo separados de Store; sin crédito adicional por late binding.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB32",
+      "family": "OBSERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Subtests, skip, fallos y restauración",
+      "expected_oracle": "Conservar resultados, callbacks y punteros exactos; record/return digests I70 intactos.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB33",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Worker completa captura e informe válido",
+      "expected_oracle": "Diagnóstico COMPLETED/COMPLETE/OK sólo tras finalización; no equivale a suficiencia.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB34",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Fallo previo a entrypoint tras validar capacidad",
+      "expected_oracle": "Envelope FAILED con fase/código cerrados, raw/sidecar funcional no inventados.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB35",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "CaptureFault con código permitido",
+      "expected_oracle": "Emitir sólo literal de allowlist; nunca mensaje, args o traceback de excepción.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB36",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Excepción desconocida o código no permitido",
+      "expected_oracle": "SANITIZED_WORKER_ERROR fijo; sin str/repr de la excepción.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB37",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Binding falla dentro de ENTRYPOINT",
+      "expected_oracle": "Primer fallo latcheado conserva fase/código; diagnóstico no se sustituye por FINALIZE/OK.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB38",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Múltiples fallos durante cleanup/finalización",
+      "expected_oracle": "Primera causa conservada; causas secundarias sólo códigos cerrados acotados del contexto.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB39",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Raw vacío con diagnóstico válido",
+      "expected_oracle": "BLOCKED_WORKER_FAILURE; artifact_error separado, sin enmascarar código observado con INVALID_JSON.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB40",
+      "family": "DIAGNOSTICS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Worker muere sin diagnóstico, como pérdida del canal",
+      "expected_oracle": "WORKER_DIAGNOSTIC_NOT_RECORDED y causa interna desconocida; no rellenar desde AST.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB41",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Diagnóstico antes de validar autoridad y capacidad de escritura",
+      "expected_oracle": "No usar fd no confiable ni crear archivos; registrar ausencia desde padre.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB42",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "READY/RELEASE con nonce/PID/PGID/fds/directorio correctos",
+      "expected_oracle": "Correlación exacta; sólo proceso/grupo/capacidad propios.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB43",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Nonce/PID/PGID/capture_run_id incoherentes en diagnóstico",
+      "expected_oracle": "INVALID_WORKER_DIAGNOSTIC; no conceder crédito a envelope bien formado pero ajeno.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB44",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Envelope con campos extra, fase/código/schema/tipos inválidos",
+      "expected_oracle": "Rechazo estricto y sanitizado; nunca publicar valores no validados.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB45",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Fallo antes de empezar escritura final del sidecar",
+      "expected_oracle": "Emitir un único JSON de fallo por sidefd existente; no nuevo archivo/pipe/stderr retenido.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB46",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Escritura final ya comenzó y falla parcialmente",
+      "expected_oracle": "No append de segundo JSON ni overwrite; preservar parcial y causa no registrada si falta.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB47",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "EOF, timeout, proceso hijo o canal pendiente",
+      "expected_oracle": "Sólo parar grupo propio, confirmar retirada; si no se confirma bloquear sin afirmar cero.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB48",
+      "family": "CHANNELS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Diagnóstico válido pero raw/sidecar/exit no concuerdan",
+      "expected_oracle": "Separar diagnóstico válido de captura inválida; ninguna promoción por presencia de OK.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB49",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Diagnóstico serializado excede 4096 bytes",
+      "expected_oracle": "Rechazar antes de escribir; campos cerrados no permiten expansión arbitraria.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB50",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Diagnóstico dentro de sidecar de 12MiB",
+      "expected_oracle": "Cuenta en cuota existente; no canal, archivo o presupuesto adicional.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB51",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Paquete completo y copia launcher",
+      "expected_oracle": "Mismo máximo 37 miembros lógicos y 112MiB+4KiB; fracaso mínimo también contabiliza.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB52",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "131072 eventos/campaña y 2048/test",
+      "expected_oracle": "Topes sin cambio y counters acumulados; resolver/diagnóstico no los reinician.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB53",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Páginas de 2MiB, hasta32 y64MiB acumulados",
+      "expected_oracle": "Mismos rangos/hashes/lifecycle; no cortar eventos ni completar metadata ausente.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB54",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Inputs/evidencia releídos por binding/finalización",
+      "expected_oracle": "Mismos 128MiB únicos/256MiB leídos acumulados por ámbito, sin lector nuevo para eludir topes.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB55",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Frames4096, refs16384, depth32, string4096, operand16MiB",
+      "expected_oracle": "Binding acotado a tres clases y ledger a fases fijas; cuotas previas intactas.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB56",
+      "family": "BOUNDS",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Tiempo de componentes300s/futuro900s o límite menor",
+      "expected_oracle": "No ampliar runner/hijo/hook ni añadir actores; bloqueo y preservación.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB57",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Fixtures y proceso productor sintéticos nuevos",
+      "expected_oracle": "Cero imports de producto/runners/PG64/AT80; temporales propios y sentinels preservados.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB58",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Productor sintético reproduce carga tardía y fallo temprano",
+      "expected_oracle": "Ejercitar worker/launcher nuevos sin entrypoint histórico ni campaña funcional.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB59",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "I71/I74/I77 y evidencia I76 existentes",
+      "expected_oracle": "Bytes y hashes intactos; diagnóstico nuevo no rellena retrospectivamente I77.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB60",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "RAW PASS parcial o conteos sin metadata",
+      "expected_oracle": "Sin completitud/suficiencia por suma; inventario/transportes/resultados separados.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB61",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Captura futura completa y íntegra",
+      "expected_oracle": "Como máximo TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW; no cierre automático.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB62",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Publicación del diseño o componentes",
+      "expected_oracle": "Separada del alcance; sólo I52 publicado y sin acceso remoto nuevo.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB63",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Estado D1–D4/hito local y81/3",
+      "expected_oracle": "Inmutable; UI01.2/UI04.1/UI09.2 PARTIAL y D5 global/H07/G01–G07/GI abiertos.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    },
+    {
+      "id": "LB64",
+      "family": "PRESERVATION",
+      "phase": "PROPOSED_I79_SYNTHETIC_COMPONENT_ONLY",
+      "trigger": "Reaparece incompatibilidad de API/oráculo/presupuesto",
+      "expected_oracle": "Conservar intento, detener y presentar ajuste concreto; sin retry/whitelist/techo automáticos.",
+      "status": "NOT_RUN",
+      "functional_campaign": false
+    }
+  ],
+  "counts": {
+    "proposed_component_cases": 64,
+    "source_anchors": 59,
+    "input_hashes": 208,
+    "snapshot_scopes": 29,
+    "operand_scopes": 5,
+    "class_allowlist": 3,
+    "expected_occurrences": 321,
+    "expected_groups": 12
+  },
+  "source_anchors": [
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "snapshot",
+      "line": 480,
+      "end_line": 489,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "__init__",
+      "line": 287,
+      "end_line": 294,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI01_scope_genesis_identity_and_no_reference",
+      "line": 92,
+      "end_line": 99,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI02_anchor_before_inventory_and_observed_new_revision",
+      "line": 101,
+      "end_line": 108,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+      "line": 110,
+      "end_line": 117,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI04_feed_continuation_and_terminal_are_separate",
+      "line": 119,
+      "end_line": 129,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+      "line": 131,
+      "end_line": 137,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+      "line": 139,
+      "end_line": 147,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI07_fresh_process_recovers_state_from_disk",
+      "line": 149,
+      "end_line": 161,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+      "line": 163,
+      "end_line": 173,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+      "line": 175,
+      "end_line": 182,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI09_transient_late_event_never_commits_a_prefix",
+      "line": 184,
+      "end_line": 189,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+      "line": 191,
+      "end_line": 197,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+      "line": 199,
+      "end_line": 206,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+      "line": 208,
+      "end_line": 219,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+      "line": 221,
+      "end_line": 229,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+      "line": 231,
+      "end_line": 240,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI14_two_writers_cas_and_command_content_conflict",
+      "line": 242,
+      "end_line": 256,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+      "line": 258,
+      "end_line": 267,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+      "line": 269,
+      "end_line": 276,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+      "line": 278,
+      "end_line": 283,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+      "line": 285,
+      "end_line": 292,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI19_later_accessible_file_does_not_erase_terminal_history",
+      "line": 294,
+      "end_line": 300,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+      "line": 302,
+      "end_line": 308,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+      "line": 310,
+      "end_line": 320,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI22_scope_changes_need_a_new_root",
+      "line": 322,
+      "end_line": 334,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+      "line": 336,
+      "end_line": 345,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI24_limits_reject_whole_page_and_history_without_truncation",
+      "line": 347,
+      "end_line": 358,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI25_opaque_tokens_and_continuation_cycles",
+      "line": 360,
+      "end_line": 368,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+      "line": 370,
+      "end_line": 397,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+      "line": 399,
+      "end_line": 415,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "line": 417,
+      "end_line": 430,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "line": 85,
+      "end_line": 89,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_repeated_observation_and_save_are_idempotent",
+      "line": 68,
+      "end_line": 76,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "line": 511,
+      "end_line": 527,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "line": 185,
+      "end_line": 209,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_profiles_quotas.py",
+      "class_name": "ProfilesQuotasTest",
+      "function": "test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "line": 303,
+      "end_line": 316,
+      "sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd"
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "class_name": "PlaneError",
+      "function": null,
+      "line": 23,
+      "end_line": 24,
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91"
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "class_name": "EligibilityError",
+      "function": null,
+      "line": 27,
+      "end_line": 28,
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9"
+    },
+    {
+      "path": "source_ingest/preview.py",
+      "class_name": null,
+      "function": "save_preview",
+      "line": 170,
+      "end_line": 205,
+      "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "class_name": "Recorder",
+      "function": "owner",
+      "line": 292,
+      "end_line": 306,
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "class_name": null,
+      "function": "digest_value",
+      "line": 98,
+      "end_line": 135,
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": null,
+      "function": "loaded_bindings",
+      "line": 148,
+      "end_line": 156,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": "ClassBindings",
+      "function": "check",
+      "line": 140,
+      "end_line": 143,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": "Projector",
+      "function": "observe",
+      "line": 164,
+      "end_line": 209,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": "Recorder",
+      "function": "operand",
+      "line": 321,
+      "end_line": 330,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": "Recorder",
+      "function": "finish",
+      "line": 426,
+      "end_line": 444,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": null,
+      "function": "launch",
+      "line": 546,
+      "end_line": 608,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": null,
+      "function": "authority",
+      "line": 56,
+      "end_line": 66,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": null,
+      "function": "validate_pages",
+      "line": 451,
+      "end_line": 508,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "class_name": null,
+      "function": "package_size",
+      "line": 516,
+      "end_line": 520,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+    },
+    {
+      "path": "testing/prospective_capture_typed/worker.py",
+      "class_name": null,
+      "function": "main",
+      "line": 63,
+      "end_line": 83,
+      "sha256": "a4afd429c158dda8e18788372e67d13a2bbca9fad67e01fb61f3d5ca5ed48637"
+    },
+    {
+      "path": "testing/prospective_capture_typed/worker.py",
+      "class_name": null,
+      "function": "exercise",
+      "line": 38,
+      "end_line": 60,
+      "sha256": "a4afd429c158dda8e18788372e67d13a2bbca9fad67e01fb61f3d5ca5ed48637"
+    },
+    {
+      "path": "testing/prospective_capture_typed/worker.py",
+      "class_name": null,
+      "function": "targets",
+      "line": 13,
+      "end_line": 29,
+      "sha256": "a4afd429c158dda8e18788372e67d13a2bbca9fad67e01fb61f3d5ca5ed48637"
+    },
+    {
+      "path": "testing/prospective_capture_typed/test_typed_capture.py",
+      "class_name": "TypedTest",
+      "function": "test_AT08",
+      "line": 130,
+      "end_line": 130,
+      "sha256": "44b55e657fdf6ab6dda5089609d0943d109c868f6b21a2ce76e199133b04fd16"
+    },
+    {
+      "path": "testing/prospective_capture_typed/test_typed_capture.py",
+      "class_name": "TypedTest",
+      "function": "test_AT48",
+      "line": 234,
+      "end_line": 237,
+      "sha256": "44b55e657fdf6ab6dda5089609d0943d109c868f6b21a2ce76e199133b04fd16"
+    },
+    {
+      "path": "testing/prospective_capture_typed/test_typed_capture.py",
+      "class_name": "TypedTest",
+      "function": "test_AT56",
+      "line": 256,
+      "end_line": 258,
+      "sha256": "44b55e657fdf6ab6dda5089609d0943d109c868f6b21a2ce76e199133b04fd16"
+    },
+    {
+      "path": "testing/prospective_capture_typed/test_typed_capture.py",
+      "class_name": "TypedTest",
+      "function": "test_AT72",
+      "line": 350,
+      "end_line": 363,
+      "sha256": "44b55e657fdf6ab6dda5089609d0943d109c868f6b21a2ce76e199133b04fd16"
+    },
+    {
+      "path": "testing/D5/run_relational_durable_lab.py",
+      "class_name": null,
+      "function": "main",
+      "line": 28,
+      "end_line": 56,
+      "sha256": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431"
+    }
+  ],
+  "inputs": {
+    "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+    "docs/design/D5-I35-NEXT-CUT-SCOPE.md": "8f4be298d849da615280909cf25968ed271eedfceece6713735b598bbd30be90",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-DESIGN.md": "145b7eafb0fbf7b2ea877fffb84593d26486c0436f6b72e6ecbf0635accf640c",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md": "6d0fbaeb2466c9100c1f7e94c8a5c42ef3e064387a9980023ddda769e02ccdb4",
+    "docs/design/D5-I70-PROSPECTIVE-CAPTURE-LAB.md": "2f2028d0a2f4f7bf96173fbfd5bdfb512612690ba7a6847b9dd0760075794ca5",
+    "docs/design/D5-I72-PAGED-CAPTURE-DESIGN.md": "b8d22c1eed08a4e8f87bf601edf36abaaf09ec44751b19ce108d926172d39535",
+    "docs/design/D5-I72-PAGED-CAPTURE-REVIEW.md": "cc33e0621115b23ec3e35dcbbcb5878656ae1345bba15c71bcb096df485fc970",
+    "docs/design/D5-I73-PAGED-CAPTURE-LAB.md": "03b94c71c1c0c5e3ea24f99b7afecb42143369f63a7f87255741b91d5a846057",
+    "docs/design/D5-I75-TYPED-ADAPTER-DESIGN.md": "2cf2ce86a7f9f9ee66a45caf82d6c3056d17b20be6df8c7b89aebdb7be6c83bb",
+    "docs/design/D5-I75-TYPED-ADAPTER-REVIEW.md": "7b490277d5fef8d1f5444ba0a5b1ead3f499af0f039e56c8d96519ae60821222",
+    "docs/design/D5-I76-TYPED-CAPTURE-LAB.md": "39e159c1088d76ea251ec9b0306013bab2f2183447914e647e11cc386f637339",
+    "docs/validation/D5-I69-design-review.json": "4ad7df4fa45900bd074fc315f84baa98c84cc902f99893a6d4099fcaadc01b85",
+    "docs/validation/D5-I69-integrity.json": "59af0991ee42ef263e40b5655abc150177a32b4019c187bf4c39b01bfde8a2ff",
+    "docs/validation/D5-I70-integrity.json": "e08991789bd161fccb8ef3f6357657b0227719d646eb69183db5a30a5bf4b6a6",
+    "docs/validation/D5-I70-plan-context.json": "2ff218b09154e8c6b0b50f950edb8edba0d421b1f7b9554db1f8a8acba6e6df8",
+    "docs/validation/D5-I70-plan-raw.json": "aff7b5bc007fa7590ac809812bf1fee770de75437065010719ffd23f7b3fd713",
+    "docs/validation/D5-I70-results.json": "1da4f5109851333e333040cf32330f553acb1c6588078b107ffbcae01969fcb0",
+    "docs/validation/D5-I70-results.md": "f83dafb5b004ebc790d7b28a770df0215c6f87111eea2538215abd2160196af9",
+    "docs/validation/D5-I70-tests-raw.json": "c04c60f0aaf151987f1a203bc6e096d14bcd63f54f5d5d5a95e3a9e832d309b7",
+    "docs/validation/D5-I71-P01-launch.json": "65db40b1cc3c2825d352fde3f5347367c86aecd00896b3a077022a83fa276fe4",
+    "docs/validation/D5-I71-P01/OWNER": "87406ff567a1c0e1ce029dd9f49c5a75ec26214774fe6ea61cdd644da281ae6a",
+    "docs/validation/D5-I71-P01/context.json": "bfa3122fa084c017a835f98550910c5086d8f656dfd51d11f612f336397c2cab",
+    "docs/validation/D5-I71-P01/runner-raw.json": "5abae36f52969ba26f921f6ef9a7965adcba5cceae35eb570a778ec59cd5f575",
+    "docs/validation/D5-I71-P01/sidecar.json": "719d1419d7949eacceef8822ce5bfbfdcc1b893fad027d6ad71b5da4b27b2658",
+    "docs/validation/D5-I71-P02-launch.json": "b07d7d3b0f5466b039898c485159ea4c8c5feefe73ecdf20766dda475c4f370a",
+    "docs/validation/D5-I71-P02/OWNER": "fa29aee08fa1f43a0df4bcd7d38491865a327cdd7f169a165d7b7157342dca53",
+    "docs/validation/D5-I71-P02/context.json": "04aaf2c17f9d0a8e290b7290b04c98fa8316ab8f1eaad3577e89988157104dc7",
+    "docs/validation/D5-I71-P02/runner-raw.json": "2e36319424461de448b2875647e4e05bed56d3d064d23c6bc1ebd538b39dfcf2",
+    "docs/validation/D5-I71-P02/sidecar.json": "a022f40ca0e017b2daf964aaa02f3b6b9620cc10f3e15831a2314023aa38a5eb",
+    "docs/validation/D5-I71-P03-launch.json": "65665d5ae556de07b386c2309302cb47209b15c16421cce9866b2027b9d2074c",
+    "docs/validation/D5-I71-P03/OWNER": "0731d22b051f5744fe370a39c125098ae8dcc8167cd9803b6328bf812d3c7e33",
+    "docs/validation/D5-I71-P03/context.json": "1d8df19a52f401ca7cd0bcdc3421da1dccf33e6dafda663582a539be51fd6d2d",
+    "docs/validation/D5-I71-P03/runner-raw.json": "df84f4296c98f49f4a9d4f722bf7a7148f20c0f613198a2954cda7502416332c",
+    "docs/validation/D5-I71-P03/sidecar.json": "9d2b83c9dc650f927efd083278bcf8c0713b2379da401485ef0c5dc0d8d3c851",
+    "docs/validation/D5-I71-P04-launch.json": "fb18fc5025f5c4100953dff114de6fbef9e1d6c23aa2119eb23fbe660c02bb21",
+    "docs/validation/D5-I71-P04/OWNER": "cd00a9668c9bdddd4072d6046170998b54613de93248184a600902890b5e82d8",
+    "docs/validation/D5-I71-P04/context.json": "b6451af9efcf6d74d5e44e3a2bb5bc7c2c8b5e87fb2da966aafe004d6389a396",
+    "docs/validation/D5-I71-P04/runner-raw.json": "21354f79279e3e921754925ab9d189de87de68ea4be3c1348aefb9ebd863b3ab",
+    "docs/validation/D5-I71-P04/sidecar.json": "c2d849765fc3df70463dc47fb2614e0f38747f42bc54106a49f221ac6a6d4587",
+    "docs/validation/D5-I71-P05-launch.json": "c0e93c289ff3c382a0c76ea678fae98af5c92d1fa8e2a861424e72efa3a63281",
+    "docs/validation/D5-I71-P05/OWNER": "eae85dc93dec5f98a08aa21017513b19ffea3ed0deee96d2ef72355296a7fb70",
+    "docs/validation/D5-I71-P05/context.json": "681a1f4d19ac8be5c28d916316926c2a85a9a9f096531900cf3ab64bded18bbd",
+    "docs/validation/D5-I71-P05/runner-raw.json": "34d2e440b9e36fb90027869edbdf568de8dd6b5ca74df85502dc9833a7dc18c6",
+    "docs/validation/D5-I71-P05/sidecar.json": "c93a754c0e22239d5d84709e850d0bb7b987146bef944c8ef03aefc656855c01",
+    "docs/validation/D5-I71-P06-launch.json": "ddbcd87a6702fbab8011af905f5461c16d9908402150da2736de22ab76d0a885",
+    "docs/validation/D5-I71-P06/OWNER": "4958247098e201d96c5964c28b197a6b6420de20f754ea89c481482c43403689",
+    "docs/validation/D5-I71-P06/context.json": "53ffaeac3f8b8c56e1c4be271783384fbea8d283c5125b3f9fad97373c2a7e7f",
+    "docs/validation/D5-I71-P06/runner-raw.json": "71191aad624360f491e143bafa86c6ba196d7b610a1a222711fd4585ae38abe9",
+    "docs/validation/D5-I71-P06/sidecar.json": "8c0e5e63e5ace1475cde18c670677d3b2dc6d5258ec6c35e604649de7d088294",
+    "docs/validation/D5-I71-P07-launch.json": "489057e1955504b3cbc3d54b032fc79cf19e7053425d463ba1eda304cf29d90e",
+    "docs/validation/D5-I71-P07/OWNER": "587ed184f3fc91bf403cdca24ebfcffb6b418e55ae0df4976d7aa22f1dee537f",
+    "docs/validation/D5-I71-P07/context.json": "bb08d5285c2b0f99b58f42c397023178b86d727f475044d58e438cb111c3835b",
+    "docs/validation/D5-I71-P07/runner-raw.json": "e6df8e735110a1f5f860610d498923516f19817555f491c7a17cdee7975d1902",
+    "docs/validation/D5-I71-P07/sidecar.json": "8ddad71319db0d41a9a7961bbeef109398dd6d1a0f5cc581ac6dc60233ced1fd",
+    "docs/validation/D5-I71-P08-launch.json": "1c9834f941e47074f60fc980dc3ed21ddc437e3595a518372561f7a7495ffbe4",
+    "docs/validation/D5-I71-P08/OWNER": "46a7fc0ba260c96c8231638290fd0e666bfdfbdbf036568b4992436bdb2a1549",
+    "docs/validation/D5-I71-P08/context.json": "046de759445e793f8ea991b1f1a45c0cff812c0d98d21c8c115bd66ce9b34209",
+    "docs/validation/D5-I71-P08/runner-raw.json": "d1682dfee3d02b39ae5b13831c2b9aa5cbc0c0c70bf94e4226587a89873e080e",
+    "docs/validation/D5-I71-P08/sidecar.json": "ec5a8a3c0fc76dbcc2f31e11452e9165b161fe17724f96598b5a3827e3d3ebc7",
+    "docs/validation/D5-I71-P09-launch.json": "7879b1d380dcce4d6e5f8f59125fd1e708f56172cea582268bc1eb5d9fc50fd4",
+    "docs/validation/D5-I71-P09/OWNER": "4c9f6e49b913a42c173fe837eec21c246856f01e2b0beb98b23f5ca9a18077fb",
+    "docs/validation/D5-I71-P09/context.json": "324ee02473f0cce082d46f2f20658436754cfe32f0a03bc36bc03ecacd3e7ee9",
+    "docs/validation/D5-I71-P09/runner-raw.json": "95928ff48c0b94e47b88095f78596ac1acb93c189ffcd85c884c7e169e680e24",
+    "docs/validation/D5-I71-P09/sidecar.json": "4f9ac087765a19cc00276f6622ad56c51b51f81ebb98ca5d37acf81c4645841a",
+    "docs/validation/D5-I71-P10-launch.json": "06b0d0363ed6862c00ddeeb5b25a8773fa5593a6a9328761ca2408ffe624438a",
+    "docs/validation/D5-I71-P10/OWNER": "46695bf3b0ff26258a82e42d2a89962a958c59dbcb5cd4b1f4f9a1860aa42298",
+    "docs/validation/D5-I71-P10/context.json": "acb4f7e3b5b1440d647438fb03f0fe28d2f2f37393f91f238c41554d1adfe24a",
+    "docs/validation/D5-I71-P10/runner-raw.json": "2e8e225bab6bee06befc5f14858c2851c9373ef497ee114c2f3fe50913caf17e",
+    "docs/validation/D5-I71-P10/sidecar.json": "b2b4d776791c77378cb22e3331583b5b5df02e439a1730bba06229045fd02251",
+    "docs/validation/D5-I71-capture-authorization.json": "d9a6883f1ccf9b2fd02ccd2b103464cf1793720148bdce81d603dde16710fbf3",
+    "docs/validation/D5-I71-integrity.json": "7c0c30d0e14a173d769f2a7b16ef2928c0b6e1c386acf9e60d7b50760b9e0028",
+    "docs/validation/D5-I71-results.json": "80b2150f3ba3f844b57a6a48da8a611e4e229fc6c905848256d7a68e96ad90b3",
+    "docs/validation/D5-I71-results.md": "746671c96b0d4a1bb324e2f44f7f33148abe57dd92c6e790dac6b166ee41b8ea",
+    "docs/validation/D5-I72-design-review.json": "9b5e9962845d155ac1617be1357ed29089c393339547b3df1af8e6a24805bd5b",
+    "docs/validation/D5-I72-integrity.json": "1ccd5973065cdea24c7e9240ebad0e75cba740d1579fe2d6e80a9f6f9c122712",
+    "docs/validation/D5-I73-integrity.json": "45691d3238ae4d8e10018f7933cca2a3089cd8d505ff90e0b7a709427d2997ee",
+    "docs/validation/D5-I73-plan-context.json": "9bd26c85021b90c80f7cae54520a196ced83434551ee297cf9a958bd9d251e29",
+    "docs/validation/D5-I73-plan-raw.json": "03db50f661a39a6b6aa013abcb9525b5b9fec2ce7d0d2b4462683d9a3ad0375d",
+    "docs/validation/D5-I73-results.json": "6c6502b2ca207fe8a2b50ed19e7d09e8c92c5da5f35d7c42a335659ca4d953a1",
+    "docs/validation/D5-I73-results.md": "226a1d57dc5a82e080af429071927227ce439d6bc2188394238cd916538e98c1",
+    "docs/validation/D5-I73-tests-raw.json": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+    "docs/validation/D5-I74-P01-launch.json": "6899cbecdbadca69ad13ea33903ffb7fbc80c658f8b86dbb00974ea3c727b1c8",
+    "docs/validation/D5-I74-P01/OWNER": "bda4ae8938f3597dfef3fb40d4742c6a5b0a4247db4568c62332d1e7e0c16f48",
+    "docs/validation/D5-I74-P01/context.json": "6899cbecdbadca69ad13ea33903ffb7fbc80c658f8b86dbb00974ea3c727b1c8",
+    "docs/validation/D5-I74-P01/event-0001.json": "7118e1b0164017356dcb8dc018211699859d8ddc896f0630082040183abf1164",
+    "docs/validation/D5-I74-P01/event-0002.json": "4a24adf3084a9dd3f31ecd6724174c44b378739a459993ec6e6e4e74876999ad",
+    "docs/validation/D5-I74-P01/event-0003.json": "a1552caf155d77cc4d0e3e768ba937ba681a0351054aee2bb1a69547e76d1285",
+    "docs/validation/D5-I74-P01/runner-raw.json": "a11cd4701a41053b6a4c8cc09f07a3586275daa4a85eb896ed24e249b5ffa7a1",
+    "docs/validation/D5-I74-P01/sidecar.json": "d0fda200465810a0376c5ca367186b0211e4cd7e574cfa9cdf0fae26b8fff9f3",
+    "docs/validation/D5-I74-capture-authorization.json": "32098541d22cbaaacd6231be59e9628ad89a9d96239d55b1328ec16f380a2cea",
+    "docs/validation/D5-I74-diagnosis.json": "04dc4365eca8bbb184b02a81a5f73940daab44638af9e24eede4a9d14f35e06d",
+    "docs/validation/D5-I74-integrity.json": "e82868a21b336cd255dd3e30d08cc2a86a095e8048ae9f927ee49739e0841a3c",
+    "docs/validation/D5-I74-results.json": "89c6ab5039bf913f7b7e22198cf695282a91afd34926c41d8732a795c4c0676d",
+    "docs/validation/D5-I74-results.md": "6bf212b78ce006eaae1abcebab31968502123012a45f42af5ede1bf7fcb295ff",
+    "docs/validation/D5-I75-design-review.json": "28e1ee85a5e5e86883498ffbe5d242a5aa66e8715a8d2e0e63ff2a6a77a2c510",
+    "docs/validation/D5-I75-integrity.json": "43dfd2a14309cace67074f9ddb31c6d3e72a1ade42e095c9ecf4ec70c4b453a7",
+    "docs/validation/D5-I76-integrity.json": "74ea43a46e063bfb30d364a78e2f288a81899531e1656553c78f5088842a822f",
+    "docs/validation/D5-I76-plan-context.json": "03fad6e2fea74f60f374f2184babbbef154c2f9db1d533e8acb9fed8fef52886",
+    "docs/validation/D5-I76-plan-raw.json": "4e3c69bb5818b8a44502a817893d5ecf7db84e3da2c907e67323f24f474b4417",
+    "docs/validation/D5-I76-results.json": "4fc32b71d3e794869a0454a78d7195c7377eb8f9748654891d1ae8373c02fafd",
+    "docs/validation/D5-I76-results.md": "7c3da7b2ff011d22409beb1be9cc5190e7c08e9f7e7d02b413044b3cccc31387",
+    "docs/validation/D5-I76-tests-raw.json": "1f9c54d641daec9fb90a4cf36fa54d7955ed87ba9f8f854b4c15dd7767d0a2d6",
+    "docs/validation/D5-I77-P01-launch.json": "c856cdf9744c5bd0cd5a6f8999e7c947f1a8d2f500484d70da090885e2650ff5",
+    "docs/validation/D5-I77-P01/OWNER": "813ddf1ffc15c4075d7d5835370e2b833e2cd27551fb0ab923004747d8eebba6",
+    "docs/validation/D5-I77-P01/context.json": "c856cdf9744c5bd0cd5a6f8999e7c947f1a8d2f500484d70da090885e2650ff5",
+    "docs/validation/D5-I77-P01/runner-raw.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/D5-I77-P01/sidecar.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/D5-I77-capture-authorization.json": "59881d30c29a7efd5777ba241cb0ba9b862d0a29438e1cddf9d1fc10fdfbb342",
+    "docs/validation/D5-I77-diagnosis.json": "d398585d728316fd8c29932b64cd50210caa99f7669d3ae0557ede2e19b33402",
+    "docs/validation/D5-I77-execution-context.json": "386b8a9a2cfbe9b2e1e4fa6756b2bf625d1ef6bd721fcb34a1a948303ef62bc0",
+    "docs/validation/D5-I77-integrity.json": "2d040e80e01d1e69d38472c8a4dfa7bdb6d0be89ed2cc4b4f4a2aadbffd025e7",
+    "docs/validation/D5-I77-results.json": "45afe495a4abfd83fdf7decdbd3bb7f5dfbc7ba6e4b3f363c1894bcfa9a59154",
+    "docs/validation/D5-I77-results.md": "d321b7ff7bcd0e4cfa57783f9afbec83fde216856a2501a0ddc962743947ee81",
+    "docs/validation/D5-PAGED-CAPTURE-REGISTRY.json": "2fbc18644cb683d56184c405efe8307eb0b1b4269ace2b3c7175f0b2a0c04520",
+    "docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json": "84db71ca6f09ec19c6525aedc90f69bf77c0516830060a7065adff19cb139b12",
+    "docs/validation/D5-TYPED-CAPTURE-REGISTRY.json": "70ffa04274de485ceede212fe2f9d2d2bf8c67bac906b0fc8c018112c25b37d1",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/durable_ambiguity_fixture.py": "cf8b211c61e1981192c89eb09edc2d8f0435494c285b63e21c705068c2219fd4",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/adoption_scenarios.py": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+    "testing/D5/bootstrap_scenarios.py": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+    "testing/D5/demo_durable_integration.py": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+    "testing/D5/demo_durable_relational.py": "215ce133b3d9c31c2968856cce891694ba98f16f330175d9a12822c653b7fabd",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_register.py": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/isolated_local_edit_scenarios.py": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+    "testing/D5/local_edit_scenarios.py": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+    "testing/D5/local_reappearance_scenarios.py": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+    "testing/D5/mapping_scenarios.py": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+    "testing/D5/postgres_scenarios.py": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+    "testing/D5/reappearance_scenarios.py": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/review_scenarios.py": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+    "testing/D5/run_adoption_lab.py": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_bootstrap_lab.py": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_isolated_local_edit_lab.py": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+    "testing/D5/run_local_edit_lab.py": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+    "testing/D5/run_local_reappearance_lab.py": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+    "testing/D5/run_mapping_lab.py": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/run_postgres_lab.py": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+    "testing/D5/run_reappearance_lab.py": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/D5/run_review_lab.py": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+    "testing/D5/run_v30_lab.py": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+    "testing/D5/v30_scenarios.py": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e",
+    "testing/prospective_capture/README.md": "6b120272d5e668801a3d2ed6eef95ec01b35a988b587c63a4de279609f38f82b",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture/run_capture_lab.py": "f3dc499fbb5370c38f67bbdea3cfddc95dc9020ff725da55d07fdfa5727cf572",
+    "testing/prospective_capture/test_prospective_capture.py": "f94a5fe0a388978afb3045d263dbfbae250a578f08001445beb85a64d550712e",
+    "testing/prospective_capture/worker.py": "dd23ea2e24303e34ec521bf184da8081cc637ca03b1c9cc04ae14256b859e346",
+    "testing/prospective_capture_paged/README.md": "587c3d07e1f3ab87dffe593cd0d37628af5d75449fe867a5b615eb018eba7fc5",
+    "testing/prospective_capture_paged/capture.py": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+    "testing/prospective_capture_paged/run_paged_lab.py": "d8e1b02d2ebec8961f2e6e27dbddc8869e3aea3d5648e84d3db84ffba6768e21",
+    "testing/prospective_capture_paged/test_paged_capture.py": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799",
+    "testing/prospective_capture_paged/worker.py": "bd84b8c726cbf83f43d06a88b98fa9c961ac695488d3f09f61f87b37c89ea338",
+    "testing/prospective_capture_typed/README.md": "9221b1cde8f324003db405169e4f5aee7335655b01fcd070e9626750d87df1d8",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_typed/run_typed_lab.py": "c4c4deebc469c959790e1283cdac7b8c5b51d394107787049b5f51b92254b7c1",
+    "testing/prospective_capture_typed/test_typed_capture.py": "44b55e657fdf6ab6dda5089609d0943d109c868f6b21a2ce76e199133b04fd16",
+    "testing/prospective_capture_typed/worker.py": "a4afd429c158dda8e18788372e67d13a2bbca9fad67e01fb61f3d5ca5ed48637"
+  },
+  "new_runtime": false,
+  "product_or_harness_imported": false,
+  "tracer_I67_executed": false,
+  "auditor_I38_executed": false,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  },
+  "remaining_partial_parts": [
+    "UI01.2",
+    "UI04.1",
+    "UI09.2"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "prior_30_of_35_not_promoted": true,
+  "real_or_human_requirements_pending": [
+    "GI06",
+    "GI12",
+    "GI18",
+    "GI24",
+    "GI30",
+    "GI36",
+    "GI42"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "published_through": "I52",
+  "remote_network_read_performed": false,
+  "typed_encoding": {
+    "schema": "d5.typed-operand-projection.v1",
+    "canonical_json": {
+      "sort_keys": true,
+      "ensure_ascii": true,
+      "allow_nan": false,
+      "separators": [
+        ",",
+        ":"
+      ]
+    },
+    "root_digest_prefix": "d5.typed-operand-projection.v1\\0",
+    "root_digest_algorithm": "SHA256",
+    "path_hmac_prefix": "d5.path.lexical.v1\\0",
+    "prefix_terminator_byte": 0,
+    "nodes": {
+      "path": {
+        "kind": "posix-path",
+        "token": "HMAC_HEX64",
+        "scope": "CAPTURE_RUN_ID"
+      },
+      "class_object": {
+        "kind": "class",
+        "ref": "ALLOWLIST_CLASS_ID",
+        "source_sha256": "PINNED_SOURCE_HASH_OR_NULL_FOR_BUILTIN"
+      },
+      "exception": {
+        "kind": "exception-type-args",
+        "class_ref": "ALLOWLIST_CLASS_ID",
+        "source_sha256": "PINNED_SOURCE_HASH",
+        "args_sha256": "I70_TUPLE_DIGEST"
+      },
+      "builtin": {
+        "kind": "builtin-i70",
+        "python_type": "EXACT_BUILTIN_TYPE_NAME",
+        "sha256": "I70_DIGEST",
+        "bytes": "I70_CANONICAL_BYTES"
+      },
+      "list": {
+        "kind": "list",
+        "items": "ORDERED_CHILD_NODES"
+      },
+      "tuple": {
+        "kind": "tuple",
+        "items": "ORDERED_CHILD_NODES"
+      }
+    },
+    "top_level_observation_fields": [
+      "status",
+      "schema",
+      "root_type",
+      "projection_kind",
+      "digest_algorithm",
+      "digest_hex",
+      "class_refs",
+      "path_token_algorithm",
+      "path_scope"
+    ],
+    "full_tree_published": false,
+    "charging": "PRIVATE_PATH_LEXICAL_BYTES_PLUS_DOMAIN_PREFIXES_PLUS_BUILTIN_CANONICAL_BYTES_PLUS_TYPED_JSON_BYTES_WITHIN_EXISTING_16MiB",
+    "compatibility": "WHOLLY_BUILTIN_OPERAND_DELEGATES_I70_UNCHANGED"
+  },
+  "I77_baseline": {
+    "commit": "6ffff6c17165fb0e1bcde69af4cfade6715432bf",
+    "status": "BLOCKED_WORKER_EXIT_WITHOUT_FUNCTIONAL_REPORT",
+    "worker_exit_code": 2,
+    "raw_bytes": 0,
+    "sidecar_bytes": 0,
+    "event_pages": 0,
+    "cleanup": "OWN_GROUP_GONE",
+    "candidate_cause": "STATIC_ONLY_NOT_RUNTIME_CONFIRMED_CLASS_MODULE_NOT_LOADED",
+    "retry_performed": false
+  },
+  "I74_baseline_preserved": {
+    "status": "BLOCKED",
+    "functional_PASS": 321,
+    "incomplete_frames": 35
+  },
+  "late_binding": {
+    "initial_state": "ONLY_BUILTIN_DICT_BOUND_NO_PRODUCT_CLASS_REQUIREMENT",
+    "dispatch": "EXACT_TEST_ID_HELPER_OPERAND_SLOT_FROM_I75",
+    "resolution": "ALREADY_LOADED_MODULE_AT_FIRST_REQUIRED_ROLE_AFTER_ORIGINAL_ASSERTION_RETURNS",
+    "states": [
+      "UNRESOLVED",
+      "BOUND",
+      "INVALID"
+    ],
+    "rebind": false,
+    "imports_or_discovery_added": false,
+    "source_and_identity_checks": [
+      "BEFORE_PROJECTION",
+      "AFTER_PROJECTION",
+      "FINALIZATION_OF_BOUND_ONLY"
+    ],
+    "missing_binding": "LATCH_CLASS_MODULE_NOT_LOADED_STOP_BETWEEN_TESTS",
+    "quota_scope": "SHARED_ACCUMULATED_INPUT_READER_NOT_PER_LOOKUP"
+  },
+  "diagnostic": {
+    "schema": "d5.worker-diagnostic.v1",
+    "keys": [
+      "schema",
+      "status",
+      "phase",
+      "code",
+      "scope",
+      "lease",
+      "pid",
+      "pgid",
+      "capture_run_id"
+    ],
+    "statuses": [
+      "COMPLETED",
+      "FAILED"
+    ],
+    "phases": [
+      "AUTHORITY",
+      "CHANNELS",
+      "READY",
+      "RELEASE",
+      "RUNNER_INPUTS",
+      "RUNNER_IMPORT",
+      "TARGETS",
+      "RECORDER_INSTALL",
+      "ENTRYPOINT",
+      "FINALIZE",
+      "INPUTS_AFTER",
+      "AUTHORITY_AFTER",
+      "SIDECAR_WRITE",
+      "COMPLETE"
+    ],
+    "codes": [
+      "OK",
+      "CLASS_MODULE_NOT_LOADED",
+      "CLASS_BINDING_CHANGED",
+      "STALE_CLASS_SOURCE",
+      "STALE_INPUTS",
+      "STALE_AUTHORITY",
+      "UNSUPPORTED_CLASS_BINDING",
+      "UNSUPPORTED_OBSERVER_API",
+      "UNSUPPORTED_OBSERVER_SIGNATURE",
+      "CONSTRUCTOR_OBSERVER_UNAVAILABLE",
+      "FIXTURE_MODULE_NOT_LOADED",
+      "INVALID_WORKER_CHANNEL",
+      "INVALID_DIRECTORY_OWNER",
+      "INVALID_WORKER_RELEASE",
+      "INVALID_WORKER_GROUP",
+      "UNEXPECTED_RUNNER_MODULE",
+      "STDLIB_BINDING_CHANGED",
+      "STDLIB_SOURCE_CHANGED",
+      "TYPED_PROJECTION_ERROR",
+      "ENTRYPOINT_EXCEPTION",
+      "RAW_UNAVAILABLE_OR_INVALID",
+      "RAW_FLUSH_ERROR",
+      "ENTRYPOINT_EXIT_MISMATCH",
+      "RAW_BUDGET",
+      "SIDECAR_BUDGET",
+      "PAGE_WRITE_ERROR",
+      "PAGE_FINALIZATION_ERROR",
+      "EVENT_SIZE_BUDGET",
+      "EVENT_TEST_BUDGET",
+      "EVENT_CAMPAIGN_BUDGET",
+      "PAGE_COUNT_BUDGET",
+      "PAGE_BYTES_BUDGET",
+      "PAGES_TOTAL_BUDGET",
+      "REFERENCE_BUDGET",
+      "FRAME_BUDGET",
+      "OPERAND_BUDGET",
+      "OPERAND_DEPTH",
+      "UNIQUE_BUDGET",
+      "READ_BUDGET",
+      "PATH_BUDGET",
+      "FILE_BUDGET",
+      "EXTERNAL_CAMPAIGN_TIMEOUT",
+      "SANITIZED_WORKER_ERROR",
+      "CAPTURE_INVALID",
+      "CAPTURE_INCOMPLETE"
+    ],
+    "maximum_bytes": 4096,
+    "scope": "P01",
+    "capture_run_id": "CANONICAL_UUID_IF_RECORDER_CREATED_ELSE_NULL",
+    "transport": "EXISTING_SIDECAR_FD_ONLY_NO_NEW_FILE_OR_PIPE",
+    "success_sidecar_schema": "d5.late-sidecar.v1",
+    "failure_sidecar_schema": "d5.late-worker-failure.v1",
+    "failure_sidecar_keys": [
+      "schema",
+      "worker_diagnostic"
+    ],
+    "normal_field": "worker_diagnostic",
+    "one_sidecar_json_only": true,
+    "first_failure_wins": true,
+    "untrusted_channel": "NO_WRITE_DIAGNOSTIC_NOT_RECORDED",
+    "partial_write": "NO_APPEND_OR_OVERWRITE_PRESERVE_PARTIAL",
+    "parent_status": "BLOCKED_WORKER_FAILURE_WHEN_VALID_FAILURE_DIAGNOSTIC",
+    "parent_artifact_error": "SEPARATE_FROM_WORKER_DIAGNOSTIC",
+    "independent_attestation": false,
+    "status_rules": {
+      "COMPLETED": {
+        "phase": "COMPLETE",
+        "code": "OK",
+        "does_not_imply_functional_PASS": true
+      },
+      "FAILED": {
+        "phase_excludes": [
+          "COMPLETE"
+        ],
+        "code_excludes": [
+          "OK"
+        ],
+        "first_latched_failure_preserved": true
+      }
+    },
+    "failure_envelope_maximum_bytes": 4096,
+    "package_logical_members_maximum": 37,
+    "partial_write_parent_code": "SIDECAR_PARTIAL_OR_INVALID"
+  },
+  "future_profile": {
+    "namespace": "testing/prospective_capture_late",
+    "files": [
+      "capture.py",
+      "worker.py",
+      "test_late_capture.py",
+      "run_late_lab.py",
+      "README.md"
+    ],
+    "registry": "docs/validation/D5-LATE-CAPTURE-REGISTRY.json",
+    "authority": "docs/validation/D5-I80-capture-authorization.json",
+    "authority_schema": "d5.late-capture-authority.v1",
+    "authority_phase": "I80_EXPLICITLY_APPROVED",
+    "authority_keys": [
+      "schema",
+      "phase",
+      "scopes",
+      "registry_sha256",
+      "capture_inputs"
+    ],
+    "destination": "docs/validation/D5-I80-P01",
+    "launch_copy": "docs/validation/D5-I80-P01-launch.json",
+    "functional_expected_occurrences": 321,
+    "functional_expected_groups": 12
+  },
+  "old_AT80_and_PG64_reexecution_authorized": false,
+  "live_runner_compatibility": "NOT_ESTABLISHED",
+  "functional_campaigns_executed": 0
+}
