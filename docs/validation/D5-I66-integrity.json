@@ -1,0 +1,52 @@
+{
+  "schema": "d5.traceability-design-integrity.v1",
+  "increment": "I66",
+  "date": "2026-10-26",
+  "base_commit": "7dae248de950784b2de75a289227bded2fad7fde",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "proposed_cases": 48,
+    "executed_cases": 0,
+    "catalog_entries": 12,
+    "groups": 44,
+    "legacy_test_occurrences": 602,
+    "I64_test_occurrences": 692,
+    "raw_scenarios_preserved": 388,
+    "cases_with_multiple_scenario_rows": 13,
+    "input_hashes": 344,
+    "source_anchors": 17,
+    "markdown_links": 6,
+    "semantic_baseline_unchanged": true,
+    "I65_seal_preserved": true,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "product_or_harness_imported": false,
+  "auditor_I38_executed": false,
+  "functional_campaigns_executed": 0,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/design/D5-I66-TRACEABILITY-REVIEW.md": "0942252e03cb2f1ea3b388710085dfa22af5062b62adfa4a4e7bcc5815cb203f",
+    "docs/validation/D5-I66-design-review.json": "d1f7e4753c7d02a7b4f06ee91b34dc034e9651931440d9aaf5fc7334c8382710",
+    "docs/design/D5-I66-TRACEABILITY-DESIGN.md": "bdb0f758cdf8a7a76dd8ec60b081417b8cca2f4aaaaacc187d0cb26a69245660"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 742,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09",
+      "docs/validation/D5-I64-CE-regression-raw.json": "9f73573ab78f90133c7152468f035757a63626b24415733663d1ae487ab060f5",
+      "docs/validation/D5-I64-FN-regression-raw.json": "608b239075fd999a02f01591c6c69d02f43625b65b4b38f625f3b109ffe8b9ba",
+      "docs/validation/D5-I64-NA-regression-raw.json": "b9e62295d072ecc2ea695c580e214bf4754d76798719470d7a921d8373917f31",
+      "docs/validation/D5-I64-raw.json": "e5e5ec7eed572ab1e2d59ecdd74c8bcad40f6070405baf8a0aa9e6d31deac74a"
+    },
+    "publication_authorized": false
+  }
+}
