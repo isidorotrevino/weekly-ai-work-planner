@@ -1,0 +1,29 @@
+{
+  "schema": "d5.paged-capture-authority.v1",
+  "phase": "I74_EXPLICITLY_APPROVED",
+  "scopes": [
+    "P01"
+  ],
+  "registry_sha256": "2fbc18644cb683d56184c405efe8307eb0b1b4269ace2b3c7175f0b2a0c04520",
+  "capture_inputs": {
+    "testing/prospective_capture_paged/capture.py": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+    "testing/prospective_capture_paged/run_paged_lab.py": "d8e1b02d2ebec8961f2e6e27dbddc8869e3aea3d5648e84d3db84ffba6768e21",
+    "testing/prospective_capture_paged/test_paged_capture.py": "3ac932ff72d527f482b2ef9d58146e80a24135e051fac882ad75fcdb15650799",
+    "testing/prospective_capture_paged/worker.py": "bd84b8c726cbf83f43d06a88b98fa9c961ac695488d3f09f61f87b37c89ea338",
+    "testing/prospective_capture_paged/README.md": "587c3d07e1f3ab87dffe593cd0d37628af5d75449fe867a5b615eb018eba7fc5",
+    "docs/design/D5-I73-PAGED-CAPTURE-LAB.md": "03b94c71c1c0c5e3ea24f99b7afecb42143369f63a7f87255741b91d5a846057",
+    "docs/validation/D5-PAGED-CAPTURE-REGISTRY.json": "2fbc18644cb683d56184c405efe8307eb0b1b4269ace2b3c7175f0b2a0c04520",
+    "docs/validation/D5-I73-tests-raw.json": "ab943f94b0acde344c6d2cbace3571f2017c7d3e0fb48b8562dc89266e311285",
+    "docs/validation/D5-I73-plan-raw.json": "03db50f661a39a6b6aa013abcb9525b5b9fec2ce7d0d2b4462683d9a3ad0375d",
+    "docs/validation/D5-I73-plan-context.json": "9bd26c85021b90c80f7cae54520a196ced83434551ee297cf9a958bd9d251e29",
+    "docs/validation/D5-I73-results.json": "6c6502b2ca207fe8a2b50ed19e7d09e8c92c5da5f35d7c42a335659ca4d953a1",
+    "docs/validation/D5-I73-results.md": "226a1d57dc5a82e080af429071927227ce439d6bc2188394238cd916538e98c1",
+    "docs/validation/D5-I69-integrity.json": "59af0991ee42ef263e40b5655abc150177a32b4019c187bf4c39b01bfde8a2ff",
+    "docs/validation/D5-I72-design-review.json": "9b5e9962845d155ac1617be1357ed29089c393339547b3df1af8e6a24805bd5b",
+    "docs/validation/D5-I70-integrity.json": "e08991789bd161fccb8ef3f6357657b0227719d646eb69183db5a30a5bf4b6a6",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "docs/validation/D5-I73-integrity.json": "45691d3238ae4d8e10018f7933cca2a3089cd8d505ff90e0b7a709427d2997ee",
+    "docs/validation/D5-I71-integrity.json": "7c0c30d0e14a173d769f2a7b16ef2928c0b6e1c386acf9e60d7b50760b9e0028",
+    "docs/validation/D5-I72-integrity.json": "1ccd5973065cdea24c7e9240ebad0e75cba740d1579fe2d6e80a9f6f9c122712"
+  }
+}

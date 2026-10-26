@@ -1,0 +1,328 @@
+{
+  "schema": "d5.paged-live-capture-results.v1",
+  "increment": "I74",
+  "date": "2026-10-26",
+  "timezone": "Europe/Madrid",
+  "base_commit": "3cb96c86335743afae0d5c2a9e5cffe75bc63fea",
+  "status": "P01_EXECUTED_CAPTURE_INCOMPLETE_PENDING_ADJUSTMENT",
+  "authority": "Selección A posterior a I73: registrar autorización I74 y capturar P01 completo con perfil paginado en destino nuevo; detener alcance afectado ante incompatibilidad y presentar ajuste concreto.",
+  "authorization": "docs/validation/D5-I74-capture-authorization.json",
+  "counts": {
+    "functional_campaigns_executed": 1,
+    "expected_occurrences": 321,
+    "executed_occurrences": 321,
+    "functional_PASS_occurrences": 321,
+    "frames": 321,
+    "groups": 12,
+    "captured_fields_pending_review_frames": 286,
+    "incomplete_frames": 35,
+    "missing_domain_identity_frames": 30,
+    "incremental_snapshot_return_frames": 29,
+    "incremental_no_snapshot_return_frames": 1,
+    "unsupported_operand_frames": 5,
+    "unsupported_operand_events": 6,
+    "unsupported_operand_slots": 11,
+    "events": 22452,
+    "pages": 3,
+    "page_bytes": 6074703,
+    "package_bytes": 7260756,
+    "new_distinct_functional_tests": 0,
+    "owned_groups_unsettled": 0
+  },
+  "functional_status": "PASS",
+  "functional_status_scope": "FRESH_I74_P01_ALL_321_OCCURRENCES",
+  "capture_status": "BLOCKED",
+  "sidecar_status": "INCOMPLETE_CAPTURE",
+  "capture_errors": [],
+  "sufficiency_review_executed": false,
+  "elapsed_seconds": 243.314,
+  "worker_exit_code": 1,
+  "entrypoint_exit_code": 0,
+  "cleanup": {
+    "status": "OWN_GROUP_GONE",
+    "worker_exit": 1
+  },
+  "input_comparison": {
+    "status": "MATCH",
+    "added": [],
+    "removed": [],
+    "changed_runtime": [],
+    "changed_documentary": []
+  },
+  "source_anchors": [
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "snapshot",
+      "line": 480,
+      "end_line": 489,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "class_name": "Recorder",
+      "function": "owner",
+      "line": 292,
+      "end_line": 306,
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e"
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "__init__",
+      "line": 287,
+      "end_line": 294,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "line": 417,
+      "end_line": 430,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "line": 85,
+      "end_line": 89,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_repeated_observation_and_save_are_idempotent",
+      "line": 68,
+      "end_line": 76,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "line": 511,
+      "end_line": 527,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "line": 185,
+      "end_line": 209,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_profiles_quotas.py",
+      "class_name": "ProfilesQuotasTest",
+      "function": "test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "line": 303,
+      "end_line": 316,
+      "sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd"
+    }
+  ],
+  "post_capture_structure": {
+    "pages": 3,
+    "events": 22452,
+    "bytes": 6074703,
+    "status": "PAGE_BINDINGS_VERIFIED",
+    "authority": "READ_ONLY_POST_CAPTURE_STRUCTURE_NOT_SUFFICIENCY",
+    "unique_bytes": 6074703,
+    "read_bytes": 12149406,
+    "original_launcher_status": "NOT_ACCEPTED_INCOMPLETE_CAPTURE"
+  },
+  "structure_does_not_complete_metadata": true,
+  "diagnosis": "docs/validation/D5-I74-diagnosis.json",
+  "proposed_adjustment": {
+    "status": "PROPOSED_DESIGN_ONLY_NOT_IMPLEMENTED",
+    "next_increment": "I75",
+    "scope": [
+      {
+        "id": "AD01",
+        "problem": "29 incremental frames lack projection of snapshot identity; DI28 has no observed snapshot return and requires separate negative cleanup policy.",
+        "proposed_contract": "Adaptador tipado para schema d5.fixture-drive-snapshot.v1: run_id, version y head_sha256 de retorno ya producido; autoridad propia de fixture Drive, sin inventar store_id/scope_sha256 ni equiparar Store.head. DI28: diseñar observación tipada de run_id de FixtureStore.__init__ tras retorno normal y política negativa de cleanup por ID exacto, sin fingir head o declarar N/A de dominio. Sin snapshots/lecturas extra ni reconstrucción de I74 desde digests."
+      },
+      {
+        "id": "AD02",
+        "problem": "Six assertion events in five frames contain eleven UNSUPPORTED_OPERAND slots.",
+        "proposed_contract": "Diseñar representaciones tipadas/acotadas de Path, clases y excepciones permitidas, con hashes/predicados fieles; sin repr, rutas privadas publicadas, coerción de objetos arbitrarios o digest ficticio. Fuente indica Path y tipos/excepciones, pero I74 no registró sus tipos concretos como metadata de runtime."
+      },
+      {
+        "id": "AD03",
+        "problem": "No acceptance is possible from structural integrity alone.",
+        "proposed_contract": "Contrato y matriz sintética antes de implementar; mantener propagación de INCOMPLETE, bloqueo de tipos/schemas no soportados y pins inmutables. Una futura implementación y nueva captura P01 requerirán autorizaciones posteriores, en destino nuevo y sin ampliar presupuestos automáticamente."
+      }
+    ],
+    "not_authorized": [
+      "implementación",
+      "nuevos tests de componente",
+      "reintento funcional",
+      "reescritura I71/I74",
+      "cierre de criterios",
+      "publicación"
+    ]
+  },
+  "group_captures": [
+    {
+      "group_id": "test_durable_integration",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_durable_relational",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_incremental_capture",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "INCOMPLETE"
+    },
+    {
+      "group_id": "test_local_preview",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "INCOMPLETE"
+    },
+    {
+      "group_id": "test_offline_integration",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_plane_reconciliation",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "INCOMPLETE"
+    },
+    {
+      "group_id": "test_postgres_adapter",
+      "target": "MOCKED_QUERY_NO_DB",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_profiles_quotas",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "INCOMPLETE"
+    },
+    {
+      "group_id": "test_register_comparison",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_register_compat",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_relational_batch",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_review_report",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    }
+  ],
+  "seven_I72_policy_frames_captured_without_missing": true,
+  "constructor_observations_not_head_or_child_attestation": true,
+  "retry_performed": false,
+  "budgets_changed": false,
+  "product_changed": false,
+  "fixtures_or_hooks_changed": false,
+  "capture_code_or_registry_changed": false,
+  "I38_or_I67_executed": false,
+  "component_tests_reexecuted": false,
+  "I71_P01_status": "BLOCKED_UNCHANGED_77_OF_321_NOT_ADDED_TO_I74",
+  "I71_P02_P10_status": "UNCHANGED_371_OCCURRENCES_PENDING_SUFFICIENCY_REVIEW",
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  },
+  "UI_part_statuses": {
+    "UI01.2": "PARTIAL_UNCHANGED",
+    "UI04.1": "PARTIAL_UNCHANGED",
+    "UI09.2": "PARTIAL_UNCHANGED"
+  },
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "real_or_human_requirements_pending": [
+    "GI06",
+    "GI12",
+    "GI18",
+    "GI24",
+    "GI30",
+    "GI36",
+    "GI42"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "publication_authorized": false,
+  "published_through": "I52",
+  "remote_network_read_performed": false,
+  "artifacts": {
+    "docs/validation/D5-I74-capture-authorization.json": "32098541d22cbaaacd6231be59e9628ad89a9d96239d55b1328ec16f380a2cea",
+    "docs/validation/D5-I74-P01-launch.json": "6899cbecdbadca69ad13ea33903ffb7fbc80c658f8b86dbb00974ea3c727b1c8",
+    "docs/validation/D5-I74-P01/OWNER": "bda4ae8938f3597dfef3fb40d4742c6a5b0a4247db4568c62332d1e7e0c16f48",
+    "docs/validation/D5-I74-P01/context.json": "6899cbecdbadca69ad13ea33903ffb7fbc80c658f8b86dbb00974ea3c727b1c8",
+    "docs/validation/D5-I74-P01/event-0001.json": "7118e1b0164017356dcb8dc018211699859d8ddc896f0630082040183abf1164",
+    "docs/validation/D5-I74-P01/event-0002.json": "4a24adf3084a9dd3f31ecd6724174c44b378739a459993ec6e6e4e74876999ad",
+    "docs/validation/D5-I74-P01/event-0003.json": "a1552caf155d77cc4d0e3e768ba937ba681a0351054aee2bb1a69547e76d1285",
+    "docs/validation/D5-I74-P01/runner-raw.json": "a11cd4701a41053b6a4c8cc09f07a3586275daa4a85eb896ed24e249b5ffa7a1",
+    "docs/validation/D5-I74-P01/sidecar.json": "d0fda200465810a0376c5ca367186b0211e4cd7e574cfa9cdf0fae26b8fff9f3",
+    "docs/validation/D5-I74-diagnosis.json": "04dc4365eca8bbb184b02a81a5f73940daab44638af9e24eede4a9d14f35e06d"
+  }
+}

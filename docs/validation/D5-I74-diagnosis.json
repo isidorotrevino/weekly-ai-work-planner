@@ -1,0 +1,711 @@
+{
+  "schema": "d5.i74-capture-diagnosis.v1",
+  "increment": "I74",
+  "base_commit": "3cb96c86335743afae0d5c2a9e5cffe75bc63fea",
+  "status": "METADATA_INCOMPLETE_NOT_BUDGET_FAILURE",
+  "raw_functional_status": "PASS",
+  "tests_run": 321,
+  "capture_status": "BLOCKED",
+  "sidecar_status": "INCOMPLETE_CAPTURE",
+  "missing_reasons": {
+    "DOMAIN_IDENTITY_NOT_RECORDED": 30,
+    "OPERAND_NOT_RECORDED": 5
+  },
+  "missing_frames": [
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference",
+      "test_frame_id": "8ba1e52b-5250-4ebd-b774-77ac09585277",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20120,
+      "event_end": 20131,
+      "owner_context_refs": [
+        "O1676"
+      ],
+      "snapshot_return_events": 1
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision",
+      "test_frame_id": "0fbf8cfa-b7b1-474b-bf90-71a4b127e339",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20131,
+      "event_end": 20142,
+      "owner_context_refs": [
+        "O1677"
+      ],
+      "snapshot_return_events": 4
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+      "test_frame_id": "669317c7-da10-4c98-a814-6402e98b788e",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20142,
+      "event_end": 20154,
+      "owner_context_refs": [
+        "O1678"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate",
+      "test_frame_id": "a9b13f51-0fb3-4ef7-b004-3fea3a4616f1",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20154,
+      "event_end": 20170,
+      "owner_context_refs": [
+        "O1679"
+      ],
+      "snapshot_return_events": 7
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+      "test_frame_id": "ddc7e13c-5229-4343-90e6-50ef9cb867aa",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20170,
+      "event_end": 20181,
+      "owner_context_refs": [
+        "O1680"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+      "test_frame_id": "ccad92b6-bc9a-472a-9f26-6c7526b0b9c7",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20181,
+      "event_end": 20192,
+      "owner_context_refs": [
+        "O1681"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk",
+      "test_frame_id": "b46f9bff-7de5-4c80-94a1-cd785527987c",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20192,
+      "event_end": 20200,
+      "owner_context_refs": [
+        "O1682"
+      ],
+      "snapshot_return_events": 2
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+      "test_frame_id": "6525b60a-1cd8-46ec-8b8c-79927f749ef0",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20200,
+      "event_end": 20211,
+      "owner_context_refs": [
+        "O1683"
+      ],
+      "snapshot_return_events": 1
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+      "test_frame_id": "fb1273d4-0cd4-4409-bd1a-615ac2493a31",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20211,
+      "event_end": 20220,
+      "owner_context_refs": [
+        "O1684",
+        "O1685"
+      ],
+      "snapshot_return_events": 2
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix",
+      "test_frame_id": "b776b487-8346-4f43-a57a-404109ec7466",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20220,
+      "event_end": 20230,
+      "owner_context_refs": [
+        "O1686"
+      ],
+      "snapshot_return_events": 3
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+      "test_frame_id": "d4ca3e18-0a50-448b-9f24-43ff5efb0349",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20230,
+      "event_end": 20243,
+      "owner_context_refs": [
+        "O1687"
+      ],
+      "snapshot_return_events": 4
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+      "test_frame_id": "9b38d732-bbe8-4621-b603-ac92ab02d06c",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20243,
+      "event_end": 20259,
+      "owner_context_refs": [
+        "O1688"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+      "test_frame_id": "742e7f06-27e5-419f-967f-5a9f9c43c94a",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20259,
+      "event_end": 20276,
+      "owner_context_refs": [
+        "O1689"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+      "test_frame_id": "85bc4d1a-8ec7-4e00-b556-f0679dfda56f",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20276,
+      "event_end": 20294,
+      "owner_context_refs": [
+        "O1690"
+      ],
+      "snapshot_return_events": 5
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+      "test_frame_id": "40287bf7-bd53-4d05-9f39-16014c604bb1",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20294,
+      "event_end": 20305,
+      "owner_context_refs": [
+        "O1691"
+      ],
+      "snapshot_return_events": 1
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict",
+      "test_frame_id": "73cecd47-2678-451b-a783-9f4af1a701c3",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20305,
+      "event_end": 20321,
+      "owner_context_refs": [
+        "O1692"
+      ],
+      "snapshot_return_events": 2
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+      "test_frame_id": "166480a6-dc57-4516-a23c-ea5c25c09a56",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20321,
+      "event_end": 20333,
+      "owner_context_refs": [
+        "O1693"
+      ],
+      "snapshot_return_events": 4
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+      "test_frame_id": "3946cb3a-ff6c-4cd3-98de-b6c674e22ae3",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20333,
+      "event_end": 20341,
+      "owner_context_refs": [
+        "O1694"
+      ],
+      "snapshot_return_events": 2
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+      "test_frame_id": "d3b7426f-2016-40e4-aaed-9963f9def650",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20341,
+      "event_end": 20349,
+      "owner_context_refs": [
+        "O1695"
+      ],
+      "snapshot_return_events": 2
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+      "test_frame_id": "01101658-f5bb-4a1d-a4a5-8850ab169ad7",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20349,
+      "event_end": 20374,
+      "owner_context_refs": [
+        "O1696"
+      ],
+      "snapshot_return_events": 9
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history",
+      "test_frame_id": "81d7d730-7603-4d91-be12-d671cb1694c3",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20374,
+      "event_end": 20383,
+      "owner_context_refs": [
+        "O1697"
+      ],
+      "snapshot_return_events": 3
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+      "test_frame_id": "433da2f1-c098-498a-9c46-0145bd2efdec",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20383,
+      "event_end": 20392,
+      "owner_context_refs": [
+        "O1698"
+      ],
+      "snapshot_return_events": 3
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+      "test_frame_id": "57f1225f-01e3-467b-afdd-0e1b348e4657",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20392,
+      "event_end": 20416,
+      "owner_context_refs": [
+        "O1699"
+      ],
+      "snapshot_return_events": 9
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root",
+      "test_frame_id": "6dc40f95-aec7-4968-ab5b-7778501376ac",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20416,
+      "event_end": 20448,
+      "owner_context_refs": [
+        "O1700",
+        "O1701"
+      ],
+      "snapshot_return_events": 3
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+      "test_frame_id": "9e7cc75b-3cc0-48b8-b9a0-483698e8805b",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20448,
+      "event_end": 20467,
+      "owner_context_refs": [
+        "O1702"
+      ],
+      "snapshot_return_events": 3
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation",
+      "test_frame_id": "6210ce71-d4af-4cec-8112-be1a22792a8e",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20467,
+      "event_end": 20490,
+      "owner_context_refs": [
+        "O1703"
+      ],
+      "snapshot_return_events": 9
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles",
+      "test_frame_id": "1acb0529-13ed-4137-9919-cef0f9dd9a94",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20490,
+      "event_end": 20507,
+      "owner_context_refs": [
+        "O1704"
+      ],
+      "snapshot_return_events": 8
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+      "test_frame_id": "79eeb418-1176-4e3e-8ed5-7f6e0288fbf1",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20507,
+      "event_end": 20538,
+      "owner_context_refs": [
+        "O1705"
+      ],
+      "snapshot_return_events": 1
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+      "test_frame_id": "bb3295f7-9293-4802-b458-1fd52ef5d801",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20538,
+      "event_end": 20559,
+      "owner_context_refs": [
+        "O1706"
+      ],
+      "snapshot_return_events": 1
+    },
+    {
+      "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "test_frame_id": "772d9216-25f3-496a-bfe8-b3e4fcddeb58",
+      "group_id": "test_incremental_capture",
+      "missing": [
+        "DOMAIN_IDENTITY_NOT_RECORDED"
+      ],
+      "event_start": 20559,
+      "event_end": 20569,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    },
+    {
+      "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "test_frame_id": "967604a3-e599-434b-be2d-c0b79ec84a8e",
+      "group_id": "test_local_preview",
+      "missing": [
+        "OPERAND_NOT_RECORDED"
+      ],
+      "event_start": 20659,
+      "event_end": 20665,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    },
+    {
+      "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "test_frame_id": "f7ad981d-a0d8-44ed-9041-e5782417eb13",
+      "group_id": "test_local_preview",
+      "missing": [
+        "OPERAND_NOT_RECORDED"
+      ],
+      "event_start": 20669,
+      "event_end": 20677,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    },
+    {
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "test_frame_id": "23e80e22-71df-416f-897d-6316b80af64f",
+      "group_id": "test_plane_reconciliation",
+      "missing": [
+        "OPERAND_NOT_RECORDED"
+      ],
+      "event_start": 21152,
+      "event_end": 21163,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    },
+    {
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "test_frame_id": "1a35b087-adc1-4e8d-aaa3-1e7e437f7a3a",
+      "group_id": "test_plane_reconciliation",
+      "missing": [
+        "OPERAND_NOT_RECORDED"
+      ],
+      "event_start": 21163,
+      "event_end": 21177,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    },
+    {
+      "test_id": "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "test_frame_id": "60dd6a22-d150-49f8-88db-8bfe86f99556",
+      "group_id": "test_profiles_quotas",
+      "missing": [
+        "OPERAND_NOT_RECORDED"
+      ],
+      "event_start": 21694,
+      "event_end": 21702,
+      "owner_context_refs": [],
+      "snapshot_return_events": 0
+    }
+  ],
+  "operand_events": [
+    {
+      "sequence": 20662,
+      "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "helper": "assertNotEqual",
+      "unsupported_slots": [
+        0,
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND",
+        "UNSUPPORTED_OPERAND"
+      ]
+    },
+    {
+      "sequence": 20670,
+      "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "helper": "assertEqual",
+      "unsupported_slots": [
+        0,
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND",
+        "UNSUPPORTED_OPERAND"
+      ]
+    },
+    {
+      "sequence": 20674,
+      "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "helper": "assertEqual",
+      "unsupported_slots": [
+        0,
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND",
+        "UNSUPPORTED_OPERAND"
+      ]
+    },
+    {
+      "sequence": 21156,
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "helper": "assertIsInstance",
+      "unsupported_slots": [
+        0,
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND",
+        "UNSUPPORTED_OPERAND"
+      ]
+    },
+    {
+      "sequence": 21168,
+      "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "helper": "assertIsInstance",
+      "unsupported_slots": [
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND"
+      ]
+    },
+    {
+      "sequence": 21697,
+      "test_id": "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "helper": "assertIsInstance",
+      "unsupported_slots": [
+        0,
+        1
+      ],
+      "reasons": [
+        "UNSUPPORTED_OPERAND",
+        "UNSUPPORTED_OPERAND"
+      ]
+    }
+  ],
+  "incremental_event_kinds": {
+    "TEST_START": 30,
+    "CALL_RETURN": 114,
+    "ASSERTION_RETURNED": 122,
+    "EXPECTED_EXCEPTION_DECLARED": 49,
+    "CALL_EXCEPTION": 22,
+    "EXPECTED_EXCEPTION_EXIT_OBSERVED": 49,
+    "TEST_RESULT": 33,
+    "TEST_END": 30
+  },
+  "incremental_snapshot_return_frames": 29,
+  "incremental_no_snapshot_return_frames": [
+    "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels"
+  ],
+  "source_anchors": [
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "snapshot",
+      "line": 480,
+      "end_line": 489,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "class_name": "Recorder",
+      "function": "owner",
+      "line": 292,
+      "end_line": 306,
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e"
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "class_name": "FixtureStore",
+      "function": "__init__",
+      "line": 287,
+      "end_line": 294,
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87"
+    },
+    {
+      "path": "testing/D5/test_incremental_capture.py",
+      "class_name": "IncrementalCaptureTest",
+      "function": "test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "line": 417,
+      "end_line": 430,
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "line": 85,
+      "end_line": 89,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_local_preview.py",
+      "class_name": "LocalPreviewTest",
+      "function": "test_repeated_observation_and_save_are_idempotent",
+      "line": 68,
+      "end_line": 76,
+      "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+      "line": 511,
+      "end_line": 527,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_plane_reconciliation.py",
+      "class_name": "PlaneReconciliationTest",
+      "function": "test_PC10_two_local_senders_and_two_query_publishers_compete",
+      "line": 185,
+      "end_line": 209,
+      "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9"
+    },
+    {
+      "path": "testing/D5/test_profiles_quotas.py",
+      "class_name": "ProfilesQuotasTest",
+      "function": "test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+      "line": 303,
+      "end_line": 316,
+      "sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd"
+    }
+  ],
+  "source_explanation_authority": "STATIC_SOURCE_AND_CAPTURE_METADATA_NOT_RECONSTRUCTED_RUNTIME_PAYLOAD",
+  "static_explanation": {
+    "identity": "FixtureStore.snapshot returns schema/run_id/version/head_sha256 at top level; inherited Recorder.owner only extracts identity from a head dictionary. 29 frames have observed snapshot returns with identity not projected; DI28 has no snapshot return and needs a separately reviewed negative cleanup construction reference, not this snapshot adapter alone.",
+    "operands": "Path values/containers in two preview tests; assertIsInstance with classes and exceptions in three thread tests. These are source explanations. Captured runtime metadata only proves UNSUPPORTED_OPERAND slots and successful helper return."
+  },
+  "page_structure": {
+    "pages": 3,
+    "events": 22452,
+    "bytes": 6074703,
+    "status": "PAGE_BINDINGS_VERIFIED",
+    "authority": "READ_ONLY_POST_CAPTURE_STRUCTURE_NOT_SUFFICIENCY",
+    "unique_bytes": 6074703,
+    "read_bytes": 12149406,
+    "original_launcher_status": "NOT_ACCEPTED_INCOMPLETE_CAPTURE"
+  },
+  "package_bytes": 7260756,
+  "all_runtime_budgets_unchanged": true,
+  "retry_performed": false,
+  "adjustment": {
+    "status": "PROPOSED_DESIGN_ONLY_NOT_IMPLEMENTED",
+    "next_increment": "I75",
+    "scope": [
+      {
+        "id": "AD01",
+        "problem": "29 incremental frames lack projection of snapshot identity; DI28 has no observed snapshot return and requires separate negative cleanup policy.",
+        "proposed_contract": "Adaptador tipado para schema d5.fixture-drive-snapshot.v1: run_id, version y head_sha256 de retorno ya producido; autoridad propia de fixture Drive, sin inventar store_id/scope_sha256 ni equiparar Store.head. DI28: diseñar observación tipada de run_id de FixtureStore.__init__ tras retorno normal y política negativa de cleanup por ID exacto, sin fingir head o declarar N/A de dominio. Sin snapshots/lecturas extra ni reconstrucción de I74 desde digests."
+      },
+      {
+        "id": "AD02",
+        "problem": "Six assertion events in five frames contain eleven UNSUPPORTED_OPERAND slots.",
+        "proposed_contract": "Diseñar representaciones tipadas/acotadas de Path, clases y excepciones permitidas, con hashes/predicados fieles; sin repr, rutas privadas publicadas, coerción de objetos arbitrarios o digest ficticio. Fuente indica Path y tipos/excepciones, pero I74 no registró sus tipos concretos como metadata de runtime."
+      },
+      {
+        "id": "AD03",
+        "problem": "No acceptance is possible from structural integrity alone.",
+        "proposed_contract": "Contrato y matriz sintética antes de implementar; mantener propagación de INCOMPLETE, bloqueo de tipos/schemas no soportados y pins inmutables. Una futura implementación y nueva captura P01 requerirán autorizaciones posteriores, en destino nuevo y sin ampliar presupuestos automáticamente."
+      }
+    ],
+    "not_authorized": [
+      "implementación",
+      "nuevos tests de componente",
+      "reintento funcional",
+      "reescritura I71/I74",
+      "cierre de criterios",
+      "publicación"
+    ]
+  },
+  "closure": false,
+  "global_review": "OPEN"
+}
