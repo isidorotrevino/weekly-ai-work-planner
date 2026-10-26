@@ -1,0 +1,34 @@
+{
+  "schema": "d5.capture-authority.v1",
+  "scopes": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "registry_sha256": "84db71ca6f09ec19c6525aedc90f69bf77c0516830060a7065adff19cb139b12",
+  "capture_inputs": {
+    "docs/validation/D5-I70-plan-raw.json": "aff7b5bc007fa7590ac809812bf1fee770de75437065010719ffd23f7b3fd713",
+    "docs/validation/D5-I70-results.md": "f83dafb5b004ebc790d7b28a770df0215c6f87111eea2538215abd2160196af9",
+    "docs/design/D5-I70-PROSPECTIVE-CAPTURE-LAB.md": "2f2028d0a2f4f7bf96173fbfd5bdfb512612690ba7a6847b9dd0760075794ca5",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture/README.md": "6b120272d5e668801a3d2ed6eef95ec01b35a988b587c63a4de279609f38f82b",
+    "testing/prospective_capture/worker.py": "dd23ea2e24303e34ec521bf184da8081cc637ca03b1c9cc04ae14256b859e346",
+    "docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json": "84db71ca6f09ec19c6525aedc90f69bf77c0516830060a7065adff19cb139b12",
+    "docs/validation/D5-I70-plan-context.json": "2ff218b09154e8c6b0b50f950edb8edba0d421b1f7b9554db1f8a8acba6e6df8",
+    "testing/prospective_capture/test_prospective_capture.py": "f94a5fe0a388978afb3045d263dbfbae250a578f08001445beb85a64d550712e",
+    "docs/validation/D5-I70-tests-raw.json": "c04c60f0aaf151987f1a203bc6e096d14bcd63f54f5d5d5a95e3a9e832d309b7",
+    "testing/prospective_capture/run_capture_lab.py": "f3dc499fbb5370c38f67bbdea3cfddc95dc9020ff725da55d07fdfa5727cf572",
+    "docs/validation/D5-I70-results.json": "1da4f5109851333e333040cf32330f553acb1c6588078b107ffbcae01969fcb0",
+    "docs/validation/D5-I70-integrity.json": "e08991789bd161fccb8ef3f6357657b0227719d646eb69183db5a30a5bf4b6a6",
+    "docs/validation/D5-I69-design-review.json": "4ad7df4fa45900bd074fc315f84baa98c84cc902f99893a6d4099fcaadc01b85",
+    "docs/validation/D5-I69-integrity.json": "59af0991ee42ef263e40b5655abc150177a32b4019c187bf4c39b01bfde8a2ff"
+  },
+  "phase": "I71_EXPLICITLY_APPROVED"
+}
