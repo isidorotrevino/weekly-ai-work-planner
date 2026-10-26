@@ -1,0 +1,68 @@
+# D5 I69 — contrato de captura prospectiva GI33/GI34
+
+Fecha: **2026-10-26**, Europe/Madrid. Base I68 `f8cd47bffc085168ba568c517d3f446753d8b548`. **PREPARED_FOR_REVIEW**.
+[Matriz PF01–PF60 y P01–P10](D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md) · [Catálogo/pins estructurados](../validation/D5-I69-design-review.json) · [Integridad](../validation/D5-I69-integrity.json) · [Dictamen/CP01–CP14 I68](../validation/D5-I68-results.md).
+
+## Autoridad y fases
+
+La selección A posterior a I68 autoriza **diseñar** captura prospectiva para UI01.2/UI04.1/UI09.2, aprovechando evidencia existente y preservando carencias históricas. I69 no implementa ni ejecuta capturadores, auditores, módulos de producto/harness, discovery o campañas. Las tres partes siguen PARTIAL y el agregado81/3 permanece.
+
+Se propone I70 para implementar el capturador y **60 tests de componente con suites/fixtures sintéticos**, sin importar runners o producto históricos y sin ejecutar P01–P10. Sólo después de validar observación/restauración/presupuestos se planteará la autorización concreta I71 para diez campañas funcionales de captura. Esta separación permite revisar el instrumento antes de ponerlo sobre los casos reales de fixture; aprobar I70 no autoriza I71 ni publicación.
+
+## Perímetro finito prospectivo
+
+P01 Python321 ejecutaría los12 grupos acumulativos actuales; P02 GX90 y P03–P10 HC24/HF40/IC30/UQ24/RV20/NA36/FN64/CE43 serían invocaciones separadas. Total692 ocurrencias,21 grupos y388 filas de escenario del formato original esperadas, además de los nuevos frames por test. Se fijan módulos, hashes, conjuntos de IDs mediante hash canónico, grupos, inventarios y multiplicidades en el JSON. Son las mismas fuentes actuales de fixture, con capturador adicional explícito; no se hace checkout o ejecución de commits antiguos.
+
+Los nuevos resultados tendrían identidad/fecha propias. I34/I36 mantienen ausencia de argv/raw; Python321 I64 mantiene el kernel y enlaces por escenario ausentes. Las referencias antiguas sólo conservan su soporte previo y permiten contraste. No se suman las1294 ocurrencias históricas y692 futuras como pruebas distintas ni se promete que capturar todas cierre los criterios. Cualquier diferencia de IDs/API/presupuesto requiere diagnóstico y ajuste concreto de contrato, sin aprender nuevos pins para lograr PASS.
+
+## Archivos e interfaces propuestos
+
+Nuevo namespace `testing/prospective_capture/{capture.py,worker.py,test_prospective_capture.py,run_capture_lab.py,README.md}` y registro fijo `docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json`, más documentación/raw/contexto/resultado propios de I70; futura salida I71 en paths nuevos explícitos. No modificar ficheros de producto, Store, fixtures, hooks, tests/helpers/runners previos, handoff, registro/auditor I38 o trazador/registro I67. No importar ni ejecutar I38/I67 como dependencia.
+
+El modo por defecto muestra el plan cerrado sin lanzar campañas. El modo de captura acepta sólo P01…P10, nunca módulos/URLs/comandos/roots arbitrarios; se reserva a I71 autorizado. Tests I70 inyectan únicamente módulos/clases sintéticos propios. El launcher crea archivos nuevos sin overwrite en raíz propia con sentinel y abre canales para raw/sidecar; el worker recibe sólo ID y descriptores heredados correlacionados, sin path libre. Ejecuta el entrypoint `main` del módulo fijo dentro de proceso aislado, conservando stdout original en su canal acotado; nunca reescribe el JSON original para añadir campos.
+
+La invocación real del worker y el entrypoint llamado son distintos del `context.argv` literal que el runner histórico emite. Se registran por separado como comando del launcher, argv del worker y RUNNER_DECLARATION. No normalizar ambas como si fueran execve iguales. Si el intérprete tiene ruta privada, sólo se publica basename/hash e identificación de la normalización explícita; conservar vector público permitido sin divulgar home ni llamar reconstrucción al argv normalizado. Versiones/plataforma/build/flags/kernel se capturan en el proceso correspondiente; no se usa el host actual para rellenar campos viejos.
+
+## Observación pasiva dentro del proceso propio
+
+El worker instala wrappers temporales sobre callbacks conocidos de unittest (inicio, resultado, subTest, fin), assertion helpers explícitos y retornos de métodos públicos de fixture seleccionados por nombre y hash. Se propone observar retornos **ya producidos** de Store/Client/Remote/FixtureStore.snapshot y Client.perform; sólo se habilitan símbolos existentes con firma/identidad comprobadas y cobertura PF. No añadir snapshot/perform/execute/lookup/lectura de recuperación por cuenta del observer; no envolver un método inexistente en R ni mutar su autoridad para asemejarla a T. Las primitivas de lectura/canales son stdlib; no dependencias reales de proveedor.
+
+Cada wrapper llama el original exactamente una vez con los mismos args y conserva identidad del retorno o excepción original. Registra únicamente metadatos/digests permitidos, sin modificar datos retornados o armar hooks de crash nuevos. Depth evita contar delegación/nidación como llamadas o assertions independientes; callbacks Recorded que delegan en super conservan orden y resultado. Los métodos/clases y callbacks se restauran al objeto exacto anterior en el proceso propio, incluso al fallar captura. No hay cambios persistentes de fuente ni nuevas llamadas de fixture como medición auxiliar.
+
+Una assertion se registra como predicado realmente evaluado cuando el wrapper ve su retorno/resultado, con tipo y hashes de operandos serializables acotados. Declaración expected-exception y cierre observado de un context manager son datos diferentes; si delegar sin alterar identidad/semántica no es viable, esa ampliación queda BLOCKED y se presenta ajuste concreto. No se infiere un predicado observado desde el código fuente o PASS del test. No usar repr, propiedades de objetos o serialización sin límites para obtener un oráculo. Tipos no soportados quedan explícitos, nunca digest ficticio; tests de componente prueban que no cambie la semántica.
+
+Si falla la instrumentación o su presupuesto, marca captura INVALID sin relanzar ese error dentro de producto. Deja terminar llamada/test y limpieza propios, para detenerse en frontera segura entre tests. El raw funcional que llegue a existir se conserva con su estado original, pero la captura parcial no se publica como completa. Si el callback necesario no es alcanzable por el runner real sin sustituir semántica, bloquear antes de aceptar ese alcance. No basta PF60 PASS para dar por demostrada compatibilidad con todos los casos originales.
+
+## Enlaces y granularidad
+
+Cada campaña tiene `capture_run_id` propio y contexto padre; cada callback crea `test_frame_id` con test ID/grupo, inicio/fin y resultado real. Son identidades del capturador, **no Store.run_id**. Los escenarios del dueño usan los run/store/cid/request/M/send/ticket ya observados donde existen. Tests sin Store o frontera integrada tienen N/A con razón previa en manifiesto y oráculo unitario, sin crear un UUID de dominio ni declarar recuperación por ello.
+
+Se ligan grupos al mismo comando padre cuando comparten invocación, con target/módulo/versiones/schemas/bytes propios. test_postgres_adapter conserva MOCKED_QUERY_NO_DB; clases/fixtures volátiles y schema declarado no equivalen a API real. Entorno/versiones relevantes ausentes bloquean la afirmación concreta o quedan fuera con motivo de ámbito revisado; no se omite un campo obligatorio para que la captura resulte completa.
+
+El collector relaciona cada test con escenarios/observaciones que nacen durante su lifecycle, mediante índices before/after de registros públicos específicos y el nuevo sidecar. Conserva múltiples variantes y Stores por test. No asigna oráculos compartidos por proximidad al final del run. El child spawn no hereda necesariamente wrappers del padre: sólo se enlazan sus identidades/gates/recibos realmente emitidos por el protocolo/raw existente, sin atribuirles medición propia del padre. Se exige esta distinción en la salida.
+
+La normalización de point/operation anidados usa schemas/punteros y roles/eventos del raw fresco: label lógico, gate físico y expectativa de contrato se tipan separados. Se aprovechan las191 filas con etiquetas anidadas de I68 como referencia de dónde mirar, no como191 fronteras ya verificadas o resultados de I71. La relación escenario→frontera→inventario→oráculo esperado/observado→resultado debe conservar la misma secuencia y autoridad; un digest de assertion no sustituye el oráculo durable de un caso que lo requiere.
+
+Los métodos generados se ligan al ID realmente ejecutado y factory/tabla/argumentos/hash de fuente como derivación, sin exigir una definición AST individual inexistente o ejecutar factories fuera de la campaña autorizada. Completitud de test/grupo considera todos sus escenarios hijos y metadata pertinente: propaga INCOMPLETE/BLOCKED; N/A sólo motivado. Corrige el uso futuro del tag local que I68 limitó en120 tests, sin reescribir el raw o clasificaciones históricas I67.
+
+## Paquete de evidencia, inventarios y estados
+
+Por P: raw original fresco byte a byte; sidecar de contexto/lifecycle/observaciones saneadas; manifest de enlaces y hashes; exit/stderr saneado; inputs pre/post del capturador/contrato/registro y del runner como ámbitos separados. Los módulos nuevos fuera de discovery D5 no se atribuyen retrospectivamente al inventario del runner. Config/perfil/schema/entorno declarados se ligan a los bytes y autoridad de esa invocación. Cambios de conjunto o bytes pertinentes producen STALE_INPUTS/INVALID_CAPTURE; delta documental aparte.
+
+Resultado funcional, validez del instrumento, integridad, completitud de captura y suficiencia son dimensiones distintas. FAIL/error/skip/subTest/expectedFailure/unexpectedSuccess/NOT_RUN se preservan según semántica de unittest y runner; no añadir PASS por raw ausente o conteos correctos. El paquete nuevo sólo podrá llegar a TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW, con criterios globales OPEN, closure=false. Una revisión posterior debe justificar soporte acotado de cada parte antes de cualquier cambio81/3; presencia de campos,692 ejecuciones o digests no acreditan recuperación integrada por suma.
+
+Sólo se emiten paths públicos/IDs/hashes/metadata/códigos, nunca payloads, fuente cruda, traceback, home, entorno completo, credenciales o stderr arbitrario. JSON estricto duplicados/NaN/tipos/profundidad; pointers estrictos y bytes/filas exactos. Links desconocidos no dirigen lecturas. Registro y código pueden ser manipulados juntos por un caller con control: no atestación hostil/criptográfica de ejecución.
+
+## Presupuestos y aislamiento
+
+I70:60 tests sintéticos,300s, temporales propios con sentinel y cero recursos pendientes. Los workers falsos prueban EOF/timeout/exit y restauración, sin procesos de laboratorio ni SIGKILL positivos de dominio. I71 propuesto: un worker de captura por campaña, sin solaparlas ni añadir threads o actores de fixture; límites propios de cada runner/hijo/hook siguen vigentes y domina el más restrictivo. Techo externo900s por P, sin alterar alarmas/límites kernel o internos menores. El launcher crea una sesión/grupo propios del worker y registra identidad antes de liberarlo; los descendientes del fixture deben conservar esa pertenencia según fuente/pins revisados. Timeout intenta parada ordenada y después termina sólo el grupo propio correlacionado, nunca PID/grupo ajeno. Si no puede confirmar terminación/ownership de algún descendiente, registra BLOCKED y recursos pendientes, sin declarar cero por inferencia; raw incompleto tipado.
+
+Raw original≤12MiB y sidecar≤12MiB por P, metadato≤4KiB/evento,2048 eventos/test y16384 eventos/campaña; operandos sólo digest canónico streaming con techo16MiB por valor, sin truncar.4096 frames/escenarios y16384 punteros/campaña, JSON profundidad32 ystrings públicos4096.4096 inputs únicos,16MiB/archivo,128MiB únicos/256MiB lectura acumulada; contexto compartido por referencias para no multiplicarlo por test. No interpretar estos topes como capacidad probada. Si no bastan para la semántica exigida, bloquear esa captura y revisar ajuste concreto antes de ampliarlos.
+
+Paths fijos relativos, no symlinks en ningún componente, rechazo FIFO/dispositivo/overwrite, identidad/tamaño/hash antes/después y conjuntos repetidos en checkout quieto. No snapshot atómico contra escritor hostil/ABA. Limpieza sólo raíces y procesos creados con pruebas de ownership; sentinel hermano ajeno intacto. No inspeccionar/parar/limpiar dev/run_data/D4 operativo ni acceder a credenciales/corpus privados.
+
+## Continuidad
+
+I69 sólo prepara este contrato y la matriz. Aprobar la fase I70 autorizaría nuevos archivos y PF60 con suites sintéticas; las diez campañas seguirían NOT_RUN hasta autorización posterior I71 con SHA del capturador validado. No incluye push, despliegue o cierre. Si el usuario decide ejecución futura, cada registro será nuevo y se revisará dentro del perímetro real, sin completar historia ausente.
+
+D1–D4 cerrados y D5-LOCAL-SYNTHETIC-I1-I20/A52 aceptado intactos. D5 global/G01–G07, GI33/GI34/GI38/GI39/GI40 y H07 abiertos, histórico30/35 sin promoción. UI22.2 conserva matriz I62 y límites fsync, UI20.3 sólo CREATE nativo I56, GI39 alcance finito I65. GI06/GI12/GI18/GI24/GI30/GI36/GI42 reales/humanos conservan sus puertas propias, sin traslado a D6. P0: sin proveedores/credenciales/corpus reales, consumo/reservas, activación, promoción, despliegue ni D6. Publicado sólo hasta I52; I53–I69 locales, sin push ni lectura nueva remota. Publicación exige decisión separada sobre SHA concreto.

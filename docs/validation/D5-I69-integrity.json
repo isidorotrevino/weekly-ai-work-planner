@@ -1,0 +1,53 @@
+{
+  "schema": "d5.prospective-capture-design-integrity.v1",
+  "increment": "I69",
+  "date": "2026-10-26",
+  "base_commit": "f8cd47bffc085168ba568c517d3f446753d8b548",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "proposed_component_tests": 60,
+    "proposed_functional_captures": 10,
+    "functional_occurrences_if_later_authorized": 692,
+    "prospective_group_occurrences": 21,
+    "raw_scenario_rows_expected": 388,
+    "preserved_CP_requirements": 14,
+    "executed_tests": 0,
+    "input_hashes": 364,
+    "source_anchors": 131,
+    "markdown_links": 6,
+    "I68_seal_preserved": true,
+    "semantic_baseline_unchanged": true,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "product_or_harness_imported": false,
+  "tracer_I67_executed": false,
+  "auditor_I38_executed": false,
+  "functional_campaigns_executed": 0,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/validation/D5-I69-design-review.json": "4ad7df4fa45900bd074fc315f84baa98c84cc902f99893a6d4099fcaadc01b85",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-DESIGN.md": "145b7eafb0fbf7b2ea877fffb84593d26486c0436f6b72e6ecbf0635accf640c",
+    "docs/design/D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md": "6d0fbaeb2466c9100c1f7e94c8a5c42ef3e064387a9980023ddda769e02ccdb4"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 762,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09",
+      "docs/validation/D5-I64-CE-regression-raw.json": "9f73573ab78f90133c7152468f035757a63626b24415733663d1ae487ab060f5",
+      "docs/validation/D5-I64-FN-regression-raw.json": "608b239075fd999a02f01591c6c69d02f43625b65b4b38f625f3b109ffe8b9ba",
+      "docs/validation/D5-I64-NA-regression-raw.json": "b9e62295d072ecc2ea695c580e214bf4754d76798719470d7a921d8373917f31",
+      "docs/validation/D5-I64-raw.json": "e5e5ec7eed572ab1e2d59ecdd74c8bcad40f6070405baf8a0aa9e6d31deac74a",
+      "docs/validation/D5-I67-trace-raw.json": "85604f8c76c11a075ee36bffb9340345bc1767602e344eae7753c74d8fbb7d49"
+    },
+    "publication_authorized": false
+  }
+}
