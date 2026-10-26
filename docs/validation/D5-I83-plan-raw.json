@@ -1,0 +1,1 @@
+{"schema": "d5.causal-capture-plan.v1", "phase": "I83_COMPONENTS_ONLY", "scope": "P01", "expected_tests": 321, "status": "NOT_RUN_I84_AUTHORIZATION_REQUIRED", "functional_execution_authorized": false, "semantic_baseline": {"SUPPORTS_BOUNDED": 83, "PARTIAL": 1}, "closure": false, "global_review": "OPEN", "publication_authorized": false}

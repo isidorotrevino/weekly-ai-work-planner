@@ -1,0 +1,35 @@
+{
+  "schema": "d5.i83-component-wrapper.v1",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.prospective_capture_causal.run_causal_lab"
+      ],
+      "external_timeout_seconds": 300,
+      "exit_code": 0,
+      "elapsed_seconds": 2.082157,
+      "path": "docs/validation/D5-I83-tests-raw.json",
+      "raw_sha256": "9161ed2f6d1643127c8aaac93fec2c7d0d1c32a497f8baa6e58d45f951b2291a",
+      "stderr_bytes": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "testing.prospective_capture_causal.capture"
+      ],
+      "external_timeout_seconds": 30,
+      "exit_code": 0,
+      "elapsed_seconds": 0.177586,
+      "path": "docs/validation/D5-I83-plan-raw.json",
+      "raw_sha256": "6e9e8386974c9cfc8ddf1ac8762c0d8304cb84ef754085ef030a079a04b6c604",
+      "stderr_bytes": 0
+    }
+  ],
+  "functional_campaigns_executed": 0,
+  "publication_authorized": false
+}
