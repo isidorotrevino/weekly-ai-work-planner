@@ -1,0 +1,292 @@
+{
+  "schema": "d5.late-functional-capture-results.v1",
+  "increment": "I80",
+  "date": "2026-10-26",
+  "timezone": "Europe/Madrid",
+  "base_commit": "5571f9ef0656539fb3ef2fef54f9a65963c08788",
+  "status": "TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW",
+  "authority": "Selección A explícita posterior a I79: registrar autorización y capturar P01 completo (321 ocurrencias/12 grupos) en destino nuevo con perfil tardío; detener y presentar incompatibilidades; sin publicar.",
+  "authorization": "docs/validation/D5-I80-capture-authorization.json",
+  "counts": {
+    "functional_campaigns_executed": 1,
+    "expected_occurrences": 321,
+    "expected_groups": 12,
+    "reported_executed_occurrences": 321,
+    "functional_PASS_occurrences": 321,
+    "frames": 321,
+    "groups": 12,
+    "captured_fields_pending_review_frames": 321,
+    "incomplete_frames": 0,
+    "events": 22454,
+    "pages": 3,
+    "page_bytes": 6081691,
+    "package_bytes": 7454157,
+    "typed_operand_witnesses": 11,
+    "snapshot_observations": 114,
+    "snapshot_identity_objects": 31,
+    "fixture_construction_objects": 2,
+    "new_distinct_functional_tests": 0,
+    "typed_operand_frames": 5,
+    "typed_operand_events": 6,
+    "negative_DI28_frames": 1,
+    "owned_groups_unsettled": 0
+  },
+  "functional_status": "PASS",
+  "functional_status_scope": "P01_NEW_CAPTURE_321_ORIGINAL_OCCURRENCES_NOT_NEW_DISTINCT_TESTS",
+  "capture_status": "TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW",
+  "sidecar_status": "TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW",
+  "capture_errors": [],
+  "sufficiency_review_executed": false,
+  "elapsed_seconds": 235.402,
+  "worker_exit_code": 0,
+  "entrypoint_exit_code": 0,
+  "cleanup": {
+    "status": "OWN_GROUP_GONE",
+    "worker_exit": 0
+  },
+  "input_comparison": {
+    "status": "MATCH",
+    "added": [],
+    "removed": [],
+    "changed_runtime": [],
+    "changed_documentary": []
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_late/worker.py",
+      "owner": "main",
+      "method": null,
+      "line": 62,
+      "end_line": 93,
+      "sha256": "a525798dc5a9c5cd403150db2020cd6b6e25f7fd2208732101786d8260401d12"
+    },
+    {
+      "path": "testing/prospective_capture_late/worker.py",
+      "owner": "exercise",
+      "method": null,
+      "line": 35,
+      "end_line": 59,
+      "sha256": "a525798dc5a9c5cd403150db2020cd6b6e25f7fd2208732101786d8260401d12"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "LateBindings",
+      "method": "prepare",
+      "line": 130,
+      "end_line": 145,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "LateBindings",
+      "method": "check",
+      "line": 121,
+      "end_line": 129,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "read_sidecar",
+      "method": null,
+      "line": 96,
+      "end_line": 105,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "launch",
+      "method": null,
+      "line": 176,
+      "end_line": 250,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    }
+  ],
+  "post_capture_structure": {
+    "pages": 3,
+    "events": 22454,
+    "bytes": 6081691,
+    "status": "PAGE_BINDINGS_VERIFIED"
+  },
+  "group_captures": [
+    {
+      "group_id": "test_durable_integration",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_durable_relational",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_incremental_capture",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_local_preview",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_offline_integration",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_plane_reconciliation",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_postgres_adapter",
+      "target": "MOCKED_QUERY_NO_DB",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_profiles_quotas",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_register_comparison",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_register_compat",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_relational_batch",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    },
+    {
+      "group_id": "test_review_report",
+      "target": "LOCAL_SYNTHETIC_PYTHON",
+      "context_scope": "INHERITED_WORKER_CONTEXT",
+      "context_ref": "/worker_context",
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW"
+    }
+  ],
+  "seven_I72_policy_frames_captured_without_missing": true,
+  "constructor_observations_not_head_or_child_attestation": true,
+  "retry_performed": false,
+  "budgets_changed": false,
+  "product_changed": false,
+  "fixtures_or_hooks_changed": false,
+  "capture_code_or_registry_changed": false,
+  "I38_or_I67_executed": false,
+  "component_tests_reexecuted": false,
+  "I71_P01_status": "BLOCKED_UNCHANGED_77_OF_321_NOT_ADDED_TO_I74",
+  "I71_P02_P10_status": "UNCHANGED_371_OCCURRENCES_PENDING_SUFFICIENCY_REVIEW",
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 81,
+    "PARTIAL": 3
+  },
+  "UI_part_statuses": {
+    "UI01.2": "PARTIAL_UNCHANGED",
+    "UI04.1": "PARTIAL_UNCHANGED",
+    "UI09.2": "PARTIAL_UNCHANGED"
+  },
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "real_or_human_requirements_pending": [
+    "GI06",
+    "GI12",
+    "GI18",
+    "GI24",
+    "GI30",
+    "GI36",
+    "GI42"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "publication_authorized": false,
+  "published_through": "I52",
+  "remote_network_read_performed": false,
+  "artifacts": {
+    "docs/validation/D5-I80-P01/OWNER": "0ae5018d2779314001852b7eef490e4c01098f8fbf810a26665057371a136c65",
+    "docs/validation/D5-I80-P01/context.json": "3cec1b4fa2770e13a48368f43fbb0072eb9ce355339b72163f9796de2d55edcb",
+    "docs/validation/D5-I80-P01/event-0001.json": "35a19814520a1548c2d4d4924b8fed36d3fea0c7759bb517fd061bde96ec7dae",
+    "docs/validation/D5-I80-P01/event-0002.json": "73d9f8f080ae9ba9fe1914d21a942c724acc76428f14af063caa42841f16ae3c",
+    "docs/validation/D5-I80-P01/event-0003.json": "81e63d865ca1606f1f4eb3f9dcbcd9dec60bce646d28661dd289c0de3917eb58",
+    "docs/validation/D5-I80-P01/runner-raw.json": "1ff0f0010e32bc55378e8689f6813c08047462359b296b2eec144bc1b45f9094",
+    "docs/validation/D5-I80-P01/sidecar.json": "0f04e42be976da1c6365f14a27082b1a1341879854ac1a37957002c9845a6f71",
+    "docs/validation/D5-I80-capture-authorization.json": "b6386578d3e65a7154b3beeb6d11d27eaf97c97873d7ff24d6756ac87550e1df",
+    "docs/validation/D5-I80-P01-launch.json": "3cec1b4fa2770e13a48368f43fbb0072eb9ce355339b72163f9796de2d55edcb",
+    "docs/validation/D5-I80-execution-context.json": "30d707bff1e5e880fa04ef94dbba301d1ed62e80814d599276d6e19d314dbd96",
+    "docs/validation/D5-I80-analysis.json": "e9f00b70d3030c865ff2d8db8fd33ded00d6b2295eb5e562743a476262cee6e7"
+  },
+  "worker_diagnostic": {
+    "schema": "d5.worker-diagnostic.v1",
+    "status": "COMPLETED",
+    "phase": "COMPLETE",
+    "code": "OK",
+    "scope": "P01",
+    "lease": "f3ef2f6d-a40b-4c4a-9eef-51c78353aa71",
+    "pid": 6,
+    "pgid": 6,
+    "capture_run_id": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+  },
+  "structure_does_not_establish_sufficiency": true,
+  "analysis": "docs/validation/D5-I80-analysis.json",
+  "PG64_reexecuted": false,
+  "AT80_reexecuted": false,
+  "LB64_reexecuted": false,
+  "I74_P01_status": "BLOCKED_UNCHANGED_321_FUNCTIONAL_PASS_35_INCOMPLETE_FRAMES",
+  "I77_P01_status": "BLOCKED_UNCHANGED_WITHOUT_FUNCTIONAL_REPORT",
+  "I77_error_runtime_confirmed": false,
+  "next_review": "PROPOSED_DOCUMENTARY_SUFFICIENCY_REVIEW_UI01.2_UI04.1_UI09.2_USING_I80_P01_AND_I71_P02_P10_NO_CAMPAIGN_RERUN"
+}

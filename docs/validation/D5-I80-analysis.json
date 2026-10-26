@@ -1,0 +1,621 @@
+{
+  "schema": "d5.i80-capture-analysis.v1",
+  "base_commit": "5571f9ef0656539fb3ef2fef54f9a65963c08788",
+  "capture_status": "TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW",
+  "raw_functional_status": "PASS",
+  "counts": {
+    "expected_occurrences": 321,
+    "expected_groups": 12,
+    "reported_executed_occurrences": 321,
+    "functional_PASS_occurrences": 321,
+    "frames": 321,
+    "groups": 12,
+    "captured_fields_pending_review_frames": 321,
+    "incomplete_frames": 0,
+    "events": 22454,
+    "pages": 3,
+    "page_bytes": 6081691,
+    "package_bytes": 7454157,
+    "typed_operand_witnesses": 11,
+    "snapshot_observations": 114,
+    "snapshot_identity_objects": 31,
+    "fixture_construction_objects": 2,
+    "new_distinct_functional_tests": 0
+  },
+  "worker_diagnostic": {
+    "schema": "d5.worker-diagnostic.v1",
+    "status": "COMPLETED",
+    "phase": "COMPLETE",
+    "code": "OK",
+    "scope": "P01",
+    "lease": "f3ef2f6d-a40b-4c4a-9eef-51c78353aa71",
+    "pid": 6,
+    "pgid": 6,
+    "capture_run_id": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+  },
+  "post_capture_structure": {
+    "pages": 3,
+    "events": 22454,
+    "bytes": 6081691,
+    "status": "PAGE_BINDINGS_VERIFIED"
+  },
+  "typed_witnesses": [
+    {
+      "test_frame_id": "e8abe50a-0a62-411f-9dd9-7b243344963a",
+      "sequence": 20664,
+      "helper": "assertNotEqual",
+      "slot": 0,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "PosixPath",
+        "projection_kind": "exact-posix-path",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "84acc810a01ddcce2d2cb5216df9d7a143ea76fab65e05febdba0bb16f3e9f6b",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "e8abe50a-0a62-411f-9dd9-7b243344963a",
+      "sequence": 20664,
+      "helper": "assertNotEqual",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "PosixPath",
+        "projection_kind": "exact-posix-path",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "89f583a3586fcdb3c2724b67e290e218c73881fc0b79213a12c3bb8f89316162",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "ed343a24-4761-47ee-8a24-abc01299b269",
+      "sequence": 20672,
+      "helper": "assertEqual",
+      "slot": 0,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "tuple",
+        "projection_kind": "exact-tuple(exact-posix-path,builtin-str)",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "2bc38f3b4e8a8e1ffeec6848d0b313878a860cc3257a2a852c8dd85143ffcf9c",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "ed343a24-4761-47ee-8a24-abc01299b269",
+      "sequence": 20672,
+      "helper": "assertEqual",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "tuple",
+        "projection_kind": "exact-tuple(exact-posix-path,builtin-str)",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "2bc38f3b4e8a8e1ffeec6848d0b313878a860cc3257a2a852c8dd85143ffcf9c",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "ed343a24-4761-47ee-8a24-abc01299b269",
+      "sequence": 20676,
+      "helper": "assertEqual",
+      "slot": 0,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "list",
+        "projection_kind": "exact-list(exact-posix-path)",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "d1106d3eabe6693a8a7fdafd73ee8454739ad7cad7cc5defc41f97fd809cf99c",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "ed343a24-4761-47ee-8a24-abc01299b269",
+      "sequence": 20676,
+      "helper": "assertEqual",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "list",
+        "projection_kind": "exact-list(exact-posix-path)",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "d1106d3eabe6693a8a7fdafd73ee8454739ad7cad7cc5defc41f97fd809cf99c",
+        "class_refs": [],
+        "path_token_algorithm": "HMAC-SHA256",
+        "path_scope": "cf754829-7a1a-43f0-ab23-314007db1cf2"
+      }
+    },
+    {
+      "test_frame_id": "41f9e679-7aab-4687-9c61-21813023a976",
+      "sequence": 21158,
+      "helper": "assertIsInstance",
+      "slot": 0,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "PlaneError",
+        "projection_kind": "exact-PlaneError-instance-args-projection",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "77d6d86aa352b29f86fc497c37254593e3c2eb38b160aa3716a54b39b66423a6",
+        "class_refs": [
+          "source_ingest.plane_fixture.PlaneError"
+        ]
+      }
+    },
+    {
+      "test_frame_id": "41f9e679-7aab-4687-9c61-21813023a976",
+      "sequence": 21158,
+      "helper": "assertIsInstance",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "type",
+        "projection_kind": "class-source_ingest.plane_fixture.PlaneError",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "6bc2201d8cdeb4bb46963a675a830b752da603cfa57966062b8f3bd2d37953a5",
+        "class_refs": [
+          "source_ingest.plane_fixture.PlaneError"
+        ]
+      }
+    },
+    {
+      "test_frame_id": "b83929d9-1377-4c73-8620-f2b956b0c854",
+      "sequence": 21170,
+      "helper": "assertIsInstance",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "type",
+        "projection_kind": "class-builtins.dict",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "438a3602661cc54091dfd85b1560ea4dcb271188f5a7b3cf0372dafd91ae5a33",
+        "class_refs": [
+          "builtins.dict"
+        ]
+      }
+    },
+    {
+      "test_frame_id": "b65cb368-a7e5-443d-8bd5-feff97d84d6d",
+      "sequence": 21699,
+      "helper": "assertIsInstance",
+      "slot": 0,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "EligibilityError",
+        "projection_kind": "exact-EligibilityError-instance-args-projection",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "d826f1e47b86ecca2227af281c85081ae49e2c21087900f203e10894effe7b1c",
+        "class_refs": [
+          "source_ingest.eligibility_fixture.EligibilityError"
+        ]
+      }
+    },
+    {
+      "test_frame_id": "b65cb368-a7e5-443d-8bd5-feff97d84d6d",
+      "sequence": 21699,
+      "helper": "assertIsInstance",
+      "slot": 1,
+      "witness": {
+        "status": "OBSERVED_TYPED_PROJECTION",
+        "schema": "d5.typed-operand-projection.v1",
+        "root_type": "type",
+        "projection_kind": "class-source_ingest.eligibility_fixture.EligibilityError",
+        "digest_algorithm": "SHA256_OF_TYPED_REPRESENTATION",
+        "digest_hex": "1f20991925e2e4401c8578a65778958183ed3309c82538fa03852f89c3949068",
+        "class_refs": [
+          "source_ingest.eligibility_fixture.EligibilityError"
+        ]
+      }
+    }
+  ],
+  "snapshot_scope_status": {
+    "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 1,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 4,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 7,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 2,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 1,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 2,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 3,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 4,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 5,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 1,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 2,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 4,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 2,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 2,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 9,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 3,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 3,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 9,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 3,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 3,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 9,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 8,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 1,
+      "missing": []
+    },
+    "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "domain_scope": {
+        "status": "FIXTURE_DRIVE_SNAPSHOT_RETURN",
+        "reason": "Typed Drive run/head observation, not Store identity"
+      },
+      "snapshot_refs": 1,
+      "missing": []
+    }
+  },
+  "negative_DI28": {
+    "test_id": "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+    "group_id": "test_incremental_capture",
+    "test_frame_id": "60c6e8c1-a584-4b1f-a97a-1f094b3e1e03",
+    "capture_run_id": "cf754829-7a1a-43f0-ab23-314007db1cf2",
+    "owner_context_refs": [
+      "O1707",
+      "O1708"
+    ],
+    "event_start": 20559,
+    "event_count": 12,
+    "result": "PASS",
+    "subtests": [],
+    "record_links": [],
+    "missing": [],
+    "started_ns": 2448081705492,
+    "construction_refs": [],
+    "drive_snapshot_refs": [],
+    "fixture_construction_refs": [
+      "O1707",
+      "O1708"
+    ],
+    "domain_scope": {
+      "status": "NEGATIVE_DOMAIN_FIXTURE_CLEANUP",
+      "reason": "Observed construction declaration, not head"
+    },
+    "source_binding": {
+      "status": "SOURCE_DERIVED_EXPECTATION",
+      "kind": "METHOD_AST_EXPECTATION",
+      "path": "testing/D5/test_incremental_capture.py",
+      "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+      "symbol": "IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+      "line": 417,
+      "end_line": 430,
+      "factory_args": {},
+      "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+    },
+    "ended_ns": 2448082756950,
+    "event_end": 20571,
+    "capture_completeness": "CAPTURED_FIELDS_PENDING_REVIEW"
+  },
+  "operand_scope_status": {
+    "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "missing": []
+    },
+    "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "missing": []
+    },
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "missing": []
+    },
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "missing": []
+    },
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt": {
+      "status": "CAPTURED_FIELDS_PENDING_REVIEW",
+      "missing": []
+    }
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_late/worker.py",
+      "owner": "main",
+      "method": null,
+      "line": 62,
+      "end_line": 93,
+      "sha256": "a525798dc5a9c5cd403150db2020cd6b6e25f7fd2208732101786d8260401d12"
+    },
+    {
+      "path": "testing/prospective_capture_late/worker.py",
+      "owner": "exercise",
+      "method": null,
+      "line": 35,
+      "end_line": 59,
+      "sha256": "a525798dc5a9c5cd403150db2020cd6b6e25f7fd2208732101786d8260401d12"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "LateBindings",
+      "method": "prepare",
+      "line": 130,
+      "end_line": 145,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "LateBindings",
+      "method": "check",
+      "line": 121,
+      "end_line": 129,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "read_sidecar",
+      "method": null,
+      "line": 96,
+      "end_line": 105,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "owner": "launch",
+      "method": null,
+      "line": 176,
+      "end_line": 250,
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+    }
+  ],
+  "package_files": {
+    "OWNER": 36,
+    "context.json": 66283,
+    "event-0001.json": 2097075,
+    "event-0002.json": 2097047,
+    "event-0003.json": 1887569,
+    "runner-raw.json": 180689,
+    "sidecar.json": 1059175
+  },
+  "all_authority_pins_verified": 225,
+  "sufficiency_review_executed": false,
+  "I77_error_runtime_reconstructed": false,
+  "closure": false,
+  "publication_authorized": false
+}
