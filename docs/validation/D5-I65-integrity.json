@@ -1,0 +1,71 @@
+{
+  "schema": "d5.gi39-finite-sufficiency-integrity.v1",
+  "increment": "I65",
+  "date": "2026-10-26",
+  "base_commit": "32ba38b692f2116237aa1e9a39971a7adeb9b447",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "domain_sequences": 86,
+    "controls": 4,
+    "mutations": 22,
+    "UI_parts": 84,
+    "changed_parts": 3,
+    "inherited_parts": 81,
+    "derived_counts": {
+      "SUPPORTS_BOUNDED": 81,
+      "PARTIAL": 3
+    },
+    "input_hashes": 340,
+    "source_anchors": 956,
+    "historical_case_refs": 27,
+    "raw_pointers": 3336,
+    "STALE_summary_observations": 60,
+    "negative_full_observation_preservations": 142,
+    "review_mutation_sequences": 20,
+    "markdown_links": 9,
+    "I64_checks": {
+      "raw_pointers": 3266,
+      "passive_pairs": 176,
+      "domain_cases": 86,
+      "primary_READY": 86,
+      "mutation_receipts": 114,
+      "release_ACKs": 98,
+      "lock_probes": 12,
+      "explicit_loss_reconciliations": 8
+    },
+    "prior_seals": [
+      "I62",
+      "I63",
+      "I64"
+    ],
+    "all_prior_tracked_files_unchanged": true
+  },
+  "functional_campaigns_executed": 0,
+  "product_or_harness_imported": false,
+  "publication_authorized": false,
+  "artifacts": {
+    "docs/validation/D5-I65-results.json": "0cc0ea96684656839c12c0d72399c9f36c3e6c95cd50a650b085e23518a00847",
+    "docs/validation/D5-I65-results.md": "f35db5a1fb49a63b5b507fe884d95df47306c1eb3582559917bfdc94c300f5f9",
+    "docs/validation/D5-I65-matrix.md": "08313e32f142a42f7ccf616307351c920c6f6a2fb95f47b65a6b0c6fcd73583b"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 738,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09",
+      "docs/validation/D5-I64-CE-regression-raw.json": "9f73573ab78f90133c7152468f035757a63626b24415733663d1ae487ab060f5",
+      "docs/validation/D5-I64-FN-regression-raw.json": "608b239075fd999a02f01591c6c69d02f43625b65b4b38f625f3b109ffe8b9ba",
+      "docs/validation/D5-I64-NA-regression-raw.json": "b9e62295d072ecc2ea695c580e214bf4754d76798719470d7a921d8373917f31",
+      "docs/validation/D5-I64-raw.json": "e5e5ec7eed572ab1e2d59ecdd74c8bcad40f6070405baf8a0aa9e6d31deac74a"
+    },
+    "publication_authorized": false
+  }
+}
