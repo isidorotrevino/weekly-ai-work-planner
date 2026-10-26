@@ -1,0 +1,62 @@
+{
+  "schema": "d5.trace-audit-integrity.v1",
+  "increment": "I67",
+  "date": "2026-10-26",
+  "base_commit": "31cc87cb8a7bcf1639678b213ff416c640d46a92",
+  "status": "PASS_WITH_EXPLICIT_LARGE_RAW_REVIEW",
+  "checks": {
+    "audit_tests": 48,
+    "new_functional_tests": 0,
+    "catalog_entries": 12,
+    "groups": 44,
+    "historical_test_occurrences": 1294,
+    "scenario_rows": 388,
+    "input_hashes": 354,
+    "source_anchors": 98,
+    "historical_method_AST_bindings": 1240,
+    "source_JSON_pointers": 6976,
+    "markdown_links": 13,
+    "temporary_roots_owned_and_removed": 13,
+    "all_prior_tracked_files_unchanged": true,
+    "I66_seal_preserved": true,
+    "semantic_baseline_unchanged": true
+  },
+  "product_or_historical_harness_imported": false,
+  "auditor_I38_executed": false,
+  "functional_campaigns_executed": 0,
+  "publication_authorized": false,
+  "artifacts": {
+    "scripts/trace-d5-evidence.py": "6a09c1d0da5ff459a33acf7a4f3e2a72e9e5643a0a1384de23962b5d79cf7214",
+    "docs/validation/D5-I67-trace-raw.json": "85604f8c76c11a075ee36bffb9340345bc1767602e344eae7753c74d8fbb7d49",
+    "docs/validation/D5-I67-trace-context.json": "60c8549f15f19e4f719a5d9b01d8db600e319341e5cdb44574633cc18ba3f4bb",
+    "docs/design/D5-I67-TRACEABILITY-LAB.md": "b514a3f2dbb177122585fecb1d7d1f297beebd50c722660b2b763956569fe5bf",
+    "docs/validation/D5-TRACE-REGISTRY.json": "6154ad36214a12139e48cf169e68b1469abc86377503e2fb77b45ce481428680",
+    "testing/evidence_trace/run_trace_lab.py": "1b550abfe0ec125102ea215db7125676d20fd623bfb08fcbd29e1943ba0ccc7b",
+    "testing/evidence_trace/README.md": "99087b3dc6eee427b02dac320fd492ae2333bf4789045376a5453bc3f4c093fd",
+    "docs/validation/D5-I67-tests-raw.json": "f34aa08ec4d4316a34457a7fc443841a3bdd467e83e95b644dc340adf7bf4d8c",
+    "testing/evidence_trace/test_evidence_trace.py": "6e47c66a6991516d847ca94943f33a330abc4b319a00d6f16a035a3dbf845a6c",
+    "docs/validation/D5-I67-results.md": "2151cd0ee15c00079da5756c6d941d929a71f9e4668fe116fff9c91f1be34296",
+    "docs/validation/D5-I67-results.json": "58a26fae3054eb1475d725c4a62e53f2d9f7b44ad4aea9bec3f2f3069daa4e73"
+  },
+  "publication_hygiene": {
+    "standard": "REVIEW_REQUIRED_SIZE_ONLY",
+    "explicit_full_content_review": "PASS_NO_CONFIGURED_PATTERNS",
+    "text_files_reviewed": 754,
+    "temporary_maximum_bytes": 12582912,
+    "checker_persisted_unchanged": true,
+    "large_artifacts": {
+      "docs/validation/D5-I55-raw.json": "a74668e05222c18ddf8d46d7f39f47009739535ee8f119b2643d51459bc4960a",
+      "docs/validation/D5-I58-NA-regression-raw.json": "61cd3ca47251e2af2d9751116dde50645157b465b662370d0eaae4dfd25fef1a",
+      "docs/validation/D5-I58-raw.json": "2e5127d93969dc17825b7552d72e177f8313fcccca4a7e357fa0661de01994c7",
+      "docs/validation/D5-I61-FN-regression-raw.json": "bcd0765351ed9419cbe1e19b97d5df4ea31162da63d01c7c198158cc02f7721d",
+      "docs/validation/D5-I61-NA-regression-raw.json": "c6179a844b8325a589eb0d4f2273253b5c1afe52155112db92fc52754e09454b",
+      "docs/validation/D5-I61-raw.json": "03b2c56e1df7f91a7c157d0950234cd75afe2f7c587eed092c22f71ccdec4c09",
+      "docs/validation/D5-I64-CE-regression-raw.json": "9f73573ab78f90133c7152468f035757a63626b24415733663d1ae487ab060f5",
+      "docs/validation/D5-I64-FN-regression-raw.json": "608b239075fd999a02f01591c6c69d02f43625b65b4b38f625f3b109ffe8b9ba",
+      "docs/validation/D5-I64-NA-regression-raw.json": "b9e62295d072ecc2ea695c580e214bf4754d76798719470d7a921d8373917f31",
+      "docs/validation/D5-I64-raw.json": "e5e5ec7eed572ab1e2d59ecdd74c8bcad40f6070405baf8a0aa9e6d31deac74a",
+      "docs/validation/D5-I67-trace-raw.json": "85604f8c76c11a075ee36bffb9340345bc1767602e344eae7753c74d8fbb7d49"
+    },
+    "publication_authorized": false
+  }
+}
