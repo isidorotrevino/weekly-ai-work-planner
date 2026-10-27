@@ -1,0 +1,35 @@
+{
+  "schema": "d5.i84-handoff-integrity.v1",
+  "date": "2026-10-27",
+  "design_commit": "ded2228bf4d9bb7dbf315281a340cad5730651d9",
+  "design_push": {
+    "source": "ce44158ebaa603d61c266fe106b0dfc068ff2c80",
+    "destination": "ded2228bf4d9bb7dbf315281a340cad5730651d9",
+    "commits": 32,
+    "remote": "origin",
+    "branch": "main",
+    "force": false,
+    "status": "PUSH_SUCCEEDED_REMOTE_SHA_VERIFIED"
+  },
+  "handoff_commit": "READ_GIT_LOG_FOR_COMMIT_CONTAINING_HANDOFF_NO_SELF_REFERENCE",
+  "artifacts": {
+    "HANDOFF-D5-I84.md": "9544f70c1a32a5576ab7f200cedb04e1b9e6cb19b54c968223e304a08c61fbd6",
+    "docs/validation/D5-I84-integrity.json": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd"
+  },
+  "checks": {
+    "markdown_links": 16,
+    "I84_seal_artifacts_preserved": true,
+    "no_implementation_or_campaign": true,
+    "semantic_baseline_unchanged": true
+  },
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "I85_authorized": false,
+  "I86_authorized": false,
+  "publication_authorized_for_completed_work_and_handoff": true,
+  "future_publications_require_separate_decision": true,
+  "closure": false,
+  "global_review": "OPEN"
+}
