@@ -1,0 +1,20 @@
+{
+  "schema": "d5.i93-capacity-decision-integrity.v1",
+  "increment": "I93",
+  "date": "2026-10-27",
+  "status": "PREPARED_DOCUMENTARY_DECISION_NOT_IMPLEMENTED",
+  "artifacts": {
+    "docs/validation/D5-I93-capacity-review.json": "4ca6a8f64e505af62b5be300222503c9b4778da50f7ddac6a5edf814e0863550",
+    "docs/design/D5-I93-CAPACITY-DECISION.md": "2f1e33b6cb23361a70aff1a47c898a2f84bb944d45a71bd951a9b39101472cc6"
+  },
+  "input_hashes": 11,
+  "source_anchors": 9,
+  "I92_seal_sha256": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "quota_changed": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "closure": false,
+  "global_review": "OPEN"
+}

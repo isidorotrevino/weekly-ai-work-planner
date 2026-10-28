@@ -1,0 +1,27 @@
+{
+  "schema": "d5.nullable-selector-design-integrity.v1",
+  "increment": "I90",
+  "date": "2026-10-27",
+  "status": "PASS_DESIGN_ONLY_NOT_COMPONENT_TESTS",
+  "checks": {
+    "source_anchors": 11,
+    "component_cases_NOT_RUN": 12,
+    "selector_policies": 3,
+    "markdown_links": 13,
+    "I89_packet_preserved": true,
+    "I88_preserved": true,
+    "new_profile_registry_or_authority_created": false,
+    "prior_tracked_files_unchanged": true
+  },
+  "artifacts": {
+    "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md": "84be3ee003536f4f32cc51d1cb3057914d6469964a936bccc2867d695656da6b",
+    "docs/design/D5-I90-NULLABLE-SELECTOR-REVIEW.md": "4087067046357e9092ca65c27eb337529e2e18114c50e5600878bedfbf8b6183",
+    "docs/validation/D5-I90-design-review.json": "38394aa212e7719f6cd2c591c136bd1fdc261de80f3dc81ecbdd7303fe1ebfc6"
+  },
+  "implementation_authorized": false,
+  "component_test_execution_authorized": false,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "closure": false,
+  "global_review": "OPEN"
+}

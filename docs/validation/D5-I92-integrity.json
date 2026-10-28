@@ -1,0 +1,89 @@
+{
+  "schema": "d5.selector-functional-attempt-integrity.v1",
+  "increment": "I92",
+  "date": "2026-10-27",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "PRESERVED_INVALID_CAPTURE_REFERENCE_BUDGET",
+  "checks": {
+    "attempts": 1,
+    "retries": 0,
+    "raw_tests_run": 13,
+    "expected_tests": 321,
+    "raw_passed": 13,
+    "not_observed": 308,
+    "groups_observed": 1,
+    "global_reference_limit": 16384,
+    "retained_shared_reference_count": 16393,
+    "first_diagnostic": "REFERENCE_BUDGET",
+    "cleanup": "OWN_GROUP_GONE",
+    "runner_cleanup_verified": true,
+    "observers_restored": true,
+    "capture_pins_preserved": 292,
+    "capture_unique_bytes": 63070664,
+    "prior_seals_verified": {
+      "docs/validation/D5-I83-integrity.json": {
+        "sha256": "7e497955ea7ffbbf50d9f0c3c1a546bf68df5868b5982a36a97978f8eed3a3c8",
+        "artifacts": 12
+      },
+      "docs/validation/D5-I84-integrity.json": {
+        "sha256": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd",
+        "artifacts": 3
+      },
+      "docs/validation/D5-I85-integrity.json": {
+        "sha256": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I86-integrity.json": {
+        "sha256": "4e780c0cf2e2ecf147d7e4a620a928735b0c91e8ba14ea6a1f73a37e33957488",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I87-integrity.json": {
+        "sha256": "7913ec81f115b18e33f7fb1860a44e4877a1fce631fe89637320a5cba198050c",
+        "artifacts": 5
+      },
+      "docs/validation/D5-I88-integrity.json": {
+        "sha256": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I89-integrity.json": {
+        "sha256": "9dd8b2c90d4f647cde9e1014a41ed35b1b005a78d1a0140b1d9281d8460faf2c",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I90-integrity.json": {
+        "sha256": "3be0439c5700fd35e2df605d6de4f9a0342e5119969965739d08645884a3455e",
+        "artifacts": 3
+      },
+      "docs/validation/D5-I91-integrity.json": {
+        "sha256": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I91-next-capture-integrity.json": {
+        "sha256": "d061295be7523017aaa489621795276c2e5ddf1e706affba902a81af5ea71783",
+        "artifacts": 2
+      }
+    },
+    "all_prior_tracked_files_unchanged": true,
+    "full_capture_accepted": false,
+    "IR03_ready": false,
+    "other_campaigns_executed": 0
+  },
+  "artifacts": {
+    "docs/validation/D5-I92-P01/OWNER": "95cc193a8323abe6b3bb0a388553c991caaec9463828b6309cda6807f1273f2b",
+    "docs/validation/D5-I92-P01/context.json": "17a7a936d696b1deb6eba7eb50689ec381ac31c47d3df93cabf490455a08d826",
+    "docs/validation/D5-I92-P01/event-0001.json": "6bcbb8ac282fe9aaa3437559b68d3306712563eef32b38c4855968d1fd313a27",
+    "docs/validation/D5-I92-P01/event-0002.json": "d2f6c0a2ece8bea650669ac823897787a336230405b4f3929f85d840c95e9af4",
+    "docs/validation/D5-I92-P01/event-0003.json": "d5b4b9cad209e707aa82970a908d75eb731faeecdeb206c645e43ef435756b58",
+    "docs/validation/D5-I92-P01/event-0004.json": "82285c2d9cdcfdb1a2844def72cf6c411c3eaf1c7027951f9a0270de78a4450d",
+    "docs/validation/D5-I92-P01/runner-raw.json": "afb749725efb7d7ac8f5362e7684c23dd7e9ec50bcf6960ad2dbf8f6803fac2d",
+    "docs/validation/D5-I92-P01/sidecar.json": "eda2a0752e9016253073a54cc793c0c3767288a7aaeef390877d0dd7d6639d37",
+    "docs/validation/D5-I92-capture-authorization.json": "faad5fa2b9ef7f1c233f09284c5de372d4a0a5f11c1026f2a856c4ed0de25864",
+    "docs/validation/D5-I92-P01-launch.json": "17a7a936d696b1deb6eba7eb50689ec381ac31c47d3df93cabf490455a08d826",
+    "docs/validation/D5-I92-launch-output.json": "758bde00443bf19860d95913eeae764e3bd22e6b55c6809ebd9b649a4f5daea7",
+    "docs/validation/D5-I92-external-context.json": "c80f597ccd7d5e5fa7a0c36dc67dd755569981cbf620dc43a879f79d6e2f0e31",
+    "docs/validation/D5-I92-results.json": "e9b343dab345bed17bcc611121d53b420c6572b81b8255db5da70d687cf487d3",
+    "docs/validation/D5-I92-results.md": "a7e99cf08fe9009376ce713334dfa49248c84e5f29685140e010c65c6f47664b"
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

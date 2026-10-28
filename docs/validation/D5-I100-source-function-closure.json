@@ -1,0 +1,6366 @@
+{
+  "schema": "d5.i100-nonobserved-boundary-source-closure.v1",
+  "increment": "I100",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_TRANSITIVE_ERROR_COST_REVIEW",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "CONDITIONAL_SOURCE_CLOSURE_NOT_ZERO_WORK",
+  "source_review": {
+    "roots": [
+      "source_ingest.durable_task_fixture.client_reduce",
+      "source_ingest.durable_task_fixture.remote_reduce",
+      "source_ingest.durable_task_fixture.remote_manifest",
+      "source_ingest.durable_relational_fixture.client_reduce",
+      "source_ingest.durable_relational_fixture.remote_reduce",
+      "source_ingest.relational_planner.plan_batch",
+      "source_ingest.durable_store.canonical",
+      "source_ingest.eligibility_fixture.descriptor",
+      "source_ingest.batch_fixture.validate_source",
+      "testing.D5.durable_support.uid",
+      "testing.D5.relational_support.uid"
+    ],
+    "functions": {
+      "testing.D5.relational_support.uid": {
+        "path": "testing/D5/relational_support.py",
+        "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+        "symbol": "testing.D5.relational_support.uid",
+        "line": 14,
+        "end_line": 14,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 14,
+            "expression": "str"
+          },
+          {
+            "line": 14,
+            "expression": "uuid.uuid4"
+          }
+        ]
+      },
+      "testing.D5.durable_support.uid": {
+        "path": "testing/D5/durable_support.py",
+        "sha256": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+        "symbol": "testing.D5.durable_support.uid",
+        "line": 17,
+        "end_line": 18,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 18,
+            "expression": "str"
+          },
+          {
+            "line": 18,
+            "expression": "uuid.uuid4"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.validate_source": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.validate_source",
+        "line": 127,
+        "end_line": 163,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.decode",
+          "source_ingest.batch_fixture.fail",
+          "source_ingest.batch_fixture.identifier",
+          "source_ingest.batch_fixture.identity",
+          "source_ingest.batch_fixture.reference",
+          "source_ingest.batch_fixture.shape",
+          "source_ingest.batch_fixture.text"
+        ],
+        "call_expressions": [
+          {
+            "line": 130,
+            "expression": "decode"
+          },
+          {
+            "line": 131,
+            "expression": "shape"
+          },
+          {
+            "line": 134,
+            "expression": "identifier"
+          },
+          {
+            "line": 134,
+            "expression": "identifier"
+          },
+          {
+            "line": 135,
+            "expression": "text"
+          },
+          {
+            "line": 139,
+            "expression": "set"
+          },
+          {
+            "line": 150,
+            "expression": "set"
+          },
+          {
+            "line": 129,
+            "expression": "fail"
+          },
+          {
+            "line": 133,
+            "expression": "fail"
+          },
+          {
+            "line": 141,
+            "expression": "shape"
+          },
+          {
+            "line": 142,
+            "expression": "identity"
+          },
+          {
+            "line": 143,
+            "expression": "text"
+          },
+          {
+            "line": 143,
+            "expression": "text"
+          },
+          {
+            "line": 144,
+            "expression": "shape"
+          },
+          {
+            "line": 145,
+            "expression": "item['claims'].values"
+          },
+          {
+            "line": 149,
+            "expression": "keys.add"
+          },
+          {
+            "line": 152,
+            "expression": "shape"
+          },
+          {
+            "line": 153,
+            "expression": "text"
+          },
+          {
+            "line": 154,
+            "expression": "identity"
+          },
+          {
+            "line": 154,
+            "expression": "identity"
+          },
+          {
+            "line": 162,
+            "expression": "keys.add"
+          },
+          {
+            "line": 128,
+            "expression": "type"
+          },
+          {
+            "line": 128,
+            "expression": "len"
+          },
+          {
+            "line": 138,
+            "expression": "fail"
+          },
+          {
+            "line": 142,
+            "expression": "reference"
+          },
+          {
+            "line": 146,
+            "expression": "text"
+          },
+          {
+            "line": 148,
+            "expression": "fail"
+          },
+          {
+            "line": 156,
+            "expression": "fail"
+          },
+          {
+            "line": 159,
+            "expression": "fail"
+          },
+          {
+            "line": 161,
+            "expression": "fail"
+          },
+          {
+            "line": 137,
+            "expression": "type"
+          },
+          {
+            "line": 137,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.fail": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.fail",
+        "line": 27,
+        "end_line": 28,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 28,
+            "expression": "BatchError"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.identifier": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.identifier",
+        "line": 52,
+        "end_line": 58,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 55,
+            "expression": "fail"
+          },
+          {
+            "line": 57,
+            "expression": "fail"
+          },
+          {
+            "line": 54,
+            "expression": "type"
+          },
+          {
+            "line": 54,
+            "expression": "str"
+          },
+          {
+            "line": 54,
+            "expression": "uuid.UUID"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.reference": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.reference",
+        "line": 99,
+        "end_line": 100,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 100,
+            "expression": "dict"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.text": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.text",
+        "line": 73,
+        "end_line": 79,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.canonical",
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 79,
+            "expression": "canonical"
+          },
+          {
+            "line": 78,
+            "expression": "fail"
+          },
+          {
+            "line": 76,
+            "expression": "type"
+          },
+          {
+            "line": 76,
+            "expression": "len"
+          },
+          {
+            "line": 77,
+            "expression": "value.strip"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.canonical": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.canonical",
+        "line": 31,
+        "end_line": 36,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 33,
+            "expression": "json.dumps(value, ensure_ascii=False, allow_nan=False, sort_keys=True, separators=(',', ':')).encode"
+          },
+          {
+            "line": 36,
+            "expression": "fail"
+          },
+          {
+            "line": 33,
+            "expression": "json.dumps"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.decode": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.decode",
+        "line": 91,
+        "end_line": 96,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture._pairs",
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 93,
+            "expression": "json.loads"
+          },
+          {
+            "line": 96,
+            "expression": "fail"
+          },
+          {
+            "line": 94,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture._pairs": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture._pairs",
+        "line": 82,
+        "end_line": 88,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 86,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.identity": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.identity",
+        "line": 103,
+        "end_line": 109,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.fail",
+          "source_ingest.batch_fixture.identifier",
+          "source_ingest.batch_fixture.shape",
+          "source_ingest.batch_fixture.text"
+        ],
+        "call_expressions": [
+          {
+            "line": 104,
+            "expression": "shape"
+          },
+          {
+            "line": 105,
+            "expression": "identifier"
+          },
+          {
+            "line": 105,
+            "expression": "identifier"
+          },
+          {
+            "line": 106,
+            "expression": "text"
+          },
+          {
+            "line": 109,
+            "expression": "dict"
+          },
+          {
+            "line": 108,
+            "expression": "fail"
+          },
+          {
+            "line": 109,
+            "expression": "deepcopy"
+          }
+        ]
+      },
+      "source_ingest.batch_fixture.shape": {
+        "path": "source_ingest/batch_fixture.py",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "symbol": "source_ingest.batch_fixture.shape",
+        "line": 47,
+        "end_line": 49,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 49,
+            "expression": "fail"
+          },
+          {
+            "line": 48,
+            "expression": "type"
+          },
+          {
+            "line": 48,
+            "expression": "set"
+          },
+          {
+            "line": 48,
+            "expression": "set"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.descriptor": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.descriptor",
+        "line": 84,
+        "end_line": 88,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.decoder_hash"
+        ],
+        "call_expressions": [
+          {
+            "line": 85,
+            "expression": "dict"
+          },
+          {
+            "line": 88,
+            "expression": "decoder_hash"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.decoder_hash": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.decoder_hash",
+        "line": 79,
+        "end_line": 81,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.digest"
+        ],
+        "call_expressions": [
+          {
+            "line": 81,
+            "expression": "digest"
+          },
+          {
+            "line": 81,
+            "expression": "dict"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.digest": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.digest",
+        "line": 43,
+        "end_line": 44,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.canonical"
+        ],
+        "call_expressions": [
+          {
+            "line": 44,
+            "expression": "hashlib.sha256(canonical(value)).hexdigest"
+          },
+          {
+            "line": 44,
+            "expression": "hashlib.sha256"
+          },
+          {
+            "line": 44,
+            "expression": "canonical"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.canonical": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.canonical",
+        "line": 35,
+        "end_line": 40,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 37,
+            "expression": "json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(',', ':')).encode"
+          },
+          {
+            "line": 40,
+            "expression": "fail"
+          },
+          {
+            "line": 37,
+            "expression": "json.dumps"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.fail": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.fail",
+        "line": 31,
+        "end_line": 32,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 32,
+            "expression": "EligibilityError"
+          }
+        ]
+      },
+      "source_ingest.durable_store.canonical": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.canonical",
+        "line": 64,
+        "end_line": 72,
+        "repository_function_edges": [
+          "source_ingest.durable_store._tree",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 66,
+            "expression": "_tree"
+          },
+          {
+            "line": 67,
+            "expression": "json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False, separators=(',', ':')).encode"
+          },
+          {
+            "line": 70,
+            "expression": "isinstance"
+          },
+          {
+            "line": 72,
+            "expression": "fail"
+          },
+          {
+            "line": 67,
+            "expression": "json.dumps"
+          }
+        ]
+      },
+      "source_ingest.durable_store._tree": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store._tree",
+        "line": 51,
+        "end_line": 61,
+        "repository_function_edges": [
+          "source_ingest.durable_store._tree",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 54,
+            "expression": "type"
+          },
+          {
+            "line": 52,
+            "expression": "type"
+          },
+          {
+            "line": 56,
+            "expression": "_tree"
+          },
+          {
+            "line": 57,
+            "expression": "all"
+          },
+          {
+            "line": 58,
+            "expression": "value.values"
+          },
+          {
+            "line": 61,
+            "expression": "fail"
+          },
+          {
+            "line": 57,
+            "expression": "type"
+          },
+          {
+            "line": 59,
+            "expression": "_tree"
+          },
+          {
+            "line": 57,
+            "expression": "type"
+          }
+        ]
+      },
+      "source_ingest.durable_store.fail": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.fail",
+        "line": 21,
+        "end_line": 22,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 22,
+            "expression": "DurableError"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.plan_batch": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.plan_batch",
+        "line": 79,
+        "end_line": 191,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.identity",
+          "source_ingest.batch_fixture.reference",
+          "source_ingest.batch_fixture.text",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.shape",
+          "source_ingest.relational_planner.acyclic",
+          "source_ingest.relational_planner.baseline",
+          "source_ingest.relational_planner.guard",
+          "source_ingest.relational_planner.validate_graph"
+        ],
+        "call_expressions": [
+          {
+            "line": 93,
+            "expression": "deepcopy"
+          },
+          {
+            "line": 96,
+            "expression": "set"
+          },
+          {
+            "line": 99,
+            "expression": "enumerate"
+          },
+          {
+            "line": 142,
+            "expression": "enumerate"
+          },
+          {
+            "line": 180,
+            "expression": "validate_graph"
+          },
+          {
+            "line": 181,
+            "expression": "acyclic"
+          },
+          {
+            "line": 80,
+            "expression": "dict"
+          },
+          {
+            "line": 82,
+            "expression": "fail"
+          },
+          {
+            "line": 85,
+            "expression": "shape"
+          },
+          {
+            "line": 86,
+            "expression": "text"
+          },
+          {
+            "line": 86,
+            "expression": "identifier"
+          },
+          {
+            "line": 87,
+            "expression": "text"
+          },
+          {
+            "line": 91,
+            "expression": "set"
+          },
+          {
+            "line": 92,
+            "expression": "fail"
+          },
+          {
+            "line": 98,
+            "expression": "touched.setdefault(eid, []).append"
+          },
+          {
+            "line": 104,
+            "expression": "identity"
+          },
+          {
+            "line": 105,
+            "expression": "after['mappings'].items"
+          },
+          {
+            "line": 108,
+            "expression": "after['entities'].items"
+          },
+          {
+            "line": 130,
+            "expression": "deepcopy"
+          },
+          {
+            "line": 132,
+            "expression": "touch"
+          },
+          {
+            "line": 134,
+            "expression": "identity"
+          },
+          {
+            "line": 160,
+            "expression": "dict"
+          },
+          {
+            "line": 161,
+            "expression": "digest"
+          },
+          {
+            "line": 164,
+            "expression": "touch"
+          },
+          {
+            "line": 164,
+            "expression": "touch"
+          },
+          {
+            "line": 165,
+            "expression": "relation_locators.setdefault(rid, []).append"
+          },
+          {
+            "line": 177,
+            "expression": "after['entities'].items"
+          },
+          {
+            "line": 183,
+            "expression": "fail"
+          },
+          {
+            "line": 189,
+            "expression": "baseline"
+          },
+          {
+            "line": 190,
+            "expression": "dict"
+          },
+          {
+            "line": 81,
+            "expression": "type"
+          },
+          {
+            "line": 81,
+            "expression": "len"
+          },
+          {
+            "line": 89,
+            "expression": "fail"
+          },
+          {
+            "line": 103,
+            "expression": "fail"
+          },
+          {
+            "line": 104,
+            "expression": "reference"
+          },
+          {
+            "line": 113,
+            "expression": "guard"
+          },
+          {
+            "line": 118,
+            "expression": "new_ids.add"
+          },
+          {
+            "line": 119,
+            "expression": "dict"
+          },
+          {
+            "line": 125,
+            "expression": "dict"
+          },
+          {
+            "line": 136,
+            "expression": "fail"
+          },
+          {
+            "line": 138,
+            "expression": "len"
+          },
+          {
+            "line": 139,
+            "expression": "fail"
+          },
+          {
+            "line": 143,
+            "expression": "resolve"
+          },
+          {
+            "line": 143,
+            "expression": "resolve"
+          },
+          {
+            "line": 148,
+            "expression": "fail"
+          },
+          {
+            "line": 152,
+            "expression": "any"
+          },
+          {
+            "line": 169,
+            "expression": "guard"
+          },
+          {
+            "line": 173,
+            "expression": "set"
+          },
+          {
+            "line": 182,
+            "expression": "len"
+          },
+          {
+            "line": 182,
+            "expression": "len"
+          },
+          {
+            "line": 98,
+            "expression": "touched.setdefault"
+          },
+          {
+            "line": 107,
+            "expression": "fail"
+          },
+          {
+            "line": 111,
+            "expression": "fail"
+          },
+          {
+            "line": 116,
+            "expression": "fail"
+          },
+          {
+            "line": 137,
+            "expression": "after['mappings'].items"
+          },
+          {
+            "line": 151,
+            "expression": "fail"
+          },
+          {
+            "line": 154,
+            "expression": "fail"
+          },
+          {
+            "line": 158,
+            "expression": "fail"
+          },
+          {
+            "line": 165,
+            "expression": "relation_locators.setdefault"
+          },
+          {
+            "line": 179,
+            "expression": "guard"
+          },
+          {
+            "line": 191,
+            "expression": "sorted"
+          },
+          {
+            "line": 122,
+            "expression": "dict"
+          },
+          {
+            "line": 175,
+            "expression": "after['relations'].values"
+          },
+          {
+            "line": 153,
+            "expression": "after['relations'].values"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.baseline": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.baseline",
+        "line": 15,
+        "end_line": 16,
+        "repository_function_edges": [
+          "source_ingest.relational_planner.incident"
+        ],
+        "call_expressions": [
+          {
+            "line": 16,
+            "expression": "dict"
+          },
+          {
+            "line": 16,
+            "expression": "deepcopy"
+          },
+          {
+            "line": 16,
+            "expression": "deepcopy"
+          },
+          {
+            "line": 16,
+            "expression": "incident"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.incident": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.incident",
+        "line": 11,
+        "end_line": 12,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 12,
+            "expression": "data['relations'].items"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.guard": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.guard",
+        "line": 19,
+        "end_line": 26,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.relational_planner.baseline"
+        ],
+        "call_expressions": [
+          {
+            "line": 22,
+            "expression": "fail"
+          },
+          {
+            "line": 24,
+            "expression": "fail"
+          },
+          {
+            "line": 25,
+            "expression": "baseline"
+          },
+          {
+            "line": 26,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_store.identifier": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.identifier",
+        "line": 36,
+        "end_line": 42,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 39,
+            "expression": "fail"
+          },
+          {
+            "line": 41,
+            "expression": "fail"
+          },
+          {
+            "line": 38,
+            "expression": "type"
+          },
+          {
+            "line": 38,
+            "expression": "str"
+          },
+          {
+            "line": 38,
+            "expression": "uuid.UUID"
+          }
+        ]
+      },
+      "source_ingest.durable_store.shape": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.shape",
+        "line": 25,
+        "end_line": 27,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 27,
+            "expression": "fail"
+          },
+          {
+            "line": 26,
+            "expression": "type"
+          },
+          {
+            "line": 26,
+            "expression": "set"
+          },
+          {
+            "line": 26,
+            "expression": "set"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.validate_graph": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.validate_graph",
+        "line": 29,
+        "end_line": 56,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 33,
+            "expression": "data['relations'].items"
+          },
+          {
+            "line": 34,
+            "expression": "shape"
+          },
+          {
+            "line": 36,
+            "expression": "fail"
+          },
+          {
+            "line": 38,
+            "expression": "fail"
+          },
+          {
+            "line": 41,
+            "expression": "fail"
+          },
+          {
+            "line": 43,
+            "expression": "fail"
+          },
+          {
+            "line": 35,
+            "expression": "digest"
+          },
+          {
+            "line": 46,
+            "expression": "fail"
+          },
+          {
+            "line": 48,
+            "expression": "fail"
+          },
+          {
+            "line": 51,
+            "expression": "fail"
+          },
+          {
+            "line": 54,
+            "expression": "fail"
+          },
+          {
+            "line": 56,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_store.digest": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.digest",
+        "line": 94,
+        "end_line": 95,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical"
+        ],
+        "call_expressions": [
+          {
+            "line": 95,
+            "expression": "hashlib.sha256(canonical(value)).hexdigest"
+          },
+          {
+            "line": 95,
+            "expression": "hashlib.sha256"
+          },
+          {
+            "line": 95,
+            "expression": "canonical"
+          }
+        ]
+      },
+      "source_ingest.relational_planner.acyclic": {
+        "path": "source_ingest/relational_planner.py",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "symbol": "source_ingest.relational_planner.acyclic",
+        "line": 59,
+        "end_line": 76,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 61,
+            "expression": "data['relations'].values"
+          },
+          {
+            "line": 64,
+            "expression": "set"
+          },
+          {
+            "line": 65,
+            "expression": "set"
+          },
+          {
+            "line": 71,
+            "expression": "pending.add"
+          },
+          {
+            "line": 72,
+            "expression": "graph.get"
+          },
+          {
+            "line": 74,
+            "expression": "pending.remove"
+          },
+          {
+            "line": 74,
+            "expression": "done.add"
+          },
+          {
+            "line": 76,
+            "expression": "visit"
+          },
+          {
+            "line": 63,
+            "expression": "graph.setdefault(rel['left'], set()).add"
+          },
+          {
+            "line": 68,
+            "expression": "fail"
+          },
+          {
+            "line": 73,
+            "expression": "visit"
+          },
+          {
+            "line": 63,
+            "expression": "graph.setdefault"
+          },
+          {
+            "line": 63,
+            "expression": "set"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.remote_reduce": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.remote_reduce",
+        "line": 398,
+        "end_line": 446,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.creation_key",
+          "source_ingest.durable_relational_fixture.remote_entity",
+          "source_ingest.durable_relational_fixture.remote_manifest",
+          "source_ingest.durable_store.copy",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck"
+        ],
+        "call_expressions": [
+          {
+            "line": 410,
+            "expression": "shape"
+          },
+          {
+            "line": 411,
+            "expression": "identifier"
+          },
+          {
+            "line": 411,
+            "expression": "remote_manifest"
+          },
+          {
+            "line": 415,
+            "expression": "identifier"
+          },
+          {
+            "line": 415,
+            "expression": "identifier"
+          },
+          {
+            "line": 416,
+            "expression": "s['tickets'].get"
+          },
+          {
+            "line": 424,
+            "expression": "dict"
+          },
+          {
+            "line": 401,
+            "expression": "shape"
+          },
+          {
+            "line": 401,
+            "expression": "capcheck"
+          },
+          {
+            "line": 405,
+            "expression": "shape"
+          },
+          {
+            "line": 405,
+            "expression": "integer"
+          },
+          {
+            "line": 405,
+            "expression": "s['entities'].get"
+          },
+          {
+            "line": 407,
+            "expression": "remote_entity"
+          },
+          {
+            "line": 409,
+            "expression": "fail"
+          },
+          {
+            "line": 412,
+            "expression": "dict"
+          },
+          {
+            "line": 412,
+            "expression": "fail"
+          },
+          {
+            "line": 413,
+            "expression": "fail"
+          },
+          {
+            "line": 414,
+            "expression": "fail"
+          },
+          {
+            "line": 420,
+            "expression": "len"
+          },
+          {
+            "line": 420,
+            "expression": "fail"
+          },
+          {
+            "line": 421,
+            "expression": "fail"
+          },
+          {
+            "line": 423,
+            "expression": "fail"
+          },
+          {
+            "line": 402,
+            "expression": "fail"
+          },
+          {
+            "line": 406,
+            "expression": "fail"
+          },
+          {
+            "line": 413,
+            "expression": "creation_key"
+          },
+          {
+            "line": 418,
+            "expression": "digest"
+          },
+          {
+            "line": 418,
+            "expression": "fail"
+          },
+          {
+            "line": 425,
+            "expression": "digest"
+          },
+          {
+            "line": 425,
+            "expression": "digest"
+          },
+          {
+            "line": 429,
+            "expression": "fail"
+          },
+          {
+            "line": 430,
+            "expression": "integer"
+          },
+          {
+            "line": 434,
+            "expression": "s['keys'].get"
+          },
+          {
+            "line": 434,
+            "expression": "s['entities'].get"
+          },
+          {
+            "line": 443,
+            "expression": "copy"
+          },
+          {
+            "line": 444,
+            "expression": "p.update"
+          },
+          {
+            "line": 439,
+            "expression": "str"
+          },
+          {
+            "line": 440,
+            "expression": "dict"
+          },
+          {
+            "line": 438,
+            "expression": "len"
+          },
+          {
+            "line": 438,
+            "expression": "fail"
+          },
+          {
+            "line": 439,
+            "expression": "uuid.uuid5"
+          },
+          {
+            "line": 444,
+            "expression": "digest"
+          },
+          {
+            "line": 439,
+            "expression": "uuid.UUID"
+          }
+        ]
+      },
+      "source_ingest.durable_store.copy": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.copy",
+        "line": 98,
+        "end_line": 99,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.decode"
+        ],
+        "call_expressions": [
+          {
+            "line": 99,
+            "expression": "decode"
+          },
+          {
+            "line": 99,
+            "expression": "canonical"
+          }
+        ]
+      },
+      "source_ingest.durable_store.decode": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.decode",
+        "line": 75,
+        "end_line": 91,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 84,
+            "expression": "json.loads"
+          },
+          {
+            "line": 85,
+            "expression": "canonical"
+          },
+          {
+            "line": 86,
+            "expression": "fail"
+          },
+          {
+            "line": 89,
+            "expression": "isinstance"
+          },
+          {
+            "line": 91,
+            "expression": "fail"
+          },
+          {
+            "line": 80,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.remote_entity": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.remote_entity",
+        "line": 343,
+        "end_line": 346,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.payload",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 344,
+            "expression": "shape"
+          },
+          {
+            "line": 344,
+            "expression": "identifier"
+          },
+          {
+            "line": 344,
+            "expression": "integer"
+          },
+          {
+            "line": 345,
+            "expression": "payload"
+          },
+          {
+            "line": 346,
+            "expression": "any"
+          },
+          {
+            "line": 346,
+            "expression": "fail"
+          },
+          {
+            "line": 346,
+            "expression": "type"
+          },
+          {
+            "line": 346,
+            "expression": "type"
+          },
+          {
+            "line": 346,
+            "expression": "v['foreign'].values"
+          }
+        ]
+      },
+      "source_ingest.durable_store.integer": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.integer",
+        "line": 30,
+        "end_line": 33,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 32,
+            "expression": "fail"
+          },
+          {
+            "line": 31,
+            "expression": "type"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.payload": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.payload",
+        "line": 349,
+        "end_line": 350,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.text",
+          "source_ingest.durable_store.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 350,
+            "expression": "shape"
+          },
+          {
+            "line": 350,
+            "expression": "text"
+          },
+          {
+            "line": 350,
+            "expression": "text"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.remote_manifest": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.remote_manifest",
+        "line": 353,
+        "end_line": 376,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.text",
+          "source_ingest.durable_relational_fixture.payload",
+          "source_ingest.durable_relational_fixture.remote_entity",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.hash_id",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck"
+        ],
+        "call_expressions": [
+          {
+            "line": 354,
+            "expression": "shape"
+          },
+          {
+            "line": 358,
+            "expression": "shape"
+          },
+          {
+            "line": 358,
+            "expression": "identifier"
+          },
+          {
+            "line": 358,
+            "expression": "identifier"
+          },
+          {
+            "line": 359,
+            "expression": "shape"
+          },
+          {
+            "line": 359,
+            "expression": "identifier"
+          },
+          {
+            "line": 359,
+            "expression": "identifier"
+          },
+          {
+            "line": 360,
+            "expression": "shape"
+          },
+          {
+            "line": 361,
+            "expression": "identifier"
+          },
+          {
+            "line": 361,
+            "expression": "identifier"
+          },
+          {
+            "line": 361,
+            "expression": "integer"
+          },
+          {
+            "line": 361,
+            "expression": "text"
+          },
+          {
+            "line": 363,
+            "expression": "shape"
+          },
+          {
+            "line": 363,
+            "expression": "text"
+          },
+          {
+            "line": 366,
+            "expression": "shape"
+          },
+          {
+            "line": 372,
+            "expression": "payload"
+          },
+          {
+            "line": 374,
+            "expression": "capcheck"
+          },
+          {
+            "line": 374,
+            "expression": "hash_id"
+          },
+          {
+            "line": 374,
+            "expression": "hash_id"
+          },
+          {
+            "line": 374,
+            "expression": "hash_id"
+          },
+          {
+            "line": 374,
+            "expression": "hash_id"
+          },
+          {
+            "line": 374,
+            "expression": "identifier"
+          },
+          {
+            "line": 375,
+            "expression": "integer"
+          },
+          {
+            "line": 375,
+            "expression": "integer"
+          },
+          {
+            "line": 357,
+            "expression": "fail"
+          },
+          {
+            "line": 362,
+            "expression": "identifier"
+          },
+          {
+            "line": 365,
+            "expression": "fail"
+          },
+          {
+            "line": 370,
+            "expression": "fail"
+          },
+          {
+            "line": 371,
+            "expression": "identifier"
+          },
+          {
+            "line": 373,
+            "expression": "dict"
+          },
+          {
+            "line": 373,
+            "expression": "fail"
+          },
+          {
+            "line": 376,
+            "expression": "remote_entity"
+          },
+          {
+            "line": 368,
+            "expression": "type"
+          }
+        ]
+      },
+      "source_ingest.durable_store.hash_id": {
+        "path": "source_ingest/durable_store.py",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "symbol": "source_ingest.durable_store.hash_id",
+        "line": 45,
+        "end_line": 48,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 46,
+            "expression": "any"
+          },
+          {
+            "line": 47,
+            "expression": "fail"
+          },
+          {
+            "line": 46,
+            "expression": "type"
+          },
+          {
+            "line": 46,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.capcheck": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.capcheck",
+        "line": 372,
+        "end_line": 375,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.label"
+        ],
+        "call_expressions": [
+          {
+            "line": 373,
+            "expression": "shape"
+          },
+          {
+            "line": 374,
+            "expression": "label"
+          },
+          {
+            "line": 374,
+            "expression": "integer"
+          },
+          {
+            "line": 374,
+            "expression": "integer"
+          },
+          {
+            "line": 375,
+            "expression": "any"
+          },
+          {
+            "line": 375,
+            "expression": "fail"
+          },
+          {
+            "line": 375,
+            "expression": "type"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.label": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.label",
+        "line": 28,
+        "end_line": 32,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 31,
+            "expression": "canonical"
+          },
+          {
+            "line": 30,
+            "expression": "fail"
+          },
+          {
+            "line": 29,
+            "expression": "type"
+          },
+          {
+            "line": 29,
+            "expression": "value.strip"
+          },
+          {
+            "line": 29,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.creation_key": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.creation_key",
+        "line": 153,
+        "end_line": 154,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest"
+        ],
+        "call_expressions": [
+          {
+            "line": 154,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.client_reduce": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.client_reduce",
+        "line": 157,
+        "end_line": 281,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.text",
+          "source_ingest.durable_relational_fixture.accepted",
+          "source_ingest.durable_relational_fixture.applied_batch",
+          "source_ingest.durable_relational_fixture.creation_key",
+          "source_ingest.durable_relational_fixture.current_batch",
+          "source_ingest.durable_relational_fixture.current_source",
+          "source_ingest.durable_relational_fixture.ledger_transition",
+          "source_ingest.durable_relational_fixture.manifest",
+          "source_ingest.durable_relational_fixture.projection_current",
+          "source_ingest.durable_relational_fixture.remote_entity",
+          "source_ingest.durable_relational_fixture.review_key",
+          "source_ingest.durable_relational_fixture.selection_current",
+          "source_ingest.durable_relational_fixture.source_bytes",
+          "source_ingest.durable_relational_fixture.source_context",
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck",
+          "source_ingest.relational_planner.guard",
+          "source_ingest.relational_planner.plan_batch"
+        ],
+        "call_expressions": [
+          {
+            "line": 160,
+            "expression": "shape"
+          },
+          {
+            "line": 160,
+            "expression": "source_bytes"
+          },
+          {
+            "line": 162,
+            "expression": "hashlib.sha256(raw).hexdigest"
+          },
+          {
+            "line": 164,
+            "expression": "dict"
+          },
+          {
+            "line": 165,
+            "expression": "dict"
+          },
+          {
+            "line": 161,
+            "expression": "fail"
+          },
+          {
+            "line": 163,
+            "expression": "fail"
+          },
+          {
+            "line": 167,
+            "expression": "shape"
+          },
+          {
+            "line": 170,
+            "expression": "dict"
+          },
+          {
+            "line": 162,
+            "expression": "hashlib.sha256"
+          },
+          {
+            "line": 163,
+            "expression": "len"
+          },
+          {
+            "line": 168,
+            "expression": "fail"
+          },
+          {
+            "line": 172,
+            "expression": "shape"
+          },
+          {
+            "line": 172,
+            "expression": "dict"
+          },
+          {
+            "line": 174,
+            "expression": "shape"
+          },
+          {
+            "line": 175,
+            "expression": "integer"
+          },
+          {
+            "line": 175,
+            "expression": "text"
+          },
+          {
+            "line": 177,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 179,
+            "expression": "review_key"
+          },
+          {
+            "line": 179,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 186,
+            "expression": "dict"
+          },
+          {
+            "line": 187,
+            "expression": "dict"
+          },
+          {
+            "line": 172,
+            "expression": "manifest"
+          },
+          {
+            "line": 176,
+            "expression": "fail"
+          },
+          {
+            "line": 178,
+            "expression": "fail"
+          },
+          {
+            "line": 179,
+            "expression": "dict"
+          },
+          {
+            "line": 180,
+            "expression": "fail"
+          },
+          {
+            "line": 185,
+            "expression": "fail"
+          },
+          {
+            "line": 189,
+            "expression": "shape"
+          },
+          {
+            "line": 189,
+            "expression": "current_source"
+          },
+          {
+            "line": 191,
+            "expression": "plan_batch"
+          },
+          {
+            "line": 192,
+            "expression": "manifest"
+          },
+          {
+            "line": 193,
+            "expression": "dict"
+          },
+          {
+            "line": 172,
+            "expression": "dict"
+          },
+          {
+            "line": 182,
+            "expression": "fail"
+          },
+          {
+            "line": 183,
+            "expression": "current_batch"
+          },
+          {
+            "line": 184,
+            "expression": "projection_current"
+          },
+          {
+            "line": 192,
+            "expression": "dict"
+          },
+          {
+            "line": 195,
+            "expression": "shape"
+          },
+          {
+            "line": 195,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 197,
+            "expression": "current_batch"
+          },
+          {
+            "line": 197,
+            "expression": "accepted"
+          },
+          {
+            "line": 198,
+            "expression": "plan_batch"
+          },
+          {
+            "line": 200,
+            "expression": "dict"
+          },
+          {
+            "line": 202,
+            "expression": "plan['entities'].items"
+          },
+          {
+            "line": 203,
+            "expression": "plan['relations'].items"
+          },
+          {
+            "line": 205,
+            "expression": "dict"
+          },
+          {
+            "line": 182,
+            "expression": "source_context"
+          },
+          {
+            "line": 196,
+            "expression": "fail"
+          },
+          {
+            "line": 199,
+            "expression": "fail"
+          },
+          {
+            "line": 202,
+            "expression": "after['entity_provenance'].setdefault(eid, []).append"
+          },
+          {
+            "line": 203,
+            "expression": "after['relation_provenance'].setdefault(rid, []).append"
+          },
+          {
+            "line": 209,
+            "expression": "shape"
+          },
+          {
+            "line": 209,
+            "expression": "applied_batch"
+          },
+          {
+            "line": 219,
+            "expression": "dict"
+          },
+          {
+            "line": 220,
+            "expression": "dict"
+          },
+          {
+            "line": 172,
+            "expression": "source_context"
+          },
+          {
+            "line": 192,
+            "expression": "digest"
+          },
+          {
+            "line": 202,
+            "expression": "dict"
+          },
+          {
+            "line": 203,
+            "expression": "dict"
+          },
+          {
+            "line": 206,
+            "expression": "digest"
+          },
+          {
+            "line": 207,
+            "expression": "sorted"
+          },
+          {
+            "line": 207,
+            "expression": "sorted"
+          },
+          {
+            "line": 211,
+            "expression": "fail"
+          },
+          {
+            "line": 212,
+            "expression": "identifier"
+          },
+          {
+            "line": 213,
+            "expression": "len"
+          },
+          {
+            "line": 213,
+            "expression": "len"
+          },
+          {
+            "line": 213,
+            "expression": "fail"
+          },
+          {
+            "line": 214,
+            "expression": "fail"
+          },
+          {
+            "line": 216,
+            "expression": "identifier"
+          },
+          {
+            "line": 222,
+            "expression": "shape"
+          },
+          {
+            "line": 222,
+            "expression": "identifier"
+          },
+          {
+            "line": 222,
+            "expression": "selection_current"
+          },
+          {
+            "line": 202,
+            "expression": "after['entity_provenance'].setdefault"
+          },
+          {
+            "line": 203,
+            "expression": "after['relation_provenance'].setdefault"
+          },
+          {
+            "line": 211,
+            "expression": "type"
+          },
+          {
+            "line": 213,
+            "expression": "set"
+          },
+          {
+            "line": 214,
+            "expression": "digest"
+          },
+          {
+            "line": 217,
+            "expression": "fail"
+          },
+          {
+            "line": 219,
+            "expression": "digest"
+          },
+          {
+            "line": 223,
+            "expression": "fail"
+          },
+          {
+            "line": 224,
+            "expression": "any"
+          },
+          {
+            "line": 224,
+            "expression": "fail"
+          },
+          {
+            "line": 225,
+            "expression": "len"
+          },
+          {
+            "line": 225,
+            "expression": "fail"
+          },
+          {
+            "line": 228,
+            "expression": "shape"
+          },
+          {
+            "line": 228,
+            "expression": "selection_current"
+          },
+          {
+            "line": 229,
+            "expression": "s['bindings'].get"
+          },
+          {
+            "line": 231,
+            "expression": "shape"
+          },
+          {
+            "line": 231,
+            "expression": "identifier"
+          },
+          {
+            "line": 231,
+            "expression": "identifier"
+          },
+          {
+            "line": 231,
+            "expression": "capcheck"
+          },
+          {
+            "line": 232,
+            "expression": "guard"
+          },
+          {
+            "line": 234,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 240,
+            "expression": "dict"
+          },
+          {
+            "line": 247,
+            "expression": "digest"
+          },
+          {
+            "line": 249,
+            "expression": "dict"
+          },
+          {
+            "line": 211,
+            "expression": "len"
+          },
+          {
+            "line": 230,
+            "expression": "fail"
+          },
+          {
+            "line": 237,
+            "expression": "remote_entity"
+          },
+          {
+            "line": 246,
+            "expression": "len"
+          },
+          {
+            "line": 246,
+            "expression": "fail"
+          },
+          {
+            "line": 248,
+            "expression": "fail"
+          },
+          {
+            "line": 238,
+            "expression": "fail"
+          },
+          {
+            "line": 239,
+            "expression": "fail"
+          },
+          {
+            "line": 243,
+            "expression": "digest"
+          },
+          {
+            "line": 244,
+            "expression": "creation_key"
+          },
+          {
+            "line": 245,
+            "expression": "dict"
+          },
+          {
+            "line": 246,
+            "expression": "canonical"
+          },
+          {
+            "line": 248,
+            "expression": "len"
+          },
+          {
+            "line": 252,
+            "expression": "shape"
+          },
+          {
+            "line": 252,
+            "expression": "s['data']['entities'].get"
+          },
+          {
+            "line": 254,
+            "expression": "ch.items"
+          },
+          {
+            "line": 264,
+            "expression": "entity.update"
+          },
+          {
+            "line": 266,
+            "expression": "shape"
+          },
+          {
+            "line": 266,
+            "expression": "shape"
+          },
+          {
+            "line": 270,
+            "expression": "digest"
+          },
+          {
+            "line": 275,
+            "expression": "shape"
+          },
+          {
+            "line": 275,
+            "expression": "integer"
+          },
+          {
+            "line": 224,
+            "expression": "s['bindings'].values"
+          },
+          {
+            "line": 242,
+            "expression": "review_key"
+          },
+          {
+            "line": 253,
+            "expression": "fail"
+          },
+          {
+            "line": 267,
+            "expression": "fail"
+          },
+          {
+            "line": 268,
+            "expression": "fail"
+          },
+          {
+            "line": 269,
+            "expression": "fail"
+          },
+          {
+            "line": 271,
+            "expression": "fail"
+          },
+          {
+            "line": 276,
+            "expression": "fail"
+          },
+          {
+            "line": 279,
+            "expression": "ledger_transition"
+          },
+          {
+            "line": 280,
+            "expression": "fail"
+          },
+          {
+            "line": 253,
+            "expression": "type"
+          },
+          {
+            "line": 255,
+            "expression": "fail"
+          },
+          {
+            "line": 256,
+            "expression": "text"
+          },
+          {
+            "line": 259,
+            "expression": "text"
+          },
+          {
+            "line": 263,
+            "expression": "shape"
+          },
+          {
+            "line": 263,
+            "expression": "text"
+          },
+          {
+            "line": 271,
+            "expression": "len"
+          },
+          {
+            "line": 253,
+            "expression": "set"
+          },
+          {
+            "line": 253,
+            "expression": "set"
+          },
+          {
+            "line": 255,
+            "expression": "type"
+          },
+          {
+            "line": 258,
+            "expression": "fail"
+          },
+          {
+            "line": 261,
+            "expression": "fail"
+          },
+          {
+            "line": 262,
+            "expression": "identifier"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.review_key": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.review_key",
+        "line": 83,
+        "end_line": 83,
+        "repository_function_edges": [],
+        "call_expressions": []
+      },
+      "source_ingest.durable_relational_fixture.ledger_transition": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.ledger_transition",
+        "line": 284,
+        "end_line": 340,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.accepted",
+          "source_ingest.durable_relational_fixture.projection_current",
+          "source_ingest.durable_relational_fixture.proof_ok",
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck"
+        ],
+        "call_expressions": [
+          {
+            "line": 287,
+            "expression": "shape"
+          },
+          {
+            "line": 288,
+            "expression": "identifier"
+          },
+          {
+            "line": 288,
+            "expression": "identifier"
+          },
+          {
+            "line": 288,
+            "expression": "capcheck"
+          },
+          {
+            "line": 290,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 292,
+            "expression": "projection_current"
+          },
+          {
+            "line": 292,
+            "expression": "accepted"
+          },
+          {
+            "line": 295,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 296,
+            "expression": "any"
+          },
+          {
+            "line": 297,
+            "expression": "any"
+          },
+          {
+            "line": 303,
+            "expression": "any"
+          },
+          {
+            "line": 308,
+            "expression": "old['attempts'].append"
+          },
+          {
+            "line": 309,
+            "expression": "old['events'].append"
+          },
+          {
+            "line": 310,
+            "expression": "dict"
+          },
+          {
+            "line": 311,
+            "expression": "dict"
+          },
+          {
+            "line": 289,
+            "expression": "type"
+          },
+          {
+            "line": 289,
+            "expression": "fail"
+          },
+          {
+            "line": 291,
+            "expression": "fail"
+          },
+          {
+            "line": 293,
+            "expression": "fail"
+          },
+          {
+            "line": 294,
+            "expression": "all"
+          },
+          {
+            "line": 294,
+            "expression": "fail"
+          },
+          {
+            "line": 296,
+            "expression": "fail"
+          },
+          {
+            "line": 297,
+            "expression": "fail"
+          },
+          {
+            "line": 303,
+            "expression": "fail"
+          },
+          {
+            "line": 305,
+            "expression": "dict"
+          },
+          {
+            "line": 309,
+            "expression": "dict"
+          },
+          {
+            "line": 313,
+            "expression": "shape"
+          },
+          {
+            "line": 313,
+            "expression": "identifier"
+          },
+          {
+            "line": 313,
+            "expression": "integer"
+          },
+          {
+            "line": 313,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 317,
+            "expression": "dict"
+          },
+          {
+            "line": 318,
+            "expression": "dict"
+          },
+          {
+            "line": 299,
+            "expression": "fail"
+          },
+          {
+            "line": 300,
+            "expression": "fail"
+          },
+          {
+            "line": 301,
+            "expression": "len"
+          },
+          {
+            "line": 301,
+            "expression": "fail"
+          },
+          {
+            "line": 302,
+            "expression": "fail"
+          },
+          {
+            "line": 314,
+            "expression": "fail"
+          },
+          {
+            "line": 315,
+            "expression": "fail"
+          },
+          {
+            "line": 316,
+            "expression": "fail"
+          },
+          {
+            "line": 320,
+            "expression": "shape"
+          },
+          {
+            "line": 320,
+            "expression": "integer"
+          },
+          {
+            "line": 320,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 334,
+            "expression": "v['events'].append"
+          },
+          {
+            "line": 335,
+            "expression": "s['pending'].pop"
+          },
+          {
+            "line": 339,
+            "expression": "fail"
+          },
+          {
+            "line": 296,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 297,
+            "expression": "s['sends'].items"
+          },
+          {
+            "line": 303,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 321,
+            "expression": "fail"
+          },
+          {
+            "line": 324,
+            "expression": "fail"
+          },
+          {
+            "line": 325,
+            "expression": "len"
+          },
+          {
+            "line": 325,
+            "expression": "fail"
+          },
+          {
+            "line": 327,
+            "expression": "dict"
+          },
+          {
+            "line": 334,
+            "expression": "dict"
+          },
+          {
+            "line": 337,
+            "expression": "list"
+          },
+          {
+            "line": 325,
+            "expression": "canonical"
+          },
+          {
+            "line": 328,
+            "expression": "proof_ok"
+          },
+          {
+            "line": 329,
+            "expression": "dict"
+          },
+          {
+            "line": 333,
+            "expression": "dict"
+          },
+          {
+            "line": 338,
+            "expression": "s['pending'].pop"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.accepted": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.accepted",
+        "line": 86,
+        "end_line": 90,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.review_key",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.integer"
+        ],
+        "call_expressions": [
+          {
+            "line": 87,
+            "expression": "integer"
+          },
+          {
+            "line": 88,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 88,
+            "expression": "review_key"
+          },
+          {
+            "line": 89,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.proof_ok": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.proof_ok",
+        "line": 379,
+        "end_line": 395,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 381,
+            "expression": "shape"
+          },
+          {
+            "line": 384,
+            "expression": "dict"
+          },
+          {
+            "line": 389,
+            "expression": "identifier"
+          },
+          {
+            "line": 389,
+            "expression": "integer"
+          },
+          {
+            "line": 391,
+            "expression": "any"
+          },
+          {
+            "line": 392,
+            "expression": "integer"
+          },
+          {
+            "line": 385,
+            "expression": "digest"
+          },
+          {
+            "line": 385,
+            "expression": "digest"
+          },
+          {
+            "line": 390,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.projection_current": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.projection_current",
+        "line": 133,
+        "end_line": 150,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.accepted",
+          "source_ingest.durable_relational_fixture.current_source",
+          "source_ingest.durable_relational_fixture.review_key",
+          "source_ingest.durable_relational_fixture.selection_current",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.relational_planner.guard"
+        ],
+        "call_expressions": [
+          {
+            "line": 134,
+            "expression": "selection_current"
+          },
+          {
+            "line": 142,
+            "expression": "current_source"
+          },
+          {
+            "line": 143,
+            "expression": "guard"
+          },
+          {
+            "line": 146,
+            "expression": "any"
+          },
+          {
+            "line": 138,
+            "expression": "fail"
+          },
+          {
+            "line": 140,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 140,
+            "expression": "fail"
+          },
+          {
+            "line": 149,
+            "expression": "fail"
+          },
+          {
+            "line": 150,
+            "expression": "accepted"
+          },
+          {
+            "line": 136,
+            "expression": "s['data']['entities'].get"
+          },
+          {
+            "line": 137,
+            "expression": "digest"
+          },
+          {
+            "line": 138,
+            "expression": "s['bindings'].get"
+          },
+          {
+            "line": 140,
+            "expression": "review_key"
+          },
+          {
+            "line": 144,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 148,
+            "expression": "len"
+          },
+          {
+            "line": 150,
+            "expression": "digest"
+          },
+          {
+            "line": 146,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 146,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.selection_current": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.selection_current",
+        "line": 125,
+        "end_line": 130,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.applied_batch",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 128,
+            "expression": "applied_batch"
+          },
+          {
+            "line": 127,
+            "expression": "fail"
+          },
+          {
+            "line": 129,
+            "expression": "fail"
+          },
+          {
+            "line": 129,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.applied_batch": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.applied_batch",
+        "line": 115,
+        "end_line": 122,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.accepted",
+          "source_ingest.durable_relational_fixture.current_source",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.hash_id",
+          "source_ingest.durable_store.identifier"
+        ],
+        "call_expressions": [
+          {
+            "line": 116,
+            "expression": "identifier"
+          },
+          {
+            "line": 116,
+            "expression": "hash_id"
+          },
+          {
+            "line": 117,
+            "expression": "s['receipts'].get"
+          },
+          {
+            "line": 120,
+            "expression": "accepted"
+          },
+          {
+            "line": 121,
+            "expression": "current_source"
+          },
+          {
+            "line": 118,
+            "expression": "fail"
+          },
+          {
+            "line": 118,
+            "expression": "r['result'].get"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.current_source": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.current_source",
+        "line": 103,
+        "end_line": 107,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.accepted",
+          "source_ingest.durable_relational_fixture.source_context",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 104,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 106,
+            "expression": "accepted"
+          },
+          {
+            "line": 105,
+            "expression": "fail"
+          },
+          {
+            "line": 105,
+            "expression": "source_context"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.source_context": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.source_context",
+        "line": 77,
+        "end_line": 80,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 80,
+            "expression": "dict"
+          },
+          {
+            "line": 79,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.manifest": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.manifest",
+        "line": 93,
+        "end_line": 100,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 94,
+            "expression": "dict"
+          },
+          {
+            "line": 97,
+            "expression": "digest"
+          },
+          {
+            "line": 96,
+            "expression": "len"
+          },
+          {
+            "line": 96,
+            "expression": "fail"
+          },
+          {
+            "line": 98,
+            "expression": "fail"
+          },
+          {
+            "line": 96,
+            "expression": "canonical"
+          },
+          {
+            "line": 98,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.source_bytes": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.source_bytes",
+        "line": 62,
+        "end_line": 74,
+        "repository_function_edges": [
+          "source_ingest.batch_fixture.validate_source",
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 69,
+            "expression": "canonical"
+          },
+          {
+            "line": 63,
+            "expression": "fail"
+          },
+          {
+            "line": 64,
+            "expression": "base64.b64decode"
+          },
+          {
+            "line": 66,
+            "expression": "fail"
+          },
+          {
+            "line": 67,
+            "expression": "validate_source"
+          },
+          {
+            "line": 70,
+            "expression": "fail"
+          },
+          {
+            "line": 63,
+            "expression": "type"
+          },
+          {
+            "line": 63,
+            "expression": "len"
+          },
+          {
+            "line": 65,
+            "expression": "fail"
+          },
+          {
+            "line": 66,
+            "expression": "len"
+          },
+          {
+            "line": 66,
+            "expression": "base64.b64encode(raw).decode"
+          },
+          {
+            "line": 68,
+            "expression": "fail"
+          },
+          {
+            "line": 70,
+            "expression": "len"
+          },
+          {
+            "line": 70,
+            "expression": "len"
+          },
+          {
+            "line": 68,
+            "expression": "str"
+          },
+          {
+            "line": 73,
+            "expression": "fail"
+          },
+          {
+            "line": 66,
+            "expression": "base64.b64encode"
+          },
+          {
+            "line": 73,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_relational_fixture.current_batch": {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "symbol": "source_ingest.durable_relational_fixture.current_batch",
+        "line": 110,
+        "end_line": 112,
+        "repository_function_edges": [
+          "source_ingest.durable_relational_fixture.current_source",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 111,
+            "expression": "current_source"
+          },
+          {
+            "line": 112,
+            "expression": "fail"
+          },
+          {
+            "line": 112,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.remote_manifest": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.remote_manifest",
+        "line": 389,
+        "end_line": 400,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.hash_id",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck",
+          "source_ingest.durable_task_fixture.label",
+          "source_ingest.durable_task_fixture.validate_remote_entity"
+        ],
+        "call_expressions": [
+          {
+            "line": 390,
+            "expression": "shape"
+          },
+          {
+            "line": 393,
+            "expression": "shape"
+          },
+          {
+            "line": 393,
+            "expression": "identifier"
+          },
+          {
+            "line": 393,
+            "expression": "identifier"
+          },
+          {
+            "line": 394,
+            "expression": "shape"
+          },
+          {
+            "line": 395,
+            "expression": "identifier"
+          },
+          {
+            "line": 395,
+            "expression": "identifier"
+          },
+          {
+            "line": 398,
+            "expression": "capcheck"
+          },
+          {
+            "line": 398,
+            "expression": "hash_id"
+          },
+          {
+            "line": 398,
+            "expression": "shape"
+          },
+          {
+            "line": 399,
+            "expression": "m['payload'].values"
+          },
+          {
+            "line": 392,
+            "expression": "fail"
+          },
+          {
+            "line": 396,
+            "expression": "fail"
+          },
+          {
+            "line": 397,
+            "expression": "dict"
+          },
+          {
+            "line": 397,
+            "expression": "fail"
+          },
+          {
+            "line": 399,
+            "expression": "label"
+          },
+          {
+            "line": 400,
+            "expression": "validate_remote_entity"
+          },
+          {
+            "line": 396,
+            "expression": "m['task'].get"
+          },
+          {
+            "line": 397,
+            "expression": "m['task'].get"
+          },
+          {
+            "line": 397,
+            "expression": "m['task'].get"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.validate_remote_entity": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.validate_remote_entity",
+        "line": 382,
+        "end_line": 386,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.label"
+        ],
+        "call_expressions": [
+          {
+            "line": 383,
+            "expression": "shape"
+          },
+          {
+            "line": 383,
+            "expression": "identifier"
+          },
+          {
+            "line": 383,
+            "expression": "integer"
+          },
+          {
+            "line": 384,
+            "expression": "shape"
+          },
+          {
+            "line": 385,
+            "expression": "v['payload'].values"
+          },
+          {
+            "line": 385,
+            "expression": "label"
+          },
+          {
+            "line": 386,
+            "expression": "any"
+          },
+          {
+            "line": 386,
+            "expression": "fail"
+          },
+          {
+            "line": 386,
+            "expression": "type"
+          },
+          {
+            "line": 386,
+            "expression": "type"
+          },
+          {
+            "line": 386,
+            "expression": "v['foreign'].values"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.remote_reduce": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.remote_reduce",
+        "line": 426,
+        "end_line": 474,
+        "repository_function_edges": [
+          "source_ingest.durable_store.copy",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.capcheck",
+          "source_ingest.durable_task_fixture.creation_key",
+          "source_ingest.durable_task_fixture.remote_manifest",
+          "source_ingest.durable_task_fixture.validate_remote_entity"
+        ],
+        "call_expressions": [
+          {
+            "line": 438,
+            "expression": "shape"
+          },
+          {
+            "line": 439,
+            "expression": "identifier"
+          },
+          {
+            "line": 439,
+            "expression": "remote_manifest"
+          },
+          {
+            "line": 443,
+            "expression": "identifier"
+          },
+          {
+            "line": 443,
+            "expression": "identifier"
+          },
+          {
+            "line": 444,
+            "expression": "s['tickets'].get"
+          },
+          {
+            "line": 452,
+            "expression": "dict"
+          },
+          {
+            "line": 429,
+            "expression": "shape"
+          },
+          {
+            "line": 429,
+            "expression": "capcheck"
+          },
+          {
+            "line": 433,
+            "expression": "shape"
+          },
+          {
+            "line": 433,
+            "expression": "integer"
+          },
+          {
+            "line": 433,
+            "expression": "s['entities'].get"
+          },
+          {
+            "line": 435,
+            "expression": "validate_remote_entity"
+          },
+          {
+            "line": 437,
+            "expression": "fail"
+          },
+          {
+            "line": 440,
+            "expression": "dict"
+          },
+          {
+            "line": 440,
+            "expression": "fail"
+          },
+          {
+            "line": 441,
+            "expression": "creation_key"
+          },
+          {
+            "line": 441,
+            "expression": "fail"
+          },
+          {
+            "line": 442,
+            "expression": "fail"
+          },
+          {
+            "line": 448,
+            "expression": "len"
+          },
+          {
+            "line": 448,
+            "expression": "fail"
+          },
+          {
+            "line": 449,
+            "expression": "fail"
+          },
+          {
+            "line": 451,
+            "expression": "fail"
+          },
+          {
+            "line": 430,
+            "expression": "fail"
+          },
+          {
+            "line": 434,
+            "expression": "fail"
+          },
+          {
+            "line": 446,
+            "expression": "digest"
+          },
+          {
+            "line": 446,
+            "expression": "fail"
+          },
+          {
+            "line": 453,
+            "expression": "digest"
+          },
+          {
+            "line": 453,
+            "expression": "digest"
+          },
+          {
+            "line": 457,
+            "expression": "fail"
+          },
+          {
+            "line": 458,
+            "expression": "integer"
+          },
+          {
+            "line": 462,
+            "expression": "s['keys'].get"
+          },
+          {
+            "line": 462,
+            "expression": "s['entities'].get"
+          },
+          {
+            "line": 471,
+            "expression": "copy"
+          },
+          {
+            "line": 472,
+            "expression": "p.update"
+          },
+          {
+            "line": 467,
+            "expression": "str"
+          },
+          {
+            "line": 468,
+            "expression": "dict"
+          },
+          {
+            "line": 466,
+            "expression": "len"
+          },
+          {
+            "line": 466,
+            "expression": "fail"
+          },
+          {
+            "line": 467,
+            "expression": "uuid.uuid5"
+          },
+          {
+            "line": 472,
+            "expression": "digest"
+          },
+          {
+            "line": 467,
+            "expression": "uuid.UUID"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.creation_key": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.creation_key",
+        "line": 378,
+        "end_line": 379,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest"
+        ],
+        "call_expressions": [
+          {
+            "line": 379,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.client_reduce": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.client_reduce",
+        "line": 150,
+        "end_line": 369,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.copy",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.hash_id",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape",
+          "source_ingest.durable_task_fixture.accepted",
+          "source_ingest.durable_task_fixture.add_manifest",
+          "source_ingest.durable_task_fixture.capcheck",
+          "source_ingest.durable_task_fixture.checked",
+          "source_ingest.durable_task_fixture.creation_key",
+          "source_ingest.durable_task_fixture.effect_current",
+          "source_ingest.durable_task_fixture.evaluation_current",
+          "source_ingest.durable_task_fixture.label",
+          "source_ingest.durable_task_fixture.pins",
+          "source_ingest.durable_task_fixture.projection_current",
+          "source_ingest.durable_task_fixture.proof_ok",
+          "source_ingest.durable_task_fixture.validate_remote_entity",
+          "source_ingest.durable_task_fixture.vector",
+          "source_ingest.eligibility_fixture.adapter_identity",
+          "source_ingest.eligibility_fixture.decoder_hash",
+          "source_ingest.eligibility_fixture.slot",
+          "source_ingest.eligibility_fixture.validate_account",
+          "source_ingest.eligibility_fixture.validate_adapter",
+          "source_ingest.eligibility_fixture.validate_descriptor",
+          "source_ingest.eligibility_fixture.validate_observation",
+          "source_ingest.eligibility_fixture.validate_policy",
+          "source_ingest.preview.build_observation"
+        ],
+        "call_expressions": [
+          {
+            "line": 154,
+            "expression": "shape"
+          },
+          {
+            "line": 154,
+            "expression": "checked"
+          },
+          {
+            "line": 154,
+            "expression": "digest"
+          },
+          {
+            "line": 156,
+            "expression": "dict"
+          },
+          {
+            "line": 155,
+            "expression": "fail"
+          },
+          {
+            "line": 158,
+            "expression": "shape"
+          },
+          {
+            "line": 155,
+            "expression": "len"
+          },
+          {
+            "line": 159,
+            "expression": "fail"
+          },
+          {
+            "line": 162,
+            "expression": "shape"
+          },
+          {
+            "line": 163,
+            "expression": "shape"
+          },
+          {
+            "line": 164,
+            "expression": "identifier"
+          },
+          {
+            "line": 164,
+            "expression": "hash_id"
+          },
+          {
+            "line": 164,
+            "expression": "hash_id"
+          },
+          {
+            "line": 164,
+            "expression": "integer"
+          },
+          {
+            "line": 166,
+            "expression": "shape"
+          },
+          {
+            "line": 178,
+            "expression": "s['profiles'].get"
+          },
+          {
+            "line": 186,
+            "expression": "dict"
+          },
+          {
+            "line": 188,
+            "expression": "digest"
+          },
+          {
+            "line": 190,
+            "expression": "dict"
+          },
+          {
+            "line": 169,
+            "expression": "fail"
+          },
+          {
+            "line": 170,
+            "expression": "digest"
+          },
+          {
+            "line": 170,
+            "expression": "fail"
+          },
+          {
+            "line": 172,
+            "expression": "fail"
+          },
+          {
+            "line": 173,
+            "expression": "base64.b64decode"
+          },
+          {
+            "line": 175,
+            "expression": "fail"
+          },
+          {
+            "line": 176,
+            "expression": "hashlib.sha256(raw).hexdigest"
+          },
+          {
+            "line": 176,
+            "expression": "cap.get"
+          },
+          {
+            "line": 176,
+            "expression": "fail"
+          },
+          {
+            "line": 192,
+            "expression": "shape"
+          },
+          {
+            "line": 192,
+            "expression": "checked"
+          },
+          {
+            "line": 172,
+            "expression": "cap.get"
+          },
+          {
+            "line": 172,
+            "expression": "cap.get"
+          },
+          {
+            "line": 173,
+            "expression": "cap.get"
+          },
+          {
+            "line": 174,
+            "expression": "fail"
+          },
+          {
+            "line": 175,
+            "expression": "len"
+          },
+          {
+            "line": 175,
+            "expression": "base64.b64encode(raw).decode"
+          },
+          {
+            "line": 175,
+            "expression": "cap.get"
+          },
+          {
+            "line": 179,
+            "expression": "q.decoder_hash"
+          },
+          {
+            "line": 181,
+            "expression": "build_observation"
+          },
+          {
+            "line": 193,
+            "expression": "len"
+          },
+          {
+            "line": 193,
+            "expression": "fail"
+          },
+          {
+            "line": 196,
+            "expression": "shape"
+          },
+          {
+            "line": 196,
+            "expression": "checked"
+          },
+          {
+            "line": 196,
+            "expression": "checked"
+          },
+          {
+            "line": 201,
+            "expression": "s['accounts'].values"
+          },
+          {
+            "line": 204,
+            "expression": "dict"
+          },
+          {
+            "line": 176,
+            "expression": "hashlib.sha256"
+          },
+          {
+            "line": 184,
+            "expression": "any"
+          },
+          {
+            "line": 197,
+            "expression": "fail"
+          },
+          {
+            "line": 199,
+            "expression": "fail"
+          },
+          {
+            "line": 200,
+            "expression": "len"
+          },
+          {
+            "line": 200,
+            "expression": "fail"
+          },
+          {
+            "line": 209,
+            "expression": "shape"
+          },
+          {
+            "line": 209,
+            "expression": "s['accounts'].get"
+          },
+          {
+            "line": 210,
+            "expression": "integer"
+          },
+          {
+            "line": 226,
+            "expression": "dict"
+          },
+          {
+            "line": 175,
+            "expression": "base64.b64encode"
+          },
+          {
+            "line": 183,
+            "expression": "cap.get"
+          },
+          {
+            "line": 183,
+            "expression": "cap.get('metadata_before', {}).get"
+          },
+          {
+            "line": 184,
+            "expression": "cap.get"
+          },
+          {
+            "line": 203,
+            "expression": "fail"
+          },
+          {
+            "line": 211,
+            "expression": "fail"
+          },
+          {
+            "line": 212,
+            "expression": "checked"
+          },
+          {
+            "line": 228,
+            "expression": "shape"
+          },
+          {
+            "line": 228,
+            "expression": "integer"
+          },
+          {
+            "line": 184,
+            "expression": "d.get"
+          },
+          {
+            "line": 214,
+            "expression": "checked"
+          },
+          {
+            "line": 222,
+            "expression": "account['observations'].get"
+          },
+          {
+            "line": 229,
+            "expression": "fail"
+          },
+          {
+            "line": 232,
+            "expression": "shape"
+          },
+          {
+            "line": 233,
+            "expression": "label"
+          },
+          {
+            "line": 238,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 241,
+            "expression": "dict"
+          },
+          {
+            "line": 242,
+            "expression": "dict"
+          },
+          {
+            "line": 183,
+            "expression": "cap.get"
+          },
+          {
+            "line": 215,
+            "expression": "fail"
+          },
+          {
+            "line": 219,
+            "expression": "sum"
+          },
+          {
+            "line": 219,
+            "expression": "fail"
+          },
+          {
+            "line": 223,
+            "expression": "fail"
+          },
+          {
+            "line": 234,
+            "expression": "fail"
+          },
+          {
+            "line": 238,
+            "expression": "dict"
+          },
+          {
+            "line": 239,
+            "expression": "integer"
+          },
+          {
+            "line": 239,
+            "expression": "fail"
+          },
+          {
+            "line": 240,
+            "expression": "fail"
+          },
+          {
+            "line": 244,
+            "expression": "shape"
+          },
+          {
+            "line": 246,
+            "expression": "add_manifest"
+          },
+          {
+            "line": 248,
+            "expression": "dict"
+          },
+          {
+            "line": 215,
+            "expression": "q.adapter_identity"
+          },
+          {
+            "line": 217,
+            "expression": "fail"
+          },
+          {
+            "line": 218,
+            "expression": "dict"
+          },
+          {
+            "line": 224,
+            "expression": "q.slot"
+          },
+          {
+            "line": 236,
+            "expression": "fail"
+          },
+          {
+            "line": 237,
+            "expression": "s['manifests'].get(mid, {}).get"
+          },
+          {
+            "line": 237,
+            "expression": "fail"
+          },
+          {
+            "line": 245,
+            "expression": "fail"
+          },
+          {
+            "line": 246,
+            "expression": "dict"
+          },
+          {
+            "line": 250,
+            "expression": "shape"
+          },
+          {
+            "line": 250,
+            "expression": "evaluation_current"
+          },
+          {
+            "line": 251,
+            "expression": "dict"
+          },
+          {
+            "line": 219,
+            "expression": "len"
+          },
+          {
+            "line": 253,
+            "expression": "shape"
+          },
+          {
+            "line": 254,
+            "expression": "identifier"
+          },
+          {
+            "line": 254,
+            "expression": "label"
+          },
+          {
+            "line": 254,
+            "expression": "label"
+          },
+          {
+            "line": 255,
+            "expression": "evaluation_current"
+          },
+          {
+            "line": 256,
+            "expression": "vector"
+          },
+          {
+            "line": 257,
+            "expression": "value.values"
+          },
+          {
+            "line": 259,
+            "expression": "s['tasks'].get"
+          },
+          {
+            "line": 260,
+            "expression": "s['tasks'].items"
+          },
+          {
+            "line": 264,
+            "expression": "dict"
+          },
+          {
+            "line": 267,
+            "expression": "add_manifest"
+          },
+          {
+            "line": 269,
+            "expression": "dict"
+          },
+          {
+            "line": 219,
+            "expression": "s['accounts'].values"
+          },
+          {
+            "line": 237,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 246,
+            "expression": "pins"
+          },
+          {
+            "line": 257,
+            "expression": "label"
+          },
+          {
+            "line": 262,
+            "expression": "fail"
+          },
+          {
+            "line": 263,
+            "expression": "fail"
+          },
+          {
+            "line": 267,
+            "expression": "dict"
+          },
+          {
+            "line": 271,
+            "expression": "shape"
+          },
+          {
+            "line": 271,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 273,
+            "expression": "effect_current"
+          },
+          {
+            "line": 273,
+            "expression": "accepted"
+          },
+          {
+            "line": 274,
+            "expression": "copy"
+          },
+          {
+            "line": 274,
+            "expression": "copy"
+          },
+          {
+            "line": 275,
+            "expression": "dict"
+          },
+          {
+            "line": 276,
+            "expression": "dict"
+          },
+          {
+            "line": 261,
+            "expression": "fail"
+          },
+          {
+            "line": 263,
+            "expression": "len"
+          },
+          {
+            "line": 272,
+            "expression": "fail"
+          },
+          {
+            "line": 278,
+            "expression": "shape"
+          },
+          {
+            "line": 278,
+            "expression": "s['tasks'].get"
+          },
+          {
+            "line": 280,
+            "expression": "a['changes'].items"
+          },
+          {
+            "line": 279,
+            "expression": "fail"
+          },
+          {
+            "line": 287,
+            "expression": "shape"
+          },
+          {
+            "line": 287,
+            "expression": "identifier"
+          },
+          {
+            "line": 291,
+            "expression": "copy"
+          },
+          {
+            "line": 279,
+            "expression": "type"
+          },
+          {
+            "line": 281,
+            "expression": "label"
+          },
+          {
+            "line": 288,
+            "expression": "fail"
+          },
+          {
+            "line": 289,
+            "expression": "any"
+          },
+          {
+            "line": 289,
+            "expression": "fail"
+          },
+          {
+            "line": 290,
+            "expression": "len"
+          },
+          {
+            "line": 290,
+            "expression": "fail"
+          },
+          {
+            "line": 293,
+            "expression": "shape"
+          },
+          {
+            "line": 294,
+            "expression": "capcheck"
+          },
+          {
+            "line": 294,
+            "expression": "shape"
+          },
+          {
+            "line": 295,
+            "expression": "identifier"
+          },
+          {
+            "line": 295,
+            "expression": "identifier"
+          },
+          {
+            "line": 295,
+            "expression": "s['bindings'].get"
+          },
+          {
+            "line": 299,
+            "expression": "evaluation_current"
+          },
+          {
+            "line": 300,
+            "expression": "accepted"
+          },
+          {
+            "line": 308,
+            "expression": "creation_key"
+          },
+          {
+            "line": 309,
+            "expression": "add_manifest"
+          },
+          {
+            "line": 314,
+            "expression": "dict"
+          },
+          {
+            "line": 279,
+            "expression": "set"
+          },
+          {
+            "line": 279,
+            "expression": "set"
+          },
+          {
+            "line": 282,
+            "expression": "fail"
+          },
+          {
+            "line": 296,
+            "expression": "fail"
+          },
+          {
+            "line": 298,
+            "expression": "fail"
+          },
+          {
+            "line": 305,
+            "expression": "validate_remote_entity"
+          },
+          {
+            "line": 309,
+            "expression": "dict"
+          },
+          {
+            "line": 316,
+            "expression": "shape"
+          },
+          {
+            "line": 317,
+            "expression": "identifier"
+          },
+          {
+            "line": 317,
+            "expression": "identifier"
+          },
+          {
+            "line": 317,
+            "expression": "capcheck"
+          },
+          {
+            "line": 319,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 321,
+            "expression": "projection_current"
+          },
+          {
+            "line": 321,
+            "expression": "accepted"
+          },
+          {
+            "line": 324,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 325,
+            "expression": "any"
+          },
+          {
+            "line": 326,
+            "expression": "any"
+          },
+          {
+            "line": 332,
+            "expression": "any"
+          },
+          {
+            "line": 337,
+            "expression": "old['attempts'].append"
+          },
+          {
+            "line": 338,
+            "expression": "old['events'].append"
+          },
+          {
+            "line": 339,
+            "expression": "dict"
+          },
+          {
+            "line": 340,
+            "expression": "dict"
+          },
+          {
+            "line": 282,
+            "expression": "type"
+          },
+          {
+            "line": 283,
+            "expression": "fail"
+          },
+          {
+            "line": 302,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 306,
+            "expression": "fail"
+          },
+          {
+            "line": 307,
+            "expression": "fail"
+          },
+          {
+            "line": 318,
+            "expression": "type"
+          },
+          {
+            "line": 318,
+            "expression": "fail"
+          },
+          {
+            "line": 320,
+            "expression": "fail"
+          },
+          {
+            "line": 322,
+            "expression": "fail"
+          },
+          {
+            "line": 323,
+            "expression": "all"
+          },
+          {
+            "line": 323,
+            "expression": "fail"
+          },
+          {
+            "line": 325,
+            "expression": "fail"
+          },
+          {
+            "line": 326,
+            "expression": "fail"
+          },
+          {
+            "line": 332,
+            "expression": "fail"
+          },
+          {
+            "line": 334,
+            "expression": "dict"
+          },
+          {
+            "line": 338,
+            "expression": "dict"
+          },
+          {
+            "line": 342,
+            "expression": "shape"
+          },
+          {
+            "line": 342,
+            "expression": "identifier"
+          },
+          {
+            "line": 342,
+            "expression": "integer"
+          },
+          {
+            "line": 342,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 346,
+            "expression": "dict"
+          },
+          {
+            "line": 347,
+            "expression": "dict"
+          },
+          {
+            "line": 283,
+            "expression": "any"
+          },
+          {
+            "line": 289,
+            "expression": "s['bindings'].values"
+          },
+          {
+            "line": 313,
+            "expression": "dict"
+          },
+          {
+            "line": 328,
+            "expression": "fail"
+          },
+          {
+            "line": 329,
+            "expression": "fail"
+          },
+          {
+            "line": 330,
+            "expression": "len"
+          },
+          {
+            "line": 330,
+            "expression": "fail"
+          },
+          {
+            "line": 331,
+            "expression": "fail"
+          },
+          {
+            "line": 343,
+            "expression": "fail"
+          },
+          {
+            "line": 344,
+            "expression": "fail"
+          },
+          {
+            "line": 345,
+            "expression": "fail"
+          },
+          {
+            "line": 349,
+            "expression": "shape"
+          },
+          {
+            "line": 349,
+            "expression": "integer"
+          },
+          {
+            "line": 349,
+            "expression": "s['sends'].get"
+          },
+          {
+            "line": 363,
+            "expression": "v['events'].append"
+          },
+          {
+            "line": 364,
+            "expression": "s['pending'].pop"
+          },
+          {
+            "line": 368,
+            "expression": "fail"
+          },
+          {
+            "line": 283,
+            "expression": "type"
+          },
+          {
+            "line": 325,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 326,
+            "expression": "s['sends'].items"
+          },
+          {
+            "line": 332,
+            "expression": "s['sends'].values"
+          },
+          {
+            "line": 350,
+            "expression": "fail"
+          },
+          {
+            "line": 353,
+            "expression": "fail"
+          },
+          {
+            "line": 354,
+            "expression": "len"
+          },
+          {
+            "line": 354,
+            "expression": "fail"
+          },
+          {
+            "line": 356,
+            "expression": "dict"
+          },
+          {
+            "line": 363,
+            "expression": "dict"
+          },
+          {
+            "line": 366,
+            "expression": "list"
+          },
+          {
+            "line": 354,
+            "expression": "canonical"
+          },
+          {
+            "line": 357,
+            "expression": "proof_ok"
+          },
+          {
+            "line": 358,
+            "expression": "dict"
+          },
+          {
+            "line": 362,
+            "expression": "dict"
+          },
+          {
+            "line": 283,
+            "expression": "type"
+          },
+          {
+            "line": 283,
+            "expression": "v.values"
+          },
+          {
+            "line": 367,
+            "expression": "s['pending'].pop"
+          }
+        ]
+      },
+      "source_ingest.preview.build_observation": {
+        "path": "source_ingest/preview.py",
+        "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+        "symbol": "source_ingest.preview.build_observation",
+        "line": 137,
+        "end_line": 167,
+        "repository_function_edges": [
+          "source_ingest.preview.structure",
+          "source_ingest.register.parse"
+        ],
+        "call_expressions": [
+          {
+            "line": 154,
+            "expression": "hashlib.sha256(content).hexdigest"
+          },
+          {
+            "line": 138,
+            "expression": "str"
+          },
+          {
+            "line": 138,
+            "expression": "str"
+          },
+          {
+            "line": 139,
+            "expression": "any"
+          },
+          {
+            "line": 140,
+            "expression": "ValueError"
+          },
+          {
+            "line": 142,
+            "expression": "len"
+          },
+          {
+            "line": 143,
+            "expression": "ValueError"
+          },
+          {
+            "line": 144,
+            "expression": "relative.startswith"
+          },
+          {
+            "line": 144,
+            "expression": "any"
+          },
+          {
+            "line": 145,
+            "expression": "ValueError"
+          },
+          {
+            "line": 148,
+            "expression": "structure"
+          },
+          {
+            "line": 158,
+            "expression": "len"
+          },
+          {
+            "line": 158,
+            "expression": "base64.b64encode(content).decode"
+          },
+          {
+            "line": 161,
+            "expression": "str"
+          },
+          {
+            "line": 138,
+            "expression": "uuid.UUID"
+          },
+          {
+            "line": 138,
+            "expression": "uuid.UUID"
+          },
+          {
+            "line": 139,
+            "expression": "len"
+          },
+          {
+            "line": 144,
+            "expression": "relative.lower().endswith"
+          },
+          {
+            "line": 151,
+            "expression": "parse"
+          },
+          {
+            "line": 153,
+            "expression": "ValueError"
+          },
+          {
+            "line": 154,
+            "expression": "hashlib.sha256"
+          },
+          {
+            "line": 161,
+            "expression": "uuid.uuid5"
+          },
+          {
+            "line": 164,
+            "expression": "str"
+          },
+          {
+            "line": 158,
+            "expression": "base64.b64encode"
+          },
+          {
+            "line": 161,
+            "expression": "uuid.UUID"
+          },
+          {
+            "line": 164,
+            "expression": "uuid.uuid5"
+          },
+          {
+            "line": 144,
+            "expression": "relative.split"
+          },
+          {
+            "line": 144,
+            "expression": "relative.lower"
+          },
+          {
+            "line": 164,
+            "expression": "uuid.UUID"
+          },
+          {
+            "line": 139,
+            "expression": "ord"
+          },
+          {
+            "line": 139,
+            "expression": "ord"
+          }
+        ]
+      },
+      "source_ingest.preview.structure": {
+        "path": "source_ingest/preview.py",
+        "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+        "symbol": "source_ingest.preview.structure",
+        "line": 86,
+        "end_line": 129,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 87,
+            "expression": "content.decode"
+          },
+          {
+            "line": 90,
+            "expression": "text.splitlines"
+          },
+          {
+            "line": 95,
+            "expression": "enumerate"
+          },
+          {
+            "line": 128,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 89,
+            "expression": "ValueError"
+          },
+          {
+            "line": 91,
+            "expression": "any"
+          },
+          {
+            "line": 92,
+            "expression": "ValueError"
+          },
+          {
+            "line": 96,
+            "expression": "re.match"
+          },
+          {
+            "line": 104,
+            "expression": "re.match"
+          },
+          {
+            "line": 115,
+            "expression": "re.match"
+          },
+          {
+            "line": 120,
+            "expression": "line.lstrip().startswith"
+          },
+          {
+            "line": 125,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 127,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 91,
+            "expression": "len"
+          },
+          {
+            "line": 106,
+            "expression": "len"
+          },
+          {
+            "line": 108,
+            "expression": "title.rsplit"
+          },
+          {
+            "line": 113,
+            "expression": "sections.append"
+          },
+          {
+            "line": 114,
+            "expression": "context.append"
+          },
+          {
+            "line": 117,
+            "expression": "proposals.append"
+          },
+          {
+            "line": 123,
+            "expression": "ValueError"
+          },
+          {
+            "line": 102,
+            "expression": "len"
+          },
+          {
+            "line": 120,
+            "expression": "line.lstrip"
+          },
+          {
+            "line": 122,
+            "expression": "len"
+          },
+          {
+            "line": 122,
+            "expression": "len"
+          },
+          {
+            "line": 91,
+            "expression": "len"
+          },
+          {
+            "line": 98,
+            "expression": "len"
+          },
+          {
+            "line": 98,
+            "expression": "marker[2].strip"
+          },
+          {
+            "line": 109,
+            "expression": "len"
+          },
+          {
+            "line": 109,
+            "expression": "set"
+          },
+          {
+            "line": 117,
+            "expression": "item[2].lower"
+          }
+        ]
+      },
+      "source_ingest.register.parse": {
+        "path": "source_ingest/register.py",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+        "symbol": "source_ingest.register.parse",
+        "line": 52,
+        "end_line": 163,
+        "repository_function_edges": [
+          "source_ingest.preview.structure",
+          "source_ingest.register.annotated_cells",
+          "source_ingest.register.cells",
+          "source_ingest.register.source_key"
+        ],
+        "call_expressions": [
+          {
+            "line": 53,
+            "expression": "structure"
+          },
+          {
+            "line": 54,
+            "expression": "content.decode('utf-8-sig').splitlines"
+          },
+          {
+            "line": 64,
+            "expression": "enumerate"
+          },
+          {
+            "line": 154,
+            "expression": "any"
+          },
+          {
+            "line": 158,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 62,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 70,
+            "expression": "re.match"
+          },
+          {
+            "line": 81,
+            "expression": "line.lstrip().startswith"
+          },
+          {
+            "line": 90,
+            "expression": "cells"
+          },
+          {
+            "line": 106,
+            "expression": "line.lstrip().startswith"
+          },
+          {
+            "line": 133,
+            "expression": "source_key"
+          },
+          {
+            "line": 145,
+            "expression": "proposals.append"
+          },
+          {
+            "line": 151,
+            "expression": "block"
+          },
+          {
+            "line": 153,
+            "expression": "block"
+          },
+          {
+            "line": 155,
+            "expression": "block"
+          },
+          {
+            "line": 157,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 162,
+            "expression": "metadata.update"
+          },
+          {
+            "line": 54,
+            "expression": "content.decode"
+          },
+          {
+            "line": 68,
+            "expression": "heading_path.append"
+          },
+          {
+            "line": 82,
+            "expression": "block"
+          },
+          {
+            "line": 83,
+            "expression": "line.lstrip().startswith"
+          },
+          {
+            "line": 84,
+            "expression": "block"
+          },
+          {
+            "line": 88,
+            "expression": "pending_blanks.append"
+          },
+          {
+            "line": 120,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 126,
+            "expression": "annotated_cells"
+          },
+          {
+            "line": 129,
+            "expression": "ValueError"
+          },
+          {
+            "line": 131,
+            "expression": "block"
+          },
+          {
+            "line": 135,
+            "expression": "block"
+          },
+          {
+            "line": 138,
+            "expression": "block"
+          },
+          {
+            "line": 144,
+            "expression": "diagnostics.append"
+          },
+          {
+            "line": 151,
+            "expression": "len"
+          },
+          {
+            "line": 155,
+            "expression": "len"
+          },
+          {
+            "line": 160,
+            "expression": "any"
+          },
+          {
+            "line": 65,
+            "expression": "len"
+          },
+          {
+            "line": 77,
+            "expression": "block"
+          },
+          {
+            "line": 81,
+            "expression": "line.lstrip"
+          },
+          {
+            "line": 83,
+            "expression": "line.startswith"
+          },
+          {
+            "line": 87,
+            "expression": "line.strip"
+          },
+          {
+            "line": 91,
+            "expression": "tuple"
+          },
+          {
+            "line": 93,
+            "expression": "block"
+          },
+          {
+            "line": 101,
+            "expression": "block"
+          },
+          {
+            "line": 106,
+            "expression": "line.lstrip"
+          },
+          {
+            "line": 113,
+            "expression": "line.lstrip()[1:].split('|', 1)[0].strip"
+          },
+          {
+            "line": 115,
+            "expression": "block"
+          },
+          {
+            "line": 130,
+            "expression": "len"
+          },
+          {
+            "line": 130,
+            "expression": "len"
+          },
+          {
+            "line": 146,
+            "expression": "dict"
+          },
+          {
+            "line": 72,
+            "expression": "len"
+          },
+          {
+            "line": 72,
+            "expression": "marker[2].strip"
+          },
+          {
+            "line": 78,
+            "expression": "len"
+          },
+          {
+            "line": 83,
+            "expression": "line.lstrip"
+          },
+          {
+            "line": 100,
+            "expression": "len"
+          },
+          {
+            "line": 100,
+            "expression": "len"
+          },
+          {
+            "line": 100,
+            "expression": "all"
+          },
+          {
+            "line": 114,
+            "expression": "source_key"
+          },
+          {
+            "line": 117,
+            "expression": "block"
+          },
+          {
+            "line": 146,
+            "expression": "zip"
+          },
+          {
+            "line": 160,
+            "expression": "d.get"
+          },
+          {
+            "line": 83,
+            "expression": "len"
+          },
+          {
+            "line": 83,
+            "expression": "len"
+          },
+          {
+            "line": 116,
+            "expression": "len"
+          },
+          {
+            "line": 116,
+            "expression": "len"
+          },
+          {
+            "line": 83,
+            "expression": "line.lstrip"
+          },
+          {
+            "line": 100,
+            "expression": "re.fullmatch"
+          },
+          {
+            "line": 113,
+            "expression": "line.lstrip()[1:].split"
+          },
+          {
+            "line": 113,
+            "expression": "line.lstrip"
+          }
+        ]
+      },
+      "source_ingest.register.cells": {
+        "path": "source_ingest/register.py",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+        "symbol": "source_ingest.register.cells",
+        "line": 13,
+        "end_line": 27,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 15,
+            "expression": "line.strip"
+          },
+          {
+            "line": 19,
+            "expression": "enumerate"
+          },
+          {
+            "line": 24,
+            "expression": "values.append"
+          },
+          {
+            "line": 16,
+            "expression": "line.startswith"
+          },
+          {
+            "line": 27,
+            "expression": "value.strip"
+          },
+          {
+            "line": 21,
+            "expression": "values.append"
+          }
+        ]
+      },
+      "source_ingest.register.source_key": {
+        "path": "source_ingest/register.py",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+        "symbol": "source_ingest.register.source_key",
+        "line": 30,
+        "end_line": 33,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 31,
+            "expression": "raw.startswith"
+          },
+          {
+            "line": 31,
+            "expression": "raw.endswith"
+          },
+          {
+            "line": 33,
+            "expression": "KEY.fullmatch"
+          }
+        ]
+      },
+      "source_ingest.register.annotated_cells": {
+        "path": "source_ingest/register.py",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+        "symbol": "source_ingest.register.annotated_cells",
+        "line": 36,
+        "end_line": 49,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 39,
+            "expression": "enumerate"
+          },
+          {
+            "line": 43,
+            "expression": "line[:boundaries[0]].strip"
+          },
+          {
+            "line": 46,
+            "expression": "suffix.strip"
+          },
+          {
+            "line": 48,
+            "expression": "line[a + 1:b].strip"
+          },
+          {
+            "line": 41,
+            "expression": "boundaries.append"
+          },
+          {
+            "line": 43,
+            "expression": "len"
+          },
+          {
+            "line": 48,
+            "expression": "zip"
+          },
+          {
+            "line": 49,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.evaluation_current": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.evaluation_current",
+        "line": 104,
+        "end_line": 111,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_task_fixture.accepted",
+          "source_ingest.durable_task_fixture.eligible",
+          "source_ingest.durable_task_fixture.pins"
+        ],
+        "call_expressions": [
+          {
+            "line": 105,
+            "expression": "s['manifests'].get"
+          },
+          {
+            "line": 108,
+            "expression": "accepted"
+          },
+          {
+            "line": 109,
+            "expression": "s['accounts'].get"
+          },
+          {
+            "line": 106,
+            "expression": "fail"
+          },
+          {
+            "line": 107,
+            "expression": "pins"
+          },
+          {
+            "line": 107,
+            "expression": "fail"
+          },
+          {
+            "line": 110,
+            "expression": "fail"
+          },
+          {
+            "line": 110,
+            "expression": "eligible"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.accepted": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.accepted",
+        "line": 72,
+        "end_line": 76,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_store.integer"
+        ],
+        "call_expressions": [
+          {
+            "line": 73,
+            "expression": "integer"
+          },
+          {
+            "line": 75,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 74,
+            "expression": "fail"
+          },
+          {
+            "line": 76,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.pins": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.pins",
+        "line": 97,
+        "end_line": 101,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_task_fixture.source_current"
+        ],
+        "call_expressions": [
+          {
+            "line": 98,
+            "expression": "source_current"
+          },
+          {
+            "line": 99,
+            "expression": "dict"
+          },
+          {
+            "line": 101,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.source_current": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.source_current",
+        "line": 88,
+        "end_line": 94,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_task_fixture.accepted"
+        ],
+        "call_expressions": [
+          {
+            "line": 89,
+            "expression": "fail"
+          },
+          {
+            "line": 91,
+            "expression": "fail"
+          },
+          {
+            "line": 92,
+            "expression": "fail"
+          },
+          {
+            "line": 93,
+            "expression": "accepted"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.eligible": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.eligible",
+        "line": 114,
+        "end_line": 127,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.adapter_identity",
+          "source_ingest.eligibility_fixture.slot"
+        ],
+        "call_expressions": [
+          {
+            "line": 120,
+            "expression": "a['observations'].get"
+          },
+          {
+            "line": 120,
+            "expression": "a['selected'].get"
+          },
+          {
+            "line": 120,
+            "expression": "q.slot"
+          },
+          {
+            "line": 121,
+            "expression": "q.adapter_identity"
+          },
+          {
+            "line": 125,
+            "expression": "min"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.adapter_identity": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.adapter_identity",
+        "line": 135,
+        "end_line": 136,
+        "repository_function_edges": [],
+        "call_expressions": [
+          {
+            "line": 136,
+            "expression": "deepcopy"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.slot": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.slot",
+        "line": 143,
+        "end_line": 144,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.digest"
+        ],
+        "call_expressions": [
+          {
+            "line": 144,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.proof_ok": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.proof_ok",
+        "line": 403,
+        "end_line": 423,
+        "repository_function_edges": [
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.identifier",
+          "source_ingest.durable_store.integer",
+          "source_ingest.durable_store.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 405,
+            "expression": "shape"
+          },
+          {
+            "line": 407,
+            "expression": "identifier"
+          },
+          {
+            "line": 407,
+            "expression": "identifier"
+          },
+          {
+            "line": 408,
+            "expression": "dict"
+          },
+          {
+            "line": 413,
+            "expression": "identifier"
+          },
+          {
+            "line": 413,
+            "expression": "integer"
+          },
+          {
+            "line": 416,
+            "expression": "any"
+          },
+          {
+            "line": 417,
+            "expression": "integer"
+          },
+          {
+            "line": 409,
+            "expression": "digest"
+          },
+          {
+            "line": 410,
+            "expression": "digest"
+          },
+          {
+            "line": 414,
+            "expression": "digest"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_observation": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_observation",
+        "line": 180,
+        "end_line": 191,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.hash_id",
+          "source_ingest.eligibility_fixture.identifier",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.number",
+          "source_ingest.eligibility_fixture.shape",
+          "source_ingest.eligibility_fixture.validate_account",
+          "source_ingest.eligibility_fixture.validate_window"
+        ],
+        "call_expressions": [
+          {
+            "line": 181,
+            "expression": "shape"
+          },
+          {
+            "line": 183,
+            "expression": "identifier"
+          },
+          {
+            "line": 183,
+            "expression": "validate_account"
+          },
+          {
+            "line": 183,
+            "expression": "number"
+          },
+          {
+            "line": 184,
+            "expression": "shape"
+          },
+          {
+            "line": 185,
+            "expression": "identifier"
+          },
+          {
+            "line": 185,
+            "expression": "label"
+          },
+          {
+            "line": 185,
+            "expression": "hash_id"
+          },
+          {
+            "line": 186,
+            "expression": "shape"
+          },
+          {
+            "line": 186,
+            "expression": "validate_window"
+          },
+          {
+            "line": 187,
+            "expression": "number"
+          },
+          {
+            "line": 187,
+            "expression": "number"
+          },
+          {
+            "line": 182,
+            "expression": "fail"
+          },
+          {
+            "line": 188,
+            "expression": "fail"
+          },
+          {
+            "line": 189,
+            "expression": "number"
+          },
+          {
+            "line": 191,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_window": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_window",
+        "line": 147,
+        "end_line": 150,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.number"
+        ],
+        "call_expressions": [
+          {
+            "line": 149,
+            "expression": "number"
+          },
+          {
+            "line": 149,
+            "expression": "number"
+          },
+          {
+            "line": 148,
+            "expression": "label"
+          },
+          {
+            "line": 150,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.label": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.label",
+        "line": 52,
+        "end_line": 55,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.canonical",
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 55,
+            "expression": "canonical"
+          },
+          {
+            "line": 54,
+            "expression": "fail"
+          },
+          {
+            "line": 53,
+            "expression": "type"
+          },
+          {
+            "line": 53,
+            "expression": "value.strip"
+          },
+          {
+            "line": 53,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.number": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.number",
+        "line": 73,
+        "end_line": 76,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 75,
+            "expression": "fail"
+          },
+          {
+            "line": 74,
+            "expression": "type"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_account": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_account",
+        "line": 108,
+        "end_line": 115,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.identifier",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 109,
+            "expression": "shape"
+          },
+          {
+            "line": 115,
+            "expression": "label"
+          },
+          {
+            "line": 112,
+            "expression": "fail"
+          },
+          {
+            "line": 114,
+            "expression": "identifier"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.identifier": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.identifier",
+        "line": 58,
+        "end_line": 64,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 61,
+            "expression": "fail"
+          },
+          {
+            "line": 63,
+            "expression": "fail"
+          },
+          {
+            "line": 60,
+            "expression": "type"
+          },
+          {
+            "line": 60,
+            "expression": "str"
+          },
+          {
+            "line": 60,
+            "expression": "uuid.UUID"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.shape": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.shape",
+        "line": 47,
+        "end_line": 49,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 49,
+            "expression": "fail"
+          },
+          {
+            "line": 48,
+            "expression": "type"
+          },
+          {
+            "line": 48,
+            "expression": "set"
+          },
+          {
+            "line": 48,
+            "expression": "set"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.hash_id": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.hash_id",
+        "line": 67,
+        "end_line": 70,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 68,
+            "expression": "any"
+          },
+          {
+            "line": 69,
+            "expression": "fail"
+          },
+          {
+            "line": 68,
+            "expression": "type"
+          },
+          {
+            "line": 68,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.add_manifest": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.add_manifest",
+        "line": 79,
+        "end_line": 85,
+        "repository_function_edges": [
+          "source_ingest.durable_store.canonical",
+          "source_ingest.durable_store.digest",
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 80,
+            "expression": "dict"
+          },
+          {
+            "line": 82,
+            "expression": "digest"
+          },
+          {
+            "line": 81,
+            "expression": "len"
+          },
+          {
+            "line": 81,
+            "expression": "fail"
+          },
+          {
+            "line": 83,
+            "expression": "fail"
+          },
+          {
+            "line": 81,
+            "expression": "canonical"
+          },
+          {
+            "line": 83,
+            "expression": "len"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.projection_current": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.projection_current",
+        "line": 136,
+        "end_line": 140,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_task_fixture.evaluation_current"
+        ],
+        "call_expressions": [
+          {
+            "line": 137,
+            "expression": "evaluation_current"
+          },
+          {
+            "line": 139,
+            "expression": "fail"
+          },
+          {
+            "line": 140,
+            "expression": "s['reviews'].get"
+          },
+          {
+            "line": 140,
+            "expression": "fail"
+          },
+          {
+            "line": 138,
+            "expression": "s['tasks'].get"
+          },
+          {
+            "line": 139,
+            "expression": "s['bindings'].get"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_adapter": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_adapter",
+        "line": 123,
+        "end_line": 132,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.hash_id",
+          "source_ingest.eligibility_fixture.identifier",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 124,
+            "expression": "shape"
+          },
+          {
+            "line": 125,
+            "expression": "identifier"
+          },
+          {
+            "line": 125,
+            "expression": "label"
+          },
+          {
+            "line": 125,
+            "expression": "hash_id"
+          },
+          {
+            "line": 127,
+            "expression": "fail"
+          },
+          {
+            "line": 130,
+            "expression": "fail"
+          },
+          {
+            "line": 131,
+            "expression": "label"
+          },
+          {
+            "line": 132,
+            "expression": "len"
+          },
+          {
+            "line": 132,
+            "expression": "len"
+          },
+          {
+            "line": 132,
+            "expression": "fail"
+          },
+          {
+            "line": 126,
+            "expression": "type"
+          },
+          {
+            "line": 129,
+            "expression": "type"
+          },
+          {
+            "line": 129,
+            "expression": "len"
+          },
+          {
+            "line": 132,
+            "expression": "set"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.effect_current": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.effect_current",
+        "line": 130,
+        "end_line": 133,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail",
+          "source_ingest.durable_task_fixture.accepted",
+          "source_ingest.durable_task_fixture.evaluation_current"
+        ],
+        "call_expressions": [
+          {
+            "line": 131,
+            "expression": "evaluation_current"
+          },
+          {
+            "line": 133,
+            "expression": "accepted"
+          },
+          {
+            "line": 132,
+            "expression": "fail"
+          },
+          {
+            "line": 132,
+            "expression": "s['tasks'].get"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.checked": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.checked",
+        "line": 35,
+        "end_line": 39,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 37,
+            "expression": "fn"
+          },
+          {
+            "line": 39,
+            "expression": "fail"
+          },
+          {
+            "line": 39,
+            "expression": "str"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_descriptor": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_descriptor",
+        "line": 91,
+        "end_line": 99,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.hash_id",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.number",
+          "source_ingest.eligibility_fixture.shape"
+        ],
+        "call_expressions": [
+          {
+            "line": 92,
+            "expression": "shape"
+          },
+          {
+            "line": 96,
+            "expression": "label"
+          },
+          {
+            "line": 96,
+            "expression": "label"
+          },
+          {
+            "line": 99,
+            "expression": "hash_id"
+          },
+          {
+            "line": 95,
+            "expression": "fail"
+          },
+          {
+            "line": 98,
+            "expression": "number"
+          }
+        ]
+      },
+      "source_ingest.durable_task_fixture.vector": {
+        "path": "source_ingest/durable_task_fixture.py",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "symbol": "source_ingest.durable_task_fixture.vector",
+        "line": 143,
+        "end_line": 147,
+        "repository_function_edges": [
+          "source_ingest.durable_store.fail"
+        ],
+        "call_expressions": [
+          {
+            "line": 147,
+            "expression": "dict"
+          },
+          {
+            "line": 145,
+            "expression": "len"
+          },
+          {
+            "line": 145,
+            "expression": "fail"
+          }
+        ]
+      },
+      "source_ingest.eligibility_fixture.validate_policy": {
+        "path": "source_ingest/eligibility_fixture.py",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "symbol": "source_ingest.eligibility_fixture.validate_policy",
+        "line": 158,
+        "end_line": 170,
+        "repository_function_edges": [
+          "source_ingest.eligibility_fixture.fail",
+          "source_ingest.eligibility_fixture.identifier",
+          "source_ingest.eligibility_fixture.label",
+          "source_ingest.eligibility_fixture.number",
+          "source_ingest.eligibility_fixture.shape",
+          "source_ingest.eligibility_fixture.slot",
+          "source_ingest.eligibility_fixture.validate_window"
+        ],
+        "call_expressions": [
+          {
+            "line": 159,
+            "expression": "shape"
+          },
+          {
+            "line": 161,
+            "expression": "identifier"
+          },
+          {
+            "line": 161,
+            "expression": "number"
+          },
+          {
+            "line": 161,
+            "expression": "label"
+          },
+          {
+            "line": 161,
+            "expression": "number"
+          },
+          {
+            "line": 164,
+            "expression": "set"
+          },
+          {
+            "line": 160,
+            "expression": "fail"
+          },
+          {
+            "line": 163,
+            "expression": "fail"
+          },
+          {
+            "line": 166,
+            "expression": "shape"
+          },
+          {
+            "line": 167,
+            "expression": "validate_window"
+          },
+          {
+            "line": 167,
+            "expression": "number"
+          },
+          {
+            "line": 168,
+            "expression": "slot"
+          },
+          {
+            "line": 170,
+            "expression": "keys.add"
+          },
+          {
+            "line": 163,
+            "expression": "type"
+          },
+          {
+            "line": 169,
+            "expression": "fail"
+          },
+          {
+            "line": 163,
+            "expression": "len"
+          }
+        ]
+      }
+    },
+    "source_files": {
+      "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+      "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+      "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+      "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+      "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7"
+    },
+    "condition": "Entradas de fixture como builtins cerrados; callbacks de librerías estándar no sustituidos. Lectura AST, no import/ejecución de fuente.",
+    "warning": "Cierre de funciones de módulo y referencias nominales/importadas sobreaproximado, no prueba general de despacho Python. Las llamadas dinámicas checked(fn,value) se incluyen por las referencias q.validate_* presentes en client_reduce; funciones anidadas están incluidas en sus cuerpos AST."
+  },
+  "additional_methods": [
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client._pin",
+      "line": 511,
+      "end_line": 521
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.import_event",
+      "line": 537,
+      "end_line": 547
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.review",
+      "line": 549,
+      "end_line": 551
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.perform",
+      "line": 523,
+      "end_line": 535
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.snapshot",
+      "line": 508,
+      "end_line": 509
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.dispatch",
+      "line": 562,
+      "end_line": 576
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.reconcile",
+      "line": 578,
+      "end_line": 588
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "Client.capture",
+      "line": 471,
+      "end_line": 473
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "Client.perform",
+      "line": 466,
+      "end_line": 469
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "Client.snapshot",
+      "line": 464,
+      "end_line": 464
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "Client.dispatch",
+      "line": 489,
+      "end_line": 499
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "Client.reconcile",
+      "line": 501,
+      "end_line": 509
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Remote.execute",
+      "line": 484,
+      "end_line": 490
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "symbol": "Store.create",
+      "line": 188,
+      "end_line": 213
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "symbol": "Store.snapshot",
+      "line": 355,
+      "end_line": 358
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "symbol": "Store.transact",
+      "line": 360,
+      "end_line": 373
+    },
+    {
+      "path": "source_ingest/durable_store.py",
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "symbol": "Store._publish",
+      "line": 312,
+      "end_line": 353
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "DurableLab.close",
+      "line": 638,
+      "end_line": 653
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "DurableLab.fresh",
+      "line": 632,
+      "end_line": 636
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "RelationalLab.close",
+      "line": 546,
+      "end_line": 558
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "RelationalLab.fresh",
+      "line": 542,
+      "end_line": 544
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+      "symbol": "TemporaryFixtureLab.close",
+      "line": 541,
+      "end_line": 547
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+      "symbol": "FixtureStore.inspect",
+      "line": 502,
+      "end_line": 506
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+      "symbol": "FixtureStore._load",
+      "line": 370,
+      "end_line": 400
+    },
+    {
+      "path": "source_ingest/incremental_fixture.py",
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+      "symbol": "FixtureStore._locked",
+      "line": 320,
+      "end_line": 347
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.error",
+      "line": 33,
+      "end_line": 34
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.state",
+      "line": 36,
+      "end_line": 36
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.lab",
+      "line": 29,
+      "end_line": 31
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.error",
+      "line": 26,
+      "end_line": 27
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.state",
+      "line": 28,
+      "end_line": 28
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.plan",
+      "line": 35,
+      "end_line": 40
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.lab",
+      "line": 23,
+      "end_line": 25
+    },
+    {
+      "path": "testing/D5/durable_support.py",
+      "sha256": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+      "symbol": "independent",
+      "line": 65,
+      "end_line": 96
+    },
+    {
+      "path": "testing/D5/relational_support.py",
+      "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+      "symbol": "independent",
+      "line": 64,
+      "end_line": 85
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "symbol": "BaseRecorder.wrap_boundary",
+      "line": 560,
+      "end_line": 637
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "symbol": "BaseRecorder.wrap_return",
+      "line": 638,
+      "end_line": 659
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "symbol": "CausalState.retain",
+      "line": 468,
+      "end_line": 475
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "symbol": "DomainState.retain",
+      "line": 1240,
+      "end_line": 1242
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "symbol": "DomainState.link",
+      "line": 1252,
+      "end_line": 1263
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "symbol": "Recorder.constructor",
+      "line": 275,
+      "end_line": 299
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "symbol": "Recorder.install",
+      "line": 332,
+      "end_line": 382
+    }
+  ],
+  "closed_data_precondition": "Builtins de fixture y stdlib no sustituida: deepcopy/json/hash/regex/UUID no reciben objetos con métodos arbitrarios de usuario.",
+  "checked_parameter_resolution": "checked(fn,value) sólo recibe q.validate_descriptor/validate_policy/validate_account/validate_adapter/validate_observation en client_reduce pinneado; sus funciones están en el cierre nominal sobreaproximado.",
+  "methods_outside_function_closure": {
+    "T_Client_pin": "FixtureStore.inspect -> _locked/_load, sin llamar snapshot/advance/transact; sus lecturas y copia siguen presentes.",
+    "Store_create": "genesis y _publish con hook=None del Store DF07; sin snapshot/transact. La rama ALREADY_EXISTS aborta antes de genesis.",
+    "lab_close": "DurableLab/RelationalLab y TemporaryFixtureLab.close: operaciones de propiedad/lectura/cleanup propias; no observer registrado de close."
+  },
+  "state_argument_oracle": "self.state llama independent una vez. El wrapper emite un CAUSAL_TERMINAL; retener oráculo y enlaces añade referencias/filas pero no eventos adicionales. No da oráculo independiente por etiqueta.",
+  "no_claims": [
+    "No es una prueba general de ausencia de despacho Python arbitrario.",
+    "No establece límites de CPU, memoria, valores serializados o referencias.",
+    "Cero eventos observados en una función no es ausencia de mutación, lectura, cleanup o excepción.",
+    "Ninguna recuperación integrada o fsync nativo se deduce de este cierre."
+  ],
+  "next_documentary_focus": "Completar las llamadas directas y oráculos/protocolos de DR23, cuyo subtotal cubierto es1584, y después el resto de raíces sin usar2048 como cota de demanda circular.",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

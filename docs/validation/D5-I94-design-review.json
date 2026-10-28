@@ -1,0 +1,971 @@
+{
+  "schema": "d5.i94-capacity-contract-design.v1",
+  "increment": "I94",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "PREPARED_FOR_REVIEW_NUMERIC_CAPTURE_CERTIFICATE_UNRESOLVED",
+  "authority": "EXPLICIT_USER_A_AFTER_I93_AUTHORIZES_DOCUMENTARY_CAPACITY_DESIGN_ONLY",
+  "I93_documentary_option_approved": "A",
+  "implementation_authorized": false,
+  "component_execution_authorized": false,
+  "functional_execution_authorized": false,
+  "publication_authorized": false,
+  "inputs": {
+    "docs/design/D5-I82-CAUSAL-CAPTURE-DESIGN.md": "c39c87e990eb045767333d6bfe8bbed20d9c9a2688b83ffaabbd38e059c56867",
+    "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md": "fcf235192926109e1941f4dcb24839ca260da56c88b7b3e1fa820872b803ac05",
+    "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md": "84be3ee003536f4f32cc51d1cb3057914d6469964a936bccc2867d695656da6b",
+    "docs/design/D5-I91-NEXT-CAPTURE-PROPOSAL.md": "48c361916d6858b9044cf63cc45ff740ab2ee81084c3372f8c113a72f08b53d0",
+    "docs/design/D5-I93-CAPACITY-DECISION.md": "2f1e33b6cb23361a70aff1a47c898a2f84bb944d45a71bd951a9b39101472cc6",
+    "docs/validation/D5-I83-integrity.json": "7e497955ea7ffbbf50d9f0c3c1a546bf68df5868b5982a36a97978f8eed3a3c8",
+    "docs/validation/D5-I84-integrity.json": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd",
+    "docs/validation/D5-I85-integrity.json": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+    "docs/validation/D5-I86-integrity.json": "4e780c0cf2e2ecf147d7e4a620a928735b0c91e8ba14ea6a1f73a37e33957488",
+    "docs/validation/D5-I87-integrity.json": "7913ec81f115b18e33f7fb1860a44e4877a1fce631fe89637320a5cba198050c",
+    "docs/validation/D5-I88-integrity.json": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+    "docs/validation/D5-I89-integrity.json": "9dd8b2c90d4f647cde9e1014a41ed35b1b005a78d1a0140b1d9281d8460faf2c",
+    "docs/validation/D5-I90-integrity.json": "3be0439c5700fd35e2df605d6de4f9a0342e5119969965739d08645884a3455e",
+    "docs/validation/D5-I91-integrity.json": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+    "docs/validation/D5-I91-next-capture-integrity.json": "d061295be7523017aaa489621795276c2e5ddf1e706affba902a81af5ea71783",
+    "docs/validation/D5-I92-P01/runner-raw.json": "afb749725efb7d7ac8f5362e7684c23dd7e9ec50bcf6960ad2dbf8f6803fac2d",
+    "docs/validation/D5-I92-P01/sidecar.json": "eda2a0752e9016253073a54cc793c0c3767288a7aaeef390877d0dd7d6639d37",
+    "docs/validation/D5-I92-integrity.json": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+    "docs/validation/D5-I92-results.json": "e9b343dab345bed17bcc611121d53b420c6572b81b8255db5da70d687cf487d3",
+    "docs/validation/D5-I93-capacity-review.json": "4ca6a8f64e505af62b5be300222503c9b4778da50f7ddac6a5edf814e0863550",
+    "docs/validation/D5-I93-integrity.json": "73f5a193c1d3c5b6ac5be309deac782a44dd53c7304fbcb01481114088e4db40",
+    "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json": "1bf3cb8c1d267cc6b4a2c442f103333d93066b55f61b0c30a8aeaeccfca58c68",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/durable_ambiguity_fixture.py": "cf8b211c61e1981192c89eb09edc2d8f0435494c285b63e21c705068c2219fd4",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/adoption_scenarios.py": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+    "testing/D5/bootstrap_scenarios.py": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+    "testing/D5/demo_durable_integration.py": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+    "testing/D5/demo_durable_relational.py": "215ce133b3d9c31c2968856cce891694ba98f16f330175d9a12822c653b7fabd",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_register.py": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/isolated_local_edit_scenarios.py": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+    "testing/D5/local_edit_scenarios.py": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+    "testing/D5/local_reappearance_scenarios.py": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+    "testing/D5/mapping_scenarios.py": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+    "testing/D5/postgres_scenarios.py": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+    "testing/D5/reappearance_scenarios.py": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/review_scenarios.py": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+    "testing/D5/run_adoption_lab.py": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_bootstrap_lab.py": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_isolated_local_edit_lab.py": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+    "testing/D5/run_local_edit_lab.py": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+    "testing/D5/run_local_reappearance_lab.py": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+    "testing/D5/run_mapping_lab.py": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/run_postgres_lab.py": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+    "testing/D5/run_reappearance_lab.py": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/D5/run_review_lab.py": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+    "testing/D5/run_v30_lab.py": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+    "testing/D5/v30_scenarios.py": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "testing/prospective_capture_paged/capture.py": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+  },
+  "source_audit_path": "docs/validation/D5-I94-source-capacity-audit.json",
+  "source_audit_sha256": "4eafab2dedf99bcd93fc645cb392b5b0af0eadae35790a84c3a46539337027c4",
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_paged/capture.py",
+      "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+      "owner": "Recorder",
+      "method": "owner",
+      "line": 144,
+      "end_line": 151,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_paged/capture.py",
+      "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+      "owner": "Recorder",
+      "method": "constructor",
+      "line": 152,
+      "end_line": 176,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_paged/capture.py",
+      "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+      "owner": "Recorder",
+      "method": "stop",
+      "line": 177,
+      "end_line": 213,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_paged/capture.py",
+      "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+      "owner": "Recorder",
+      "method": "finish",
+      "line": 214,
+      "end_line": 229,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "owner",
+      "line": 257,
+      "end_line": 274,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "constructor",
+      "line": 275,
+      "end_line": 299,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "fixture_constructor",
+      "line": 300,
+      "end_line": 319,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "stop",
+      "line": 383,
+      "end_line": 425,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "finish",
+      "line": 426,
+      "end_line": 444,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": "LateBindings",
+      "method": "prepare",
+      "line": 130,
+      "end_line": 145,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": "Recorder",
+      "method": "__init__",
+      "line": 149,
+      "end_line": 152,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "CausalState",
+      "method": "ref",
+      "line": 414,
+      "end_line": 414,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "CausalState",
+      "method": "object_ref",
+      "line": 415,
+      "end_line": 419,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "CausalState",
+      "method": "link",
+      "line": 488,
+      "end_line": 491,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "CausalState",
+      "method": "message",
+      "line": 503,
+      "end_line": 520,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "CausalState",
+      "method": "exit",
+      "line": 521,
+      "end_line": 531,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "BaseRecorder",
+      "method": "emit",
+      "line": 545,
+      "end_line": 552,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "ParentalState",
+      "method": "pipe_return",
+      "line": 972,
+      "end_line": 979,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "ParentalState",
+      "method": "message",
+      "line": 1009,
+      "end_line": 1027,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "Recorder",
+      "method": "emit",
+      "line": 1055,
+      "end_line": 1068,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "Recorder",
+      "method": "wrap_return",
+      "line": 1069,
+      "end_line": 1081,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "DomainState",
+      "method": "declaration",
+      "line": 1203,
+      "end_line": 1220,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "DomainState",
+      "method": "retain",
+      "line": 1240,
+      "end_line": 1242,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "DomainState",
+      "method": "close_call",
+      "line": 1245,
+      "end_line": 1251,
+      "authority": "SOURCE_EXPECTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "DomainState",
+      "method": "link",
+      "line": 1252,
+      "end_line": 1263,
+      "authority": "SOURCE_EXPECTATION"
+    }
+  ],
+  "quota_comparison": [
+    {
+      "key": "event_bytes",
+      "current": 4096,
+      "proposed_default": 4096,
+      "proposed_full_P01_value": 4096,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "events_test",
+      "current": 2048,
+      "proposed_default": 2048,
+      "proposed_full_P01_value": 2048,
+      "revision_status": "UNCHANGED",
+      "accounting": "e_t <=2048 for each test including subcases/callbacks",
+      "reason": "Per-test hard cap; not proof that every original test fits.",
+      "applied": false
+    },
+    {
+      "key": "events_campaign",
+      "current": 131072,
+      "proposed_default": 131072,
+      "proposed_full_P01_value": 131072,
+      "revision_status": "UNCHANGED",
+      "accounting": "E_source = sum(e_t for every one of321 pinned test identities)",
+      "reason": "sum of per-test caps =657408; simultaneous feasibility under131072 requires source multiplicities.",
+      "applied": false
+    },
+    {
+      "key": "page_bytes",
+      "current": 2097152,
+      "proposed_default": 2097152,
+      "proposed_full_P01_value": 2097152,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "pages",
+      "current": 32,
+      "proposed_default": 32,
+      "proposed_full_P01_value": 32,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "event_pages_total_bytes",
+      "current": 67108864,
+      "proposed_default": 67108864,
+      "proposed_full_P01_value": 67108864,
+      "revision_status": "UNCHANGED",
+      "accounting": "sum(encoded_page_i) <=64MiB",
+      "reason": "E_source*4096 is not a realistic estimate; maximal legal event sizes exceed the page budget.",
+      "applied": false
+    },
+    {
+      "key": "raw_bytes",
+      "current": 12582912,
+      "proposed_default": 12582912,
+      "proposed_full_P01_value": 12582912,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "index_sidecar_bytes",
+      "current": 12582912,
+      "proposed_default": 12582912,
+      "proposed_full_P01_value": 12582912,
+      "revision_status": "UNCHANGED",
+      "accounting": "encoded(full_tables + frames + manifests + input_pins + diagnostic) <=12MiB",
+      "reason": "No slicing, omitted witnesses or historical unions as substitutes.",
+      "applied": false
+    },
+    {
+      "key": "context_bytes",
+      "current": 12582912,
+      "proposed_default": 12582912,
+      "proposed_full_P01_value": 12582912,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "launch_bytes",
+      "current": 12582912,
+      "proposed_default": 12582912,
+      "proposed_full_P01_value": 12582912,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "package_bytes",
+      "current": 117444608,
+      "proposed_default": 117444608,
+      "proposed_full_P01_value": 117444608,
+      "revision_status": "UNCHANGED",
+      "accounting": "raw + sidecar + all_pages + context + sibling_launcher + OWNER <=112MiB+4096",
+      "reason": "At all individual maxima:36MiB+64MiB+12MiB+36B =112MiB+36B; fits by4060B, counting launcher once.",
+      "applied": false
+    },
+    {
+      "key": "evidence_unique_bytes",
+      "current": 134217728,
+      "proposed_default": 134217728,
+      "proposed_full_P01_value": 134217728,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "evidence_read_bytes",
+      "current": 268435456,
+      "proposed_default": 268435456,
+      "proposed_full_P01_value": 268435456,
+      "revision_status": "UNCHANGED",
+      "accounting": "all actual reads including finish verification within one evidence Reader <=256MiB",
+      "reason": "Three scans of a maximum112MiB package exceed256MiB; inspect actual reader schedule rather than assuming independent maxima fit.",
+      "applied": false
+    },
+    {
+      "key": "operand_bytes",
+      "current": 16777216,
+      "proposed_default": 16777216,
+      "proposed_full_P01_value": 16777216,
+      "revision_status": "UNCHANGED",
+      "accounting": "original + projections + encoded/hash auxiliaries <=16MiB per value",
+      "reason": "A smaller persisted digest does not excuse oversized source value or auxiliary representations.",
+      "applied": false
+    },
+    {
+      "key": "frames",
+      "current": 4096,
+      "proposed_default": 4096,
+      "proposed_full_P01_value": 4096,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "refs",
+      "current": 16384,
+      "proposed_default": 16384,
+      "proposed_full_P01_value": null,
+      "revision_status": "CONDITIONAL_NUMERIC_REVISION_UNRESOLVED",
+      "accounting": "R_source = sum(active_site_charge_i * certified_multiplicity_i)",
+      "reason": "Integer replacement unresolved; keep16384 until a later approved numeric certificate. No multiplier of I92 prefix.",
+      "applied": false
+    },
+    {
+      "key": "depth",
+      "current": 32,
+      "proposed_default": 32,
+      "proposed_full_P01_value": 32,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "string",
+      "current": 4096,
+      "proposed_default": 4096,
+      "proposed_full_P01_value": 4096,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "input_paths",
+      "current": 4096,
+      "proposed_default": 4096,
+      "proposed_full_P01_value": 4096,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "input_file_bytes",
+      "current": 16777216,
+      "proposed_default": 16777216,
+      "proposed_full_P01_value": 16777216,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "input_unique_bytes",
+      "current": 134217728,
+      "proposed_default": 134217728,
+      "proposed_full_P01_value": 134217728,
+      "revision_status": "UNCHANGED",
+      "accounting": "size(union of documentary names actually read by one input Reader) <=128MiB",
+      "reason": "Do not unite all historical preservation inputs with future runtime pins.",
+      "applied": false
+    },
+    {
+      "key": "input_read_bytes",
+      "current": 268435456,
+      "proposed_default": 268435456,
+      "proposed_full_P01_value": 268435456,
+      "revision_status": "UNCHANGED",
+      "accounting": "registry + authority + pins + runner_before + runner_after + repeated checks + finish <=256MiB",
+      "reason": "Authority/source/contract reads accumulate; source-derived schedule must be pinned anew.",
+      "applied": false
+    },
+    {
+      "key": "wait_seconds",
+      "current": 20,
+      "proposed_default": 20,
+      "proposed_full_P01_value": 20,
+      "revision_status": "UNCHANGED",
+      "accounting": "Exact current hard cap and same accounting scope",
+      "reason": "No source-supported revision proposed; unchanged in the future default until numeric review.",
+      "applied": false
+    },
+    {
+      "key": "campaign_seconds",
+      "current": 900,
+      "proposed_default": 900,
+      "proposed_full_P01_value": 900,
+      "revision_status": "UNCHANGED",
+      "accounting": "external900s; existing internal campaign bound900s",
+      "reason": "No complexity/capacity guarantee derives from wall-clock allowance.",
+      "applied": false
+    }
+  ],
+  "resource_envelope": {
+    "kind": "SOURCE_DERIVED_SYMBOLIC_ACCOUNTING_WITH_UNRESOLVED_MULTIPLICITIES",
+    "R": "sum(q_i*N_i) over active inherited/overridden charging sites; witness-dependent q_i use certified maximum cardinality",
+    "events": "sum(e_t) over321 identities and all original callbacks/subcases; e_t<=2048",
+    "per_test_cap_sum": 657408,
+    "campaign_event_cap": 131072,
+    "per_test_cap_sum_fits_campaign": false,
+    "maximum_event_payload_sum": 536870912,
+    "event_page_cap": 67108864,
+    "all_event_maxima_fit_pages": false,
+    "package_individual_maxima_sum_bytes": 117440548,
+    "package_cap_bytes": 117444608,
+    "package_headroom_at_individual_maxima_bytes": 4060,
+    "three_maximum_package_scans_bytes": 352321644,
+    "evidence_reader_cap": 268435456,
+    "three_maximum_scans_fit": false,
+    "full_P01_reference_upper_bound": null,
+    "full_P01_all_quota_capacity_demonstrated": false,
+    "uncertainty": "Syntactic local loop bounds are not transitive multiplicities; data/branches/MRO/threads and original child protocols require proof. No source loop is executed."
+  },
+  "alternatives": [
+    {
+      "id": "ALT01",
+      "description": "Keep16384 and propose a lossless new representation",
+      "decision": "FEASIBILITY_NOT_ESTABLISHED",
+      "constraint": "No reset, uncharged counter, sampling, discarded witnesses, fake command receipt or pointer relabeling."
+    },
+    {
+      "id": "ALT02",
+      "description": "Increase refs using13/321 extrapolation or a fixed multiplier",
+      "decision": "REJECTED_UNJUSTIFIED",
+      "constraint": "No numeric quota is justified by I92 prefix; all quotas must be reviewed jointly."
+    },
+    {
+      "id": "ALT03",
+      "description": "Versioned capacity certificate with explicit numeric limits and atomic global charging",
+      "decision": "RECOMMENDED_DESIGN_WITH_BLOCKING_CERTIFICATE_GATE",
+      "constraint": "Every changed integer and site multiplicity needs a pinned basis; until then full capture remains blocked and old limits apply."
+    },
+    {
+      "id": "ALT04",
+      "description": "Streaming or interning without evidence loss",
+      "decision": "OPTIONAL_ONLY_WITH_SEPARATE_ACCOUNTING_PROOF",
+      "constraint": "Byte or memory savings do not erase cumulative logical reference allocations; final evidence must retain all required observations under one package."
+    }
+  ],
+  "proposed_certificate": {
+    "schema": "d5.capacity-certificate.v1",
+    "required_fields": [
+      "source_pins",
+      "inventory_sha256",
+      "charging_sites",
+      "multiplicity_bounds",
+      "proposed_numeric_limits",
+      "joint_resource_envelope",
+      "unresolved",
+      "review_decision"
+    ],
+    "unresolved_must_be_empty_for_numeric_capacity_claim": true,
+    "numeric_refs_proposed": null,
+    "all_quota_revision_applied": false,
+    "capacity_status": "NOT_ESTABLISHED",
+    "no_claim_of_fitting_321_12": true
+  },
+  "atomic_rules": [
+    "Reserve a complete nonnegative exact-int charge under one lock before any mutation of reference-bearing structures. Reject if n>limit-used, without incrementing.",
+    "The allocation lock protects instrumentation only. Never hold it across the original callable, domain I/O, waits or cleanup; preserve original synchronization and calls.",
+    "A reservation commits exactly once when all candidate rows pass existing field/byte/value checks. On failure, the whole reference-bearing mutation must be absent; previously committed evidence remains. Do not rollback counts already committed or reuse an allocated public identity.",
+    "Allocation capacity and raw/table byte growth are preflighted jointly. Generic owner/observer paths also need coverage; replacing only reference() after a structure mutation is insufficient.",
+    "First fault latches; original callable executes exactly once with original return/exception identity. Cleanup/restoration completes through existing paths; capture is invalid, no auto retry.",
+    "Diagnostic stays in the existing4096-byte allowlisted envelope and first phase/code; fixed aggregate resource summary may be inline in normal context only if encoded within current caps, never a bypass counter or new channel.",
+    "Reader recomputes graph membership/headers/context and validates committed counts with source/certificate; favorable resource numbers do not waive semantic missing evidence."
+  ],
+  "future_components": {
+    "increment": "I95",
+    "scope": "SYNTHETIC_CAPACITY_PLANNER_AND_ATOMIC_GUARD_ONLY",
+    "namespace": "testing/prospective_capture_capacity",
+    "files": [
+      "capacity.py",
+      "test_capacity.py",
+      "run_capacity_lab.py",
+      "README.md"
+    ],
+    "planning_manifest": "docs/validation/D5-CAPACITY-PLANNER-MANIFEST.json",
+    "created": false,
+    "external_seconds": 300,
+    "component_cases": 32,
+    "product_capture_registry_created": false,
+    "current_default_refs": 16384,
+    "no_numeric_quota_increase_until_separate_approved_certificate": true
+  },
+  "proposed_component_tests": [
+    {
+      "id": "CB01",
+      "trigger": "Prior seals and candidate source pins",
+      "expected_oracle": "Mismatch rejects; I86/I89/I92 and I93 remain unchanged.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB02",
+      "trigger": "Registry compares every quota",
+      "expected_oracle": "Missing/extra/renamed quota or stale hash rejects; no fallback default.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB03",
+      "trigger": "Atomic charge reaches exact shared refs limit",
+      "expected_oracle": "Last allowed allocation commits once; retained count equals limit.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB04",
+      "trigger": "Charge of one beyond refs",
+      "expected_oracle": "Reject before counter or evidence/table mutation; preserved count does not exceed cap.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB05",
+      "trigger": "Variable charge 1+len(witnesses) crossing cap",
+      "expected_oracle": "Whole allocation preflight rejects; no partially added witness/link/key.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB06",
+      "trigger": "Invalid charge types/values",
+      "expected_oracle": "bool/float/string/negative/overflow and nonbuiltin values reject without coercion.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB07",
+      "trigger": "Several threads consume one ledger",
+      "expected_oracle": "One global atomic budget; no duplicate reservation, races or per-thread reset.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB08",
+      "trigger": "Frame/table/page changes",
+      "expected_oracle": "Same global counter and quota; switching context never resets.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB09",
+      "trigger": "Source graph has overridden charging methods",
+      "expected_oracle": "Count actual pinned MRO; inactive parent copies are not added by syntactic counting.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB10",
+      "trigger": "Certificate absent/unknown multiplicity",
+      "expected_oracle": "Full-P01 capacity status NOT_ESTABLISHED; worker release not authorized.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB11",
+      "trigger": "Certificate pins or321/12 inventory differ",
+      "expected_oracle": "Reject before runner import; no subset or sum of older packets.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB12",
+      "trigger": "Certificate numeric candidate only clears I92 prefix",
+      "expected_oracle": "Reject as unsupported basis; no extrapolation of13/321.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB13",
+      "trigger": "Events at exact per-test limit and one more",
+      "expected_oracle": "All events retained to boundary; next callback invalidates, no sample/drop.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB14",
+      "trigger": "Events exact campaign limit and one more",
+      "expected_oracle": "Global event ceiling independent of reference budget.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB15",
+      "trigger": "Row/event encoded4096 and4097 bytes",
+      "expected_oracle": "Exact byte check; UTF8/escaping included, no truncation.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB16",
+      "trigger": "Page exact2MiB, rollover and32-page boundary",
+      "expected_oracle": "Headers/commas included; exceeding pages or64MiB fails without overwrite.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB17",
+      "trigger": "Raw/sidecar/context/launcher exact12MiB and one more",
+      "expected_oracle": "Four independent checks, plus combined package budget.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB18",
+      "trigger": "Package37 members and112MiB+4KiB exact/one over",
+      "expected_oracle": "Launcher counted once; OWNER and page names validated, no hidden extra member.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB19",
+      "trigger": "Reader unique/read limits exact and one over",
+      "expected_oracle": "Single accumulated Reader across before/after/authority/finish; no reset.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB20",
+      "trigger": "Maximum package scanned three times",
+      "expected_oracle": "Admission rejects predicted overread even if each independent byte cap fits.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB21",
+      "trigger": "Operand source and auxiliaries exceed16MiB",
+      "expected_oracle": "Reject even when emitted digest/projection is small.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB22",
+      "trigger": "Depth32/string4096/frames4096 boundaries",
+      "expected_oracle": "No quota bypass through subcases, encoding or alternate tables.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB23",
+      "trigger": "Pinned source loops have local literal bounds",
+      "expected_oracle": "Tag local bounds only; never infer full call closure or runtime count.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB24",
+      "trigger": "Data-driven iteration, recursive helper or external branch",
+      "expected_oracle": "Unknown propagates; do not replace with0, N/A or observed prefix count.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB25",
+      "trigger": "Witness identity and contextual source sets",
+      "expected_oracle": "Retain all object refs, role/family/context and authorities; no merging physical state.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB26",
+      "trigger": "Repeated pointers in distinct evidence structures",
+      "expected_oracle": "Charge real materialization; do not erase charges by string interning/dedup labels.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB27",
+      "trigger": "Resource error on original wrapper return/exception",
+      "expected_oracle": "Original call/return/exception identity preserved; latch and stop between tests.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB28",
+      "trigger": "First diagnostic then later budget/finalization errors",
+      "expected_oracle": "First phase/code stable and allowlisted; no free-text traceback/objects.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB29",
+      "trigger": "Partial normal/failure-envelope write",
+      "expected_oracle": "One attempt only; no JSON repair/retry or second envelope.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB30",
+      "trigger": "Observer changed/cleanup/restore",
+      "expected_oracle": "Identity checked; restore originals, own roots only, sibling preserved, no new product cleanup.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB31",
+      "trigger": "Resource certificate is valid but semantic evidence missing",
+      "expected_oracle": "No budget waiver for receipt/oracle/link/pending child/null policy requirements.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    },
+    {
+      "id": "CB32",
+      "trigger": "Planning lab ends",
+      "expected_oracle": "Only synthetic planner components; no capture authority/destination, IR03 or publication.",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I95_SYNTHETIC_CAPACITY_PLANNER_ONLY"
+    }
+  ],
+  "future_functional": {
+    "increment": "I96_OR_LATER_SEPARATE_DECISION",
+    "status": "BLOCKED_NUMERIC_CERTIFICATE_PROFILE_AND_COMPONENT_VALIDATION_REQUIRED",
+    "scope": "P01_COMPLETE_321_TESTS_12_GROUPS",
+    "external_seconds": 900,
+    "automatic_retries": 0,
+    "authority_created": false,
+    "destination_created": false,
+    "launch_copy_created": false,
+    "authority_paths_not_yet_assigned": true,
+    "requires_separate_new_profile_design": true
+  },
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "old_tests_reexecuted": false,
+  "quota_changed": false,
+  "prior_seals_verified": {
+    "docs/validation/D5-I83-integrity.json": "7e497955ea7ffbbf50d9f0c3c1a546bf68df5868b5982a36a97978f8eed3a3c8",
+    "docs/validation/D5-I84-integrity.json": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd",
+    "docs/validation/D5-I85-integrity.json": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+    "docs/validation/D5-I86-integrity.json": "4e780c0cf2e2ecf147d7e4a620a928735b0c91e8ba14ea6a1f73a37e33957488",
+    "docs/validation/D5-I87-integrity.json": "7913ec81f115b18e33f7fb1860a44e4877a1fce631fe89637320a5cba198050c",
+    "docs/validation/D5-I88-integrity.json": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+    "docs/validation/D5-I89-integrity.json": "9dd8b2c90d4f647cde9e1014a41ed35b1b005a78d1a0140b1d9281d8460faf2c",
+    "docs/validation/D5-I90-integrity.json": "3be0439c5700fd35e2df605d6de4f9a0342e5119969965739d08645884a3455e",
+    "docs/validation/D5-I91-integrity.json": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+    "docs/validation/D5-I91-next-capture-integrity.json": "d061295be7523017aaa489621795276c2e5ddf1e706affba902a81af5ea71783",
+    "docs/validation/D5-I92-integrity.json": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+    "docs/validation/D5-I93-integrity.json": "73f5a193c1d3c5b6ac5be309deac782a44dd53c7304fbcb01481114088e4db40"
+  },
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "closure": false,
+  "global_review": "OPEN",
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false
+}

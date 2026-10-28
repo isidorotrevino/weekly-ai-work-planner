@@ -1,0 +1,97 @@
+{
+  "schema": "d5.capacity-planner-component-integrity.v1",
+  "increment": "I95",
+  "date": "2026-10-27",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "PASS_COMPONENT_ONLY_ORIGINAL_CAPACITY_NOT_ESTABLISHED",
+  "artifacts": {
+    "testing/prospective_capture_capacity/capacity.py": "efc7eedc28a6274f863673cff3bd32c1c6c1868458d22d170b975b990482135b",
+    "testing/prospective_capture_capacity/test_capacity.py": "e8267daf7fef96b11c6b9ab0cd16a9e5bb100596158666ad7f94e7a81b3bbe7e",
+    "testing/prospective_capture_capacity/run_capacity_lab.py": "538ce17e7b611197c10fa78c6ad8594dfaf3c5072e18a69417deccc791d8e654",
+    "testing/prospective_capture_capacity/README.md": "2f0e63ba02abd5c7a37063f2056f2afc36a90bd1b506f38c3a6025e5303a3b5b",
+    "docs/validation/D5-CAPACITY-PLANNER-MANIFEST.json": "42b043b9bf978259762a3ca47d6bb0cf62d408a7a17396bcb27f2338eac8be0c",
+    "docs/design/D5-I95-CAPACITY-PLANNER-LAB.md": "45ca6af7a39b813d3f8c3404ebf45c79f1c17e3aa1ec2a15116151de00112bbd",
+    "docs/validation/D5-I95-tests-raw.json": "3c83fa60eacea1e1450b7b33be2bacd3d3883adf89fdbe8ffd3ca40a80296116",
+    "docs/validation/D5-I95-context.json": "d1e30c9b4a301b60f51737af2927d4d6109509a008f775d3270b89542794589e",
+    "docs/validation/D5-I95-results.json": "53ba269ac9306cb273191510e6655e65b46f5fe94dfa83dce456bd3ccf1c08f2",
+    "docs/validation/D5-I95-results.md": "95c60b81b27206f5ed1e534b5f82dc915bb64f71483497c22cd2f69a349d2066"
+  },
+  "checks": {
+    "component_tests": 32,
+    "passed": 32,
+    "source_anchors": 32,
+    "pre_post_source_hashes": 32,
+    "raw_pointers": 32,
+    "input_hashes": 195,
+    "input_reader_within_limits": true,
+    "prior_untracked_paths_preserved": 99,
+    "prior_seals_verified": {
+      "docs/validation/D5-I83-integrity.json": {
+        "sha256": "7e497955ea7ffbbf50d9f0c3c1a546bf68df5868b5982a36a97978f8eed3a3c8",
+        "artifacts": 12
+      },
+      "docs/validation/D5-I84-integrity.json": {
+        "sha256": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd",
+        "artifacts": 3
+      },
+      "docs/validation/D5-I85-integrity.json": {
+        "sha256": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I86-integrity.json": {
+        "sha256": "4e780c0cf2e2ecf147d7e4a620a928735b0c91e8ba14ea6a1f73a37e33957488",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I87-integrity.json": {
+        "sha256": "7913ec81f115b18e33f7fb1860a44e4877a1fce631fe89637320a5cba198050c",
+        "artifacts": 5
+      },
+      "docs/validation/D5-I88-integrity.json": {
+        "sha256": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I89-integrity.json": {
+        "sha256": "9dd8b2c90d4f647cde9e1014a41ed35b1b005a78d1a0140b1d9281d8460faf2c",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I90-integrity.json": {
+        "sha256": "3be0439c5700fd35e2df605d6de4f9a0342e5119969965739d08645884a3455e",
+        "artifacts": 3
+      },
+      "docs/validation/D5-I91-integrity.json": {
+        "sha256": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+        "artifacts": 11
+      },
+      "docs/validation/D5-I91-next-capture-integrity.json": {
+        "sha256": "d061295be7523017aaa489621795276c2e5ddf1e706affba902a81af5ea71783",
+        "artifacts": 2
+      },
+      "docs/validation/D5-I92-integrity.json": {
+        "sha256": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+        "artifacts": 14
+      },
+      "docs/validation/D5-I93-integrity.json": {
+        "sha256": "73f5a193c1d3c5b6ac5be309deac782a44dd53c7304fbcb01481114088e4db40",
+        "artifacts": 2
+      },
+      "docs/validation/D5-I94-integrity.json": {
+        "sha256": "5ee715fed5f3e74a830849441e2cc4491f196940f634d66f32037f2eb6e06843",
+        "artifacts": 4
+      }
+    },
+    "threads_started_and_settled": 8,
+    "roots_owned_and_removed": 8,
+    "sibling_controls_preserved": 8,
+    "children_started": 0,
+    "quota_changed": false,
+    "default_refs": 16384,
+    "functional_profile_created": false,
+    "functional_campaigns_executed": 0,
+    "original_numeric_certificate": null,
+    "IR03_ready": false,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

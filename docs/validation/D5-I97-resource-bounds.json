@@ -1,0 +1,199 @@
+{
+  "schema": "d5.i97-resource-bound-register.v1",
+  "increment": "I97",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_SOURCE_CAPACITY_ONLY",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "PARTIAL_SOURCE_BOUNDS_NO_ADMISSION_CERTIFICATE",
+  "source_pins": {
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+  },
+  "reference_lower_bound_ref": "docs/validation/D5-I97-reference-lower-bound.json",
+  "limits_preserved": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "group_fanout": {
+    "empty_minimum_skeleton": {
+      "schema": "d5.domain-witness-group.v1",
+      "group_ref": "W1",
+      "capture_run_id": "000000000000000000000000000000000000",
+      "test_frame_id": "000000000000000000000000000000000000",
+      "subcase_ref": "S1",
+      "thread_ref": "T1",
+      "run_id": "000000000000000000000000000000000000",
+      "store_id": "000000000000000000000000000000000000",
+      "role": "CLIENT",
+      "witnesses": []
+    },
+    "minimum_witness_skeleton": {
+      "object_ref": "O1",
+      "authorities": [
+        "OBSERVED_PARENT_RETURN"
+      ]
+    },
+    "empty_bytes": 333,
+    "witness_bytes": 60,
+    "formula": "333+60*n+max(0,n-1)",
+    "n61_bytes": 4053,
+    "n62_bytes": 4114,
+    "row_byte_limit": 4096,
+    "accepted_group_witness_upper": 61,
+    "maximum_attainable_not_claimed": true,
+    "precondition": "Mismo schema y fila JSON compacta aceptada; IDs/contextos mínimos. Refs más largas y autoridades adicionales sólo aumentan bytes.",
+    "Q34_Q36_Q38_weight_upper": 62,
+    "domain_link_total_charge_upper": 65,
+    "group_and_object_multiplicity_upper": null
+  },
+  "new_fixed_site_contributions": [
+    {
+      "site": "Q12",
+      "complete_valid_capture_charge": 2,
+      "reason": "FixtureStore de setUp DI28 más el fixture del cuerpo; sin otro constructor parental en lifecycle."
+    },
+    {
+      "site": "Q13",
+      "complete_valid_capture_charge": 2,
+      "reason": "Membresía de las mismas dos construcciones DI28."
+    },
+    {
+      "site": "Q27",
+      "complete_valid_capture_charge": 2,
+      "reason": "DI07 assertEqual del snapshot y exitcode; message usa assertTrue."
+    },
+    {
+      "site": "Q28",
+      "complete_valid_capture_charge": 1,
+      "reason": "DI07 TEST_RESULT raíz; sin subtests en método/lifecycle."
+    },
+    {
+      "site": "Q29",
+      "complete_valid_capture_charge": 2,
+      "reason": "DI07 command.snapshot más expected.snapshot. Genesis/advance/cleanup no llaman snapshot; child_snapshot no está instrumentado por el padre."
+    }
+  ],
+  "resource_floors": {
+    "commands_lower": 2582,
+    "events_per_command_lower": 4,
+    "event_kinds": [
+      "Store.snapshot CALL_RETURN",
+      "Client.snapshot CALL_RETURN",
+      "Store.transact CAUSAL_TERMINAL",
+      "Client.perform CALL_RETURN"
+    ],
+    "frame_events_lower": 963,
+    "events_lower": 11291,
+    "event_limit": 131072,
+    "event_sufficiency_proven": false,
+    "nested_links_lower": 2582,
+    "minimum_link_skeleton": {
+      "schema": "d5.domain-causal-link.v1",
+      "capture_run_id": "000000000000000000000000000000000000",
+      "test_frame_id": "000000000000000000000000000000000000",
+      "subcase_ref": "S1",
+      "thread_ref": "T1",
+      "source_ref": "C1",
+      "target_ref": "C2",
+      "relation": "SAME_THREAD_NESTED_CALL",
+      "domain_ref": null,
+      "domain_group_ref": null,
+      "witness_refs": []
+    },
+    "minimum_link_row_bytes": 318,
+    "minimum_link_row_bodies_bytes": 821076,
+    "sidecar_sufficiency_proven": false,
+    "excluded": "Map keys, delimiters y todas las otras filas/eventos; pisos, no cotas superiores."
+  },
+  "value_envelope": {
+    "fixture_commit_or_object_max_bytes": 33554432,
+    "observer_operand_max_bytes": 16777216,
+    "encoding_auxiliaries_counted": true,
+    "actual_P01_value_upper": null,
+    "actual_oversized_value_proven": false,
+    "conclusion": "El máximo de fixture no certifica el límite menor del observador; hace falta acotar los valores realmente observados, sin inferir fallo de un valor concreto."
+  },
+  "reader_envelopes": "I96 sigue siendo la referencia condicionada a calendario/fuentes originales; este documento no crea ni mide un worker nuevo.",
+  "remaining": [
+    "SC01: cota superior de multiplicidades de todos los sitios activos, lifecycle y callbacks incluidos.",
+    "SC02: cotas de grupos/objetos/contextos y autoridades; fanout61 sólo acota un factor.",
+    "SC04: cotas superiores de eventos por test/campaña, bytes de filas/tablas y valores observados completos.",
+    "SC05: contrato/perfil y cuotas numéricas requieren propuesta y decisión separadas; después componentes sintéticos acotados y autorización funcional específica.",
+    "IR03, suficiencia global y publicación siguen decisiones separadas."
+  ],
+  "next_documentary_work": "Descomponer helpers parentales T/R por categoría de comando y objetos/contextos; completar las cotas superiores restantes antes de proponer una cuota o autoridad.",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

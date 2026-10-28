@@ -1,0 +1,126 @@
+{
+  "schema": "d5.parental-functional-attempt-results.v1",
+  "increment": "I86",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "authority": "EXPLICIT_USER_AUTHORIZED_ONE_P01_CAPTURE_321_TESTS_12_GROUPS_900S_NO_AUTOMATIC_RETRY",
+  "status": "BLOCKED_WORKER_FAILURE",
+  "capture_status": "INVALID_CAPTURE",
+  "attempts": 1,
+  "retries": 0,
+  "requested_scope": "P01",
+  "requested_tests": 321,
+  "requested_groups": 12,
+  "observed_tests": 3,
+  "observed_groups": [
+    "test_durable_integration"
+  ],
+  "observed_passed": [
+    "test_durable_integration.DurableIntegrationTest.test_DF01",
+    "test_durable_integration.DurableIntegrationTest.test_DF02",
+    "test_durable_integration.DurableIntegrationTest.test_DF03"
+  ],
+  "not_observed_test_count": 318,
+  "raw_status": "PASS",
+  "raw_status_limit": "PASS_OF_THREE_EXECUTED_TESTS_NOT_COMPLETE_P01",
+  "sidecar_errors": [
+    "ORACLE_DOMAIN_IDENTITY_MISSING",
+    "CAUSAL_LINK_MISSING",
+    "INCOMPLETE_TEST_SET",
+    "SANITIZED_WORKER_ERROR"
+  ],
+  "worker_diagnostic": {
+    "schema": "d5.worker-diagnostic.v1",
+    "status": "FAILED",
+    "phase": "ENTRYPOINT",
+    "code": "SANITIZED_WORKER_ERROR",
+    "scope": "P01",
+    "lease": "14a75f94-09d5-49e9-a2b6-4ffa19a0e694",
+    "pid": 6,
+    "pgid": 6,
+    "capture_run_id": "37ee3821-6467-48db-a58a-715908f1b57d"
+  },
+  "worker_exit_code": 1,
+  "entrypoint_exit_code": 0,
+  "external_elapsed_seconds": 1.07,
+  "external_limit_seconds": 900,
+  "cleanup": {
+    "status": "OWN_GROUP_GONE",
+    "worker_exit": 1
+  },
+  "observers_restored": true,
+  "runner_cleanup_verified": true,
+  "remaining_roots": 0,
+  "children_alive": 0,
+  "threads_alive": 0,
+  "packet_artifacts": {
+    "docs/validation/D5-I86-P01/OWNER": "7bb61480fa61e57e1b422a0833cfb6ab6449d6ca4ef425094c3b423759f47ad1",
+    "docs/validation/D5-I86-P01/context.json": "2e39ae59de895bbbd0367a77af15578eddcbec42b9d546c86586a9c6abe0579f",
+    "docs/validation/D5-I86-P01/event-0001.json": "84dacb03db13356b4741e8ad2d50836462f7f1e78a1bacc79e8cdc8891f0442d",
+    "docs/validation/D5-I86-P01/runner-raw.json": "11703c47d77474ea4fb45215f4dbd5160a2a86479f01d8c80aa85e9ec11483a6",
+    "docs/validation/D5-I86-P01/sidecar.json": "85dcc7997f383ede0049b5fed0723ad63d4cfae60e58c1b1682a54202b52862a"
+  },
+  "capture_inputs": {
+    "paths": 261,
+    "unique_bytes": 60305046,
+    "all_hashes_preserved": true
+  },
+  "input_comparison": {
+    "status": "MATCH",
+    "added": [],
+    "removed": [],
+    "changed_runtime": [],
+    "changed_documentary": []
+  },
+  "evidence_acceptance": "NOT_ACCEPTED_INCOMPLETE_CAPTURE",
+  "IR03_sufficiency_review": "NOT_READY_COMPLETE_NEW_CAPTURE_REQUIRED",
+  "source_review": {
+    "status": "SOURCE_SUPPORTED_FAILURE_MECHANISM_NOT_FULL_RUNTIME_CANDIDATE_TRACE",
+    "observed_failure": "ORACLE_DOMAIN_IDENTITY_MISSING",
+    "source_requirement": "CausalState.domain requires len(candidates)==1 for frame/subcase/run/store/role",
+    "observed_same_identity_declarations": [
+      "O2",
+      "O10"
+    ],
+    "source_examples": [
+      "testing/prospective_capture_parental/capture.py:421",
+      "testing/prospective_capture_parental/capture.py:426",
+      "testing/prospective_capture_parental/capture.py:560",
+      "testing/D5/test_durable_integration.py:64"
+    ],
+    "limitation": "Candidate set and failed oracle terminal were not retained. Do not reconstruct that private runtime state or claim unique causation from source alone."
+  },
+  "I85_components_remain_sealed": true,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "publication_authorized": false,
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false,
+  "SQL_D2_D3_D4_reexecuted": false
+}

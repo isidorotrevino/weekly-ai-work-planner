@@ -1,0 +1,157 @@
+{
+  "schema": "d5.i102-event-bound-coverage-register.v1",
+  "increment": "I102",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_CONTROLLED_FAILURE_EVENT_REVIEW",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "TEN_OF_88_T_R_EVENT_PATHS_BOUNDED_OTHER_RESOURCES_OPEN",
+  "rows": [
+    {
+      "criterion": "DF08",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF08",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF09",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF09",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF10",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF10",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF12",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF12",
+      "event_upper": 1245,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 803,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF11",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF11",
+      "event_upper": 1317,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 731,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF13",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF13",
+      "event_upper": 304,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1744,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR14",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR14",
+      "event_upper": 179,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1869,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR14",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR24",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR24",
+      "event_upper": 523,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1525,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR27",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR27",
+      "event_upper": 1694,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 354,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR23",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR23",
+      "event_upper": 1951,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 97,
+      "evidence": "docs/validation/D5-I101-DR23-event-bound.json",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    }
+  ],
+  "covered_ten_root_event_subtotal_upper": 10732,
+  "not_deducible": [
+    "No extrapolar1951 ni el máximo de estas10 rutas a las otras311 raíces P01.",
+    "No usar el límite2048/test como cota de demanda circular para roots sin analizar.",
+    "No convertir márgenes aritméticos en mediciones runtime ni aceptar refs/bytes por disponer de eventos.",
+    "No inferir compatibilidad funcional, persistencia/recuperación integrada o fsync nativo."
+  ],
+  "remaining": [
+    "Cerrar las78 raíces T/R restantes por fuente y los otros grupos hasta321/12.",
+    "Componer owners/objetos/contextos/grupos y30 sitios de referencias, con witnesses/autoridades conservados.",
+    "Acotar bytes de valores, eventos, filas/tablas y acumulado de páginas/campaña; revisar conjuntamente24 cuotas y Reader.",
+    "Sólo después proponer contrato/perfil/cuotas numéricas y las decisiones separadas de implementación/componentes, captura funcional, IR03, suficiencia global y publicación."
+  ],
+  "next_documentary_focus": "Inventariar bucles que contienen métodos observados en las78 raíces T/R restantes; resolver sus cardinalidades por fuente y completar costes, empezando por DR37/DF44.",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

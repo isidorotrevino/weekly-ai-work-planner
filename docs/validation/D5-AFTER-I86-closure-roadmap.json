@@ -1,0 +1,413 @@
+{
+  "schema": "d5.after-i86-closure-roadmap.v1",
+  "date": "2026-10-27",
+  "status": "DOCUMENTARY_ROADMAP_NOT_ACCEPTANCE",
+  "normative_source": "docs/design/D5-I23-GLOBAL-INTEGRATION-REVIEW.md",
+  "normative_sha256": "3789ee5bb9c5f483deb3a33b8b7262f55d228038624f6d72a274800514b120d9",
+  "obligations": [
+    {
+      "id": "GI01",
+      "gap": "G01",
+      "layer": "S",
+      "original_obligation": "Perfil explícito y versionado: entrada admitida conserva bytes, localizadores y todos los campos; perfil desconocido bloquea",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI02",
+      "gap": "G01",
+      "layer": "S",
+      "original_obligation": "Duplicados/ambigüedad y revisión incompatible bloquean sin normalizar silenciosamente la fuente",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI03",
+      "gap": "G01",
+      "layer": "S",
+      "original_obligation": "Mover/editar checklist no adopta por línea/título; sin identidad estable explícita conserva solo preview",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI04",
+      "gap": "G01",
+      "layer": "S",
+      "original_obligation": "Nueva versión de perfil/política requiere manifest/revisión nuevos y no cambia correspondencias históricas",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI05",
+      "gap": "G01",
+      "layer": "S",
+      "original_obligation": "Routing no ejecuta instrucciones del documento ni cambia capacidad/política D3; script/capacidad desconocidos bloquean",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI06",
+      "gap": "G01",
+      "layer": "R",
+      "original_obligation": "Muestras representativas y script Gentle-AI identificados por versión/interfaz; corpus privado revisado sin publicarlo ni ejecutar instrucciones arbitrarias",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Version/interfaz Gentle-AI y corpus representativo autorizado; revisión propia, sin acceso actual."
+    },
+    {
+      "id": "GI07",
+      "gap": "G02",
+      "layer": "S",
+      "original_obligation": "Inventario inicial con ancla y replay procesa/deduplica el feed sin saltos de cursor; no promete snapshot global ni todas las revisiones intermedias",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI08",
+      "gap": "G02",
+      "layer": "S",
+      "original_obligation": "Varias páginas/replay/reinicio: cada evento queda durable antes del cursor; fallo antes de commit no avanza; duplicado no duplica efecto",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI09",
+      "gap": "G02",
+      "layer": "S",
+      "original_obligation": "Archivo fuera de allowlist/removed/pérdida de acceso: diagnóstico explícito recuperable, sin borrar/cerrar D2 ni elegir referencia válida",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI10",
+      "gap": "G02",
+      "layer": "S",
+      "original_obligation": "Cambio de bytes/metadatos durante captura bloquea; exportación no atómica conserva grado observado, no revisión inmutable ficticia",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI11",
+      "gap": "G02",
+      "layer": "S",
+      "original_obligation": "Cambiar ámbito invalida cursor; formato no soportado, tamaño, página inválida, error de permiso/rate limit no producen aceptación parcial silenciosa",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI12",
+      "gap": "G02",
+      "layer": "R",
+      "original_obligation": "Instancia/ámbito/API/formatos/permisos/capturas reales autorizados; revisión/exportación y recuperación acreditadas en esa combinación",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Instancia/ámbito Drive, capacidades y datos reales autorizados; no sustituir con fixtures."
+    },
+    {
+      "id": "GI13",
+      "gap": "G03",
+      "layer": "S",
+      "original_obligation": "Binding explícito y whitelist preservan campos ajenos y no adoptan por similitud ni traducen estado remoto a activación",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI14",
+      "gap": "G03",
+      "layer": "S",
+      "original_obligation": "Edición remota antes o durante escritura exige precondición atómica en el doble; no disponible/rechazada abre conflicto o bloqueo, jamás PATCH incondicional",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI15",
+      "gap": "G03",
+      "layer": "S",
+      "original_obligation": "Crear con respuesta perdida: correlación estable, unicidad acreditada y conciliación antes de retry; cero lecturas eventual no prueba ausencia; duplicados bloquean",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI16",
+      "gap": "G03",
+      "layer": "S",
+      "original_obligation": "Cambiar D2/revisión/aprobación invalida paquete preparado; red fuera de locks y replay histórico nunca restauran payload viejo automáticamente",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI17",
+      "gap": "G03",
+      "layer": "S",
+      "original_obligation": "Respuesta perdida tras envío conserva UNKNOWN; rechazo concluyente y 429 respetan presupuesto sin presumir éxito; ACK local no prueba efecto ni resuelve por fecha",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI18",
+      "gap": "G03",
+      "layer": "R",
+      "original_obligation": "Versión/edición y contrato Plane objetivo demuestran CAS/alternativa atómica, correlación/creación y conflicto concurrente; mock o página pública no bastan",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Instancia/edición Plane y evidencia CAS/correlación/conflictos autorizada."
+    },
+    {
+      "id": "GI19",
+      "gap": "G04",
+      "layer": "S",
+      "original_obligation": "Cuota desconocida, inválida o caducada bloquea; cero no se interpreta ilimitado ni se hereda frescura de otra cuenta",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI20",
+      "gap": "G04",
+      "layer": "S",
+      "original_obligation": "Dimensiones/ventanas/proveedores se mantienen separados; observaciones/reintentos no crean capacidad ni reservas",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI21",
+      "gap": "G04",
+      "layer": "S",
+      "original_obligation": "Routing incompatible, proveedor caído y denegación de permiso no disparan fallback de pago ni activación",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI22",
+      "gap": "G04",
+      "layer": "S",
+      "original_obligation": "Observación y versión de adaptador ligadas al manifiesto; cambio/revocación invalida elegibilidad según D3 sin alterar su contrato",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI23",
+      "gap": "G04",
+      "layer": "S",
+      "original_obligation": "Payload/errores/recibos no incluyen secretos y distinguen autorización declarada de permiso real comprobado",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI24",
+      "gap": "G04",
+      "layer": "R",
+      "original_obligation": "Cada CLI/proveedor y modo unattended objetivo tienen evidencia empírica autorizada de permisos, ventanas/cuotas y errores; ninguna cifra sintética se presenta real",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "CLI/proveedores/modos y observación empírica autorizada de permisos/cuotas/errores."
+    },
+    {
+      "id": "GI25",
+      "gap": "G05",
+      "layer": "S",
+      "original_obligation": "Solo elementos explícitos por perfil producen propuestas; narrativa/título no inventa requisito, épica o dependencia",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI26",
+      "gap": "G05",
+      "layer": "S",
+      "original_obligation": "Propuesta tipada y claves internas/UUID explícitos; campos inexistentes D2, como description de epic, permanecen evidencia y no crean columnas",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI27",
+      "gap": "G05",
+      "layer": "S",
+      "original_obligation": "DRAFT/BACKLOG iniciales, procedencia exacta y revisión del manifiesto: Status/Verified no autorizan workflow ni grooming automático",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI28",
+      "gap": "G05",
+      "layer": "S",
+      "original_obligation": "Referencias inexistentes/cross-project inválidas, ciclos o proyecto/tipo incompatibles bloquean; sin vínculos parciales",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI29",
+      "gap": "G05",
+      "layer": "S",
+      "original_obligation": "Aplicación futura exige CAS, límites y guardas de edición local; batch mixto revierte completo, replay recupera y ausencia no borra",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI30",
+      "gap": "G05",
+      "layer": "R",
+      "original_obligation": "Revisión humana de muestras representativas acredita suficiencia del contrato de grooming y sus exclusiones, separada de fixtures/estados de ejecución",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Revisión humana de suficiencia del grooming sobre muestras representativas."
+    },
+    {
+      "id": "GI31",
+      "gap": "G06",
+      "layer": "S",
+      "original_obligation": "Toda obligación G01–G07 tiene contrato/criterio/evidencia propia; capacidad desconocida conserva pendiente explícito",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI32",
+      "gap": "G06",
+      "layer": "S",
+      "original_obligation": "Aprobación de diseño, implementación, publicación, hito local y aceptación global se distinguen y no se infieren entre sí",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI33",
+      "gap": "G06",
+      "layer": "S",
+      "original_obligation": "Inventario liga código/config/perfiles/versión/API a campaña; cambios relevantes invalidan evidencia aplicable sin reescribir historia",
+      "current_evidence_status": "PARTIAL_UI04_1",
+      "global_status": "OPEN",
+      "next_gate": "Resolver bloqueo funcional I86 mediante diseño/componente/captura nuevos; revisión IR03 separada, sin cierre automático."
+    },
+    {
+      "id": "GI34",
+      "gap": "G06",
+      "layer": "S",
+      "original_obligation": "Regresiones de I1–I20 y D1–D4 conservan hashes/targets separados; suites acumulativas no se suman como nuevas",
+      "current_evidence_status": "SUPPORTS_BOUNDED_I81_NOT_GLOBAL_ACCEPTANCE",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI35",
+      "gap": "G06",
+      "layer": "S",
+      "original_obligation": "Clasificación sintético/real y bloqueos por permisos visibles; ninguna brecha D5 se mueve a D6 para afirmar completitud",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI36",
+      "gap": "G06",
+      "layer": "R",
+      "original_obligation": "Decisión expresa de aceptación global sobre contratos, restricciones y evidencias integradas suficientes; publicación o aceptación local A52 no la sustituyen",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Aceptación global humana sobre expediente suficiente y SHA concreto."
+    },
+    {
+      "id": "GI37",
+      "gap": "G07",
+      "layer": "S",
+      "original_obligation": "Ciclo sintético fuente→revisión→propuesta→aplicación simulada→proyección simulada→recibo conserva identidad/hashes en todas las fronteras",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI38",
+      "gap": "G07",
+      "layer": "S",
+      "original_obligation": "Fallos antes/después de cada frontera, caída/reinicio y respuesta perdida recuperan sin duplicar efectos ni perder conflictos",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI39",
+      "gap": "G07",
+      "layer": "S",
+      "original_obligation": "Ediciones concurrentes de origen/D2/Plane se reproducen y bloquean según contrato, sin sobrescritura ganadora por fecha",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI40",
+      "gap": "G07",
+      "layer": "S",
+      "original_obligation": "Auditoría final demuestra cero activación/operaciones y limpieza selectiva del laboratorio autorizado; dev/D4 intactos",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI41",
+      "gap": "G07",
+      "layer": "S",
+      "original_obligation": "Informe identifica qué integraciones son dobles y qué casos no corrieron; no afirma completar G01–G07 con PASS sintético",
+      "current_evidence_status": "PRIOR_FINITE_EVIDENCE_PRESERVED_NOT_REASSESSED",
+      "global_status": "OPEN",
+      "next_gate": "Conservar evidencia y contrastar obligación/alcance en expediente final; sin nueva aceptación por esta matriz."
+    },
+    {
+      "id": "GI42",
+      "gap": "G07",
+      "layer": "R",
+      "original_obligation": "Ciclo integrado autorizado de versiones/ámbitos reales acordados acredita conflictos, conciliación y recuperación; sin promoción/despliegue implícitos",
+      "current_evidence_status": "REAL_OR_HUMAN_REQUIREMENT_PENDING",
+      "global_status": "OPEN",
+      "next_gate": "Ciclo integrado real autorizado y evidencia de conflictos/conciliación/recuperación."
+    }
+  ],
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "I86_status": "BLOCKED_WORKER_FAILURE_INVALID_CAPTURE_3_OF_321",
+  "I87_status": "PROPOSED_DESIGN_NOT_APPROVED",
+  "I88_status": "NOT_AUTHORIZED",
+  "real_access_authorized": false,
+  "publication_authorized": false,
+  "D5_closed": false,
+  "H07_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "D6_started": false
+}

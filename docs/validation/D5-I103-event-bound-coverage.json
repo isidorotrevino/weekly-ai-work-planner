@@ -1,0 +1,176 @@
+{
+  "schema": "d5.i103-event-bound-coverage-register.v1",
+  "increment": "I103",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_BUDGET_TEST_EVENT_REVIEW",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "TWELVE_OF_88_T_R_EVENT_PATHS_BOUNDED_OTHER_RESOURCES_OPEN",
+  "rows": [
+    {
+      "criterion": "DF08",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF08",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF09",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF09",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF10",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF10",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF12",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF12",
+      "event_upper": 1245,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 803,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF11",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF11",
+      "event_upper": 1317,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 731,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF13",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF13",
+      "event_upper": 304,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1744,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR14",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR14",
+      "event_upper": 179,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1869,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR14",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR24",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR24",
+      "event_upper": 523,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1525,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR27",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR27",
+      "event_upper": 1694,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 354,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR23",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR23",
+      "event_upper": 1951,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 97,
+      "evidence": "docs/validation/D5-I101-DR23-event-bound.json",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF44",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF44",
+      "event_upper": 1474,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 574,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DF44",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR37",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR37",
+      "event_upper": 1549,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 499,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DR37",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    }
+  ],
+  "covered_twelve_root_event_subtotal_upper": 13755,
+  "composition_rule": "Las12 raíces son disjuntas entre sí. No sumar13755 a los21203 de partes globales I100: esas partes se solapan con estas raíces. Para un root completo sustituir sus subtotales parciales, no agregarlos otra vez.",
+  "not_deducible": [
+    "No extrapolar estas cotas a las76 raíces T/R restantes o las otras233 de P01.",
+    "No convertir márgenes de eventos en margen de referencias/bytes ni en medición runtime.",
+    "Una excepción aceptada por unittest no valida proyecciones/headers faltantes.",
+    "No inferir consumo/reserva, activación, persistencia/recuperación integrada o fsync nativo."
+  ],
+  "remaining": [
+    "Cerrar eventos de las76 raíces T/R pendientes y luego otros grupos hasta321/12, con cardinalidades por fuente.",
+    "Owners/objetos/grupos/contextos/autoridades y los30 sitios de referencias; el techo actual16384 sigue insuficiente por I97.",
+    "Bytes de valores, eventos, filas/tablas/páginas y composición conjunta de24 cuotas, incluido calendario Reader.",
+    "Propuesta de contrato/perfil/cuotas sólo después de la cuenta completa; decisiones de implementación/componentes, captura funcional, IR03, suficiencia global y publicación separadas."
+  ],
+  "next_documentary_focus": "Resolver bloques de pruebas de concurrencia/protocolo y comparación histórica pendientes, con ámbitos parentales y tipos de cada facade explícitos; completar después los roots pequeños.",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

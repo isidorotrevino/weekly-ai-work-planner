@@ -1,0 +1,52 @@
+{
+  "schema": "d5.domain-component-integrity.v1",
+  "increment": "I88",
+  "date": "2026-10-27",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "PASS_COMPONENT_ONLY",
+  "checks": {
+    "component_tests": 24,
+    "passed": 24,
+    "raw_case_pointers": 24,
+    "method_source_anchors": 24,
+    "pre_post_source_hashes": 24,
+    "input_hashes": 546,
+    "input_reader_within_limits": true,
+    "prior_seals_verified": {
+      "D5-I83-integrity.json": 12,
+      "D5-I84-integrity.json": 3,
+      "D5-I85-integrity.json": 11,
+      "D5-I86-integrity.json": 11,
+      "D5-I87-integrity.json": 5
+    },
+    "legacy_selector_failure_synthetically_reproduced": true,
+    "new_group_witness_resolution_verified": true,
+    "full_synthetic_recorder_and_reader_verified": true,
+    "synthetic_parental_producer_verified": true,
+    "temporary_roots_owned_and_removed": 7,
+    "sibling_controls_preserved": 7,
+    "owned_synthetic_children_settled": 1,
+    "forbidden_imports": 0,
+    "functional_campaigns_executed": 0,
+    "old_tests_reexecuted": false,
+    "all_prior_tracked_files_unchanged": true,
+    "no_I89_authority_destination_or_launcher": true,
+    "semantic_baseline_unchanged": true
+  },
+  "artifacts": {
+    "testing/prospective_capture_domains/capture.py": "0567a8a20756b1e8823a482bf04edb49ace7d0538004c79e794d2bd3554fe91c",
+    "testing/prospective_capture_domains/worker.py": "341e23f51371c87c57e04ee48e084e1e4d43b363cd862be7b2ae20c4ec1891bd",
+    "testing/prospective_capture_domains/test_domain_capture.py": "abe47b39ba51540e54b03fbf8232cc66a913bf4ea0bb50153b099dae45076a7f",
+    "testing/prospective_capture_domains/run_domain_lab.py": "a2a7cb539671d1234e62b42a89abbb8ccf77c17cac58c8ad4446f581de5b07cc",
+    "testing/prospective_capture_domains/README.md": "376f116cd54916c32746ea6c4bc87023f329ec08da39de4974c680800f70e3ea",
+    "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json": "7874fd1570aa10a32f69db2025691d6c5af8f84cd3c2e90b6f4fde48f5646522",
+    "docs/design/D5-I88-DOMAIN-CAPTURE-LAB.md": "f7134655bc86127801e96ab781bce74778bdfec9533823ebfbfeea8964dd75aa",
+    "docs/validation/D5-I88-tests-raw.json": "c55b7fb0fa04de48d821ec7c8d7fc19aa529228b8cff72ee73b376de99679107",
+    "docs/validation/D5-I88-context.json": "7093cf8912b9eaab2809612f1b413bc4ccf835699c750d9fd0ef26d495029704",
+    "docs/validation/D5-I88-results.json": "2dcdaa7eb1d65a9466610a43f1904af6eaa6532d8047395c9a0ba366183a56e4",
+    "docs/validation/D5-I88-results.md": "3940e96f31e41f0f1bc0bca8ef4b6619e6cb0ccf40ab1609a24b4003abe10de0"
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

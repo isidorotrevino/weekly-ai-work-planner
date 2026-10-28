@@ -1,0 +1,17 @@
+{
+  "schema": "d5.i91-next-capture-integrity.v1",
+  "date": "2026-10-27",
+  "status": "PREPARED_NOT_AUTHORIZED_NOT_EXECUTED",
+  "artifacts": {
+    "docs/validation/D5-I91-next-capture-proposal.json": "524bd4c82228c029904d3f60ac56c0a2d9ab8e52c2358fe09364d053f74ea666",
+    "docs/design/D5-I91-NEXT-CAPTURE-PROPOSAL.md": "48c361916d6858b9044cf63cc45ff740ab2ee81084c3372f8c113a72f08b53d0"
+  },
+  "I91_seal_sha256": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+  "candidate_pins_verified": 292,
+  "static_reader_within_limits": true,
+  "I92_paths_absent": true,
+  "functional_campaigns_executed": 0,
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

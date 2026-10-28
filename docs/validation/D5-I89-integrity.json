@@ -1,0 +1,43 @@
+{
+  "schema": "d5.domain-functional-attempt-integrity.v1",
+  "increment": "I89",
+  "date": "2026-10-27",
+  "status": "PASS_PRESERVATION_OF_INVALID_CAPTURE_NOT_FUNCTIONAL_ACCEPTANCE",
+  "checks": {
+    "artifacts_preserved": 11,
+    "capture_input_hashes": 276,
+    "all_input_hashes_preserved": true,
+    "I86_packet_preserved": true,
+    "I88_artifacts_preserved": 11,
+    "raw_binding_verified": true,
+    "page_bindings_verified": true,
+    "event_sequences_verified": 1672,
+    "observed_tests": 8,
+    "requested_tests": 321,
+    "complete": false,
+    "retries": 0,
+    "group_cleanup": "OWN_GROUP_GONE",
+    "observers_restored": true,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "artifacts": {
+    "docs/validation/D5-I89-P01-launch.json": "42779fdb07f1452baeaafce46aa225ab0b138a698256190c41b98379bfb514f1",
+    "docs/validation/D5-I89-P01/OWNER": "56fc3764c7112105e64c9538288218360dd9c9fec1356885d6f77c8c6fb1d56c",
+    "docs/validation/D5-I89-P01/context.json": "42779fdb07f1452baeaafce46aa225ab0b138a698256190c41b98379bfb514f1",
+    "docs/validation/D5-I89-P01/event-0001.json": "c11c5376828e7d25fc61288796723250e696f3f28193f8e497cabe6b2d369318",
+    "docs/validation/D5-I89-P01/runner-raw.json": "72c0aa288a44b633c4296b06a8f1b094672ad9ec3b0477bba87bdad1b2191732",
+    "docs/validation/D5-I89-P01/sidecar.json": "287a8c6279108e20ea5b1567d8b92af0e81af28dbc3d8f650e1cce9d5f90d59e",
+    "docs/validation/D5-I89-capture-authorization.json": "1beeccd44611b1f6f8494914b29dcf69dcdb4b8a474797268b06c4f7343a4ee0",
+    "docs/validation/D5-I89-external-context.json": "9252fbbc9f4396473140de465ce2a08644dcb848c90848fa9cca2a98a6500f92",
+    "docs/validation/D5-I89-launch-output.json": "f8c5e15167e541936c96dd4de7efc31a6bc8dc97267b01b00cd33e9753160db8",
+    "docs/validation/D5-I89-results.json": "67e62c5151d69100a21c05807a837ac550a593d0431e260dfbdaa979d5d7a95a",
+    "docs/validation/D5-I89-results.md": "20a016deb13656725c049cf9749fd05d3b166665d36e12d284fc6677164f696a"
+  },
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

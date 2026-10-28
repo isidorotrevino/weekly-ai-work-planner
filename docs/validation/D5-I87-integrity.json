@@ -1,0 +1,30 @@
+{
+  "schema": "d5.domain-witness-design-integrity.v1",
+  "increment": "I87",
+  "date": "2026-10-27",
+  "status": "PASS_DESIGN_ONLY_NOT_COMPONENT_TESTS",
+  "checks": {
+    "source_anchors": 7,
+    "component_cases_NOT_RUN": 24,
+    "markdown_links": 7,
+    "roadmap_normative_obligations": 42,
+    "synthetic_obligations": 35,
+    "real_or_human_obligations": 7,
+    "I86_packet_preserved": true,
+    "I85_preserved": true,
+    "new_profile_registry_or_authority_created": false
+  },
+  "artifacts": {
+    "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md": "fcf235192926109e1941f4dcb24839ca260da56c88b7b3e1fa820872b803ac05",
+    "docs/design/D5-I87-DOMAIN-WITNESS-REVIEW.md": "1c2612b2c5bebd0a1a545b5666815cc4e3f4f875b84837e24888f6500ecda926",
+    "docs/validation/D5-I87-design-review.json": "014cf50915ed3ea0c4d32b59746ac7a6687965522b54605e88f5b5720b248453",
+    "docs/design/D5-AFTER-I86-CLOSURE-ROADMAP.md": "beefb3eade05db911937297976b565f3e4a860022b1dc35564140c34dde0deb2",
+    "docs/validation/D5-AFTER-I86-closure-roadmap.json": "02e8c19e7b4e1c637f986b1ff9480fc1af6c7bd7cfbfd0724a7e3cb4219cdd30"
+  },
+  "implementation_authorized": false,
+  "component_test_execution_authorized": false,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "closure": false,
+  "global_review": "OPEN"
+}

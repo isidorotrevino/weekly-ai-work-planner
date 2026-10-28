@@ -1,0 +1,42 @@
+{
+  "schema": "d5.parental-functional-attempt-integrity.v1",
+  "increment": "I86",
+  "date": "2026-10-27",
+  "status": "PASS_PRESERVATION_OF_INVALID_CAPTURE_NOT_FUNCTIONAL_ACCEPTANCE",
+  "checks": {
+    "artifacts_preserved": 11,
+    "capture_input_hashes": 261,
+    "all_input_hashes_preserved": true,
+    "I85_artifacts_preserved": 11,
+    "raw_binding_verified": true,
+    "page_bindings_verified": true,
+    "event_sequences_verified": 229,
+    "observed_tests": 3,
+    "requested_tests": 321,
+    "complete": false,
+    "retries": 0,
+    "group_cleanup": "OWN_GROUP_GONE",
+    "observers_restored": true,
+    "all_prior_tracked_files_unchanged": true
+  },
+  "artifacts": {
+    "docs/validation/D5-I86-P01-launch.json": "2e39ae59de895bbbd0367a77af15578eddcbec42b9d546c86586a9c6abe0579f",
+    "docs/validation/D5-I86-P01/OWNER": "7bb61480fa61e57e1b422a0833cfb6ab6449d6ca4ef425094c3b423759f47ad1",
+    "docs/validation/D5-I86-P01/context.json": "2e39ae59de895bbbd0367a77af15578eddcbec42b9d546c86586a9c6abe0579f",
+    "docs/validation/D5-I86-P01/event-0001.json": "84dacb03db13356b4741e8ad2d50836462f7f1e78a1bacc79e8cdc8891f0442d",
+    "docs/validation/D5-I86-P01/runner-raw.json": "11703c47d77474ea4fb45215f4dbd5160a2a86479f01d8c80aa85e9ec11483a6",
+    "docs/validation/D5-I86-P01/sidecar.json": "85dcc7997f383ede0049b5fed0723ad63d4cfae60e58c1b1682a54202b52862a",
+    "docs/validation/D5-I86-capture-authorization.json": "dadfc298cf49193e3c469b0b8f700af487b1db4299cd62c8bb3b212a9a53001a",
+    "docs/validation/D5-I86-external-context.json": "13cf93c9fa989e65569dd2799fe6d3213d079fc12c9278bae72a7c5ee2b19b41",
+    "docs/validation/D5-I86-launch-output.json": "a12a6ef91b84b9c75c8fefa8d4e329310da76b9162c2173a4283bda487635b08",
+    "docs/validation/D5-I86-results.json": "23ee4aaf801d340abc942e2884e814e25b86b0067ada7b0cdd33e9695571dd47",
+    "docs/validation/D5-I86-results.md": "fd2c2894af54dbdfd5e096117ced63381bf3b6327a26e58d312512f3cce50825"
+  },
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

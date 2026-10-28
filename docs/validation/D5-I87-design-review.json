@@ -1,0 +1,342 @@
+{
+  "schema": "d5.domain-witness-design.v1",
+  "increment": "I87",
+  "date": "2026-10-27",
+  "status": "PREPARED_FOR_REVIEW",
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "component_test_execution_authorized": false,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_component_increment": "I88",
+  "proposed_functional_increment": "I89",
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "CausalState",
+      "method": "domain",
+      "line": 421,
+      "end_line": 426,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "1a64a14956e6a857bbb9632679f9a643580780d156145f9cf1455e59a1f488f6",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "CausalState",
+      "method": "declaration",
+      "line": 413,
+      "end_line": 420,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "3a7d678c84ca5cfe517857e43733f86b4c81d6bba8d394152dccbcb0ab6d3022",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "CausalState",
+      "method": "retain",
+      "line": 427,
+      "end_line": 434,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "dbf54fa58e0d95e6cf74296297fc6c0eb147baac952cfa391576ee21da1e0fa5",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "BaseRecorder",
+      "method": "wrap_boundary",
+      "line": 519,
+      "end_line": 600,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "80486b0151c982a0b002f8f9b66a444d73c648ef3352c829e9a742353ab0a72e",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "BaseRecorder",
+      "method": "owner",
+      "line": 683,
+      "end_line": 688,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "4197eed17ab368c7eec6e17a15d95c5aeff57b2a5dcf6e8bd237a980944f3ed3",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/prospective_capture_parental/capture.py",
+      "owner": "BaseRecorder",
+      "method": "stop",
+      "line": 689,
+      "end_line": 705,
+      "sha256": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+      "segment_sha256": "8c49f0d2eda6c00ba9445f61e738d79ff1a1293f40be80343a90992c4e616b35",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "owner": "DurableIntegrationTest",
+      "method": "df03",
+      "line": 64,
+      "end_line": 71,
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "segment_sha256": "447af05f7d375d4130c16b1bd2d83a5b4af70bde40507ad36e60b427598a6317",
+      "authority": "SOURCE_EXPECTATION_NOT_NEW_RUNTIME_OBSERVATION"
+    }
+  ],
+  "inputs": {
+    "docs/validation/D5-I85-integrity.json": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+    "docs/validation/D5-I85-results.json": "355d3d6d9aa9f41bef96a94ef69fff49669ca524855b8c8e4022d1e819cacdb6",
+    "docs/validation/D5-I85-tests-raw.json": "678279820fac1d0236f7fc2c57acb91927d8524c8e286a7b5bfe6fc9f890fe57",
+    "docs/validation/D5-I86-capture-authorization.json": "dadfc298cf49193e3c469b0b8f700af487b1db4299cd62c8bb3b212a9a53001a",
+    "docs/validation/D5-I86-results.json": "23ee4aaf801d340abc942e2884e814e25b86b0067ada7b0cdd33e9695571dd47",
+    "testing/prospective_capture_parental/capture.py": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939"
+  },
+  "group_schema": {
+    "schema": "d5.domain-witness-group.v1",
+    "keys": [
+      "schema",
+      "group_ref",
+      "capture_run_id",
+      "test_frame_id",
+      "subcase_ref",
+      "thread_ref",
+      "run_id",
+      "store_id",
+      "role",
+      "witnesses"
+    ],
+    "witness_keys": [
+      "object_ref",
+      "authorities"
+    ],
+    "authority_literals": [
+      "OBSERVED_CONSTRUCTION_ARGUMENTS_AFTER_SUCCESS_NOT_HEAD_VERIFIED",
+      "OBSERVED_PARENT_RETURN"
+    ],
+    "sidecar_table": "domain_witness_groups",
+    "domain_key": [
+      "capture_run_id",
+      "test_frame_id",
+      "subcase_ref",
+      "thread_ref",
+      "run_id",
+      "store_id",
+      "role"
+    ],
+    "construction_is_head": false,
+    "ambiguous_required_unique_object": "MISSING_NOT_ARBITRARILY_SELECTED"
+  },
+  "future_profile": {
+    "namespace": "testing/prospective_capture_domains",
+    "files": [
+      "capture.py",
+      "worker.py",
+      "test_domain_capture.py",
+      "run_domain_lab.py",
+      "README.md"
+    ],
+    "registry": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+    "normal_schema": "d5.domain-sidecar.v1",
+    "failure_schema": "d5.domain-worker-failure.v1",
+    "created": false
+  },
+  "proposed_component_tests": [
+    {
+      "id": "DW01",
+      "trigger": "Lectura de I85/I86 y sus pins",
+      "expected_oracle": "Componentes PASS e intento inválido conservados; sin nueva autoridad funcional",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW02",
+      "trigger": "Intento de reutilizar autoridad/destino I86",
+      "expected_oracle": "Rechazar antes de imports o escrituras funcionales",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW03",
+      "trigger": "Un solo Store sintético",
+      "expected_oracle": "Resolver identidad con witness único y object_ref original",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW04",
+      "trigger": "Sin witness compatible",
+      "expected_oracle": "Missing explícito; no fabricar grupo desde source/head solo",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW05",
+      "trigger": "Dos Store sintéticos reabiertos con mismo run/store/role",
+      "expected_oracle": "Reproducir rechazo del selector heredado por duplicidad y comprobar grupo nuevo con ambos witnesses",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW06",
+      "trigger": "Store y fachada con la misma identidad observada",
+      "expected_oracle": "Conservar objetos/autoridades separados; no doble crédito de oráculo",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW07",
+      "trigger": "Igual store_id, run distinto",
+      "expected_oracle": "Grupos separados y enlace cruzado rechazado",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW08",
+      "trigger": "Igual run/store, roles distintos",
+      "expected_oracle": "Grupos separados; no elegir ni homogeneizar roles",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW09",
+      "trigger": "Cambio de frame/subcaso/hilo",
+      "expected_oracle": "Sin herencia de witnesses; enlace incompatible bloqueado",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW10",
+      "trigger": "Identidad mutada en el mismo objeto",
+      "expected_oracle": "Conflicto latcheado, sin rebind",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW11",
+      "trigger": "Construcción sin snapshot/recibo",
+      "expected_oracle": "NOT_HEAD; no cabeza/estado u oráculo independiente inferidos",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW12",
+      "trigger": "Independent sintético retorna oráculo exacto",
+      "expected_oracle": "Una llamada, mismo retorno, resumen/digest/grupo ligados al contexto",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW13",
+      "trigger": "Comando/recibo/oráculo compatibles",
+      "expected_oracle": "Enlace sólo por campos observados y grupo/witnesses acreditados",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW14",
+      "trigger": "Recibo incompatible aunque grupo coincida",
+      "expected_oracle": "Conflicto/missing; grupo no sustituye command/request/seq/head",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW15",
+      "trigger": "Varios witnesses equivalentes y exigencia de objeto único",
+      "expected_oracle": "Conservar conjunto; unicidad requerida permanece sin resolver",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW16",
+      "trigger": "after_data/state y hashes Store/Drive/I70",
+      "expected_oracle": "Dominios separados, sin igualdad ficticia o recomputación de cid",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW17",
+      "trigger": "Witness/grupo huérfano, duplicado o ciclo",
+      "expected_oracle": "Lector rechaza recorriendo refs locales acotadas",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW18",
+      "trigger": "Grupo no acreditado por declaraciones/cabeceras",
+      "expected_oracle": "Rechazar incluso con etiqueta/hash coherente",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW19",
+      "trigger": "Conjunto supera refs/fila/sidecar",
+      "expected_oracle": "Bloquear sin truncar, muestrear o resetear contadores",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW20",
+      "trigger": "Topes heredados y Reader antes/después/autoridad",
+      "expected_oracle": "Límites exactos acumulados; incompatibilidad conserva fallo",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW21",
+      "trigger": "Retorno/excepción original y error del observer",
+      "expected_oracle": "Una llamada, misma instancia, latch, cleanup y parada entre tests",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW22",
+      "trigger": "Instalación/restauración y canales",
+      "expected_oracle": "Punteros propios restaurados; ningún actor/IO/medición extra de dominio",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW23",
+      "trigger": "Políticas parentales y cadena DI07 en componentes nuevos",
+      "expected_oracle": "Conservar recibos/ausencias/autoridades; sin promover PR96 a P01",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "DW24",
+      "trigger": "Transición tras DW24",
+      "expected_oracle": "Como máximo componente validado; I89/IR03/publicación/aceptación global siguen separados",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I88_SYNTHETIC_COMPONENT_ONLY"
+    }
+  ],
+  "component_external_seconds": 300,
+  "future_functional_external_seconds": 900,
+  "limits_changed": false,
+  "inherit_limits_from": "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "old_tests_reexecuted": false,
+  "product_or_harness_imported": false,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false
+}

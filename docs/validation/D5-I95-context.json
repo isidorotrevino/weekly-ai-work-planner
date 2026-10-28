@@ -1,0 +1,29 @@
+{
+  "schema": "d5.i95-capacity-component-context.v1",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "300s",
+    "python3",
+    "-B",
+    "-m",
+    "testing.prospective_capture_capacity.run_capacity_lab"
+  ],
+  "external_limit_seconds": 300,
+  "external_elapsed_seconds": 0.21,
+  "exit_code": 0,
+  "attempts": 1,
+  "retries": 0,
+  "external_measurement": "external_seconds=0.21 exit=0",
+  "stderr": "",
+  "raw_sha256": "3c83fa60eacea1e1450b7b33be2bacd3d3883adf89fdbe8ffd3ca40a80296116",
+  "scope": "I95_SYNTHETIC_CAPACITY_PLANNER_ONLY",
+  "functional_campaigns_executed": 0,
+  "publication_authorized": false,
+  "closure": false,
+  "global_review": "OPEN"
+}

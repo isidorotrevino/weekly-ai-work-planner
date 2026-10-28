@@ -1,0 +1,49 @@
+{
+  "schema": "d5.i94-capacity-design-integrity.v1",
+  "increment": "I94",
+  "date": "2026-10-27",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "DESIGN_ONLY_NUMERIC_CERTIFICATE_UNRESOLVED",
+  "artifacts": {
+    "docs/design/D5-I94-CAPACITY-CONTRACT-DESIGN.md": "2c840b8c4d92354cc942621487ffcd62b94d024705fc6ade2dfd631fc81323f7",
+    "docs/design/D5-I94-CAPACITY-CONTRACT-REVIEW.md": "ae87e99152ea92045011bd1df785363692b2d3fb8273634402b703520f0b9177",
+    "docs/validation/D5-I94-source-capacity-audit.json": "4eafab2dedf99bcd93fc645cb392b5b0af0eadae35790a84c3a46539337027c4",
+    "docs/validation/D5-I94-design-review.json": "b64cd7c0061fc46e02d61f07ee6b3f25317519c6515db54cc1b7e55b6b1cbb06"
+  },
+  "checks": {
+    "pinned_runner_sources": 71,
+    "test_bindings": 321,
+    "groups": 12,
+    "causal_inventory": 118,
+    "charging_methods": 25,
+    "charging_sites": 38,
+    "syntactic_loops": 493,
+    "quotas_compared": 24,
+    "proposed_cases": 32,
+    "all_proposed_cases": "NOT_RUN",
+    "prior_seals_verified": {
+      "docs/validation/D5-I83-integrity.json": "7e497955ea7ffbbf50d9f0c3c1a546bf68df5868b5982a36a97978f8eed3a3c8",
+      "docs/validation/D5-I84-integrity.json": "c0fd4ab17e4ebc12b2fca64125b97e56fea0e983518f55fc1735545ffcce27dd",
+      "docs/validation/D5-I85-integrity.json": "d1a3869ee1fca2361c6cb49e069734192f1ef4b5f82e19844b93812049201a1b",
+      "docs/validation/D5-I86-integrity.json": "4e780c0cf2e2ecf147d7e4a620a928735b0c91e8ba14ea6a1f73a37e33957488",
+      "docs/validation/D5-I87-integrity.json": "7913ec81f115b18e33f7fb1860a44e4877a1fce631fe89637320a5cba198050c",
+      "docs/validation/D5-I88-integrity.json": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+      "docs/validation/D5-I89-integrity.json": "9dd8b2c90d4f647cde9e1014a41ed35b1b005a78d1a0140b1d9281d8460faf2c",
+      "docs/validation/D5-I90-integrity.json": "3be0439c5700fd35e2df605d6de4f9a0342e5119969965739d08645884a3455e",
+      "docs/validation/D5-I91-integrity.json": "b5a1a8e6b3553f8587d7d476a985d405ef998b1f17aa877c67f01f433981d07f",
+      "docs/validation/D5-I91-next-capture-integrity.json": "d061295be7523017aaa489621795276c2e5ddf1e706affba902a81af5ea71783",
+      "docs/validation/D5-I92-integrity.json": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+      "docs/validation/D5-I93-integrity.json": "73f5a193c1d3c5b6ac5be309deac782a44dd53c7304fbcb01481114088e4db40"
+    },
+    "all_input_hashes_preserved": true,
+    "all_prior_tracked_files_unchanged": true,
+    "quota_changed": false,
+    "new_profile_or_planner_created": false,
+    "new_tests_executed": 0,
+    "functional_campaigns_executed": 0,
+    "product_or_runner_imported": false
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

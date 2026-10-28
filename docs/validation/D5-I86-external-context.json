@@ -1,0 +1,26 @@
+{
+  "schema": "d5.i86-external-context.v1",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "900s",
+    "python3",
+    "-B",
+    "-m",
+    "testing.prospective_capture_parental.capture",
+    "--capture",
+    "P01"
+  ],
+  "external_limit_seconds": 900,
+  "external_elapsed_seconds": 1.07,
+  "exit_code": 1,
+  "measurement": "Command exited with non-zero status 1\nexternal_seconds=1.07 exit=1",
+  "stderr": "",
+  "attempts": 1,
+  "retries": 0,
+  "publication_authorized": false,
+  "closure": false
+}

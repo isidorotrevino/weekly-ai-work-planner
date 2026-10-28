@@ -1,0 +1,1349 @@
+{
+  "schema": "d5.i99-parental-exception-cost-contract.v1",
+  "increment": "I99",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_PARENTAL_EXCEPTION_COST_REVIEW",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "SOURCE_DERIVED_EXCEPTION_BRANCHES_NOT_FUNCTIONAL_EVIDENCE",
+  "source_pins": {
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06"
+  },
+  "branches": [
+    {
+      "id": "EX01",
+      "path": "Client.perform falla al obtener snapshot antes de Store.transact",
+      "events": [
+        "Store.snapshot CALL_EXCEPTION",
+        "Client.snapshot CALL_EXCEPTION",
+        "Client.perform CALL_EXCEPTION con causal publish=False"
+      ],
+      "event_count": 3,
+      "C_keys": 1,
+      "Q35_success_slots": 0,
+      "L_nested_keys": 0,
+      "Q37_nested_endpoints": 0,
+      "condition": "Wrapper causal de perform abierto correctamente; excepción original de snapshot y proyecciones válidas."
+    },
+    {
+      "id": "EX02",
+      "path": "Client.perform obtiene snapshot y falla Store.transact",
+      "events": [
+        "Store.snapshot CALL_RETURN",
+        "Client.snapshot CALL_RETURN",
+        "Store.transact CAUSAL_TERMINAL EXCEPTION",
+        "Client.perform CALL_EXCEPTION con causal publish=False"
+      ],
+      "event_count": 4,
+      "C_keys": 2,
+      "Q35_success_slots": 0,
+      "L_nested_keys": 0,
+      "Q37_nested_endpoints": 0,
+      "condition": "Ambos wrappers abiertos; excepción original de transact, sin proyección inválida."
+    },
+    {
+      "id": "EX03",
+      "path": "Client.snapshot falla en Store.snapshot",
+      "events": [
+        "Store.snapshot CALL_EXCEPTION",
+        "Client.snapshot CALL_EXCEPTION"
+      ],
+      "event_count": 2,
+      "C_keys": 0,
+      "Q35_success_slots": 0,
+      "L_nested_keys": 0,
+      "Q37_nested_endpoints": 0,
+      "condition": "No perform externo activo; sólo estos dos wrappers snapshot."
+    },
+    {
+      "id": "EX04",
+      "path": "Store.snapshot directo falla",
+      "events": [
+        "Store.snapshot CALL_EXCEPTION"
+      ],
+      "event_count": 1,
+      "C_keys": 0,
+      "Q35_success_slots": 0,
+      "L_nested_keys": 0,
+      "Q37_nested_endpoints": 0,
+      "condition": "No facade snapshot externa en esta fila."
+    },
+    {
+      "id": "EX05",
+      "path": "Remote.execute raíz falla Store.transact",
+      "events": [
+        "Store.transact CAUSAL_TERMINAL EXCEPTION"
+      ],
+      "event_count": 1,
+      "C_keys": 1,
+      "Q35_success_slots": 0,
+      "L_nested_keys": 0,
+      "Q37_nested_endpoints": 0,
+      "condition": "Remote.execute no es wrapper causal propio; Store.transact sí. Sin C externo y con proyección válida."
+    }
+  ],
+  "scope": "Conteos locales condicionados a frame T/R causal activo y observación válida. No incluye contextos/owners/objetos fuertes, aserciones ni constructores de argumentos; no es una cota global de referencias.",
+  "success_failure_distinction": {
+    "successful_nested_command_selected_charges": 7,
+    "failed_nested_command_selected_charges": 2,
+    "failed_before_store_selected_charges": 1,
+    "explanation": "DomainState.close_call sólo añade Q35 si exception is None. wrap_boundary emite terminal en except y re-lanza antes del código que llama link. Por tanto no se crea L/Q37 del enlace anidado para ese fallo. Los C abiertos sí conservan sus cargos y sus terminales.",
+    "broader_reference_cost_unresolved": true
+  },
+  "bounded_prefixes": {
+    "dispatch_rejected_at_ISSUE_events_upper": 6,
+    "reconcile_rejected_at_QUERY_events_upper": 6,
+    "self_plan_R_client_perform_upper": 6,
+    "self_plan_R_method_events_upper": 24,
+    "self_error_plan_R_scaffold_plus_method_events_upper": 26,
+    "conditions": "Fuente original, sin hook que añada trabajo; se cuentan prefijos hasta excepción. self.plan tiene CAPTURE/SELECT_SOURCE/PREPARE_SOURCE/REVIEW_SOURCE/PREPARE_BATCH y REVIEW_BATCH opcional. Argumentos/constructores y otros callers se suman aparte."
+  },
+  "callback_boundary_cost": {
+    "reviewed_definitions": 8,
+    "controlled_oserror_hooks": 6,
+    "proof_dict_mutators": 2,
+    "additional_observed_boundaries_per_invocation": 0,
+    "additional_assertion_events_per_invocation": 0,
+    "work_not_zero": true,
+    "caller_outcome_and_data_are_changed": true,
+    "unknown_callbacks_still_unresolved": true,
+    "claims_of_native_fsync_or_integrated_recovery": false
+  },
+  "negative_selector_scope": {
+    "T_R_selector_count": 42,
+    "T_R_selectors": {
+      "test_durable_integration.DurableIntegrationTest.test_DF04": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df04",
+          "line": 73,
+          "end_line": 81,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "PIN_",
+          "PIN_EVENT",
+          "PIN_UNREACHABLE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF06": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df06",
+          "line": 94,
+          "end_line": 101,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "APPLY",
+          "MANIFEST_REQUIRED",
+          "PROJECTION",
+          "REVIEW_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF07": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df07",
+          "line": 103,
+          "end_line": 114,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "ALREADY_EXISTS",
+          "CORRUPT_OR_INCOMPLETE_HEAD"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF11": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df11",
+          "line": 156,
+          "end_line": 170,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "COMMIT_UNKNOWN",
+          "RECOVERY_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF19": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df19",
+          "line": 225,
+          "end_line": 237,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "COMMIT_UNKNOWN"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF22": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df22",
+          "line": 256,
+          "end_line": 263,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "COMMAND_CONFLICT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF27": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df27",
+          "line": 300,
+          "end_line": 306,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "ATTEMPT_BUDGET",
+          "RETRY_NOT_ELIGIBLE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF28": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df28",
+          "line": 308,
+          "end_line": 313,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF30": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df30",
+          "line": 324,
+          "end_line": 336,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "INVALID_JSON"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF31": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df31",
+          "line": 338,
+          "end_line": 343,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "APPLY",
+          "BLOCKED_EVALUATION",
+          "CLOCK",
+          "CLOCK_BACKWARDS"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF34": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df34",
+          "line": 374,
+          "end_line": 378,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "STALE_LOCAL"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF35": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df35",
+          "line": 380,
+          "end_line": 386,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "REVIEW_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF36": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df36",
+          "line": 388,
+          "end_line": 397,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "RETRY_NOT_ELIGIBLE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF37": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df37",
+          "line": 399,
+          "end_line": 404,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "TICKET_CONFLICT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF39": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df39",
+          "line": 415,
+          "end_line": 421,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CONFLICT_LEDGER",
+          "RESULT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF43": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df43",
+          "line": 451,
+          "end_line": 457,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CLEANUP_MARKER",
+          "CLEANUP_SYMLINK"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF44": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df44",
+          "line": 459,
+          "end_line": 518,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BUDGET",
+          "CLOCK",
+          "CONSTRAINT_BUDGET",
+          "EXECUTE",
+          "IMPORT",
+          "POLICY",
+          "PREPARE_EFFECT",
+          "PROFILE_BUDGET",
+          "QUERY_BUDGET",
+          "REGISTER_PROFILE",
+          "SOURCE_BUDGET",
+          "TICKET_BUDGET"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF45": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df45",
+          "line": 520,
+          "end_line": 529,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CLOCK",
+          "HISTORY_HEADROOM"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_integration.DurableIntegrationTest.test_DF46": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_integration.py",
+          "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+          "symbol": "DurableIntegrationTest.df46",
+          "line": 531,
+          "end_line": 574,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BLOCKED_EVALUATION",
+          "VALIDATE_EVALUATION"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR04": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr04",
+          "line": 59,
+          "end_line": 66,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "INVALID_JSON",
+          "INVALID_KIND"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR05": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr05",
+          "line": 67,
+          "end_line": 73,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "APPLY_BATCH",
+          "STALE_SOURCE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR06": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr06",
+          "line": 74,
+          "end_line": 82,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CONFLICT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR08": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr08",
+          "line": 93,
+          "end_line": 98,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "UNSUPPORTED_RELATION"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR09": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr09",
+          "line": 99,
+          "end_line": 108,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "KIND_CONFLICT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR10": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr10",
+          "line": 109,
+          "end_line": 118,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "HARD_CYCLE",
+          "SELF_LOOP"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR11": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr11",
+          "line": 119,
+          "end_line": 127,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "LOCAL_DIVERGENCE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR12": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr12",
+          "line": 128,
+          "end_line": 133,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "WORK_OR_STATE_GUARD"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR13": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr13",
+          "line": 134,
+          "end_line": 143,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "APPLY_BATCH",
+          "REVIEW_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR16": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr16",
+          "line": 161,
+          "end_line": 167,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "APPLY_BATCH",
+          "COMMAND_CONFLICT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR17": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr17",
+          "line": 168,
+          "end_line": 173,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BATCH_RECEIPT_REQUIRED",
+          "SELECT_TASKS",
+          "TASK_PARTICIPANT_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR18": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr18",
+          "line": 174,
+          "end_line": 179,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "REVIEW_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR19": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr19",
+          "line": 180,
+          "end_line": 187,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "STALE_"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR22": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr22",
+          "line": 206,
+          "end_line": 214,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "INVALID_SHAPE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR24": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr24",
+          "line": 238,
+          "end_line": 247,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "COMMIT_UNKNOWN",
+          "RECOVERY_REQUIRED"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR27": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr27",
+          "line": 258,
+          "end_line": 275,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "COMMIT_UNKNOWN"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR30": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr30",
+          "line": 291,
+          "end_line": 299,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "ATTEMPT_BUDGET",
+          "BINDING_UNRESOLVED",
+          "QUERY_BUDGET",
+          "RETRY_NOT_ELIGIBLE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR32": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr32",
+          "line": 308,
+          "end_line": 313,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CONFLICT_LEDGER",
+          "RESULT"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR33": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr33",
+          "line": 314,
+          "end_line": 321,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "RETRY_NOT_ELIGIBLE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR34": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr34",
+          "line": 322,
+          "end_line": 335,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BINDING_UNRESOLVED",
+          "STALE_DESTINATION"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR35": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr35",
+          "line": 336,
+          "end_line": 349,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "INVALID_SHAPE"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR37": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr37",
+          "line": 384,
+          "end_line": 419,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "BIND",
+          "BINDING_BUDGET",
+          "BUDGET",
+          "CAPTURE",
+          "EXECUTE",
+          "INVALID_TASK_SELECTION",
+          "MANIFEST_BUDGET",
+          "PREPARE_BATCH",
+          "PREPARE_PROJECTION",
+          "REMOTE_TASK_BUDGET",
+          "REVIEW",
+          "SELECT_TASKS",
+          "SOURCE_BUDGET",
+          "STATE_BUDGET",
+          "TICKET_BUDGET"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      },
+      "test_durable_relational.DurableRelationalTest.test_DR38": {
+        "source_binding": {
+          "status": "SOURCE_DERIVED_EXPECTATION",
+          "kind": "METHOD_AST_EXPECTATION",
+          "path": "testing/D5/test_durable_relational.py",
+          "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+          "symbol": "DurableRelationalTest.dr38",
+          "line": 420,
+          "end_line": 438,
+          "factory_args": {},
+          "scope": "SOURCE_BINDING_NOT_RUNTIME_ATTESTATION"
+        },
+        "exception_codes": [
+          "CLEANUP_MARKER",
+          "CLEANUP_SYMLINK"
+        ],
+        "methods": [
+          "Store.transact"
+        ],
+        "input_failures": [
+          "COMMAND_HEADER_INVALID",
+          "CAUSAL_FIELD_BUDGET",
+          "INVALID_JSON",
+          "JSON_DEPTH",
+          "JSON_STRING_BUDGET"
+        ]
+      }
+    },
+    "meaning": "Sólo cuando falla construir request de Store.transact y el fallo de input está listado se crea request INVALID_INPUT_EXPECTED_NEGATIVE. La excepción real debe tener código exactamente en exception_codes. Un self.error con regex exitoso no otorga esta condición.",
+    "no_blanket_negative_exemption": true,
+    "Client_perform_open_digest_has_no_same_fallback": true,
+    "source_selector_presence_is_not_runtime_coverage": true
+  },
+  "prior_success_matrix": "I98 sigue condicionado a retorno exitoso. Estas filas complementan sus rutas; no cambian su sello ni convierten una excepción en retorno positivo.",
+  "remaining_capacity": "I97 conserva R>=19037>16384. I98 sólo acota helpers. El censo transitivo de los92 fn de self.error y resto de llamadas, todas las321 raíces y bytes/refs siguen pendientes.",
+  "all_current_limits_preserved": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "full_reference_upper": null,
+  "full_event_upper": null,
+  "numeric_capacity_certificate_created": false,
+  "proposed_reference_quota": null,
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

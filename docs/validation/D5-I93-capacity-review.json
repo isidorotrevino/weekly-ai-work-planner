@@ -1,0 +1,258 @@
+{
+  "schema": "d5.i93-capacity-decision-review.v1",
+  "increment": "I93",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_DOCUMENTARY_DECISION_NOT_IMPLEMENTED",
+  "basis": "READ_ONLY_REVIEW_OF_SEALED_I92_AND_PINNED_SOURCE_NO_CAMPAIGN",
+  "inputs": {
+    "docs/design/D5-I82-CAUSAL-CAPTURE-DESIGN.md": "c39c87e990eb045767333d6bfe8bbed20d9c9a2688b83ffaabbd38e059c56867",
+    "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md": "fcf235192926109e1941f4dcb24839ca260da56c88b7b3e1fa820872b803ac05",
+    "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md": "84be3ee003536f4f32cc51d1cb3057914d6469964a936bccc2867d695656da6b",
+    "docs/design/D5-I91-NEXT-CAPTURE-PROPOSAL.md": "48c361916d6858b9044cf63cc45ff740ab2ee81084c3372f8c113a72f08b53d0",
+    "docs/validation/D5-I92-P01/runner-raw.json": "afb749725efb7d7ac8f5362e7684c23dd7e9ec50bcf6960ad2dbf8f6803fac2d",
+    "docs/validation/D5-I92-P01/sidecar.json": "eda2a0752e9016253073a54cc793c0c3767288a7aaeef390877d0dd7d6639d37",
+    "docs/validation/D5-I92-integrity.json": "77313ff3bfd1c083ad97f030f7215f2019d1ebc82abda19aa9ab1f8c0535345f",
+    "docs/validation/D5-I92-results.json": "e9b343dab345bed17bcc611121d53b420c6572b81b8255db5da70d687cf487d3",
+    "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json": "1bf3cb8c1d267cc6b4a2c442f103333d93066b55f61b0c30a8aeaeccfca58c68",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "owner": "Recorder",
+      "method": "reference",
+      "line": 230,
+      "end_line": 230,
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "CausalState",
+      "method": "ref",
+      "line": 414,
+      "end_line": 414,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "CausalState",
+      "method": "object_ref",
+      "line": 415,
+      "end_line": 419,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "DomainState",
+      "method": "declaration",
+      "line": 1203,
+      "end_line": 1220,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "DomainState",
+      "method": "retain",
+      "line": 1240,
+      "end_line": 1242,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "DomainState",
+      "method": "close_call",
+      "line": 1245,
+      "end_line": 1251,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": "DomainState",
+      "method": "link",
+      "line": 1252,
+      "end_line": 1263,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": null,
+      "method": "validate_causal",
+      "line": 762,
+      "end_line": 786,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "owner": null,
+      "method": "validate_domain_groups",
+      "line": 1266,
+      "end_line": 1288,
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "authority": "SOURCE_EXPECTATION_NOT_FAILED_ALLOCATION_TRACE"
+    }
+  ],
+  "observed": {
+    "I92_status": "INVALID_CAPTURE",
+    "first_code": "REFERENCE_BUDGET",
+    "phase": "ENTRYPOINT",
+    "tests": 13,
+    "requested_tests": 321,
+    "groups": 1,
+    "requested_groups": 12,
+    "shared_reference_count": 16393,
+    "global_reference_limit": 16384,
+    "pages": 4,
+    "page_bytes": 7582675,
+    "sidecar_bytes": 1091122,
+    "maximum_frame_events": 1317,
+    "raw_pass_not_capture_acceptance": true,
+    "full_campaign_reference_requirement_known": false,
+    "first_failed_charge_site_retained": false
+  },
+  "current_limits": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "constraints_preserved": [
+    "One complete321/12 capture; no sum of prior packets, partial resume or subset execution.",
+    "No evidence sampling, dropped witnesses/links, reset by test/table/thread/page, new uncharged parallel counters or generic N/A.",
+    "Original helpers/code/registries/seals remain unchanged; any future implementation uses a new profile and fixed registry.",
+    "All quotas must be reviewed together: refs, events/test/campaign, rows/event bytes, sidecar/raw/context/launcher, package member count/bytes, operands and accumulated Reader inputs.",
+    "Public source expectations are not runtime observations; no extrapolated full capacity claim from thirteen tests.",
+    "The counter overshoot must remain diagnostic evidence; a future atomic charge proposal does not itself solve full campaign capacity."
+  ],
+  "findings": [
+    {
+      "id": "CAP01",
+      "status": "OBSERVED",
+      "finding": "I92 failed global reference budget; first worker diagnostic retained. The normal sidecar is invalid."
+    },
+    {
+      "id": "CAP02",
+      "status": "SOURCE_SUPPORTED",
+      "finding": "Recorder.reference increments before checking. Shared counter includes causal keys, object refs, identity/group/witness entries, retained records, links and protocol observations. The exact first allocation trace is absent."
+    },
+    {
+      "id": "CAP03",
+      "status": "CONTRACT_BOUNDARY",
+      "finding": "I82/I87/I90 preserve16384 accumulated references and disallow resets/parallel accounting. Available page/sidecar bytes do not substitute this quota."
+    },
+    {
+      "id": "CAP04",
+      "status": "NOT_DEMONSTRATED",
+      "finding": "Lossless representation within existing quotas for321/12 is neither proved nor disproved by this prefix. Compression must account every actual pointer/link and preserve all authorities/context, not rename or hide charges."
+    },
+    {
+      "id": "CAP05",
+      "status": "DECISION_REQUIRED_BEFORE_CONTRACT_REVISION",
+      "finding": "No numeric replacement is justified yet. A future design must provide a source-derived budget envelope for every quota, uncertainty rules, hard stop and synthetic boundary matrix before implementation."
+    },
+    {
+      "id": "CAP06",
+      "status": "NOT_READY",
+      "finding": "IR03 requires complete valid new evidence. No global obligation can be accepted from I92 partial raw PASS or NS12."
+    }
+  ],
+  "decisions": [
+    {
+      "option": "A",
+      "scope": "DESIGN_ONLY_CAPACITY_CONTRACT_REVISION_PROPOSAL",
+      "description": "Allow the next design to propose justified explicit quota revisions and/or a lossless representation, with all quotas reviewed jointly. No quota is applied; no implementation, component run, functional capture or publication is authorized.",
+      "required_design_outputs": [
+        "Versioned capacity contract comparing every existing/proposed cap and accounting semantics.",
+        "Source-derived resource envelope, unknowns and preflight conditions for the full321/12 runner, without executing it.",
+        "Atomic charging/failure rules and conservation of context/witnesses/receipts/authority.",
+        "New synthetic boundary matrix and future profile/registry names, all NOT_RUN.",
+        "Separate later user decisions for implementation/components and full functional capture."
+      ]
+    },
+    {
+      "option": "B",
+      "scope": "PRESERVE_CURRENT_LIMITS_NO_NEW_CAMPAIGN",
+      "description": "Keep every current quota exact and record complete capture as blocked. Continue documentary work without claiming a within-budget implementation exists."
+    }
+  ],
+  "selected_option": null,
+  "quota_revision_authorized": false,
+  "quota_changed": false,
+  "implementation_authorized": false,
+  "component_execution_authorized": false,
+  "functional_execution_authorized": false,
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "old_tests_reexecuted": false,
+  "new_profile_created": false,
+  "new_registry_created": false,
+  "new_capture_authority_created": false,
+  "publication_authorized": false,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "closure": false,
+  "global_review": "OPEN",
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false
+}

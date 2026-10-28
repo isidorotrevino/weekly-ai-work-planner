@@ -1,0 +1,359 @@
+{
+  "schema": "d5.nullable-selector-design.v1",
+  "increment": "I90",
+  "date": "2026-10-27",
+  "timezone": "Europe/Madrid",
+  "status": "PREPARED_FOR_REVIEW",
+  "contract_approved": false,
+  "implementation_authorized": false,
+  "component_test_execution_authorized": false,
+  "functional_capture_execution_authorized": false,
+  "publication_authorized": false,
+  "proposed_component_increment": "I91",
+  "proposed_functional_increment": "I92",
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_domains/capture.py",
+      "owner": "selectors",
+      "method": null,
+      "line": 202,
+      "end_line": 214,
+      "sha256": "0567a8a20756b1e8823a482bf04edb49ace7d0538004c79e794d2bd3554fe91c",
+      "segment_sha256": "4613dc5427ba0b13d38e4fb0f907d03feecba708c3bc34c7f6fb895b5bda4c9a",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "testing/prospective_capture_domains/capture.py",
+      "owner": "store_receipt",
+      "method": null,
+      "line": 242,
+      "end_line": 252,
+      "sha256": "0567a8a20756b1e8823a482bf04edb49ace7d0538004c79e794d2bd3554fe91c",
+      "segment_sha256": "ca66aafbca58c279e1994086fbee232cca977f81c9a55b69b1e8cff5763ae463",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "testing/prospective_capture_domains/capture.py",
+      "owner": "BaseRecorder",
+      "method": "wrap_boundary",
+      "line": 539,
+      "end_line": 616,
+      "sha256": "0567a8a20756b1e8823a482bf04edb49ace7d0538004c79e794d2bd3554fe91c",
+      "segment_sha256": "898eed2614e52ce468cffb7d26d914a8352aac07ada088767ddf7fa56cf9c326",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "owner": "remote_reduce",
+      "method": null,
+      "line": 426,
+      "end_line": 474,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "segment_sha256": "f5afa618e982049ad6e1b29f5acac32a01ed3de4c273d65c04b025c528f52830",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "owner": "proof_ok",
+      "method": null,
+      "line": 403,
+      "end_line": 423,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "segment_sha256": "f1fd708620f19bb960325653a050e8d5aa15cde2ff6a4b889b27381eb3f764b4",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "owner": "Remote",
+      "method": "execute",
+      "line": 484,
+      "end_line": 490,
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "segment_sha256": "9a64c0de8e6518d7e8628ce05e4278f3d9041536aade6fc0ff1e7b9456eae8c6",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "owner": "remote_reduce",
+      "method": null,
+      "line": 398,
+      "end_line": 446,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "segment_sha256": "88d406d25cb9ac1d85273198024d899ce64d9fc90a71a42e213668176a6ba3e5",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "owner": "proof_ok",
+      "method": null,
+      "line": 379,
+      "end_line": 395,
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "segment_sha256": "fabf2576b11ec8d12c02cc47c6b75dc5d8a8f5fa99d751def45a2202d5253391",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "owner": "DurableIntegrationTest",
+      "method": "phase_args",
+      "line": 116,
+      "end_line": 135,
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "segment_sha256": "27eac531f62e747563f1848c52e1e83f1336c6c0e9d5eaa24ab5f4939a958bdd",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "owner": "DurableIntegrationTest",
+      "method": "commit_crashes",
+      "line": 137,
+      "end_line": 150,
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "segment_sha256": "11ca61dcb043cb6c3ce2129b0549bedbce0dcf0c26b003be0ccc9e0c12e4dc22",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "owner": "DurableIntegrationTest",
+      "method": "df08",
+      "line": 152,
+      "end_line": 152,
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "segment_sha256": "4e2357e21ff5e5c73292a39f2e59d82641a2cbc041d71adea3835b0bfa0c7764",
+      "authority": "SOURCE_EXPECTATION_NOT_RUNTIME_RETURN"
+    }
+  ],
+  "inputs": {
+    "docs/validation/D5-I88-integrity.json": "fd3cfd7183434637f95da9b81274a7f98b1c0cb75a9ccf6b913ffcd094131bdf",
+    "docs/validation/D5-I89-capture-authorization.json": "1beeccd44611b1f6f8494914b29dcf69dcdb4b8a474797268b06c4f7343a4ee0",
+    "docs/validation/D5-I89-results.json": "67e62c5151d69100a21c05807a837ac550a593d0431e260dfbdaa979d5d7a95a",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/prospective_capture_domains/capture.py": "0567a8a20756b1e8823a482bf04edb49ace7d0538004c79e794d2bd3554fe91c"
+  },
+  "selector_policies": [
+    {
+      "id": "NP00_STRICT",
+      "nullable_fields": [],
+      "default": true
+    },
+    {
+      "id": "NP01_T_REMOTE_PROOF",
+      "family": "T",
+      "source_schema": "d5.durable-remote-proof.v1",
+      "exact_keys": [
+        "schema",
+        "run_id",
+        "store_id",
+        "ticket",
+        "request_hash",
+        "creation_key",
+        "manifest_hash",
+        "status",
+        "remote_id",
+        "applied_version",
+        "payload_hash",
+        "retry_tick",
+        "code"
+      ],
+      "nullable_fields": [
+        "retry_tick"
+      ],
+      "integer_range": [
+        0,
+        1023
+      ],
+      "required_role": "REMOTE",
+      "allowed_store_operations": [
+        "EXECUTE",
+        "CLOSE"
+      ],
+      "child_policy": "CP07"
+    },
+    {
+      "id": "NP02_R_REMOTE_PROOF",
+      "family": "R",
+      "source_schema": "d5.relational-remote-proof.v1",
+      "exact_keys": [
+        "schema",
+        "run_id",
+        "store_id",
+        "ticket",
+        "request_hash",
+        "creation_key",
+        "manifest_hash",
+        "status",
+        "remote_id",
+        "applied_version",
+        "payload_hash",
+        "retry_tick",
+        "code"
+      ],
+      "nullable_fields": [
+        "retry_tick"
+      ],
+      "integer_range": [
+        0,
+        1023
+      ],
+      "required_role": "REMOTE",
+      "allowed_store_operations": [
+        "EXECUTE",
+        "CLOSE"
+      ],
+      "child_policy": "CP13"
+    }
+  ],
+  "required_contexts": [
+    "OBSERVED_PARENT_STORE_RECEIPT_REMOTE_DOMAIN_OPERATION_FAMILY",
+    "ORIGINAL_REMOTE_ORACLE_RETURN_HEAD_AND_OPERATION",
+    "REGISTERED_CP07_CP13_REMOTE_RESULT_WITHOUT_STORE_RECEIPT"
+  ],
+  "no_generic_nullable": true,
+  "absence_is_not_null": true,
+  "no_new_observer_or_domain_calls": true,
+  "proposed_receipt_schema": "d5.scoped-store-receipt-projection.v1",
+  "proposed_receipt_field": "metadata_policy_ref",
+  "proposed_child_header_schema": "d5.scoped-child-header-observation.v1",
+  "proposed_child_header_field": "selector_policy_ref",
+  "proposed_component_tests": [
+    {
+      "id": "NS01",
+      "trigger": "Prueba sintética nueva con retry_tick=None y selector heredado",
+      "expected_oracle": "Reproducir COMMAND_HEADER_INVALID; preservar I88/I89 y no reconstruir su retorno",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS02",
+      "trigger": "NP01 T, prueba remota exacta y contexto REMOTE EXECUTE/CLOSE compatible",
+      "expected_oracle": "Retener null observado, digest original y metadata_policy_ref; mismo retorno/una llamada",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS03",
+      "trigger": "NP02 R, prueba remota exacta y contexto compatible",
+      "expected_oracle": "Mantener schema/familia R y null; no convertir a T ni aceptar alias por nombre",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS04",
+      "trigger": "Valores int0/int1023/bool/float/string/int1024",
+      "expected_oracle": "Primeros válidos bajo política; tipos/rango restantes rechazados sin coerción",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS05",
+      "trigger": "retry_tick ausente, None presente o schema/forma desconocidos",
+      "expected_oracle": "Distinguir ausencia/null; no insertar campo ni aprender policy de payload",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS06",
+      "trigger": "None en seq/version/ledger_version u otro entero sin excepción",
+      "expected_oracle": "Rechazar; NP no vuelve nullable todo el catálogo",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS07",
+      "trigger": "Rol CLIENT/Drive, acción/familia/run/store incompatibles o contexto ausente",
+      "expected_oracle": "No activar NP01/NP02 sólo por etiqueta; missing/conflicto cerrado",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS08",
+      "trigger": "Recibo Store original con cid/request/seq/flags",
+      "expected_oracle": "Preservar cabecera y vínculo; metadata nullable no sustituye campos obligatorios",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS09",
+      "trigger": "Resultado remoto de hijo CP07/CP13 sin recibo Store",
+      "expected_oracle": "Null proyectado sólo con política/contexto; receipt/command_id permanecen ausentes, sin UUID5 inferido",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS10",
+      "trigger": "Reader recibe policy_ref forjado, claves extra o contexto cruzado",
+      "expected_oracle": "Rechazar incluso con hashes coherentes; conservar grupos/witnesses y reglas de enlaces I88",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS11",
+      "trigger": "Error del observer, excepción original, salida parcial, cuotas/restauración",
+      "expected_oracle": "Misma llamada/retorno/excepción; latch y primer diagnóstico, cleanup original; una escritura y límites compartidos intactos",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    },
+    {
+      "id": "NS12",
+      "trigger": "Final de componente y transición",
+      "expected_oracle": "Como máximo componente validado; I92 funcional, IR03, publicación y aceptación global pendientes de decisiones separadas",
+      "status": "NOT_RUN",
+      "phase": "PROPOSED_I91_SYNTHETIC_COMPONENT_ONLY"
+    }
+  ],
+  "component_external_seconds": 300,
+  "future_functional_external_seconds": 900,
+  "future_profile": {
+    "namespace": "testing/prospective_capture_selectors",
+    "files": [
+      "capture.py",
+      "worker.py",
+      "test_selector_capture.py",
+      "run_selector_lab.py",
+      "README.md"
+    ],
+    "registry": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+    "normal_schema": "d5.selector-sidecar.v1",
+    "failure_schema": "d5.selector-worker-failure.v1",
+    "created": false
+  },
+  "limits_changed": false,
+  "inherit_limits_from": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_harness_imported": false,
+  "old_tests_reexecuted": false,
+  "semantic_baseline": {
+    "SUPPORTS_BOUNDED": 83,
+    "PARTIAL": 1
+  },
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_accepted_milestone_unchanged": true,
+  "prior_30_of_35_not_promoted": true,
+  "H07_closed": false,
+  "D5_closed": false,
+  "closure": false,
+  "global_review": "OPEN",
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "real_provider_access": false,
+  "credentials_used": false,
+  "quota_consumed": 0,
+  "reservations_created": 0,
+  "operational_activation": false,
+  "migration_promotion": false,
+  "deployment": false,
+  "D6_started": false
+}

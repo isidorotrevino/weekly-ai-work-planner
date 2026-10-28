@@ -1,0 +1,50 @@
+{
+  "schema": "d5.parental-component-integrity.v1",
+  "increment": "I85",
+  "date": "2026-10-27",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "status": "PASS_COMPONENT_ONLY",
+  "checks": {
+    "component_tests": 96,
+    "passed": 96,
+    "raw_case_pointers": 96,
+    "method_source_anchors": 96,
+    "pre_post_source_hashes": 96,
+    "input_hashes": 516,
+    "I84_inputs_preserved": 503,
+    "source_anchors": 37,
+    "stdlib_AST_bindings": 5,
+    "child_action_policies": 15,
+    "input_reader_within_limits": true,
+    "prior_seals_verified": {
+      "D5-I83-integrity.json": 12,
+      "D5-I84-integrity.json": 3,
+      "D5-I84-handoff-integrity.json": 2
+    },
+    "temporary_roots_owned_and_removed": 16,
+    "sibling_controls_preserved": 16,
+    "owned_synthetic_children_settled": 5,
+    "forbidden_imports": 0,
+    "functional_campaigns_executed": 0,
+    "old_tests_reexecuted": false,
+    "all_prior_tracked_files_unchanged": true,
+    "no_I86_authority_destination_or_launcher": true,
+    "semantic_baseline_unchanged": true
+  },
+  "artifacts": {
+    "testing/prospective_capture_parental/capture.py": "0dc2c42114b6743647695cd6c58093375f07a943f0427562baefd1a5bfaf9471",
+    "testing/prospective_capture_parental/worker.py": "9e47d51d7d4954564ef9c4573888fab600980ef3d827b2b45aa0998a8c0fa923",
+    "testing/prospective_capture_parental/test_parental_capture.py": "a5394bb2037ad20ed0811b7d16ebb6f306c5d78cdb81e08217021274975ef5f1",
+    "testing/prospective_capture_parental/run_parental_lab.py": "60d7d14ba1cc73605b396323e1ea5fa4ac41341622e8b41411b32333c8a50698",
+    "testing/prospective_capture_parental/README.md": "e3c77bf486d0394dce18162b553bd3650903f039bba9a14a8851101e35004abb",
+    "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json": "10fe21fcf4e0b37def8ea2ec4ca00e0003bf592b2a4787c8178fbe245502f11e",
+    "docs/design/D5-I85-PARENTAL-CAPTURE-LAB.md": "91f71322cffadb250312f82593e142ac195a2cca77e813379a66b721e06186c4",
+    "docs/validation/D5-I85-tests-raw.json": "678279820fac1d0236f7fc2c57acb91927d8524c8e286a7b5bfe6fc9f890fe57",
+    "docs/validation/D5-I85-context.json": "131597465be39c49dfa8adabf57e13cf68c60f7327ec8da8b72d2964d676cf85",
+    "docs/validation/D5-I85-results.json": "355d3d6d9aa9f41bef96a94ef69fff49669ca524855b8c8e4022d1e819cacdb6",
+    "docs/validation/D5-I85-results.md": "6dcd584b95e9cbf5c9d0d374263e370d949288b63d83c5e242f1e5291aa56a68"
+  },
+  "closure": false,
+  "global_review": "OPEN",
+  "publication_authorized": false
+}

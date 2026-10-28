@@ -1,0 +1,4185 @@
+{
+  "schema": "d5.i96-reader-source-envelope.v1",
+  "date": "2026-10-27",
+  "reader_budget": {
+    "status": "NORMAL_PATH_EVIDENCE_AND_INPUT_SOURCE_READER_UPPER_BOUNDS_DERIVED",
+    "scope": "SCOPED_READER_BYTES_NOT_ALL_OS_OR_UNIT_READS",
+    "normal_path": {
+      "page_scans_by_typed_validate_pages": 1,
+      "page_scans_by_selector_validate_pages": 1,
+      "page_scans_by_packet_finish": 1,
+      "raw_scans": 2,
+      "sidecar_scans": 2,
+      "OWNER_scans_in_final_package_check": 1,
+      "context_and_sibling_launcher_scans": 0,
+      "formula": "2*(raw+sidecar)+3*pages+36",
+      "unique_upper_bytes": 92274724,
+      "read_upper_bytes": 251658276,
+      "unique_limit": 134217728,
+      "read_limit": 268435456,
+      "read_headroom_bytes": 16777180,
+      "certificate_kind": "SOURCE_CONDITIONAL_ON_THIS_UNCHANGED_NORMAL_PATH_NOT_RUNTIME_MEASUREMENT",
+      "excludes": [
+        "input/source authority Reader",
+        "owner.verify direct fd reads",
+        "future new profile changes",
+        "error/partial paths not separately certified here"
+      ]
+    },
+    "input_path": {
+      "authority_reads_one_pass": [
+        {
+          "name": "docs/validation/D5-I92-capture-authorization.json",
+          "multiplicity": 1,
+          "reason": "authority JSON",
+          "file_bytes": 33666
+        },
+        {
+          "name": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "authority registry_sha256 check",
+          "file_bytes": 970143
+        },
+        {
+          "name": "docs/design/D5-AFTER-I86-CLOSURE-ROADMAP.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 14656
+        },
+        {
+          "name": "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 18581
+        },
+        {
+          "name": "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9131
+        },
+        {
+          "name": "docs/design/D5-I35-NEXT-CUT-SCOPE.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4731
+        },
+        {
+          "name": "docs/design/D5-I69-PROSPECTIVE-CAPTURE-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 13839
+        },
+        {
+          "name": "docs/design/D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 15289
+        },
+        {
+          "name": "docs/design/D5-I70-PROSPECTIVE-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2716
+        },
+        {
+          "name": "docs/design/D5-I72-PAGED-CAPTURE-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 11481
+        },
+        {
+          "name": "docs/design/D5-I72-PAGED-CAPTURE-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 11838
+        },
+        {
+          "name": "docs/design/D5-I73-PAGED-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3495
+        },
+        {
+          "name": "docs/design/D5-I75-TYPED-ADAPTER-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 14739
+        },
+        {
+          "name": "docs/design/D5-I75-TYPED-ADAPTER-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 19753
+        },
+        {
+          "name": "docs/design/D5-I76-TYPED-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2405
+        },
+        {
+          "name": "docs/design/D5-I78-LATE-BINDING-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 12678
+        },
+        {
+          "name": "docs/design/D5-I78-LATE-BINDING-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 10594
+        },
+        {
+          "name": "docs/design/D5-I79-LATE-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2994
+        },
+        {
+          "name": "docs/design/D5-I83-CAUSAL-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5918
+        },
+        {
+          "name": "docs/design/D5-I85-PARENTAL-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2880
+        },
+        {
+          "name": "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6804
+        },
+        {
+          "name": "docs/design/D5-I87-DOMAIN-WITNESS-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3174
+        },
+        {
+          "name": "docs/design/D5-I88-DOMAIN-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3234
+        },
+        {
+          "name": "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6913
+        },
+        {
+          "name": "docs/design/D5-I90-NULLABLE-SELECTOR-REVIEW.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2250
+        },
+        {
+          "name": "docs/design/D5-I91-SELECTOR-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2265
+        },
+        {
+          "name": "docs/validation/D5-AFTER-I86-closure-roadmap.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 21029
+        },
+        {
+          "name": "docs/validation/D5-CAUSAL-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 811140
+        },
+        {
+          "name": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 920604
+        },
+        {
+          "name": "docs/validation/D5-I69-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 305616
+        },
+        {
+          "name": "docs/validation/D5-I69-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2885
+        },
+        {
+          "name": "docs/validation/D5-I70-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4007
+        },
+        {
+          "name": "docs/validation/D5-I70-plan-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 88193
+        },
+        {
+          "name": "docs/validation/D5-I70-plan-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1274
+        },
+        {
+          "name": "docs/validation/D5-I70-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 136213
+        },
+        {
+          "name": "docs/validation/D5-I70-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7197
+        },
+        {
+          "name": "docs/validation/D5-I70-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 133338
+        },
+        {
+          "name": "docs/validation/D5-I71-P01-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 21357
+        },
+        {
+          "name": "docs/validation/D5-I71-P01/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P01/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 20902
+        },
+        {
+          "name": "docs/validation/D5-I71-P01/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 107393
+        },
+        {
+          "name": "docs/validation/D5-I71-P01/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4878528
+        },
+        {
+          "name": "docs/validation/D5-I71-P02-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 75963
+        },
+        {
+          "name": "docs/validation/D5-I71-P02/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P02/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 74556
+        },
+        {
+          "name": "docs/validation/D5-I71-P02/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9755833
+        },
+        {
+          "name": "docs/validation/D5-I71-P02/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3383713
+        },
+        {
+          "name": "docs/validation/D5-I71-P03-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 23867
+        },
+        {
+          "name": "docs/validation/D5-I71-P03/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P03/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 23368
+        },
+        {
+          "name": "docs/validation/D5-I71-P03/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 451514
+        },
+        {
+          "name": "docs/validation/D5-I71-P03/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 642948
+        },
+        {
+          "name": "docs/validation/D5-I71-P04-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 26019
+        },
+        {
+          "name": "docs/validation/D5-I71-P04/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P04/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 25484
+        },
+        {
+          "name": "docs/validation/D5-I71-P04/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 783675
+        },
+        {
+          "name": "docs/validation/D5-I71-P04/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 999035
+        },
+        {
+          "name": "docs/validation/D5-I71-P05-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 28107
+        },
+        {
+          "name": "docs/validation/D5-I71-P05/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P05/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 27536
+        },
+        {
+          "name": "docs/validation/D5-I71-P05/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 962730
+        },
+        {
+          "name": "docs/validation/D5-I71-P05/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1164966
+        },
+        {
+          "name": "docs/validation/D5-I71-P06-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 30617
+        },
+        {
+          "name": "docs/validation/D5-I71-P06/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P06/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 30002
+        },
+        {
+          "name": "docs/validation/D5-I71-P06/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 872808
+        },
+        {
+          "name": "docs/validation/D5-I71-P06/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 764617
+        },
+        {
+          "name": "docs/validation/D5-I71-P07-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 32997
+        },
+        {
+          "name": "docs/validation/D5-I71-P07/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P07/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 32342
+        },
+        {
+          "name": "docs/validation/D5-I71-P07/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 902538
+        },
+        {
+          "name": "docs/validation/D5-I71-P07/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 911541
+        },
+        {
+          "name": "docs/validation/D5-I71-P08-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 35097
+        },
+        {
+          "name": "docs/validation/D5-I71-P08/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P08/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 34406
+        },
+        {
+          "name": "docs/validation/D5-I71-P08/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2581596
+        },
+        {
+          "name": "docs/validation/D5-I71-P08/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 893783
+        },
+        {
+          "name": "docs/validation/D5-I71-P09-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 37099
+        },
+        {
+          "name": "docs/validation/D5-I71-P09/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P09/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36376
+        },
+        {
+          "name": "docs/validation/D5-I71-P09/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3150627
+        },
+        {
+          "name": "docs/validation/D5-I71-P09/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1543516
+        },
+        {
+          "name": "docs/validation/D5-I71-P10-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 68349
+        },
+        {
+          "name": "docs/validation/D5-I71-P10/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I71-P10/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 67074
+        },
+        {
+          "name": "docs/validation/D5-I71-P10/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2996172
+        },
+        {
+          "name": "docs/validation/D5-I71-P10/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1528023
+        },
+        {
+          "name": "docs/validation/D5-I71-capture-authorization.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2069
+        },
+        {
+          "name": "docs/validation/D5-I71-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9397
+        },
+        {
+          "name": "docs/validation/D5-I71-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 18490
+        },
+        {
+          "name": "docs/validation/D5-I71-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3892
+        },
+        {
+          "name": "docs/validation/D5-I72-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 83439
+        },
+        {
+          "name": "docs/validation/D5-I72-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4008
+        },
+        {
+          "name": "docs/validation/D5-I73-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5114
+        },
+        {
+          "name": "docs/validation/D5-I73-plan-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1587
+        },
+        {
+          "name": "docs/validation/D5-I73-plan-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 337
+        },
+        {
+          "name": "docs/validation/D5-I73-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 79605
+        },
+        {
+          "name": "docs/validation/D5-I73-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3829
+        },
+        {
+          "name": "docs/validation/D5-I73-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 94191
+        },
+        {
+          "name": "docs/validation/D5-I74-P01-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 21849
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 21849
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/event-0001.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2097075
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/event-0002.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2097047
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/event-0003.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1880581
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 180689
+        },
+        {
+          "name": "docs/validation/D5-I74-P01/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 961630
+        },
+        {
+          "name": "docs/validation/D5-I74-capture-authorization.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2439
+        },
+        {
+          "name": "docs/validation/D5-I74-diagnosis.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 24871
+        },
+        {
+          "name": "docs/validation/D5-I74-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5456
+        },
+        {
+          "name": "docs/validation/D5-I74-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 12469
+        },
+        {
+          "name": "docs/validation/D5-I74-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5130
+        },
+        {
+          "name": "docs/validation/D5-I75-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 143641
+        },
+        {
+          "name": "docs/validation/D5-I75-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4708
+        },
+        {
+          "name": "docs/validation/D5-I76-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5575
+        },
+        {
+          "name": "docs/validation/D5-I76-plan-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 978
+        },
+        {
+          "name": "docs/validation/D5-I76-plan-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 337
+        },
+        {
+          "name": "docs/validation/D5-I76-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 98231
+        },
+        {
+          "name": "docs/validation/D5-I76-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3948
+        },
+        {
+          "name": "docs/validation/D5-I76-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 113059
+        },
+        {
+          "name": "docs/validation/D5-I77-P01-launch.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 59617
+        },
+        {
+          "name": "docs/validation/D5-I77-P01/OWNER",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 36
+        },
+        {
+          "name": "docs/validation/D5-I77-P01/context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 59617
+        },
+        {
+          "name": "docs/validation/D5-I77-P01/runner-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 0
+        },
+        {
+          "name": "docs/validation/D5-I77-P01/sidecar.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 0
+        },
+        {
+          "name": "docs/validation/D5-I77-capture-authorization.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 22495
+        },
+        {
+          "name": "docs/validation/D5-I77-diagnosis.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 11725
+        },
+        {
+          "name": "docs/validation/D5-I77-execution-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 65310
+        },
+        {
+          "name": "docs/validation/D5-I77-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5068
+        },
+        {
+          "name": "docs/validation/D5-I77-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5435
+        },
+        {
+          "name": "docs/validation/D5-I77-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3563
+        },
+        {
+          "name": "docs/validation/D5-I78-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 150552
+        },
+        {
+          "name": "docs/validation/D5-I78-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4540
+        },
+        {
+          "name": "docs/validation/D5-I79-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5652
+        },
+        {
+          "name": "docs/validation/D5-I79-plan-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 975
+        },
+        {
+          "name": "docs/validation/D5-I79-plan-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 336
+        },
+        {
+          "name": "docs/validation/D5-I79-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 91062
+        },
+        {
+          "name": "docs/validation/D5-I79-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4029
+        },
+        {
+          "name": "docs/validation/D5-I79-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 104981
+        },
+        {
+          "name": "docs/validation/D5-I81-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5501
+        },
+        {
+          "name": "docs/validation/D5-I81-matrix.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7763
+        },
+        {
+          "name": "docs/validation/D5-I81-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 162749
+        },
+        {
+          "name": "docs/validation/D5-I81-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4222
+        },
+        {
+          "name": "docs/validation/D5-I81-trace-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4239706
+        },
+        {
+          "name": "docs/validation/D5-I82-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 663068
+        },
+        {
+          "name": "docs/validation/D5-I82-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5448
+        },
+        {
+          "name": "docs/validation/D5-I83-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6100
+        },
+        {
+          "name": "docs/validation/D5-I83-plan-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 952
+        },
+        {
+          "name": "docs/validation/D5-I83-plan-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 338
+        },
+        {
+          "name": "docs/validation/D5-I83-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 149942
+        },
+        {
+          "name": "docs/validation/D5-I83-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3359
+        },
+        {
+          "name": "docs/validation/D5-I83-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 225936
+        },
+        {
+          "name": "docs/validation/D5-I84-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 194725
+        },
+        {
+          "name": "docs/validation/D5-I85-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 797
+        },
+        {
+          "name": "docs/validation/D5-I85-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2485
+        },
+        {
+          "name": "docs/validation/D5-I85-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 132272
+        },
+        {
+          "name": "docs/validation/D5-I85-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3599
+        },
+        {
+          "name": "docs/validation/D5-I85-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 231270
+        },
+        {
+          "name": "docs/validation/D5-I87-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 12688
+        },
+        {
+          "name": "docs/validation/D5-I87-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1324
+        },
+        {
+          "name": "docs/validation/D5-I88-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 810
+        },
+        {
+          "name": "docs/validation/D5-I88-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2628
+        },
+        {
+          "name": "docs/validation/D5-I88-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 84329
+        },
+        {
+          "name": "docs/validation/D5-I88-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3768
+        },
+        {
+          "name": "docs/validation/D5-I88-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 157830
+        },
+        {
+          "name": "docs/validation/D5-I90-design-review.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 13020
+        },
+        {
+          "name": "docs/validation/D5-I90-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1052
+        },
+        {
+          "name": "docs/validation/D5-I91-context.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 816
+        },
+        {
+          "name": "docs/validation/D5-I91-integrity.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3775
+        },
+        {
+          "name": "docs/validation/D5-I91-results.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 81565
+        },
+        {
+          "name": "docs/validation/D5-I91-results.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3727
+        },
+        {
+          "name": "docs/validation/D5-I91-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 155002
+        },
+        {
+          "name": "docs/validation/D5-LATE-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 282034
+        },
+        {
+          "name": "docs/validation/D5-PAGED-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 237010
+        },
+        {
+          "name": "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 874633
+        },
+        {
+          "name": "docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 708481
+        },
+        {
+          "name": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 970143
+        },
+        {
+          "name": "docs/validation/D5-TYPED-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 278184
+        },
+        {
+          "name": "source_ingest/__init__.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 111
+        },
+        {
+          "name": "source_ingest/__main__.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1898
+        },
+        {
+          "name": "source_ingest/adoption.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7838
+        },
+        {
+          "name": "source_ingest/batch_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 26005
+        },
+        {
+          "name": "source_ingest/bootstrap.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7049
+        },
+        {
+          "name": "source_ingest/compare.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7244
+        },
+        {
+          "name": "source_ingest/durable_ambiguity_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 20090
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 34801
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 15164
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 40231
+        },
+        {
+          "name": "source_ingest/eligibility_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 27464
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 26004
+        },
+        {
+          "name": "source_ingest/isolated_local_edit.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9632
+        },
+        {
+          "name": "source_ingest/local_edit.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5987
+        },
+        {
+          "name": "source_ingest/local_reappearance.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6676
+        },
+        {
+          "name": "source_ingest/offline.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 25029
+        },
+        {
+          "name": "source_ingest/plane_fixture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 32708
+        },
+        {
+          "name": "source_ingest/postgres.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8776
+        },
+        {
+          "name": "source_ingest/preview.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9529
+        },
+        {
+          "name": "source_ingest/reappearance.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6363
+        },
+        {
+          "name": "source_ingest/register.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7369
+        },
+        {
+          "name": "source_ingest/relational_planner.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8853
+        },
+        {
+          "name": "source_ingest/review.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 12072
+        },
+        {
+          "name": "source_ingest/task_mapping.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5343
+        },
+        {
+          "name": "testing/D5/adoption_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 34911
+        },
+        {
+          "name": "testing/D5/bootstrap_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 25496
+        },
+        {
+          "name": "testing/D5/demo_durable_integration.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1659
+        },
+        {
+          "name": "testing/D5/demo_durable_relational.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1735
+        },
+        {
+          "name": "testing/D5/demo_offline_integration.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2506
+        },
+        {
+          "name": "testing/D5/demo_plane_reconciliation.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1899
+        },
+        {
+          "name": "testing/D5/demo_profiles_quotas.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2203
+        },
+        {
+          "name": "testing/D5/demo_register.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1424
+        },
+        {
+          "name": "testing/D5/demo_relational_batch.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1958
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8283
+        },
+        {
+          "name": "testing/D5/fixtures/plan.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 265
+        },
+        {
+          "name": "testing/D5/fixtures/register-after.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 432
+        },
+        {
+          "name": "testing/D5/fixtures/register-before.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 438
+        },
+        {
+          "name": "testing/D5/fixtures/register-compat-after.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 392
+        },
+        {
+          "name": "testing/D5/fixtures/register-compat-before.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 390
+        },
+        {
+          "name": "testing/D5/isolated_local_edit_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 38532
+        },
+        {
+          "name": "testing/D5/local_edit_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 32239
+        },
+        {
+          "name": "testing/D5/local_reappearance_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 37853
+        },
+        {
+          "name": "testing/D5/mapping_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 27528
+        },
+        {
+          "name": "testing/D5/postgres_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 19577
+        },
+        {
+          "name": "testing/D5/reappearance_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 30499
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6985
+        },
+        {
+          "name": "testing/D5/review_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 17209
+        },
+        {
+          "name": "testing/D5/run_adoption_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4088
+        },
+        {
+          "name": "testing/D5/run_batch_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2725
+        },
+        {
+          "name": "testing/D5/run_bootstrap_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3979
+        },
+        {
+          "name": "testing/D5/run_durable_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4518
+        },
+        {
+          "name": "testing/D5/run_eligibility_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2856
+        },
+        {
+          "name": "testing/D5/run_incremental_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2502
+        },
+        {
+          "name": "testing/D5/run_isolated_local_edit_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4454
+        },
+        {
+          "name": "testing/D5/run_local_edit_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3944
+        },
+        {
+          "name": "testing/D5/run_local_reappearance_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4307
+        },
+        {
+          "name": "testing/D5/run_mapping_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3237
+        },
+        {
+          "name": "testing/D5/run_plane_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2620
+        },
+        {
+          "name": "testing/D5/run_postgres_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 9344
+        },
+        {
+          "name": "testing/D5/run_reappearance_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3999
+        },
+        {
+          "name": "testing/D5/run_relational_durable_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4429
+        },
+        {
+          "name": "testing/D5/run_review_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3251
+        },
+        {
+          "name": "testing/D5/run_v30_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8591
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 41415
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 39806
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 24861
+        },
+        {
+          "name": "testing/D5/test_local_preview.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7919
+        },
+        {
+          "name": "testing/D5/test_offline_integration.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 28357
+        },
+        {
+          "name": "testing/D5/test_plane_reconciliation.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 28051
+        },
+        {
+          "name": "testing/D5/test_postgres_adapter.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2405
+        },
+        {
+          "name": "testing/D5/test_profiles_quotas.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 26548
+        },
+        {
+          "name": "testing/D5/test_register_comparison.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 10346
+        },
+        {
+          "name": "testing/D5/test_register_compat.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7223
+        },
+        {
+          "name": "testing/D5/test_relational_batch.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 25414
+        },
+        {
+          "name": "testing/D5/test_review_report.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2855
+        },
+        {
+          "name": "testing/D5/v30_scenarios.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5272
+        },
+        {
+          "name": "testing/prospective_capture/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2109
+        },
+        {
+          "name": "testing/prospective_capture/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 40037
+        },
+        {
+          "name": "testing/prospective_capture/run_capture_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4950
+        },
+        {
+          "name": "testing/prospective_capture/test_prospective_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 26466
+        },
+        {
+          "name": "testing/prospective_capture/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5497
+        },
+        {
+          "name": "testing/prospective_capture_causal/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 1383
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 72629
+        },
+        {
+          "name": "testing/prospective_capture_causal/run_causal_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5461
+        },
+        {
+          "name": "testing/prospective_capture_causal/test_causal_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 40063
+        },
+        {
+          "name": "testing/prospective_capture_causal/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8324
+        },
+        {
+          "name": "testing/prospective_capture_domains/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2342
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 122117
+        },
+        {
+          "name": "testing/prospective_capture_domains/run_domain_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5297
+        },
+        {
+          "name": "testing/prospective_capture_domains/test_domain_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 25593
+        },
+        {
+          "name": "testing/prospective_capture_domains/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8325
+        },
+        {
+          "name": "testing/prospective_capture_late/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 3332
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 22343
+        },
+        {
+          "name": "testing/prospective_capture_late/run_late_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4748
+        },
+        {
+          "name": "testing/prospective_capture_late/test_late_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 31544
+        },
+        {
+          "name": "testing/prospective_capture_late/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8310
+        },
+        {
+          "name": "testing/prospective_capture_paged/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2637
+        },
+        {
+          "name": "testing/prospective_capture_paged/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 32536
+        },
+        {
+          "name": "testing/prospective_capture_paged/run_paged_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4761
+        },
+        {
+          "name": "testing/prospective_capture_paged/test_paged_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 35842
+        },
+        {
+          "name": "testing/prospective_capture_paged/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 6047
+        },
+        {
+          "name": "testing/prospective_capture_parental/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2047
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 103059
+        },
+        {
+          "name": "testing/prospective_capture_parental/run_parental_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5329
+        },
+        {
+          "name": "testing/prospective_capture_parental/test_parental_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 35911
+        },
+        {
+          "name": "testing/prospective_capture_parental/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8326
+        },
+        {
+          "name": "testing/prospective_capture_selectors/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2181
+        },
+        {
+          "name": "testing/prospective_capture_selectors/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 133829
+        },
+        {
+          "name": "testing/prospective_capture_selectors/run_selector_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 5323
+        },
+        {
+          "name": "testing/prospective_capture_selectors/test_selector_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 15693
+        },
+        {
+          "name": "testing/prospective_capture_selectors/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 8327
+        },
+        {
+          "name": "testing/prospective_capture_typed/README.md",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 2561
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 54874
+        },
+        {
+          "name": "testing/prospective_capture_typed/run_typed_lab.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 4761
+        },
+        {
+          "name": "testing/prospective_capture_typed/test_typed_capture.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 35821
+        },
+        {
+          "name": "testing/prospective_capture_typed/worker.py",
+          "multiplicity": 1,
+          "reason": "capture_inputs loop",
+          "file_bytes": 7076
+        },
+        {
+          "name": "docs/validation/D5-I91-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "component raw validation",
+          "file_bytes": 155002
+        },
+        {
+          "name": "docs/validation/D5-I91-integrity.json",
+          "multiplicity": 1,
+          "reason": "component seal validation",
+          "file_bytes": 3775
+        },
+        {
+          "name": "testing/prospective_capture_selectors/capture.py",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 133829
+        },
+        {
+          "name": "testing/prospective_capture_selectors/worker.py",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 8327
+        },
+        {
+          "name": "testing/prospective_capture_selectors/test_selector_capture.py",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 15693
+        },
+        {
+          "name": "testing/prospective_capture_selectors/run_selector_lab.py",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 5323
+        },
+        {
+          "name": "testing/prospective_capture_selectors/README.md",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 2181
+        },
+        {
+          "name": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 970143
+        },
+        {
+          "name": "docs/design/D5-I91-SELECTOR-CAPTURE-LAB.md",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 2265
+        },
+        {
+          "name": "docs/validation/D5-I91-tests-raw.json",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 155002
+        },
+        {
+          "name": "docs/validation/D5-I91-context.json",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 816
+        },
+        {
+          "name": "docs/validation/D5-I91-results.json",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 81565
+        },
+        {
+          "name": "docs/validation/D5-I91-results.md",
+          "multiplicity": 1,
+          "reason": "component artifact pins loop",
+          "file_bytes": 3727
+        }
+      ],
+      "authority_one_pass_bytes": 65612121,
+      "authority_passes": 2,
+      "runner_input_bytes_per_pass": 998408,
+      "runner_passes": 2,
+      "known_baseline_bytes": 133221058,
+      "remaining_budget_before_other_reads_bytes": 135214398,
+      "additional_registry_reads": [
+        {
+          "name": "docs/validation/D5-CAUSAL-CAPTURE-REGISTRY.json",
+          "file_bytes": 811140,
+          "reason": "read_base_registry entry"
+        },
+        {
+          "name": "docs/validation/D5-I82-design-review.json",
+          "file_bytes": 663068,
+          "reason": "read_base_registry design"
+        },
+        {
+          "name": "docs/validation/D5-LATE-CAPTURE-REGISTRY.json",
+          "file_bytes": 282034,
+          "reason": "late.read_registry entry"
+        },
+        {
+          "name": "docs/validation/D5-TYPED-CAPTURE-REGISTRY.json",
+          "file_bytes": 278184,
+          "reason": "late old registry"
+        },
+        {
+          "name": "docs/validation/D5-I78-design-review.json",
+          "file_bytes": 150552,
+          "reason": "late design"
+        },
+        {
+          "name": "docs/validation/D5-I78-design-review.json",
+          "file_bytes": 150552,
+          "reason": "late contract hash"
+        },
+        {
+          "name": "docs/validation/D5-TYPED-CAPTURE-REGISTRY.json",
+          "file_bytes": 278184,
+          "reason": "late legacy hash"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_local_preview.py",
+          "file_bytes": 7919,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_local_preview.py",
+          "file_bytes": 7919,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_plane_reconciliation.py",
+          "file_bytes": 28051,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_plane_reconciliation.py",
+          "file_bytes": 28051,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/test_profiles_quotas.py",
+          "file_bytes": 26548,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "source_ingest/plane_fixture.py",
+          "file_bytes": 32708,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "source_ingest/eligibility_fixture.py",
+          "file_bytes": 27464,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "source_ingest/preview.py",
+          "file_bytes": 9529,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture/capture.py",
+          "file_bytes": 40037,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture/capture.py",
+          "file_bytes": 40037,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/capture.py",
+          "file_bytes": 54874,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/worker.py",
+          "file_bytes": 7076,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/worker.py",
+          "file_bytes": 7076,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/worker.py",
+          "file_bytes": 7076,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/test_typed_capture.py",
+          "file_bytes": 35821,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/test_typed_capture.py",
+          "file_bytes": 35821,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/test_typed_capture.py",
+          "file_bytes": 35821,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_typed/test_typed_capture.py",
+          "file_bytes": 35821,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "testing/D5/run_relational_durable_lab.py",
+          "file_bytes": 4429,
+          "reason": "late design source anchor"
+        },
+        {
+          "name": "docs/validation/D5-I82-design-review.json",
+          "file_bytes": 663068,
+          "reason": "base contract hash"
+        },
+        {
+          "name": "docs/validation/D5-LATE-CAPTURE-REGISTRY.json",
+          "file_bytes": 282034,
+          "reason": "base legacy hash"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "negative_catalog source cache once per path"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "negative_catalog source cache once per path"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "negative_catalog source cache once per path"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "file_bytes": 22343,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "file_bytes": 22343,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/worker.py",
+          "file_bytes": 8310,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "file_bytes": 22343,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "file_bytes": 22343,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_late/capture.py",
+          "file_bytes": 22343,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_relational.py",
+          "file_bytes": 39806,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "base source anchor"
+        },
+        {
+          "name": "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+          "file_bytes": 874633,
+          "reason": "parental registry"
+        },
+        {
+          "name": "docs/validation/D5-I84-design-review.json",
+          "file_bytes": 194725,
+          "reason": "parental design"
+        },
+        {
+          "name": "docs/validation/D5-I84-design-review.json",
+          "file_bytes": 194725,
+          "reason": "parental contract hash"
+        },
+        {
+          "name": "docs/validation/D5-CAUSAL-CAPTURE-REGISTRY.json",
+          "file_bytes": 811140,
+          "reason": "parental legacy hash"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "parental implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_parental/worker.py",
+          "file_bytes": 8326,
+          "reason": "parental implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_parental/test_parental_capture.py",
+          "file_bytes": 35911,
+          "reason": "parental implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_parental/run_parental_lab.py",
+          "file_bytes": 5329,
+          "reason": "parental implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_parental/README.md",
+          "file_bytes": 2047,
+          "reason": "parental implementation pin"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/D5/run_relational_durable_lab.py",
+          "file_bytes": 4429,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "file_bytes": 72629,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "file_bytes": 72629,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "file_bytes": 72629,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "file_bytes": 72629,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_causal/capture.py",
+          "file_bytes": 72629,
+          "reason": "parental source anchor"
+        },
+        {
+          "name": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+          "file_bytes": 920604,
+          "reason": "domain registry"
+        },
+        {
+          "name": "docs/validation/D5-I87-design-review.json",
+          "file_bytes": 12688,
+          "reason": "domain design"
+        },
+        {
+          "name": "docs/validation/D5-I87-design-review.json",
+          "file_bytes": 12688,
+          "reason": "domain contract hash"
+        },
+        {
+          "name": "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+          "file_bytes": 874633,
+          "reason": "domain legacy hash"
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "file_bytes": 122117,
+          "reason": "domain implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_domains/worker.py",
+          "file_bytes": 8325,
+          "reason": "domain implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_domains/test_domain_capture.py",
+          "file_bytes": 25593,
+          "reason": "domain implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_domains/run_domain_lab.py",
+          "file_bytes": 5297,
+          "reason": "domain implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_domains/README.md",
+          "file_bytes": 2342,
+          "reason": "domain implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "domain source anchor"
+        },
+        {
+          "name": "docs/validation/D5-I85-integrity.json",
+          "file_bytes": 2485,
+          "reason": "domain future dependency seal"
+        },
+        {
+          "name": "testing/prospective_capture_parental/capture.py",
+          "file_bytes": 103059,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_parental/worker.py",
+          "file_bytes": 8326,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_parental/test_parental_capture.py",
+          "file_bytes": 35911,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_parental/run_parental_lab.py",
+          "file_bytes": 5329,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_parental/README.md",
+          "file_bytes": 2047,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+          "file_bytes": 874633,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/design/D5-I85-PARENTAL-CAPTURE-LAB.md",
+          "file_bytes": 2880,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I85-tests-raw.json",
+          "file_bytes": 231270,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I85-context.json",
+          "file_bytes": 797,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I85-results.json",
+          "file_bytes": 132272,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I85-results.md",
+          "file_bytes": 3599,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I87-integrity.json",
+          "file_bytes": 1324,
+          "reason": "domain future dependency seal"
+        },
+        {
+          "name": "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md",
+          "file_bytes": 6804,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/design/D5-I87-DOMAIN-WITNESS-REVIEW.md",
+          "file_bytes": 3174,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I87-design-review.json",
+          "file_bytes": 12688,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/design/D5-AFTER-I86-CLOSURE-ROADMAP.md",
+          "file_bytes": 14656,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-AFTER-I86-closure-roadmap.json",
+          "file_bytes": 21029,
+          "reason": "domain future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+          "file_bytes": 970143,
+          "reason": "selector registry"
+        },
+        {
+          "name": "docs/validation/D5-I90-design-review.json",
+          "file_bytes": 13020,
+          "reason": "selector design"
+        },
+        {
+          "name": "docs/validation/D5-I90-design-review.json",
+          "file_bytes": 13020,
+          "reason": "selector contract hash"
+        },
+        {
+          "name": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+          "file_bytes": 920604,
+          "reason": "selector legacy hash"
+        },
+        {
+          "name": "testing/prospective_capture_selectors/capture.py",
+          "file_bytes": 133829,
+          "reason": "selector implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_selectors/worker.py",
+          "file_bytes": 8327,
+          "reason": "selector implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_selectors/test_selector_capture.py",
+          "file_bytes": 15693,
+          "reason": "selector implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_selectors/run_selector_lab.py",
+          "file_bytes": 5323,
+          "reason": "selector implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_selectors/README.md",
+          "file_bytes": 2181,
+          "reason": "selector implementation pin"
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "file_bytes": 122117,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "file_bytes": 122117,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "file_bytes": 122117,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "testing/D5/test_durable_integration.py",
+          "file_bytes": 41415,
+          "reason": "selector source anchor"
+        },
+        {
+          "name": "docs/validation/D5-I88-integrity.json",
+          "file_bytes": 2628,
+          "reason": "selector future dependency seal"
+        },
+        {
+          "name": "testing/prospective_capture_domains/capture.py",
+          "file_bytes": 122117,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_domains/worker.py",
+          "file_bytes": 8325,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_domains/test_domain_capture.py",
+          "file_bytes": 25593,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_domains/run_domain_lab.py",
+          "file_bytes": 5297,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "testing/prospective_capture_domains/README.md",
+          "file_bytes": 2342,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+          "file_bytes": 920604,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/design/D5-I88-DOMAIN-CAPTURE-LAB.md",
+          "file_bytes": 3234,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I88-tests-raw.json",
+          "file_bytes": 157830,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I88-context.json",
+          "file_bytes": 810,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I88-results.json",
+          "file_bytes": 84329,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I88-results.md",
+          "file_bytes": 3768,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I90-integrity.json",
+          "file_bytes": 1052,
+          "reason": "selector future dependency seal"
+        },
+        {
+          "name": "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md",
+          "file_bytes": 6913,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/design/D5-I90-NULLABLE-SELECTOR-REVIEW.md",
+          "file_bytes": 2250,
+          "reason": "selector future dependency seal artifact"
+        },
+        {
+          "name": "docs/validation/D5-I90-design-review.json",
+          "file_bytes": 13020,
+          "reason": "selector future dependency seal artifact"
+        }
+      ],
+      "additional_target_binding_reads": "SOURCE_UPPER_SCHEDULE_RESOLVED",
+      "late_source_bytes_per_check": {
+        "source_ingest.plane_fixture.PlaneError": 32708,
+        "source_ingest.eligibility_fixture.EligibilityError": 27464
+      },
+      "late_check_equation": "32708*N_plane_checks +27464*N_eligibility_checks plus first bind-source reads",
+      "late_check_multiplicities": {
+        "N_plane_checks_upper": 73,
+        "N_eligibility_checks_upper": 73
+      },
+      "finish_on_same_input_reader_in_current_launcher": false,
+      "finish_on_same_input_reader_in_current_worker": false,
+      "finish_claim": "Neither current method calls inputs.finish(); I91 static preparation finish is a different scope, not a runtime observation. A future profile must declare any finish and charge it.",
+      "full_input_budget_proven": true,
+      "registry_pass_bytes": 22791067,
+      "registry_passes": 1,
+      "target_source_read_upper_schedule": [
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_task_fixture.py",
+          "file_bytes": 40231,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_relational_fixture.py",
+          "file_bytes": 34801,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "worker.targets observer spec"
+        },
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "worker.targets Store constructor"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "worker.targets fixture constructor"
+        }
+      ],
+      "target_source_read_upper_bytes": 272631,
+      "causal_binding_source_read_upper_schedule": [
+        {
+          "name": "source_ingest/durable_store.py",
+          "file_bytes": 15164,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "source_ingest/incremental_fixture.py",
+          "file_bytes": 26004,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/durable_support.py",
+          "file_bytes": 8283,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/relational_support.py",
+          "file_bytes": 6985,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        },
+        {
+          "name": "testing/D5/test_incremental_capture.py",
+          "file_bytes": 24861,
+          "reason": "BaseRecorder.bind_causal_target once per pinned boundary including deferred spawn"
+        }
+      ],
+      "causal_binding_source_read_upper_bytes": 127101,
+      "first_late_bind_source_read_upper_bytes": 60172,
+      "static_read_upper_before_repeated_late_checks": 156472029,
+      "full_worker_equation": "R_worker <= 156472029+32708*N_plane_checks+27464*N_eligibility_checks on normal accepted source path; capacity requires actual sum<=268435456.",
+      "repeated_late_check_budget_bytes": 111963427,
+      "remaining_unknown": "Other reference/event/table/operand workload quotas; Reader input byte bound is now established for current pinned source path.",
+      "launcher_upper_without_late_checks": 156012125,
+      "input_unique_source_upper_bytes": 63104330,
+      "input_unique_source_paths": 293,
+      "input_unique_scope": "Union of all pinned input paths in this profile plus authority; repeated late sources already in union. No reset or merge with evidence Reader.",
+      "late_check_bound_proof": {
+        "schema": "d5.i96-late-check-source-bound.v1",
+        "rows": [
+          {
+            "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+            "source_path": "testing/D5/test_local_preview.py",
+            "source_sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+            "matching_helper": "assertNotEqual",
+            "direct_matching_calls": [
+              {
+                "line": 89,
+                "method": "test_new_revision_label_preserves_bytes_without_overwriting_observation",
+                "helper": "assertNotEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              }
+            ],
+            "matching_assertion_upper": 1,
+            "operand_invocation_upper": 2,
+            "proof_scope": "Exact listed direct callsites in one expected frame;self/lifecycle helper closure has no additional matching helper. Not all assertion helpers across321 tests use this typed path."
+          },
+          {
+            "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+            "source_path": "testing/D5/test_local_preview.py",
+            "source_sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+            "matching_helper": "assertEqual",
+            "direct_matching_calls": [
+              {
+                "line": 72,
+                "method": "test_repeated_observation_and_save_are_idempotent",
+                "helper": "assertEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              },
+              {
+                "line": 73,
+                "method": "test_repeated_observation_and_save_are_idempotent",
+                "helper": "assertEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              },
+              {
+                "line": 74,
+                "method": "test_repeated_observation_and_save_are_idempotent",
+                "helper": "assertEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              },
+              {
+                "line": 75,
+                "method": "test_repeated_observation_and_save_are_idempotent",
+                "helper": "assertEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              },
+              {
+                "line": 76,
+                "method": "test_repeated_observation_and_save_are_idempotent",
+                "helper": "assertEqual",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              }
+            ],
+            "matching_assertion_upper": 5,
+            "operand_invocation_upper": 10,
+            "proof_scope": "Exact listed direct callsites in one expected frame;self/lifecycle helper closure has no additional matching helper. Not all assertion helpers across321 tests use this typed path."
+          },
+          {
+            "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+            "source_path": "testing/D5/test_plane_reconciliation.py",
+            "source_sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+            "matching_helper": "assertIsInstance",
+            "direct_matching_calls": [
+              {
+                "line": 523,
+                "method": "test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+                "helper": "assertIsInstance",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              }
+            ],
+            "matching_assertion_upper": 1,
+            "operand_invocation_upper": 2,
+            "proof_scope": "Exact listed direct callsites in one expected frame;self/lifecycle helper closure has no additional matching helper. Not all assertion helpers across321 tests use this typed path."
+          },
+          {
+            "test_id": "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+            "source_path": "testing/D5/test_plane_reconciliation.py",
+            "source_sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+            "matching_helper": "assertIsInstance",
+            "direct_matching_calls": [
+              {
+                "line": 198,
+                "method": "test_PC10_two_local_senders_and_two_query_publishers_compete",
+                "helper": "assertIsInstance",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              }
+            ],
+            "matching_assertion_upper": 1,
+            "operand_invocation_upper": 2,
+            "proof_scope": "Exact listed direct callsites in one expected frame;self/lifecycle helper closure has no additional matching helper. Not all assertion helpers across321 tests use this typed path."
+          },
+          {
+            "test_id": "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+            "source_path": "testing/D5/test_profiles_quotas.py",
+            "source_sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+            "matching_helper": "assertIsInstance",
+            "direct_matching_calls": [
+              {
+                "line": 315,
+                "method": "test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+                "helper": "assertIsInstance",
+                "positional_arguments": 2,
+                "inside_loop_or_nested_callback": false
+              }
+            ],
+            "matching_assertion_upper": 1,
+            "operand_invocation_upper": 2,
+            "proof_scope": "Exact listed direct callsites in one expected frame;self/lifecycle helper closure has no additional matching helper. Not all assertion helpers across321 tests use this typed path."
+          }
+        ],
+        "matching_assertion_upper": 9,
+        "operand_invocation_upper": 18,
+        "checks_per_operand_upper": 4,
+        "checks_per_operand_derivation": "LateBindings.prepare calls self.check before/after; Projector.observe calls self.check before/after; class_row/instance_row do not invoke check. Plain digest success or a failed projection can only skip some checks.",
+        "finish_projector_check_upper": 1,
+        "finish_derivation": "worker.exercise invokes recorder.finish once; typed Recorder.finish calls projector.check once. LateBindings init overrides ClassBindings init and does not call check.",
+        "per_bound_class_check_upper": 73,
+        "bytes_if_both_classes_bound_for_every_check": 4392556,
+        "current_worker_normal_input_read_upper": 160864585,
+        "source_read_headroom_bytes": 107570871,
+        "source_conditional_only": true,
+        "new_runtime_measurement": false,
+        "limitations": [
+          "Bound applies to the five pinned typed operand scopes and source/control guard only.",
+          "Original assertions are observed at depth0; nested unittest assertion dispatch does not add operand callbacks.",
+          "No new test methods, helper aliases, loops or capture profile changes are covered.",
+          "This bounds Reader bytes, not event/reference/operand sufficiency or proof that all tests pass."
+        ]
+      },
+      "full_worker_normal_input_read_upper": 160864585,
+      "full_worker_normal_input_read_headroom": 107570871,
+      "proof_scope": "SOURCE_CONDITIONAL_BYTE_ENVELOPE_FOR_UNCHANGED_NORMAL_PROFILE_NOT_RUNTIME_MEASUREMENT"
+    }
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": "LateBindings",
+      "method": "prepare",
+      "line": 130,
+      "end_line": 145,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": "LateBindings",
+      "method": "check",
+      "line": 121,
+      "end_line": 129,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "authority",
+      "line": 388,
+      "end_line": 400,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "launch",
+      "line": 94,
+      "end_line": 168,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "validate_pages",
+      "line": 789,
+      "end_line": 827,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": null,
+      "method": "validate_pages",
+      "line": 451,
+      "end_line": 508,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/worker.py",
+      "sha256": "73d7f67d2b3c5223ff58cc7b6be4ca3f66e58daa3bb7ff322748922f505d6245",
+      "owner": null,
+      "method": "main",
+      "line": 63,
+      "end_line": 94,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "read_registry",
+      "line": 366,
+      "end_line": 381,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "read_domain_registry",
+      "line": 347,
+      "end_line": 363,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "read_parental_registry",
+      "line": 331,
+      "end_line": 344,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "read_base_registry",
+      "line": 316,
+      "end_line": 328,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": null,
+      "method": "negative_catalog",
+      "line": 290,
+      "end_line": 313,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": null,
+      "method": "read_registry",
+      "line": 25,
+      "end_line": 39,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/capture.py",
+      "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+      "owner": "BaseRecorder",
+      "method": "bind_causal_target",
+      "line": 660,
+      "end_line": 667,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_selectors/worker.py",
+      "sha256": "73d7f67d2b3c5223ff58cc7b6be4ca3f66e58daa3bb7ff322748922f505d6245",
+      "owner": null,
+      "method": "targets",
+      "line": 12,
+      "end_line": 28,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    }
+  ],
+  "scope": "DOCUMENTARY_ONLY_NO_RUNTIME_EXECUTION",
+  "closure": false,
+  "publication_authorized": false,
+  "late_check_source_anchors": [
+    {
+      "path": "testing/prospective_capture_late/capture.py",
+      "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+      "owner": "Recorder",
+      "method": "operand",
+      "line": 156,
+      "end_line": 165,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "operand",
+      "line": 321,
+      "end_line": 330,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Recorder",
+      "method": "install",
+      "line": 332,
+      "end_line": 382,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "Projector",
+      "method": "observe",
+      "line": 164,
+      "end_line": 209,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "ClassBindings",
+      "method": "class_row",
+      "line": 144,
+      "end_line": 144,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+      "owner": "ClassBindings",
+      "method": "instance_row",
+      "line": 145,
+      "end_line": 145,
+      "authority": "PINNED_SOURCE_EXPECTATION_NOT_RUNTIME_ATTESTATION"
+    }
+  ]
+}

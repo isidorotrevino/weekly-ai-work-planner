@@ -1,0 +1,719 @@
+{
+  "schema": "d5.i98-parental-helper-cost-contract.v1",
+  "increment": "I98",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "authority": "USER_CONTINUA_DOCUMENTARY_UPPER_BOUND_REVIEW",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "SOURCE_DERIVED_PARTIAL_COSTS_NOT_RUNTIME_EVIDENCE",
+  "source_pins": {
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e"
+  },
+  "success_preconditions": [
+    "Fuentes/bindings/MRO/selectores pinneados actuales; frame T/R causal activo, observación válida, serialización dentro de límites.",
+    "Objetos Client/Store/Remote originales ya creados; no hook/callback/rebinding que agregue llamadas.",
+    "Los helpers ready/prepare de las rutas revisadas completan normalmente; no son helpers invocados para esperar su excepción.",
+    "Para matriz de métodos general: retorno exitoso sin excepción remota capturada. Rutas de excepción y callbacks conservan obligación propia antes de componer todo P01."
+  ],
+  "event_accounting": "E=P+U+S+D. Client.perform publica su causal terminal dentro de CALL_RETURN (publish=False): no añadir CAUSAL_TERMINAL extra. Store.transact sí emite CAUSAL_TERMINAL. Snapshot observado emite CALL_RETURN. No se cuentan lifecycle/aserciones ni constructores externos en estas fórmulas.",
+  "primitive_matrix": [
+    {
+      "routine": "T/R Client.perform",
+      "P": 1,
+      "U": 1,
+      "S": 2,
+      "D": 0,
+      "events": 4,
+      "call_keys": 2,
+      "nested_links": 1,
+      "condition": "Retorno exitoso, sin hook que añada llamadas."
+    },
+    {
+      "routine": "T/R Client.prepare_projection",
+      "P": 1,
+      "U": 1,
+      "S": 6,
+      "D": 0,
+      "events": 8,
+      "call_keys": 2,
+      "nested_links": 1,
+      "condition": "El recorrido sends es puro respecto a estos boundaries; sin callback añadido."
+    },
+    {
+      "routine": "T/R Client.dispatch deliver=False",
+      "P": 1,
+      "U": 1,
+      "S": 4,
+      "D": 0,
+      "events": 6,
+      "call_keys": 2,
+      "nested_links": 1,
+      "condition": "Remote.snapshot más ISSUE; sin entrega."
+    },
+    {
+      "routine": "T/R Client.dispatch deliver=True",
+      "P": 2,
+      "U": 3,
+      "S": 8,
+      "D": 0,
+      "events": 13,
+      "call_keys": 5,
+      "nested_links": 2,
+      "condition": "Entrega remota parental exitosa; no cuenta ejecución en hijo."
+    },
+    {
+      "routine": "T/R Client.reconcile close=False",
+      "P": 2,
+      "U": 2,
+      "S": 8,
+      "D": 0,
+      "events": 12,
+      "call_keys": 4,
+      "nested_links": 2,
+      "condition": "Lookup exitoso; proof_hook=None. Si hay hook se suma su vector separado."
+    },
+    {
+      "routine": "T/R Client.reconcile close=True",
+      "P": 2,
+      "U": 3,
+      "S": 6,
+      "D": 0,
+      "events": 11,
+      "call_keys": 5,
+      "nested_links": 2,
+      "condition": "Execute CLOSE exitoso; proof_hook=None. Si hay hook se suma su vector separado."
+    },
+    {
+      "routine": "T/R Remote.execute",
+      "P": 0,
+      "U": 1,
+      "S": 0,
+      "D": 0,
+      "events": 1,
+      "call_keys": 1,
+      "nested_links": 0,
+      "condition": "Boundary raíz, fuera de otro C activo; retorno exitoso."
+    },
+    {
+      "routine": "T/R Remote.lookup",
+      "P": 0,
+      "U": 0,
+      "S": 2,
+      "D": 0,
+      "events": 2,
+      "call_keys": 0,
+      "nested_links": 0,
+      "condition": "Retorno exitoso; snapshot Remote y Store."
+    },
+    {
+      "routine": "T/R Remote.edit",
+      "P": 0,
+      "U": 1,
+      "S": 2,
+      "D": 0,
+      "events": 3,
+      "call_keys": 1,
+      "nested_links": 0,
+      "condition": "Boundary raíz; retorno exitoso."
+    },
+    {
+      "routine": "T/R Client.summary",
+      "P": 0,
+      "U": 0,
+      "S": 4,
+      "D": 0,
+      "events": 4,
+      "call_keys": 0,
+      "nested_links": 0,
+      "condition": "Bucles sends sin llamadas a estos boundaries; coste de valores/CPU no acotado aquí."
+    },
+    {
+      "routine": "T durable_support.capture",
+      "P": 0,
+      "U": 0,
+      "S": 1,
+      "D": 1,
+      "events": 2,
+      "call_keys": 1,
+      "nested_links": 0,
+      "condition": "Fixture existente, helper completo exitoso; sin observación en hijo."
+    }
+  ],
+  "formulas": {
+    "symbols": {
+      "a": "apply,0/1",
+      "p": "projection de ready,0/1",
+      "s": "select de prepare,0/1",
+      "z": "project de prepare,0/1",
+      "m": "número de TASK IDs seleccionados para la iteración de prepare"
+    },
+    "T_ready": {
+      "client_perform": "14+a+3*a*p",
+      "store_transact": "P",
+      "snapshot_returns": "2*P+4*a*p+1",
+      "drive_advance": 1,
+      "events": "4*P+4*a*p+2",
+      "call_keys": "2*P+1",
+      "nested_links": "P",
+      "selected_reference_charges": "7*P+1",
+      "cases": [
+        {
+          "apply": false,
+          "projection": false,
+          "P": 14,
+          "events": 58
+        },
+        {
+          "apply": true,
+          "projection": false,
+          "P": 15,
+          "events": 62
+        },
+        {
+          "apply": true,
+          "projection": true,
+          "P": 18,
+          "events": 78
+        }
+      ]
+    },
+    "R_prepare": {
+      "client_perform": "6+a+a*s+3*a*s*z*m",
+      "store_transact": "P",
+      "snapshot_returns": "2*P+2*a+4*a*s*z*m",
+      "events": "4*P+2*a+4*a*s*z*m",
+      "call_keys": "2*P",
+      "nested_links": "P",
+      "selected_reference_charges": "7*P",
+      "default_success_cases": [
+        {
+          "apply": false,
+          "P": 6,
+          "events": 24
+        },
+        {
+          "apply": true,
+          "select": false,
+          "P": 7,
+          "events": 30
+        },
+        {
+          "apply": true,
+          "select": true,
+          "project": false,
+          "P": 8,
+          "events": 34
+        },
+        {
+          "apply": true,
+          "select": true,
+          "project": true,
+          "m": 2,
+          "P": 14,
+          "events": 66
+        }
+      ],
+      "generic_successful_selection_upper": {
+        "m": 16,
+        "P": 56,
+        "events": 290,
+        "condition": "SELECT_TASKS valida1..bounds.selected y unicidad antes de la iteración de proyecciones; config valida selected<=16. Es límite genérico del helper, no el caso P01 derivado con m=2."
+      }
+    }
+  },
+  "R_prepare_callsite_provenance": [
+    {
+      "line": 68,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 75,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 100,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 132,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 135,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 140,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 152,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 162,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 169,
+      "expression": "prepare(lab, select=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 175,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 196,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 201,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 208,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 216,
+      "expression": "prepare(lab, apply=kind != 'APPLY_BATCH')",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 249,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 253,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 277,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 282,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 292,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 297,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 301,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 309,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 315,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 323,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 348,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 421,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 452,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 85,
+      "expression": "prepare(lab, raw, t)",
+      "raw_targets_explicit": true,
+      "provenance": "dr07: source(description=desc), tareas por defecto2",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 121,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 130,
+      "expression": "prepare(lab, project=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 146,
+      "expression": "prepare(lab, apply=False)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 182,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 190,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 287,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 339,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 368,
+      "expression": "prepare(lab, raw, t, project=False)",
+      "raw_targets_explicit": true,
+      "provenance": "dr36: source() por defecto, project=False",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 393,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 418,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 442,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    },
+    {
+      "line": 262,
+      "expression": "prepare(lab)",
+      "raw_targets_explicit": false,
+      "provenance": "raw=None; source() por defecto dentro del helper",
+      "selected_task_upper_for_projected_loop": 2
+    }
+  ],
+  "R_source_callsites": [
+    {
+      "line": 54,
+      "expression": "source()"
+    },
+    {
+      "line": 60,
+      "expression": "source()"
+    },
+    {
+      "line": 72,
+      "expression": "source(revision='captured-only')"
+    },
+    {
+      "line": 75,
+      "expression": "source(revision='again')"
+    },
+    {
+      "line": 94,
+      "expression": "source()"
+    },
+    {
+      "line": 100,
+      "expression": "source(revision='repeat')"
+    },
+    {
+      "line": 117,
+      "expression": "source()"
+    },
+    {
+      "line": 133,
+      "expression": "source(revision='next')"
+    },
+    {
+      "line": 152,
+      "expression": "source(revision='no-op')"
+    },
+    {
+      "line": 324,
+      "expression": "source(revision='next')"
+    },
+    {
+      "line": 85,
+      "expression": "source(description=desc)"
+    },
+    {
+      "line": 111,
+      "expression": "source()"
+    },
+    {
+      "line": 124,
+      "expression": "source(revision='next')"
+    },
+    {
+      "line": 131,
+      "expression": "source(revision='next')"
+    },
+    {
+      "line": 366,
+      "expression": "source()"
+    },
+    {
+      "line": 371,
+      "expression": "source(revision='again')"
+    },
+    {
+      "line": 186,
+      "expression": "source(revision='again')"
+    },
+    {
+      "line": 397,
+      "expression": "source(revision='extra')"
+    }
+  ],
+  "R_source_default_tasks": 2,
+  "R_selected_upper": 16,
+  "existing_factory_object_structure": {
+    "T_new_lab": {
+      "Store": 2,
+      "Client": 1,
+      "Remote": 1,
+      "FixtureStore": 1
+    },
+    "R_new_lab": {
+      "Store": 2,
+      "Client": 1,
+      "Remote": 1
+    },
+    "T_fresh": {
+      "Store": 2,
+      "Client": 1,
+      "Remote": 1,
+      "FixtureStore": 1
+    },
+    "R_fresh": {
+      "Store": 2,
+      "Client": 1,
+      "Remote": 1
+    },
+    "scope": "Objetos de esas clases creados por una invocación exitosa, sin callbacks. No cuenta Lab/path/JSON ni equivale a owners/grupos globales. ready/prepare reutilizan objetos; el conteo de factories y fresh externos está pendiente."
+  },
+  "local_reference_subset": {
+    "per_client_command": "2 C keys +1 L key +2 Q35 slots +2 Q37 endpoints =7",
+    "T_extra": "1 C key por FixtureStore.advance de capture",
+    "Q19_context_excluded": true,
+    "owner_and_object_and_group_and_other_sites_excluded": true,
+    "component_upper": 30146,
+    "global_upper": null
+  },
+  "aggregate_helper_contribution": {
+    "T": {
+      "helper_invocation_upper": 144,
+      "client_perform_per_helper_upper": 18,
+      "client_perform_total_upper": 2592,
+      "events_per_helper_upper": 78,
+      "helper_event_total_upper": 11232
+    },
+    "R": {
+      "helper_invocation_upper": 121,
+      "client_perform_per_helper_upper_upper_for_default_two_tasks": 14,
+      "client_perform_total_upper": 1694,
+      "events_per_helper_upper": 66,
+      "helper_event_total_upper": 7986
+    },
+    "combined_client_perform_upper": 4286,
+    "combined_helper_events_upper": 19218,
+    "selected_reference_subset_upper": 30146,
+    "selected_reference_subset_formula": "144*(7*18+1)+121*(7*14)",
+    "full_capture_reference_upper": null,
+    "full_capture_event_upper": null,
+    "scope": "Sólo la contribución de ready/prepare en DF01–DF48/DR01–DR40. Se excluyen otros comandos, imports/despacho no resuelto, cuerpos del hijo, callbacks y lifecycle externos. Excluir no equivale a coste0.",
+    "upper_bound_admission_certificate": false
+  },
+  "numeric_capacity_certificate_created": false,
+  "proposed_reference_quota": null,
+  "all_prior_limits_preserved": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 12582912,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 117444608,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 268435456,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 16384,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}
