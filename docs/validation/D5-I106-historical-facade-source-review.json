@@ -1,0 +1,2366 @@
+{
+  "schema": "d5.i106-historical-facade-source-review.v1",
+  "increment": "I106",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "b22bc4d9189896c12f35c648cf47a93937b76b58",
+  "authority": "USER_CONTINUE_DOCUMENTARY_D5",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "SOURCE_CONDITIONAL_ZERO_ADDITIONAL_OBSERVER_EVENTS_NOT_ZERO_WORK",
+  "modules": [
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "imports": [
+        {
+          "line": 8,
+          "source": "import base64"
+        },
+        {
+          "line": 9,
+          "source": "from copy import deepcopy"
+        },
+        {
+          "line": 10,
+          "source": "import hashlib"
+        },
+        {
+          "line": 11,
+          "source": "import json"
+        },
+        {
+          "line": 12,
+          "source": "import threading"
+        },
+        {
+          "line": 13,
+          "source": "import uuid"
+        },
+        {
+          "line": 15,
+          "source": "from .preview import MAX_BYTES, MAX_ITEMS, PROFILE, build_observation"
+        }
+      ],
+      "classes": [
+        {
+          "name": "ContractError",
+          "bases": [
+            "ValueError"
+          ],
+          "line": 22
+        },
+        {
+          "name": "MemoryDrive",
+          "bases": [],
+          "line": 130
+        },
+        {
+          "name": "MemoryPlane",
+          "bases": [],
+          "line": 155
+        },
+        {
+          "name": "MemoryLab",
+          "bases": [],
+          "line": 272
+        }
+      ],
+      "unique_call_expressions": [
+        "(json.dumps(value, sort_keys=True, ensure_ascii=True, separators=(',', ':'), allow_nan=False) + '\\n').encode",
+        "ContractError",
+        "MemoryPlane",
+        "_fail",
+        "_id",
+        "_metadata",
+        "_number",
+        "_shape",
+        "_text",
+        "_typed_elements",
+        "_typed_elements(value['payload']).get",
+        "any",
+        "base64.b64decode",
+        "base64.b64encode",
+        "base64.b64encode(content).decode",
+        "binding.items",
+        "build_observation",
+        "candidate['title'].strip",
+        "canonical",
+        "codes.append",
+        "d.get",
+        "decode_envelope",
+        "deepcopy",
+        "dict",
+        "digest",
+        "drive.read",
+        "hashlib.sha256",
+        "hashlib.sha256(canonical(value)).hexdigest",
+        "hashlib.sha256(content).hexdigest",
+        "item.keys",
+        "item.update",
+        "json.dumps",
+        "json.loads",
+        "len",
+        "operation",
+        "range",
+        "self._accepted",
+        "self._bindings.get",
+        "self._bindings.values",
+        "self._candidate",
+        "self._command",
+        "self._entities.get",
+        "self._entities.items",
+        "self._queued.pop",
+        "self._reviews.get",
+        "self.capture",
+        "self.capture_artifact",
+        "self.edit_fixture",
+        "self.entity",
+        "self.manifest",
+        "self.plane.patch",
+        "self.plane.projection",
+        "self.plane.read",
+        "self.projection",
+        "self.read",
+        "self.seed",
+        "set",
+        "source_kind.startswith",
+        "str",
+        "threading.RLock",
+        "type",
+        "uuid.UUID",
+        "value.encode",
+        "value.values",
+        "{'EFFECT': self._effects, 'PROJECTION': self._projections}.get"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "imports": [
+        {
+          "line": 7,
+          "source": "import base64"
+        },
+        {
+          "line": 8,
+          "source": "from copy import deepcopy"
+        },
+        {
+          "line": 9,
+          "source": "import hashlib"
+        },
+        {
+          "line": 10,
+          "source": "import json"
+        },
+        {
+          "line": 11,
+          "source": "import threading"
+        },
+        {
+          "line": 12,
+          "source": "import uuid"
+        },
+        {
+          "line": 14,
+          "source": "from .preview import build_observation"
+        }
+      ],
+      "classes": [
+        {
+          "name": "EligibilityError",
+          "bases": [
+            "ValueError"
+          ],
+          "line": 27
+        },
+        {
+          "name": "EligibilityLab",
+          "bases": [],
+          "line": 194
+        }
+      ],
+      "unique_call_expressions": [
+        "EligibilityError",
+        "a['revoked'].append",
+        "a['selected'].get",
+        "a['selected'].values",
+        "adapter_identity",
+        "any",
+        "base64.b64encode",
+        "base64.b64encode(content).decode",
+        "build_observation",
+        "canonical",
+        "codes.append",
+        "d.get",
+        "decoder_hash",
+        "deepcopy",
+        "diagnostics.append",
+        "dict",
+        "digest",
+        "fail",
+        "hash_id",
+        "hashlib.sha256",
+        "hashlib.sha256(canonical(value)).hexdigest",
+        "hashlib.sha256(content).hexdigest",
+        "hashlib.sha256(raw).hexdigest",
+        "identifier",
+        "json.dumps",
+        "json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(',', ':')).encode",
+        "json.loads",
+        "keys.add",
+        "label",
+        "len",
+        "m['observations'].get",
+        "min",
+        "number",
+        "observations.items",
+        "r.get",
+        "range",
+        "self._account",
+        "self._accounts.values",
+        "self._captures.get",
+        "self._current",
+        "self._evaluate",
+        "self._evaluation_accepted",
+        "self._historical",
+        "self._hook",
+        "self._manifests.get",
+        "self._mappings.items",
+        "self._mappings.values",
+        "self._observations.items",
+        "self._policies.get",
+        "self._profiles.items",
+        "self._profiles.values",
+        "self._reviews['EVALUATION'].get",
+        "self._reviews['EVALUATION'].setdefault",
+        "self._reviews['SOURCE'].get",
+        "self._reviews['SOURCE'].setdefault",
+        "self._reviews[stage].get",
+        "self._scope",
+        "self._selections.get",
+        "self._source_current",
+        "self.artifact",
+        "self.manifest",
+        "self.test_hook",
+        "set",
+        "shape",
+        "slot",
+        "str",
+        "threading.RLock",
+        "tuple",
+        "type",
+        "uuid.UUID",
+        "validate_account",
+        "validate_adapter",
+        "validate_descriptor",
+        "validate_observation",
+        "validate_policy",
+        "validate_window",
+        "value.strip"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "imports": [
+        {
+          "line": 7,
+          "source": "from copy import deepcopy"
+        },
+        {
+          "line": 8,
+          "source": "import hashlib"
+        },
+        {
+          "line": 9,
+          "source": "import json"
+        },
+        {
+          "line": 10,
+          "source": "import threading"
+        },
+        {
+          "line": 11,
+          "source": "import uuid"
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlaneError",
+          "bases": [
+            "ValueError"
+          ],
+          "line": 23
+        },
+        {
+          "name": "PlaneFixture",
+          "bases": [],
+          "line": 157
+        },
+        {
+          "name": "ReconciliationLab",
+          "bases": [],
+          "line": 328
+        }
+      ],
+      "unique_call_expressions": [
+        "PlaneError",
+        "all",
+        "any",
+        "canonical",
+        "capabilities",
+        "creation_key",
+        "deepcopy",
+        "dict",
+        "digest",
+        "entry['attempts'].append",
+        "entry['events'].append",
+        "fail",
+        "hashlib.sha256",
+        "hashlib.sha256(canonical(value)).hexdigest",
+        "identifier",
+        "integer",
+        "json.dumps",
+        "json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False).encode",
+        "json.loads",
+        "len",
+        "range",
+        "response.get",
+        "self._apply_response",
+        "self._bindings.get",
+        "self._bindings.values",
+        "self._commands.get",
+        "self._commands.values",
+        "self._destinations.get",
+        "self._destinations.items",
+        "self._items.get",
+        "self._items.pop",
+        "self._match_ok",
+        "self._negative_ok",
+        "self._package_attempts.get",
+        "self._proof_ok",
+        "self._proofs.get",
+        "self._reject",
+        "self._reviews.setdefault",
+        "self._tasks.get",
+        "self._validity",
+        "self._view",
+        "self.before_query",
+        "self.before_send",
+        "self.manifest",
+        "self.plane.card",
+        "self.plane.execute",
+        "self.plane.query",
+        "self.plane.read",
+        "self.read",
+        "set",
+        "shape",
+        "stale.append",
+        "str",
+        "text",
+        "threading.RLock",
+        "type",
+        "uuid.UUID",
+        "uuid.uuid4",
+        "validate_binding",
+        "validate_capabilities",
+        "validate_manifest",
+        "validate_task"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "imports": [
+        {
+          "line": 3,
+          "source": "import base64"
+        },
+        {
+          "line": 4,
+          "source": "from copy import deepcopy"
+        },
+        {
+          "line": 5,
+          "source": "import hashlib"
+        },
+        {
+          "line": 6,
+          "source": "import json"
+        },
+        {
+          "line": 7,
+          "source": "import threading"
+        },
+        {
+          "line": 8,
+          "source": "import uuid"
+        }
+      ],
+      "classes": [
+        {
+          "name": "BatchError",
+          "bases": [
+            "ValueError"
+          ],
+          "line": 23
+        },
+        {
+          "name": "BatchLab",
+          "bases": [],
+          "line": 348
+        }
+      ],
+      "unique_call_expressions": [
+        "BatchError",
+        "_acyclic",
+        "_baseline",
+        "_candidate",
+        "_guard",
+        "_incident",
+        "_validate_graph",
+        "after['entities'].items",
+        "after['entity_provenance'].setdefault",
+        "after['entity_provenance'].setdefault(eid, []).append",
+        "after['mappings'].items",
+        "after['relation_provenance'].setdefault",
+        "after['relation_provenance'].setdefault(rid, []).append",
+        "after['relations'].values",
+        "any",
+        "base64.b64encode",
+        "base64.b64encode(self._sources[sid]).decode",
+        "byte_hash",
+        "canonical",
+        "changes.items",
+        "current['receipts'].get",
+        "data['relations'].items",
+        "data['relations'].values",
+        "decode",
+        "deepcopy",
+        "dict",
+        "digest",
+        "done.add",
+        "entity.update",
+        "enumerate",
+        "fail",
+        "graph.get",
+        "graph.setdefault",
+        "graph.setdefault(rel['left'], set()).add",
+        "hash_id",
+        "hashlib.sha256",
+        "hashlib.sha256(canonical(value)).hexdigest",
+        "hashlib.sha256(value).hexdigest",
+        "identifier",
+        "identity",
+        "item['claims'].values",
+        "json.dumps",
+        "json.dumps(value, ensure_ascii=False, allow_nan=False, sort_keys=True, separators=(',', ':')).encode",
+        "json.loads",
+        "keys.add",
+        "len",
+        "new_ids.add",
+        "number",
+        "pending.add",
+        "pending.remove",
+        "plan['entities'].items",
+        "plan['relations'].items",
+        "range",
+        "reference",
+        "relation_locators.setdefault",
+        "relation_locators.setdefault(rid, []).append",
+        "resolve",
+        "review.get",
+        "root['receipts'].get",
+        "root['reviews']['BATCH'].get",
+        "root['reviews'][stage].get",
+        "self._accepted",
+        "self._authorize",
+        "self._current",
+        "self._hook",
+        "self._load",
+        "self._load()['receipts'].get",
+        "self._manifests.get",
+        "self._meta",
+        "self._save",
+        "self._sources.get",
+        "self.manifest",
+        "self.source",
+        "self.test_hook",
+        "set",
+        "shape",
+        "sorted",
+        "str",
+        "text",
+        "threading.RLock",
+        "touch",
+        "touched.setdefault",
+        "touched.setdefault(eid, []).append",
+        "type",
+        "uuid.UUID",
+        "validate_source",
+        "value.strip",
+        "visit"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    },
+    {
+      "path": "source_ingest/preview.py",
+      "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+      "imports": [
+        {
+          "line": 3,
+          "source": "import base64"
+        },
+        {
+          "line": 4,
+          "source": "import hashlib"
+        },
+        {
+          "line": 5,
+          "source": "import json"
+        },
+        {
+          "line": 6,
+          "source": "import os"
+        },
+        {
+          "line": 7,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 8,
+          "source": "import re"
+        },
+        {
+          "line": 9,
+          "source": "import stat"
+        },
+        {
+          "line": 10,
+          "source": "import tempfile"
+        },
+        {
+          "line": 11,
+          "source": "import uuid"
+        },
+        {
+          "line": 150,
+          "source": "from .register import parse"
+        }
+      ],
+      "classes": [],
+      "unique_call_expressions": [
+        "(json.dumps(value, ensure_ascii=True, sort_keys=True, separators=(',', ':')) + '\\n').encode",
+        "Path",
+        "ValueError",
+        "_directory",
+        "_identity",
+        "any",
+        "b''.join",
+        "base64.b64encode",
+        "base64.b64encode(content).decode",
+        "bounded_read",
+        "build_observation",
+        "canonical",
+        "chunks.append",
+        "content.decode",
+        "context.append",
+        "diagnostics.append",
+        "enumerate",
+        "hashlib.sha256",
+        "hashlib.sha256(content).hexdigest",
+        "hashlib.sha256(payload).hexdigest",
+        "item[2].lower",
+        "json.dumps",
+        "len",
+        "line.lstrip",
+        "line.lstrip().startswith",
+        "marker[2].strip",
+        "min",
+        "ord",
+        "os.close",
+        "os.fdopen",
+        "os.fstat",
+        "os.fsync",
+        "os.link",
+        "os.lseek",
+        "os.open",
+        "os.path.abspath",
+        "os.read",
+        "os.unlink",
+        "parse",
+        "parts[-1].lower",
+        "parts[-1].lower().endswith",
+        "path.mkdir",
+        "proposals.append",
+        "re.match",
+        "read_source",
+        "relative.lower",
+        "relative.lower().endswith",
+        "relative.split",
+        "relative.startswith",
+        "sections.append",
+        "set",
+        "stat.S_ISREG",
+        "str",
+        "stream.fileno",
+        "stream.flush",
+        "stream.read",
+        "stream.write",
+        "structure",
+        "tempfile.mkstemp",
+        "text.splitlines",
+        "title.rsplit",
+        "uuid.UUID",
+        "uuid.uuid5"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    },
+    {
+      "path": "source_ingest/register.py",
+      "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+      "imports": [
+        {
+          "line": 3,
+          "source": "import re"
+        },
+        {
+          "line": 4,
+          "source": "from .preview import MAX_ITEMS, structure"
+        }
+      ],
+      "classes": [],
+      "unique_call_expressions": [
+        "KEY.fullmatch",
+        "ValueError",
+        "all",
+        "annotated_cells",
+        "any",
+        "block",
+        "boundaries.append",
+        "cells",
+        "content.decode",
+        "content.decode('utf-8-sig').splitlines",
+        "d.get",
+        "diagnostics.append",
+        "dict",
+        "enumerate",
+        "heading_path.append",
+        "len",
+        "line.lstrip",
+        "line.lstrip().startswith",
+        "line.lstrip()[1:].split",
+        "line.lstrip()[1:].split('|', 1)[0].strip",
+        "line.startswith",
+        "line.strip",
+        "line[:boundaries[0]].strip",
+        "line[a + 1:b].strip",
+        "marker[2].strip",
+        "metadata.update",
+        "pending_blanks.append",
+        "proposals.append",
+        "raw.endswith",
+        "raw.startswith",
+        "re.compile",
+        "re.fullmatch",
+        "re.match",
+        "source_key",
+        "structure",
+        "suffix.strip",
+        "tuple",
+        "value.strip",
+        "values.append",
+        "zip"
+      ],
+      "no_dynamic_import_eval_or_getattr": true,
+      "inventory_scope": "WHOLE_MODULE_SUPERSET_NOT_EXACT_RUNTIME_CLOSURE"
+    }
+  ],
+  "source_anchors": [
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.df46",
+      "line": 531,
+      "end_line": 574
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.lab",
+      "line": 29,
+      "end_line": 31
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.error",
+      "line": 33,
+      "end_line": 34
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.state",
+      "line": 36,
+      "end_line": 36
+    },
+    {
+      "path": "testing/D5/test_durable_integration.py",
+      "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+      "symbol": "DurableIntegrationTest.entities",
+      "line": 37,
+      "end_line": 37
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.dr36",
+      "line": 363,
+      "end_line": 383
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.assert_relational_equivalence",
+      "line": 350,
+      "end_line": 361
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.plan",
+      "line": 35,
+      "end_line": 40
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.lab",
+      "line": 23,
+      "end_line": 25
+    },
+    {
+      "path": "testing/D5/test_durable_relational.py",
+      "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+      "symbol": "DurableRelationalTest.state",
+      "line": 28,
+      "end_line": 28
+    },
+    {
+      "path": "testing/D5/durable_support.py",
+      "sha256": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+      "symbol": "ready",
+      "line": 38,
+      "end_line": 62
+    },
+    {
+      "path": "testing/D5/relational_support.py",
+      "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+      "symbol": "source",
+      "line": 20,
+      "end_line": 31
+    },
+    {
+      "path": "testing/D5/relational_support.py",
+      "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+      "symbol": "prepare",
+      "line": 34,
+      "end_line": 53
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "client_genesis",
+      "line": 51,
+      "end_line": 55
+    },
+    {
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "symbol": "client_reduce",
+      "line": 157,
+      "end_line": 281
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "client_genesis",
+      "line": 61,
+      "end_line": 65
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "client_reduce",
+      "line": 150,
+      "end_line": 369
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.perform",
+      "line": 523,
+      "end_line": 535
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.prepare_projection",
+      "line": 553,
+      "end_line": 560
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.review",
+      "line": 549,
+      "end_line": 551
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.dispatch",
+      "line": 562,
+      "end_line": 576
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Client.reconcile",
+      "line": 578,
+      "end_line": 588
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Remote.execute",
+      "line": 484,
+      "end_line": 490
+    },
+    {
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "symbol": "Remote.edit",
+      "line": 497,
+      "end_line": 500
+    },
+    {
+      "path": "source_ingest/relational_planner.py",
+      "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+      "symbol": "plan_batch",
+      "line": 79,
+      "end_line": 191
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_fail",
+      "line": 26,
+      "end_line": 27
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_shape",
+      "line": 30,
+      "end_line": 32
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_text",
+      "line": 35,
+      "end_line": 43
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_id",
+      "line": 46,
+      "end_line": 52
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_number",
+      "line": 55,
+      "end_line": 58
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "canonical",
+      "line": 61,
+      "end_line": 69
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "digest",
+      "line": 72,
+      "end_line": 73
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_typed_elements",
+      "line": 76,
+      "end_line": 91
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "decode_envelope",
+      "line": 94,
+      "end_line": 115
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "envelope",
+      "line": 118,
+      "end_line": 120
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "_metadata",
+      "line": 123,
+      "end_line": 127
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryDrive.__init__",
+      "line": 132,
+      "end_line": 133
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryDrive.seed",
+      "line": 135,
+      "end_line": 141
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryDrive.read",
+      "line": 143,
+      "end_line": 152
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.__init__",
+      "line": 157,
+      "end_line": 167
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.projection",
+      "line": 170,
+      "end_line": 171
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.seed",
+      "line": 173,
+      "end_line": 182
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.read",
+      "line": 184,
+      "end_line": 188
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.edit_fixture",
+      "line": 190,
+      "end_line": 201
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryPlane.patch",
+      "line": 203,
+      "end_line": 218
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "evaluate_route",
+      "line": 221,
+      "end_line": 269
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.__init__",
+      "line": 274,
+      "end_line": 284
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.plane",
+      "line": 287,
+      "end_line": 288
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.capture",
+      "line": 290,
+      "end_line": 337
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.capture_drive",
+      "line": 339,
+      "end_line": 346
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.capture_artifact",
+      "line": 348,
+      "end_line": 354
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.review",
+      "line": 356,
+      "end_line": 379
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab._accepted",
+      "line": 381,
+      "end_line": 382
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab._candidate",
+      "line": 384,
+      "end_line": 402
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.prepare_effect",
+      "line": 404,
+      "end_line": 434
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.manifest",
+      "line": 436,
+      "end_line": 443
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab._command",
+      "line": 445,
+      "end_line": 463
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.apply_effect",
+      "line": 465,
+      "end_line": 481
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.entity",
+      "line": 483,
+      "end_line": 486
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.bind_plane",
+      "line": 488,
+      "end_line": 508
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.prepare_projection",
+      "line": 510,
+      "end_line": 524
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.apply_projection",
+      "line": 526,
+      "end_line": 535
+    },
+    {
+      "path": "source_ingest/offline.py",
+      "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+      "symbol": "MemoryLab.summary",
+      "line": 537,
+      "end_line": 547
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "fail",
+      "line": 31,
+      "end_line": 32
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "canonical",
+      "line": 35,
+      "end_line": 40
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "digest",
+      "line": 43,
+      "end_line": 44
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "shape",
+      "line": 47,
+      "end_line": 49
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "label",
+      "line": 52,
+      "end_line": 55
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "identifier",
+      "line": 58,
+      "end_line": 64
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "hash_id",
+      "line": 67,
+      "end_line": 70
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "number",
+      "line": 73,
+      "end_line": 76
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "decoder_hash",
+      "line": 79,
+      "end_line": 81
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "descriptor",
+      "line": 84,
+      "end_line": 88
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_descriptor",
+      "line": 91,
+      "end_line": 99
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "account",
+      "line": 102,
+      "end_line": 105
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_account",
+      "line": 108,
+      "end_line": 115
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "adapter",
+      "line": 118,
+      "end_line": 120
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_adapter",
+      "line": 123,
+      "end_line": 132
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "adapter_identity",
+      "line": 135,
+      "end_line": 136
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "constraint",
+      "line": 139,
+      "end_line": 140
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "slot",
+      "line": 143,
+      "end_line": 144
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_window",
+      "line": 147,
+      "end_line": 150
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "policy",
+      "line": 153,
+      "end_line": 155
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_policy",
+      "line": 158,
+      "end_line": 170
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "observation",
+      "line": 173,
+      "end_line": 177
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "validate_observation",
+      "line": 180,
+      "end_line": 191
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.__init__",
+      "line": 195,
+      "end_line": 201
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._scope",
+      "line": 204,
+      "end_line": 206
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.register_profile",
+      "line": 208,
+      "end_line": 219
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.select_profile",
+      "line": 221,
+      "end_line": 229
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.capture",
+      "line": 231,
+      "end_line": 261
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.artifact",
+      "line": 263,
+      "end_line": 267
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._source_current",
+      "line": 269,
+      "end_line": 272
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.record_mapping_fixture",
+      "line": 274,
+      "end_line": 289
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.check_mapping_fixture",
+      "line": 291,
+      "end_line": 303
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.bind_account",
+      "line": 305,
+      "end_line": 316
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._account",
+      "line": 318,
+      "end_line": 323
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.account_snapshot",
+      "line": 325,
+      "end_line": 326
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.change_adapter",
+      "line": 328,
+      "end_line": 333
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.publish_observation",
+      "line": 335,
+      "end_line": 347
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.select_observation",
+      "line": 349,
+      "end_line": 357
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.revoke_observation",
+      "line": 359,
+      "end_line": 366
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.select_policy",
+      "line": 368,
+      "end_line": 379
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.advance_clock",
+      "line": 381,
+      "end_line": 385
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.manifest",
+      "line": 387,
+      "end_line": 391
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._current",
+      "line": 393,
+      "end_line": 399
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.prepare_evaluation",
+      "line": 401,
+      "end_line": 423
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._evaluate",
+      "line": 426,
+      "end_line": 442
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.review",
+      "line": 444,
+      "end_line": 454
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._evaluation_accepted",
+      "line": 456,
+      "end_line": 458
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._hook",
+      "line": 460,
+      "end_line": 461
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.validate_evaluation",
+      "line": 463,
+      "end_line": 485
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab._historical",
+      "line": 487,
+      "end_line": 491
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.read_command",
+      "line": 493,
+      "end_line": 497
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.inspect_facts",
+      "line": 499,
+      "end_line": 505
+    },
+    {
+      "path": "source_ingest/eligibility_fixture.py",
+      "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+      "symbol": "EligibilityLab.summary",
+      "line": 507,
+      "end_line": 512
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "fail",
+      "line": 27,
+      "end_line": 28
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "canonical",
+      "line": 31,
+      "end_line": 36
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "digest",
+      "line": 39,
+      "end_line": 40
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "shape",
+      "line": 43,
+      "end_line": 45
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "identifier",
+      "line": 48,
+      "end_line": 54
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "integer",
+      "line": 57,
+      "end_line": 60
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "text",
+      "line": 63,
+      "end_line": 68
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "capabilities",
+      "line": 71,
+      "end_line": 74
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "validate_capabilities",
+      "line": 77,
+      "end_line": 84
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "binding",
+      "line": 87,
+      "end_line": 91
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "validate_binding",
+      "line": 94,
+      "end_line": 102
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "creation_key",
+      "line": 105,
+      "end_line": 109
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "task",
+      "line": 112,
+      "end_line": 114
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "validate_task",
+      "line": 117,
+      "end_line": 123
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "validate_manifest",
+      "line": 126,
+      "end_line": 154
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.__init__",
+      "line": 159,
+      "end_line": 175
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.card",
+      "line": 177,
+      "end_line": 179
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.change_card",
+      "line": 181,
+      "end_line": 186
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.read",
+      "line": 188,
+      "end_line": 193
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.edit",
+      "line": 195,
+      "end_line": 217
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.remove",
+      "line": 219,
+      "end_line": 222
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.count",
+      "line": 224,
+      "end_line": 226
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.execute",
+      "line": 228,
+      "end_line": 294
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture._reject",
+      "line": 296,
+      "end_line": 299
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "PlaneFixture.query",
+      "line": 301,
+      "end_line": 325
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.__init__",
+      "line": 330,
+      "end_line": 347
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.bind",
+      "line": 349,
+      "end_line": 366
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.edit_task",
+      "line": 368,
+      "end_line": 378
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.change_policy",
+      "line": 380,
+      "end_line": 387
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.advance_clock",
+      "line": 389,
+      "end_line": 394
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.prepare",
+      "line": 396,
+      "end_line": 426
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.manifest",
+      "line": 428,
+      "end_line": 442
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.review",
+      "line": 444,
+      "end_line": 454
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._validity",
+      "line": 456,
+      "end_line": 468
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._view",
+      "line": 470,
+      "end_line": 478
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.command",
+      "line": 480,
+      "end_line": 486
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.dispatch",
+      "line": 488,
+      "end_line": 560
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._proof_ok",
+      "line": 563,
+      "end_line": 576
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._negative_ok",
+      "line": 579,
+      "end_line": 588
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._match_ok",
+      "line": 591,
+      "end_line": 600
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab._apply_response",
+      "line": 602,
+      "end_line": 623
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.reconcile",
+      "line": 625,
+      "end_line": 698
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.inspect_command",
+      "line": 700,
+      "end_line": 706
+    },
+    {
+      "path": "source_ingest/plane_fixture.py",
+      "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+      "symbol": "ReconciliationLab.summary",
+      "line": 708,
+      "end_line": 714
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "fail",
+      "line": 27,
+      "end_line": 28
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "canonical",
+      "line": 31,
+      "end_line": 36
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "digest",
+      "line": 39,
+      "end_line": 40
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "byte_hash",
+      "line": 43,
+      "end_line": 44
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "shape",
+      "line": 47,
+      "end_line": 49
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "identifier",
+      "line": 52,
+      "end_line": 58
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "hash_id",
+      "line": 61,
+      "end_line": 64
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "number",
+      "line": 67,
+      "end_line": 70
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "text",
+      "line": 73,
+      "end_line": 79
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_pairs",
+      "line": 82,
+      "end_line": 88
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "decode",
+      "line": 91,
+      "end_line": 96
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "reference",
+      "line": 99,
+      "end_line": 100
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "identity",
+      "line": 103,
+      "end_line": 109
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "element",
+      "line": 112,
+      "end_line": 114
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "declaration",
+      "line": 117,
+      "end_line": 118
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "envelope",
+      "line": 121,
+      "end_line": 124
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "validate_source",
+      "line": 127,
+      "end_line": 163
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_incident",
+      "line": 166,
+      "end_line": 167
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_baseline",
+      "line": 170,
+      "end_line": 171
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_guard",
+      "line": 174,
+      "end_line": 181
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_validate_graph",
+      "line": 184,
+      "end_line": 211
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_acyclic",
+      "line": 214,
+      "end_line": 231
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "_candidate",
+      "line": 234,
+      "end_line": 345
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.__init__",
+      "line": 350,
+      "end_line": 361
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._save",
+      "line": 363,
+      "end_line": 365
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._load",
+      "line": 367,
+      "end_line": 371
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._meta",
+      "line": 373,
+      "end_line": 375
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.capture",
+      "line": 377,
+      "end_line": 388
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.source",
+      "line": 390,
+      "end_line": 398
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.source_artifact",
+      "line": 400,
+      "end_line": 404
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.manifest",
+      "line": 406,
+      "end_line": 415
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._accepted",
+      "line": 418,
+      "end_line": 420
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.review",
+      "line": 422,
+      "end_line": 441
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._current",
+      "line": 443,
+      "end_line": 448
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.prepare",
+      "line": 450,
+      "end_line": 472
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._hook",
+      "line": 474,
+      "end_line": 476
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.apply",
+      "line": 478,
+      "end_line": 526
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab._authorize",
+      "line": 528,
+      "end_line": 533
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.read_command",
+      "line": 535,
+      "end_line": 543
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.fixture_edit_entity",
+      "line": 545,
+      "end_line": 571
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.fixture_add_relation",
+      "line": 573,
+      "end_line": 588
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.inspect",
+      "line": 590,
+      "end_line": 593
+    },
+    {
+      "path": "source_ingest/batch_fixture.py",
+      "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+      "symbol": "BatchLab.summary",
+      "line": 595,
+      "end_line": 602
+    },
+    {
+      "path": "source_ingest/preview.py",
+      "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+      "symbol": "structure",
+      "line": 86,
+      "end_line": 129
+    },
+    {
+      "path": "source_ingest/preview.py",
+      "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+      "symbol": "build_observation",
+      "line": 137,
+      "end_line": 167
+    },
+    {
+      "path": "source_ingest/register.py",
+      "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+      "symbol": "cells",
+      "line": 13,
+      "end_line": 27
+    },
+    {
+      "path": "source_ingest/register.py",
+      "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+      "symbol": "source_key",
+      "line": 30,
+      "end_line": 33
+    },
+    {
+      "path": "source_ingest/register.py",
+      "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+      "symbol": "annotated_cells",
+      "line": 36,
+      "end_line": 49
+    },
+    {
+      "path": "source_ingest/register.py",
+      "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+      "symbol": "parse",
+      "line": 52,
+      "end_line": 163
+    }
+  ],
+  "observer_registry": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+  "observed_targets": [
+    {
+      "module": "source_ingest.durable_store",
+      "class_name": "Store",
+      "method": "snapshot",
+      "path": "source_ingest/durable_store.py",
+      "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+      "parameters": [
+        "self"
+      ]
+    },
+    {
+      "module": "source_ingest.durable_task_fixture",
+      "class_name": "Client",
+      "method": "snapshot",
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "parameters": [
+        "self"
+      ]
+    },
+    {
+      "module": "source_ingest.durable_task_fixture",
+      "class_name": "Client",
+      "method": "perform",
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "parameters": [
+        "self",
+        "kind",
+        "args",
+        "cid",
+        "expected"
+      ]
+    },
+    {
+      "module": "source_ingest.durable_task_fixture",
+      "class_name": "Remote",
+      "method": "snapshot",
+      "path": "source_ingest/durable_task_fixture.py",
+      "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+      "parameters": [
+        "self"
+      ]
+    },
+    {
+      "module": "source_ingest.durable_relational_fixture",
+      "class_name": "Client",
+      "method": "snapshot",
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "parameters": [
+        "self"
+      ]
+    },
+    {
+      "module": "source_ingest.durable_relational_fixture",
+      "class_name": "Client",
+      "method": "perform",
+      "path": "source_ingest/durable_relational_fixture.py",
+      "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+      "parameters": [
+        "self",
+        "kind",
+        "args",
+        "cid",
+        "expected"
+      ]
+    },
+    {
+      "module": "source_ingest.incremental_fixture",
+      "class_name": "FixtureStore",
+      "method": "snapshot",
+      "path": "source_ingest/incremental_fixture.py",
+      "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+      "parameters": [
+        "self"
+      ]
+    }
+  ],
+  "observer_scope": {
+    "positive_family_frames": 110,
+    "negative_Store_frames": 2,
+    "negative_Drive_frames": 1,
+    "no_Store_controls": 5,
+    "prior_unit_frames": 203,
+    "parent_methods": [
+      "Store.transact",
+      "FixtureStore.advance"
+    ],
+    "harness_functions": [
+      "durable_support.independent",
+      "relational_support.independent",
+      "durable_support.start",
+      "relational_support.start",
+      "durable_support.receive",
+      "relational_support.receive",
+      "durable_support.finish",
+      "relational_support.finish",
+      "IncrementalCaptureTest.spawn"
+    ],
+    "stdlib_parent_methods": [
+      "_ConnectionBase.recv_for_registered_only",
+      "BaseProcess.join_for_registered_only"
+    ],
+    "subcase": "PINNED_EXACT_UNITTEST_SUBTEST_MEMORY_FIELDS_NO_CONTEXT_MANAGER_REPLACEMENT",
+    "child_observers_installed": false,
+    "checkpoint_or_hook_observers": false,
+    "extra_fixture_or_IO_calls": false
+  },
+  "type_bindings": [
+    {
+      "expression": "MemoryLab()",
+      "type": "source_ingest.offline.MemoryLab",
+      "contained_plane": "source_ingest.offline.MemoryPlane default"
+    },
+    {
+      "expression": "q.EligibilityLab()",
+      "type": "source_ingest.eligibility_fixture.EligibilityLab",
+      "test_hook": null
+    },
+    {
+      "expression": "PlaneFixture(capabilities())",
+      "type": "source_ingest.plane_fixture.PlaneFixture",
+      "before_send": null,
+      "before_query": null
+    },
+    {
+      "expression": "ReconciliationLab(plane)",
+      "type": "source_ingest.plane_fixture.ReconciliationLab",
+      "requires_exact_PlaneFixture": true
+    },
+    {
+      "expression": "BatchLab(uid(1))",
+      "type": "source_ingest.batch_fixture.BatchLab",
+      "test_hook": null
+    }
+  ],
+  "callable_edges": [
+    {
+      "edge": "MemoryLab._command(operation)",
+      "resolution": "Nested function in apply_effect: capture_artifact, _accepted, dictionary checks/mutation, fixed outcome; not an argument from fixture content."
+    },
+    {
+      "edge": "EligibilityLab._hook / BatchLab._hook",
+      "resolution": "test_hook default None, no reassignment in DF46/DR36."
+    },
+    {
+      "edge": "PlaneFixture.execute/query callbacks",
+      "resolution": "before_send/before_query default None, no reassignment in DF46; send_mode only string mutations."
+    },
+    {
+      "edge": "preview.build_observation -> register.parse -> preview.structure",
+      "resolution": "Local repository parser import included; fixed task-register.v1, builtin bytes/strings; no Store, test callback or protocol wrapper."
+    },
+    {
+      "edge": "json hooks / graph DFS / deep copy / locks",
+      "resolution": "Local parsing/recursive functions and stdlib with builtin fixture containers; no injected callable/custom object, no start/receive/finish/join/recv."
+    }
+  ],
+  "preconditions": [
+    "Fuentes y bindings exactos del registro P01; sin monkeypatches nuevos o import hooks.",
+    "Objetos frescos de clases exactas y contenedores builtin construidos por fixtures; ningún objeto suministrado por proveedor.",
+    "Hooks y callbacks mencionados permanecen None. No se extrapola a callees arbitrarios ni otros tests con hooks instalados.",
+    "Revisión documental por AST/fuente, sin importar clases ni invocar APIs históricas privadas."
+  ],
+  "conclusion": "Con estos tipos y edges, los métodos históricos de DF46/DR36 no alcanzan los observers de Store/Client/Remote/FixtureStore/Drive, protocolos parentales ni unittest. Añaden0 eventos del registro en esos segmentos, sin borrar trabajo, valores, excepciones o comparaciones.",
+  "limitations": [
+    "Inventario de módulos es superconjunto de fuente, no prueba general de Python ni traza medida.",
+    "No acredita compatibilidad funcional P01 ni persistencia/recuperación integrada; costes CPU/memoria/bytes y operandos siguen pendientes."
+  ],
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

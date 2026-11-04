@@ -1,0 +1,66 @@
+{
+  "schema": "d5.i104-prior-publication-context.v1",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "direct_user_request": "haz commit y push en git, sigue con tareas de D5",
+  "published_scope": "Pending I85-I103 component profiles, sealed evidence and documentary capacity reviews",
+  "published_previous_scope_authorized": true,
+  "previous_commit": "7ff47485109306f90ecc4eebc6a6b3f6ec597d99",
+  "published_commit": "b22bc4d9189896c12f35c648cf47a93937b76b58",
+  "branch": "main",
+  "remote": "origin",
+  "repository": "https://github.com/isidorotrevino/weekly-ai-work-planner.git",
+  "files_added": 146,
+  "bytes_of_new_files": 20741585,
+  "publication_validation": {
+    "files_matched_recorded_hashes": 146,
+    "integrity_seals_verified": 24,
+    "staged_diff_check": "PASS",
+    "new_campaigns_or_component_tests": 0
+  },
+  "push_result": "SUCCESS_7ff4748..b22bc4d_main_to_main",
+  "post_push_remote_verification": {
+    "command": "git ls-remote --exit-code origin refs/heads/main",
+    "observed_sha": "b22bc4d9189896c12f35c648cf47a93937b76b58",
+    "observed_ref": "refs/heads/main",
+    "matches_local_HEAD": true
+  },
+  "worktree_before_I104": "CLEAN",
+  "historical_sealed_authorization_flags_preserved": true,
+  "I104_publication_status": "LOCAL_DOCUMENTARY_WORK_NOT_INCLUDED_IN_PRIOR_COMMIT",
+  "future_functional_or_component_campaign_authorized": false,
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

@@ -1,0 +1,640 @@
+{
+  "schema": "d5.i107-event-bound-coverage-register.v1",
+  "increment": "I107",
+  "date": "2026-10-28",
+  "timezone": "Europe/Madrid",
+  "base_commit": "b22bc4d9189896c12f35c648cf47a93937b76b58",
+  "authority": "USER_CONTINUE_DOCUMENTARY_D5",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "61_OF_88_T_R_EVENT_PATHS_BOUNDED_OTHER_RESOURCES_OPEN",
+  "rows": [
+    {
+      "criterion": "DF08",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF08",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF09",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF09",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF10",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF10",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF12",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF12",
+      "event_upper": 1245,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 803,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF11",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF11",
+      "event_upper": 1317,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 731,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF13",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF13",
+      "event_upper": 304,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1744,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR14",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR14",
+      "event_upper": 179,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1869,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR14",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR24",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR24",
+      "event_upper": 523,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1525,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR27",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR27",
+      "event_upper": 1694,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 354,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR23",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR23",
+      "event_upper": 1951,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 97,
+      "evidence": "docs/validation/D5-I101-DR23-event-bound.json",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF44",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF44",
+      "event_upper": 1474,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 574,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DF44",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR37",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR37",
+      "event_upper": 1549,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 499,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DR37",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF21",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF21",
+      "event_upper": 116,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1932,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF21",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF22",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF22",
+      "event_upper": 119,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1929,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF22",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF23",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF23",
+      "event_upper": 121,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1927,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF23",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF24",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF24",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF25",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF25",
+      "event_upper": 103,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1945,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF25",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF26",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF26",
+      "event_upper": 815,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1233,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF26",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF27",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF27",
+      "event_upper": 160,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1888,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF28",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF28",
+      "event_upper": 146,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1902,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF28",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF37",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF37",
+      "event_upper": 96,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1952,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF37",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF38",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF38",
+      "event_upper": 77,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1971,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF38",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF39",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF39",
+      "event_upper": 115,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1933,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF39",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF40",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF40",
+      "event_upper": 105,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1943,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF40",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR25",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR25",
+      "event_upper": 100,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1948,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR25",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR26",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR26",
+      "event_upper": 123,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1925,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR26",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR28",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR28",
+      "event_upper": 183,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1865,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR28",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR29",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR29",
+      "event_upper": 731,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1317,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR29",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR30",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR30",
+      "event_upper": 319,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1729,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR30",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR31",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR31",
+      "event_upper": 54,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1994,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR31",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR32",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR32",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR32",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR33",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR33",
+      "event_upper": 141,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1907,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR33",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR38",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR38",
+      "event_upper": 99,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1949,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR38",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF01",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF01",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF01",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF41",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF41",
+      "event_upper": 109,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1939,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF41",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF42",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF42",
+      "event_upper": 91,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1957,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF42",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF43",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF43",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF43",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF45",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF45",
+      "event_upper": 249,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1799,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF45",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF47",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF47",
+      "event_upper": 101,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1947,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF47",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF48",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF48",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF48",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF46",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF46",
+      "event_upper": 256,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1792,
+      "evidence": "docs/validation/D5-I106-historical-comparison-event-bounds.json#/new_test_models/DF46",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR36",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR36",
+      "event_upper": 560,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1488,
+      "evidence": "docs/validation/D5-I106-historical-comparison-event-bounds.json#/new_test_models/DR36",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR03",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR03",
+      "event_upper": 16,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2032,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR03",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR04",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR04",
+      "event_upper": 61,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1987,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR04",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR05",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR05",
+      "event_upper": 54,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1994,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR05",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR06",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR06",
+      "event_upper": 126,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1922,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR06",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR07",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR07",
+      "event_upper": 185,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1863,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR07",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR08",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR08",
+      "event_upper": 101,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1947,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR09",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR09",
+      "event_upper": 127,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1921,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR10",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR10",
+      "event_upper": 155,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1893,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR11",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR11",
+      "event_upper": 210,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1838,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR12",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR12",
+      "event_upper": 267,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1781,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR13",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR13",
+      "event_upper": 90,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1958,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR15",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR15",
+      "event_upper": 108,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1940,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR15",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR16",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR16",
+      "event_upper": 55,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1993,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR16",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR17",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR17",
+      "event_upper": 63,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1985,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR17",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR18",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR18",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR18",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR19",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR19",
+      "event_upper": 294,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1754,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR19",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR20",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR20",
+      "event_upper": 365,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1683,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR20",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR21",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR21",
+      "event_upper": 100,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1948,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR21",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR22",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR22",
+      "event_upper": 123,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1925,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR22",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    }
+  ],
+  "covered_61_root_event_subtotal_upper": 21700,
+  "composition_rule": "Raíces disjuntas. No sumar a I100/helpers solapados. 21700 es suma de cotas superiores parciales; superar16384 no prueba exceso real ni establece cuota suficiente.",
+  "remaining_T_R_criteria": [
+    "DF02",
+    "DF03",
+    "DF04",
+    "DF05",
+    "DF06",
+    "DF07",
+    "DF14",
+    "DF15",
+    "DF16",
+    "DF17",
+    "DF18",
+    "DF19",
+    "DF20",
+    "DF29",
+    "DF30",
+    "DF31",
+    "DF32",
+    "DF33",
+    "DF34",
+    "DF35",
+    "DF36",
+    "DR01",
+    "DR02",
+    "DR34",
+    "DR35",
+    "DR39",
+    "DR40"
+  ],
+  "remaining": [
+    "Cerrar27 raíces T/R y233 tests de otras familias hasta321/12.",
+    "Cotas globales de eventos, referencias, owners/contextos/objetos/grupos/autoridades y bytes.",
+    "Composición de24 cuotas y Reader; R>=19037>16384(I97) es cota inferior independiente de referencias.",
+    "Decisiones separadas de contrato/perfil/implementación/campañas, captura funcional, IR03/suficiencia global y publicación."
+  ],
+  "next_documentary_focus": "Raíces T pendientes de revisión/replay/errores; DR01/02/34/35/39/40 conservan sus propios análisis de imports/datos/IO.",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}
