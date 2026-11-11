@@ -1,0 +1,150 @@
+{
+  "schema": "d5.i124-resource-admission-review.v1",
+  "increment": "I124",
+  "date": "2026-11-11",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "source_revision": "I122-CANDIDATE-01",
+  "status": "SOURCE_COUNTS_CLOSED_COMPLETE_RESOURCE_ADMISSION_NOT_ESTABLISHED",
+  "proof": {
+    "path": "docs/validation/D5-I124-global-batch-lifetime-proof.json",
+    "sha256": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c"
+  },
+  "runtime_metadata_observed_without_candidate": {
+    "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "pointer_bytes": 8,
+    "GIL_disabled": 0,
+    "debug": 0,
+    "pymalloc": 1,
+    "type_sizes": {
+      "dict": {
+        "basicsize": 48,
+        "itemsize": 0
+      },
+      "list": {
+        "basicsize": 40,
+        "itemsize": 0
+      },
+      "tuple": {
+        "basicsize": 32,
+        "itemsize": 8
+      },
+      "set": {
+        "basicsize": 200,
+        "itemsize": 0
+      },
+      "frozenset": {
+        "basicsize": 200,
+        "itemsize": 0
+      },
+      "int": {
+        "basicsize": 24,
+        "itemsize": 4
+      },
+      "str": {
+        "basicsize": 64,
+        "itemsize": 0
+      },
+      "bytes": {
+        "basicsize": 33,
+        "itemsize": 1
+      }
+    },
+    "interpreter_binary": {
+      "path": "/usr/bin/python3.14",
+      "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+      "bytes": 7477160,
+      "binary_identified_not_upstream_source_equivalence_attested": true
+    }
+  },
+  "primary_source_models": [
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.4/Objects/listobject.c",
+      "basis": "list_resize: n+(n>>3)+6 rounded, bounded by2*n+8; generator extend/tuple temporary lists included in generous slot allowance."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.4/Objects/dictobject.c",
+      "basis": "GROWTH_RATE=used*3, USABLE_FRACTION=2/3, power-of-two capacities, general entry24 and index<=8 in64bit model; no deletion in a freshly cloned dict."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.4/Objects/setobject.c",
+      "basis": "set resize uses2*used or4*used, next power of two; setentry16 in64bit model, linear probes9 and perturb shift5."
+    }
+  ],
+  "builtin_storage_model": {
+    "status": "UPSTREAM_64BIT_GIL_MODEL_NOT_BINARY_OR_RSS_CERTIFICATE",
+    "scope": "Requested storage attributable to fresh cloned builtin containers, memo/id keys and opaque set; generous cumulative growth allowance. Excludes Python/C traversal frames, wrapper closures/dicts outside cloned graph, new scalar metadata, projection/serialization temporaries, interpreter and original/product memory, allocator overhead/fragmentation and OS.",
+    "header_bytes_per_cloned_container": 1024,
+    "bytes_per_child_occurrence": 512,
+    "memo_bytes_per_container": 512,
+    "id_temporary_bytes_per_visit": 64,
+    "opaque_fixed_bytes": 1024,
+    "opaque_bytes_per_insert_attempt": 512,
+    "batch_formula": "1024*C+512*A+512*C+64*V+1024+512*O",
+    "batch_requested_bytes_upper": 429494352768,
+    "all_batches_requested_bytes_upper": 23096917808804736,
+    "all_batches_including_freed_buffers_overcount": true,
+    "original_scalar_payload_copied_by_clone": false,
+    "coefficients_justification": "Upstream source-model growth plus local64bit type layout observations; constants leave room for container headers, GC header, small tables, tuple/list build buffers, growing tables and PyLong id objects. Matching version/build metadata does not prove identical distro binary implementation.",
+    "actual_interpreter_binary_layout_and_allocator_attested": false,
+    "total_heap_or_RSS_bound": false,
+    "complete_memory_capacity_verified": false
+  },
+  "page_payload": {
+    "pending_bodies_upper": 67108864,
+    "all_unique_historical_chunks_upper": 67108864,
+    "bodies_plus_chunks_upper": 134217728,
+    "old_memo_chunks_included": true,
+    "encoding_and_object_storage_included": false,
+    "not_a_RAM_quota": true
+  },
+  "collision_work_model": {
+    "status": "FINITE_KERNEL_ABSTRACT_WORK_UNDER_UPSTREAM_SOURCE_MODEL",
+    "table_slots_upper": 3832860192,
+    "hash_operations_per_batch_upper": 1436647589,
+    "rehash_multiplier": 65,
+    "probe_steps_per_hash_operation_upper": 38328602050,
+    "probe_inspections_upper": 192478912238762047131262250,
+    "key_compare_byte_units_per_probe_upper": 524288,
+    "probe_compare_byte_units_upper": 100914383939836076166355222528000,
+    "basis": "Max8 slots per (container+edge+opaque+1),13 perturb rounds for64bit,10 linear-probe opportunities; <=64 resize stages per key plus original operation. Builtin int/str/flat-tuple keys only; byte-compare allowance32*4096*4. No custom key hooks/concurrent mutation in cloned tables.",
+    "not_a_machine_instruction_or_CPU_seconds_bound": true
+  },
+  "CPU_admission": {
+    "clone_counts_fully_numeric": true,
+    "whole_campaign_CPU_seconds_verified": false,
+    "wall_seconds_verified": false,
+    "campaign_seconds_unchanged": 900,
+    "reason": "Finite abstract clone work has no justified worst-case conversion to seconds. Noncopy work and scheduling/I/O/native runtime remain outside that kernel model. A watchdog is a failure limit, not a completion bound.",
+    "forbidden_inference": "Do not infer actual infeasibility or success from an extremely loose upper bound, nor treat work/900 as a measured service rate."
+  },
+  "obligations": {
+    "R123_01": "CLOSED_SOURCE_OPPORTUNITY_ENVELOPE_F52018_S1759",
+    "R123_02": "LIFETIME_CLOSED_BY_RETAIN_ALL; FINITE_BUILTIN_STORAGE_MODEL; COMPLETE_HEAP_RSS_NOT_ESTABLISHED",
+    "R123_03": "KERNEL_COUNTS_AND_COLLISION_MODEL_CLOSED; WHOLE_CAMPAIGN_SECONDS_NOT_ESTABLISHED"
+  },
+  "remaining_for_actual_admission": [
+    "Supply a complete bounded allocation/lifetime/stack/scalar/serialization model for the exact runtime, or replace the whole-graph implementation and bind its proof.",
+    "Justify whole-campaign CPU/time capacity with pinned platform service/noncopy assumptions or separately authorized measurement; no CPU rate is invented here.",
+    "Validate the ten I122 components under separate execution authorization and perform exact CP07 rebind/new authority evidence. No runtime PASS is manufactured."
+  ],
+  "CP03_original_proof_preserved": true,
+  "CP07_actual_admission": false,
+  "atomicity_30_source_sites_preserved": true,
+  "components_executed": 0,
+  "capacity_certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+  "physical_file_read_plan_unchanged": {
+    "upper": 266337791,
+    "limit": 268435456,
+    "headroom": 2097665,
+    "I123_I124_not_added_to_capture_inputs": true
+  },
+  "prior_files_preserved": 97,
+  "source_files_changed": false,
+  "quotas_changed": false,
+  "product_or_components_executed": false,
+  "commit_or_push": false,
+  "proposal_enabled": false,
+  "capture_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY"
+}

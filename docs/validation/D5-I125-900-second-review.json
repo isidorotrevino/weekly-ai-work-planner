@@ -1,0 +1,135 @@
+{
+  "schema": "d5.i125-900-second-justification-review.v1",
+  "increment": "I125",
+  "date": "2026-11-11",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "source_revision": "I122-CANDIDATE-01",
+  "status": "TIMER_SCOPE_CLOSED_END_TO_END_COMPLETION_NOT_PROVED",
+  "inputs": {
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+  },
+  "anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "line": 35,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "line": 63,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "line": 540,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    }
+  ],
+  "campaign_seconds_candidate": 900,
+  "wait_seconds_candidate": 20,
+  "time_metrics": {
+    "CPU_time": "Sum of on-CPU execution time for the stated process set; not measured/bounded by process.wait.",
+    "worker_wait_window": "Coordinator process.wait(timeout=900), after RELEASE write.",
+    "end_to_end": "Preparation, process creation/handshake, worker wait/cleanup and input/evidence/postvalidation."
+  },
+  "ordered_coordinator_phases": [
+    {
+      "id": "T01",
+      "phase": "registry/authority/input planning, destination/channels/Popen/READY/RELEASE",
+      "inside_wait_worker_900": false,
+      "verified_completion_seconds_upper": null
+    },
+    {
+      "id": "T02",
+      "phase": "wait_worker: process.wait(timeout=900)",
+      "inside_wait_worker_900": true,
+      "verified_completion_seconds_upper": null,
+      "timeout_argument_seconds": 900,
+      "meaning": "Failure observation limit, not a promise of successful completion or an OS scheduling theorem."
+    },
+    {
+      "id": "T03",
+      "phase": "stop_owned cleanup and fresh after/finish Reader passes",
+      "inside_wait_worker_900": false,
+      "verified_completion_seconds_upper": null
+    },
+    {
+      "id": "T04",
+      "phase": "evidence read/parse/page validation/aggregation/context publication",
+      "inside_wait_worker_900": false,
+      "verified_completion_seconds_upper": null
+    }
+  ],
+  "worker_wait_window_work": [
+    "post-RELEASE input checks",
+    "runner import/targets",
+    "original suite and observer phases",
+    "restore, raw decode and finish",
+    "worker fresh input after/finish and sidecar write"
+  ],
+  "inherited_closed_counts": {
+    "F": 52018,
+    "S": 1759,
+    "clone_visits_upper": 17164544043094
+  },
+  "missing_platform_evidence": [
+    "Exact claimed clock/process/window and whole-campaign work/serialization/destruction/native costs",
+    "A justified worst-case CPU service/execution rate for the exact runtime/platform",
+    "Bounded wait/IO/child/scheduling delays for the claimed completion window",
+    "Evidence linking the memory model and platform assumptions to current immutable source hashes"
+  ],
+  "logical_countermodel": {
+    "executed": false,
+    "kind": "Model of missing scheduler guarantee; not a simulated or observed test.",
+    "assumptions": [
+      "Same source bytes and work counts",
+      "After RELEASE the coordinator can run but worker receives no CPU service for901 seconds",
+      "No pinned contract excludes this service schedule"
+    ],
+    "consequence": "The timeout may trigger without a complete capture despite finite source work. This refutes inference from counts/timeout alone to guaranteed successful completion; it does not show this host will exhibit that schedule.",
+    "delay_seconds": 901
+  },
+  "whole_campaign_CPU_seconds_upper": null,
+  "whole_campaign_wall_seconds_upper": null,
+  "worker_success_within_900_verified": false,
+  "end_to_end_success_within_900_verified": false,
+  "no_rate_invented_from_work_divided_by_900": true,
+  "no_watchdog_relabelled_as_WCET": true,
+  "remaining": "A pre-existing static platform/runtime/WCET/service contract could be reviewed without running product; none is present in the reviewed inputs. Empirical timing is neither authorized nor a deterministic worst-case proof by itself.",
+  "proposal_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY",
+  "user_platform_contract_reply": {
+    "question": "Existe algún contrato de plataforma que deba vincular en I125",
+    "answer": "No; dejar dictamen de no admisión",
+    "contract_provided": false,
+    "no_admission_confirmed": true,
+    "authorizes_execution_or_quota_changes": false
+  }
+}

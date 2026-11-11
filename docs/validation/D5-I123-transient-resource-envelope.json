@@ -1,0 +1,355 @@
+{
+  "schema": "d5.i123-transient-resource-envelope.v1",
+  "increment": "I123",
+  "date": "2026-11-11",
+  "timezone": "Europe/Madrid",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "source_revision": "I122-CANDIDATE-01",
+  "status": "CONDITIONAL_SOURCE_ENVELOPE_NOT_RESOURCE_ADMISSION",
+  "inputs": {
+    "docs/validation/D5-I115-refined-reference-envelope.json": "ac92889bdcd91f268f2266c0513ed1cc10d4b83a8c604addb5d8dafa1d8204fa",
+    "docs/validation/D5-I117-PJC115-R2-design.json": "33a96b476e1fe44934833b23c5872c3cb99953b8f0c9a6fb36630106f6dc569e",
+    "docs/validation/D5-I120-unit-operand-source-proof.json": "b6f7a9e52c3168142df7719eca0b789c204a8b761450ebd9d70369f6bfa199cc",
+    "docs/validation/D5-I122-atomicity-implementation.json": "30e6d41cb41d9119d7996cff69d47e79d20c4ffa12cfb76cd2e7c0cedd768116",
+    "docs/validation/D5-I122-binding-review.json": "d6cd654d8c16241aed6e3c183782f57440918e5d8f6956194d9950d2d09dc498",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I122-gate-disposition.json": "17de7adc38849f61c14a91e94f09ebcbaa67429738997b770ad6ed4dbe1d57b0",
+    "docs/validation/D5-I122-integrity.json": "0b3dd6dc38f121069368cf5194b4cbc55c2fea19d4291b58778faa545b2d6f8c",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture_joint_i122/test_joint_capture.py": "9cc7e86e7a78e99eb862b32841acb2869deb5e3d04aab769d37a50c8a4360881",
+    "testing/prospective_capture_joint_i122/run_joint_lab.py": "233bfb1eed326382063cc56bf35b6723222e722c54d9430be512784c156d736c",
+    "testing/prospective_capture_joint_i122/README.md": "7edca2891466a4637e306a8b2e538f9ee0523053a359dc3da47b2865d3a94f2b"
+  },
+  "anchors": [
+    {
+      "name": "clone_metadata",
+      "line": 20,
+      "end_line": 38,
+      "AST_sha256": "20a3e3ceb719929293beb0f26bd3b6fc074c82cbbb517bf47dbc9dda0ec1f43e"
+    },
+    {
+      "name": "opaque_originals",
+      "line": 41,
+      "end_line": 48,
+      "AST_sha256": "07e08cf0ecb81762cb03fb1863c21c8c839272892f6a6738f66f38e5947f63d3"
+    },
+    {
+      "name": "flush",
+      "line": 81,
+      "end_line": 92,
+      "AST_sha256": "44ba860cb143e12a0cf5fad2b1f9142a2fbbbdd9e73c2f5e412aba164dd6720d"
+    },
+    {
+      "name": "__getattr__",
+      "line": 98,
+      "end_line": 111,
+      "AST_sha256": "438900517499aad3372e68561e18577c4156bf5dec2aa84515e95bbcfbc3bbbe"
+    },
+    {
+      "name": "_fork",
+      "line": 185,
+      "end_line": 201,
+      "AST_sha256": "082307462cd41c124997a5ca52ba3a2d93729d2279d57c366057462250ca2ea9"
+    },
+    {
+      "name": "_publish",
+      "line": 202,
+      "end_line": 210,
+      "AST_sha256": "90db3bc75378abae791d01ac912816d308faf39d44ff0dedb4d0b261de38228e"
+    },
+    {
+      "name": "_atomic",
+      "line": 211,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "name": "_drain",
+      "line": 244,
+      "end_line": 249,
+      "AST_sha256": "5b9e020507f47261d3c1de9dc27e65b0558513cd926b78ec708170cb3567d34c"
+    },
+    {
+      "name": "finish",
+      "line": 580,
+      "end_line": 602,
+      "AST_sha256": "180fcf8d1febb8c545f35b32de5c5e678e82747a0a91de5515e6d93ac0bea971"
+    }
+  ],
+  "scope": "Normal successful fixed321-root/12-group campaign, builtin metadata DAGs, source-shape premises inherited; not arbitrary failed allocations, retained tracebacks, product heap, interpreter/native/OS resources or total RSS.",
+  "root_census": {
+    "FIELDS": [
+      "frames",
+      "active",
+      "owners",
+      "owner_contexts",
+      "record_baselines",
+      "record_refs",
+      "declarations",
+      "frame_summary",
+      "references",
+      "errors",
+      "drive_identities",
+      "drive_observations",
+      "fixture_declarations",
+      "pending_drive",
+      "parent_snapshots",
+      "parent_assertions",
+      "parent_outcomes",
+      "pending_domain_observation",
+      "causal_sources",
+      "causal_records",
+      "record_snapshots",
+      "causal_test"
+    ],
+    "causal": [
+      "bindings",
+      "calls",
+      "charge",
+      "contract",
+      "counter",
+      "domains",
+      "emit",
+      "external_owner",
+      "frame",
+      "group_keys",
+      "invalid",
+      "limits",
+      "object_identities",
+      "objects",
+      "oracle_guards",
+      "pairs",
+      "run_id",
+      "spec",
+      "stacks",
+      "subobjects",
+      "tables",
+      "test",
+      "test_thread",
+      "threads"
+    ],
+    "pages": [
+      "_planning",
+      "_reference",
+      "_writes",
+      "chunk_bytes",
+      "chunks",
+      "closed",
+      "count",
+      "limits",
+      "manifest",
+      "owner",
+      "page_first",
+      "peak_buffer_bytes",
+      "run_id",
+      "total_bytes"
+    ],
+    "bindings": [
+      "rows",
+      "states"
+    ],
+    "clone_root_calls": 62,
+    "shallow_only": [
+      "draft.__dict__",
+      "projector.__dict__",
+      "bindings.__dict__"
+    ],
+    "opaque_originals": [
+      "record_refs values",
+      "record_baselines lists",
+      "oracle_guards values",
+      "causal_sources lists"
+    ]
+  },
+  "source_cardinalities": {
+    "events": 30129,
+    "frames": 321,
+    "owners": 5190,
+    "causal_keys": 46936,
+    "subcases": 1718,
+    "groups": 6615,
+    "witness_memberships": 9285,
+    "original_records": 997,
+    "pages": 32
+  },
+  "JSON_blocks": [
+    {
+      "root": "published_JSON_metadata",
+      "bytes": 30996862,
+      "basis": "I117 conditional source-shape sum; I122 layout unchanged; includes top and parent allowance"
+    },
+    {
+      "root": "causal.calls",
+      "bytes": 123408384,
+      "basis": "<=E open/closed call rows on successful source campaign; closed/source-projected row<=4096; map overhead separately below"
+    },
+    {
+      "root": "causal.domains",
+      "bytes": 4753920,
+      "basis": "at most one (frame,subcase,object) entry per physical group/object membership; projected identity/context row<=512"
+    },
+    {
+      "root": "parent_private_rows",
+      "bytes": 20480,
+      "basis": "2 snapshots +1 assertion +2 outcomes, deliberately counted again"
+    },
+    {
+      "root": "fixed_causal_spec_contract_limits",
+      "bytes": 58365,
+      "basis": "exact compact source JSON, limits counted twice"
+    },
+    {
+      "root": "page_manifest",
+      "bytes": 16384,
+      "basis": "32 fixed seven-field rows, deliberately counted again"
+    }
+  ],
+  "auxiliary_units": [
+    {
+      "root": "owners",
+      "units": 25951,
+      "basis": "dict root; key/value + tuple header/two slots per owner"
+    },
+    {
+      "root": "causal.objects",
+      "units": 20761,
+      "basis": "list edge + pair container/two slots"
+    },
+    {
+      "root": "causal.threads",
+      "units": 187745,
+      "basis": "new thread consumes causal key; pair and list slots"
+    },
+    {
+      "root": "causal.subobjects",
+      "units": 10309,
+      "basis": "list edge + four-tuple and four slots"
+    },
+    {
+      "root": "causal.group_keys",
+      "units": 66151,
+      "basis": "map key/value + seven-tuple and seven slots"
+    },
+    {
+      "root": "causal.object_identities",
+      "units": 31141,
+      "basis": "map key/value + identity three-tuple and three slots"
+    },
+    {
+      "root": "causal.domains_keys",
+      "units": 55711,
+      "basis": "map key/value + three-tuple and three slots"
+    },
+    {
+      "root": "causal.calls_keys",
+      "units": 60259,
+      "basis": "map root/key/value, call row graph in JSON block"
+    },
+    {
+      "root": "causal.stacks",
+      "units": 170938,
+      "basis": "map key/value/list per thread; <=E open call pointers total"
+    },
+    {
+      "root": "records_guards",
+      "units": 7978,
+      "basis": "record_refs and oracle_guards: each list edge/pair/two slots; originals opaque"
+    },
+    {
+      "root": "event_chunks",
+      "units": 30130,
+      "basis": "bytes payload shared; <=E chunk pointers"
+    },
+    {
+      "root": "small_roots_and_bindings",
+      "units": 4096,
+      "basis": "overprovision for two baseline/source entries, pairs/bindings, fixed wrappers, frame_summary/pending fields and three binding rows/states; source-only small-shape premise"
+    }
+  ],
+  "structural_per_clone": {
+    "JSON_bytes": 159254395,
+    "auxiliary_units": 671170,
+    "containers_upper": 159925565,
+    "child_occurrences_upper": 319179960,
+    "root_calls": 62,
+    "clone_invocations_upper": 319180022,
+    "memo_entries_upper": 159925565,
+    "opaque_insert_attempts_upper": 1998,
+    "logical_memo_operations_upper": 798285609,
+    "logical_opaque_membership_operations_upper": 319180022,
+    "physical_hash_probes_bounded_as_constant": false,
+    "scalar_payload_copied": false,
+    "container_clone_bound_conditional": true
+  },
+  "memory": {
+    "unit": "containers_and_pointer_occurrences_not_RSS_bytes",
+    "simultaneous_pending_page_bytes_upper": 67108864,
+    "pending_page_phase_drafts_upper": 32,
+    "pending_page_objects_plus_join_upper": "Bodies <=64 MiB; all historical immutable event chunks <=64 MiB on the successful path, including old chunks retained by draft._memo after flush; active flush temporaries and object/allocator overhead additional.",
+    "pending_draft_is_not_only_retention": true,
+    "peak_graph_formula": "(1 + F + S) * (C + edges) + O(opaque + F + S)",
+    "requested_heap_formula": "(1+F+S) * [h*C + p*edges + m*C + w + L] + page_payload_and_encoding_temporaries",
+    "symbols": {
+      "F": "Total live _fork invocations, excluding _draft fast path; not refs and not event count.",
+      "S": "Total independent read-snapshot clone batches; proxy table/attribute reads and pure method results count.",
+      "h": "Validated maximum container/header allocation allowance for pinned interpreter.",
+      "p": "Validated maximum storage allowance per child occurrence, including growth/reallocation.",
+      "m": "Validated memo-entry allocation allowance including integer id key/table growth.",
+      "w": "Wrapper dictionaries, generators and traversal frame storage per batch; requires depth/runtime ABI.",
+      "L": "Maximum reachable non-opaque scalar payload storage per metadata generation, shared when possible; retention still needs accounting. Not product operands."
+    },
+    "all_batches_retained_overcount": true,
+    "global_byte_upper_verified": false,
+    "ABI_allocation_coefficients_verified": false,
+    "failure_and_GC_retention_verified": false,
+    "shared_scalar_retention_bytes_verified": false,
+    "all_historical_unique_chunk_payload_upper": 67108864,
+    "bodies_plus_unique_chunks_payload_upper": 134217728,
+    "payload_bound_is_not_heap_or_RSS_bound": true
+  },
+  "CPU": {
+    "unit": "logical_visits_not_seconds",
+    "clone_invocations_formula": "(F+S)*V",
+    "opaque_insert_attempts_formula": "(F+S)*1998",
+    "memo_operations_formula": "(F+S)*(2*V+C)",
+    "whole_campaign_phase_count_verified": false,
+    "read_snapshot_count_verified": false,
+    "mutation_work_not_in_clone_formula": [
+      "projection and operand digests",
+      "encoding, hashing and sorting",
+      "linear identity/domain/link scans",
+      "publication and deallocation/GC",
+      "Reader, writes, locks and scheduling"
+    ],
+    "worst_case_hash_probe_model": "Dictionary/set operations may require linear probes. Do not call logical lookup O(1) a deterministic CPU bound.",
+    "monotone_growth_warning": "Repeated full copies sum prefixes; O(F*N_final), potentially quadratic if N grows with F; opaque originals do not remove metadata copying.",
+    "seconds_upper_verified": false,
+    "campaign_seconds_unchanged": 900,
+    "throughput_condition": "A measured/justified lower service rate r must satisfy total_work/r + noncopy_time <=900; using r=total_work/900 is only a requirement, never evidence."
+  },
+  "physical_file_reads": {
+    "I122_upper": 266337791,
+    "limit": 268435456,
+    "headroom": 2097665,
+    "I123_automatically_admitted_as_input": false,
+    "future_rebind_rule": "If I123 artifacts become required inputs, recompute U and all pins from final bytes; +3*new_bytes only when the exact same three-pass graph remains valid."
+  },
+  "non_execution": {
+    "product": false,
+    "candidate_import_or_compile": false,
+    "components": false,
+    "benchmark": false
+  },
+  "limits_changed": false,
+  "proposal_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY"
+}

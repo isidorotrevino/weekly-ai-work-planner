@@ -1,0 +1,542 @@
+{
+  "schema": "d5.i126-platform-contract-candidate.v1",
+  "contract_id": "PFC126-CANDIDATE-01",
+  "increment": "I126",
+  "date": "2026-11-11",
+  "timezone": "Europe/Madrid",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "status": "DRAFT_FOR_REVIEW_NOT_ATTESTED_NOT_ADMITTED",
+  "authority": "USER_I126_PREPARE_PLATFORM_CANDIDATE_KEEP_NO_ADMISSION_NO_EXECUTION_NO_QUOTA_CHANGE_COMMIT_PUSH_ALL",
+  "input_pins": {
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._fork",
+      "line": 185,
+      "end_line": 201,
+      "AST_sha256": "082307462cd41c124997a5ca52ba3a2d93729d2279d57c366057462250ca2ea9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._atomic",
+      "line": 211,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Pages.flush",
+      "line": 81,
+      "end_line": 92,
+      "AST_sha256": "44ba860cb143e12a0cf5fad2b1f9142a2fbbbdd9e73c2f5e412aba164dd6720d"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._typed_finish",
+      "line": 546,
+      "end_line": 578,
+      "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "Tee",
+      "line": 30,
+      "end_line": 33,
+      "AST_sha256": "fa11f0ac3922012f6008e3f9fd16f8658fb91c3047938d1986b2ef5d93deeb3f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "line": 35,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "line": 63,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.before",
+      "line": 1593,
+      "end_line": 1601,
+      "AST_sha256": "f01e2002fa4b85205eb55456e2ac838d5c44cec8cac3a934edd615ffd98ff5c2"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.after",
+      "line": 1602,
+      "end_line": 1606,
+      "AST_sha256": "8d05854daa6b3a4290140d9e0e5dc26424b49ba118bee1688bf12dadca479190"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.read",
+      "line": 151,
+      "end_line": 168,
+      "AST_sha256": "8be485b40414996d4a18f52d6529efb08dc45befb96020c0ab253489463e3d85"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.finish",
+      "line": 176,
+      "end_line": 178,
+      "AST_sha256": "b0b9b2718e497ac8f42a8bd77bcf377434e71743ed2521de96409f82e56cab34"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "digest_value",
+      "line": 98,
+      "end_line": 135,
+      "AST_sha256": "92fc85b1f3493fbafefa37053a877375e268fe6dd478b4e86da20022b4f7b503"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "BoundedOutput.write",
+      "line": 462,
+      "end_line": 463,
+      "AST_sha256": "c1548a3db7fa4d2d560327d5188f06fdb67327598fcde7b917c229c2eed44e00"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "line": 540,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "PageSink.append",
+      "line": 93,
+      "end_line": 101,
+      "AST_sha256": "9f7fccf7f37561b78277b484f7e2cb934dbf1ef10e6595f316e37ae8a2172455"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "encode",
+      "line": 29,
+      "end_line": 29,
+      "AST_sha256": "74e7bb02b24afbc9d1023b7a44c07484d8c68b6e48bde9706be6954311088bc5"
+    }
+  ],
+  "scope": {
+    "heap": "Worker process peak dynamic Python and native heap including originals, observer, runtime and temporaries; all11 I125 ownership classes.",
+    "requested_vs_committed": "Requested live allocations plus explicitly bounded allocator overhead; no inference to RSS.",
+    "time": "Proposed successful end-to-end launch invocation to final launch return, including before/after current wait_worker.",
+    "failure": "Heap proof must cover bounded observer-rejection prefixes and retained tracebacks within the fixed original-source scope. The900 success target is not a guarantee that all failure cleanup paths complete within900.",
+    "other_processes": "Coordinator and children require separate bounds/service attestations for joint-host claims; worker12GiB is not total host memory.",
+    "source_route": "Fixed321-root/12-group source route and preserved I124 counts; new hooks/callees/runtime changes invalidate transfer."
+  },
+  "normative_state": {
+    "candidate_review_only": true,
+    "operator_attested": false,
+    "accepted": false,
+    "enforced": false,
+    "resources_reserved": false,
+    "active_limits_changed": false,
+    "implementation_modified": false,
+    "execution_authorized": false,
+    "component_execution_authorized": false,
+    "capture_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "runtime": {
+    "observed_reference": {
+      "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+      "pointer_bytes": 8,
+      "GIL_disabled": 0,
+      "debug": 0,
+      "pymalloc": 1,
+      "type_sizes": {
+        "dict": {
+          "basicsize": 48,
+          "itemsize": 0
+        },
+        "list": {
+          "basicsize": 40,
+          "itemsize": 0
+        },
+        "tuple": {
+          "basicsize": 32,
+          "itemsize": 8
+        },
+        "set": {
+          "basicsize": 200,
+          "itemsize": 0
+        },
+        "frozenset": {
+          "basicsize": 200,
+          "itemsize": 0
+        },
+        "int": {
+          "basicsize": 24,
+          "itemsize": 4
+        },
+        "str": {
+          "basicsize": 64,
+          "itemsize": 0
+        },
+        "bytes": {
+          "basicsize": 33,
+          "itemsize": 1
+        }
+      },
+      "interpreter_binary": {
+        "path": "/usr/bin/python3.14",
+        "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+        "bytes": 7477160,
+        "binary_identified_not_upstream_source_equivalence_attested": true
+      }
+    },
+    "required_identity_pins": {
+      "interpreter": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+      "stdlib": null,
+      "extension_binaries": null,
+      "libc_allocator": null,
+      "kernel": null,
+      "CPU_and_service_domain": null
+    },
+    "platform_attestation": {
+      "owner": null,
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "validity_interval": null,
+      "available_worker_heap_bytes": null,
+      "CPU_service_evidence": null,
+      "IO_and_child_latency_evidence": null,
+      "clock_and_scheduling_evidence": null
+    },
+    "source_binary_equivalence_verified": false,
+    "environment_manifest_verified": false
+  },
+  "heap": {
+    "metric": "Peak requested worker heap and peak committed allocator heap, not serialized file bytes or RSS.",
+    "budget_rationale": "Review envelope rounded from an11GiB requested/12GiB committed worker target, apportioned across I125 ownership classes. These are design choices, not measured demand, host availability or new executable quotas.",
+    "owner_budgets": [
+      {
+        "id": "H01",
+        "owner": "Worker interpreter/startup/imports and native extensions",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H02",
+        "owner": "Original parent-process fixtures and retained originals",
+        "candidate_budget_bytes": 2147483648,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H03",
+        "owner": "Persistent observer roots outside cloning plus scalar leaves",
+        "candidate_budget_bytes": 536870912,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H04",
+        "owner": "Cloned containers, memo/id keys and opaque sets",
+        "candidate_budget_bytes": 6442450944,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 23096917808804736,
+        "known_partial_unit": "model_requested_builtin_bytes",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H05",
+        "owner": "Traversal/generator/frame/traceback objects",
+        "candidate_budget_bytes": 134217728,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H06",
+        "owner": "Projection, digest and metadata-operation temporaries",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H07",
+        "owner": "JSON/Unicode codecs and decoded trees",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H08",
+        "owner": "Input Reader chunks and immutable phase data",
+        "candidate_budget_bytes": 536870912,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 532675582,
+        "known_partial_unit": "raw_input_byte_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H09",
+        "owner": "Event chunks, pending bodies and flush intermediates",
+        "candidate_budget_bytes": 201326592,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 134217728,
+        "known_partial_unit": "pending_bodies_plus_unique_chunk_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H10",
+        "owner": "Tee/StringIO, output text and raw parse",
+        "candidate_budget_bytes": 134217728,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 62914560,
+        "known_partial_unit": "one_Unicode_representation_plus_one_UTF8_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H11",
+        "owner": "Allocation domain/accounting",
+        "candidate_budget_bytes": 1073741824,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "allocator_overhead",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      }
+    ],
+    "requested_owner_budget_bytes": 10938744832,
+    "unassigned_requested_reserve_bytes": 872415232,
+    "requested_heap_candidate_bytes": 11811160064,
+    "allocator_overhead_candidate_bytes": 1073741824,
+    "committed_heap_candidate_bytes": 12884901888,
+    "reserve_rule": "832MiB is counted exactly once and cannot silently absorb unknown owners. Any allocation of reserve must be reviewed/documented without editing product quotas.",
+    "proof_rule": "All required owners receive verified byte/lifetime bounds; sum(requested owner bounds)+explicit reserve<=11GiB and allocator overhead<=1GiB, hence committed<=12GiB. Capacity attestation must separately demonstrate availability. No null bound treated as0.",
+    "complete_requested_upper_bytes": null,
+    "complete_committed_upper_bytes": null,
+    "host_total_capacity_bytes": null,
+    "all_owner_bounds_verified": false,
+    "capacity_attested": false
+  },
+  "time": {
+    "clock": "One pinned host monotonic clock domain; no CPU-time/wall-time substitution.",
+    "success_end_to_end_candidate_seconds": 900,
+    "phase_budgets": [
+      {
+        "id": "Tpre",
+        "start": "entry into launch(requested,root)",
+        "end": "successful RELEASE write and close complete",
+        "candidate_wall_seconds": 60,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      },
+      {
+        "id": "Tworker",
+        "start": "RELEASE write/close complete",
+        "end": "worker process exit",
+        "candidate_wall_seconds": 750,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      },
+      {
+        "id": "Tpost",
+        "start": "worker exit",
+        "end": "launch return after cleanup, after/finish, evidence validation and final context write",
+        "candidate_wall_seconds": 60,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      }
+    ],
+    "unassigned_wall_reserve_seconds": 30,
+    "worker_service_partition": {
+      "candidate_CPU_upper_seconds": 600,
+      "candidate_IO_child_wait_upper_seconds": 90,
+      "candidate_scheduler_and_blocking_upper_seconds": 60,
+      "CPU_upper_verified": false,
+      "IO_child_wait_upper_verified": false,
+      "scheduler_upper_verified": false,
+      "attribution": "Disjoint upper-bound categories or a conservative additive overcount. GC/native/codecs/destruction charged to CPU; child completion and IO to wait; dispatch/lock service to scheduler. Do not omit them or count their budgets as guarantees."
+    },
+    "CPU_proof_route": "UNSELECTED: exact-runtime/platform static WCET, or bounded whole-window work plus an attested lower service curve and bounded delays.",
+    "minimum_service_curve": {
+      "rate_unit": null,
+      "rate_lower_bound": null,
+      "latency_upper_seconds": null,
+      "evidence_pins": {},
+      "verified": false
+    },
+    "noncopy_work_upper": null,
+    "service_rule": "Using W/r is valid only with compatible work units and proven rate/latency. Required r=W/budget is a demand, never evidence of service. Every phase upper must fit its proposed budget, then60+750+60+30=900.",
+    "current_source_watchdog": {
+      "seconds": 900,
+      "scope": "Only process.wait in typed.wait_worker after RELEASE, not an end-to-end deadline.",
+      "unchanged": true,
+      "proves_successful_completion": false
+    },
+    "new_end_to_end_timer_installed": false,
+    "all_phase_bounds_verified": false,
+    "successful_completion_within900_verified": false
+  },
+  "required_evidence": [
+    {
+      "id": "E01",
+      "description": "Attested exact runtime/stdlib/native/allocator/kernel/service identities and binary/source correspondence.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E02",
+      "description": "Complete11-owner requested/committed heap proof and host capacity for this candidate budget, including nonclone memory.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E03",
+      "description": "Whole phase work/WCET including original code, metadata, projection, JSON/hash/sort, GC/destruction and native calls.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E04",
+      "description": "CPU service and scheduling/IO/child latency evidence for the same platform/clock/process set.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E05",
+      "description": "Source-bound proof that all60/750/60 phase upper bounds and explicit30 reserve justify success<=900; current wait timeout alone is insufficient.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E06",
+      "description": "Separately authorized component runtime evidence, resource certificate and exact CP07 admission/new authority; drafting this contract grants none.",
+      "status": "MISSING"
+    }
+  ],
+  "admission_rule": "Resource-contract attestation requires pinned evidence E01-E05 and all heap/time resource predicates true; it does not authorize execution. PJC115-R2/capture admission additionally requires E06, current source bindings and all independent existing gates. Until actual admission, preserve IMPLEMENTED_NOT_ADMITTED and DO_NOT_ISSUE_SOURCE_CAPACITY_VERIFIED.",
+  "historical_I125_no_contract_reply_preserved": true,
+  "contract_candidate_is_not_retroactive_I125_attestation": true,
+  "product_numeric_candidates": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 35651584,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 140513280,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 297799680,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 442305,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "product_numeric_candidates_applied": false,
+  "git_publication": {
+    "commit_and_push_all_changes_requested": true,
+    "publication_scope": "Repository source and documentary artifacts only; no product/capture/deployment admission.",
+    "historical_no_commit_records_are_as_of_their_increment": true
+  }
+}

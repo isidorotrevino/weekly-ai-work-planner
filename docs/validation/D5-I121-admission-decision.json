@@ -1,0 +1,136 @@
+{
+  "schema": "d5.i121-source-admission-decision.v1",
+  "increment": "I121",
+  "date": "2026-11-11",
+  "timezone": "Europe/Madrid",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "status": "NO_ADMITIR",
+  "decision_complete": true,
+  "source_revision": "I119-CANDIDATE-02",
+  "current_candidate_pins": {
+    "testing/prospective_capture_joint/capture.py": "43f9fea8b1b5260431297f12e4de3314a0fe2e1c2dd55dd0949c971914c69369",
+    "testing/prospective_capture_joint/worker.py": "8cbae0848113d3b9a827ee1876997e44cf63bc90c0b57d5d16902af091a0684b",
+    "testing/prospective_capture_joint/test_joint_capture.py": "c97818e960c20d42712dffb14e97393bce109dbf8ed808adbeb3c13b880dcc02",
+    "testing/prospective_capture_joint/run_joint_lab.py": "69fe20470a9e1c2727bf3378e46a0f51a385df860f94250159be6ab44ac1f408",
+    "testing/prospective_capture_joint/README.md": "d9a100bb342a45f80f1672e8f85866466a942d0c94e2bc00a2f84a9e0897d24c",
+    "docs/validation/D5-JOINT-CAPACITY-CONTRACT.json": "ef4bc76255f1b367f87d1fd3c28b7b5658c11a58edb7dee79e053f088ee3781d",
+    "docs/validation/D5-JOINT-CAPTURE-REGISTRY.json": "b2e15930be9045b9b30490ea9bd44968dace592207e35aeb48d8ab8692e79259",
+    "docs/validation/D5-JOINT-CAPACITY-CERTIFICATE.json": "b613493514241ab4160821ec6da83ab439fa3e253086fdb8166feeeca8c7488b",
+    "docs/validation/D5-JOINT-COMPONENTS-MANIFEST.json": "bab95261205c5f57da6ac53c667e82d80347e6ed57e55f49cdc8588989e2c867"
+  },
+  "I120_proposed_snapshot_pins": {
+    "docs/validation/D5-I120-candidate-bindings/D5-JOINT-CAPACITY-CONTRACT.json": "31136359a9e0839fa9f30f3b66f40ad7191b47b400a358c6ed0724ea64c7ef13",
+    "docs/validation/D5-I120-candidate-bindings/D5-JOINT-CAPTURE-REGISTRY.json": "8b9677ba9f0f8eaf8a0104c38d4c1f06b77921da975b7d124ab1d3511cc671e9",
+    "docs/validation/D5-I120-candidate-bindings/D5-JOINT-CAPACITY-CERTIFICATE.json": "afed6e56c78fa60cafe87ab9d8ff6abbcfa92bc110a764761bf0c1d5937ab47e",
+    "docs/validation/D5-I120-candidate-bindings/D5-JOINT-COMPONENTS-MANIFEST.json": "84cee3f50cf42bdf7384e9c163cb970ff914b1edfbf69a45ac819de793824c86"
+  },
+  "atomicity_review": {
+    "path": "docs/validation/D5-I121-atomicity-review.json",
+    "sha256": "adce1c0a90ba8e2999df60f025bbbd69a2711f803dd840999d87179b00e1a9e1"
+  },
+  "gates": [
+    {
+      "id": "A01",
+      "subject": "Current candidate bytes and source layout",
+      "result": "PINNED_CURRENT_BYTES",
+      "reason": "Five source files and four current metadata files exactly pinned; no substitute draft is silently applied."
+    },
+    {
+      "id": "A02",
+      "subject": "CP03",
+      "result": "SOURCE_RESOLVED_I120_CURRENT_BINDING_NOT_APPLIED",
+      "reason": "Standalone source proof179/179 closed; current certificate CP03=false; I120 replacement CP03=true is only a snapshot."
+    },
+    {
+      "id": "A03",
+      "subject": "Correlated30-site atomicity",
+      "result": "REJECTED_SOURCE_ORDER",
+      "reason": "Local scalar preflight and normalized group preflight cannot certify full correlated phases."
+    },
+    {
+      "id": "A04",
+      "subject": "CP07 proposed read budget",
+      "result": "I120_PROPOSAL_VERIFIED_UNCHANGED_NOT_NEW_ADMISSION",
+      "reason": "I120 exact replacement plan upper268387721, margin47735; I121 review documents are external consumers, not silently added runtime inputs."
+    },
+    {
+      "id": "A05",
+      "subject": "Capacity certificate",
+      "result": "BLOCKED_DRAFT_NOT_ADMITTED",
+      "reason": "Current and I120 proposed certificates are DRAFT_NOT_ADMITTED; correlated_atomicity_verified=false."
+    },
+    {
+      "id": "A06",
+      "subject": "New component evidence",
+      "result": "ABSENT_NOT_RUN",
+      "reason": "The manifest plans10 tests and supplies no current raw/review/seal PASS. I121 explicitly forbids execution; names, AST checks or paper witnesses cannot become PASS."
+    },
+    {
+      "id": "A07",
+      "subject": "New capture authority",
+      "result": "ABSENT",
+      "reason": "A new exact JOINT_EXPLICITLY_APPROVED authority is required. None is created or borrowed from historical invalid packets."
+    },
+    {
+      "id": "A08",
+      "subject": "Appending admission evidence to unchanged read plan",
+      "result": "NAIVE_APPEND_EXCEEDS_CAPACITY",
+      "reason": "Review whole body alone costs3*bytes, greater than47735 margin. Conditional growth bound; no actual current quota excess claimed."
+    }
+  ],
+  "absent_files": [
+    {
+      "path": "docs/validation/D5-JOINT-capture-authorization.json",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/validation/D5-JOINT-tests-raw.json",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/validation/D5-JOINT-results.json",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/validation/D5-JOINT-integrity.json",
+      "exists": false,
+      "sha256": null
+    }
+  ],
+  "current_capacity_status": "DRAFT_NOT_ADMITTED",
+  "I120_proposed_capacity_status": "DRAFT_NOT_ADMITTED",
+  "CP03_source_verified": true,
+  "correlated_atomicity_verified": false,
+  "CP07_actual_admission": false,
+  "proposal_enabled": false,
+  "capture_enabled": false,
+  "atomicity_repaired": false,
+  "review_documents_are_runtime_inputs": false,
+  "implementation_or_component_approval_requested": false,
+  "components_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "candidate_imported_or_compiled": false,
+  "active_quotas_changed": false,
+  "candidate_files_changed": false,
+  "authority_or_destination_created": false,
+  "historical_invalid_packets_reused": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY",
+  "closure": false,
+  "append_only_read_growth": {
+    "condition": "Only if this whole review is appended as one new runtime input to the I120 logical plan, all other bodies unchanged. Not actual current use.",
+    "new_document_bytes": 23939,
+    "additional_three_pass_bytes_lower": 71817,
+    "worker_read_lower": 268459538,
+    "input_read_limit": 268435456,
+    "over_limit_by_at_least": 24082,
+    "authority_and_binding_growth_omitted_makes_this_a_lower_bound": true,
+    "review_actually_added_to_runtime": false,
+    "quota_increase_proposed": false,
+    "required": "New exact source/representation/read proof; no silent reuse of47735-byte margin."
+  }
+}

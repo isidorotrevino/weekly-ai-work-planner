@@ -1,0 +1,1791 @@
+{
+  "schema": "d5.i111-global-event-bound-coverage-register.v1",
+  "increment": "I111",
+  "date": "2026-11-04",
+  "timezone": "Europe/Madrid",
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "authority": "USER_CONTINUE_GLOBAL_BOUNDS_AND_FUNCTIONAL_EVIDENCE_WORK",
+  "new_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "product_or_runner_imported": false,
+  "implementation_changed": false,
+  "quota_changed": false,
+  "functional_profile_created": false,
+  "future_capture_authority_or_destination_created": false,
+  "publication_authorized": false,
+  "status": "174_OF_321_ROOTS_BOUNDED_OTHER_RESOURCES_OPEN",
+  "rows": [
+    {
+      "criterion": "DF08",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF08",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF09",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF09",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF10",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF10",
+      "event_upper": 1173,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 875,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF12",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF12",
+      "event_upper": 1245,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 803,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF11",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF11",
+      "event_upper": 1317,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 731,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF13",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF13",
+      "event_upper": 304,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1744,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DF13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR14",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR14",
+      "event_upper": 179,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1869,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR14",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR24",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR24",
+      "event_upper": 523,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1525,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR27",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR27",
+      "event_upper": 1694,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 354,
+      "evidence": "docs/validation/D5-I102-controlled-failure-event-bounds.json#/new_test_models/DR27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR23",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR23",
+      "event_upper": 1951,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 97,
+      "evidence": "docs/validation/D5-I101-DR23-event-bound.json",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF44",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF44",
+      "event_upper": 1474,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 574,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DF44",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR37",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR37",
+      "event_upper": 1549,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 499,
+      "evidence": "docs/validation/D5-I103-budget-test-event-bounds.json#/new_test_models/DR37",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF21",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF21",
+      "event_upper": 116,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1932,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF21",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF22",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF22",
+      "event_upper": 119,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1929,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF22",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF23",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF23",
+      "event_upper": 121,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1927,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF23",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF24",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF24",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF24",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF25",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF25",
+      "event_upper": 103,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1945,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF25",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF26",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF26",
+      "event_upper": 815,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1233,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF26",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF27",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF27",
+      "event_upper": 160,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1888,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF27",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF28",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF28",
+      "event_upper": 146,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1902,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF28",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF37",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF37",
+      "event_upper": 96,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1952,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF37",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF38",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF38",
+      "event_upper": 77,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1971,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF38",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF39",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF39",
+      "event_upper": 115,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1933,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF39",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF40",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF40",
+      "event_upper": 105,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1943,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DF40",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR25",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR25",
+      "event_upper": 100,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1948,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR25",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR26",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR26",
+      "event_upper": 123,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1925,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR26",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR28",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR28",
+      "event_upper": 183,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1865,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR28",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR29",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR29",
+      "event_upper": 731,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1317,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR29",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR30",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR30",
+      "event_upper": 319,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1729,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR30",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR31",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR31",
+      "event_upper": 54,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1994,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR31",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR32",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR32",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR32",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR33",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR33",
+      "event_upper": 141,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1907,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR33",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR38",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR38",
+      "event_upper": 99,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1949,
+      "evidence": "docs/validation/D5-I104-parental-protocol-event-bounds.json#/new_test_models/DR38",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF01",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF01",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF01",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF41",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF41",
+      "event_upper": 109,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1939,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF41",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF42",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF42",
+      "event_upper": 91,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1957,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF42",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF43",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF43",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF43",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF45",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF45",
+      "event_upper": 249,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1799,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF45",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF47",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF47",
+      "event_upper": 101,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1947,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF47",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF48",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF48",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I105-history-cleanup-event-bounds.json#/new_test_models/DF48",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF46",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF46",
+      "event_upper": 256,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1792,
+      "evidence": "docs/validation/D5-I106-historical-comparison-event-bounds.json#/new_test_models/DF46",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR36",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR36",
+      "event_upper": 560,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1488,
+      "evidence": "docs/validation/D5-I106-historical-comparison-event-bounds.json#/new_test_models/DR36",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR03",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR03",
+      "event_upper": 16,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2032,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR03",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR04",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR04",
+      "event_upper": 61,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1987,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR04",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR05",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR05",
+      "event_upper": 54,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1994,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR05",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR06",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR06",
+      "event_upper": 126,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1922,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR06",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR07",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR07",
+      "event_upper": 185,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1863,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR07",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR08",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR08",
+      "event_upper": 101,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1947,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR08",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR09",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR09",
+      "event_upper": 127,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1921,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR09",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR10",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR10",
+      "event_upper": 155,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1893,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR10",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR11",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR11",
+      "event_upper": 210,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1838,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR11",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR12",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR12",
+      "event_upper": 267,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1781,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR12",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR13",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR13",
+      "event_upper": 90,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1958,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR13",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR15",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR15",
+      "event_upper": 108,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1940,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR15",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR16",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR16",
+      "event_upper": 55,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1993,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR16",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR17",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR17",
+      "event_upper": 63,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1985,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR17",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR18",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR18",
+      "event_upper": 110,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1938,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR18",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR19",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR19",
+      "event_upper": 294,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1754,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR19",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR20",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR20",
+      "event_upper": 365,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1683,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR20",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR21",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR21",
+      "event_upper": 100,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1948,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR21",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR22",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR22",
+      "event_upper": 123,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1925,
+      "evidence": "docs/validation/D5-I107-relational-transition-event-bounds.json#/new_test_models/DR22",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF02",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF02",
+      "event_upper": 191,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1857,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF02",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF03",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF03",
+      "event_upper": 31,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2017,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF03",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF04",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF04",
+      "event_upper": 97,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1951,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF04",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF05",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF05",
+      "event_upper": 60,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1988,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF05",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF06",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF06",
+      "event_upper": 91,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1957,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF06",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF07",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF07",
+      "event_upper": 18,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2030,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF07",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF14",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF14",
+      "event_upper": 78,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1970,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF14",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF15",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF15",
+      "event_upper": 181,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1867,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF15",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF16",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF16",
+      "event_upper": 112,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1936,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF16",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF17",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF17",
+      "event_upper": 382,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1666,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF17",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF18",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF18",
+      "event_upper": 382,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1666,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF18",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF19",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF19",
+      "event_upper": 355,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1693,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF19",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF20",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF20",
+      "event_upper": 872,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1176,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF20",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF29",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF29",
+      "event_upper": 261,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1787,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF29",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF30",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF30",
+      "event_upper": 349,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1699,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF30",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF31",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF31",
+      "event_upper": 93,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1955,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF31",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF32",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF32",
+      "event_upper": 429,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1619,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF32",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF33",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF33",
+      "event_upper": 493,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1555,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF33",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF34",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF34",
+      "event_upper": 106,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1942,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF34",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF35",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF35",
+      "event_upper": 211,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1837,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF35",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DF36",
+      "test_id": "test_durable_integration.DurableIntegrationTest.test_DF36",
+      "event_upper": 159,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1889,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DF36",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR01",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR01",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR01",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR02",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR02",
+      "event_upper": 263,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1785,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR02",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR34",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR34",
+      "event_upper": 203,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1845,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR34",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR35",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR35",
+      "event_upper": 373,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1675,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR35",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR39",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR39",
+      "event_upper": 99,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1949,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR39",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "DR40",
+      "test_id": "test_durable_relational.DurableRelationalTest.test_DR40",
+      "event_upper": 83,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 1965,
+      "evidence": "docs/validation/D5-I108-final-T-R-event-bounds.json#/new_test_models/DR40",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+      "test_id": "test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+      "event_upper": 10,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2038,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_exact_snapshot_crlf_and_provenance",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+      "test_id": "test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_code_fences_and_quotes_do_not_propose_work",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+      "test_id": "test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_source_mutation_during_read_is_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+      "test_id": "test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_table_status_and_links_remain_uninterpreted",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+      "test_id": "test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_unclosed_fence_is_diagnostic",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "test_id": "test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_repeated_observation_and_save_are_idempotent",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+      "test_id": "test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_new_bytes_change_revision_evidence_and_candidate_id",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "test_id": "test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_new_revision_label_preserves_bytes_without_overwriting_observation",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+      "test_id": "test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+      "event_upper": 4,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2044,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_project_identity_is_not_derived_from_filename",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+      "test_id": "test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+      "event_upper": 21,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2027,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_traversal_absolute_and_empty_components_are_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+      "test_id": "test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_file_parent_and_root_symlinks_are_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+      "test_id": "test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_hard_link_and_fifo_are_rejected_without_blocking",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+      "test_id": "test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_invalid_utf8_nul_and_oversized_sources_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+      "test_id": "test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+      "event_upper": 15,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2033,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_many_lines_large_line_and_many_candidates_are_bounded",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+      "test_id": "test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+      "event_upper": 16,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2032,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_invalid_identity_revision_and_non_markdown_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+      "test_id": "test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_existing_tampered_or_symlink_artifact_is_not_overwritten",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+      "test_id": "test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_local_preview.LocalPreviewTest.test_untrusted_commands_remain_inert_text",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+      "test_id": "test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_postgres_adapter.AdapterBoundary.test_forged_semantics_never_reach_sql",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+      "test_id": "test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_postgres_adapter.AdapterBoundary.test_request_scope_never_overrides_verified_artifact",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+      "test_id": "test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_postgres_adapter.AdapterBoundary.test_file_reconstruction_and_transport_safe_encoding",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert",
+      "test_id": "test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert",
+      "event_upper": 13,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2035,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_review_report.ReportBoundary.test_whole_rows_and_absence_are_inert",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+      "test_id": "test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_review_report.ReportBoundary.test_annotation_change_is_whole_row_and_movement_not_new_proposal",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+      "test_id": "test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_review_report.ReportBoundary.test_strict_block_stays_blocked",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+      "test_id": "test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I109-unit-boundary-event-bounds.json#/new_test_models/test_review_report.ReportBoundary.test_forged_bytes_or_observation_identity_fail",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_escaped_pipes_and_struck_row_preserve_raw_fields",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_duplicate_id_across_tables_blocks_all_comparison_and_retains_rows",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_unescaped_pipe_including_code_is_ambiguous_and_blocks",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+      "event_upper": 13,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2035,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_bad_header_separator_missing_final_pipe_and_invalid_id_block",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_unknown_keyed_table_and_indented_or_html_input_blocks",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_fenced_table_never_becomes_candidates_and_other_tables_are_diagnostic",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+      "event_upper": 13,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2035,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_difference_reports_change_move_addition_and_absence_without_deletion",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_same_bytes_new_label_and_exact_repeat_are_unchanged",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_empty_recognized_register_is_absence_but_no_register_blocks",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_project_document_and_profile_are_explicit_compatibility_boundaries",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+      "event_upper": 15,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2033,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_forged_fields_eligibility_and_snapshot_claims_fail_reconstruction",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_register_row_limit_rejects_instead_of_truncating",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_forged_eligibility_cannot_unblock_duplicate_source_keys",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_filename_hash_extra_duplicate_json_keys_and_symlink_fail",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_reused_caller_label_is_diagnostic_not_revision_order",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+      "test_id": "test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_comparison.RegisterComparisonTest.test_cli_valid_and_blocked_exit_codes_save_reviewable_reports",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_blank_continuation_requires_same_header_and_keeps_all_rows",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_narrative_heading_fence_or_unknown_table_cannot_reuse_header",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+      "event_upper": 4,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2044,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_blank_between_header_and_separator_is_still_invalid",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_exact_annotation_text_and_unicode_positions_preserve_crlf",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+      "event_upper": 15,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2033,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_annotation_added_changed_and_removed_are_field_changes",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_annotation_moved_without_text_change_is_not_a_field_change",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+      "event_upper": 15,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2033,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_extra_unescaped_pipe_and_duplicate_still_block_whole_comparison",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_escaped_annotation_pipe_is_raw_text_not_an_extra_column",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_strict_profile_and_cross_profile_boundary_are_preserved",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+      "event_upper": 15,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2033,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_forged_annotation_text_position_and_metadata_are_rejected",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+      "test_id": "test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I110-register-comparison-event-bounds.json#/new_test_models/test_register_compat.RegisterCompatibilityTest.test_annotation_claims_and_commands_cannot_activate_or_complete_work",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI01_exact_bytes_fields_and_existing_profile_reconstruction",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI01_unknown_profile_retains_bytes_but_cannot_be_reviewed",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI01_compatibility_remains_opt_in_and_annotations_stay_raw",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI02_duplicate_and_ambiguous_rows_block_whole_source",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+      "event_upper": 10,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2038,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI03_checklist_moves_and_duplicates_never_become_stable_tasks",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI05_source_instructions_never_select_routes_or_execute",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI10_drive_changes_even_without_version_bump_block_capture",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+      "event_upper": 10,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2038,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI10_doc_export_keeps_observed_grade_and_requires_acknowledgment",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI10_pdf_docx_and_wrong_export_mime_do_not_become_text_profiles",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI13_explicit_binding_projection_preserves_foreign_fields_and_D2_state",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+      "event_upper": 16,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2032,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI13_no_name_adoption_wrong_scope_or_real_instance",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI14_missing_atomic_capability_blocks_even_after_approval",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+      "event_upper": 11,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2037,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI14_remote_edit_before_or_during_atomic_check_is_never_overwritten",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI14_unrelated_remote_edit_is_preserved",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+      "event_upper": 22,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2026,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI19_unknown_stale_zero_and_invalid_quota_never_grant_work",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+      "event_upper": 6,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2042,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI19_quota_observation_is_not_consumption_or_cross_scope_capacity",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+      "event_upper": 19,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2029,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI21_provider_permission_capability_fail_without_paid_fallback",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+      "event_upper": 23,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2025,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI23_closed_envelopes_reject_credentials_duplicates_nan_and_modes",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI23_receipts_and_errors_do_not_echo_source_text",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI25_narrative_does_not_infer_requirements_epics_or_dependencies",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+      "event_upper": 14,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2034,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI26_typed_fixture_preserves_epic_extra_text_as_evidence_only",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI26_explicit_uuid_binding_does_not_adopt_by_title",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI27_source_accept_is_not_effect_or_projection_accept",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI27_source_claims_never_choose_initial_workflow",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI27_review_versions_reject_reaccept_pins_and_mutable_artifact_copies",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+      "event_upper": 9,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2039,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI31_all_global_gaps_have_explicit_model_and_pending_statuses",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI32_publication_contract_approval_and_global_acceptance_are_not_review_stages",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI35_real_pending_work_is_not_displaced_into_D6",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+      "event_upper": 12,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2036,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI37_end_to_end_and_replay_never_restore_a_remote_edit",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI37_supported_workflow_makes_no_files_processes_or_network_calls",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI01_internal_capture_tampering_is_detected_before_review",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+      "event_upper": 8,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2040,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI26_fixture_duplicates_and_invalid_ids_are_blocked",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+      "event_upper": 5,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2043,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI14_unknown_capability_cannot_be_truthy_authorization",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+      "event_upper": 7,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2041,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI27_local_advance_invalidates_old_projection",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    },
+    {
+      "criterion": "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+      "test_id": "test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+      "event_upper": 10,
+      "event_test_limit": 2048,
+      "source_arithmetic_difference": 2038,
+      "evidence": "docs/validation/D5-I111-offline-model-event-bounds.json#/new_test_models/test_offline_integration.OfflineIntegrationTest.test_GI41_reports_distinguish_model_coverage_from_real_or_executed_tests",
+      "runtime_result": "NOT_RUN_SOURCE_REVIEW_ONLY"
+    }
+  ],
+  "covered_test_count": 174,
+  "covered_174_root_event_subtotal_upper": 28471,
+  "remaining_test_ids": [
+    "test_incremental_capture.IncrementalCaptureTest.test_DI01_scope_genesis_identity_and_no_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI02_anchor_before_inventory_and_observed_new_revision",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI03_inventory_pages_preserve_anchor_until_explicit_end",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI04_feed_continuation_and_terminal_are_separate",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI05_duplicate_observations_keep_occurrences_not_duplicate_identity",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI06_empty_pages_and_empty_poll_with_same_terminal_token",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI07_fresh_process_recovers_state_from_disk",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_bytes_diagnostics_receipt_and_cursor_share_one_commit",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI08_docs_export_grade_survives_filesystem_recovery_without_reference",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI09_transient_late_event_never_commits_a_prefix",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI10_kill_before_object_does_not_authorize_partial_temporary",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI11_kill_after_object_preserves_old_head_and_ignores_orphan",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI12_kill_after_head_recovers_receipt_without_reapplying",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_before_replace_or_uncertain_fsync_recovers_whole_state",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI13_recovery_must_sync_visible_head_before_confirming_receipt",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI14_two_writers_cas_and_command_content_conflict",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI15_outside_allowlist_keeps_terminal_diagnostic_only",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI16_unsupported_formats_and_size_limit_not_silent_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI17_removal_and_file_access_loss_are_not_D2_absence_application",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI18_global_auth_error_cannot_be_diagnosed_as_file_skip",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI19_later_accessible_file_does_not_erase_terminal_history",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI20_ambiguous_or_invalid_encoding_bytes_are_captured_blocked",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI21_changed_source_scope_error_and_caller_terminal_override_block",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI22_scope_changes_need_a_new_root",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI23_malformed_pages_and_json_duplicate_keys_never_advance",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI24_limits_reject_whole_page_and_history_without_truncation",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI25_opaque_tokens_and_continuation_cycles",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI26_corruption_blocks_without_selecting_orphans_or_repairing",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI27_root_and_file_links_wrong_marks_and_other_roots_are_rejected",
+    "test_incremental_capture.IncrementalCaptureTest.test_DI28_cleanup_finally_owns_only_created_root_and_preserves_sentinels",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC01_stable_key_across_payload_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC02_binding_uniqueness_and_remote_destination_uniqueness",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC03_reviewed_create_has_one_exact_effect_and_sanitized_receipt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC04_lost_creation_response_blocks_another_package_and_command",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC05_exact_query_recovers_creation_without_send",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC06_eventual_zero_never_authorizes_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC07_strong_zero_with_inflight_ticket_stays_unknown",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_later_remote_edit_cannot_clear_prior_identity_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC08_multiple_and_foreign_results_are_sticky_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC09_fixture_unique_key_same_payload_recovers_other_payload_conflicts",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_fixture_creation_uniqueness_is_atomic_under_two_threads",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_query_during_inflight_send_recovers_after_publish_CAS_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC10_two_local_senders_and_two_query_publishers_compete",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC11_unproven_match_and_proven_historical_edit_differ",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC12_local_change_before_send_invalidates_approval",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC13_review_revocation_and_replacement_require_exact_version",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC14_binding_policy_and_capability_changes_invalidate_manifest",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_contradictory_negative_cannot_replace_confirmed_effect",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_invalid_query_proof_or_body_never_confirms",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC15_mutation_hash_and_command_request_conflict",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC16_local_edit_during_send_preserves_actual_effect_as_stale",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC17_revocation_during_lost_response_allows_only_historical_read",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC18_confirmed_historical_effect_does_not_become_current",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC19_replay_never_restores_old_text",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_domain_lock_is_released_during_provider_callback",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC20_query_callback_can_edit_domain_outside_lock",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC21_new_reviewed_update_keeps_created_identity_and_foreign_fields",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC22_precondition_detects_before_during_and_ABA_remote_edits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC23_timeout_malformed_and_local_ack_remain_unknown_and_sanitized",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_unknown_update_blocks_newer_reviewed_update",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC24_update_lost_response_then_remote_edit_recovers_without_patch",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC25_conclusive_rejection_is_not_an_effect_or_automatic_retry",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC26_429_requires_no_effect_and_logical_retry_tick",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC27_invalid_retry_delay_budget_and_stale_state_block",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC28_explicit_retry_keeps_key_payload_and_history_new_attempt",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC29_query_budget_and_missing_confirmed_destination_do_not_recreate",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC30_no_memory_restart_or_missing_capability_authority",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_actual_utf8_manifest_byte_limit_blocks_without_truncation",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_binding_and_command_budget_are_not_truncated",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC31_closed_schemas_types_text_and_manifest_limits",
+    "test_plane_reconciliation.PlaneReconciliationTest.test_PC32_summary_has_no_operational_authority_or_real_effects",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ01_same_bytes_new_profile_have_distinct_capture_preview_and_manifest",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ02_extraction_policy_change_requires_new_review_even_if_text_equal",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ03_unknown_descriptor_or_decoder_retains_bytes_without_execution",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ04_mapping_namespace_is_immutable_and_not_reused",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ05_profile_revocation_and_ABA_never_restore_old_generation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ06_exact_source_review_and_unstable_checklist_remain_separate",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ07_historical_capture_replay_does_not_restore_profile",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ08_all_dimensions_and_windows_evaluated_without_summing",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ09_other_accounts_and_providers_cannot_supply_missing_constraints",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ10_duplicate_resource_or_physical_account_cannot_multiply_capacity",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ11_missing_required_window_blocks_and_no_caller_subset_is_accepted",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ12_duplicate_constraints_units_and_invalid_costs_do_not_convert",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ13_zero_unknown_unlimited_and_revoked_have_distinct_blocking_reasons",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ14_future_observation_or_window_does_not_supply_current_capacity",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ15_half_open_bounds_and_required_horizon_are_revalidated",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ16_rollover_and_fact_replay_never_add_balance_or_reselect",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ17_concurrent_positive_readers_do_not_consume_or_reserve",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ18_source_instructions_cannot_change_binding_policy_or_fallback",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ19_manifest_fixes_adapter_observation_hashes_and_own_review",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ20_identical_new_observation_id_stales_old_package",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ21_adapter_permission_capability_and_online_changes_invalidate",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ22_other_adapter_release_and_incomplete_observation_block",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ23_later_timestamp_does_not_win_without_selection",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ24_restore_old_values_after_revocation_does_not_revive_approval",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ25_review_and_receipt_do_not_modify_facts_or_manifest_hash",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_fact_change_between_read_and_CAS_has_no_positive_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ26_profile_or_policy_change_before_confirmation_is_stale",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ27_replacement_acceptance_is_not_the_old_review",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ27_review_revocation_during_validation_detected",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ28_time_change_without_fact_generation_blocks_at_confirmation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ29_lost_response_recovers_only_a_historical_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ29_replay_is_historical_after_expiration_and_new_command_revalidates",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ30_command_reuse_with_new_request_conflicts",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ31_closed_shapes_invalid_types_and_no_raw_text_in_public_receipt",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ32_constraint_source_manifest_and_label_limits_without_truncation",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ32_full_count_limits_and_replay_at_receipt_limit",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ33_new_memory_has_no_prior_reviews_receipts_or_authority",
+    "test_profiles_quotas.ProfilesQuotasTest.test_PQ34_summary_and_owned_threads_have_no_operational_effects",
+    "test_relational_batch.RelationalBatchTest.test_RB01_exact_bytes_hash_localizers_and_explicit_targets",
+    "test_relational_batch.RelationalBatchTest.test_RB02_forward_references_and_existing_readonly_endpoints",
+    "test_relational_batch.RelationalBatchTest.test_RB03_missing_unmapped_or_mismatched_reference_blocks_all",
+    "test_relational_batch.RelationalBatchTest.test_RB04_invalid_preexisting_graph_is_not_ignored_outside_package",
+    "test_relational_batch.RelationalBatchTest.test_RB04_reference_type_and_project_rejected",
+    "test_relational_batch.RelationalBatchTest.test_RB05_epic_requirement_set_additions_deduplicate_and_preserve_evidence",
+    "test_relational_batch.RelationalBatchTest.test_RB06_task_epic_assignment_noop_and_reassignment_block",
+    "test_relational_batch.RelationalBatchTest.test_RB07_self_loop_rejected_for_all_kinds",
+    "test_relational_batch.RelationalBatchTest.test_RB08_kinds_preserved_exact_duplicates_no_kind_replacement",
+    "test_relational_batch.RelationalBatchTest.test_RB09_cycle_from_multiple_new_edges_has_no_partial_effects",
+    "test_relational_batch.RelationalBatchTest.test_RB10_cycle_through_preexisting_path_is_blocked",
+    "test_relational_batch.RelationalBatchTest.test_RB11_soft_cycles_do_not_become_hard_cycles",
+    "test_relational_batch.RelationalBatchTest.test_RB12_absent_entities_and_relationships_are_retained",
+    "test_relational_batch.RelationalBatchTest.test_RB13_mixed_create_update_and_links_publish_together",
+    "test_relational_batch.RelationalBatchTest.test_RB14_mapping_uuid_key_and_type_conflicts_leave_data_unchanged",
+    "test_relational_batch.RelationalBatchTest.test_RB15_late_invalid_relationship_does_not_publish_valid_prefix",
+    "test_relational_batch.RelationalBatchTest.test_RB16_preexisting_local_changes_never_become_source_base",
+    "test_relational_batch.RelationalBatchTest.test_RB17_postprepare_managed_and_foreign_change_blocks_entire_commit",
+    "test_relational_batch.RelationalBatchTest.test_RB18_ABA_and_readonly_endpoint_change_invalidate_ticket",
+    "test_relational_batch.RelationalBatchTest.test_RB19_state_and_related_task_work_flags_block_without_operations",
+    "test_relational_batch.RelationalBatchTest.test_RB20_review_changed_after_candidate_build_is_rechecked",
+    "test_relational_batch.RelationalBatchTest.test_RB20_source_and_batch_replacements_invalidate_old_tickets",
+    "test_relational_batch.RelationalBatchTest.test_RB21_approval_preserves_manifest_and_data_generation",
+    "test_relational_batch.RelationalBatchTest.test_RB22_source_manifest_and_request_tampering_blocks",
+    "test_relational_batch.RelationalBatchTest.test_RB23_two_approved_candidates_compete_at_publication",
+    "test_relational_batch.RelationalBatchTest.test_RB24_failure_before_publication_has_no_effect_or_receipt",
+    "test_relational_batch.RelationalBatchTest.test_RB25_lost_response_recovers_receipt_without_duplicate_apply",
+    "test_relational_batch.RelationalBatchTest.test_RB26_historical_replay_does_not_rewind_newer_head",
+    "test_relational_batch.RelationalBatchTest.test_RB27_text_and_epic_change_increment_entity_once",
+    "test_relational_batch.RelationalBatchTest.test_RB28_noop_preserves_row_version_and_adds_evidence_once",
+    "test_relational_batch.RelationalBatchTest.test_RB29_claims_and_epic_description_are_evidence_only",
+    "test_relational_batch.RelationalBatchTest.test_RB30_closed_json_shapes_ids_types_and_duplicates",
+    "test_relational_batch.RelationalBatchTest.test_RB31_actual_manifest_UTF8_byte_budget_not_truncated",
+    "test_relational_batch.RelationalBatchTest.test_RB31_source_element_declaration_and_text_limits_block_closed",
+    "test_relational_batch.RelationalBatchTest.test_RB32_command_limit_does_not_prevent_confirmed_replay",
+    "test_relational_batch.RelationalBatchTest.test_RB32_entity_and_relationship_limits_exercised_at_full_budget",
+    "test_relational_batch.RelationalBatchTest.test_RB33_independent_memory_has_no_receipts_or_inherited_authority",
+    "test_relational_batch.RelationalBatchTest.test_RB34_summary_has_no_operational_authority_or_live_owned_threads"
+  ],
+  "remaining_group_counts": {
+    "test_incremental_capture": 30,
+    "test_plane_reconciliation": 41,
+    "test_profiles_quotas": 38,
+    "test_relational_batch": 38
+  },
+  "runner_post_suite_event_upper": 0,
+  "global_composition": "E_global <= 28471 + U_remaining147 + U_discovery_and_recorder_finalization + 0_runner_post_suite",
+  "events_campaign_limit": 131072,
+  "conditional_remaining_allowance": 102601,
+  "remaining_allowance_is_not_admission": true,
+  "global_event_upper": null,
+  "global_root_frame_source_upper": 321,
+  "root_frame_limit": 4096,
+  "frame_upper_is_not_context_or_reference_upper": true,
+  "remaining": [
+    "Acotar147 tests de4 familias y discovery/finalización.",
+    "Referencias globales R>=19037>16384(I97): falta cota superior y contrato nuevo justificado.",
+    "Operandos/bytes de filas/eventos/tablas/páginas y24 cuotas/Reader en conjunto.",
+    "Decisiones posteriores concretas de contrato/perfil/implementación/componentes/captura; IR03/suficiencia global/publicación separadas."
+  ],
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "closure": false,
+  "real_providers": false,
+  "credentials": false,
+  "consumption": false,
+  "reservations": false,
+  "activation": false,
+  "promotion": false,
+  "deployment": false,
+  "D6": false
+}

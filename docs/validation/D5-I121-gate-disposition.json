@@ -1,0 +1,71 @@
+{
+  "base_commit": "50c49678568bae2abeefbe5fec0285f26c628283",
+  "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL",
+  "remaining_partial_parts": [
+    "UI04.1"
+  ],
+  "D1_D4_closed_unchanged": true,
+  "local_I1_I20_A52_accepted_unchanged": true,
+  "D5_closed": false,
+  "H07_closed": false,
+  "global_gaps_open": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07"
+  ],
+  "GI_globals_open": [
+    "GI33",
+    "GI34",
+    "GI38",
+    "GI39",
+    "GI40"
+  ],
+  "global_review": "OPEN",
+  "historical_invalid_packets": [
+    "I86",
+    "I89",
+    "I92"
+  ],
+  "historical_invalid_packets_resumed_or_combined": false,
+  "IR03": "NOT_READY",
+  "closure": false,
+  "commit_or_push": false,
+  "schema": "d5.i121-atomicity-admission-disposition.v1",
+  "increment": "I121",
+  "date": "2026-11-11",
+  "timezone": "Europe/Madrid",
+  "authority": "USER_I121_SOURCE_ONLY_NO_PRODUCT_COMPONENTS_QUOTAS_COMMIT_PUSH",
+  "status": "SOURCE_REVIEW_COMPLETE_REJECTED_ATOMICITY_NO_ADMISSION",
+  "requested_positive_objective_achieved": false,
+  "logical_sites_reviewed": 30,
+  "abstract_counterexamples": 12,
+  "actual_trace_or_functional_failure_claimed": false,
+  "atomicity_verified": false,
+  "atomicity_repaired": false,
+  "repair_protocol_specified": true,
+  "integrated_repair_source_created": false,
+  "admission_decision": "NO_ADMITIR",
+  "admission_decision_complete": true,
+  "CP03_global_source_resolved_preserved": true,
+  "CP07_actual_admission": false,
+  "capacity_certificate_status": "DRAFT_NOT_ADMITTED",
+  "proposal_enabled": false,
+  "capture_enabled": false,
+  "product_or_runner_imported": false,
+  "candidate_imported_or_compiled": false,
+  "component_tests_executed": 0,
+  "functional_campaigns_executed": 0,
+  "active_quotas_changed": false,
+  "candidate_files_changed": false,
+  "prior_files_preserved": 70,
+  "authority_or_destination_created": false,
+  "remaining_work": [
+    "Implement the integrated pure-plan/full-reservation/atomic-publication phases across all30 logical sites, keeping originals and I/O outside the ledger lock; source audit is rejection, not an implemented repair.",
+    "Recompute exact reference/row/Reader plans for corrected sources. Adding this whole report naively exceeds the I120 read allowance; no quota increase is proposed.",
+    "New component results and exact authority cannot be supplied by I121 because execution is explicitly excluded. Preserve their absence, never turn documentary PASS into component PASS."
+  ]
+}
