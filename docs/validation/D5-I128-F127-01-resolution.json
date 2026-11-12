@@ -1,0 +1,374 @@
+{
+  "schema": "d5.i128-f127-01-resolution-review.v1",
+  "increment": "I128",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "918d40229d8b35f5af40feda6419754dcc0fba34",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract": {
+    "path": "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "id": "PFC126-CANDIDATE-02"
+  },
+  "predecessor": {
+    "contract_id": "PFC126-CANDIDATE-01",
+    "path": "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "bytes_preserved": true,
+    "revision": 2
+  },
+  "input_pins": {
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc"
+  },
+  "status": "F127_01_RESOLVED_IN_CANDIDATE_NOT_RESOURCE_ADMISSION",
+  "finding": "F127-01",
+  "resolution": "Normative marker replacement, not source instrumentation or runtime proof.",
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": null,
+      "occurrence": 0,
+      "line": 103,
+      "column": 0,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.subprocess.Popen(cmd, cwd=root, stdin=c.subprocess.DEVNULL, stdout=rawfd, stderr=c.subprocess.DEVNULL, pass_fds=(sidefd, ready_write, release_read, directory), start_new_session=True, env=dict(PATH=os.defpath, LANG='C.UTF-8', LC_ALL='C.UTF-8', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONIOENCODING='utf-8'))",
+      "occurrence": 0,
+      "line": 120,
+      "column": 16,
+      "end_line": 120,
+      "AST_sha256": "cd3a0f1942ab10b0df49950c6a0ffcfd2585e6dab9e9bdb3c6a67788f368f477"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.write_json_fd(release_write, dict(event='RELEASE', lease=owner.nonce), 4096)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 8,
+      "end_line": 123,
+      "AST_sha256": "256805b2097989f12397da64b9ffaac0cc175d5572db83a2c502130dc6516945"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "os.close(release_write)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 115,
+      "end_line": 123,
+      "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "wait_worker(process)",
+      "occurrence": 0,
+      "line": 124,
+      "column": 15,
+      "end_line": 124,
+      "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "inputs.joint_plan.after()",
+      "occurrence": 0,
+      "line": 126,
+      "column": 8,
+      "end_line": 126,
+      "AST_sha256": "aa3ef80189ac3b6202a1a25fbb322a301f992c8ec517be77de344a5617fafcc4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.finish()",
+      "occurrence": 0,
+      "line": 141,
+      "column": 8,
+      "end_line": 141,
+      "AST_sha256": "6a2785fb553093960b4c6d012c144e3591374234265800d6efd8e78c323b4767"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(launchfd, b)",
+      "occurrence": 0,
+      "line": 175,
+      "column": 12,
+      "end_line": 175,
+      "AST_sha256": "1813da4489505ff58dcf2455248d4be820cfaf37b57d153bf088f8feb13ddeec"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": null,
+      "occurrence": 0,
+      "line": 63,
+      "column": 0,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "expression": null,
+      "occurrence": 0,
+      "line": 35,
+      "column": 0,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "expression": null,
+      "occurrence": 0,
+      "line": 540,
+      "column": 0,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    }
+  ],
+  "marker_defs": [
+    {
+      "id": "t0",
+      "event": "Coordinator enters launch, before its first statement",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "kind": "FUNCTION_INVOCATION_ENTRY_NOT_DEFINITION_EXECUTION",
+        "line": 103,
+        "column": 0,
+        "end_line": 177,
+        "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tR",
+      "event": "Coordinator os.close(release_write) returned normally after complete RELEASE/newline write",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "os.close(release_write)",
+        "occurrence": 0,
+        "line": 123,
+        "column": 115,
+        "end_line": 123,
+        "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f",
+        "kind": "SUCCESSFUL_CALL_RETURN"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tW",
+      "event": "The unique coordinator wait_worker(process) call returned the exact value True; timestamp belongs to this call return",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "wait_worker(process)",
+        "occurrence": 0,
+        "line": 124,
+        "column": 15,
+        "end_line": 124,
+        "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9",
+        "kind": "CALL_RETURN_EXACT_TRUE"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tF",
+      "event": "Coordinator launch returns normally after finally and final writes/closes; eligibility is independently validated",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "kind": "NORMAL_RETURN_AFTER_FINALLY",
+        "line": 177,
+        "column": 4,
+        "end_line": 177,
+        "AST_sha256": "6b8b737bd5a5519d6c0a88b02575f3b74a7ee86acdc49db3ee8d5559c44a46f8"
+      },
+      "clock_value": null
+    }
+  ],
+  "source_order_argument": [
+    "Normal launch entry precedes its RELEASE write/newline/close.",
+    "The unique wait_worker call is after successful close, and its own completion is the tW event; qualifying result is exact True.",
+    "typed.wait_worker returnsTrue only after process.wait completes; timeout returnsFalse. True does not by itself require exitcode0.",
+    "The caller continues cleanup, input/evidence validation and finally writes/closes before normal launch return tF.",
+    "With the contract monotonic parent clock, these source events define t0<=tR<=tW<=tF for qualified paths, independent of physical worker exit timing."
+  ],
+  "formal_partition": {
+    "markers": [
+      "t0",
+      "tR",
+      "tW",
+      "tF"
+    ],
+    "intervals": [
+      "Tpre=tR-t0",
+      "Tworker=tW-tR",
+      "Tpost=tF-tW"
+    ],
+    "ordered_nonnegative_definition_resolved": true,
+    "identity": "(tR-t0)+(tW-tR)+(tF-tW)=tF-t0",
+    "phase_budgets_seconds": [
+      60,
+      750,
+      60
+    ],
+    "reserve_seconds": 30,
+    "sum_seconds": 900,
+    "verified_phase_upper_seconds": [
+      null,
+      null,
+      null
+    ],
+    "proof_of_success_within900": false,
+    "clock_service_attested": false
+  },
+  "logical_cases": [
+    {
+      "id": "C01",
+      "source_case": "Worker exits before coordinator RELEASE-close or before wait invocation",
+      "normative_result": "Use actual coordinator wait returnTrue as tW>=tR; no negative Tworker or OS-exit gap. Exit alone grants no successful capture.",
+      "executed": false
+    },
+    {
+      "id": "C02",
+      "source_case": "Worker exits after tR; coordinator observes exit later",
+      "normative_result": "Exit-to-return observation latency stays in Tworker; tW is not backdated to physical exit.",
+      "executed": false
+    },
+    {
+      "id": "C03",
+      "source_case": "wait_worker returnsFalse or raises",
+      "normative_result": "No qualified tW; no success<=900 proof, even if a later cleanup/reap or normal-looking capture status exists.",
+      "executed": false
+    },
+    {
+      "id": "C04",
+      "source_case": "wait_worker returnsTrue but exit code/packet/capture/finalization fails",
+      "normative_result": "Call return gives an observation event, but independent success qualification fails. No temporal success admission.",
+      "executed": false
+    },
+    {
+      "id": "C05",
+      "source_case": "wait_worker returnsTrue and later normal success checks/return complete",
+      "normative_result": "Later checks establish eligibility only; keep tW fixed at original call return and tF at actual return after finally. Durations remain unproved until separately supplied.",
+      "executed": false
+    }
+  ],
+  "unchanged_sections": [
+    "subject",
+    "scope",
+    "normative_state",
+    "runtime",
+    "heap",
+    "source_anchors",
+    "product_numeric_candidates",
+    "product_numeric_candidates_applied",
+    "admission_rule"
+  ],
+  "E01_E05_disposition": [
+    {
+      "id": "E01",
+      "closed": false,
+      "status": "PARTIAL_REFERENCE_ONLY_NOT_ATTESTED"
+    },
+    {
+      "id": "E02",
+      "closed": false,
+      "status": "COMPLETE_HEAP_FIT_NOT_DEMONSTRATED"
+    },
+    {
+      "id": "E03",
+      "closed": false,
+      "status": "KERNEL_WORK_ONLY_FULL_PHASE_WORK_MISSING"
+    },
+    {
+      "id": "E04",
+      "closed": false,
+      "status": "NO_ATTESTED_SERVICE_OR_LATENCY"
+    },
+    {
+      "id": "E05",
+      "closed": false,
+      "status": "MARKER_DEFINITION_RESOLVED_WORK_SERVICE_AND_PHASE_BOUNDS_STILL_MISSING"
+    }
+  ],
+  "findings": {
+    "F127_01": "RESOLVED_IN_CANDIDATE_CONTRACT_ONLY",
+    "F127_02": "OPEN_EVIDENCE_UNCHANGED"
+  },
+  "decision": {
+    "platform_attested": false,
+    "complete_heap_verified": false,
+    "success_within900_verified": false,
+    "resource_obligations_closed": 0,
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "PFC126_CANDIDATE_01_bytes_preserved": true,
+    "heap_budgets_and_time_budgets_unchanged": true,
+    "product_numeric_quotas_changed": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "markers_instrumented": false,
+    "logical_cases_executed": false,
+    "resources_reserved": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL;UI04.1",
+    "D1_D4_I1_I20_A52_accepted_unchanged": true,
+    "CP03_and_30_sites_I124_counts_lifetimes_preserved": true,
+    "global_gaps_and_real_GI_pending": true,
+    "historical_invalid_I86_I89_I92_not_resumed": true,
+    "real_providers_credentials_consumption_reservations_activation_promotion_deployment_D6": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "Repository documents only in I128, not product execution/admission. Verify actual commit/push from Git."
+  }
+}
