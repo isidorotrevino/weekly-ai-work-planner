@@ -1,0 +1,941 @@
+{
+  "schema": "d5.i132-concrete-e01-e05-evidence-plan.v1",
+  "increment": "I132",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "fa91f107c56535b850ee3d86e16882756924e5eb",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract_id": "PFC126-CANDIDATE-03",
+  "status": "PLAN_PREPARED_NO_EVIDENCE_PRODUCED_NO_ADMISSION",
+  "input_pins": {
+    "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+    "docs/validation/D5-I130-cost-reserve-rule-incorporation.json": "a0fa38df1ebc3f8c8742ae2b609145099458e4873d59c8ddfe1a04c0f6e74a24",
+    "docs/validation/D5-I131-E01-E05-review.json": "76bf3db8bbd2bb4c75c6f725568491ebf2ff77f5493741867fbb6b28f363aed7",
+    "docs/validation/D5-I131-resource-evidence-delta.json": "a52e7af930811458e5c001a065092e1d5e65924d4c2f5ea0b7f2480831216b2d",
+    "docs/validation/D5-I131-integrity.json": "39f05a0a9f62634d3db77769257b78ea5fbaeda2fb30f4e723153485e52aca3c",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "docs/validation/D5-I129-F127-02-cost-reserve-review.json": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I129-integrity.json": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1"
+  },
+  "selected_planning_route": "STATIC_SOURCE_AND_ALLOCATION_WORK_PROOFS_PLUS_PRE_EXISTING_ATTESTED_RUNTIME_PLATFORM_SERVICE_OR_JUSTIFIED_STATIC_WCET",
+  "route_is_plan_not_contract_or_execution_change": true,
+  "source_and_budget_policy": {
+    "candidate03_unchanged": true,
+    "implementation_fixed": "I122-CANDIDATE-01",
+    "numeric_candidates_unchanged": true,
+    "reserve_allocation_heap_bytes": 0,
+    "reserve_allocation_time_seconds": 0,
+    "proof_failure_does_not_authorize_code_budget_or_quota_change": true
+  },
+  "common_artifact_envelope": [
+    "declared schema and evidence kind, not a template passed off as proof",
+    "candidate/source/runtime/platform pin sets with actual artifact hashes",
+    "producer and reviewer identities/roles, dated provenance and attestation validity",
+    "scope, process/metric/unit domain, assumptions and full derivation chain",
+    "actual derived bound or complete nonnumeric evidence as applicable; no null coerced to0",
+    "explicit comparison to unchanged candidate obligations and remaining limitations"
+  ],
+  "tasks": [
+    {
+      "id": "P01",
+      "obligations": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "depends_on": [],
+      "planned_output": "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json",
+      "output_schema": "d5.pfc126-03.resource-scope.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Maintainer of source/proof bindings",
+      "review_role": "Independent documentary reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Read immutable repository sources/manifests and define one explicit proof scope; no target import or execution.",
+      "required_specific_fields": [
+        "candidate_id_and_sha256",
+        "I122_and_original_source_pin_set",
+        "321_root_12_group_applicability",
+        "runtime_platform_target_reference",
+        "worker_heap_vs_other_process_scope",
+        "requested_committed_metrics",
+        "t0_tR_tW_tF_and_qualified_success",
+        "non_execution_and_zero_transfer_policy"
+      ],
+      "acceptance": "Bind exact candidate03/source bytes, metrics, process/clock domains and success/rejection scope. Keep I128 markers and I130 budgets/rules.",
+      "rejection": "Reject mixed source revisions, hidden process omissions or treating no-admission as execution permission.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I124-global-batch-lifetime-proof.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P02",
+      "obligations": [
+        "E01"
+      ],
+      "depends_on": [
+        "P01"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json",
+      "output_schema": "d5.pfc126-03.e01-runtime-identity.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Runtime image/build provenance custodian",
+      "review_role": "Source-to-binary provenance reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Obtain pre-existing authenticated release/image/build records and source/dependency inventories; verify their declared hashes/coverage documentary only. Do not build, import or launch target modules.",
+      "required_specific_fields": [
+        "exact_interpreter_stdlib_frozen_builtin_extension_closure",
+        "native_dependency_allocator_kernel_config_pins",
+        "source_binary_build_correspondence",
+        "actual_target_not_just_observed_local_reference",
+        "producer_authority_signature_and_validity",
+        "clock_and_process_service_domain_identity"
+      ],
+      "acceptance": "Supply a complete target closure and justified source/binary correspondence, attributable to a competent custodian and bound to the candidate. I127 remains only a partial historical reference.",
+      "rejection": "Leave E01 open if closure/signature/validity or native/allocator correspondence cannot be established; do not manufacture provenance.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I127-runtime-reference-manifest.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P03",
+      "obligations": [
+        "E01",
+        "E02",
+        "E04"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E04-PLATFORM-ENVELOPE.json",
+      "output_schema": "d5.pfc126-03.e04-platform-envelope.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Platform/service authority able to support the claimed bounds",
+      "review_role": "Independent platform-capacity reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Obtain an existing signed/static platform capacity and service/latency contract, or a justified exact-platform WCET environment. No contact, reservation or workload execution is performed by this plan.",
+      "required_specific_fields": [
+        "platform_runtime_pin_set_and_validity",
+        "available_worker_requested_and_committed_heap",
+        "coordinator_child_resource_and_interference_scope",
+        "compatible_CPU_service_unit_rate_latency_or_WCET_assumptions",
+        "bounded_scheduler_locks_IO_child_completion_observation_delays",
+        "admissible_signal_retry_interference_and_load_assumptions",
+        "clock_monotonicity_domain_and_latency_accounting"
+      ],
+      "acceptance": "Evidence must substantiate actual availability and compatible bounded service/latency for the target process set; distinguish rate per CPU-time from rate per wall-time and prevent unaccounted delays.",
+      "rejection": "If no authority can substantiate finite bounds, record external-evidence block and keep E04/E05 open before costly closure work. CPU labels/frequency, ordinary quotas, watchdogs or desired W/budget do not suffice.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-900-second-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H01",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H01.json",
+      "output_schema": "d5.pfc126-03.e02-h01.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H01",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Exact interpreter/module/native allocation ownership and startup/live-state derivation from P02 sources. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=268435456",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "Do not substitute executable/file size for loaded/runtime heap. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H02",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H02.json",
+      "output_schema": "d5.pfc126-03.e02-h02.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H02",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Static complete private-state and retention bounds for original fixtures, helpers and parent objects under the pinned321/12 route. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=2147483648",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "Opaque originals still occupy memory; CP03 serialized operand bounds alone do not cover every private/native object. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H03",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H03.json",
+      "output_schema": "d5.pfc126-03.e02-h03.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H03",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Inventory live observer roots outside copied FIELDS: profile/entry/specs/bindings, patches/closures, weakrefs, locks/Condition/thread locals and scalar leaves. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=536870912",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "No omission of observer roots or hidden interning/witness merge. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H04",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H04.json",
+      "output_schema": "d5.pfc126-03.e02-h04.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H04",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Tighten a source/ABI allocation and reachability/lifetime theorem for clones, memo/id and opaque sets. Use I124 F/S or a justified compatible refinement; include escaped results, pending IO and rejected/traceback retention. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=6442450944",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "The old retain-all conditional23PB upper does not prove6GiB fit. Do not replace it by33 generations or immediate GC without proof; do not change I122 to fit this task. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H05",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H05.json",
+      "output_schema": "d5.pfc126-03.e02-h05.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H05",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound dynamic frame/generator/traceback allocation sizes and multiplicity for the exact interpreter/native allocation domain. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=134217728",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "Separate native stack/RSS accounting from heap; neither omit heap frames nor count serialized depth as its full allocation proof. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H06",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H06.json",
+      "output_schema": "d5.pfc126-03.e02-h06.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H06",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound per-operation projection/digest/sort/row/allocation temporaries and overlapping lifetimes from source. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=268435456",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "Check construction before guards and nonclone temporaries; quota rejection threshold alone is no allocation upper. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H07",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H07.json",
+      "output_schema": "d5.pfc126-03.e02-h07.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H07",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound JSON/Unicode encoders/decoders, fragment buffers and decoded trees with simultaneous roots and exact runtime representation. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=268435456",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "No scalar text/UTF8 or serialized-byte bound relabelled as complete codec heap. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H08",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H08.json",
+      "output_schema": "d5.pfc126-03.e02-h08.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H08",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound actual Input Reader/PhaseBytes chunks/bodies, object headers/maps/listings and lifetimes in the fixed read graph. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=536870912",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "532675582 payload bytes is a subbound, not full512MiB owner proof; handle future input changes separately. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H09",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H09.json",
+      "output_schema": "d5.pfc126-03.e02-h09.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H09",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound chunks, pending page bodies, lists/headers, join/concat/Unicode buffers, memo-retained historic chunks and overlap. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=201326592",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "128MiB distinct payload is not a full192MiB heap proof or a global observer bound. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H10",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H10.json",
+      "output_schema": "d5.pfc126-03.e02-h10.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H10",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Bound Tee/StringIO capacity, getvalue/encode copies, raw parse trees and coexistence with finish output. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=134217728",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "62914560 bytes for one Unicode/UTF8 representation pair is not total raw/StringIO memory. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P04-H11",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-H11.json",
+      "output_schema": "d5.pfc126-03.e02-h11.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Allocation/lifetime proof author for H11",
+      "review_role": "Independent exact-runtime memory reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Prove allocator-owned arenas/retention/fragmentation overhead under the exact native allocator and declared heap metric. Source/static documentary proof only.",
+      "required_specific_fields": [
+        "owner_id_metric_and_exact_units",
+        "source_ABI_allocator_dependencies",
+        "complete_live_allocation_inventory",
+        "cardinality_size_lifetime_derivations",
+        "overlap_alias_original_and_rejected_prefix_treatment",
+        "explicit_assumptions_and_external_dependencies",
+        "verified_upper_bytes_and_derivation",
+        "candidate_budget_bytes=1073741824",
+        "bound_fit_not_just_partial_payload"
+      ],
+      "acceptance": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+      "rejection": "H11 is the1GiB overhead budget, not additional requested-heap reserve or RSS; no zero-overhead assumption. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I125-complete-heap-review.json",
+        "docs/validation/D5-I124-resource-admission-review.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P05",
+      "obligations": [
+        "E02"
+      ],
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04-H01",
+        "P04-H02",
+        "P04-H03",
+        "P04-H04",
+        "P04-H05",
+        "P04-H06",
+        "P04-H07",
+        "P04-H08",
+        "P04-H09",
+        "P04-H10",
+        "P04-H11"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E02-HEAP-ROLLUP.json",
+      "output_schema": "d5.pfc126-03.e02-heap-rollup.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Memory proof integrator",
+      "review_role": "Independent memory/capacity reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Sum complete per-owner bounds conservatively, review metric/overlap coverage and compare with current budgets and attested availability.",
+      "required_specific_fields": [
+        "all11_owner_artifact_sha256",
+        "complete_owner_fit_vector",
+        "requested_sum_plus_832MiB_reserve",
+        "H11_overhead_and_committed_sum",
+        "all_missing_terms_rejected",
+        "available_capacity_and_process_scope_match",
+        "zero_allocation_ledger"
+      ],
+      "acceptance": "Each owner fits; requested sum plus unassigned832MiB<=11GiB; H11<=1GiB; committed<=12GiB and capacity actually attested. Overcount allowed; no silent omission or reserve use.",
+      "rejection": "Do not infer capacity from arithmetic, budget or a loose model. Stop memory closure on any missing/overbudget term; source optimization/contract changes require separate scope.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P06",
+      "obligations": [
+        "E03"
+      ],
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E03-WORK-GROUPS.json",
+      "output_schema": "d5.pfc126-03.e03-work-groups.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Original/observer/runtime source work analyst",
+      "review_role": "Independent static work/WCET reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Produce complete work or justified WCET derivations for C01-C10, split/overcount by coordinator windows and named process sets; no target execution.",
+      "required_specific_fields": [
+        "all10_cost_group_inventory_and_source_anchors",
+        "per_process_phase_work_vectors_and_units",
+        "transitive_original_native_codec_GC_destruction_costs",
+        "worker_pre_READY_and_post_receipt_before_tR_coverage",
+        "wait_return_observation_and_success_finally_coverage",
+        "retries_signals_assumptions_and_liveness_requirements",
+        "noncopy_and_runtime_cost_not_zero",
+        "I124_count_transfer_or_refinement"
+      ],
+      "acceptance": "Every group/process/phase contribution has a compatible derived bound. Include concurrent worker work in Tpre or a proven conservative overcount and all success-path finalization through tF.",
+      "rejection": "Clone counts/file bytes alone do not close total CPU/WCET; no unproved subtraction of parallel overlap or omitted native/destruction/wait work.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "docs/validation/D5-I129-cost-coverage-ledger.json",
+        "docs/validation/D5-I124-global-batch-lifetime-proof.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P07",
+      "obligations": [
+        "E03",
+        "E04"
+      ],
+      "depends_on": [
+        "P02",
+        "P03",
+        "P06"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E03-E04-COMPATIBILITY.json",
+      "output_schema": "d5.pfc126-03.e03-e04-compatibility.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Timing/service proof integrator",
+      "review_role": "Independent scheduling/IO/WCET reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Join derived work with attested service assumptions or exact-platform WCET; establish complete per-phase CPU/wait/scheduling upper coverage.",
+      "required_specific_fields": [
+        "exact_runtime_platform_process_unit_match",
+        "work_to_service_conversion_or_WCET_derivation",
+        "latency_owner_map_without_unproved_deductions",
+        "CPU_IO_child_scheduler_and_native_delay_bounds",
+        "provider_load_interference_assumptions_satisfied",
+        "pre_tR_overlap_and_exit_to_tW_latency_accounted",
+        "worker_category_upper_vector_and_coverage_inequality"
+      ],
+      "acceptance": "Prove compatible complete coverage, including600CPU/90IO-child/60scheduler within750 for Tworker and separate complete pre/post bounds; conservative overcount is allowed.",
+      "rejection": "No rate invented from W/budget, no MHz/core-count substitute, no missing latency paid by reserve. Incompatible units/domain or unbounded wait keeps E03/E04 open.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P08",
+      "obligations": [
+        "E05"
+      ],
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E05-PHASE-BOUNDS.json",
+      "output_schema": "d5.pfc126-03.e05-phase-bounds.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "End-to-end proof author",
+      "review_role": "Independent temporal proof reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Derive the ordered-qualified-success theorem from source events and verified full bounds, without timestamps invented or runtime instrumentation.",
+      "required_specific_fields": [
+        "t0_tR_tW_tF_exact_source_and_clock_domain",
+        "exact_True_wait_return_and_independent_success_qualification",
+        "nonnegative_complete_phase_partition",
+        "verified_Tpre_Tworker_Tpost_upper_seconds",
+        "heap_runtime_service_assumptions_satisfied",
+        "60_750_60_plus30_conserved_zero_transfer_account",
+        "failure_paths_excluded_from_success_claim_without_omitting_heap_rejection_scope"
+      ],
+      "acceptance": "Prove Tpre<=60, Tworker<=750,Tpost<=60 on the exact monotonic coordinator markers, then the candidate900 target with30 reserve counted once. False/exception/invalid capture gives no successful timing proof.",
+      "rejection": "Marker definition, watchdog900, raw elapsed or absent marker=0 is insufficient. No every-failure<=900 claim; keep E05 open if full phase bounds do not fit.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P09",
+      "obligations": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "depends_on": [
+        "P02",
+        "P03",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-RESOURCE-BUNDLE-BINDING-REVIEW.json",
+      "output_schema": "d5.pfc126-03.resource-bundle-binding-review.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Evidence bundle/rebind analyst",
+      "review_role": "Independent provenance/Reader reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Review artifact packaging and exact provenance/signature/source/schema bindings and calculate the future admission input/Reader impact on final bytes. Do not modify capture inputs or run the worker.",
+      "required_specific_fields": [
+        "all_evidence_artifacts_real_hashes_and_roles",
+        "external_attestation_trust_source_and_validity",
+        "external_runtime_binary_references_not_silently_copied_or_called_fresh_reads",
+        "source_contract_platform_manifest_consistency",
+        "future_input_graph_and_real_bytes_sizes",
+        "per_Reader_unique_read_file_path_limits_and_top_metadata_impacts",
+        "self_pin_cycles_and_historical_authority_reuse_rejected",
+        "no_quota_change_or_rebind_performed"
+      ],
+      "acceptance": "All evidence is concrete, traceable and compatible. If later included in actual capture admission, exact new pins/graph and every unchanged file/Reader quota must fit; documentary closure is not worker/capture authority.",
+      "rejection": "No placeholder hashes as evidence, no assumed3*N without same graph proof, no large external binaries silently inserted, no source/schema/budget mismatch or authority reuse.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    },
+    {
+      "id": "P10",
+      "obligations": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "planned_output": "docs/validation/D5-PFC126-03-E01-E05-CLOSURE-REVIEW.json",
+      "output_schema": "d5.pfc126-03.e01-e05-closure-review.v1",
+      "state": "PLANNED_NOT_PRODUCED",
+      "responsible_role": "Independent resource-proof reviewer",
+      "review_role": "Separate acceptance reviewer",
+      "assigned_person": null,
+      "external_evidence_obtained": false,
+      "method": "Read all actual artifacts, verify assumptions/dependency closure and classify E01-E05 individually; issue only a documentary resource assessment. No product/component execution or active gate update.",
+      "required_specific_fields": [
+        "E01_E05_status_with_required_artifact_hashes",
+        "all20_I131_criteria_reassessed",
+        "complete_bound_and_attestation_acceptance_per_obligation",
+        "remaining_external_blocks_or_negative_findings",
+        "E06_still_separate_and_NOT_RUN",
+        "capture_authority_and_source_certificate_unchanged_until_independent_admission",
+        "reviewer_identity_date_validity_and_source_scope"
+      ],
+      "acceptance": "Mark an obligation verified only if its complete signed/pinned evidence and dependency assumptions satisfy the candidate. All five may remain open; a truthful negative decision is a valid plan endpoint. Even verified E01-E05 does not supply E06 or execution permission.",
+      "rejection": "No resource closure from plan/checklist existence, documentary9/20 checks, Git publication or synthetic PASS. Do not issue runtime/component evidence or capture authority.",
+      "current_inputs": [
+        "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json"
+      ],
+      "output_created": false,
+      "product_component_or_benchmark_execution_allowed": false,
+      "quota_or_budget_change_allowed": false
+    }
+  ],
+  "execution_order": [
+    {
+      "stage": "S0",
+      "task_ids": [
+        "P01"
+      ],
+      "purpose": "Freeze exact scope and targets"
+    },
+    {
+      "stage": "S1",
+      "task_ids": [
+        "P02",
+        "P03"
+      ],
+      "purpose": "Runtime provenance, early capacity/service feasibility and external evidence; no costly closure promise without it"
+    },
+    {
+      "stage": "S2",
+      "task_ids": [
+        "P04-H01",
+        "P04-H02",
+        "P04-H03",
+        "P04-H04",
+        "P04-H05",
+        "P04-H06",
+        "P04-H07",
+        "P04-H08",
+        "P04-H09",
+        "P04-H10",
+        "P04-H11",
+        "P06"
+      ],
+      "purpose": "Static owner and work proofs; may be prepared independently only once shared assumptions are fixed"
+    },
+    {
+      "stage": "S3",
+      "task_ids": [
+        "P05",
+        "P07"
+      ],
+      "purpose": "Memory aggregation/capacity and work/service compatibility"
+    },
+    {
+      "stage": "S4",
+      "task_ids": [
+        "P08"
+      ],
+      "purpose": "Qualified ordered end-to-end timing proof"
+    },
+    {
+      "stage": "S5",
+      "task_ids": [
+        "P09",
+        "P10"
+      ],
+      "purpose": "Provenance/rebind feasibility then independent per-obligation assessment"
+    }
+  ],
+  "early_stop_rules": [
+    "If P02 cannot substantiate exact runtime/native/allocator correspondence, affected E01/E02/E03/E04 proofs remain open. Do not fill the gap by a new target build or execution in this plan.",
+    "If P03 cannot substantiate finite available capacity/service/latency, mark missing external evidence and keep E04/E05 open; stop any promise of closing900 from source counts alone.",
+    "If any complete owner/phase upper cannot fit, record non-fit or insufficiency of that proof. No silent reserve assignment, limit increase, code optimization or fake infeasibility claim from a loose upper.",
+    "If final bundle cannot meet existing source/schema/Reader bindings, keep actual admission blocked; E06 and future exact rebind are separate, no current capture change."
+  ],
+  "external_evidence_inputs": {
+    "runtime_custodian_material": "NOT_PROVIDED",
+    "platform_capacity_service_material": "NOT_PROVIDED",
+    "named_responsible_persons_assigned": false,
+    "external_contacts_made": false,
+    "resources_reserved": false
+  },
+  "no_time_or_capacity_guarantee_for_plan_completion": true,
+  "planned_output_files_created": false,
+  "product_or_components_executed": false,
+  "benchmark_or_scheduling_probe_authorized": false,
+  "contracts_or_quotas_changed": false,
+  "resource_obligations_closed": 0,
+  "E06_execution_authorized": false,
+  "issue_SOURCE_CAPACITY_VERIFIED": false,
+  "proposal_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY",
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "I132 plan/checklist/audit only; no future evidence files, operational resources or capture authority."
+  }
+}

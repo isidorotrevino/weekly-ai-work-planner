@@ -1,0 +1,571 @@
+{
+  "schema": "d5.i132-evidence-closure-checklist.v1",
+  "increment": "I132",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "fa91f107c56535b850ee3d86e16882756924e5eb",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract_id": "PFC126-CANDIDATE-03",
+  "status": "CLOSURE_ACCEPTANCE_PLAN_NOT_A_CLOSURE_CERTIFICATE",
+  "plan": {
+    "path": "docs/validation/D5-I132-E01-E05-evidence-plan.json",
+    "sha256": "d7852f0290905bbd924fc2b2723fbca0d43528fcef0c9afbc89a4612a1c5b345"
+  },
+  "input_pins": {
+    "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+    "docs/validation/D5-I130-cost-reserve-rule-incorporation.json": "a0fa38df1ebc3f8c8742ae2b609145099458e4873d59c8ddfe1a04c0f6e74a24",
+    "docs/validation/D5-I131-E01-E05-review.json": "76bf3db8bbd2bb4c75c6f725568491ebf2ff77f5493741867fbb6b28f363aed7",
+    "docs/validation/D5-I131-resource-evidence-delta.json": "a52e7af930811458e5c001a065092e1d5e65924d4c2f5ea0b7f2480831216b2d",
+    "docs/validation/D5-I131-integrity.json": "39f05a0a9f62634d3db77769257b78ea5fbaeda2fb30f4e723153485e52aca3c",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "docs/validation/D5-I129-F127-02-cost-reserve-review.json": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I129-integrity.json": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1",
+    "docs/validation/D5-I132-E01-E05-evidence-plan.json": "d7852f0290905bbd924fc2b2723fbca0d43528fcef0c9afbc89a4612a1c5b345"
+  },
+  "obligations": [
+    {
+      "id": "E01",
+      "required_tasks": [
+        "P01",
+        "P02",
+        "P03",
+        "P09",
+        "P10"
+      ],
+      "criterion_ids": [
+        "E01-R1",
+        "E01-R2",
+        "E01-R3",
+        "E01-R4"
+      ],
+      "acceptance": "Complete attributed target runtime/closure/binary correspondence and valid platform identity attestations, beyond I127 partial reference.",
+      "not_sufficient": [
+        "Historical selected file hash match",
+        "Candidate rule or Git commit"
+      ],
+      "complete_evidence_present": false,
+      "closed": false
+    },
+    {
+      "id": "E02",
+      "required_tasks": [
+        "P01",
+        "P02",
+        "P03",
+        "P04-H01",
+        "P04-H02",
+        "P04-H03",
+        "P04-H04",
+        "P04-H05",
+        "P04-H06",
+        "P04-H07",
+        "P04-H08",
+        "P04-H09",
+        "P04-H10",
+        "P04-H11",
+        "P05",
+        "P09",
+        "P10"
+      ],
+      "criterion_ids": [
+        "E02-R1",
+        "E02-R2",
+        "E02-R3",
+        "E02-R4"
+      ],
+      "acceptance": "All11 complete owner bounds/metrics/lifetimes fit unchanged budgets and reserve rules, requested/committed totals and attested available capacity.",
+      "not_sufficient": [
+        "Payload or conditional cumulative clone subbound",
+        "Budget arithmetic or assumed free reserve"
+      ],
+      "complete_evidence_present": false,
+      "closed": false
+    },
+    {
+      "id": "E03",
+      "required_tasks": [
+        "P01",
+        "P02",
+        "P03",
+        "P06",
+        "P07",
+        "P09",
+        "P10"
+      ],
+      "criterion_ids": [
+        "E03-R1",
+        "E03-R2",
+        "E03-R3",
+        "E03-R4"
+      ],
+      "acceptance": "Complete compatible work or justified WCET for all10 groups and relevant processes/coordinator phases including overlap, noncopy and finalization.",
+      "not_sufficient": [
+        "Clone logical visits or file bytes alone",
+        "Adopted coverage rule with30 null cost values"
+      ],
+      "complete_evidence_present": false,
+      "closed": false
+    },
+    {
+      "id": "E04",
+      "required_tasks": [
+        "P01",
+        "P02",
+        "P03",
+        "P06",
+        "P07",
+        "P09",
+        "P10"
+      ],
+      "criterion_ids": [
+        "E04-R1",
+        "E04-R2",
+        "E04-R3",
+        "E04-R4"
+      ],
+      "acceptance": "Attested compatible service/WCET environment and bounded CPU/scheduling/locks/IO/child/observation delays with complete wall coverage.",
+      "not_sufficient": [
+        "CPU label/frequency or desired rate",
+        "600/90/60 target or watchdog"
+      ],
+      "complete_evidence_present": false,
+      "closed": false
+    },
+    {
+      "id": "E05",
+      "required_tasks": [
+        "P01",
+        "P02",
+        "P03",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "criterion_ids": [
+        "E05-R1",
+        "E05-R2",
+        "E05-R3",
+        "E05-R4"
+      ],
+      "acceptance": "Qualified-success coordinator-marker proof with complete E03/E04 assumptions, full60/750/60 upper bounds and30 reserve counted once, no invented timestamps.",
+      "not_sufficient": [
+        "Ordered markers or sum900 alone",
+        "False/exception repaired by cleanup",
+        "Raw elapsed or process.wait900"
+      ],
+      "complete_evidence_present": false,
+      "closed": false
+    }
+  ],
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._fork",
+      "line": 185,
+      "end_line": 201,
+      "AST_sha256": "082307462cd41c124997a5ca52ba3a2d93729d2279d57c366057462250ca2ea9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._atomic",
+      "line": 211,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Pages.flush",
+      "line": 81,
+      "end_line": 92,
+      "AST_sha256": "44ba860cb143e12a0cf5fad2b1f9142a2fbbbdd9e73c2f5e412aba164dd6720d"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._typed_finish",
+      "line": 546,
+      "end_line": 578,
+      "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "Tee",
+      "line": 30,
+      "end_line": 33,
+      "AST_sha256": "fa11f0ac3922012f6008e3f9fd16f8658fb91c3047938d1986b2ef5d93deeb3f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "line": 35,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "line": 63,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.before",
+      "line": 1593,
+      "end_line": 1601,
+      "AST_sha256": "f01e2002fa4b85205eb55456e2ac838d5c44cec8cac3a934edd615ffd98ff5c2"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.after",
+      "line": 1602,
+      "end_line": 1606,
+      "AST_sha256": "8d05854daa6b3a4290140d9e0e5dc26424b49ba118bee1688bf12dadca479190"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.read",
+      "line": 151,
+      "end_line": 168,
+      "AST_sha256": "8be485b40414996d4a18f52d6529efb08dc45befb96020c0ab253489463e3d85"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.finish",
+      "line": 176,
+      "end_line": 178,
+      "AST_sha256": "b0b9b2718e497ac8f42a8bd77bcf377434e71743ed2521de96409f82e56cab34"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "digest_value",
+      "line": 98,
+      "end_line": 135,
+      "AST_sha256": "92fc85b1f3493fbafefa37053a877375e268fe6dd478b4e86da20022b4f7b503"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "BoundedOutput.write",
+      "line": 462,
+      "end_line": 463,
+      "AST_sha256": "c1548a3db7fa4d2d560327d5188f06fdb67327598fcde7b917c229c2eed44e00"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "line": 540,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "PageSink.append",
+      "line": 93,
+      "end_line": 101,
+      "AST_sha256": "9f7fccf7f37561b78277b484f7e2cb934dbf1ef10e6595f316e37ae8a2172455"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "encode",
+      "line": 29,
+      "end_line": 29,
+      "AST_sha256": "74e7bb02b24afbc9d1023b7a44c07484d8c68b6e48bde9706be6954311088bc5"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": null,
+      "occurrence": 0,
+      "line": 103,
+      "column": 0,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.subprocess.Popen(cmd, cwd=root, stdin=c.subprocess.DEVNULL, stdout=rawfd, stderr=c.subprocess.DEVNULL, pass_fds=(sidefd, ready_write, release_read, directory), start_new_session=True, env=dict(PATH=os.defpath, LANG='C.UTF-8', LC_ALL='C.UTF-8', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONIOENCODING='utf-8'))",
+      "occurrence": 0,
+      "line": 120,
+      "column": 16,
+      "end_line": 120,
+      "AST_sha256": "cd3a0f1942ab10b0df49950c6a0ffcfd2585e6dab9e9bdb3c6a67788f368f477"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.write_json_fd(release_write, dict(event='RELEASE', lease=owner.nonce), 4096)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 8,
+      "end_line": 123,
+      "AST_sha256": "256805b2097989f12397da64b9ffaac0cc175d5572db83a2c502130dc6516945"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "os.close(release_write)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 115,
+      "end_line": 123,
+      "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "wait_worker(process)",
+      "occurrence": 0,
+      "line": 124,
+      "column": 15,
+      "end_line": 124,
+      "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "inputs.joint_plan.after()",
+      "occurrence": 0,
+      "line": 126,
+      "column": 8,
+      "end_line": 126,
+      "AST_sha256": "aa3ef80189ac3b6202a1a25fbb322a301f992c8ec517be77de344a5617fafcc4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.finish()",
+      "occurrence": 0,
+      "line": 141,
+      "column": 8,
+      "end_line": 141,
+      "AST_sha256": "6a2785fb553093960b4c6d012c144e3591374234265800d6efd8e78c323b4767"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(launchfd, b)",
+      "occurrence": 0,
+      "line": 175,
+      "column": 12,
+      "end_line": 175,
+      "AST_sha256": "1813da4489505ff58dcf2455248d4be820cfaf37b57d153bf088f8feb13ddeec"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": null,
+      "occurrence": 0,
+      "line": 63,
+      "column": 0,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "expression": null,
+      "occurrence": 0,
+      "line": 35,
+      "column": 0,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "expression": null,
+      "occurrence": 0,
+      "line": 540,
+      "column": 0,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(release_write, b'\\n')",
+      "occurrence": 0,
+      "line": 123,
+      "column": 84,
+      "end_line": 123,
+      "AST_sha256": "f1b8dc3d696c77eec75bfa5cffacb7e46070b8517ee0e648c8faa2f859ae9435"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "p.verify_release(c.receive_line(releasefd, p.LIMITS['wait_seconds']), lease)",
+      "occurrence": 0,
+      "line": 72,
+      "column": 29,
+      "end_line": 72,
+      "AST_sha256": "f637b5df094bb5af57f438388327fca453b4fa0ef1456dbdaee5a4c69db5684b"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "importlib.import_module(entry['runner_module'])",
+      "occurrence": 0,
+      "line": 76,
+      "column": 15,
+      "end_line": 76,
+      "AST_sha256": "c56022900cba75644ad6d24fed31505122247712637aae35772a0a0f12712c75"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "writer.write(side, p.LIMITS['index_sidecar_bytes'])",
+      "occurrence": 0,
+      "line": 82,
+      "column": 103,
+      "end_line": 82,
+      "AST_sha256": "8c2a04d001a800f177f4d912355ba167d438c91393622a002d0cb95d888dfc15"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.listing(DESTINATION)",
+      "occurrence": 0,
+      "line": 160,
+      "column": 83,
+      "end_line": 160,
+      "AST_sha256": "1f31791324853ba08e48b96278a617a4c88476ef7b42a60ea3a8508e3c68dd46"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "encode(context)",
+      "occurrence": 0,
+      "line": 159,
+      "column": 29,
+      "end_line": 159,
+      "AST_sha256": "e3eb93df8d7909e42d8f4565f6fc4d813f76253d78b72ce224b968e3b0abf204"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "owner.create('context.json')",
+      "occurrence": 0,
+      "line": 172,
+      "column": 15,
+      "end_line": 172,
+      "AST_sha256": "481831fdd002753765243c9d8f9bd550ab03f828f9115de81b79b5f00654ef88"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._atomic",
+      "expression": null,
+      "occurrence": 0,
+      "line": 211,
+      "column": 8,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._typed_finish",
+      "expression": null,
+      "occurrence": 0,
+      "line": 546,
+      "column": 8,
+      "end_line": 578,
+      "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+    }
+  ],
+  "criterion_ids_fully_covered": true,
+  "resource_obligations_closed": 0,
+  "planned_future_artifact_paths": [
+    "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json",
+    "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json",
+    "docs/validation/D5-PFC126-03-E04-PLATFORM-ENVELOPE.json",
+    "docs/validation/D5-PFC126-03-E02-H01.json",
+    "docs/validation/D5-PFC126-03-E02-H02.json",
+    "docs/validation/D5-PFC126-03-E02-H03.json",
+    "docs/validation/D5-PFC126-03-E02-H04.json",
+    "docs/validation/D5-PFC126-03-E02-H05.json",
+    "docs/validation/D5-PFC126-03-E02-H06.json",
+    "docs/validation/D5-PFC126-03-E02-H07.json",
+    "docs/validation/D5-PFC126-03-E02-H08.json",
+    "docs/validation/D5-PFC126-03-E02-H09.json",
+    "docs/validation/D5-PFC126-03-E02-H10.json",
+    "docs/validation/D5-PFC126-03-E02-H11.json",
+    "docs/validation/D5-PFC126-03-E02-HEAP-ROLLUP.json",
+    "docs/validation/D5-PFC126-03-E03-WORK-GROUPS.json",
+    "docs/validation/D5-PFC126-03-E03-E04-COMPATIBILITY.json",
+    "docs/validation/D5-PFC126-03-E05-PHASE-BOUNDS.json",
+    "docs/validation/D5-PFC126-03-RESOURCE-BUNDLE-BINDING-REVIEW.json",
+    "docs/validation/D5-PFC126-03-E01-E05-CLOSURE-REVIEW.json"
+  ],
+  "planned_artifacts_are_existing_evidence": false,
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "decision": {
+    "candidate03_bytes_unchanged": true,
+    "prior_marker_cost_reserve_rules_preserved": true,
+    "numeric_budgets_and_quotas_unchanged": true,
+    "complete_resource_evidence_produced": false,
+    "external_contacts_made": false,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "platform_attested": false,
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL;UI04.1",
+    "D1_D4_I1_I20_A52_accepted_unchanged": true,
+    "CP03_30_sites_I124_counts_lifetimes_preserved": true,
+    "global_gaps_and_real_GI_pending": true,
+    "historical_invalid_I86_I89_I92_not_resumed": true,
+    "real_providers_credentials_consumption_reservations_activation_promotion_deployment_D6": false
+  },
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "Only concrete evidence plan and review artifacts in I132, not future proofs or operational authority."
+  }
+}
