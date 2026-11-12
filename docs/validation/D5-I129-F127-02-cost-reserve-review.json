@@ -1,0 +1,227 @@
+{
+  "schema": "d5.i129-f127-02-cost-reserve-review.v1",
+  "increment": "I129",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "33dec048f58879b25de13e80f44f9934495c9fc6",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract_id": "PFC126-CANDIDATE-02",
+  "status": "REVIEW_COMPLETE_F127_02_COST_EVIDENCE_REMAINS_OPEN",
+  "input_pins": {
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-binding-review.json": "d6cd654d8c16241aed6e3c183782f57440918e5d8f6956194d9950d2d09dc498",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa"
+  },
+  "ledger": {
+    "path": "docs/validation/D5-I129-cost-coverage-ledger.json",
+    "sha256": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa"
+  },
+  "finding_review": {
+    "id": "F127-02",
+    "review_complete": true,
+    "status": "OPEN_COST_AND_SERVICE_EVIDENCE_RESERVE_RULES_PROPOSED",
+    "source_coverage_clarified": true,
+    "cost_upper_bounds_closed": false,
+    "reserve_rules_adopted_in_contract": false,
+    "phase_success_proved": false,
+    "F127_01_resolution_preserved": "RESOLVED_IN_CANDIDATE_CONTRACT_ONLY"
+  },
+  "findings": [
+    {
+      "id": "F129-01",
+      "scope": "F127-02 / E03 / E05",
+      "status": "OPEN_COST_ATTRIBUTION_EVIDENCE",
+      "finding": "A worker can start and complete post-RELEASE work before coordinator tR; Tpre coverage must include those concurrent contributions.",
+      "basis": "Coordinator writes RELEASE/newline before close; worker receive_line can return on newline and does not need parent close. Correct I128 markers remain ordered.",
+      "proposed_review_rule": "Assign contributors by coordinator intervals or explicitly overcount them across candidate phases. Do not infer all suite/import/finalization cost belongs exclusively to Tworker.",
+      "countermodel": "Parent descheduled after newline write before close, child proceeds. Pure source interleaving description, not executed.",
+      "executed": false,
+      "reopens_F127_01": false
+    },
+    {
+      "id": "F129-02",
+      "scope": "F127-02 / E02 / E04 / E05",
+      "status": "PROPOSED_RESERVE_CONSERVATION_RULES_NOT_APPLIED",
+      "finding": "Candidate reserves require one conserved, reviewed allocation per domain and consistent outer/inner time budgets; no verified slack or service follows from a budget.",
+      "basis": "832MiB and30s are unassigned; H11 has a separate allocator metric;600+90+60 already uses all750.",
+      "proposed_review_rule": "Use the heap/time transfer identities in this review for a future explicit allocation. Do not spend the original and remaining reserve twice or reuse y_worker independently in all three categories.",
+      "executed": false
+    }
+  ],
+  "reserve_review": {
+    "heap": {
+      "unit": "bytes",
+      "owner_baselines": [
+        268435456,
+        2147483648,
+        536870912,
+        6442450944,
+        134217728,
+        268435456,
+        268435456,
+        536870912,
+        201326592,
+        134217728
+      ],
+      "baseline_sum": 10938744832,
+      "unassigned_candidate_reserve": 872415232,
+      "allocated_in_I129": 0,
+      "remaining_candidate_reserve": 872415232,
+      "requested_total": 11811160064,
+      "allocator_H11_budget": 1073741824,
+      "committed_total": 12884901888,
+      "resource_availability_proved": false,
+      "proposed_future_transfer_rule": {
+        "variables": "x_i>=0 for requested owners H01-H10, with sum(x_i)<=832MiB",
+        "updated_owners": "B_i_new=B_i+x_i",
+        "remaining_reserve": "R_heap_new=832MiB-sum(x_i)",
+        "invariant": "sum(B_i_new)+R_heap_new=11GiB",
+        "activation": "Requires explicit reviewed contract allocation/revision and complete evidence. This rule is a proposal, not an applied transfer or a new product quota."
+      },
+      "H11_not_free_reserve": true,
+      "unknown_costs_cannot_consume_reserve_without_bound": true,
+      "diagnostic_H04": {
+        "known_conditional_upper": 23096917808804736,
+        "current_owner_budget": 6442450944,
+        "owner_plus_entire_candidate_reserve": 7314866176,
+        "known_model_establishes_fit_even_with_reserve": false,
+        "actual_infeasibility_claimed": false,
+        "allocation_applied": false
+      }
+    },
+    "time": {
+      "unit": "seconds",
+      "phase_baselines": [
+        60,
+        750,
+        60
+      ],
+      "baseline_sum": 870,
+      "unassigned_candidate_reserve": 30,
+      "allocated_in_I129": 0,
+      "remaining_candidate_reserve": 30,
+      "end_to_end_total": 900,
+      "service_availability_proved": false,
+      "proposed_future_transfer_rule": {
+        "variables": "y_pre,y_worker,y_post>=0, sum(y)<=30",
+        "updated_phases": "phase_new=phase_baseline+y_phase",
+        "remaining_reserve": "R_time_new=30-sum(y)",
+        "invariant": "sum(phase_new)+R_time_new=900",
+        "activation": "Explicit reviewed contract allocation/revision and evidence required; unassigned30 is not automatic permission to exceed60/750/60."
+      },
+      "nested_worker_rule": {
+        "base_categories": [
+          600,
+          90,
+          60
+        ],
+        "base_sum": 750,
+        "per_category_reserve": 0,
+        "proposed_worker_allocation": "If a future reviewed y_worker is assigned to750, explicitly assign nonnegative z_CPU,z_IO,z_sched with sum(z)=y_worker; then new category sum=750+y_worker.",
+        "outer_and_inner_reserve_not_two_credits": true,
+        "existing_category_slack_verified": false
+      },
+      "unknown_or_unbounded_phase_cannot_be_filled_with_reserve": true
+    },
+    "cross_domain": {
+      "no_bytes_seconds_conversion": true,
+      "no_H11_or_other_owner_automatic_borrowing": true,
+      "no_negative_allocation_or_release_reset": true,
+      "no_double_credit_of_original_and_remaining_reserve": true,
+      "budget_difference_is_not_proved_slack": true
+    },
+    "transfers_executed_or_applied": false,
+    "candidate_contract_modified": false
+  },
+  "E01_E05_disposition": [
+    {
+      "id": "E01",
+      "closed": false,
+      "status": "PARTIAL_REFERENCE_ONLY_NOT_ATTESTED"
+    },
+    {
+      "id": "E02",
+      "closed": false,
+      "status": "COMPLETE_HEAP_FIT_NOT_DEMONSTRATED"
+    },
+    {
+      "id": "E03",
+      "closed": false,
+      "status": "KERNEL_WORK_ONLY_FULL_PHASE_WORK_MISSING"
+    },
+    {
+      "id": "E04",
+      "closed": false,
+      "status": "NO_ATTESTED_SERVICE_OR_LATENCY"
+    },
+    {
+      "id": "E05",
+      "closed": false,
+      "status": "MARKER_DEFINITION_RESOLVED_WORK_SERVICE_AND_PHASE_BOUNDS_STILL_MISSING"
+    }
+  ],
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "decision": {
+    "PFC126_CANDIDATE_02_bytes_preserved": true,
+    "markers_tW_exact_True_unchanged": true,
+    "heap_and_time_budgets_unchanged": true,
+    "resource_obligations_closed": 0,
+    "platform_attested": false,
+    "heap_capacity_verified": false,
+    "work_or_CPU_seconds_verified": false,
+    "success_within900_verified": false,
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "product_quotas_changed": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "logical_schedule_executed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL;UI04.1",
+    "D1_D4_I1_I20_A52_accepted_unchanged": true,
+    "CP03_30_sites_I124_counts_lifetimes_preserved": true,
+    "global_gaps_and_real_GI_pending": true,
+    "historical_invalid_I86_I89_I92_not_resumed": true,
+    "real_providers_credentials_consumption_reservations_activation_promotion_deployment_D6": false
+  },
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "Repository documentary review only in I129; publication does not apply reserves or authorize capture. Verify actual commit/push from Git."
+  }
+}

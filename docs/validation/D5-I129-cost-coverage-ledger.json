@@ -1,0 +1,648 @@
+{
+  "schema": "d5.i129-cost-coverage-ledger.v1",
+  "increment": "I129",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "33dec048f58879b25de13e80f44f9934495c9fc6",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract_id": "PFC126-CANDIDATE-02",
+  "status": "SOURCE_COST_COVERAGE_REVIEW_NOT_CAPACITY_PROOF",
+  "input_pins": {
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-binding-review.json": "d6cd654d8c16241aed6e3c183782f57440918e5d8f6956194d9950d2d09dc498",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2"
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": null,
+      "occurrence": 0,
+      "line": 103,
+      "column": 0,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.subprocess.Popen(cmd, cwd=root, stdin=c.subprocess.DEVNULL, stdout=rawfd, stderr=c.subprocess.DEVNULL, pass_fds=(sidefd, ready_write, release_read, directory), start_new_session=True, env=dict(PATH=os.defpath, LANG='C.UTF-8', LC_ALL='C.UTF-8', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONIOENCODING='utf-8'))",
+      "occurrence": 0,
+      "line": 120,
+      "column": 16,
+      "end_line": 120,
+      "AST_sha256": "cd3a0f1942ab10b0df49950c6a0ffcfd2585e6dab9e9bdb3c6a67788f368f477"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.write_json_fd(release_write, dict(event='RELEASE', lease=owner.nonce), 4096)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 8,
+      "end_line": 123,
+      "AST_sha256": "256805b2097989f12397da64b9ffaac0cc175d5572db83a2c502130dc6516945"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "os.close(release_write)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 115,
+      "end_line": 123,
+      "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "wait_worker(process)",
+      "occurrence": 0,
+      "line": 124,
+      "column": 15,
+      "end_line": 124,
+      "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "inputs.joint_plan.after()",
+      "occurrence": 0,
+      "line": 126,
+      "column": 8,
+      "end_line": 126,
+      "AST_sha256": "aa3ef80189ac3b6202a1a25fbb322a301f992c8ec517be77de344a5617fafcc4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.finish()",
+      "occurrence": 0,
+      "line": 141,
+      "column": 8,
+      "end_line": 141,
+      "AST_sha256": "6a2785fb553093960b4c6d012c144e3591374234265800d6efd8e78c323b4767"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(launchfd, b)",
+      "occurrence": 0,
+      "line": 175,
+      "column": 12,
+      "end_line": 175,
+      "AST_sha256": "1813da4489505ff58dcf2455248d4be820cfaf37b57d153bf088f8feb13ddeec"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": null,
+      "occurrence": 0,
+      "line": 63,
+      "column": 0,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "expression": null,
+      "occurrence": 0,
+      "line": 35,
+      "column": 0,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "expression": null,
+      "occurrence": 0,
+      "line": 540,
+      "column": 0,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(release_write, b'\\n')",
+      "occurrence": 0,
+      "line": 123,
+      "column": 84,
+      "end_line": 123,
+      "AST_sha256": "f1b8dc3d696c77eec75bfa5cffacb7e46070b8517ee0e648c8faa2f859ae9435"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "p.verify_release(c.receive_line(releasefd, p.LIMITS['wait_seconds']), lease)",
+      "occurrence": 0,
+      "line": 72,
+      "column": 29,
+      "end_line": 72,
+      "AST_sha256": "f637b5df094bb5af57f438388327fca453b4fa0ef1456dbdaee5a4c69db5684b"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "importlib.import_module(entry['runner_module'])",
+      "occurrence": 0,
+      "line": 76,
+      "column": 15,
+      "end_line": 76,
+      "AST_sha256": "c56022900cba75644ad6d24fed31505122247712637aae35772a0a0f12712c75"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": "writer.write(side, p.LIMITS['index_sidecar_bytes'])",
+      "occurrence": 0,
+      "line": 82,
+      "column": 103,
+      "end_line": 82,
+      "AST_sha256": "8c2a04d001a800f177f4d912355ba167d438c91393622a002d0cb95d888dfc15"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.listing(DESTINATION)",
+      "occurrence": 0,
+      "line": 160,
+      "column": 83,
+      "end_line": 160,
+      "AST_sha256": "1f31791324853ba08e48b96278a617a4c88476ef7b42a60ea3a8508e3c68dd46"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "encode(context)",
+      "occurrence": 0,
+      "line": 159,
+      "column": 29,
+      "end_line": 159,
+      "AST_sha256": "e3eb93df8d7909e42d8f4565f6fc4d813f76253d78b72ce224b968e3b0abf204"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "owner.create('context.json')",
+      "occurrence": 0,
+      "line": 172,
+      "column": 15,
+      "end_line": 172,
+      "AST_sha256": "481831fdd002753765243c9d8f9bd550ab03f828f9115de81b79b5f00654ef88"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._atomic",
+      "expression": null,
+      "occurrence": 0,
+      "line": 211,
+      "column": 8,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._typed_finish",
+      "expression": null,
+      "occurrence": 0,
+      "line": 546,
+      "column": 8,
+      "end_line": 578,
+      "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+    }
+  ],
+  "markers": [
+    {
+      "id": "t0",
+      "event": "Coordinator enters launch, before its first statement",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "kind": "FUNCTION_INVOCATION_ENTRY_NOT_DEFINITION_EXECUTION",
+        "line": 103,
+        "column": 0,
+        "end_line": 177,
+        "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tR",
+      "event": "Coordinator os.close(release_write) returned normally after complete RELEASE/newline write",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "os.close(release_write)",
+        "occurrence": 0,
+        "line": 123,
+        "column": 115,
+        "end_line": 123,
+        "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f",
+        "kind": "SUCCESSFUL_CALL_RETURN"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tW",
+      "event": "The unique coordinator wait_worker(process) call returned the exact value True; timestamp belongs to this call return",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "wait_worker(process)",
+        "occurrence": 0,
+        "line": 124,
+        "column": 15,
+        "end_line": 124,
+        "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9",
+        "kind": "CALL_RETURN_EXACT_TRUE"
+      },
+      "clock_value": null
+    },
+    {
+      "id": "tF",
+      "event": "Coordinator launch returns normally after finally and final writes/closes; eligibility is independently validated",
+      "clock_owner": "coordinator",
+      "source_anchor": {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "kind": "NORMAL_RETURN_AFTER_FINALLY",
+        "line": 177,
+        "column": 4,
+        "end_line": 177,
+        "AST_sha256": "6b8b737bd5a5519d6c0a88b02575f3b74a7ee86acdc49db3ee8d5559c44a46f8"
+      },
+      "clock_value": null
+    }
+  ],
+  "interval_rule": {
+    "required_order": [
+      "t0",
+      "tR",
+      "tW",
+      "tF"
+    ],
+    "inequality": "t0<=tR<=tW<=tF",
+    "intervals": {
+      "Tpre": "tR-t0",
+      "Tworker": "tW-tR",
+      "Tpost": "tF-tW"
+    },
+    "nonnegative_required": true,
+    "telescoping_identity": "Tpre+Tworker+Tpost=tF-t0",
+    "no_uncovered_exit_observation_gap": true
+  },
+  "activities": [
+    {
+      "id": "C01",
+      "process": "coordinator",
+      "activity": "Initial registry/authority and input discovery",
+      "source": "capture.launch/read_registry/InputPlan.before",
+      "phase": "Tpre",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "Source routes and fixed input ledger only",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C02",
+      "process": "worker",
+      "activity": "Startup, registry/authority/channels before READY/RELEASE",
+      "source": "worker.main before READY/RELEASE",
+      "phase": "Tpre",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "Worker begins before coordinator RELEASE-close",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C03",
+      "process": "coordinator",
+      "activity": "Popen, READY receive, RELEASE write/newline/close",
+      "source": "capture.launch through tR",
+      "phase": "Tpre",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "tR is parent close completion, not child release receipt",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C04",
+      "process": "worker and its children",
+      "activity": "Post-RELEASE runner/import/targets/suite/metadata/finalization occurring before tR",
+      "source": "worker.main after verify_release and exercise",
+      "phase": "Tpre",
+      "categories": [
+        "CPU",
+        "IO_child_wait",
+        "scheduler"
+      ],
+      "known": "Possible overlap before parent close; never automatically assign all this work solely to Tworker",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C05",
+      "process": "worker and its children",
+      "activity": "Same work continuing at/after tR until worker exit",
+      "source": "worker.main/exercise/atomic phases/finish/after/write",
+      "phase": "Tworker",
+      "categories": [
+        "CPU",
+        "IO_child_wait",
+        "scheduler"
+      ],
+      "known": "Split/overcount requires proof; source-function label alone does not determine interval",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C06",
+      "process": "coordinator",
+      "activity": "Wait dispatch, exit observation/reap and returnTrue at tW",
+      "source": "launch.wait_worker / typed.wait_worker",
+      "phase": "Tworker",
+      "categories": [
+        "CPU",
+        "scheduler",
+        "IO_child_wait"
+      ],
+      "known": "Include physical-exit-to-wait-return latency even if worker already exited before tR",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C07",
+      "process": "coordinator",
+      "activity": "Normal cleanup and fresh input after/finish checks",
+      "source": "launch after wait_worker",
+      "phase": "Tpost",
+      "categories": [
+        "CPU",
+        "IO_child_wait",
+        "scheduler"
+      ],
+      "known": "Success qualification does not move tW",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C08",
+      "process": "coordinator",
+      "activity": "Packet read/parse/hash/page validation/aggregation and finish",
+      "source": "launch evidence_reader/validate_pages/packet.finish",
+      "phase": "Tpost",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "Input Reader envelope is not evidence Reader or validation CPU",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C09",
+      "process": "coordinator",
+      "activity": "Finally fd closes, owner/package/listing/sizes/context encode and final context/launch writes",
+      "source": "launch finally through actual return tF",
+      "phase": "Tpost",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "Must include finally even on success; packet.finish is not end of claimed window",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    },
+    {
+      "id": "C10",
+      "process": "each relevant process",
+      "activity": "Projection, JSON/Unicode, hashing/sorting, GC/destruction, native runtime, locks and allocation",
+      "source": "Inherited helpers and runtime across phases",
+      "phase": "CROSS_PHASE_ATTRIBUTE_BY_ACTUAL_INTERVAL",
+      "categories": [
+        "CPU",
+        "IO",
+        "scheduler"
+      ],
+      "known": "Charges already inside each phase, not a free external tail or omitted noncopy0",
+      "verified_work_upper": null,
+      "verified_CPU_seconds_upper": null,
+      "verified_wall_seconds_upper": null,
+      "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET"
+    }
+  ],
+  "coverage_rule": "For each qualified-success wall interval, account all relevant process/runtime/CPU/wait/scheduling contributors by that interval. Source helper names and child receipt do not replace coordinator clock cuts. Conservative overcount is allowed; unknown work cannot be0.",
+  "phase_CPU_vs_wall": "Sum of parallel process CPU time, critical-path wall time and denied/blocked service are different. Either use a proved disjoint coverage or a conservative additive upper bound covering every wall segment. Do not subtract overlap without proof or infer a CPU rate from a budget.",
+  "worker_partition": {
+    "candidate_CPU": 600,
+    "candidate_IO_child_wait": 90,
+    "candidate_scheduler": 60,
+    "total": 750,
+    "unit": "seconds of proposed proof budgets, not measured service",
+    "CPU_process_domain_verified": false,
+    "wall_coverage_inequality_verified": false,
+    "CPU_and_delay_bounds_verified": false,
+    "observation_latency_included_as_obligation": true
+  },
+  "file_byte_envelopes": {
+    "worker_input_bytes": 266337791,
+    "coordinator_input_bytes": 261485331,
+    "diagnostic_sum_separate_input_ledgers": 527823122,
+    "one_shared_budget_or_ledger": false,
+    "CPU_seconds_derived": false,
+    "phase_split_derived": false,
+    "source_scope": "Fixed I122 planned input graph only; excludes treating these as full stdlib/native/evidence reads or proof for new I126-I129 inputs. No reset/deduction or freshness bypass."
+  },
+  "heap_owner_costs": [
+    {
+      "id": "H01",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 268435456,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H02",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 2147483648,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H03",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 536870912,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H04",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 6442450944,
+      "complete_bound": null,
+      "known_partial_upper": 23096917808804736,
+      "known_partial_unit": "model_requested_builtin_bytes",
+      "candidate_difference_budget_minus_partial": -23096911366353792,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H05",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 134217728,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H06",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 268435456,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H07",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 268435456,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H08",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 536870912,
+      "complete_bound": null,
+      "known_partial_upper": 532675582,
+      "known_partial_unit": "raw_input_byte_payload",
+      "candidate_difference_budget_minus_partial": 4195330,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H09",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 201326592,
+      "complete_bound": null,
+      "known_partial_upper": 134217728,
+      "known_partial_unit": "pending_bodies_plus_unique_chunk_payload",
+      "candidate_difference_budget_minus_partial": 67108864,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H10",
+      "metric": "peak_requested_live_heap",
+      "budget_bytes": 134217728,
+      "complete_bound": null,
+      "known_partial_upper": 62914560,
+      "known_partial_unit": "one_Unicode_representation_plus_one_UTF8_payload",
+      "candidate_difference_budget_minus_partial": 71303168,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    },
+    {
+      "id": "H11",
+      "metric": "allocator_overhead",
+      "budget_bytes": 1073741824,
+      "complete_bound": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "candidate_difference_budget_minus_partial": null,
+      "verified_spare_capacity_bytes": null,
+      "slack_is_proved": false
+    }
+  ],
+  "all_phase_work_and_time_upper_verified": false,
+  "full_heap_upper_verified": false,
+  "unknown_bounds_not_zero": true,
+  "source_runtime_or_components_executed": false,
+  "logical_schedule_executed": false,
+  "proposal_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY"
+}
