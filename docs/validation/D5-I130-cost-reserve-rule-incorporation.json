@@ -1,0 +1,179 @@
+{
+  "schema": "d5.i130-cost-reserve-rule-incorporation.v1",
+  "increment": "I130",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "e3f8dc292b6f8bda24ccf04bc3d54bdeede5058d",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "status": "CANDIDATE_REVISION_PREPARED_RULES_INCORPORATED_EVIDENCE_OPEN",
+  "contract": {
+    "path": "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+    "id": "PFC126-CANDIDATE-03"
+  },
+  "predecessor": {
+    "contract_id": "PFC126-CANDIDATE-02",
+    "path": "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "bytes_preserved": true,
+    "revision": 3
+  },
+  "input_pins": {
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "docs/validation/D5-I129-F127-02-cost-reserve-review.json": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "docs/validation/D5-I129-integrity.json": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1",
+    "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576"
+  },
+  "rule_disposition": {
+    "F127_01": "RESOLVED_IN_CANDIDATE_CONTRACT_ONLY_PRESERVED",
+    "F127_02": "RULES_INCORPORATED_COST_AND_SERVICE_EVIDENCE_OPEN",
+    "F129_01": "INTERVAL_COST_COVERAGE_RULE_INCORPORATED_BOUND_PENDING",
+    "F129_02": "RESERVE_CONSERVATION_AND_HIERARCHY_RULES_INCORPORATED_NO_TRANSFER"
+  },
+  "source_basis": {
+    "ledger_path": "docs/validation/D5-I129-cost-coverage-ledger.json",
+    "ledger_sha256": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "review_path": "docs/validation/D5-I129-F127-02-cost-reserve-review.json",
+    "review_sha256": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "activities_preserved": 10,
+    "heap_owners_preserved": 11,
+    "actual_new_cost_measurements": 0
+  },
+  "coverage_requirements": {
+    "coordinator_cutpoints_preserved": true,
+    "concurrent_worker_before_tR_required": true,
+    "finally_through_tF_required": true,
+    "physical_exit_to_tW_latency_required": true,
+    "complete_CPU_wait_scheduler_domain_required": true,
+    "unknown_cost_or_partial_payload_not_verified_slack": true
+  },
+  "conservation": {
+    "heap_owner_baseline_bytes": 10938744832,
+    "heap_reserve_bytes": 872415232,
+    "requested_total_bytes": 11811160064,
+    "allocator_H11_bytes": 1073741824,
+    "committed_total_bytes": 12884901888,
+    "time_phase_baselines": [
+      60,
+      750,
+      60
+    ],
+    "time_reserve_seconds": 30,
+    "total_seconds": 900,
+    "nested_worker_baselines": [
+      600,
+      90,
+      60
+    ],
+    "heap_allocation_bytes": 0,
+    "time_allocation_seconds": 0,
+    "nested_allocation_seconds": 0,
+    "all_conservation_rules_symbolic_only": true,
+    "actual_capacity_or_service_verified": false
+  },
+  "unchanged_top_level_sections": [
+    "subject",
+    "status",
+    "scope",
+    "normative_state",
+    "runtime",
+    "source_anchors",
+    "admission_rule",
+    "product_numeric_candidates",
+    "product_numeric_candidates_applied"
+  ],
+  "E01_E05_disposition": [
+    {
+      "id": "E01",
+      "closed": false,
+      "status": "PARTIAL_REFERENCE_ONLY_NOT_ATTESTED"
+    },
+    {
+      "id": "E02",
+      "closed": false,
+      "status": "COMPLETE_HEAP_FIT_NOT_DEMONSTRATED"
+    },
+    {
+      "id": "E03",
+      "closed": false,
+      "status": "KERNEL_WORK_ONLY_FULL_PHASE_WORK_MISSING"
+    },
+    {
+      "id": "E04",
+      "closed": false,
+      "status": "NO_ATTESTED_SERVICE_OR_LATENCY"
+    },
+    {
+      "id": "E05",
+      "closed": false,
+      "status": "MARKER_DEFINITION_RESOLVED_WORK_SERVICE_AND_PHASE_BOUNDS_STILL_MISSING"
+    }
+  ],
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "decision": {
+    "predecessors_bytes_preserved": true,
+    "F127_01_markers_and_qualification_preserved": true,
+    "numeric_heap_time_budgets_preserved": true,
+    "rule_adopted_in_candidate_only": true,
+    "cost_evidence_closed": false,
+    "resource_obligations_closed": 0,
+    "platform_attested": false,
+    "complete_heap_verified": false,
+    "full_work_service_or_WCET_verified": false,
+    "success_within900_verified": false,
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "product_quotas_changed": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "clock_or_schedule_measured": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL;UI04.1",
+    "D1_D4_I1_I20_A52_accepted_unchanged": true,
+    "CP03_30_sites_I124_counts_lifetimes_preserved": true,
+    "global_gaps_and_real_GI_pending": true,
+    "historical_invalid_I86_I89_I92_not_resumed": true,
+    "real_providers_credentials_consumption_reservations_activation_promotion_deployment_D6": false
+  },
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "Repository candidate contract/review only in I130; verify actual publication from Git, not self-reported commit hashes."
+  }
+}

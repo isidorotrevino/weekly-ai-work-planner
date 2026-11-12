@@ -1,0 +1,1243 @@
+{
+  "schema": "d5.i130-platform-contract-candidate.v3",
+  "contract_id": "PFC126-CANDIDATE-03",
+  "increment": "I130",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "e3f8dc292b6f8bda24ccf04bc3d54bdeede5058d",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "status": "DRAFT_FOR_REVIEW_NOT_ATTESTED_NOT_ADMITTED",
+  "authority": "USER_I130_INCORPORATE_I129_COST_RESERVE_RULES_KEEP_NO_ADMISSION_NO_EXECUTION_QUOTAS_COMMIT_PUSH_ALL",
+  "input_pins": {
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "docs/validation/D5-I129-F127-02-cost-reserve-review.json": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "docs/validation/D5-I129-integrity.json": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1"
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._fork",
+      "line": 185,
+      "end_line": 201,
+      "AST_sha256": "082307462cd41c124997a5ca52ba3a2d93729d2279d57c366057462250ca2ea9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._atomic",
+      "line": 211,
+      "end_line": 243,
+      "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Pages.flush",
+      "line": 81,
+      "end_line": 92,
+      "AST_sha256": "44ba860cb143e12a0cf5fad2b1f9142a2fbbbdd9e73c2f5e412aba164dd6720d"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "symbol": "build.Recorder._typed_finish",
+      "line": 546,
+      "end_line": 578,
+      "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "Tee",
+      "line": 30,
+      "end_line": 33,
+      "AST_sha256": "fa11f0ac3922012f6008e3f9fd16f8658fb91c3047938d1986b2ef5d93deeb3f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "line": 35,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "line": 63,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.before",
+      "line": 1593,
+      "end_line": 1601,
+      "AST_sha256": "f01e2002fa4b85205eb55456e2ac838d5c44cec8cac3a934edd615ffd98ff5c2"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "InputPlan.after",
+      "line": 1602,
+      "end_line": 1606,
+      "AST_sha256": "8d05854daa6b3a4290140d9e0e5dc26424b49ba118bee1688bf12dadca479190"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.read",
+      "line": 151,
+      "end_line": 168,
+      "AST_sha256": "8be485b40414996d4a18f52d6529efb08dc45befb96020c0ab253489463e3d85"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "Reader.finish",
+      "line": 176,
+      "end_line": 178,
+      "AST_sha256": "b0b9b2718e497ac8f42a8bd77bcf377434e71743ed2521de96409f82e56cab34"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "digest_value",
+      "line": 98,
+      "end_line": 135,
+      "AST_sha256": "92fc85b1f3493fbafefa37053a877375e268fe6dd478b4e86da20022b4f7b503"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "BoundedOutput.write",
+      "line": 462,
+      "end_line": 463,
+      "AST_sha256": "c1548a3db7fa4d2d560327d5188f06fdb67327598fcde7b917c229c2eed44e00"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "line": 540,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "PageSink.append",
+      "line": 93,
+      "end_line": 101,
+      "AST_sha256": "9f7fccf7f37561b78277b484f7e2cb934dbf1ef10e6595f316e37ae8a2172455"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "encode",
+      "line": 29,
+      "end_line": 29,
+      "AST_sha256": "74e7bb02b24afbc9d1023b7a44c07484d8c68b6e48bde9706be6954311088bc5"
+    }
+  ],
+  "scope": {
+    "heap": "Worker process peak dynamic Python and native heap including originals, observer, runtime and temporaries; all11 I125 ownership classes.",
+    "requested_vs_committed": "Requested live allocations plus explicitly bounded allocator overhead; no inference to RSS.",
+    "time": "Proposed successful end-to-end launch invocation to final launch return, including before/after current wait_worker.",
+    "failure": "Heap proof must cover bounded observer-rejection prefixes and retained tracebacks within the fixed original-source scope. The900 success target is not a guarantee that all failure cleanup paths complete within900.",
+    "other_processes": "Coordinator and children require separate bounds/service attestations for joint-host claims; worker12GiB is not total host memory.",
+    "source_route": "Fixed321-root/12-group source route and preserved I124 counts; new hooks/callees/runtime changes invalidate transfer."
+  },
+  "normative_state": {
+    "candidate_review_only": true,
+    "operator_attested": false,
+    "accepted": false,
+    "enforced": false,
+    "resources_reserved": false,
+    "active_limits_changed": false,
+    "implementation_modified": false,
+    "execution_authorized": false,
+    "component_execution_authorized": false,
+    "capture_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "runtime": {
+    "observed_reference": {
+      "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+      "pointer_bytes": 8,
+      "GIL_disabled": 0,
+      "debug": 0,
+      "pymalloc": 1,
+      "type_sizes": {
+        "dict": {
+          "basicsize": 48,
+          "itemsize": 0
+        },
+        "list": {
+          "basicsize": 40,
+          "itemsize": 0
+        },
+        "tuple": {
+          "basicsize": 32,
+          "itemsize": 8
+        },
+        "set": {
+          "basicsize": 200,
+          "itemsize": 0
+        },
+        "frozenset": {
+          "basicsize": 200,
+          "itemsize": 0
+        },
+        "int": {
+          "basicsize": 24,
+          "itemsize": 4
+        },
+        "str": {
+          "basicsize": 64,
+          "itemsize": 0
+        },
+        "bytes": {
+          "basicsize": 33,
+          "itemsize": 1
+        }
+      },
+      "interpreter_binary": {
+        "path": "/usr/bin/python3.14",
+        "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+        "bytes": 7477160,
+        "binary_identified_not_upstream_source_equivalence_attested": true
+      }
+    },
+    "required_identity_pins": {
+      "interpreter": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+      "stdlib": null,
+      "extension_binaries": null,
+      "libc_allocator": null,
+      "kernel": null,
+      "CPU_and_service_domain": null
+    },
+    "platform_attestation": {
+      "owner": null,
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "validity_interval": null,
+      "available_worker_heap_bytes": null,
+      "CPU_service_evidence": null,
+      "IO_and_child_latency_evidence": null,
+      "clock_and_scheduling_evidence": null
+    },
+    "source_binary_equivalence_verified": false,
+    "environment_manifest_verified": false
+  },
+  "heap": {
+    "metric": "Peak requested worker heap and peak committed allocator heap, not serialized file bytes or RSS.",
+    "budget_rationale": "Review envelope rounded from an11GiB requested/12GiB committed worker target, apportioned across I125 ownership classes. These are design choices, not measured demand, host availability or new executable quotas.",
+    "owner_budgets": [
+      {
+        "id": "H01",
+        "owner": "Worker interpreter/startup/imports and native extensions",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H02",
+        "owner": "Original parent-process fixtures and retained originals",
+        "candidate_budget_bytes": 2147483648,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H03",
+        "owner": "Persistent observer roots outside cloning plus scalar leaves",
+        "candidate_budget_bytes": 536870912,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H04",
+        "owner": "Cloned containers, memo/id keys and opaque sets",
+        "candidate_budget_bytes": 6442450944,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 23096917808804736,
+        "known_partial_unit": "model_requested_builtin_bytes",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H05",
+        "owner": "Traversal/generator/frame/traceback objects",
+        "candidate_budget_bytes": 134217728,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H06",
+        "owner": "Projection, digest and metadata-operation temporaries",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H07",
+        "owner": "JSON/Unicode codecs and decoded trees",
+        "candidate_budget_bytes": 268435456,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H08",
+        "owner": "Input Reader chunks and immutable phase data",
+        "candidate_budget_bytes": 536870912,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 532675582,
+        "known_partial_unit": "raw_input_byte_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H09",
+        "owner": "Event chunks, pending bodies and flush intermediates",
+        "candidate_budget_bytes": 201326592,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 134217728,
+        "known_partial_unit": "pending_bodies_plus_unique_chunk_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H10",
+        "owner": "Tee/StringIO, output text and raw parse",
+        "candidate_budget_bytes": 134217728,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "peak_requested_live_heap",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": 62914560,
+        "known_partial_unit": "one_Unicode_representation_plus_one_UTF8_payload",
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      },
+      {
+        "id": "H11",
+        "owner": "Allocation domain/accounting",
+        "candidate_budget_bytes": 1073741824,
+        "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+        "metric": "allocator_overhead",
+        "proof_upper_bytes": null,
+        "evidence_pins": {},
+        "status": "UNPROVED",
+        "known_partial_upper": null,
+        "known_partial_unit": null,
+        "known_partial_is_complete_term": false,
+        "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+      }
+    ],
+    "requested_owner_budget_bytes": 10938744832,
+    "unassigned_requested_reserve_bytes": 872415232,
+    "requested_heap_candidate_bytes": 11811160064,
+    "allocator_overhead_candidate_bytes": 1073741824,
+    "committed_heap_candidate_bytes": 12884901888,
+    "reserve_rule": "832MiB stays unassigned in candidate03. Any future reviewed allocation obeys reserve_accounting.heap: increase the named owner only while reducing remaining reserve by the same exact bytes, preserve11GiB requested/12GiB committed and do not borrow H11 automatically. No transfer is applied.",
+    "proof_rule": "Verified complete per-owner byte/lifetime bounds must fit the explicitly reviewed effective budgets. Sum of requested bounds plus documented remaining reserve<=11GiB, allocator overhead<=1GiB and committed<=12GiB; capacity is independently attested. Reserve accounting never supplies missing bounds or service.",
+    "complete_requested_upper_bytes": null,
+    "complete_committed_upper_bytes": null,
+    "host_total_capacity_bytes": null,
+    "all_owner_bounds_verified": false,
+    "capacity_attested": false
+  },
+  "time": {
+    "clock": "One required monotonic coordinator clock, common unit/domain for t0,tR,tW,tF. Definition only: clock/service not attested and no timestamps collected.",
+    "success_end_to_end_candidate_seconds": 900,
+    "phase_budgets": [
+      {
+        "id": "Tpre",
+        "start": "entry into launch(requested,root)",
+        "end": "successful RELEASE write and close complete",
+        "candidate_wall_seconds": 60,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      },
+      {
+        "id": "Tworker",
+        "start": "RELEASE write/close complete",
+        "end": "Coordinator wait_worker(process) call returned exact True (tW), not physical worker exit",
+        "candidate_wall_seconds": 750,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      },
+      {
+        "id": "Tpost",
+        "start": "Coordinator exact-True wait_worker return (tW), not worker exit or later packet validation",
+        "end": "launch return after cleanup, after/finish, evidence validation and final context write",
+        "candidate_wall_seconds": 60,
+        "verified_upper_seconds": null,
+        "evidence_pins": {}
+      }
+    ],
+    "unassigned_wall_reserve_seconds": 30,
+    "worker_service_partition": {
+      "candidate_CPU_upper_seconds": 600,
+      "candidate_IO_child_wait_upper_seconds": 90,
+      "candidate_scheduler_and_blocking_upper_seconds": 60,
+      "CPU_upper_verified": false,
+      "IO_child_wait_upper_verified": false,
+      "scheduler_upper_verified": false,
+      "attribution": "Disjoint upper-bound categories or a conservative additive overcount. GC/native/codecs/destruction charged to CPU; child completion and IO to wait; dispatch/lock service to scheduler. Do not omit them or count their budgets as guarantees. Worker physical-exit-to-coordinator-wait-return latency remains inside Tworker and must be charged to the bounded scheduling/observation service, even for an already-exited worker. Also obey cost_coverage and reserve_accounting.worker_nested: declare service/process units, include all interval contributors and apply no extra per-category reserve."
+    },
+    "CPU_proof_route": "UNSELECTED: exact-runtime/platform static WCET, or bounded whole-window work plus an attested lower service curve and bounded delays.",
+    "minimum_service_curve": {
+      "rate_unit": null,
+      "rate_lower_bound": null,
+      "latency_upper_seconds": null,
+      "evidence_pins": {},
+      "verified": false
+    },
+    "noncopy_work_upper": null,
+    "service_rule": "Preserve the exact-True coordinator markers and60/750/60+30 proof target. Attribute all work by cost_coverage, including pre-tR worker work and finally. Future reviewed time allocation must conserve900 via reserve_accounting.time and keep worker categories consistent; no allocation applies now. Work/r, budgets, reserves or process.wait900 alone prove no service or successful duration.",
+    "current_source_watchdog": {
+      "seconds": 900,
+      "scope": "Only process.wait in typed.wait_worker after RELEASE, not an end-to-end deadline.",
+      "unchanged": true,
+      "proves_successful_completion": false
+    },
+    "new_end_to_end_timer_installed": false,
+    "all_phase_bounds_verified": false,
+    "successful_completion_within900_verified": false,
+    "normative_markers": [
+      {
+        "id": "t0",
+        "event": "Coordinator enters launch, before its first statement",
+        "clock_owner": "coordinator",
+        "source_anchor": {
+          "path": "testing/prospective_capture_joint_i122/capture.py",
+          "symbol": "launch",
+          "kind": "FUNCTION_INVOCATION_ENTRY_NOT_DEFINITION_EXECUTION",
+          "line": 103,
+          "column": 0,
+          "end_line": 177,
+          "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+        },
+        "clock_value": null
+      },
+      {
+        "id": "tR",
+        "event": "Coordinator os.close(release_write) returned normally after complete RELEASE/newline write",
+        "clock_owner": "coordinator",
+        "source_anchor": {
+          "path": "testing/prospective_capture_joint_i122/capture.py",
+          "symbol": "launch",
+          "expression": "os.close(release_write)",
+          "occurrence": 0,
+          "line": 123,
+          "column": 115,
+          "end_line": 123,
+          "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f",
+          "kind": "SUCCESSFUL_CALL_RETURN"
+        },
+        "clock_value": null
+      },
+      {
+        "id": "tW",
+        "event": "The unique coordinator wait_worker(process) call returned the exact value True; timestamp belongs to this call return",
+        "clock_owner": "coordinator",
+        "source_anchor": {
+          "path": "testing/prospective_capture_joint_i122/capture.py",
+          "symbol": "launch",
+          "expression": "wait_worker(process)",
+          "occurrence": 0,
+          "line": 124,
+          "column": 15,
+          "end_line": 124,
+          "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9",
+          "kind": "CALL_RETURN_EXACT_TRUE"
+        },
+        "clock_value": null
+      },
+      {
+        "id": "tF",
+        "event": "Coordinator launch returns normally after finally and final writes/closes; eligibility is independently validated",
+        "clock_owner": "coordinator",
+        "source_anchor": {
+          "path": "testing/prospective_capture_joint_i122/capture.py",
+          "symbol": "launch",
+          "kind": "NORMAL_RETURN_AFTER_FINALLY",
+          "line": 177,
+          "column": 4,
+          "end_line": 177,
+          "AST_sha256": "6b8b737bd5a5519d6c0a88b02575f3b74a7ee86acdc49db3ee8d5559c44a46f8"
+        },
+        "clock_value": null
+      }
+    ],
+    "ordered_interval_rule": {
+      "required_order": [
+        "t0",
+        "tR",
+        "tW",
+        "tF"
+      ],
+      "inequality": "t0<=tR<=tW<=tF",
+      "intervals": {
+        "Tpre": "tR-t0",
+        "Tworker": "tW-tR",
+        "Tpost": "tF-tW"
+      },
+      "nonnegative_required": true,
+      "telescoping_identity": "Tpre+Tworker+Tpost=tF-t0",
+      "no_uncovered_exit_observation_gap": true
+    },
+    "success_path_qualification": {
+      "wait_worker_result_must_be_exact_True": true,
+      "wait_True_is_not_capture_success": true,
+      "independent_later_checks": [
+        "worker normal exit code0",
+        "all existing authority/input/packet/page/functional/capture checks succeed",
+        "success-path finally/context/launch writes and closes complete",
+        "final normal launch return has accepted pending-sufficiency capture status"
+      ],
+      "later_checks_never_move_tW": true,
+      "False_or_exception_defines_qualified_tW": false,
+      "no_missing_marker_or_time_coerced_to_zero": true,
+      "claim_requires_all_four_markers": true,
+      "timeout_flag_or_later_cleanup_cannot_substitute_True": true,
+      "existing_source_checks_not_modified": true
+    },
+    "observation_latency_rule": "Physical worker exit is not an interval boundary. If exit precedes tR or wait invocation, parent wait return still defines tW>=tR. Any wait dispatch/reap/return delay is inside Tworker; do not omit or subtract it.",
+    "failure_claim": "False, wait exception, nonzero exit, failed packet/capture validation or exceptional/invalid finalization do not establish this qualified-success<=900 claim. No new deadline is asserted for every failure/cleanup route; existing timeout/cleanup semantics remain unchanged.",
+    "proof_collection_state": {
+      "markers_instrumented": false,
+      "clock_values_collected": false,
+      "scheduler_interleaving_executed": false,
+      "source_program_order_reviewed_only": true,
+      "clock_guarantee_verified": false
+    },
+    "forbidden_marker_substitutions": [
+      "Worker physical OS exit timestamp",
+      "Later capture validation or cleanup/reap time for tW",
+      "raw suite elapsed_seconds or file mtime/ctime",
+      "process.wait timeout900 as successful duration proof",
+      "Later normal capture status alone as proof that wait_worker returnedTrue"
+    ]
+  },
+  "required_evidence": [
+    {
+      "id": "E01",
+      "description": "Attested exact runtime/stdlib/native/allocator/kernel/service identities and binary/source correspondence.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E02",
+      "description": "Complete11-owner requested/committed heap proof and available capacity for candidate budgets, including nonclone memory; obey conserved heap reserve/H11 separation with no automatic allocation or unknown cost treated as0.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E03",
+      "description": "Whole phase work/WCET per cost_coverage: include concurrent post-receipt worker work before parent tR, original/metadata/native/codecs/GC/destruction and coordinator success-path finally. Bounds remain missing.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E04",
+      "description": "Attested compatible CPU/process service and scheduling/IO/child latency with proven complete wall coverage. Budgets and unassigned reserves are not service; include exit-to-tW observation latency.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E05",
+      "description": "Prove qualified-success ordered coordinator intervals with exact-True tW and complete per-phase bounds. Preserve60/750/60+30=900 or a future explicitly reviewed conserved allocation, including consistent inner Tworker categories. Cost/reserve rules do not close timing evidence.",
+      "status": "MISSING"
+    },
+    {
+      "id": "E06",
+      "description": "Separately authorized component runtime evidence, resource certificate and exact CP07 admission/new authority; drafting this contract grants none.",
+      "status": "MISSING"
+    }
+  ],
+  "admission_rule": "Resource-contract attestation requires pinned evidence E01-E05 and all heap/time resource predicates true; it does not authorize execution. PJC115-R2/capture admission additionally requires E06, current source bindings and all independent existing gates. Until actual admission, preserve IMPLEMENTED_NOT_ADMITTED and DO_NOT_ISSUE_SOURCE_CAPACITY_VERIFIED.",
+  "historical_I125_no_contract_reply_preserved": true,
+  "contract_candidate_is_not_retroactive_I125_attestation": true,
+  "product_numeric_candidates": {
+    "event_bytes": 4096,
+    "events_test": 2048,
+    "events_campaign": 131072,
+    "page_bytes": 2097152,
+    "pages": 32,
+    "event_pages_total_bytes": 67108864,
+    "raw_bytes": 12582912,
+    "index_sidecar_bytes": 35651584,
+    "context_bytes": 12582912,
+    "launch_bytes": 12582912,
+    "package_bytes": 140513280,
+    "evidence_unique_bytes": 134217728,
+    "evidence_read_bytes": 297799680,
+    "operand_bytes": 16777216,
+    "frames": 4096,
+    "refs": 442305,
+    "depth": 32,
+    "string": 4096,
+    "input_paths": 4096,
+    "input_file_bytes": 16777216,
+    "input_unique_bytes": 134217728,
+    "input_read_bytes": 268435456,
+    "wait_seconds": 20,
+    "campaign_seconds": 900
+  },
+  "product_numeric_candidates_applied": false,
+  "git_publication": {
+    "commit_and_push_all_changes_requested": true,
+    "publication_scope": "Repository source and documentary artifacts only; no product/capture/deployment admission.",
+    "historical_no_commit_records_are_as_of_their_increment": true
+  },
+  "predecessor": {
+    "contract_id": "PFC126-CANDIDATE-02",
+    "path": "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "bytes_preserved": true,
+    "revision": 3
+  },
+  "amendment": {
+    "finding": "F127-02",
+    "review_path": "docs/validation/D5-I129-F127-02-cost-reserve-review.json",
+    "review_sha256": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "ledger_path": "docs/validation/D5-I129-cost-coverage-ledger.json",
+    "ledger_sha256": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "status": "COST_AND_RESERVE_RULES_INCORPORATED_EVIDENCE_OPEN",
+    "change": "Adopt I129 interval-based complete cost coverage and conserved/documented heap/time reserve rules, with no allocation, numeric budget or quota change.",
+    "F127_01_resolution_preserved": true,
+    "does_not_close_E01_E05": true,
+    "does_not_change_product_or_quotas": true
+  },
+  "inherited_amendments": [
+    {
+      "finding": "F127-01",
+      "review_path": "docs/validation/D5-I127-E01-E05-review.json",
+      "review_sha256": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+      "status": "RESOLVED_IN_CANDIDATE_CONTRACT_ONLY",
+      "change": "Replace unobserved worker OS exit boundary by coordinator wait_worker exact-True return, with ordered parent-clock markers and independent later success eligibility.",
+      "does_not_close_E05": true,
+      "does_not_change_product_or_quotas": true
+    }
+  ],
+  "cost_coverage": {
+    "status": "NORMATIVE_CANDIDATE_RULES_NOT_VERIFIED_COSTS",
+    "basis": {
+      "path": "docs/validation/D5-I129-cost-coverage-ledger.json",
+      "sha256": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa"
+    },
+    "source_anchors": [
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": null,
+        "occurrence": 0,
+        "line": 103,
+        "column": 0,
+        "end_line": 177,
+        "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "c.subprocess.Popen(cmd, cwd=root, stdin=c.subprocess.DEVNULL, stdout=rawfd, stderr=c.subprocess.DEVNULL, pass_fds=(sidefd, ready_write, release_read, directory), start_new_session=True, env=dict(PATH=os.defpath, LANG='C.UTF-8', LC_ALL='C.UTF-8', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONIOENCODING='utf-8'))",
+        "occurrence": 0,
+        "line": 120,
+        "column": 16,
+        "end_line": 120,
+        "AST_sha256": "cd3a0f1942ab10b0df49950c6a0ffcfd2585e6dab9e9bdb3c6a67788f368f477"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "c.write_json_fd(release_write, dict(event='RELEASE', lease=owner.nonce), 4096)",
+        "occurrence": 0,
+        "line": 123,
+        "column": 8,
+        "end_line": 123,
+        "AST_sha256": "256805b2097989f12397da64b9ffaac0cc175d5572db83a2c502130dc6516945"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "os.close(release_write)",
+        "occurrence": 0,
+        "line": 123,
+        "column": 115,
+        "end_line": 123,
+        "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "wait_worker(process)",
+        "occurrence": 0,
+        "line": 124,
+        "column": 15,
+        "end_line": 124,
+        "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "inputs.joint_plan.after()",
+        "occurrence": 0,
+        "line": 126,
+        "column": 8,
+        "end_line": 126,
+        "AST_sha256": "aa3ef80189ac3b6202a1a25fbb322a301f992c8ec517be77de344a5617fafcc4"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "packet.finish()",
+        "occurrence": 0,
+        "line": 141,
+        "column": 8,
+        "end_line": 141,
+        "AST_sha256": "6a2785fb553093960b4c6d012c144e3591374234265800d6efd8e78c323b4767"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "write_all(launchfd, b)",
+        "occurrence": 0,
+        "line": 175,
+        "column": 12,
+        "end_line": 175,
+        "AST_sha256": "1813da4489505ff58dcf2455248d4be820cfaf37b57d153bf088f8feb13ddeec"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "symbol": "main",
+        "expression": null,
+        "occurrence": 0,
+        "line": 63,
+        "column": 0,
+        "end_line": 94,
+        "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "symbol": "exercise",
+        "expression": null,
+        "occurrence": 0,
+        "line": 35,
+        "column": 0,
+        "end_line": 60,
+        "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "symbol": "wait_worker",
+        "expression": null,
+        "occurrence": 0,
+        "line": 540,
+        "column": 0,
+        "end_line": 543,
+        "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "write_all(release_write, b'\\n')",
+        "occurrence": 0,
+        "line": 123,
+        "column": 84,
+        "end_line": 123,
+        "AST_sha256": "f1b8dc3d696c77eec75bfa5cffacb7e46070b8517ee0e648c8faa2f859ae9435"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "symbol": "main",
+        "expression": "p.verify_release(c.receive_line(releasefd, p.LIMITS['wait_seconds']), lease)",
+        "occurrence": 0,
+        "line": 72,
+        "column": 29,
+        "end_line": 72,
+        "AST_sha256": "f637b5df094bb5af57f438388327fca453b4fa0ef1456dbdaee5a4c69db5684b"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "symbol": "main",
+        "expression": "importlib.import_module(entry['runner_module'])",
+        "occurrence": 0,
+        "line": 76,
+        "column": 15,
+        "end_line": 76,
+        "AST_sha256": "c56022900cba75644ad6d24fed31505122247712637aae35772a0a0f12712c75"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "symbol": "main",
+        "expression": "writer.write(side, p.LIMITS['index_sidecar_bytes'])",
+        "occurrence": 0,
+        "line": 82,
+        "column": 103,
+        "end_line": 82,
+        "AST_sha256": "8c2a04d001a800f177f4d912355ba167d438c91393622a002d0cb95d888dfc15"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "packet.listing(DESTINATION)",
+        "occurrence": 0,
+        "line": 160,
+        "column": 83,
+        "end_line": 160,
+        "AST_sha256": "1f31791324853ba08e48b96278a617a4c88476ef7b42a60ea3a8508e3c68dd46"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "encode(context)",
+        "occurrence": 0,
+        "line": 159,
+        "column": 29,
+        "end_line": 159,
+        "AST_sha256": "e3eb93df8d7909e42d8f4565f6fc4d813f76253d78b72ce224b968e3b0abf204"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "launch",
+        "expression": "owner.create('context.json')",
+        "occurrence": 0,
+        "line": 172,
+        "column": 15,
+        "end_line": 172,
+        "AST_sha256": "481831fdd002753765243c9d8f9bd550ab03f828f9115de81b79b5f00654ef88"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "symbol": "build.Recorder._atomic",
+        "expression": null,
+        "occurrence": 0,
+        "line": 211,
+        "column": 8,
+        "end_line": 243,
+        "AST_sha256": "d932f5bb86712574f37ec554fdc84167458de7269e8368f95f6a385e4d611705"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "symbol": "build.Recorder._typed_finish",
+        "expression": null,
+        "occurrence": 0,
+        "line": 546,
+        "column": 8,
+        "end_line": 578,
+        "AST_sha256": "fb34e991e53c3dd53f405df7dc4bb4bfd73846e2633f994f352d0c0f3955a607"
+      }
+    ],
+    "activities": [
+      {
+        "id": "C01",
+        "process": "coordinator",
+        "activity": "Initial registry/authority and input discovery",
+        "source": "capture.launch/read_registry/InputPlan.before",
+        "phase": "Tpre",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "Source routes and fixed input ledger only",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C02",
+        "process": "worker",
+        "activity": "Startup, registry/authority/channels before READY/RELEASE",
+        "source": "worker.main before READY/RELEASE",
+        "phase": "Tpre",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "Worker begins before coordinator RELEASE-close",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C03",
+        "process": "coordinator",
+        "activity": "Popen, READY receive, RELEASE write/newline/close",
+        "source": "capture.launch through tR",
+        "phase": "Tpre",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "tR is parent close completion, not child release receipt",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C04",
+        "process": "worker and its children",
+        "activity": "Post-RELEASE runner/import/targets/suite/metadata/finalization occurring before tR",
+        "source": "worker.main after verify_release and exercise",
+        "phase": "Tpre",
+        "categories": [
+          "CPU",
+          "IO_child_wait",
+          "scheduler"
+        ],
+        "known": "Possible overlap before parent close; never automatically assign all this work solely to Tworker",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C05",
+        "process": "worker and its children",
+        "activity": "Same work continuing at/after tR until worker exit",
+        "source": "worker.main/exercise/atomic phases/finish/after/write",
+        "phase": "Tworker",
+        "categories": [
+          "CPU",
+          "IO_child_wait",
+          "scheduler"
+        ],
+        "known": "Split/overcount requires proof; source-function label alone does not determine interval",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C06",
+        "process": "coordinator",
+        "activity": "Wait dispatch, exit observation/reap and returnTrue at tW",
+        "source": "launch.wait_worker / typed.wait_worker",
+        "phase": "Tworker",
+        "categories": [
+          "CPU",
+          "scheduler",
+          "IO_child_wait"
+        ],
+        "known": "Include physical-exit-to-wait-return latency even if worker already exited before tR",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C07",
+        "process": "coordinator",
+        "activity": "Normal cleanup and fresh input after/finish checks",
+        "source": "launch after wait_worker",
+        "phase": "Tpost",
+        "categories": [
+          "CPU",
+          "IO_child_wait",
+          "scheduler"
+        ],
+        "known": "Success qualification does not move tW",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C08",
+        "process": "coordinator",
+        "activity": "Packet read/parse/hash/page validation/aggregation and finish",
+        "source": "launch evidence_reader/validate_pages/packet.finish",
+        "phase": "Tpost",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "Input Reader envelope is not evidence Reader or validation CPU",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C09",
+        "process": "coordinator",
+        "activity": "Finally fd closes, owner/package/listing/sizes/context encode and final context/launch writes",
+        "source": "launch finally through actual return tF",
+        "phase": "Tpost",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "Must include finally even on success; packet.finish is not end of claimed window",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      },
+      {
+        "id": "C10",
+        "process": "each relevant process",
+        "activity": "Projection, JSON/Unicode, hashing/sorting, GC/destruction, native runtime, locks and allocation",
+        "source": "Inherited helpers and runtime across phases",
+        "phase": "CROSS_PHASE_ATTRIBUTE_BY_ACTUAL_INTERVAL",
+        "categories": [
+          "CPU",
+          "IO",
+          "scheduler"
+        ],
+        "known": "Charges already inside each phase, not a free external tail or omitted noncopy0",
+        "verified_work_upper": null,
+        "verified_CPU_seconds_upper": null,
+        "verified_wall_seconds_upper": null,
+        "evidence_status": "SOURCE_COVERAGE_ONLY_NOT_WCET",
+        "requirement": "REQUIRED_COVERAGE_UNPROVED",
+        "candidate_rule_only": true
+      }
+    ],
+    "interval_rule": {
+      "required_order": [
+        "t0",
+        "tR",
+        "tW",
+        "tF"
+      ],
+      "inequality": "t0<=tR<=tW<=tF",
+      "intervals": {
+        "Tpre": "tR-t0",
+        "Tworker": "tW-tR",
+        "Tpost": "tF-tW"
+      },
+      "nonnegative_required": true,
+      "telescoping_identity": "Tpre+Tworker+Tpost=tF-t0",
+      "no_uncovered_exit_observation_gap": true
+    },
+    "attribution_rule": "Attribute every relevant contributor to the coordinator intervals t0..tR, tR..tW, tW..tF, or use a justified conservative overcount across intervals. Source-helper names or child RELEASE receipt are not interval boundaries.",
+    "pre_tR_worker_rule": "Worker may consume RELEASE/newline and run imports, suite, observers, children or finalization before coordinator RELEASE-close tR. Tpre must cover that work or a proven conservative bound; never place all post-receipt worker work exclusively in Tworker by assumption.",
+    "finally_rule": "Tpost includes cleanup, fresh inputs, evidence parse/validation, package listing/size checks and success-path finally/context/launch writes/closes through actual return tF.",
+    "observation_rule": "Physical exit-to-wait-return service stays in Tworker, including coordinator dispatch/observe/reap/return latency for an already-exited worker. Keep exact-True tW unchanged.",
+    "CPU_wall_rule": "Declare the process/service domain and compatible units before proof. Parallel-process CPU sum, elapsed wall and waiting/denied service differ. Prove disjoint complete coverage or a conservative additive wall upper bound; no unproved subtraction of overlap.",
+    "noncopy_rule": "Include projection, JSON/Unicode, hashes/sorts, original code, native calls, locks, allocation, GC/destruction and process service. Unknown work or wait is not0 and cannot be paid by an unproved reserve.",
+    "input_byte_rule": "I122 worker/coordinator input file-byte envelopes are separate ledgers, not CPU/time units, all-IO bounds or automatic phase splits. New capture inputs require exact rebind and recalculation.",
+    "all_activity_bounds_verified": false,
+    "CPU_wall_coverage_verified": false,
+    "proof_upper_seconds": null,
+    "executed_or_measured": false
+  },
+  "reserve_accounting": {
+    "status": "NORMATIVE_CANDIDATE_RULES_NO_TRANSFER_APPLIED",
+    "state_metric": "Documentary candidate allocation only; zero here is not measured runtime usage or actual spare resources.",
+    "heap": {
+      "unit": "bytes",
+      "eligible_owner_ids": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09",
+        "H10"
+      ],
+      "owner_baseline_bytes": {
+        "H01": 268435456,
+        "H02": 2147483648,
+        "H03": 536870912,
+        "H04": 6442450944,
+        "H05": 134217728,
+        "H06": 268435456,
+        "H07": 268435456,
+        "H08": 536870912,
+        "H09": 201326592,
+        "H10": 134217728
+      },
+      "reserve_baseline_bytes": 872415232,
+      "allocation_bytes": {
+        "H01": 0,
+        "H02": 0,
+        "H03": 0,
+        "H04": 0,
+        "H05": 0,
+        "H06": 0,
+        "H07": 0,
+        "H08": 0,
+        "H09": 0,
+        "H10": 0
+      },
+      "allocated_total_bytes": 0,
+      "remaining_reserve_bytes": 872415232,
+      "requested_total_bytes": 11811160064,
+      "allocator_H11_bytes": 1073741824,
+      "committed_total_bytes": 12884901888,
+      "rule": {
+        "domain": "x_i are nonnegative exact integer bytes for H01-H10; sum(x_i)<=872415232",
+        "owner_update": "B_i_new=B_i+x_i",
+        "reserve_update": "R_heap_new=872415232-sum(x_i)",
+        "conservation": "sum(B_i_new)+R_heap_new=11811160064",
+        "allocator_separation": "H11 overhead1073741824 is not an additional free requested-heap reserve; no automatic borrowing from H11 or other owners.",
+        "unknown_costs": "No null bound treated as0, budget-minus-partial treated as verified slack, or unproved owner funded silently by reserve."
+      }
+    },
+    "time": {
+      "unit": "exact rational seconds",
+      "phase_ids": [
+        "Tpre",
+        "Tworker",
+        "Tpost"
+      ],
+      "phase_baseline_seconds": {
+        "Tpre": 60,
+        "Tworker": 750,
+        "Tpost": 60
+      },
+      "reserve_baseline_seconds": 30,
+      "allocation_seconds": {
+        "Tpre": 0,
+        "Tworker": 0,
+        "Tpost": 0
+      },
+      "allocated_total_seconds": 0,
+      "remaining_reserve_seconds": 30,
+      "end_to_end_total_seconds": 900,
+      "rule": {
+        "domain": "y_pre,y_worker,y_post are nonnegative finite exact rational seconds; sum(y)<=30",
+        "phase_update": "phase_new=phase_baseline+y_phase",
+        "reserve_update": "R_time_new=30-sum(y)",
+        "conservation": "sum(phase_new)+R_time_new=900",
+        "phase_limits": "Unassigned30 is not automatic permission to exceed60/750/60. Unknown/unbounded phases have no finite payment from reserve."
+      }
+    },
+    "worker_nested": {
+      "base_category_seconds": {
+        "CPU": 600,
+        "IO_child_wait": 90,
+        "scheduler": 60
+      },
+      "base_total_seconds": 750,
+      "additional_category_allocation_seconds": {
+        "CPU": 0,
+        "IO_child_wait": 0,
+        "scheduler": 0
+      },
+      "additional_phase_allocation_seconds": 0,
+      "category_reserve_seconds": 0,
+      "rule": "If a future reviewed y_worker is assigned to Tworker, explicitly assign nonnegative exact rational z_CPU,z_IO,z_scheduler with sum(z)=y_worker. Updated category sum=750+y_worker; updated reserve=30-sum(y). One outer credit, not three independent credits.",
+      "category_slack_verified": false,
+      "allocation_constraint": "z_CPU+z_IO+z_scheduler=y_worker",
+      "updated_category_sum": "750+sum(z)",
+      "updated_phase_budget": "750+y_worker"
+    },
+    "transition_requirements": [
+      "Explicit reviewed/pinned contract allocation or successor revision recording amounts, owners/phases, remaining reserves and unchanged global totals. No silent automatic runtime transfer.",
+      "Complete cost/lifetime/work evidence and compatible service/capacity evidence for the resulting owner/phase budgets; changes of budget alone prove no fit.",
+      "For a worker-phase allocation, record the consistent nested category split and prove coverage/latencies; no unused IO/scheduler budget becomes CPU service by assertion.",
+      "No negative entries, double credit of original and residual reserve, release/reset, byte-to-second conversion, physical witness merge, product quota mutation or implied execution authorization."
+    ],
+    "resource_availability_verified": false,
+    "reserve_or_capacity_verified": false,
+    "transfers_applied": false,
+    "resources_reserved": false,
+    "product_quotas_changed": false
+  }
+}
