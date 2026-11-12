@@ -1,0 +1,193 @@
+{
+  "schema": "d5.i127-runtime-reference-manifest.v1",
+  "increment": "I127",
+  "client_date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "42d69b558b615aae95fd226596775c752f5143f9",
+  "status": "READ_ONLY_LOCAL_REFERENCE_NOT_PLATFORM_ATTESTATION",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "collection": "File hashes and standard-interpreter metadata only, using standard hashing/metadata helpers. No target/product/component import, no extension candidate imported for discovery, no ldd, performance/memory probe, benchmark or scheduler experiment.",
+  "interpreter": {
+    "path": "/usr/bin/python3.14",
+    "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+    "bytes": 7477160
+  },
+  "matches_I126_interpreter_pin": true,
+  "interpreter_version_observed": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "metadata": {
+    "pointer_bytes": 8,
+    "GIL_disabled": 0,
+    "debug": 0,
+    "pymalloc": 1
+  },
+  "stdlib_file_references": [
+    {
+      "relative_name": "json/__init__.py",
+      "path": "/usr/lib/python3.14/json/__init__.py",
+      "exists": true,
+      "sha256": "95022d150a27a2bfd54ac21bfce35812c96b53c420bb7b018dcb573f13e52da0",
+      "bytes": 14066,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "json/encoder.py",
+      "path": "/usr/lib/python3.14/json/encoder.py",
+      "exists": true,
+      "sha256": "d68a4d04d2cfd95897498307f29349058b42c3f48ea6aa6739714a09200a7d01",
+      "bytes": 16990,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "json/decoder.py",
+      "path": "/usr/lib/python3.14/json/decoder.py",
+      "exists": true,
+      "sha256": "302ce57cb6f411122d7ef2ad2997c1fc0f184849fab3f1f585752f18f2195c73",
+      "bytes": 12873,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "json/scanner.py",
+      "path": "/usr/lib/python3.14/json/scanner.py",
+      "exists": true,
+      "sha256": "572958017eae8842eeddd0e3d18d3c56cc0a197348224915e1d87ce937841764",
+      "bytes": 2434,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "threading.py",
+      "path": "/usr/lib/python3.14/threading.py",
+      "exists": true,
+      "sha256": "5323909624ec2165e70b6d31333e4191b63d383d2dc5a7d7d516a3475ea2b7e3",
+      "bytes": 56923,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "subprocess.py",
+      "path": "/usr/lib/python3.14/subprocess.py",
+      "exists": true,
+      "sha256": "6628ffdd65c093a6c08cae01ffe82877d3ced515aac9e7be0cff16512c30a7d9",
+      "bytes": 90732,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "multiprocessing/context.py",
+      "path": "/usr/lib/python3.14/multiprocessing/context.py",
+      "exists": true,
+      "sha256": "6d9058b6770152b5d26f2f3ece22de423decf1c751038f6bcd81995096aa9ab6",
+      "bytes": 12163,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "multiprocessing/process.py",
+      "path": "/usr/lib/python3.14/multiprocessing/process.py",
+      "exists": true,
+      "sha256": "9cad9791c8ff9aba8f688c4e7ad9f620384231f8d0dfcc88dbc1e4c947ec28bc",
+      "bytes": 12233,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "multiprocessing/connection.py",
+      "path": "/usr/lib/python3.14/multiprocessing/connection.py",
+      "exists": true,
+      "sha256": "aff97ea124226eb6cce4243fd699aac4420df87e9b9662d6be4f14629b34fded",
+      "bytes": 43615,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "multiprocessing/popen_spawn_posix.py",
+      "path": "/usr/lib/python3.14/multiprocessing/popen_spawn_posix.py",
+      "exists": true,
+      "sha256": "3738d2da3f5f57c83149232120a389a3b03cb4ed6f275957b884b18eb227628a",
+      "bytes": 2143,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "io.py",
+      "path": "/usr/lib/python3.14/io.py",
+      "exists": true,
+      "sha256": "1b75584d4efcc612dc0db2ae98619408276585a106f0544879edb5e25b55430a",
+      "bytes": 4736,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    },
+    {
+      "relative_name": "hashlib.py",
+      "path": "/usr/lib/python3.14/hashlib.py",
+      "exists": true,
+      "sha256": "88fa624821fbdee7eb2ef87c2437b207afe328cf117c7463367e2db5eb1af492",
+      "bytes": 9459,
+      "classification": "FILE_REFERENCE_ONLY_NOT_PROOF_OF_LOADED_IMPLEMENTATION"
+    }
+  ],
+  "extension_references": [
+    {
+      "name": "_json",
+      "declared_builtin": true,
+      "external_file_candidates": [],
+      "selection_or_loaded_module_proved": false,
+      "absence_of_file_is_not_absence_of_builtin": true
+    },
+    {
+      "name": "_hashlib",
+      "declared_builtin": false,
+      "external_file_candidates": [
+        {
+          "path": "/usr/lib/python3.14/lib-dynload/_hashlib.cpython-314-x86_64-linux-gnu.so",
+          "sha256": "f57bc22cc1b6f3b48c43778634af1a7e79c5ae0632350fa5144d050c7848112c",
+          "bytes": 64448
+        }
+      ],
+      "selection_or_loaded_module_proved": false,
+      "absence_of_file_is_not_absence_of_builtin": true
+    },
+    {
+      "name": "_multiprocessing",
+      "declared_builtin": false,
+      "external_file_candidates": [
+        {
+          "path": "/usr/lib/python3.14/lib-dynload/_multiprocessing.cpython-314-x86_64-linux-gnu.so",
+          "sha256": "b690ca4d1d6811aa03f821a3a0761375ace39ace1e23c584f88fc08baf2cdafb",
+          "bytes": 24328
+        }
+      ],
+      "selection_or_loaded_module_proved": false,
+      "absence_of_file_is_not_absence_of_builtin": true
+    },
+    {
+      "name": "_struct",
+      "declared_builtin": true,
+      "external_file_candidates": [],
+      "selection_or_loaded_module_proved": false,
+      "absence_of_file_is_not_absence_of_builtin": true
+    },
+    {
+      "name": "_posixsubprocess",
+      "declared_builtin": true,
+      "external_file_candidates": [],
+      "selection_or_loaded_module_proved": false,
+      "absence_of_file_is_not_absence_of_builtin": true
+    }
+  ],
+  "kernel_label": {
+    "system": "Linux",
+    "release": "7.0.0-42-generic",
+    "version": "#42-Ubuntu SMP PREEMPT_DYNAMIC Thu Oct 15 08:06:44 UTC 2026",
+    "machine": "x86_64",
+    "is_kernel_binary_pin": false
+  },
+  "not_proved": [
+    "Full actually loaded/frozen/builtin/extension closure",
+    "Native dependency and libc/allocator correspondence",
+    "Kernel image/configuration and CPU/service-domain identity",
+    "Source-to-binary and compiler correspondence",
+    "Operator ownership/signature/validity and available capacity",
+    "CPU service, scheduling or IO/child latency guarantees"
+  ],
+  "operator_attested": false,
+  "loaded_module_closure_complete": false,
+  "environment_manifest_verified": false,
+  "host_capacity_verified": false,
+  "product_or_components_executed": false,
+  "proposal_enabled": false,
+  "D5_closed": false,
+  "IR03": "NOT_READY"
+}

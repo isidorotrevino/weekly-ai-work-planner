@@ -1,0 +1,541 @@
+{
+  "schema": "d5.i127-e01-e05-platform-review.v1",
+  "increment": "I127",
+  "date": "2026-11-12",
+  "timezone": "Europe/Madrid",
+  "base_commit": "42d69b558b615aae95fd226596775c752f5143f9",
+  "subject": "I122-CANDIDATE-01 / PJC115-R2",
+  "contract_id": "PFC126-CANDIDATE-01",
+  "status": "E01_E05_REVIEW_COMPLETE_NO_RESOURCE_ADMISSION",
+  "input_pins": {
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I126-platform-candidate-review.json": "99138ff4b9a3df45a6878bb8eadd271a05b15aba9c885e049abe45fdefd14d2e",
+    "docs/validation/D5-I126-integrity.json": "afe2bccddfdf04a230a4c09268edb2ca822ef1f992f15ea851564ee124072641",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I122-binding-review.json": "d6cd654d8c16241aed6e3c183782f57440918e5d8f6956194d9950d2d09dc498",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b"
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": null,
+      "occurrence": 0,
+      "line": 103,
+      "column": 0,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.subprocess.Popen(cmd, cwd=root, stdin=c.subprocess.DEVNULL, stdout=rawfd, stderr=c.subprocess.DEVNULL, pass_fds=(sidefd, ready_write, release_read, directory), start_new_session=True, env=dict(PATH=os.defpath, LANG='C.UTF-8', LC_ALL='C.UTF-8', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONIOENCODING='utf-8'))",
+      "occurrence": 0,
+      "line": 120,
+      "column": 16,
+      "end_line": 120,
+      "AST_sha256": "cd3a0f1942ab10b0df49950c6a0ffcfd2585e6dab9e9bdb3c6a67788f368f477"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "c.write_json_fd(release_write, dict(event='RELEASE', lease=owner.nonce), 4096)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 8,
+      "end_line": 123,
+      "AST_sha256": "256805b2097989f12397da64b9ffaac0cc175d5572db83a2c502130dc6516945"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "os.close(release_write)",
+      "occurrence": 0,
+      "line": 123,
+      "column": 115,
+      "end_line": 123,
+      "AST_sha256": "46678452114fa66c82608b78d02d33505077b3daf6a5cb2e60c4548be9b24f8f"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "wait_worker(process)",
+      "occurrence": 0,
+      "line": 124,
+      "column": 15,
+      "end_line": 124,
+      "AST_sha256": "74587a5e6a394fe78213934336d43b7a50e2661fcbd8b45f9d996ea8f97343f9"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "inputs.joint_plan.after()",
+      "occurrence": 0,
+      "line": 126,
+      "column": 8,
+      "end_line": 126,
+      "AST_sha256": "aa3ef80189ac3b6202a1a25fbb322a301f992c8ec517be77de344a5617fafcc4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "packet.finish()",
+      "occurrence": 0,
+      "line": 141,
+      "column": 8,
+      "end_line": 141,
+      "AST_sha256": "6a2785fb553093960b4c6d012c144e3591374234265800d6efd8e78c323b4767"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "expression": "write_all(launchfd, b)",
+      "occurrence": 0,
+      "line": 175,
+      "column": 12,
+      "end_line": 175,
+      "AST_sha256": "1813da4489505ff58dcf2455248d4be820cfaf37b57d153bf088f8feb13ddeec"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "expression": null,
+      "occurrence": 0,
+      "line": 63,
+      "column": 0,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "exercise",
+      "expression": null,
+      "occurrence": 0,
+      "line": 35,
+      "column": 0,
+      "end_line": 60,
+      "AST_sha256": "777971183d21860d23efad9089b60021d3db1b9bcae42a2f4a4ff546e17b1210"
+    },
+    {
+      "path": "testing/prospective_capture_typed/capture.py",
+      "symbol": "wait_worker",
+      "expression": null,
+      "occurrence": 0,
+      "line": 540,
+      "column": 0,
+      "end_line": 543,
+      "AST_sha256": "c7471748eef650addbfc2a94108b73c0c554b2ad79b78b4748b07367054e4acf"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "E01",
+      "scope": "Runtime/platform identity and correspondence",
+      "status": "PARTIAL_REFERENCE_ONLY_NOT_ATTESTED",
+      "closed": false,
+      "evidence": [
+        "I126 existing interpreter pin",
+        "I127 exact interpreter check and12 stdlib file references plus5 extension name classifications"
+      ],
+      "findings": [
+        "Selected file hashes improve reference coverage without proving actual loaded/frozen/builtin implementations. A missing .so can be a builtin; not a missing dependency finding.",
+        "Kernel uname is a label, not a kernel image/config pin or CPU service guarantee."
+      ],
+      "still_required": [
+        "Complete execution closure and native/allocator dependencies with source/binary correspondence",
+        "Operator attestation with validity interval and platform/service identity"
+      ],
+      "acceptance": "Evidence must bind the exact target runtime and declared platform; all non-interpreter I126 identity pins and attestation claims need verified artifacts. A local inventory is not operator attestation."
+    },
+    {
+      "id": "E02",
+      "scope": "Complete11-owner heap proof and available capacity",
+      "status": "COMPLETE_HEAP_FIT_NOT_DEMONSTRATED",
+      "closed": false,
+      "evidence": [
+        "I125 eleven-owner coverage census",
+        "I126 budget arithmetic and I124 conditional clone storage",
+        "I127 owner-by-owner comparison"
+      ],
+      "findings": [
+        "All11 complete proof upper bounds remain null.",
+        "H04 conditional cumulative model upper exceeds6144MiB budget; it does not demonstrate fit or actual infeasibility.",
+        "H08/H09/H10 payloads below budgets leave room for additional storage, not a PASS for their complete owners."
+      ],
+      "still_required": [
+        "Byte and lifetime proof for each owner, originals/runtime/codecs/native/frame/allocator and applicable rejection paths",
+        "Requested/committed metric and allocator domain defined; evidence of available capacity, separate other-process scope if making host claims"
+      ],
+      "acceptance": "Verified complete per-owner upper<=its candidate allocation, requested sum plus reviewed reserve<=11GiB, allocator overhead<=1GiB and committed<=12GiB; actual availability separately attested."
+    },
+    {
+      "id": "E03",
+      "scope": "Whole-window work/WCET",
+      "status": "KERNEL_WORK_ONLY_FULL_PHASE_WORK_MISSING",
+      "closed": false,
+      "evidence": [
+        "I124 F/S and lifetime/clone logical work envelope",
+        "I127 coordinator/worker phase-source map"
+      ],
+      "findings": [
+        "Clone visits are logical work, not CPU seconds or whole-phase WCET.",
+        "Tpre includes worker startup/registry/authority before READY, not just coordinator setup.",
+        "Tpost includes final package enumeration and context/launch writes in finally; worker Reader bytes are not a coordinator CPU or total-IO bound."
+      ],
+      "still_required": [
+        "Whole original+observer+native+codec+destruction work per process/phase with compatible units",
+        "Bounded startup/import, postvalidation and success-path finally costs"
+      ],
+      "acceptance": "Choose justified exact-platform WCET or full work+service proof. Cover every phase and process contributor without calling unknown noncopy work0."
+    },
+    {
+      "id": "E04",
+      "scope": "CPU service and scheduling/IO/child latency",
+      "status": "NO_ATTESTED_SERVICE_OR_LATENCY",
+      "closed": false,
+      "evidence": [
+        "I126 required service-curve fields and600/90/60 targets"
+      ],
+      "findings": [
+        "rate, unit, latency and evidence remain null/empty.",
+        "The600/90/60 partition is a proposed budget, not a service reservation or guarantee.",
+        "Identity labels, frequency or core count cannot stand in for a compatible lower service curve and bounded interference/delays."
+      ],
+      "still_required": [
+        "Attested platform/service/clock/process domain and justified CPU availability or WCET assumptions",
+        "Latency bounds for scheduling/locks, filesystem and children, including wait-return observation latency"
+      ],
+      "acceptance": "Evidence must substantiate600 CPU/90 IO-child/60 scheduler bounds or an explicitly reviewed compatible model; using work/budget as a rate does not establish service."
+    },
+    {
+      "id": "E05",
+      "scope": "60/750/60 plus30 success<=900 proof",
+      "status": "ARITHMETIC_CHECKED_ENDPOINT_CLARIFICATION_REQUIRED_NO_TIME_PROOF",
+      "closed": false,
+      "evidence": [
+        "I12660+750+60+30=900 and600+90+60=750",
+        "I125 timer-scope review",
+        "I127 exact source anchors and proposed ordered observation markers"
+      ],
+      "findings": [
+        "Arithmetic partitions pass; every verified phase upper remains null.",
+        "PFC126 uses actual worker exit as boundary, but it may precede coordinator RELEASE-close or its observation. The phase definitions need an ordered observable success-path boundary.",
+        "Existing process.wait900 is unchanged and proves neither successful completion nor end-to-end900."
+      ],
+      "still_required": [
+        "Resolve F127-01 markers in a reviewed future contract revision; PFC126 remains unchanged in I127",
+        "Complete E03/E04 evidence, per-phase bounds and controlled use of the30-second reserve"
+      ],
+      "acceptance": "Prove nonnegative ordered intervals from launch entry to actual normal return with monotonic clock and exact source markers; each bound fits its budget and reserve is counted once. Independently require successful capture outcomes."
+    }
+  ],
+  "heap_owner_review": [
+    {
+      "id": "H01",
+      "owner": "Worker interpreter/startup/imports and native extensions",
+      "candidate_budget_bytes": 268435456,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H02",
+      "owner": "Original parent-process fixtures and retained originals",
+      "candidate_budget_bytes": 2147483648,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H03",
+      "owner": "Persistent observer roots outside cloning plus scalar leaves",
+      "candidate_budget_bytes": 536870912,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H04",
+      "owner": "Cloned containers, memo/id keys and opaque sets",
+      "candidate_budget_bytes": 6442450944,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": 23096917808804736,
+      "known_partial_unit": "model_requested_builtin_bytes",
+      "partial_minus_budget": 23096911366353792,
+      "partial_remaining_budget_bytes": -23096911366353792,
+      "comparison": "CONDITIONAL_MODEL_EXCEEDS_BUDGET_NOT_ACTUAL_INFEASIBILITY",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H05",
+      "owner": "Traversal/generator/frame/traceback objects",
+      "candidate_budget_bytes": 134217728,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H06",
+      "owner": "Projection, digest and metadata-operation temporaries",
+      "candidate_budget_bytes": 268435456,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H07",
+      "owner": "JSON/Unicode codecs and decoded trees",
+      "candidate_budget_bytes": 268435456,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H08",
+      "owner": "Input Reader chunks and immutable phase data",
+      "candidate_budget_bytes": 536870912,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": 532675582,
+      "known_partial_unit": "raw_input_byte_payload",
+      "partial_minus_budget": -4195330,
+      "partial_remaining_budget_bytes": 4195330,
+      "comparison": "PAYLOAD_SUBBOUND_BELOW_BUDGET_NOT_COMPLETE_FIT",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H09",
+      "owner": "Event chunks, pending bodies and flush intermediates",
+      "candidate_budget_bytes": 201326592,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": 134217728,
+      "known_partial_unit": "pending_bodies_plus_unique_chunk_payload",
+      "partial_minus_budget": -67108864,
+      "partial_remaining_budget_bytes": 67108864,
+      "comparison": "PAYLOAD_SUBBOUND_BELOW_BUDGET_NOT_COMPLETE_FIT",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H10",
+      "owner": "Tee/StringIO, output text and raw parse",
+      "candidate_budget_bytes": 134217728,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": 62914560,
+      "known_partial_unit": "one_Unicode_representation_plus_one_UTF8_payload",
+      "partial_minus_budget": -71303168,
+      "partial_remaining_budget_bytes": 71303168,
+      "comparison": "PAYLOAD_SUBBOUND_BELOW_BUDGET_NOT_COMPLETE_FIT",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    },
+    {
+      "id": "H11",
+      "owner": "Allocation domain/accounting",
+      "candidate_budget_bytes": 1073741824,
+      "complete_verified_upper_bytes": null,
+      "known_partial_upper": null,
+      "known_partial_unit": null,
+      "partial_minus_budget": null,
+      "partial_remaining_budget_bytes": null,
+      "comparison": "NO_COMPLETE_BOUND",
+      "complete_fit_verified": false,
+      "capacity_attested": false
+    }
+  ],
+  "phase_source_map": [
+    {
+      "phase": "Tpre",
+      "processes": [
+        "coordinator",
+        "worker pre-RELEASE"
+      ],
+      "work": [
+        "Registry/authority/input plan and source reads",
+        "Channel/destination/Popen and READY/RELEASE",
+        "Worker registry/authority validation and channel setup before READY"
+      ],
+      "CPU_and_wall_bound": null
+    },
+    {
+      "phase": "Tworker",
+      "processes": [
+        "worker",
+        "children service",
+        "coordinator waiting/resume"
+      ],
+      "work": [
+        "After-RELEASE runner inputs/import/targets",
+        "Original suite and metadata, GC/native/projection/JSON",
+        "restore/raw decode/finish",
+        "Worker after/finish Reader and final sidecar write",
+        "Coordinator observation/reap scheduling at normal wait return (proposed marker)"
+      ],
+      "CPU_and_wall_bound": null
+    },
+    {
+      "phase": "Tpost",
+      "processes": [
+        "coordinator"
+      ],
+      "work": [
+        "Cleanup and fresh after/finish Reader passes",
+        "Evidence parse/page validation/aggregation",
+        "Finally: package listing/size checks, context and launch writes, close and return"
+      ],
+      "CPU_and_wall_bound": null
+    }
+  ],
+  "findings": [
+    {
+      "id": "F127-01",
+      "obligation": "E05",
+      "kind": "CONTRACT_BOUNDARY_CLARIFICATION",
+      "status": "OPEN_FOR_FUTURE_CONTRACT_REVIEW",
+      "source_facts": [
+        "RELEASE payload/newline write precedes os.close(release_write).",
+        "Worker can read RELEASE and proceed independently; no ordering assertion places OS worker exit after coordinator close.",
+        "Coordinator calls wait_worker only after that close; normal successful wait return confirms exit and supplies an ordered observation."
+      ],
+      "logical_interleaving_not_executed": [
+        "Coordinator writes complete RELEASE then is descheduled before close.",
+        "Worker reads RELEASE, proceeds and may exit before coordinator resumes.",
+        "Coordinator closes release descriptor and calls wait_worker, which observes existing exit."
+      ],
+      "proposed_markers": {
+        "t0": "Coordinator launch entry",
+        "tR": "Coordinator RELEASE-close complete",
+        "tW": "Coordinator wait_worker returnedTrue: timestamp at return, with normal exit and capture success independently validated later; later validation does not move this marker.",
+        "tF": "Coordinator actual launch return after finally"
+      },
+      "proposed_order": "t0<=tR<=tW<=tF",
+      "proposed_intervals": [
+        "Tpre=tR-t0",
+        "Tworker=tW-tR",
+        "Tpost=tF-tW"
+      ],
+      "note": "Use parent observation/reap time, not unobserved OS exit timestamp; charge worker-exit-to-wait-return scheduling latency explicitly. This is proposed review wording, not a contract/source edit or a runtime observation.",
+      "logical_model_executed": false
+    },
+    {
+      "id": "F127-02",
+      "obligation": "E03/E04/E05",
+      "kind": "COST_AND_RESERVE_ACCOUNTING",
+      "status": "OPEN_EVIDENCE",
+      "note": "Include worker pre-READY work in Tpre and success-path finally work in Tpost. The30-second unassigned reserve cannot absorb an unbounded phase; exceeding a phase budget requires explicit reviewed allocation/revision, never an implicit resource guarantee."
+    }
+  ],
+  "arithmetic_verified": {
+    "requested_owner_bytes": 10938744832,
+    "requested_reserve_bytes": 872415232,
+    "requested_total_bytes": 11811160064,
+    "allocator_overhead_bytes": 1073741824,
+    "committed_total_bytes": 12884901888,
+    "phase_seconds": [
+      60,
+      750,
+      60
+    ],
+    "unassigned_wall_reserve_seconds": 30,
+    "total_wall_seconds": 900,
+    "worker_partition_seconds": [
+      600,
+      90,
+      60
+    ],
+    "worker_total_seconds": 750,
+    "arithmetic_only": true
+  },
+  "inherited_results": {
+    "F": 52018,
+    "S": 1759,
+    "retained_generations": 53778,
+    "clone_visits": 17164544043094,
+    "not_CPU_seconds": true
+  },
+  "E06": {
+    "reviewed_in_I127": false,
+    "status": "REMAINS_SEPARATE_PENDING_NOT_RUN",
+    "component_tests_executed": 0,
+    "no_implicit_execution_authorization": true
+  },
+  "decision": {
+    "E01_E05_all_closed": false,
+    "platform_attested": false,
+    "complete_heap_verified": false,
+    "full_work_WCET_verified": false,
+    "CPU_service_verified": false,
+    "success_within900_verified": false,
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "PFC126_bytes_unchanged": true,
+    "product_quotas_changed": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "scheduler_model_executed": false,
+    "resources_reserved": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "CP03_and_30_source_sites_and_I124_preserved": true,
+    "semantic_baseline": "P0;83 SUPPORTS_BOUNDED/1 PARTIAL;UI04.1",
+    "D1_D4_I1_I20_A52_accepted_unchanged": true,
+    "global_gaps_and_real_GI_pending": true,
+    "historical_invalid_I86_I89_I92_not_resumed": true,
+    "real_providers_credentials_consumption_reservations_activation_promotion_deployment_D6": false
+  },
+  "git_publication": {
+    "commit_and_push_all_requested": true,
+    "scope": "All repository changes; documentary review only in I127. Confirm success from Git, not this self-contained record."
+  }
+}
