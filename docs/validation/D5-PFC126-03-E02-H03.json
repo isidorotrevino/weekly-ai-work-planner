@@ -1,0 +1,2578 @@
+{
+  "schema": "d5.pfc126-03.e02-h03.v1",
+  "artifact_id": "PFC126-03-P04-H03-PERSISTENT-OBSERVER-I143",
+  "package_id": "P04-H03",
+  "increment": "I143",
+  "date": "2026-11-13",
+  "timezone": "Europe/Madrid",
+  "base_commit": "89725ddaa0e5d056362fa106a40036bf251b0234",
+  "evidence_kind": "DOCUMENTARY_PERSISTENT_OBSERVER_ROOT_REQUIREMENTS_NOT_COMPLETE_H03_PROOF",
+  "status": "PREPARED_INSUFFICIENT_PERSISTENT_OBSERVER_HEAP_H03_E02_OPEN_NOT_ADMITTED",
+  "plan_binding": {
+    "path": "docs/validation/D5-I132-E01-E05-evidence-plan.json",
+    "sha256": "d7852f0290905bbd924fc2b2723fbca0d43528fcef0c9afbc89a4612a1c5b345",
+    "package_id": "P04-H03",
+    "task_record_canonical_sha256": "7b92d73bc5f1ad64b8fdd7f3c5b993e7956a7192b92ea67360f898ee549929cb"
+  },
+  "candidate_binding": {
+    "path": "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+    "sha256": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+    "contract_id": "PFC126-CANDIDATE-03",
+    "subject": "I122-CANDIDATE-01 / PJC115-R2",
+    "source_revision": "I122-CANDIDATE-01"
+  },
+  "input_pins": {
+    "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+    "docs/validation/D5-I132-E01-E05-evidence-plan.json": "d7852f0290905bbd924fc2b2723fbca0d43528fcef0c9afbc89a4612a1c5b345",
+    "docs/validation/D5-I132-closure-checklist.json": "e9ad4d2604d652d9e49143ed20ce0e6e469d92c53b7999720d9aaa3e3181406d",
+    "docs/validation/D5-I132-integrity.json": "048393ac6c7cd9d9c48581aceb634a4b5089cfb95fcc5143b5f1b2df8362d070",
+    "docs/validation/D5-I122-CAPTURE-REGISTRY.json": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+    "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json": "1bf3cb8c1d267cc6b4a2c442f103333d93066b55f61b0c30a8aeaeccfca58c68",
+    "docs/validation/D5-I122-CAPACITY-CONTRACT.json": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+    "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+    "docs/validation/D5-I122-COMPONENTS-MANIFEST.json": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+    "docs/validation/D5-I122-atomicity-implementation.json": "30e6d41cb41d9119d7996cff69d47e79d20c4ffa12cfb76cd2e7c0cedd768116",
+    "docs/validation/D5-I124-global-batch-lifetime-proof.json": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+    "docs/validation/D5-I115-refined-reference-envelope.json": "ac92889bdcd91f268f2266c0513ed1cc10d4b83a8c604addb5d8dafa1d8204fa",
+    "docs/validation/D5-I113-drive-global-event-bounds.json": "21aded182f61beffeb98f7afa6986bfbf99e4e81e54d920f671998b602a8d86f",
+    "docs/validation/D5-I127-runtime-reference-manifest.json": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+    "docs/validation/D5-I125-complete-heap-review.json": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+    "docs/validation/D5-I125-900-second-review.json": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+    "docs/validation/D5-I125-resource-admission-decision.json": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+    "docs/validation/D5-I125-integrity.json": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+    "docs/validation/D5-I124-resource-admission-review.json": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+    "docs/validation/D5-I124-integrity.json": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+    "docs/validation/D5-I123-transient-resource-envelope.json": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+    "testing/prospective_capture_joint_i122/atomic.py": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+    "testing/prospective_capture_joint_i122/capture.py": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+    "testing/prospective_capture_joint_i122/worker.py": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+    "testing/prospective_capture/capture.py": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+    "testing/prospective_capture_typed/capture.py": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+    "testing/prospective_capture_late/capture.py": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+    "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+    "docs/validation/D5-I127-E01-E05-review.json": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+    "docs/validation/D5-I127-integrity.json": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+    "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+    "docs/validation/D5-I128-F127-01-resolution.json": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+    "docs/validation/D5-I128-integrity.json": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+    "docs/validation/D5-I129-cost-coverage-ledger.json": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+    "docs/validation/D5-I129-F127-02-cost-reserve-review.json": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+    "docs/validation/D5-I129-integrity.json": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+    "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+    "docs/design/D5-I35-NEXT-CUT-SCOPE.md": "8f4be298d849da615280909cf25968ed271eedfceece6713735b598bbd30be90",
+    "source_ingest/__init__.py": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+    "source_ingest/__main__.py": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+    "source_ingest/adoption.py": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+    "source_ingest/batch_fixture.py": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+    "source_ingest/bootstrap.py": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+    "source_ingest/compare.py": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+    "source_ingest/durable_ambiguity_fixture.py": "cf8b211c61e1981192c89eb09edc2d8f0435494c285b63e21c705068c2219fd4",
+    "source_ingest/durable_relational_fixture.py": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+    "source_ingest/durable_store.py": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+    "source_ingest/durable_task_fixture.py": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+    "source_ingest/eligibility_fixture.py": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+    "source_ingest/incremental_fixture.py": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+    "source_ingest/isolated_local_edit.py": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+    "source_ingest/local_edit.py": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+    "source_ingest/local_reappearance.py": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+    "source_ingest/offline.py": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+    "source_ingest/plane_fixture.py": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+    "source_ingest/postgres.py": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+    "source_ingest/preview.py": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+    "source_ingest/reappearance.py": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+    "source_ingest/register.py": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+    "source_ingest/relational_planner.py": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+    "source_ingest/review.py": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+    "source_ingest/task_mapping.py": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+    "testing/D5/adoption_scenarios.py": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+    "testing/D5/bootstrap_scenarios.py": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+    "testing/D5/demo_durable_integration.py": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+    "testing/D5/demo_durable_relational.py": "215ce133b3d9c31c2968856cce891694ba98f16f330175d9a12822c653b7fabd",
+    "testing/D5/demo_offline_integration.py": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+    "testing/D5/demo_plane_reconciliation.py": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+    "testing/D5/demo_profiles_quotas.py": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+    "testing/D5/demo_register.py": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+    "testing/D5/demo_relational_batch.py": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+    "testing/D5/durable_support.py": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+    "testing/D5/fixtures/plan.md": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+    "testing/D5/fixtures/register-after.md": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+    "testing/D5/fixtures/register-before.md": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+    "testing/D5/fixtures/register-compat-after.md": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+    "testing/D5/fixtures/register-compat-before.md": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+    "testing/D5/isolated_local_edit_scenarios.py": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+    "testing/D5/local_edit_scenarios.py": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+    "testing/D5/local_reappearance_scenarios.py": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+    "testing/D5/mapping_scenarios.py": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+    "testing/D5/postgres_scenarios.py": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+    "testing/D5/reappearance_scenarios.py": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+    "testing/D5/relational_support.py": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+    "testing/D5/review_scenarios.py": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+    "testing/D5/run_adoption_lab.py": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+    "testing/D5/run_batch_lab.py": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+    "testing/D5/run_bootstrap_lab.py": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+    "testing/D5/run_durable_lab.py": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+    "testing/D5/run_eligibility_lab.py": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+    "testing/D5/run_incremental_lab.py": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+    "testing/D5/run_isolated_local_edit_lab.py": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+    "testing/D5/run_local_edit_lab.py": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+    "testing/D5/run_local_reappearance_lab.py": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+    "testing/D5/run_mapping_lab.py": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+    "testing/D5/run_plane_lab.py": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+    "testing/D5/run_postgres_lab.py": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+    "testing/D5/run_reappearance_lab.py": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+    "testing/D5/run_relational_durable_lab.py": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+    "testing/D5/run_review_lab.py": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+    "testing/D5/run_v30_lab.py": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+    "testing/D5/test_durable_integration.py": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+    "testing/D5/test_durable_relational.py": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+    "testing/D5/test_incremental_capture.py": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+    "testing/D5/test_local_preview.py": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+    "testing/D5/test_offline_integration.py": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+    "testing/D5/test_plane_reconciliation.py": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+    "testing/D5/test_postgres_adapter.py": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+    "testing/D5/test_profiles_quotas.py": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+    "testing/D5/test_register_comparison.py": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+    "testing/D5/test_register_compat.py": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+    "testing/D5/test_relational_batch.py": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+    "testing/D5/test_review_report.py": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+    "testing/D5/v30_scenarios.py": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e",
+    "testing/prospective_capture_joint_i122/test_joint_capture.py": "9cc7e86e7a78e99eb862b32841acb2869deb5e3d04aab769d37a50c8a4360881",
+    "testing/prospective_capture_joint_i122/run_joint_lab.py": "233bfb1eed326382063cc56bf35b6723222e722c54d9430be512784c156d736c",
+    "testing/prospective_capture_joint_i122/README.md": "7edca2891466a4637e306a8b2e538f9ee0523053a359dc3da47b2865d3a94f2b",
+    "testing/prospective_capture_selectors/capture.py": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+    "testing/prospective_capture_paged/capture.py": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+    "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json": "299280a0634b5e5e976bbdf06deff0388bfd319874a53193f027d9b2832303ff",
+    "docs/validation/D5-I134-P01-documentary-review.json": "c84c0295fca7c49c6a8de4949c60cfcdc4a52e3fe08da10e9acb577ef95200df",
+    "docs/validation/D5-I134-P01-source-reconstruction.json": "c7c640ed01d4a787bcffc1f0af99bdd71dde2231361eb530d66b8c7fb1bad304",
+    "docs/validation/D5-I134-integrity.json": "086c1f06e33e2a5e701110c893859ebd13b683c5bef9f59d9ddb9d22ac5cb249",
+    "docs/validation/D5-I131-E01-E05-review.json": "76bf3db8bbd2bb4c75c6f725568491ebf2ff77f5493741867fbb6b28f363aed7",
+    "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json": "4c153e208797d6494f9e6d96bd35d3a711c8d238c863b353385c55a801c3fd7d",
+    "docs/validation/D5-I136-P02-documentary-review.json": "cfbb9402f7f3df774d8adb303ce0523ed36527df549e5e2feebceb6a0af825a3",
+    "docs/validation/D5-I136-integrity.json": "2f5b306d6608614b4914b56744835c097dba8f3bbbbc1271ac32b5ed967f89b5",
+    "docs/validation/D5-I136-P02-source-reconstruction.json": "0ea0e9324ed8057750cd64b6921586b62d7f12fcb044e583e9af03960fa96395",
+    "docs/validation/D5-I135-P02-preparation-review.json": "0b3cfadafdb3d00f75a8917a1269ebbc3513e5e29ee5777cdcd8d50c22dd1c33",
+    "docs/validation/D5-PFC126-03-E04-PLATFORM-ENVELOPE.json": "bccd7df41c1f857d07f85e85b7ff3bea32b0031a3dcd0c5c290f0e244ad940f4",
+    "docs/validation/D5-I138-P03-documentary-review.json": "b0e81018c9ee5cd8053432cf40142902e7d6c5ca22438b7783ed0b3f935babef",
+    "docs/validation/D5-I138-P03-source-reconstruction.json": "3c53500812a9d35bc2e048ccc0ec718cf4466953f23a325e954ea0f60393f27b",
+    "docs/validation/D5-I138-integrity.json": "ce01f1f597b141fc70f74279702300c1eec698e9064481b581399f2e7e30030a",
+    "docs/validation/D5-I137-P03-preparation-review.json": "23898c76ed21e1183a60710435046522966925f4cfb54c301616073f09035fa0",
+    "docs/validation/D5-PFC126-03-E02-H01.json": "312604f1e26c27227477b34bc318e7f8038c7b0b22adf4c7bce3363daccfe3e9",
+    "docs/validation/D5-I140-P04-H01-documentary-review.json": "9ed262def18c138d255b5cc747df9d86be114084fad090aa95153d6f5c1720f5",
+    "docs/validation/D5-I140-P04-H01-source-reconstruction.json": "c17162a9a16e44c60e3a7c7bb3e9f08d43a03aaa5c99ea945575d730351a600f",
+    "docs/validation/D5-I140-integrity.json": "6641c4162caa33d9c4e581c7b907d3542c4cdabf6e4640cd44eefc4f89920ebe",
+    "docs/validation/D5-I139-P04-H01-preparation-review.json": "59bb8354ead3640b5678bf38cff4640fa80775920d3c39c1ddfb0ff52b4e400d",
+    "docs/validation/D5-PFC126-03-E02-H02.json": "833afd1544013a414d2b548cc8ecfc111dae7e2c424c37041cb5d3c1769dcf4b",
+    "docs/validation/D5-I142-P04-H02-documentary-review.json": "379e99d5790fe05df1ab99c5dc21c27036e7bdc1453608256fa685699e051e67",
+    "docs/validation/D5-I142-P04-H02-source-reconstruction.json": "55e235186c41fd266780a742a8bda9a8838f47beda9c9240c788953fbdde0cc4",
+    "docs/validation/D5-I142-integrity.json": "b41caa5e9dcbb05df7b13ec3bdd71c4edcfa8da0ed610f5589c92b9330f733fe",
+    "docs/validation/D5-I141-P04-H02-preparation-review.json": "82c3cef441812bfebd8b9fcf5082c807ed7b5560c6dcac70d2d59fd5dffad74f"
+  },
+  "source_evidence": {
+    "commit": "89725ddaa0e5d056362fa106a40036bf251b0234",
+    "input_pin_count": 145,
+    "input_blob_checks": [
+      {
+        "path": "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md",
+        "git_blob_oid": "e464b9153ced64e9c8d7f8c04f7b5672a636eb2a",
+        "sha256": "3d4e95b97e2a60e080492d0f5f4a9652e170fca62e4e17831ee37e32c92c19c5",
+        "bytes": 18581
+      },
+      {
+        "path": "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md",
+        "git_blob_oid": "23ffac7d13cf635d9f9cf10c0570aa9dac757bff",
+        "sha256": "5df50702d4df51be8e2202397a0192808727556afc49ef3cb6ac2cdd3fa7f438",
+        "bytes": 9131
+      },
+      {
+        "path": "docs/design/D5-I35-NEXT-CUT-SCOPE.md",
+        "git_blob_oid": "23e3262d7ab637779b246080facad8ad3cdc3efa",
+        "sha256": "8f4be298d849da615280909cf25968ed271eedfceece6713735b598bbd30be90",
+        "bytes": 4731
+      },
+      {
+        "path": "docs/validation/D5-I113-drive-global-event-bounds.json",
+        "git_blob_oid": "11c275580aa480563e9bc76d7b09f42c825e7399",
+        "sha256": "21aded182f61beffeb98f7afa6986bfbf99e4e81e54d920f671998b602a8d86f",
+        "bytes": 156391
+      },
+      {
+        "path": "docs/validation/D5-I115-refined-reference-envelope.json",
+        "git_blob_oid": "c9e3d46416ed81e006278f049d0f07cd3a4ffc76",
+        "sha256": "ac92889bdcd91f268f2266c0513ed1cc10d4b83a8c604addb5d8dafa1d8204fa",
+        "bytes": 698037
+      },
+      {
+        "path": "docs/validation/D5-I122-CAPACITY-CERTIFICATE.json",
+        "git_blob_oid": "8193f96bf09f0665ae9dedebdb157fa94beaae33",
+        "sha256": "88e6d1aec104050c9f3ad9abec7d00612b89099dc21a37afe6a4d8b15e09cd07",
+        "bytes": 55536
+      },
+      {
+        "path": "docs/validation/D5-I122-CAPACITY-CONTRACT.json",
+        "git_blob_oid": "d3e4cc6a5315b15f066444cb953dec893876d15a",
+        "sha256": "97f04d4ebb7fefe67ba3792cc25e4208865f5d145d4b08538cc9aea3fe5d6444",
+        "bytes": 6160
+      },
+      {
+        "path": "docs/validation/D5-I122-CAPTURE-REGISTRY.json",
+        "git_blob_oid": "6f0a1ede0d7b9f2b3f1c501e8e00af1f52535610",
+        "sha256": "53e567fe517f7985067b285c2480b0becd1098ba465cb47b27de23e8b056fede",
+        "bytes": 57521
+      },
+      {
+        "path": "docs/validation/D5-I122-COMPONENTS-MANIFEST.json",
+        "git_blob_oid": "049f6e4c8eaff0bd2517ca452abbde44053bbf7d",
+        "sha256": "9ece97556350a57642df2aaf04e0a3710cdd63ede16d910bd71198a3ba0d91d6",
+        "bytes": 2266
+      },
+      {
+        "path": "docs/validation/D5-I122-atomicity-implementation.json",
+        "git_blob_oid": "edf1fadd3b0343a3dfefcefc475135b4102c72ac",
+        "sha256": "30e6d41cb41d9119d7996cff69d47e79d20c4ffa12cfb76cd2e7c0cedd768116",
+        "bytes": 17877
+      },
+      {
+        "path": "docs/validation/D5-I123-transient-resource-envelope.json",
+        "git_blob_oid": "d03aefa84073dbc1525251f97f7ae31f509ece0e",
+        "sha256": "724759958fbb5e3cc0e5fa778611ac7e6c56df43311f6ca18da742cc367d6d57",
+        "bytes": 13450
+      },
+      {
+        "path": "docs/validation/D5-I124-global-batch-lifetime-proof.json",
+        "git_blob_oid": "4dbbc67cb55abe289f58d31c41449bde703e5c7a",
+        "sha256": "281093c143028a3ccaf9afbd43a58f5068fec59790bee74dda2a8f4d99a9481c",
+        "bytes": 300064
+      },
+      {
+        "path": "docs/validation/D5-I124-integrity.json",
+        "git_blob_oid": "971732f77c3ef301af802fe9d80c4f8ef4ad8b02",
+        "sha256": "a76e34d433a1b7d4f5eee10ca98adc3aa0b6ced348b71c69a8a0ae7efbb6c701",
+        "bytes": 12786
+      },
+      {
+        "path": "docs/validation/D5-I124-resource-admission-review.json",
+        "git_blob_oid": "bc708cdf0de45f642c4f04ec9edfec170c110c61",
+        "sha256": "275ee69ba9350dd3dce5c44f4798796b26083fcbde792b4976e399bfef85c68b",
+        "bytes": 6961
+      },
+      {
+        "path": "docs/validation/D5-I125-900-second-review.json",
+        "git_blob_oid": "d79610843b63c3132927bf33e2ff72dba4381eff",
+        "sha256": "80c2eeb51a055837e32452fe8e50a59b85e2467560fde78e5f459d2eb19a4b31",
+        "bytes": 6655
+      },
+      {
+        "path": "docs/validation/D5-I125-complete-heap-review.json",
+        "git_blob_oid": "226f179554884de26e7560447d71da47ad9d6a38",
+        "sha256": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+        "bytes": 12565
+      },
+      {
+        "path": "docs/validation/D5-I125-integrity.json",
+        "git_blob_oid": "a98c3965422c59a3ba73924ae42aae66f4938d55",
+        "sha256": "74bf20ff036bbb04b1400e9df2ef2246d10931cf4eadef1d6a17664ea8b02a20",
+        "bytes": 13515
+      },
+      {
+        "path": "docs/validation/D5-I125-resource-admission-decision.json",
+        "git_blob_oid": "d9810ddabfcb497eb6513a15e40daeed1519831e",
+        "sha256": "89ffd62efd9b376778039eb257aa231c47fa807d611728c661071ea0b3367702",
+        "bytes": 2643
+      },
+      {
+        "path": "docs/validation/D5-I126-PLATFORM-CONTRACT-CANDIDATE.json",
+        "git_blob_oid": "86295755fda1c4a81362650488e2c34fc0a39420",
+        "sha256": "b57513d43f4ca288d6adadb029dca234d812bad1ab803d5323107a44392f18fe",
+        "bytes": 24768
+      },
+      {
+        "path": "docs/validation/D5-I127-E01-E05-review.json",
+        "git_blob_oid": "78424217676cb799c5cac0fe991b40363b6afe1c",
+        "sha256": "cc734ba53751d0781eac70e82ec7970b8d72e1ceedd11b8b7699f3686af2d8c3",
+        "bytes": 23585
+      },
+      {
+        "path": "docs/validation/D5-I127-integrity.json",
+        "git_blob_oid": "96967e958a9f4bf1371a15da1d9a2939c3ecfc53",
+        "sha256": "ddfff6f54e8a253069d52ee02436514cade57d1ae396103bd15f8dcf31df0824",
+        "bytes": 14788
+      },
+      {
+        "path": "docs/validation/D5-I127-runtime-reference-manifest.json",
+        "git_blob_oid": "aa650b3c82ed07989c8197551050f19bc414d9ca",
+        "sha256": "66c84fe35d70c6ced8a654d7bad522a6780366f6e104e4a15b0a742c3be7cff2",
+        "bytes": 7353
+      },
+      {
+        "path": "docs/validation/D5-I128-F127-01-resolution.json",
+        "git_blob_oid": "74db49be3e789b82eb6dea5d6b3ce5e174deae61",
+        "sha256": "e6053d359b0e0eaad2cd5a8d58354becdc3508a1f65aa046a18150ff764fd117",
+        "bytes": 15147
+      },
+      {
+        "path": "docs/validation/D5-I128-PLATFORM-CONTRACT-CANDIDATE.json",
+        "git_blob_oid": "0f4e6b727157cc43cd606512ec941fef11a0e54a",
+        "sha256": "3e3a85a3d0ef353cc40fa6c177fe5a6b00dbadac9817d9ec43d3dd54f5a917cc",
+        "bytes": 31538
+      },
+      {
+        "path": "docs/validation/D5-I128-integrity.json",
+        "git_blob_oid": "ed9eb41143fc22ca0bd0f9d329a502e10fe54ba6",
+        "sha256": "2f93e50b88784b3e1cf333cc54a595e063a9c6e62a4f65d0ab6a7a2840fbeb9c",
+        "bytes": 15437
+      },
+      {
+        "path": "docs/validation/D5-I129-F127-02-cost-reserve-review.json",
+        "git_blob_oid": "8986564402521b787853f8a25b46d8609cf74b39",
+        "sha256": "1f82dff592d14479657484ee12cf43c553b96a10497ef49aaaf84573283d9636",
+        "bytes": 11322
+      },
+      {
+        "path": "docs/validation/D5-I129-cost-coverage-ledger.json",
+        "git_blob_oid": "25185adaf7008c666ad46ed87dc38010046b1570",
+        "sha256": "470a4fd286176cf1b74b3add6f88fae463e7f2d7703462a4d825a7b205bc4daa",
+        "bytes": 24744
+      },
+      {
+        "path": "docs/validation/D5-I129-integrity.json",
+        "git_blob_oid": "ffb74677e6b03f7f1294720b1bfbcca2c836ddcf",
+        "sha256": "75fcf05da1054fda84dc2a6ee16d837698933ea4d22adc8caa8bf6f61cb5a7a1",
+        "bytes": 16044
+      },
+      {
+        "path": "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "git_blob_oid": "4784540afdc63b16a056918cc4bfc30a7489be02",
+        "sha256": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+        "bytes": 55248
+      },
+      {
+        "path": "docs/validation/D5-I131-E01-E05-review.json",
+        "git_blob_oid": "a89f4549bdbec3b014a46bec13985e723e2637ca",
+        "sha256": "76bf3db8bbd2bb4c75c6f725568491ebf2ff77f5493741867fbb6b28f363aed7",
+        "bytes": 45870
+      },
+      {
+        "path": "docs/validation/D5-I132-E01-E05-evidence-plan.json",
+        "git_blob_oid": "3c52b823b1aa511bddcada125cbf873623e07335",
+        "sha256": "d7852f0290905bbd924fc2b2723fbca0d43528fcef0c9afbc89a4612a1c5b345",
+        "bytes": 47727
+      },
+      {
+        "path": "docs/validation/D5-I132-closure-checklist.json",
+        "git_blob_oid": "8cf00088bef7af0eacdd73b3ba5028deb4255ea3",
+        "sha256": "e9ad4d2604d652d9e49143ed20ce0e6e469d92c53b7999720d9aaa3e3181406d",
+        "bytes": 21861
+      },
+      {
+        "path": "docs/validation/D5-I132-integrity.json",
+        "git_blob_oid": "e0f0bb089224088d1a88230c8f7eb9067cdcc229",
+        "sha256": "048393ac6c7cd9d9c48581aceb634a4b5089cfb95fcc5143b5f1b2df8362d070",
+        "bytes": 17834
+      },
+      {
+        "path": "docs/validation/D5-I134-P01-documentary-review.json",
+        "git_blob_oid": "e330025d9ffa725e716f154a3be562c5d95b199c",
+        "sha256": "c84c0295fca7c49c6a8de4949c60cfcdc4a52e3fe08da10e9acb577ef95200df",
+        "bytes": 22602
+      },
+      {
+        "path": "docs/validation/D5-I134-P01-source-reconstruction.json",
+        "git_blob_oid": "7301155d00b7bd955b7b9db8cca1e4d977e76143",
+        "sha256": "c7c640ed01d4a787bcffc1f0af99bdd71dde2231361eb530d66b8c7fb1bad304",
+        "bytes": 67317
+      },
+      {
+        "path": "docs/validation/D5-I134-integrity.json",
+        "git_blob_oid": "6f8204392fafc2c4353a40f90a2ca479d6276b60",
+        "sha256": "086c1f06e33e2a5e701110c893859ebd13b683c5bef9f59d9ddb9d22ac5cb249",
+        "bytes": 19040
+      },
+      {
+        "path": "docs/validation/D5-I135-P02-preparation-review.json",
+        "git_blob_oid": "e915462e9d8dd0ff9406917a416beff57ea0e32c",
+        "sha256": "0b3cfadafdb3d00f75a8917a1269ebbc3513e5e29ee5777cdcd8d50c22dd1c33",
+        "bytes": 21890
+      },
+      {
+        "path": "docs/validation/D5-I136-P02-documentary-review.json",
+        "git_blob_oid": "da7dd98286415ffd60df8372a20ae0c5fea46ee4",
+        "sha256": "cfbb9402f7f3df774d8adb303ce0523ed36527df549e5e2feebceb6a0af825a3",
+        "bytes": 26506
+      },
+      {
+        "path": "docs/validation/D5-I136-P02-source-reconstruction.json",
+        "git_blob_oid": "bd7f28f02bad4d4d76aee400faf727ea234efe07",
+        "sha256": "0ea0e9324ed8057750cd64b6921586b62d7f12fcb044e583e9af03960fa96395",
+        "bytes": 65184
+      },
+      {
+        "path": "docs/validation/D5-I136-integrity.json",
+        "git_blob_oid": "c09f3bf138e381ac3edbd028326e8f0507554bc7",
+        "sha256": "2f5b306d6608614b4914b56744835c097dba8f3bbbbc1271ac32b5ed967f89b5",
+        "bytes": 20281
+      },
+      {
+        "path": "docs/validation/D5-I137-P03-preparation-review.json",
+        "git_blob_oid": "3b7d634991b9bf655ccb878af79f7b7697f6ee74",
+        "sha256": "23898c76ed21e1183a60710435046522966925f4cfb54c301616073f09035fa0",
+        "bytes": 22720
+      },
+      {
+        "path": "docs/validation/D5-I138-P03-documentary-review.json",
+        "git_blob_oid": "826e6211898f1b932949154f37c61c7f6389fdca",
+        "sha256": "b0e81018c9ee5cd8053432cf40142902e7d6c5ca22438b7783ed0b3f935babef",
+        "bytes": 29631
+      },
+      {
+        "path": "docs/validation/D5-I138-P03-source-reconstruction.json",
+        "git_blob_oid": "6f858609a0e56086165ce1ce7c8e7bbf749b433c",
+        "sha256": "3c53500812a9d35bc2e048ccc0ec718cf4466953f23a325e954ea0f60393f27b",
+        "bytes": 81768
+      },
+      {
+        "path": "docs/validation/D5-I138-integrity.json",
+        "git_blob_oid": "6ab76054bbbc326be3322d5d6b11d270f90b158c",
+        "sha256": "ce01f1f597b141fc70f74279702300c1eec698e9064481b581399f2e7e30030a",
+        "bytes": 21488
+      },
+      {
+        "path": "docs/validation/D5-I139-P04-H01-preparation-review.json",
+        "git_blob_oid": "68cf6080a509e1b1dc9c576460bad90060a27601",
+        "sha256": "59bb8354ead3640b5678bf38cff4640fa80775920d3c39c1ddfb0ff52b4e400d",
+        "bytes": 23511
+      },
+      {
+        "path": "docs/validation/D5-I140-P04-H01-documentary-review.json",
+        "git_blob_oid": "facb3c8c935f5c8a703e3d0ad0a7cfe22be0f2ee",
+        "sha256": "9ed262def18c138d255b5cc747df9d86be114084fad090aa95153d6f5c1720f5",
+        "bytes": 29885
+      },
+      {
+        "path": "docs/validation/D5-I140-P04-H01-source-reconstruction.json",
+        "git_blob_oid": "b2591a40efb7731f22614ede8271ff2c54252449",
+        "sha256": "c17162a9a16e44c60e3a7c7bb3e9f08d43a03aaa5c99ea945575d730351a600f",
+        "bytes": 68699
+      },
+      {
+        "path": "docs/validation/D5-I140-integrity.json",
+        "git_blob_oid": "78a177727053401030fdfc0e73e8ab6efc9568e0",
+        "sha256": "6641c4162caa33d9c4e581c7b907d3542c4cdabf6e4640cd44eefc4f89920ebe",
+        "bytes": 22707
+      },
+      {
+        "path": "docs/validation/D5-I141-P04-H02-preparation-review.json",
+        "git_blob_oid": "619a92b8d9c0288e54316606a1597eaf016b6a2c",
+        "sha256": "82c3cef441812bfebd8b9fcf5082c807ed7b5560c6dcac70d2d59fd5dffad74f",
+        "bytes": 24153
+      },
+      {
+        "path": "docs/validation/D5-I142-P04-H02-documentary-review.json",
+        "git_blob_oid": "47f83ae5a922ab9f347b649c73d05e3f9a87605f",
+        "sha256": "379e99d5790fe05df1ab99c5dc21c27036e7bdc1453608256fa685699e051e67",
+        "bytes": 30753
+      },
+      {
+        "path": "docs/validation/D5-I142-P04-H02-source-reconstruction.json",
+        "git_blob_oid": "d181ffeef9e141713d3f7503d96f8296ab0de113",
+        "sha256": "55e235186c41fd266780a742a8bda9a8838f47beda9c9240c788953fbdde0cc4",
+        "bytes": 72781
+      },
+      {
+        "path": "docs/validation/D5-I142-integrity.json",
+        "git_blob_oid": "0348e3e34326f0ba92d87cd640ad54fa19313e99",
+        "sha256": "b41caa5e9dcbb05df7b13ec3bdd71c4edcfa8da0ed610f5589c92b9330f733fe",
+        "bytes": 23913
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json",
+        "git_blob_oid": "32efe5153806fa594c55fbdc078a11727393a9c5",
+        "sha256": "4c153e208797d6494f9e6d96bd35d3a711c8d238c863b353385c55a801c3fd7d",
+        "bytes": 80319
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E02-H01.json",
+        "git_blob_oid": "464e34faca2e6f410db3255b1074186d29a04048",
+        "sha256": "312604f1e26c27227477b34bc318e7f8038c7b0b22adf4c7bce3363daccfe3e9",
+        "bytes": 141355
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E02-H02.json",
+        "git_blob_oid": "39047083d4fe6aafc73c3fbb78b474b5b5c46a00",
+        "sha256": "833afd1544013a414d2b548cc8ecfc111dae7e2c424c37041cb5d3c1769dcf4b",
+        "bytes": 122825
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E04-PLATFORM-ENVELOPE.json",
+        "git_blob_oid": "8f62d0d48acb337181a5e7a0107c97bdc7bf0fa2",
+        "sha256": "bccd7df41c1f857d07f85e85b7ff3bea32b0031a3dcd0c5c290f0e244ad940f4",
+        "bytes": 151848
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json",
+        "git_blob_oid": "1d77a38d9163c1d8bb2a982ef57cd00b1e48ad61",
+        "sha256": "299280a0634b5e5e976bbdf06deff0388bfd319874a53193f027d9b2832303ff",
+        "bytes": 352575
+      },
+      {
+        "path": "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+        "git_blob_oid": "b3659ae32493b86297e3ea09b6c2eeab8f81f100",
+        "sha256": "1bf3cb8c1d267cc6b4a2c442f103333d93066b55f61b0c30a8aeaeccfca58c68",
+        "bytes": 970143
+      },
+      {
+        "path": "source_ingest/__init__.py",
+        "git_blob_oid": "5d06b43a4e8b457b2d311552cd1391c55ff208aa",
+        "sha256": "3db1cd74843107ce4d12d145668b60e512a13f1ec83e89672d4b09996083290e",
+        "bytes": 111
+      },
+      {
+        "path": "source_ingest/__main__.py",
+        "git_blob_oid": "50de7e77bbb56a4cb90c76032b57ce43c3146154",
+        "sha256": "b7da69f88ede2250e560c6469309898139b8b5c5169a10419a2ec72b4e174079",
+        "bytes": 1898
+      },
+      {
+        "path": "source_ingest/adoption.py",
+        "git_blob_oid": "a7fd869121f9145c11e341f782f4b65d49f00027",
+        "sha256": "40713e2cbdcb5a9c7dbfeb9224e9d8b5176cca6414bc484f8a12203da6a62b2f",
+        "bytes": 7838
+      },
+      {
+        "path": "source_ingest/batch_fixture.py",
+        "git_blob_oid": "71be33db1904ef367a3347e804349002c687ba24",
+        "sha256": "c6e26ac5d9d9c7ce3df071b0669529dc88ff8f6f82bea716ee567d6ec45b664c",
+        "bytes": 26005
+      },
+      {
+        "path": "source_ingest/bootstrap.py",
+        "git_blob_oid": "c072795458a165a857f1d27800e177736ae4d58e",
+        "sha256": "9abd5d0638b48ea53ebbf1b99127fba2d64a72abbfbf1457eb9ea7b8ffe5a0b4",
+        "bytes": 7049
+      },
+      {
+        "path": "source_ingest/compare.py",
+        "git_blob_oid": "1a7ee69a7cb22a5814746814fc1bafbbe63e5864",
+        "sha256": "21881a7bdbb1f360c67f73ef0d1ed9eff4fd5b895f2708541e609e8031039966",
+        "bytes": 7244
+      },
+      {
+        "path": "source_ingest/durable_ambiguity_fixture.py",
+        "git_blob_oid": "0fb66e62929158035a241fe766518d0c958009b7",
+        "sha256": "cf8b211c61e1981192c89eb09edc2d8f0435494c285b63e21c705068c2219fd4",
+        "bytes": 20090
+      },
+      {
+        "path": "source_ingest/durable_relational_fixture.py",
+        "git_blob_oid": "fa48633799e81a64ca7631e68602450c398ef111",
+        "sha256": "67996e59009f752e55abaa2253928424caae6b2da57c53dc82b4306cb1d14d90",
+        "bytes": 34801
+      },
+      {
+        "path": "source_ingest/durable_store.py",
+        "git_blob_oid": "725da8a7e9a858f2f21195ab98cab844ccab5f4e",
+        "sha256": "28e5f298dd2d4ff9a320e2471194b46a5c9c1e44995b676f54eb7b9b70abc1f6",
+        "bytes": 15164
+      },
+      {
+        "path": "source_ingest/durable_task_fixture.py",
+        "git_blob_oid": "cfe7338cbfc4a87308204c11aba550f62e549a54",
+        "sha256": "0f24735d0fcbb24b83145b9528b900f7c8bf16094a7d6daeb81573f6bbab4235",
+        "bytes": 40231
+      },
+      {
+        "path": "source_ingest/eligibility_fixture.py",
+        "git_blob_oid": "f6e9b30c0eca7e12380ecb2878825962a730baea",
+        "sha256": "382f4151d8029626f8072fd9514fb197d867113e3d10cc4cc5692e69258ba8f9",
+        "bytes": 27464
+      },
+      {
+        "path": "source_ingest/incremental_fixture.py",
+        "git_blob_oid": "c897c7f753fe91f4a5df589dd050ed8fe58b6444",
+        "sha256": "48ef6ba37741e9bb6d048ed6ea89b48110598777e47078d39bfa12f3d2d84e87",
+        "bytes": 26004
+      },
+      {
+        "path": "source_ingest/isolated_local_edit.py",
+        "git_blob_oid": "7a0f0cf210a41d54842c993d1cf77e8122cb1a0e",
+        "sha256": "d05b8276e3c297d834cbdd7fe1a334313b6f0c63c5601598c8a47ea297e5260d",
+        "bytes": 9632
+      },
+      {
+        "path": "source_ingest/local_edit.py",
+        "git_blob_oid": "ad4f65f940c3235d8727d6682c693da793adf874",
+        "sha256": "6343c4a5ba69f8dcb8f37bce7d51a2c605cf3b597662dd884c10c34116268c5d",
+        "bytes": 5987
+      },
+      {
+        "path": "source_ingest/local_reappearance.py",
+        "git_blob_oid": "ca533452c31c5530191a534071d851f18c17d737",
+        "sha256": "7d4c7e37ab095b03dbfcb3a4df508beb06faa85ab71d034a3ce969d26660a6b9",
+        "bytes": 6676
+      },
+      {
+        "path": "source_ingest/offline.py",
+        "git_blob_oid": "3b93e0fe1cd249397e641b22d8b81a8539e7b4ee",
+        "sha256": "4e2f1b240173d020c42f7aaab875812c6d9807bc6cfed61befd0495204859764",
+        "bytes": 25029
+      },
+      {
+        "path": "source_ingest/plane_fixture.py",
+        "git_blob_oid": "813ca578deeee9a606186f7598a621df5c136fdb",
+        "sha256": "3b2891c5512cfa8b82da1bc9b3218f3a7751741e55e96085b8edb02624103f91",
+        "bytes": 32708
+      },
+      {
+        "path": "source_ingest/postgres.py",
+        "git_blob_oid": "df0953b0ec4901c8b2a1c242cff04a9009437aee",
+        "sha256": "1371ffc1bbdf6922808b54b4674a48ca6b96d53e3cca234d42961428747f8c19",
+        "bytes": 8776
+      },
+      {
+        "path": "source_ingest/preview.py",
+        "git_blob_oid": "a910e832c3d3e3b399231751160049122480325c",
+        "sha256": "50b8af9ddb984ef8c51820f8bbd18b293fcfa140a1e5e1934a7eb04f6de91dbe",
+        "bytes": 9529
+      },
+      {
+        "path": "source_ingest/reappearance.py",
+        "git_blob_oid": "e3e791da9beb21cca432381c7e0f6ca03ffc6ab1",
+        "sha256": "fb8aebccc6035017131814ddf95704d0b2a2550aa6c6f00a23cdf7d1021e4d5f",
+        "bytes": 6363
+      },
+      {
+        "path": "source_ingest/register.py",
+        "git_blob_oid": "e954c000df2c0399100034525cb84c273b2b910b",
+        "sha256": "467183896d87bad3b458e58fa5b2100d37a030f4053a246201af29ade6fc2df7",
+        "bytes": 7369
+      },
+      {
+        "path": "source_ingest/relational_planner.py",
+        "git_blob_oid": "5d4af0fc3f93f122638ed9c4ea566a9f10cc2c1b",
+        "sha256": "60a8fab0d9eb89e1b9d555077e60fcb09ee2ac0f3136867c7e02f5264a39baec",
+        "bytes": 8853
+      },
+      {
+        "path": "source_ingest/review.py",
+        "git_blob_oid": "d2cc22ef1cdb2c5762f0b7f8882320c0a48b7de2",
+        "sha256": "a9e8a1f4deddad4350a3af64f9d41f1ad4189b21b858e89dc1764abfa61f53b1",
+        "bytes": 12072
+      },
+      {
+        "path": "source_ingest/task_mapping.py",
+        "git_blob_oid": "294b771d376309aba4130db40567798936068dd1",
+        "sha256": "24d879d90e09bb0bdbe60d53f1054bc7ca3bd8fc7bc7aff91eb4d33765ab48f8",
+        "bytes": 5343
+      },
+      {
+        "path": "testing/D5/adoption_scenarios.py",
+        "git_blob_oid": "8a267a10392efa3bb49fa26dd8e594ea5c7ec220",
+        "sha256": "afd46a35747646f7da63720cf0ff568ba2caf2b7d83e20ec840c5e1430ba784e",
+        "bytes": 34911
+      },
+      {
+        "path": "testing/D5/bootstrap_scenarios.py",
+        "git_blob_oid": "e54596246594d75d1cac0cb167313cb06692f8ce",
+        "sha256": "e7214d067b06e27ff3145e550451e1927460ea48da561f00b8e6d64f829e9d7e",
+        "bytes": 25496
+      },
+      {
+        "path": "testing/D5/demo_durable_integration.py",
+        "git_blob_oid": "2dfc7741369c18fc74a9e59c4fd7e549c76b9aeb",
+        "sha256": "8d17c866d7baa6947580b10fb5517a0cb23402ab444af011746d8876192f8f39",
+        "bytes": 1659
+      },
+      {
+        "path": "testing/D5/demo_durable_relational.py",
+        "git_blob_oid": "ef4b8082737bd745bf75bda970696f2b4ffb7ce1",
+        "sha256": "215ce133b3d9c31c2968856cce891694ba98f16f330175d9a12822c653b7fabd",
+        "bytes": 1735
+      },
+      {
+        "path": "testing/D5/demo_offline_integration.py",
+        "git_blob_oid": "f826e1f4b53c3f41e91910684bad5d9c612b575b",
+        "sha256": "b5f25eccb9c37a69b2a7f832ca0d491b6456b28a3439788a155b9ae491040ffa",
+        "bytes": 2506
+      },
+      {
+        "path": "testing/D5/demo_plane_reconciliation.py",
+        "git_blob_oid": "00ca4f1ad7fd771f03f9db89a4021308786d93cb",
+        "sha256": "a65152b06737176ed87448cf1f5c72e9a689d993732a05e56bc12edbd22808af",
+        "bytes": 1899
+      },
+      {
+        "path": "testing/D5/demo_profiles_quotas.py",
+        "git_blob_oid": "b6c89756f6ac44e80d56232dd8640363550a836c",
+        "sha256": "4837996571d7ae4e23c016ad623e722c186fa24c893ed681946822dbdbf7a0df",
+        "bytes": 2203
+      },
+      {
+        "path": "testing/D5/demo_register.py",
+        "git_blob_oid": "7aed93e389649e878830ec965f07c27583d49879",
+        "sha256": "603b1dfee0b7b2991b0d706cd7a7dd0a6cbcf8055ce31fde28624c6ede8ac4f8",
+        "bytes": 1424
+      },
+      {
+        "path": "testing/D5/demo_relational_batch.py",
+        "git_blob_oid": "b528e1ef6894cf48b917d119d45f0df0c3e81966",
+        "sha256": "cc04dccd473b871f92f56270706612e2186f1761d82973261242da939e82b73e",
+        "bytes": 1958
+      },
+      {
+        "path": "testing/D5/durable_support.py",
+        "git_blob_oid": "63fd73a6dfc2abb8a8e762f7677eef292ca255ab",
+        "sha256": "4dacae09aa1dc71f6d30fc6ec75c193c6ef7cd03e7e8515c99c2c98fc1212ac8",
+        "bytes": 8283
+      },
+      {
+        "path": "testing/D5/fixtures/plan.md",
+        "git_blob_oid": "0f961d5bd230ef41e9c1723fd4d82cc349446073",
+        "sha256": "df08238ac4aeadf978499f04040cda2ddf21d8d8f8db6fad1a516f66655704f4",
+        "bytes": 265
+      },
+      {
+        "path": "testing/D5/fixtures/register-after.md",
+        "git_blob_oid": "6c8a78219b171763f6bef12fc7ef19f54a52afd5",
+        "sha256": "dbc454510344c4742886cecdb0170eb554f511dd85e87edcfeae7864c6bbbda8",
+        "bytes": 432
+      },
+      {
+        "path": "testing/D5/fixtures/register-before.md",
+        "git_blob_oid": "86a01b5427c09e25e962837a3f414f5f6e934847",
+        "sha256": "12668800bf0dfe9f5ec969d8223697720e1d71b9ce018d23abcf3dc76556d8d8",
+        "bytes": 438
+      },
+      {
+        "path": "testing/D5/fixtures/register-compat-after.md",
+        "git_blob_oid": "0745ee156bd5396cc58e449686f62aa4cab2104c",
+        "sha256": "1fa9b78947c29f582f1883f6d9c91cc6b3b7133c9ca6997e23816da0af048d3f",
+        "bytes": 392
+      },
+      {
+        "path": "testing/D5/fixtures/register-compat-before.md",
+        "git_blob_oid": "03ff4b5eb699cc1215973497ef5d9b9d98ecd63b",
+        "sha256": "06668413ceee85c5368fba5b17f6d71f1484f0b4709ee6f50bd7307068264c8e",
+        "bytes": 390
+      },
+      {
+        "path": "testing/D5/isolated_local_edit_scenarios.py",
+        "git_blob_oid": "4b65b5fe13c1c142a62c53b62d1066ef8b1b6e86",
+        "sha256": "c6dec42c6e5098c1b9f7a3bdbdd3e6ed6d6dbdc7ca82a6d63df57278dd40efa6",
+        "bytes": 38532
+      },
+      {
+        "path": "testing/D5/local_edit_scenarios.py",
+        "git_blob_oid": "a2865098740f884b3f1556cc9d833ae94679ef3a",
+        "sha256": "4dc2854686933aba5e3ad488cb0bbca19f84c67c92bd81099af34fb31e21b944",
+        "bytes": 32239
+      },
+      {
+        "path": "testing/D5/local_reappearance_scenarios.py",
+        "git_blob_oid": "d24701c609678615673b301ed9ecb1a597b86b42",
+        "sha256": "0ccb336b33c7d6247a68f35099962aa90a03c7f0878630aa15e6ec5703b8bfe3",
+        "bytes": 37853
+      },
+      {
+        "path": "testing/D5/mapping_scenarios.py",
+        "git_blob_oid": "f26bdf05fedfe94422e3dc2f1afd8af4042089fc",
+        "sha256": "6c0cdd00bda42ad1c01eadafb1fa4f61a7731ce608fe1fcdfa90fea3741c09fc",
+        "bytes": 27528
+      },
+      {
+        "path": "testing/D5/postgres_scenarios.py",
+        "git_blob_oid": "70e233660517a7c21ca95b63ca05508173f90c59",
+        "sha256": "7ff170c2625851c1a8a4145343748d9f2874068f42634c7a3c658773d07372e8",
+        "bytes": 19577
+      },
+      {
+        "path": "testing/D5/reappearance_scenarios.py",
+        "git_blob_oid": "a24869f4e65518a20cb673688b314fcf193c928c",
+        "sha256": "94addac4b89f4ef8affd6d195d65123692d510f596dd95d77f60bc67043c1fd5",
+        "bytes": 30499
+      },
+      {
+        "path": "testing/D5/relational_support.py",
+        "git_blob_oid": "693d81719ebdf72e6d7ea9e91650fddab1dde711",
+        "sha256": "2a271a4a6a645307ec5bc899d55441208e6257fbfb761f64a41f3e2da8648d06",
+        "bytes": 6985
+      },
+      {
+        "path": "testing/D5/review_scenarios.py",
+        "git_blob_oid": "9cc56c50bdb942f6faf94be4361caa7c5abf8cb1",
+        "sha256": "3ee385512cf4001e8461eab86149e0ec164a2a1626673145769c93e3f4efbe45",
+        "bytes": 17209
+      },
+      {
+        "path": "testing/D5/run_adoption_lab.py",
+        "git_blob_oid": "b60d6386777b5d1c502cb2734b3b06f2961fe04e",
+        "sha256": "d5ef397133a3e7ff5e1590de2059ad31ca941c226f9059996a4df78c6f6c1379",
+        "bytes": 4088
+      },
+      {
+        "path": "testing/D5/run_batch_lab.py",
+        "git_blob_oid": "cabde33349da453f466d2d40c2a0fef72cca66b3",
+        "sha256": "379deb54a4cfe889912bbf3f9c93793ca66256f3dfdd348f9e1d1ed34786cd6d",
+        "bytes": 2725
+      },
+      {
+        "path": "testing/D5/run_bootstrap_lab.py",
+        "git_blob_oid": "492c18b2631e0eb2bcc9e60d8cc4452370e6f629",
+        "sha256": "f73fd3c77c934008661ac068b70796d2ef5ec273189727b9dd518273ac44c7a0",
+        "bytes": 3979
+      },
+      {
+        "path": "testing/D5/run_durable_lab.py",
+        "git_blob_oid": "cf4ddc768c9e231f31c6ab3c28157da8e6e28afb",
+        "sha256": "b35e90b319f756c8ee0a8069256af5f0f9dcddc185e671074537bf1d878ec5e7",
+        "bytes": 4518
+      },
+      {
+        "path": "testing/D5/run_eligibility_lab.py",
+        "git_blob_oid": "e8dcee7604db29a3156353ca2842c71f517e6e38",
+        "sha256": "2a98bea1ef4f04a9ee0c943b665c84360d03400f7c493d7f9b3d8fa88d8bb597",
+        "bytes": 2856
+      },
+      {
+        "path": "testing/D5/run_incremental_lab.py",
+        "git_blob_oid": "6b8ca95572bde312230a1cad097ddbc69fa6edd2",
+        "sha256": "08187a1ce158cd3041e4fdf119ef7e36c0e8fa48ab4cad66630daea729cfb028",
+        "bytes": 2502
+      },
+      {
+        "path": "testing/D5/run_isolated_local_edit_lab.py",
+        "git_blob_oid": "0b37adefe1e9ab696b41b8e1b4706e8b34f6fa99",
+        "sha256": "48964bde195a410b10cfe29937cd13ecbdd8e19367bc9adafbd13353f0c5f145",
+        "bytes": 4454
+      },
+      {
+        "path": "testing/D5/run_local_edit_lab.py",
+        "git_blob_oid": "18878378f8b1e92f5aef23026b4c9c1abf3ffcae",
+        "sha256": "cd521196ef649f92a463581d74b9ab15a1d3b04a7664404cd030a2fafa9d9d69",
+        "bytes": 3944
+      },
+      {
+        "path": "testing/D5/run_local_reappearance_lab.py",
+        "git_blob_oid": "71b198e05e3b19e3e9e9434b49a56c14599a2e71",
+        "sha256": "8f1ba91df3f0ff71ec4d52430c7290fb98da88fedabca9eaa3c555d047f1019a",
+        "bytes": 4307
+      },
+      {
+        "path": "testing/D5/run_mapping_lab.py",
+        "git_blob_oid": "6cf018340ccda6fa13408bb9f1a491a2dcadac44",
+        "sha256": "f960ecb523061fc6c8c8e36831962698cb8e7a6eefe848760ac1c14265b8d146",
+        "bytes": 3237
+      },
+      {
+        "path": "testing/D5/run_plane_lab.py",
+        "git_blob_oid": "57ecc95d4ed4231f4c25ca3ee3d978556143ffd1",
+        "sha256": "80749b4704a39df00cd20635cdf36b16bc032e1db5b4f7eba5327b6200dd1e9a",
+        "bytes": 2620
+      },
+      {
+        "path": "testing/D5/run_postgres_lab.py",
+        "git_blob_oid": "61962489e19d03e33c546ad7fb21f011107d1a10",
+        "sha256": "737933b71bed4e3b27424cdf4020c042b250b45b802859fc6eebfb8f1bed9ba7",
+        "bytes": 9344
+      },
+      {
+        "path": "testing/D5/run_reappearance_lab.py",
+        "git_blob_oid": "84caf7d693b8d8fd3fbf1c053f00f401f1f11f11",
+        "sha256": "7d69c54660383334541db9936bf8b9ee82b7d65351b7dc1e825bf2a1b764af7e",
+        "bytes": 3999
+      },
+      {
+        "path": "testing/D5/run_relational_durable_lab.py",
+        "git_blob_oid": "d62b7072ed93687194471a8df6826c9b15e374aa",
+        "sha256": "b7b9419d11678dfaf5dabe839c175b1de295d290a0d188428a9075f1c8bff431",
+        "bytes": 4429
+      },
+      {
+        "path": "testing/D5/run_review_lab.py",
+        "git_blob_oid": "96af64659e8878a40b0598ff88ee1b428a3e07ee",
+        "sha256": "f8e9ff21324c0c62acdf674a4d5634dd0e5b0217c191a39e389e408c89ab515d",
+        "bytes": 3251
+      },
+      {
+        "path": "testing/D5/run_v30_lab.py",
+        "git_blob_oid": "a83476d9baffbb271fab88cb010cc6edfdb02bd3",
+        "sha256": "6ea19e518a049f2c26b8b6133bd48edaf09fc813700a4015d64b909f2252ba4b",
+        "bytes": 8591
+      },
+      {
+        "path": "testing/D5/test_durable_integration.py",
+        "git_blob_oid": "c5a6a57867a22773cb3688ba7f060d23b916b8a1",
+        "sha256": "9ff0ea8b69d556ba95ff81872fc2c83f9f8dc2517c9e4f180848085f3522b939",
+        "bytes": 41415
+      },
+      {
+        "path": "testing/D5/test_durable_relational.py",
+        "git_blob_oid": "e6504c6e75f35f547ea39ec4c6ee9927fba1be8b",
+        "sha256": "7d5ddeccfb1416f8cfd2a905f03b64b7598e8fced575bfaeeb188f28dd224fe7",
+        "bytes": 39806
+      },
+      {
+        "path": "testing/D5/test_incremental_capture.py",
+        "git_blob_oid": "04ff668b0391a37704b7ba6f1646264f2aa999c7",
+        "sha256": "a9800d80d49b509a4feb252990953500be1f47a12e3b40c9a281516b549c3d72",
+        "bytes": 24861
+      },
+      {
+        "path": "testing/D5/test_local_preview.py",
+        "git_blob_oid": "6fb0bfa927c645d3ce3eb0118749fd8dbdbedf9b",
+        "sha256": "a56ec1879dd8dd4ae5ae3344e543ade809e4db8ef6ff22af9dbdef7b3c3fdac8",
+        "bytes": 7919
+      },
+      {
+        "path": "testing/D5/test_offline_integration.py",
+        "git_blob_oid": "833d38d5becc4dd2936712f35d83ff1139a85ca5",
+        "sha256": "d05d660690f9baf284a69d8f0d529a8b3de488027c324746e3205c690bf81f6c",
+        "bytes": 28357
+      },
+      {
+        "path": "testing/D5/test_plane_reconciliation.py",
+        "git_blob_oid": "86f1017940f651d6cb97e1a8482b14395b3bb61d",
+        "sha256": "3acef067ca7c83c97da7ab67469dd480a0b5c69d251db776f42adba3a75f67b9",
+        "bytes": 28051
+      },
+      {
+        "path": "testing/D5/test_postgres_adapter.py",
+        "git_blob_oid": "433d4838e090f696a6295e66cfb4519210a31b21",
+        "sha256": "fe2018a4264888b28ebeaece128196c5d9aeb56cf4b9fcd0095af8621ff1eac9",
+        "bytes": 2405
+      },
+      {
+        "path": "testing/D5/test_profiles_quotas.py",
+        "git_blob_oid": "12c0eaafce30deea595a96313b7ca496e939d299",
+        "sha256": "5837fc8f7b4efbe97d0ec054831542750500491f078f8d54ef9c5c8346353efd",
+        "bytes": 26548
+      },
+      {
+        "path": "testing/D5/test_register_comparison.py",
+        "git_blob_oid": "818641e03b4e2972af34042d6f36ed5fc9d7ba77",
+        "sha256": "72c1d28b2d09dcf5b24a0f039638673da59d019c29b4b478c3a833f7b7e23bb4",
+        "bytes": 10346
+      },
+      {
+        "path": "testing/D5/test_register_compat.py",
+        "git_blob_oid": "99b044b42d3fcbca4df52db7321f2c5e6bead8ad",
+        "sha256": "38b9f551be122b7c29401e11ec03aa6de236b482c687616c225e710c3bda34f8",
+        "bytes": 7223
+      },
+      {
+        "path": "testing/D5/test_relational_batch.py",
+        "git_blob_oid": "dba84446bfb99a5c03f2cc8214cae9c656897327",
+        "sha256": "eebbd511cd99aedb8b85b682febccdf9da88fb0cee9b276270d7d38c20c44256",
+        "bytes": 25414
+      },
+      {
+        "path": "testing/D5/test_review_report.py",
+        "git_blob_oid": "37925346965febce1e612726f0a0e4bcad3597f7",
+        "sha256": "39b3bfee1858310cb4987b1c17ba91204139a117055b6794542727ae81bdd2e6",
+        "bytes": 2855
+      },
+      {
+        "path": "testing/D5/v30_scenarios.py",
+        "git_blob_oid": "adc4e522edba2088d9ee52e9ec773451eec1f2ae",
+        "sha256": "044564260e1aede71a59e459c44af47571282dda6a3bc0cd0f8bae1532b41b7e",
+        "bytes": 5272
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "git_blob_oid": "a979bbd77dbfef302294591336ecbd7bb6760f1a",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "bytes": 40037
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/README.md",
+        "git_blob_oid": "abcd005dc63066ab25dba333a5fb821df14c71b5",
+        "sha256": "7edca2891466a4637e306a8b2e538f9ee0523053a359dc3da47b2865d3a94f2b",
+        "bytes": 3024
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "git_blob_oid": "bdaf981992acb4ae840e3d85a2673c30f7f03c22",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "bytes": 46001
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "git_blob_oid": "4035a0e4f4768eeb4744e28a31ae7822dcc0f15e",
+        "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+        "bytes": 153045
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/run_joint_lab.py",
+        "git_blob_oid": "bb3fabc726f3703eba65b5c2b3d312c91110b0eb",
+        "sha256": "233bfb1eed326382063cc56bf35b6723222e722c54d9430be512784c156d736c",
+        "bytes": 1540
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/test_joint_capture.py",
+        "git_blob_oid": "4da430fcebdbe0fada9f598c17dfe20d68ebcddd",
+        "sha256": "9cc7e86e7a78e99eb862b32841acb2869deb5e3d04aab769d37a50c8a4360881",
+        "bytes": 5932
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "git_blob_oid": "d6e10e1c3d7e9a78076d954940ed79334c224c80",
+        "sha256": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+        "bytes": 8392
+      },
+      {
+        "path": "testing/prospective_capture_late/capture.py",
+        "git_blob_oid": "dbb1485927622629031fa84a30aae188a5af63ee",
+        "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+        "bytes": 22343
+      },
+      {
+        "path": "testing/prospective_capture_paged/capture.py",
+        "git_blob_oid": "eff2e34fa9350e31b8ccbbd2103bdcba35f0afbc",
+        "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+        "bytes": 32536
+      },
+      {
+        "path": "testing/prospective_capture_selectors/capture.py",
+        "git_blob_oid": "c365205ed200067f79af1b88a84d9aa21ebfb31d",
+        "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+        "bytes": 133829
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "git_blob_oid": "73196e8eebf4f45689f083780c5f70793389e1eb",
+        "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+        "bytes": 54874
+      }
+    ],
+    "projections": [
+      {
+        "path": "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "sha256": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+        "json_pointer": "/heap/owner_budgets/2",
+        "observed_value": {
+          "id": "H03",
+          "owner": "Persistent observer roots outside cloning plus scalar leaves",
+          "candidate_budget_bytes": 536870912,
+          "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+          "metric": "peak_requested_live_heap",
+          "proof_upper_bytes": null,
+          "evidence_pins": {},
+          "status": "UNPROVED",
+          "known_partial_upper": null,
+          "known_partial_unit": null,
+          "known_partial_is_complete_term": false,
+          "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+        },
+        "canonical_sha256": "558b70ca4f36f477b4b4b1dacd9178c235fb17f962cb97e7cb49d41c399a7663",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-I130-PLATFORM-CONTRACT-CANDIDATE.json",
+        "sha256": "e7a873a2aea8648d225f2272854e0b15c3f21de5826df06f16dfb6e45aa54576",
+        "json_pointer": "/runtime/required_identity_pins",
+        "observed_value": {
+          "interpreter": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+          "stdlib": null,
+          "extension_binaries": null,
+          "libc_allocator": null,
+          "kernel": null,
+          "CPU_and_service_domain": null
+        },
+        "canonical_sha256": "abac61f2b93a06f79d5eeea4335e2c0507e7261d541b882ca09c4d97cbaf0b69",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-I125-complete-heap-review.json",
+        "sha256": "c8da41ca3c9e85e800061c571a96125d190ef64d478cd763f240441e81d5c42e",
+        "json_pointer": "/required_terms/2",
+        "observed_value": {
+          "id": "H03",
+          "owner": "Persistent observer roots outside cloning plus scalar leaves",
+          "basis": "entry/profile, bindings/specs, patches, weakrefs, locks/Condition/thread locals, closures, new scalar metadata and original live generation require owners and size/lifetime accounting.",
+          "complete_term_upper_bytes": null,
+          "status": "NOT_BOUNDED",
+          "known_partial_upper": null,
+          "known_partial_unit": null
+        },
+        "canonical_sha256": "a1f2ad843f6f98e77b2a4804b15cdc594bddd91f82931327f8b647b4b921ef21",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json",
+        "sha256": "4c153e208797d6494f9e6d96bd35d3a711c8d238c863b353385c55a801c3fd7d",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "rule": "Supply a complete target closure and justified source/binary correspondence, attributable to a competent custodian and bound to the candidate. I127 remains only a partial historical reference.",
+          "rejection_rule": "Leave E01 open if closure/signature/validity or native/allocator correspondence cannot be established; do not manufacture provenance.",
+          "preparation_complete": true,
+          "accepted_as_runtime_identity": false,
+          "E01_closed": false,
+          "remaining_P01_independent_acceptance": true,
+          "resource_obligations_closed": 0,
+          "disposition": "Apply P02 rejection rule: insufficient provenance. Keep E01 open; do not substitute a template or historical reference for proof."
+        },
+        "canonical_sha256": "88ff7116fc5a524e5209f813e851393f19e8853b580cbacf4cf961f085c6513c",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-I136-P02-documentary-review.json",
+        "sha256": "cfbb9402f7f3df774d8adb303ce0523ed36527df549e5e2feebceb6a0af825a3",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "review_completed": true,
+          "insufficiency_judgment_confirmed": true,
+          "accepted_as_runtime_identity": false,
+          "independent_documentary_acceptance": false,
+          "independent_reviewer_identity": null,
+          "E01_closed": false,
+          "E01_E05_closed": false,
+          "resource_obligations_closed": 0
+        },
+        "canonical_sha256": "9392b151784dd093f25415ae284f3c1abc2de64d9e0b9613d6e6b43bc420fcba",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E04-PLATFORM-ENVELOPE.json",
+        "sha256": "bccd7df41c1f857d07f85e85b7ff3bea32b0031a3dcd0c5c290f0e244ad940f4",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "rule": "Evidence must substantiate actual availability and compatible bounded service/latency for the target process set; distinguish rate per CPU-time from rate per wall-time and prevent unaccounted delays.",
+          "rejection_rule": "If no authority can substantiate finite bounds, record external-evidence block and keep E04/E05 open before costly closure work. CPU labels/frequency, ordinary quotas, watchdogs or desired W/budget do not suffice.",
+          "preparation_complete": true,
+          "accepted_as_platform_evidence": false,
+          "resource_obligations_closed": 0,
+          "E01_E05_closed": false,
+          "early_stop_applied": true,
+          "non_fit_proved": false
+        },
+        "canonical_sha256": "722b59b234931c3ddc459a0f7696ea3861839f9a9da309a7b8afa8e21e154267",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-I138-P03-documentary-review.json",
+        "sha256": "b0e81018c9ee5cd8053432cf40142902e7d6c5ca22438b7783ed0b3f935babef",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "review_completed": true,
+          "insufficiency_judgment_confirmed": true,
+          "accepted_as_platform_evidence": false,
+          "independent_documentary_acceptance": false,
+          "independent_reviewer_identity": null,
+          "E01_E05_closed": false,
+          "E04_E05_closed": false,
+          "resource_obligations_closed": 0,
+          "non_fit_proved": false
+        },
+        "canonical_sha256": "55ca0a09d092bf368478c64ce53b14da0dcc567678e5b78ba13d8c614b258ed2",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E02-H02.json",
+        "sha256": "833afd1544013a414d2b548cc8ecfc111dae7e2c424c37041cb5d3c1769dcf4b",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "rule": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+          "rejection_rule": "Opaque originals still occupy memory; CP03 serialized operand bounds alone do not cover every private/native object. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+          "preparation_complete": true,
+          "accepted_as_complete_H02_proof": false,
+          "H02_verified": false,
+          "E02_closed": false,
+          "resource_obligations_closed": 0,
+          "no_reserve_transfer": true
+        },
+        "canonical_sha256": "c0fde193d1fd9e808e7372df48333c273c5e502cbe0837d2ab08b45a0cc14904",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-I142-P04-H02-documentary-review.json",
+        "sha256": "379e99d5790fe05df1ab99c5dc21c27036e7bdc1453608256fa685699e051e67",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "review_completed": true,
+          "insufficiency_judgment_confirmed": true,
+          "accepted_as_complete_H02_proof": false,
+          "H02_verified": false,
+          "independent_documentary_acceptance": false,
+          "independent_reviewer_identity": null,
+          "E02_closed": false,
+          "E01_E05_closed": false,
+          "resource_obligations_closed": 0,
+          "fit_or_overbudget_proved": false
+        },
+        "canonical_sha256": "72bcd1e2afa4e76df8a4d7e18a6990418ce8b19d7705d316a1ccb96d936a74f3",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json",
+        "sha256": "299280a0634b5e5e976bbdf06deff0388bfd319874a53193f027d9b2832303ff",
+        "json_pointer": "/worker_heap_vs_other_process_scope",
+        "observed_value": {
+          "worker_heap": "All dynamic Python/native heap attributable to the I122 worker: original fixtures/retained originals, observer and runtime, every11 owner. Opaque means not cloned, not memory-free.",
+          "coordinator_heap": "Separate process allocation account; not charged to the11/12GiB worker budget and not omitted from end-to-end timing.",
+          "child_process_heaps": "Separate per-process allocation/service accounts if claiming joint-host capacity; original child work is not reclassified as instrumented parent events.",
+          "joint_host_capacity": "No aggregate RAM/RSS/capacity claim. P02/P03 and later proofs must identify all relevant processes/assumptions.",
+          "timing_process_scope": "Coordinator, worker and children/service relevant to launch-entry..normal-return; all C01-C10 interval contributors including worker work before tR.",
+          "failure_scope": "Heap proof must cover bounded observer-rejection prefixes and retained tracebacks within the fixed original-source scope. The900 success target is not a guarantee that all failure cleanup paths complete within900.",
+          "qualified_success_not_all_failure_cleanup_deadline": true
+        },
+        "canonical_sha256": "6b2332fdc77861744a180b8ff1421df1d52a3487d579edd1ca9fd14d3c307e69",
+        "resource_obligation_closed": false
+      },
+      {
+        "path": "docs/validation/D5-PFC126-03-E02-H01.json",
+        "sha256": "312604f1e26c27227477b34bc318e7f8038c7b0b22adf4c7bce3363daccfe3e9",
+        "json_pointer": "/acceptance",
+        "observed_value": {
+          "rule": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+          "rejection_rule": "Do not substitute executable/file size for loaded/runtime heap. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+          "preparation_complete": true,
+          "accepted_as_complete_H01_proof": false,
+          "H01_verified": false,
+          "E02_closed": false,
+          "resource_obligations_closed": 0,
+          "no_reserve_transfer": true
+        },
+        "canonical_sha256": "8a6669983b4effff406ab93fcb75cb86052ab286a80493c8ce9bf1788303b403",
+        "resource_obligation_closed": false
+      }
+    ],
+    "observer_source_files": 8,
+    "observer_file_summaries": [
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "self_attribute_store_sites": 38,
+        "literal_attributes": [
+          "active",
+          "code",
+          "count",
+          "dirs",
+          "entry",
+          "errors",
+          "events",
+          "files",
+          "frames",
+          "hash",
+          "identity",
+          "limit",
+          "limits",
+          "local",
+          "nonce",
+          "owner_contexts",
+          "owners",
+          "patches",
+          "path",
+          "record_baselines",
+          "record_refs",
+          "restored",
+          "result",
+          "root",
+          "root_identity",
+          "run_id",
+          "target",
+          "total",
+          "unique"
+        ],
+        "store_vector_sha256": "9bcb1c68b45817b14a3374d68ad8297a39fb0bba4865994d87d3c3adce396263"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "self_attribute_store_sites": 39,
+        "literal_attributes": [
+          "_causal_data",
+          "_draft",
+          "_emit_lock",
+          "_failed",
+          "_finalizing",
+          "_idle",
+          "_owner",
+          "_pending_io",
+          "_ref_lock",
+          "_rejection",
+          "_state_lock",
+          "active",
+          "causal",
+          "causal_bindings",
+          "causal_deferred",
+          "causal_exception_types",
+          "causal_inventory",
+          "causal_records",
+          "causal_sources",
+          "causal_test",
+          "chunk_bytes",
+          "chunks",
+          "events",
+          "fixture_class",
+          "ledger",
+          "page_first",
+          "parent_assertions",
+          "parent_outcomes",
+          "parent_snapshots",
+          "pending_domain_observation",
+          "record_snapshots",
+          "references",
+          "total_bytes"
+        ],
+        "store_vector_sha256": "f472cf0be541a189b88f8ee92be4422808fd6294f2678e4faaf2b2eddc9f16fa"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+        "self_attribute_store_sites": 76,
+        "literal_attributes": [
+          "_emit_lock",
+          "_member_lock",
+          "_ref_lock",
+          "approved",
+          "bindings",
+          "bodies",
+          "calls",
+          "causal",
+          "causal_bindings",
+          "causal_deferred",
+          "causal_exception_types",
+          "causal_inventory",
+          "causal_records",
+          "causal_sources",
+          "causal_test",
+          "charge",
+          "contract",
+          "counter",
+          "domains",
+          "emit",
+          "fd",
+          "first",
+          "frame",
+          "group_keys",
+          "invalid",
+          "lease",
+          "limits",
+          "member_limits",
+          "object_identities",
+          "objects",
+          "oracle_guards",
+          "pairs",
+          "parent_assertions",
+          "parent_outcomes",
+          "parent_snapshots",
+          "pending_domain_observation",
+          "phase",
+          "pid",
+          "reader",
+          "record_snapshots",
+          "references",
+          "root",
+          "run_id",
+          "spec",
+          "stacks",
+          "started",
+          "subobjects",
+          "tables",
+          "test",
+          "test_thread",
+          "threads",
+          "view"
+        ],
+        "store_vector_sha256": "7b2f2e429843aafd167e427906479fc06b28fcc009c27edb9c6a19056f21ab99"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/worker.py",
+        "sha256": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+        "self_attribute_store_sites": 1,
+        "literal_attributes": [
+          "stream"
+        ],
+        "store_vector_sha256": "36a55ca26ba9de3c804be6d0d4ee8d0e02fa0f0dee535a00671d07f5b672cb1e"
+      },
+      {
+        "path": "testing/prospective_capture_late/capture.py",
+        "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+        "self_attribute_store_sites": 19,
+        "literal_attributes": [
+          "fd",
+          "first",
+          "lease",
+          "ledger",
+          "lookup",
+          "on_reference",
+          "phase",
+          "pid",
+          "reader",
+          "rows",
+          "run_id",
+          "specs",
+          "started",
+          "states"
+        ],
+        "store_vector_sha256": "3da8c5a0cf994ff79a63535492502a899f28f00f57aa509b305109ef81b75dc4"
+      },
+      {
+        "path": "testing/prospective_capture_paged/capture.py",
+        "sha256": "466df1bff6ffe9a714cb6bc278fa1a9973c759653212f311e908efeadff8a664",
+        "self_attribute_store_sites": 30,
+        "literal_attributes": [
+          "active",
+          "chunk_bytes",
+          "chunks",
+          "closed",
+          "count",
+          "declarations",
+          "events",
+          "fd",
+          "frame_summary",
+          "limits",
+          "manifest",
+          "nonce",
+          "owner",
+          "page_first",
+          "peak_buffer_bytes",
+          "policies",
+          "references",
+          "root_identity",
+          "run_id",
+          "total_bytes"
+        ],
+        "store_vector_sha256": "82cdfbf66ec0a6cb6fd0f9b8a404bde34666632527d7a59b6bcfe9c6df490ce1"
+      },
+      {
+        "path": "testing/prospective_capture_selectors/capture.py",
+        "sha256": "edeb0ac2a4ea7decc23033ebd97a62ed19354977bfd77ba5330f83cdbb163964",
+        "self_attribute_store_sites": 57,
+        "literal_attributes": [
+          "bindings",
+          "calls",
+          "causal",
+          "causal_bindings",
+          "causal_deferred",
+          "causal_exception_types",
+          "causal_inventory",
+          "causal_records",
+          "causal_sources",
+          "causal_test",
+          "charge",
+          "contract",
+          "counter",
+          "domains",
+          "emit",
+          "fd",
+          "first",
+          "frame",
+          "group_keys",
+          "invalid",
+          "lease",
+          "limits",
+          "object_identities",
+          "objects",
+          "oracle_guards",
+          "pairs",
+          "parent_assertions",
+          "parent_outcomes",
+          "parent_snapshots",
+          "pending_domain_observation",
+          "phase",
+          "pid",
+          "record_snapshots",
+          "run_id",
+          "spec",
+          "stacks",
+          "started",
+          "subobjects",
+          "tables",
+          "test",
+          "test_thread",
+          "threads"
+        ],
+        "store_vector_sha256": "e9ee1e87dc6b360c992a1da776b6969f9417b5930e0f037886ebe79d1ab38b42"
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+        "self_attribute_store_sites": 58,
+        "literal_attributes": [
+          "_key",
+          "active",
+          "args",
+          "bindings",
+          "chunk_bytes",
+          "chunks",
+          "closed",
+          "count",
+          "declarations",
+          "drive_identities",
+          "drive_observations",
+          "events",
+          "fd",
+          "fixture_class",
+          "fixture_declarations",
+          "frame_summary",
+          "guard",
+          "lexical",
+          "limits",
+          "manifest",
+          "negative_id",
+          "nonce",
+          "operand_rows",
+          "owner",
+          "page_first",
+          "path_type",
+          "peak_buffer_bytes",
+          "pending_drive",
+          "policies",
+          "profile",
+          "projector",
+          "pure_type",
+          "references",
+          "root_identity",
+          "rows",
+          "run_id",
+          "snapshot_ids",
+          "source",
+          "source_hash",
+          "string",
+          "total_bytes"
+        ],
+        "store_vector_sha256": "0aba4352b35d11a91de7f6cfedfae02764665f42fa75212ba1ba55fa6108cc3f"
+      }
+    ],
+    "copied_FIELDS": [
+      "frames",
+      "active",
+      "owners",
+      "owner_contexts",
+      "record_baselines",
+      "record_refs",
+      "declarations",
+      "frame_summary",
+      "references",
+      "errors",
+      "drive_identities",
+      "drive_observations",
+      "fixture_declarations",
+      "pending_drive",
+      "parent_snapshots",
+      "parent_assertions",
+      "parent_outcomes",
+      "pending_domain_observation",
+      "causal_sources",
+      "causal_records",
+      "record_snapshots",
+      "causal_test"
+    ],
+    "FIELDS_anchor": {
+      "path": "testing/prospective_capture_joint_i122/atomic.py",
+      "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+      "symbol": "FIELDS",
+      "line": 12,
+      "end_line": 17,
+      "AST_sha256": "9232d50542ad06b37b6c7701e68e11c4115012e023a1da77129672cf3ba0f5b4"
+    },
+    "source_anchors": [
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "symbol": "build.Recorder.__init__",
+        "line": 164,
+        "end_line": 184,
+        "AST_sha256": "0abc673bbe9b3120952ec0aafc1782d6b69f73fe7f23fafbfb5b0d2e70c160ec"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "symbol": "build.Recorder._fork",
+        "line": 185,
+        "end_line": 201,
+        "AST_sha256": "082307462cd41c124997a5ca52ba3a2d93729d2279d57c366057462250ca2ea9"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "symbol": "build.Recorder._publish",
+        "line": 202,
+        "end_line": 210,
+        "AST_sha256": "90db3bc75378abae791d01ac912816d308faf39d44ff0dedb4d0b261de38228e"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "sha256": "9f2d8901fc0c5b202d2c2d0c054512d276f34736eb923f62eb29814e92672a9c",
+        "symbol": "build.Bindings.__init__",
+        "line": 116,
+        "end_line": 117,
+        "AST_sha256": "41c41f58c2f11da1fc4cda632d29ca7d6fd33e46464ddf61b1f799b7c6204fda"
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "symbol": "Recorder.__init__",
+        "line": 218,
+        "end_line": 219,
+        "AST_sha256": "bf22350ed64a304db537d76388c8a544ebb644155e052e258b5e81ade279788c"
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "symbol": "Recorder.owner",
+        "line": 292,
+        "end_line": 306,
+        "AST_sha256": "bf2a0ac4148d590b23536282aa76ba02c3e14b7b297f7106c753e714eafc345a"
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "symbol": "Recorder.patch",
+        "line": 320,
+        "end_line": 321,
+        "AST_sha256": "c4b4ff0b4d091e82e39a5ea24bc7fb38a623e47f66b3cf288a8851fbaa6cd57b"
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+        "symbol": "Recorder.restore",
+        "line": 373,
+        "end_line": 377,
+        "AST_sha256": "4fce36c8a5deac5d272dbc2501642f3f81fa709268b129e212c5c60a381b19ae"
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "sha256": "dd0187541504b03ec8d88c1c1653a780f076f5c121d525ee8dc744eadedc660e",
+        "symbol": "Recorder.__init__",
+        "line": 228,
+        "end_line": 229,
+        "AST_sha256": "c7e19b34d57744db53315726faa391a923b3ac9a3e8ce8cca3a5477731c889c5"
+      },
+      {
+        "path": "testing/prospective_capture_late/capture.py",
+        "sha256": "a977f159faf1f5bff49ee68ec93cf377aeb124fa7173074d2b88fe47d512058b",
+        "symbol": "LateBindings.__init__",
+        "line": 119,
+        "end_line": 120,
+        "AST_sha256": "59af44111d3c5574543310ca493210788bee0fcca11adde6245122c7548026b3"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+        "symbol": "CausalState.__init__",
+        "line": 419,
+        "end_line": 422,
+        "AST_sha256": "bb9f16c3a526ee2852043c3f54420f6d2e37941dacc67e4bc989422a372f0106"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+        "symbol": "ParentalState.__init__",
+        "line": 974,
+        "end_line": 975,
+        "AST_sha256": "4df281b622e10ee53f23af883d4036a200947f3082afb8818c1b7cd31988cb74"
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+        "symbol": "DomainState.__init__",
+        "line": 1222,
+        "end_line": 1225,
+        "AST_sha256": "3b40e41c58048f81b9a95475317aa4052e048ba981550ea54f3618f82ec65097"
+      }
+    ],
+    "constructor_attribute_candidates": [
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "symbol": "build.Recorder.__init__",
+        "literal_self_attributes": [
+          "_causal_data",
+          "_draft",
+          "_emit_lock",
+          "_failed",
+          "_finalizing",
+          "_idle",
+          "_pending_io",
+          "_ref_lock",
+          "_state_lock",
+          "causal",
+          "causal_bindings",
+          "causal_deferred",
+          "causal_exception_types",
+          "causal_inventory",
+          "causal_records",
+          "causal_sources",
+          "causal_test",
+          "events",
+          "ledger",
+          "parent_assertions",
+          "parent_outcomes",
+          "parent_snapshots",
+          "pending_domain_observation",
+          "record_snapshots"
+        ],
+        "attributes_outside_FIELDS": [
+          "_causal_data",
+          "_draft",
+          "_emit_lock",
+          "_failed",
+          "_finalizing",
+          "_idle",
+          "_pending_io",
+          "_ref_lock",
+          "_state_lock",
+          "causal",
+          "causal_bindings",
+          "causal_deferred",
+          "causal_exception_types",
+          "causal_inventory",
+          "events",
+          "ledger"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/atomic.py",
+        "symbol": "build.Bindings.__init__",
+        "literal_self_attributes": [
+          "_owner"
+        ],
+        "attributes_outside_FIELDS": [
+          "_owner"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture/capture.py",
+        "symbol": "Recorder.__init__",
+        "literal_self_attributes": [
+          "active",
+          "entry",
+          "errors",
+          "events",
+          "frames",
+          "limits",
+          "local",
+          "owner_contexts",
+          "owners",
+          "patches",
+          "record_baselines",
+          "record_refs",
+          "restored",
+          "result",
+          "run_id"
+        ],
+        "attributes_outside_FIELDS": [
+          "entry",
+          "events",
+          "limits",
+          "local",
+          "patches",
+          "restored",
+          "result",
+          "run_id"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_typed/capture.py",
+        "symbol": "Recorder.__init__",
+        "literal_self_attributes": [
+          "declarations",
+          "drive_identities",
+          "drive_observations",
+          "events",
+          "fixture_class",
+          "fixture_declarations",
+          "frame_summary",
+          "negative_id",
+          "operand_rows",
+          "pending_drive",
+          "policies",
+          "profile",
+          "projector",
+          "references",
+          "snapshot_ids"
+        ],
+        "attributes_outside_FIELDS": [
+          "events",
+          "fixture_class",
+          "negative_id",
+          "operand_rows",
+          "policies",
+          "profile",
+          "projector",
+          "snapshot_ids"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_late/capture.py",
+        "symbol": "LateBindings.__init__",
+        "literal_self_attributes": [
+          "lookup",
+          "on_reference",
+          "reader",
+          "rows",
+          "specs",
+          "states"
+        ],
+        "attributes_outside_FIELDS": [
+          "lookup",
+          "on_reference",
+          "reader",
+          "rows",
+          "specs",
+          "states"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "CausalState.__init__",
+        "literal_self_attributes": [
+          "calls",
+          "charge",
+          "counter",
+          "domains",
+          "emit",
+          "frame",
+          "invalid",
+          "limits",
+          "objects",
+          "oracle_guards",
+          "run_id",
+          "spec",
+          "stacks",
+          "subobjects",
+          "tables",
+          "test",
+          "test_thread",
+          "threads"
+        ],
+        "attributes_outside_FIELDS": [
+          "calls",
+          "charge",
+          "counter",
+          "domains",
+          "emit",
+          "frame",
+          "invalid",
+          "limits",
+          "objects",
+          "oracle_guards",
+          "run_id",
+          "spec",
+          "stacks",
+          "subobjects",
+          "tables",
+          "test",
+          "test_thread",
+          "threads"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "ParentalState.__init__",
+        "literal_self_attributes": [
+          "bindings",
+          "contract",
+          "pairs"
+        ],
+        "attributes_outside_FIELDS": [
+          "bindings",
+          "contract",
+          "pairs"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      },
+      {
+        "path": "testing/prospective_capture_joint_i122/capture.py",
+        "symbol": "DomainState.__init__",
+        "literal_self_attributes": [
+          "group_keys",
+          "object_identities"
+        ],
+        "attributes_outside_FIELDS": [
+          "group_keys",
+          "object_identities"
+        ],
+        "source_candidates_not_complete_root_or_owner_assignment": true
+      }
+    ],
+    "source_semantics": {
+      "shared_lock_and_condition_aliases_declared": true,
+      "owner_callback_backlinks_declared": true,
+      "typed_initializer_called_directly": true,
+      "draft_shallow_copies_root_dictionary": true,
+      "thread_local_and_weakref_and_patch_storage_identified": true,
+      "restore_clears_patch_list_not_complete_reachability_proof": true
+    },
+    "source_candidates_not_complete_loaded_allocation_or_lifetime_model": true,
+    "no_target_modules_executed": true
+  },
+  "candidate_owner_record": {
+    "id": "H03",
+    "owner": "Persistent observer roots outside cloning plus scalar leaves",
+    "candidate_budget_bytes": 536870912,
+    "budget_kind": "PROPOSED_NOT_APPLIED_NOT_ATTESTED",
+    "metric": "peak_requested_live_heap",
+    "proof_upper_bytes": null,
+    "evidence_pins": {},
+    "status": "UNPROVED",
+    "known_partial_upper": null,
+    "known_partial_unit": null,
+    "known_partial_is_complete_term": false,
+    "acceptance": "Full owner allocation and lifetime proof for exact runtime, including applicable rejected prefixes; verified term upper<=candidate budget. Shared storage may be overcounted; no physical witness merge or unexplained omission."
+  },
+  "owner_id_metric_and_exact_units": {
+    "owner_id": "H03",
+    "owner": "Persistent observer roots outside cloning plus scalar leaves",
+    "metric": "peak_requested_live_heap",
+    "unit": "exact_integer_bytes",
+    "process": "I122 worker observer",
+    "candidate_budget_bytes": 536870912,
+    "scope_is_requirement_not_verified_bound": true
+  },
+  "source_ABI_allocator_dependencies": {
+    "historical_runtime_reference": {
+      "observed_reference": {
+        "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+        "pointer_bytes": 8,
+        "GIL_disabled": 0,
+        "debug": 0,
+        "pymalloc": 1,
+        "type_sizes": {
+          "dict": {
+            "basicsize": 48,
+            "itemsize": 0
+          },
+          "list": {
+            "basicsize": 40,
+            "itemsize": 0
+          },
+          "tuple": {
+            "basicsize": 32,
+            "itemsize": 8
+          },
+          "set": {
+            "basicsize": 200,
+            "itemsize": 0
+          },
+          "frozenset": {
+            "basicsize": 200,
+            "itemsize": 0
+          },
+          "int": {
+            "basicsize": 24,
+            "itemsize": 4
+          },
+          "str": {
+            "basicsize": 64,
+            "itemsize": 0
+          },
+          "bytes": {
+            "basicsize": 33,
+            "itemsize": 1
+          }
+        },
+        "interpreter_binary": {
+          "path": "/usr/bin/python3.14",
+          "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+          "bytes": 7477160,
+          "binary_identified_not_upstream_source_equivalence_attested": true
+        }
+      },
+      "required_identity_pins": {
+        "interpreter": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+        "stdlib": null,
+        "extension_binaries": null,
+        "libc_allocator": null,
+        "kernel": null,
+        "CPU_and_service_domain": null
+      },
+      "platform_attestation": {
+        "owner": null,
+        "artifact_path": null,
+        "artifact_sha256": null,
+        "validity_interval": null,
+        "available_worker_heap_bytes": null,
+        "CPU_service_evidence": null,
+        "IO_and_child_latency_evidence": null,
+        "clock_and_scheduling_evidence": null
+      },
+      "source_binary_equivalence_verified": false,
+      "environment_manifest_verified": false
+    },
+    "accepted_target_closure": null,
+    "accepted_ABI_size_model": null,
+    "complete_observer_native_size_model": null,
+    "allocator_metric_correspondence": null,
+    "exact_runtime_ABI_or_allocator_correspondence_verified": false
+  },
+  "complete_live_allocation_inventory": {
+    "complete": false,
+    "kind": "TWELVE_REQUIRED_OBSERVER_COVERAGE_CLASSES_NOT_COMPLETE_ALLOCATION_PROOF",
+    "required_classes": [
+      {
+        "id": "R01",
+        "allocation_class": "Entry/profile/policies/specs",
+        "required_coverage": "Observer-owned dictionaries, lists, schemas, inventory/selector maps and retained references to registry/profile/entry, including roots outside FIELDS.",
+        "runtime_dependency": "Exact selected source graph, ABI/native sizes and complete owner mapping",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R02",
+        "allocation_class": "Bindings and projector graphs",
+        "required_coverage": "Class-binding specs/rows/states, Reader/lookup references, projector and owner/on_reference callbacks, including inherited initialization.",
+        "runtime_dependency": "Exact initializer/source-to-runtime correspondence and retained reachability",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R03",
+        "allocation_class": "Patches and wrapper closures",
+        "required_coverage": "Patch list/tuples, old/replacement methods, decorators, signatures, closure cells/captured references and installed class links; restore does not prove all releases.",
+        "runtime_dependency": "Complete wrapper multiplicity, code/closure/native layout and all retaining roots",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R04",
+        "allocation_class": "Weakrefs and identity maps",
+        "required_coverage": "Weakref objects, owners/context maps and metadata. Weak references do not retain referents by themselves, but the structures cost memory and other strong roots remain separate.",
+        "runtime_dependency": "Exact weakref/map layouts, population and coexistence; no inferred lifetime credit",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R05",
+        "allocation_class": "Locks/Condition and native synchronization",
+        "required_coverage": "RLock, Condition, waiter/support objects and requested native storage. Shared attribute aliases are source facts, not proof of total allocation or spare budget.",
+        "runtime_dependency": "Exact runtime/native synchronization layout and all owners/waiters/lifetimes",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R06",
+        "allocation_class": "Thread-local observer state",
+        "required_coverage": "threading.local wrapper and all participating-thread dictionaries/values, callbacks and observer thread roots; stack/RSS separate.",
+        "runtime_dependency": "Bounded thread participation, exact native/thread-local storage and retention",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R07",
+        "allocation_class": "Causal/domain/parental state",
+        "required_coverage": "Objects, threads, tables, bindings, contracts, callbacks and maps in causal/domain/parental state, including roots not described by the FIELDS tuple.",
+        "runtime_dependency": "Full constructor/mutation/root graph, multiplicities and H02/H04 reconciliation",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R08",
+        "allocation_class": "Scalar and immutable metadata leaves",
+        "required_coverage": "New strings/bytes/ints/IDs/digests/keys and other scalar metadata leaves retained in observer and copied graphs. No interning or repeated-witness discount inferred.",
+        "runtime_dependency": "Complete leaf creation/size/coexistence and exact-runtime ownership model",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R09",
+        "allocation_class": "Live/draft root sharing and replacement",
+        "required_coverage": "Shallow-copied root dictionaries, proxy/projector/bindings links, old/new support objects and callbacks that coexist during draft/publish or escape.",
+        "runtime_dependency": "Complete reachability/lifetime proof across atomic operations; distinguish H04 containers",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R10",
+        "allocation_class": "Ledger/channel and auxiliary observer roots",
+        "required_coverage": "Ledger/owner/helper references, private support objects, active callback/backlinks and other observer metadata outside chosen copied fields; IO payload elsewhere still reconciled.",
+        "runtime_dependency": "Complete auxiliary root inventory and native/private size models",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R11",
+        "allocation_class": "Restore/error/rejection retained state",
+        "required_coverage": "Wrapper/callback/patch/weakref/thread/native support still reachable during applicable observer rejection, restore or finalization; exceptions/frames reconciled with H05.",
+        "runtime_dependency": "P01 applicable prefixes and actual release/GC/reachability coverage",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      },
+      {
+        "id": "R12",
+        "allocation_class": "Residual hidden/transitive observer roots",
+        "required_coverage": "Remaining dynamic/setattr/native/closure/module or inherited observer allocations not enclosed above. Enumerating twelve requirements does not establish complete/disjoint coverage.",
+        "runtime_dependency": "Complete selected implementation/allocation-site proof or conservative residual bound",
+        "cardinality_upper": null,
+        "size_upper_bytes": null,
+        "maximum_live_upper_bytes": null,
+        "lifetime_derivation": null,
+        "verified": false
+      }
+    ],
+    "residual_transitive_roots_not_proved_absent": true
+  },
+  "cardinality_size_lifetime_derivations": {
+    "complete": false,
+    "whole_owner_live_upper_bytes": null,
+    "FIELDS_and_logical_quotas_not_complete_heap_inventory": true,
+    "no_interning_or_alias_slack_inferred": true,
+    "restore_clear_not_complete_root_release": true,
+    "no_immediate_GC_assumed": true,
+    "required_derivation": "For the exact accepted runtime/native model, enclose all observer root graphs and scalar leaves with complete allocation-site, requested byte-size, multiplicity and coexistence/reachability derivations across the applicable paths, then compare whole-H03 peak to536870912. Requirement only; source counts and limits are not that proof."
+  },
+  "overlap_alias_original_and_rejected_prefix_treatment": {
+    "inherited_scope": {
+      "worker_heap": "All dynamic Python/native heap attributable to the I122 worker: original fixtures/retained originals, observer and runtime, every11 owner. Opaque means not cloned, not memory-free.",
+      "coordinator_heap": "Separate process allocation account; not charged to the11/12GiB worker budget and not omitted from end-to-end timing.",
+      "child_process_heaps": "Separate per-process allocation/service accounts if claiming joint-host capacity; original child work is not reclassified as instrumented parent events.",
+      "joint_host_capacity": "No aggregate RAM/RSS/capacity claim. P02/P03 and later proofs must identify all relevant processes/assumptions.",
+      "timing_process_scope": "Coordinator, worker and children/service relevant to launch-entry..normal-return; all C01-C10 interval contributors including worker work before tR.",
+      "failure_scope": "Heap proof must cover bounded observer-rejection prefixes and retained tracebacks within the fixed original-source scope. The900 success target is not a guarantee that all failure cleanup paths complete within900.",
+      "qualified_success_not_all_failure_cleanup_deadline": true
+    },
+    "source_applicability": "Same fixed321-root/12-group original complete source route and successful bounded metadata shapes as I115/I120/I123; includes observer opportunities that charge zero and expected original exceptions. Unexpected original control-flow changes/import hooks/hostile retained objects are outside the inherited proof.",
+    "boundary_requirements": [
+      {
+        "other_owner": "H01",
+        "required_reconciliation": "Runtime/module/code baseline versus observer-owned roots, wrappers and metadata. Exact ownership/ABI is still pending; runtime support is not automatic H03 payment.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H02",
+        "required_reconciliation": "Observer containers/root/weakref bookkeeping versus original referents and their private/native graphs. Strong callbacks may keep originals alive; weakrefs alone do not pay or retain them.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H04",
+        "required_reconciliation": "Persistent support roots/scalar leaves versus copied containers/memo/drafts and transient wrappers. Outside FIELDS is not a complete owner classifier; shallow roots may coexist with copies.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H05",
+        "required_reconciliation": "Callback/closure/support roots versus heap frame/generator/traceback objects; original/native stack remains separate while retained referents stay covered.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H06",
+        "required_reconciliation": "Persistent digest/projection metadata versus temporary construction/sort/project allocations. Logical record limits do not bound all allocated bytes.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H07",
+        "required_reconciliation": "Observer metadata leaves/roots versus codec/JSON/Unicode trees and temporaries; complete peak coexistence and ownership are required.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H08",
+        "required_reconciliation": "Binding/Reader references and support maps versus Reader chunks/phase bodies/parses; payload limits are not complete root-object bounds.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H09",
+        "required_reconciliation": "Observer page support/callback/root metadata versus page/event chunks/bodies/history. Retention and aliases do not authorize omission.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H10",
+        "required_reconciliation": "Observer IO references/support versus Tee/StringIO/raw buffers/snapshots. Account both live backing and support structures with no unjustified discount.",
+        "resolved": false
+      },
+      {
+        "other_owner": "H11",
+        "required_reconciliation": "Observer live requested Python/native blocks versus committed allocator overhead/fragmentation/retention. H11 is not an automatic H03 reserve.",
+        "resolved": false
+      }
+    ],
+    "complete_ownership_alias_lifetime_proof": false,
+    "weakrefs_not_strong_referent_charge_or_zero_structure_cost": true,
+    "original_referents_not_paid_by_observer_containers": true,
+    "no_hidden_interning_or_witness_merge": true,
+    "conservative_overcount_allowed": true
+  },
+  "explicit_assumptions_and_external_dependencies": {
+    "assumptions_verified": false,
+    "P02_exact_runtime_identity_accepted": false,
+    "P03_capacity_service_accepted": false,
+    "complete_observer_root_native_model": null,
+    "exact_runtime_size_lifetime_material": null,
+    "independent_runtime_memory_review": null,
+    "inherited_P01_preconditions": [
+      "I113 original321/12 all-PASS source route, same bindings/MRO/stdlib and builtin data; valid complete observations, not current refs admission.",
+      "Ignore reference early-stop solely to bound the full intended demand; no execution is performed. No new hooks/importers/types or modified assertions.",
+      "All causal boundaries close exactly once; no projection/observer failure or pending protocol observation. These are applicability conditions, not demonstrated functional results.",
+      "Source W bound uses declaration count, not row4096 or refs16384. Fixed I96/I97 terms are historical source findings.",
+      "No quota inferred from13/321; no product/runner import; no evidence omission, reset, interning discount, truncation or merging."
+    ],
+    "negative_dossier_does_not_bypass_P01_P02": true,
+    "other_owner_or_capacity_not_substitute_for_H03_demand": true,
+    "later_resource_closure_not_started": true
+  },
+  "verified_upper_bytes_and_derivation": {
+    "verified_upper_bytes": null,
+    "complete_derivation": null,
+    "evidence_pins": {},
+    "verified": false,
+    "unknown_not_zero": true,
+    "logical_counts_payload_and_file_sizes_not_heap_upper": true
+  },
+  "candidate_budget_bytes": 536870912,
+  "bound_fit_not_just_partial_payload": {
+    "candidate_budget_bytes": 536870912,
+    "verified_complete_upper_bytes": null,
+    "fit_result": "NOT_EVALUABLE_NO_COMPLETE_H03_BOUND",
+    "fits": null,
+    "slack_bytes": null,
+    "overbudget_proved": false,
+    "actual_unboundedness_proved": false,
+    "partial_payload_not_accepted": true
+  },
+  "dependencies": [
+    {
+      "id": "P01",
+      "path": "docs/validation/D5-PFC126-03-RESOURCE-SCOPE.json",
+      "sha256": "299280a0634b5e5e976bbdf06deff0388bfd319874a53193f027d9b2832303ff",
+      "accepted_for_resource_closure": false,
+      "independent_acceptance_pending": true
+    },
+    {
+      "id": "P02",
+      "path": "docs/validation/D5-PFC126-03-E01-RUNTIME-IDENTITY.json",
+      "sha256": "4c153e208797d6494f9e6d96bd35d3a711c8d238c863b353385c55a801c3fd7d",
+      "accepted_for_resource_closure": false,
+      "runtime_evidence_insufficient": true
+    }
+  ],
+  "producer_and_review_provenance": {
+    "producer_identity": "Codex assistant preparing I143 in this chat",
+    "producer_role": "Documentary observer-allocation dossier preparer; not runtime custodian",
+    "planned_author_role": "Allocation/lifetime proof author for H03",
+    "planned_review_role": "Independent exact-runtime memory reviewer",
+    "independent_reviewer_identity": null,
+    "independent_acceptance": false,
+    "runtime_custodian_authority_claimed": false
+  },
+  "field_assessment": [
+    {
+      "field": "owner_id_metric_and_exact_units",
+      "result": "DOCUMENTARY_DEFINITION_ONLY",
+      "basis": "H03/worker/requested-live/exact-byte scope is defined; no allocation upper is established.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "source_ABI_allocator_dependencies",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "Selected P02 runtime/ABI/native lock/weakref/thread-local/closure layouts and allocator correspondence remain unaccepted.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "complete_live_allocation_inventory",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "Twelve coverage classes and literal source candidates do not prove a complete live root/allocation inventory.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "cardinality_size_lifetime_derivations",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "No complete multiplicity, byte-size and lifetime/coexistence derivation covers all support roots, leaves and native storage.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "overlap_alias_original_and_rejected_prefix_treatment",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "Ten boundaries, alias/referent ownership and applicable prefixes remain unresolved; no interning/witness merge or immediate release credit.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "explicit_assumptions_and_external_dependencies",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "P01 independent/P02 exact-runtime and complete observer-root/native evidence remain pending; other owners or platform capacity do not substitute.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "verified_upper_bytes_and_derivation",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "Complete verified H03 upper and derivation remain null, without logical/payload/file-size substitution.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "candidate_budget_bytes=536870912",
+      "result": "DOCUMENTARY_DEFINITION_ONLY",
+      "basis": "536870912 bytes = 512 MiB is the unchanged candidate allocation, not an applied quota, capacity or proven demand fit.",
+      "resource_obligation_closed": false
+    },
+    {
+      "field": "bound_fit_not_just_partial_payload",
+      "result": "INSUFFICIENT_FOR_ACCEPTANCE",
+      "basis": "No complete H03 upper means fits/slack/overbudget are not evaluable; no actual unboundedness/infeasibility follows.",
+      "resource_obligation_closed": false
+    }
+  ],
+  "acceptance": {
+    "rule": "Complete requested-owner upper (or H11 allocator overhead upper) must be derived and fit its unchanged candidate allocation, with all applicability conditions and provenance. No reserve transfer in this plan.",
+    "rejection_rule": "No omission of observer roots or hidden interning/witness merge. Missing or overbudget proof remains open; no unknown bound=0, source change or budget increase.",
+    "preparation_complete": true,
+    "accepted_as_complete_H03_proof": false,
+    "H03_verified": false,
+    "E02_closed": false,
+    "resource_obligations_closed": 0,
+    "no_reserve_transfer": true
+  },
+  "E02_criterion_disposition": [
+    {
+      "id": "E02-R1",
+      "inherited_result": "DOCUMENTARY_CONSISTENCY_ONLY",
+      "I143_result": "DOCUMENTARY_CONSISTENCY_ONLY",
+      "closed": false
+    },
+    {
+      "id": "E02-R2",
+      "inherited_result": "COMPLETE_EVIDENCE_NOT_SUPPLIED",
+      "I143_result": "COMPLETE_EVIDENCE_NOT_SUPPLIED",
+      "closed": false
+    },
+    {
+      "id": "E02-R3",
+      "inherited_result": "DOCUMENTARY_CONSISTENCY_ONLY",
+      "I143_result": "DOCUMENTARY_CONSISTENCY_ONLY",
+      "closed": false
+    },
+    {
+      "id": "E02-R4",
+      "inherited_result": "COMPLETE_EVIDENCE_NOT_SUPPLIED",
+      "I143_result": "COMPLETE_EVIDENCE_NOT_SUPPLIED",
+      "closed": false
+    }
+  ],
+  "non_execution_and_zero_transfer_policy": {
+    "product_or_runner_imported": false,
+    "candidate_imported_or_run": false,
+    "components_run": false,
+    "benchmark_or_schedule_probe_run": false,
+    "original_assertions_or_calls_modified": false,
+    "source_implementation_changed": false,
+    "numeric_product_quotas_changed": false,
+    "numeric_candidates": {
+      "event_bytes": 4096,
+      "events_test": 2048,
+      "events_campaign": 131072,
+      "page_bytes": 2097152,
+      "pages": 32,
+      "event_pages_total_bytes": 67108864,
+      "raw_bytes": 12582912,
+      "index_sidecar_bytes": 35651584,
+      "context_bytes": 12582912,
+      "launch_bytes": 12582912,
+      "package_bytes": 140513280,
+      "evidence_unique_bytes": 134217728,
+      "evidence_read_bytes": 297799680,
+      "operand_bytes": 16777216,
+      "frames": 4096,
+      "refs": 442305,
+      "depth": 32,
+      "string": 4096,
+      "input_paths": 4096,
+      "input_file_bytes": 16777216,
+      "input_unique_bytes": 134217728,
+      "input_read_bytes": 268435456,
+      "wait_seconds": 20,
+      "campaign_seconds": 900
+    },
+    "numeric_candidates_applied": false,
+    "heap_reserve_allocated_bytes": 0,
+    "time_reserve_allocated_seconds": 0,
+    "nested_time_allocated_seconds": 0,
+    "resources_reserved": false,
+    "provider_or_operator_contacts_made": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "no_missing_resource_bound_coerced_to_zero": true,
+    "zero_allocation_is_documentary_not_runtime_usage": true
+  },
+  "reserve_accounting": {
+    "status": "NORMATIVE_CANDIDATE_RULES_NO_TRANSFER_APPLIED",
+    "state_metric": "Documentary candidate allocation only; zero here is not measured runtime usage or actual spare resources.",
+    "heap": {
+      "unit": "bytes",
+      "eligible_owner_ids": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09",
+        "H10"
+      ],
+      "owner_baseline_bytes": {
+        "H01": 268435456,
+        "H02": 2147483648,
+        "H03": 536870912,
+        "H04": 6442450944,
+        "H05": 134217728,
+        "H06": 268435456,
+        "H07": 268435456,
+        "H08": 536870912,
+        "H09": 201326592,
+        "H10": 134217728
+      },
+      "reserve_baseline_bytes": 872415232,
+      "allocation_bytes": {
+        "H01": 0,
+        "H02": 0,
+        "H03": 0,
+        "H04": 0,
+        "H05": 0,
+        "H06": 0,
+        "H07": 0,
+        "H08": 0,
+        "H09": 0,
+        "H10": 0
+      },
+      "allocated_total_bytes": 0,
+      "remaining_reserve_bytes": 872415232,
+      "requested_total_bytes": 11811160064,
+      "allocator_H11_bytes": 1073741824,
+      "committed_total_bytes": 12884901888,
+      "rule": {
+        "domain": "x_i are nonnegative exact integer bytes for H01-H10; sum(x_i)<=872415232",
+        "owner_update": "B_i_new=B_i+x_i",
+        "reserve_update": "R_heap_new=872415232-sum(x_i)",
+        "conservation": "sum(B_i_new)+R_heap_new=11811160064",
+        "allocator_separation": "H11 overhead1073741824 is not an additional free requested-heap reserve; no automatic borrowing from H11 or other owners.",
+        "unknown_costs": "No null bound treated as0, budget-minus-partial treated as verified slack, or unproved owner funded silently by reserve."
+      }
+    },
+    "time": {
+      "unit": "exact rational seconds",
+      "phase_ids": [
+        "Tpre",
+        "Tworker",
+        "Tpost"
+      ],
+      "phase_baseline_seconds": {
+        "Tpre": 60,
+        "Tworker": 750,
+        "Tpost": 60
+      },
+      "reserve_baseline_seconds": 30,
+      "allocation_seconds": {
+        "Tpre": 0,
+        "Tworker": 0,
+        "Tpost": 0
+      },
+      "allocated_total_seconds": 0,
+      "remaining_reserve_seconds": 30,
+      "end_to_end_total_seconds": 900,
+      "rule": {
+        "domain": "y_pre,y_worker,y_post are nonnegative finite exact rational seconds; sum(y)<=30",
+        "phase_update": "phase_new=phase_baseline+y_phase",
+        "reserve_update": "R_time_new=30-sum(y)",
+        "conservation": "sum(phase_new)+R_time_new=900",
+        "phase_limits": "Unassigned30 is not automatic permission to exceed60/750/60. Unknown/unbounded phases have no finite payment from reserve."
+      }
+    },
+    "worker_nested": {
+      "base_category_seconds": {
+        "CPU": 600,
+        "IO_child_wait": 90,
+        "scheduler": 60
+      },
+      "base_total_seconds": 750,
+      "additional_category_allocation_seconds": {
+        "CPU": 0,
+        "IO_child_wait": 0,
+        "scheduler": 0
+      },
+      "additional_phase_allocation_seconds": 0,
+      "category_reserve_seconds": 0,
+      "rule": "If a future reviewed y_worker is assigned to Tworker, explicitly assign nonnegative exact rational z_CPU,z_IO,z_scheduler with sum(z)=y_worker. Updated category sum=750+y_worker; updated reserve=30-sum(y). One outer credit, not three independent credits.",
+      "category_slack_verified": false,
+      "allocation_constraint": "z_CPU+z_IO+z_scheduler=y_worker",
+      "updated_category_sum": "750+sum(z)",
+      "updated_phase_budget": "750+y_worker"
+    },
+    "transition_requirements": [
+      "Explicit reviewed/pinned contract allocation or successor revision recording amounts, owners/phases, remaining reserves and unchanged global totals. No silent automatic runtime transfer.",
+      "Complete cost/lifetime/work evidence and compatible service/capacity evidence for the resulting owner/phase budgets; changes of budget alone prove no fit.",
+      "For a worker-phase allocation, record the consistent nested category split and prove coverage/latencies; no unused IO/scheduler budget becomes CPU service by assertion.",
+      "No negative entries, double credit of original and residual reserve, release/reset, byte-to-second conversion, physical witness merge, product quota mutation or implied execution authorization."
+    ],
+    "resource_availability_verified": false,
+    "reserve_or_capacity_verified": false,
+    "transfers_applied": false,
+    "resources_reserved": false,
+    "product_quotas_changed": false
+  },
+  "external_material_scope": {
+    "scope": "Supplied bound records/source only; no global absence assertion.",
+    "external_contacts_made": false,
+    "global_absence_claimed": false,
+    "runtime_or_platform_sampled": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_H03_bound_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false
+  },
+  "candidate_budget_bytes=536870912": 536870912
+}
