@@ -1,0 +1,205 @@
+{
+  "schema": "d5.i191-preparation-review.v1",
+  "increment": "I191",
+  "date": "2026-11-16",
+  "base_commit": "3c301856df0e0b4af73fb97350618ead35062610",
+  "status": "CALLER_IMAGE_CUSTODY_CONTRACT_PREPARED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "contract": {
+    "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+    "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+  },
+  "schemas": {
+    "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+    "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+  },
+  "input_pins": 750,
+  "prior_published_files_preserved": 442,
+  "definitions": 24,
+  "record_families": [
+    {
+      "family": "anchor_registry",
+      "required_fields": 9,
+      "placeholder_serialized_bytes": 942,
+      "effective_cap_bytes": 65536,
+      "closed": true
+    },
+    {
+      "family": "actor_registry",
+      "required_fields": 8,
+      "placeholder_serialized_bytes": 1061,
+      "effective_cap_bytes": 98304,
+      "closed": true
+    },
+    {
+      "family": "image_manifest",
+      "required_fields": 26,
+      "placeholder_serialized_bytes": 5351,
+      "effective_cap_bytes": 98304,
+      "closed": true
+    },
+    {
+      "family": "caller_identity",
+      "required_fields": 13,
+      "placeholder_serialized_bytes": 751,
+      "effective_cap_bytes": 8192,
+      "closed": true
+    },
+    {
+      "family": "platform_custody",
+      "required_fields": 14,
+      "placeholder_serialized_bytes": 2450,
+      "effective_cap_bytes": 16384,
+      "closed": true
+    },
+    {
+      "family": "acceptance_record",
+      "required_fields": 27,
+      "placeholder_serialized_bytes": 2864,
+      "effective_cap_bytes": 16384,
+      "closed": true
+    },
+    {
+      "family": "custody_bundle",
+      "required_fields": 3,
+      "placeholder_serialized_bytes": 14088,
+      "effective_cap_bytes": 262144,
+      "closed": true
+    },
+    {
+      "family": "launch_receipt",
+      "required_fields": 21,
+      "placeholder_serialized_bytes": 1248,
+      "effective_cap_bytes": 8192,
+      "closed": true
+    }
+  ],
+  "mandatory_missing_or_unknown_key_cases": 129,
+  "scope": "Ephemeral structural placeholders only; no positive custody/enrollment/identity/image record, signature, actual actor or service created. Schema/cap conformance is not proof of complete evidence or real record/resource fit.",
+  "evidence_order": [
+    "ANCHOR",
+    "ACTOR_REGISTRY",
+    "IMAGE_MANIFEST",
+    "CALLER_IDENTITY",
+    "PLATFORM_CUSTODY",
+    "ACCEPTED_PRIOR_BASIS_INDEX",
+    "C_CONTEXT",
+    "FINAL_E06",
+    "ACCEPTANCE",
+    "FINAL_PAYLOAD",
+    "BUNDLE",
+    "Q_REQUEST",
+    "EXTERNAL_CURRENT_MAPPING",
+    "FINAL_ROOT",
+    "ATOMIC_CLAIM",
+    "LAUNCH_RECEIPT"
+  ],
+  "evidence_order_acyclic": true,
+  "antecedent_records_exclude_C_acceptance_bundle_root_receipt_cycles": true,
+  "C_projection_fields_with_identical_types": [
+    "roles",
+    "documentary_preparers",
+    "source_author_id",
+    "runtime_requester_id",
+    "issuer",
+    "acceptor",
+    "profile",
+    "proposal_scope",
+    "accepted_source_basis_sha256",
+    "accepted_resource_index_sha256",
+    "resource_scope_sha256",
+    "suite_scope_sha256",
+    "configuration_epoch",
+    "validity"
+  ],
+  "unchanged_C_Q_I_A_L_and_output_bytes": true,
+  "S01_exclusions_preserved": 8,
+  "extra_custody_exclusions_checked": 4,
+  "R01_R02_overlap_permitted_if_genuine": true,
+  "three_approval_domains_distinct": true,
+  "actual_signatures_or_independence_verified": false,
+  "actual_source_image_alias_mapping_custody_ledger_clock_or_resources_verified": false,
+  "provenance": {
+    "preparer": "Same Codex assistant/chat; not a real custody authority or independent acceptor",
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false
+  },
+  "current_effect": {
+    "caller_image_custody_contract_prepared": true,
+    "real_actor_or_caller_enrolled": false,
+    "actual_custody_bundle_or_anchor_created": false,
+    "actual_image_or_attestation_supplied": false,
+    "actual_trust_or_source_image_mapping_verified": false,
+    "adopted": false,
+    "implemented": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of identity/custody record semantics, external anchor/identity authority/protection-domain backend and complete C projection/unique mapping; no real person/service/key or custody accepted here.",
+    "Actual exact source-to-image/runtime/dependency/build evidence and platform enforcement/clock/epoch/global one-use custody; implement only in separately authorized scope and reject unsupported unchanged route.",
+    "Complete179/321/12/30, E01-E05/global resource and phase/heap/CPU/IO/Reader/900 requalification for caller/registry/crypto/receipt work, actual final E06 and root/payload/context/request/signatures.",
+    "Separate actual admission/execute decision after all evidence; custody signatures or schemas alone close no resources or D5."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.md",
+      "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "docs/validation/D5-I191-preparation-review.json",
+      "docs/validation/D5-I191-audit.py",
+      "docs/validation/D5-I191-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I191-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary identity/custody contract preparation; no product/components/crypto/image build or protocol channels/workers execution.",
+    "over400_lines": true,
+    "reason": "Complete typed evidence/custody/order/projection and preservation checks in one documentary deliverable; overage reported."
+  }
+}

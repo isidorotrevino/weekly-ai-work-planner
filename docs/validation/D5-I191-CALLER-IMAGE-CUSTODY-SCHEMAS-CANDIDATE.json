@@ -1,0 +1,1266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:d5:prp181:i191:caller-image-custody-candidate:01",
+  "title": "I191 candidate offline custody records; no actual identities, keys, attestations or authority",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/anchor_registry"
+    },
+    {
+      "$ref": "#/$defs/actor_registry"
+    },
+    {
+      "$ref": "#/$defs/image_manifest"
+    },
+    {
+      "$ref": "#/$defs/caller_identity"
+    },
+    {
+      "$ref": "#/$defs/platform_custody"
+    },
+    {
+      "$ref": "#/$defs/acceptance_record"
+    },
+    {
+      "$ref": "#/$defs/custody_bundle"
+    },
+    {
+      "$ref": "#/$defs/launch_receipt"
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 128,
+      "maxLength": 128,
+      "pattern": "^[0-9a-f]{128}$"
+    },
+    "identity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "validity": {
+      "type": "object",
+      "properties": {
+        "not_before": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 253402300799
+        },
+        "expires_at": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 253402300799
+        }
+      },
+      "required": [
+        "not_before",
+        "expires_at"
+      ],
+      "additionalProperties": false
+    },
+    "trusted_key": {
+      "type": "object",
+      "properties": {
+        "key_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "public_key_hex": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "key_id",
+        "actor_id",
+        "public_key_hex"
+      ],
+      "additionalProperties": false
+    },
+    "source_bindings": {
+      "type": "object",
+      "properties": {
+        "testing/prospective_capture_joint_prp181/README.md": {
+          "$ref": "#/$defs/sha256"
+        },
+        "testing/prospective_capture_joint_prp181/atomic.py": {
+          "$ref": "#/$defs/sha256"
+        },
+        "testing/prospective_capture_joint_prp181/capture.py": {
+          "$ref": "#/$defs/sha256"
+        },
+        "testing/prospective_capture_joint_prp181/run_joint_lab.py": {
+          "$ref": "#/$defs/sha256"
+        },
+        "testing/prospective_capture_joint_prp181/test_joint_capture.py": {
+          "$ref": "#/$defs/sha256"
+        },
+        "testing/prospective_capture_joint_prp181/worker.py": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "testing/prospective_capture_joint_prp181/README.md",
+        "testing/prospective_capture_joint_prp181/atomic.py",
+        "testing/prospective_capture_joint_prp181/capture.py",
+        "testing/prospective_capture_joint_prp181/run_joint_lab.py",
+        "testing/prospective_capture_joint_prp181/test_joint_capture.py",
+        "testing/prospective_capture_joint_prp181/worker.py"
+      ],
+      "additionalProperties": false
+    },
+    "verifier_profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "profile_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "id",
+        "schema_pack_sha256",
+        "profile_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "proposal_scope": {
+      "type": "object",
+      "properties": {
+        "proposal": {
+          "const": "PGO181-SPLIT-ROOT-01"
+        },
+        "namespace": {
+          "const": "testing/prospective_capture_joint_prp181/"
+        },
+        "source_root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        }
+      },
+      "required": [
+        "proposal",
+        "namespace",
+        "source_root_sha256",
+        "runtime_sha256",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "evidence_reference": {
+      "type": "object",
+      "properties": {
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "record_id",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "anchor_key": {
+      "type": "object",
+      "properties": {
+        "actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "key_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "public_key_hex": {
+          "$ref": "#/$defs/sha256"
+        },
+        "purpose": {
+          "enum": [
+            "CUSTODY_RUNTIME",
+            "CUSTODY_PLATFORM",
+            "CUSTODY_SEPARATE_ACCEPTANCE"
+          ]
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        }
+      },
+      "required": [
+        "actor_id",
+        "key_id",
+        "public_key_hex",
+        "purpose",
+        "validity"
+      ],
+      "additionalProperties": false
+    },
+    "anchor_registry": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-anchor-registry.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "authority_registry_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "authority_registry_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "keys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/anchor_key"
+          },
+          "minItems": 3,
+          "maxItems": 64
+        },
+        "identity_authority_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "state": {
+          "const": "EXTERNALLY_PROVISIONED_NOT_TRUSTED_BY_SELF_DECLARATION"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "authority_registry_id",
+        "authority_registry_epoch",
+        "keys",
+        "identity_authority_evidence",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "actor": {
+      "type": "object",
+      "properties": {
+        "canonical_actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "accountable_subject_evidence_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "organization_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identity"
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "competence_scopes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "RUNTIME_ATTESTATION",
+              "PLATFORM_ATTESTATION",
+              "RESOURCE_ACCEPTANCE",
+              "COMPONENT_CUSTODY",
+              "COMPONENT_REVIEW",
+              "ADMISSION_REVIEW",
+              "AUTHORITY_ISSUANCE",
+              "SEPARATE_ACCEPTANCE"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "enrollment_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "canonical_actor_id",
+        "accountable_subject_evidence_sha256",
+        "organization_id",
+        "aliases",
+        "competence_scopes",
+        "enrollment_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "preparation_record": {
+      "type": "object",
+      "properties": {
+        "actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "profile_sha256": {
+          "const": "5c52d746f5e6145eba5eb7f7e0fedf7428ffa0f36756901c25ed17ba0009c60f"
+        },
+        "protocol_schema_sha256": {
+          "const": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+        },
+        "contribution_scope_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "authorship_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "actor_id",
+        "record_id",
+        "profile_sha256",
+        "protocol_schema_sha256",
+        "contribution_scope_sha256",
+        "authorship_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "actor_registry": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-actor-registry.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "registry_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "actors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/actor"
+          },
+          "minItems": 1,
+          "maxItems": 64
+        },
+        "documentary_preparation_records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/preparation_record"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "completeness_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "registry_id",
+        "actors",
+        "documentary_preparation_records",
+        "completeness_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "image_member_binding": {
+      "type": "object",
+      "properties": {
+        "source_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "image_member_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "image_representation": {
+          "enum": [
+            "PYTHON_SOURCE",
+            "FROZEN_CODE",
+            "DOCUMENT"
+          ]
+        },
+        "image_member_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "mapping_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "image_member_id",
+        "image_representation",
+        "image_member_sha256",
+        "mapping_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "image_dependency": {
+      "type": "object",
+      "properties": {
+        "component_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "kind": {
+          "enum": [
+            "INTERPRETER",
+            "LOADER",
+            "STDLIB",
+            "NATIVE",
+            "CRYPTO",
+            "FROZEN",
+            "HISTORICAL_REPOSITORY_SOURCE"
+          ]
+        },
+        "binary_or_body_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_identity_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "provenance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "component_name",
+        "kind",
+        "binary_or_body_sha256",
+        "source_identity_sha256",
+        "provenance_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "image_manifest": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-image-manifest.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "image_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "image_bytes_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_bindings": {
+          "$ref": "#/$defs/source_bindings"
+        },
+        "source_root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_to_image": {
+          "type": "object",
+          "properties": {
+            "testing/prospective_capture_joint_prp181/README.md": {
+              "$ref": "#/$defs/image_member_binding"
+            },
+            "testing/prospective_capture_joint_prp181/atomic.py": {
+              "$ref": "#/$defs/image_member_binding"
+            },
+            "testing/prospective_capture_joint_prp181/capture.py": {
+              "$ref": "#/$defs/image_member_binding"
+            },
+            "testing/prospective_capture_joint_prp181/run_joint_lab.py": {
+              "$ref": "#/$defs/image_member_binding"
+            },
+            "testing/prospective_capture_joint_prp181/test_joint_capture.py": {
+              "$ref": "#/$defs/image_member_binding"
+            },
+            "testing/prospective_capture_joint_prp181/worker.py": {
+              "$ref": "#/$defs/image_member_binding"
+            }
+          },
+          "required": [
+            "testing/prospective_capture_joint_prp181/README.md",
+            "testing/prospective_capture_joint_prp181/atomic.py",
+            "testing/prospective_capture_joint_prp181/capture.py",
+            "testing/prospective_capture_joint_prp181/run_joint_lab.py",
+            "testing/prospective_capture_joint_prp181/test_joint_capture.py",
+            "testing/prospective_capture_joint_prp181/worker.py"
+          ],
+          "additionalProperties": false
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/image_dependency"
+          },
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "complete_dependency_closure_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "build_recipe_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "build_toolchain_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_identity_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "protocol_schema_sha256": {
+          "const": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+        },
+        "profile_sha256": {
+          "const": "5c52d746f5e6145eba5eb7f7e0fedf7428ffa0f36756901c25ed17ba0009c60f"
+        },
+        "output_schema_sha256": {
+          "const": "04207cefc5c4398ebae8de0d7c159ecc3a3a9231c3be22281cf25ffb0b683303"
+        },
+        "transport_contract_sha256": {
+          "const": "018c01dc999ca48d92e691660b8b3d60dd326e6cfd44b6c5e5516cbba7f4f63a"
+        },
+        "transport_grammar_sha256": {
+          "const": "ace4ea8bbd177163a52ad800accf706292bfd5821ad2829694d2b7e93782d5dd"
+        },
+        "coordinator_entry": {
+          "const": "testing.prospective_capture_joint_prp181.capture"
+        },
+        "worker_entry": {
+          "const": "testing.prospective_capture_joint_prp181.worker"
+        },
+        "entry_mode": {
+          "const": "TRUSTED_IMAGE_MODULE_ENTRY"
+        },
+        "immutable_entry_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "custody_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "custody_contract_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "image_id",
+        "image_bytes_sha256",
+        "runtime_sha256",
+        "source_bindings",
+        "source_root_sha256",
+        "source_to_image",
+        "dependencies",
+        "complete_dependency_closure_evidence",
+        "build_recipe_sha256",
+        "build_toolchain_sha256",
+        "runtime_identity_evidence",
+        "protocol_schema_sha256",
+        "profile_sha256",
+        "output_schema_sha256",
+        "transport_contract_sha256",
+        "transport_grammar_sha256",
+        "coordinator_entry",
+        "worker_entry",
+        "entry_mode",
+        "immutable_entry_evidence",
+        "custody_schema_pack_sha256",
+        "custody_contract_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "caller_identity": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-caller-identity.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "caller_principal_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "accountable_requester_actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "actor_registry_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "image_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "protection_domain_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "process_constructor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "constructor_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "caller_enrollment_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "permission": {
+          "const": "BOOTSTRAP_CUSTODY_ONLY_FULL_ROOT_AND_SEPARATE_REQUEST_REQUIRED"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "caller_principal_id",
+        "accountable_requester_actor_id",
+        "actor_registry_sha256",
+        "image_manifest_sha256",
+        "protection_domain_id",
+        "process_constructor_id",
+        "constructor_evidence",
+        "caller_enrollment_evidence",
+        "permission"
+      ],
+      "additionalProperties": false
+    },
+    "platform_custody": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-platform-custody.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "domain_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "caller_record_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "image_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "actor_registry_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "resource_scope_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "guarantees": {
+          "type": "object",
+          "properties": {
+            "immutable_first_entry": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "no_loader_shadowing": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "no_descriptor_injection_or_duplication": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "no_hostile_tracing_or_memory_mutation": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "exclusive_parent_child_channel_origin": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "owned_paths_and_group_identity": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "no_unapproved_helper_or_input": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "exact_source_runtime_mapping": {
+              "$ref": "#/$defs/evidence_reference"
+            }
+          },
+          "required": [
+            "immutable_first_entry",
+            "no_loader_shadowing",
+            "no_descriptor_injection_or_duplication",
+            "no_hostile_tracing_or_memory_mutation",
+            "exclusive_parent_child_channel_origin",
+            "owned_paths_and_group_identity",
+            "no_unapproved_helper_or_input",
+            "exact_source_runtime_mapping"
+          ],
+          "additionalProperties": false
+        },
+        "clock": {
+          "type": "object",
+          "properties": {
+            "clock_domain_id": {
+              "$ref": "#/$defs/identity"
+            },
+            "UTC_error_upper_seconds": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "monotonic_evidence": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "UTC_freshness_evidence": {
+              "$ref": "#/$defs/evidence_reference"
+            }
+          },
+          "required": [
+            "clock_domain_id",
+            "UTC_error_upper_seconds",
+            "monotonic_evidence",
+            "UTC_freshness_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "one_use": {
+          "type": "object",
+          "properties": {
+            "ledger_domain_id": {
+              "$ref": "#/$defs/identity"
+            },
+            "high_water_epoch": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "atomic_claim_evidence": {
+              "$ref": "#/$defs/evidence_reference"
+            },
+            "restart_policy": {
+              "const": "NO_PRIOR_INVOCATION_REUSE_FRESH_CONTEXT_REQUIRED"
+            },
+            "rollback_protection_evidence": {
+              "$ref": "#/$defs/evidence_reference"
+            }
+          },
+          "required": [
+            "ledger_domain_id",
+            "high_water_epoch",
+            "atomic_claim_evidence",
+            "restart_policy",
+            "rollback_protection_evidence"
+          ],
+          "additionalProperties": false
+        },
+        "constructor_policy_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "protection_domain_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "domain_id",
+        "caller_record_sha256",
+        "image_manifest_sha256",
+        "actor_registry_sha256",
+        "resource_scope_sha256",
+        "guarantees",
+        "clock",
+        "one_use",
+        "constructor_policy_evidence",
+        "protection_domain_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "acceptance_record": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-acceptance.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "actor_registry_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "image_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "caller_record_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "platform_record_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "roles": {
+          "type": "object",
+          "properties": {
+            "R01_RUNTIME": {
+              "$ref": "#/$defs/identity"
+            },
+            "R02_PLATFORM": {
+              "$ref": "#/$defs/identity"
+            },
+            "R03_RESOURCES": {
+              "$ref": "#/$defs/identity"
+            },
+            "R04_COMPONENT_CUSTODIAN": {
+              "$ref": "#/$defs/identity"
+            },
+            "R05_COMPONENT_REVIEWER": {
+              "$ref": "#/$defs/identity"
+            },
+            "R06_ADMISSION_REVIEWER": {
+              "$ref": "#/$defs/identity"
+            },
+            "R07_ISSUER": {
+              "$ref": "#/$defs/identity"
+            },
+            "R08_SEPARATE_ACCEPTOR": {
+              "$ref": "#/$defs/identity"
+            }
+          },
+          "required": [
+            "R01_RUNTIME",
+            "R02_PLATFORM",
+            "R03_RESOURCES",
+            "R04_COMPONENT_CUSTODIAN",
+            "R05_COMPONENT_REVIEWER",
+            "R06_ADMISSION_REVIEWER",
+            "R07_ISSUER",
+            "R08_SEPARATE_ACCEPTOR"
+          ],
+          "additionalProperties": false
+        },
+        "documentary_preparers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "actor_id": {
+                "$ref": "#/$defs/identity"
+              },
+              "provenance_record_id": {
+                "$ref": "#/$defs/identity"
+              },
+              "provenance_record_sha256": {
+                "$ref": "#/$defs/sha256"
+              }
+            },
+            "required": [
+              "actor_id",
+              "provenance_record_id",
+              "provenance_record_sha256"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "source_author_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "runtime_requester_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "issuer": {
+          "$ref": "#/$defs/trusted_key"
+        },
+        "acceptor": {
+          "$ref": "#/$defs/trusted_key"
+        },
+        "profile": {
+          "$ref": "#/$defs/verifier_profile"
+        },
+        "proposal_scope": {
+          "$ref": "#/$defs/proposal_scope"
+        },
+        "accepted_source_basis_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "accepted_resource_index_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "resource_scope_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "suite_scope_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "prior_basis_acceptance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "prior_resource_acceptance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "R01_runtime_acceptance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "R02_platform_acceptance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "R08_separate_acceptance_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "decision": {
+          "const": "IDENTITY_IMAGE_CUSTODY_ONLY_NOT_RESOURCE_OR_CAPTURE_ADMISSION"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "actor_registry_sha256",
+        "image_manifest_sha256",
+        "caller_record_sha256",
+        "platform_record_sha256",
+        "trust_context_sha256",
+        "roles",
+        "documentary_preparers",
+        "source_author_id",
+        "runtime_requester_id",
+        "issuer",
+        "acceptor",
+        "profile",
+        "proposal_scope",
+        "accepted_source_basis_sha256",
+        "accepted_resource_index_sha256",
+        "resource_scope_sha256",
+        "suite_scope_sha256",
+        "prior_basis_acceptance_evidence",
+        "prior_resource_acceptance_evidence",
+        "R01_runtime_acceptance_evidence",
+        "R02_platform_acceptance_evidence",
+        "R08_separate_acceptance_evidence",
+        "decision"
+      ],
+      "additionalProperties": false
+    },
+    "custody_approval": {
+      "type": "object",
+      "properties": {
+        "actor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "key_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "signature_hex": {
+          "$ref": "#/$defs/signature"
+        }
+      },
+      "required": [
+        "actor_id",
+        "key_id",
+        "signature_hex"
+      ],
+      "additionalProperties": false
+    },
+    "custody_signed_core": {
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "const": "PGO181-CALLER-IMAGE-CUSTODY-CANDIDATE-01"
+        },
+        "authority_registry_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "anchor_registry_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "records": {
+          "type": "object",
+          "properties": {
+            "actor_registry": {
+              "$ref": "#/$defs/actor_registry"
+            },
+            "image_manifest": {
+              "$ref": "#/$defs/image_manifest"
+            },
+            "caller_identity": {
+              "$ref": "#/$defs/caller_identity"
+            },
+            "platform_custody": {
+              "$ref": "#/$defs/platform_custody"
+            },
+            "acceptance_record": {
+              "$ref": "#/$defs/acceptance_record"
+            }
+          },
+          "required": [
+            "actor_registry",
+            "image_manifest",
+            "caller_identity",
+            "platform_custody",
+            "acceptance_record"
+          ],
+          "additionalProperties": false
+        },
+        "record_hashes": {
+          "type": "object",
+          "properties": {
+            "actor_registry": {
+              "$ref": "#/$defs/sha256"
+            },
+            "image_manifest": {
+              "$ref": "#/$defs/sha256"
+            },
+            "caller_identity": {
+              "$ref": "#/$defs/sha256"
+            },
+            "platform_custody": {
+              "$ref": "#/$defs/sha256"
+            },
+            "acceptance_record": {
+              "$ref": "#/$defs/sha256"
+            }
+          },
+          "required": [
+            "actor_registry",
+            "image_manifest",
+            "caller_identity",
+            "platform_custody",
+            "acceptance_record"
+          ],
+          "additionalProperties": false
+        },
+        "decision": {
+          "const": "CUSTODY_ONLY_NOT_RUNTIME_ADMISSION"
+        },
+        "custody_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "custody_contract_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "protocol",
+        "authority_registry_epoch",
+        "anchor_registry_sha256",
+        "records",
+        "record_hashes",
+        "decision",
+        "custody_schema_pack_sha256",
+        "custody_contract_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "custody_bundle": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-bundle.v1"
+        },
+        "signed_core": {
+          "$ref": "#/$defs/custody_signed_core"
+        },
+        "approvals": {
+          "type": "object",
+          "properties": {
+            "R01_RUNTIME": {
+              "$ref": "#/$defs/custody_approval"
+            },
+            "R02_PLATFORM": {
+              "$ref": "#/$defs/custody_approval"
+            },
+            "R08_ACCEPTANCE": {
+              "$ref": "#/$defs/custody_approval"
+            }
+          },
+          "required": [
+            "R01_RUNTIME",
+            "R02_PLATFORM",
+            "R08_ACCEPTANCE"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "signed_core",
+        "approvals"
+      ],
+      "additionalProperties": false
+    },
+    "launch_receipt": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-custody-launch-receipt.v1"
+        },
+        "record_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "configuration_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "validity": {
+          "$ref": "#/$defs/validity"
+        },
+        "bundle_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "caller_principal_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "protection_domain_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "image_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "image_bytes_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_request_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "invocation_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "ledger_domain_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "claim_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "claim_epoch": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "claim_status": {
+          "const": "CLAIMED_FOR_ONE_CORRELATED_WORKER"
+        },
+        "constructor_id": {
+          "$ref": "#/$defs/identity"
+        },
+        "constructor_evidence": {
+          "$ref": "#/$defs/evidence_reference"
+        },
+        "role": {
+          "const": "CALLER_PRIVATE_RECEIPT_NOT_NEW_FRAME_OR_AUTHORITY"
+        }
+      },
+      "required": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "bundle_sha256",
+        "caller_principal_id",
+        "protection_domain_id",
+        "image_manifest_sha256",
+        "image_bytes_sha256",
+        "runtime_sha256",
+        "source_root_sha256",
+        "trust_context_sha256",
+        "runtime_request_sha256",
+        "invocation_id",
+        "ledger_domain_id",
+        "claim_id",
+        "claim_epoch",
+        "claim_status",
+        "constructor_id",
+        "constructor_evidence",
+        "role"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
