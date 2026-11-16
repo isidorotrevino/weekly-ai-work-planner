@@ -1,0 +1,206 @@
+{
+  "schema": "d5.i186-i185-documentary-review.v1",
+  "increment": "I186",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "df98c54ea86b885c8768b44f34cc467c230c6456",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "status": "F183_01_DOCUMENTARY_REPAIR_CONFIRMED_IN_CANDIDATE_02_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I186-I185-source-reconstruction.json",
+    "sha256": "6616381802d58c74d81a19cdcbd489ffd6ffcd9ec754a3cb2b1a2dcd7da9c749"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I183/I185",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "finding_disposition": {
+    "id": "F183-01",
+    "disposition": "RESOLVED_DOCUMENTARY_GAP_IN_CANDIDATE_02",
+    "evidence": [
+      {
+        "path": "docs/validation/D5-I179-S01-ROLES-SCOPE-GATES.json",
+        "sha256": "8557f1e0feccfe483c2d001844548fedc31620a54bff7be36a594264713c30ea",
+        "json_pointer": "/role_authority_validity_matrix"
+      },
+      {
+        "path": "docs/validation/D5-I185-PGO181-TRUST-PROFILE-CANDIDATE-02.json",
+        "sha256": "5c52d746f5e6145eba5eb7f7e0fedf7428ffa0f36756901c25ed17ba0009c60f",
+        "json_pointer": "/bootstrap/inherited_S01_actor_exclusions"
+      },
+      {
+        "path": "docs/validation/D5-I185-PGO181-TRUST-PROFILE-CANDIDATE-02.json",
+        "sha256": "5c52d746f5e6145eba5eb7f7e0fedf7428ffa0f36756901c25ed17ba0009c60f",
+        "json_pointer": "/bootstrap/documentary_preparer_binding"
+      },
+      {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d",
+        "json_pointer": "/$defs/trust_context/properties/documentary_preparers"
+      },
+      {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d",
+        "json_pointer": "/$defs/role_acceptance_scope/properties/documentary_preparers_sha256"
+      }
+    ],
+    "eight_exclusions_preserved": true,
+    "five_original_gaps_repaired": true,
+    "complete_preparer_scope_bound": true,
+    "historical_I184_finding_unchanged": true,
+    "independent_closure_accepted": false,
+    "scope": "Confirms repair of exact documentary gap; no accepted real roles/trust/custody or runtime enforcement/admission."
+  },
+  "new_findings": [],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "Eight inherited actor exclusions equal S01 and explicit predicate list",
+      "result": "PASS_DOCUMENTARY_REPAIR"
+    },
+    {
+      "id": "R02",
+      "scope": "Universal scope for every preparer position/cardinality1..16",
+      "result": "PASS_SYMBOLIC_SCOPE"
+    },
+    {
+      "id": "R03",
+      "scope": "All five original I184 countermodels",
+      "result": "REJECTED_BY_CANDIDATE02_RELATIONS"
+    },
+    {
+      "id": "R04",
+      "scope": "Separate source-author and key predicates retained",
+      "result": "PASS_NO_SEPARATION_LOSS"
+    },
+    {
+      "id": "R05",
+      "scope": "Mandatory closed provenance records plus sorted/unique/complete authentic list",
+      "result": "PASS_DECLARED_CONTRACT_NOT_REAL_PROVENANCE"
+    },
+    {
+      "id": "R06",
+      "scope": "Whole context plus explicit preparer-list digest in both signed role domains",
+      "result": "PASS_SIGNED_SCOPE_DESIGN_NOT_CRYPTO_EXECUTION"
+    },
+    {
+      "id": "R07",
+      "scope": "No blanket mutual-distinctness beyond required actor edges",
+      "result": "PASS_NO_ACCIDENTAL_GLOBAL_RESTRICTION"
+    },
+    {
+      "id": "R08",
+      "scope": "Seven schema delta paths and candidate02 pinned identity",
+      "result": "PASS_BOUNDED_VERSIONED_DELTA"
+    },
+    {
+      "id": "R09",
+      "scope": "Original source/CP07/Reader/resource/crypto scope and caps",
+      "result": "PRESERVED_NOT_REQUALIFIED"
+    },
+    {
+      "id": "R10",
+      "scope": "Same reviewer/preparer actor, no appointments, adoption or execution",
+      "result": "PASS_PROVENANCE_AND_NONADMISSION_DISCLOSURE"
+    }
+  ],
+  "verdict": {
+    "F183_01_documentary_gap_resolved_in_candidate02": true,
+    "new_blocking_documentary_findings": 0,
+    "independent_closure_accepted": false,
+    "competent_policy_adoption": false,
+    "actual_identity_or_independence_verified": false,
+    "implemented": false,
+    "F179_01_resolved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "remaining_work": [
+    "Complete enclosing capture context/launch schemas (capture_binding alone is only a fragment).",
+    "Concrete trusted caller/custody/clock/replay implementation, key/library conformance and all resource/source/output requalification.",
+    "Actual named competent appointments, genuine antecedent acceptance, final E06 provenance and root/payload/request/signature evidence."
+  ],
+  "current_effect": {
+    "F179_01_solution_model_prepared": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "semantic_adoption": false,
+    "source_implementation_changed": false,
+    "contract_or_active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "pending_I175_bindings": 4,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "exact_schemas_prepared": true,
+    "trust_profile_prepared": true,
+    "active_schema_changed": false,
+    "trust_anchor_established": false,
+    "F183_01_candidate_repair_prepared": true,
+    "F183_01_independent_closure_accepted": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I186-I185-SEPARATION-REPAIR-REVIEW.md",
+      "docs/validation/D5-I186-I185-documentary-review.json",
+      "docs/validation/D5-I186-I185-source-reconstruction.json",
+      "docs/validation/D5-I186-audit.py",
+      "docs/validation/D5-I186-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I186-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary candidate review; no runtime source change/product/component/crypto execution.",
+    "over400_lines": true,
+    "reason": "Traceable Git/schema/binding/role reconstruction, finding disposition and preservation seal as one reviewable unit; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_or_authority": true
+  }
+}
