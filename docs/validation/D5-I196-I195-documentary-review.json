@@ -1,0 +1,279 @@
+{
+  "schema": "d5.i196-i195-documentary-review.v1",
+  "increment": "I196",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "05876a14c9e3e614df9581a991b9c76140a96161",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE01",
+  "status": "CE01_DOCUMENTARY_REVIEW_REVISION_REQUIRED_NOT_ADOPTED_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I196-I195-source-reconstruction.json",
+    "sha256": "395fddbebc539b671100f42ff092bef35e19476541fb56933030fea312589311",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I195 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false
+  },
+  "findings": [
+    {
+      "id": "F195-01",
+      "priority": "P2",
+      "status": "OPEN_DOCUMENTARY_REVISION_REQUIRED",
+      "blocks_documentary_confirmation": true,
+      "title": "Separate CE11 documentary handoff from actual final evidence required before CE12",
+      "evidence": [
+        {
+          "path": "docs/validation/D5-I193-CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE.json",
+          "sha256": "0bec43f54e234462a9257c836aa02dfe79bc07f358befe00d3a95a9710713640",
+          "json_pointer": "/external_evidence_requirements/8"
+        },
+        {
+          "path": "docs/design/D5-I195-CE01-SCOPE-DECISION-BOUNDARY.md",
+          "sha256": "554d1841b2d51b5f87ba26734cd49075053136b0d8be2bf077a78511fba6c8ab",
+          "json_pointer": ""
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/steps/10/required_evidence/2"
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/steps/10/authorization_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/closure_boundaries"
+        }
+      ],
+      "observed": {
+        "id": "F195-01",
+        "row_id": "X09",
+        "actual_downstream_steps": [
+          "CE11",
+          "CE12"
+        ],
+        "unsplit_actual_evidence_requirement": "Future separately authorized real final E06/payload/Q/root/signatures and full admission; no run command or current issue.",
+        "planned_CE11_handoff": "Explicit handoff to existing final E06/payload/Q/root/admission work, with no current run command or authority; pending actual source/component/evidence work remains visible.",
+        "planned_CE11_boundary": "This is the prelaunch evidence boundary, not an execution gate release. All current decisions remain NOT_ADMITTED/NOT_READY.",
+        "explicit_CE11_vs_CE12_requirement_split_present": false,
+        "documentary_row_ambiguous": true,
+        "actual_cycle_or_execution_observed": false
+      },
+      "impact": "X09 associates one unsplit actual final E06/payload/Q/root/signatures/full-admission requirement with both CE11 and CE12. This leaves unclear whether actual final work must precede custody-only CE11, while I193 calls for an explicit handoff to that still-pending final route. No actual cycle, execution or admission is inferred.",
+      "requested_revision": "Split X09 into a CE11 documentary handoff describing pending final prerequisites and a CE12 actual-final-evidence prerequisite. Update the I195 table and source-level audit of each step-specific obligation, preserving all gates and the no-receipt CE11 boundary.",
+      "repair_proposal_not_applied": [
+        {
+          "proposed_id": "X09-PRELAUNCH-HANDOFF",
+          "downstream_steps": [
+            "CE11"
+          ],
+          "kind": "DOCUMENTARY_HANDOFF_OF_PENDING_FINAL_ROUTE",
+          "requirement": "Enumerate pending final E06/payload/Q/root/admission obligations and responsible review scopes. Actual completion of that final route is not a new CE11 custody-only acceptance prerequisite; all genuine CE01-CE10 facts/reviews still required.",
+          "review_roles": [
+            "R06",
+            "R08"
+          ],
+          "current_execution_or_contact_authorized": false
+        },
+        {
+          "proposed_id": "X09-FINAL-PREREQUISITES",
+          "downstream_steps": [
+            "CE12"
+          ],
+          "kind": "ACTUAL_FINAL_EVIDENCE_BEFORE_AUTHORIZED_CLAIM",
+          "requirement": "Actual final E06/payload/Q/trusted root/signatures and full root admission must exist before any separately authorized actual claim/construction/receipt. No current execution, issuance, evidence or acceptance is created.",
+          "review_roles": [
+            "R04",
+            "R05",
+            "R07",
+            "R08"
+          ],
+          "current_execution_or_contact_authorized": false
+        }
+      ],
+      "completion_checks": [
+        "No X09 actual-final evidence requirement is assigned to CE11; its final-route handoff remains explicit.",
+        "CE12 still requires every external prerequisite in I193 closure_boundaries; CE11 never requires CE12 receipt/claim/spawn.",
+        "Check per-step obligation meanings, not just union coverage of CE01-CE12; keep all roles/providers/evidence missing and unaccepted."
+      ],
+      "source_candidate_modified": false,
+      "competent_adoption": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "E01",
+      "source": "I193 required_evidence[0]",
+      "scope": "Exact I191/I192/profile/protocol/output/transport inventory and inherited gates",
+      "result": "CONSISTENT_PINNED_DOCUMENTARY_SOURCES"
+    },
+    {
+      "id": "E02",
+      "source": "I193 required_evidence[1]",
+      "scope": "Producer, eight role scopes and permissions; no actual person/appointment",
+      "result": "CONSISTENT_UNASSIGNED_ROLE_BOUNDARY"
+    },
+    {
+      "id": "E03",
+      "source": "I193 required_evidence[2]",
+      "scope": "X01-X10 describe required providers/evidence honestly as missing",
+      "result": "PARTIAL_X09_STEP_BOUNDARY_NEEDS_REVISION"
+    },
+    {
+      "id": "A01",
+      "source": "I193 acceptance_checks[0]",
+      "scope": "Four documentary actions and14 denied classes; no execution/build/enrollment/signing/claim/contact",
+      "result": "CONSISTENT_CURRENT_PERMISSION_SCOPE"
+    },
+    {
+      "id": "A02",
+      "source": "I193 acceptance_checks[1]",
+      "scope": "S01/F183-01/eight exclusions and custody-only boundary retained",
+      "result": "CONSISTENT_DECLARED_EXCLUSIONS_NOT_ACTUAL_INDEPENDENCE"
+    },
+    {
+      "id": "B01",
+      "source": "I193 authorization_boundary",
+      "scope": "No signed policy/role acceptance; competent R06/R08 still absent",
+      "result": "CONSISTENT_NO_COMPETENT_ADOPTION"
+    },
+    {
+      "id": "K01",
+      "source": "I191 K01",
+      "scope": "External preaccepted anchors expected; no provider/key selected",
+      "result": "CONSISTENT_REQUIREMENT_NOT_TRUST_PROOF"
+    },
+    {
+      "id": "K10",
+      "source": "I191 K10",
+      "scope": "All eight exclusions and four additional actor/key separations",
+      "result": "CONSISTENT_ROLE_POLICY_NOT_APPOINTMENTS"
+    },
+    {
+      "id": "K12",
+      "source": "I191 K12 / I193 CE11-CE12",
+      "scope": "Antecedent custody/final route/claim order needs unambiguous X09 mapping",
+      "result": "PARTIAL_F195_01_NO_ACTUAL_CYCLE_OBSERVED"
+    },
+    {
+      "id": "K15",
+      "source": "I191 K15",
+      "scope": "Per-attempt/native/IO/verification work remains in full resources; no extra Reader inputs/free offline work",
+      "result": "CONSISTENT_INHERITED_OBLIGATION_NOT_COST_PROOF"
+    },
+    {
+      "id": "K16",
+      "source": "I191 K16",
+      "scope": "Caps/layouts/candidate numbers unchanged; no invented identity/body/authority",
+      "result": "CONSISTENT_DESIGN_LIMITS_NOT_ACTUAL_FIT"
+    }
+  ],
+  "clarification": [
+    "The missing genuine providers/appointments/records/resources are disclosed external prerequisites, not invented new documentary defects.",
+    "I195 candidate readiness is its historical self-disposition. I196 requires a documentary revision and does not mutate that source or accept CE01.",
+    "K15 remains fully binding through pinned I191: actual launch lookup/freshness/verification/copies/native/IO/receipt work is not free or moved outside t0 by this review.",
+    "The I195 historical exact-path presence projection is transparent, Git-proven and restored after success/failure; current CE01 presence and all bytes are verified normally."
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 1,
+    "documentary_confirmation": false,
+    "revision_required": true,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "CE01_accepted": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE01_documentary_candidate_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE01_accepted": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "adopted": false,
+    "implemented": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE01_documentary_review_completed": true,
+    "CE01_documentary_confirmation": false,
+    "CE01_documentary_revision_required": true
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "next_scope": "Prepare a separately requested documentary revision separating X09 CE11 handoff from CE12 actual final prerequisites; review that exact revision before documentary confirmation. Genuine competent R06/R08 adoption remains independently missing.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I196-I195-CE01-REVIEW.md",
+      "docs/validation/D5-I196-I195-documentary-review.json",
+      "docs/validation/D5-I196-I195-source-reconstruction.json",
+      "docs/validation/D5-I196-audit.py",
+      "docs/validation/D5-I196-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I196-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_WITH_OPEN_FINDING_F195_01",
+    "runtime_harness": "N/A: documentary source/preservation review; no product/components/crypto/image/claim/protocol run.",
+    "over400_lines": true,
+    "reason": "One review unit with source reconstruction, precise finding, requirement coverage and preservation evidence; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
