@@ -1,0 +1,206 @@
+{
+  "schema": "d5.i192-i191-documentary-review.v1",
+  "increment": "I192",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "e7d8444a620b9c81bd216da3c89a224fea666da6",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "contract_id": "PGO181-CALLER-IMAGE-CUSTODY-CANDIDATE-01",
+  "status": "CALLER_IMAGE_CUSTODY_DOCUMENTARY_CONTRACT_CONFIRMED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I192-I191-source-reconstruction.json",
+    "sha256": "38f98ae92fda1e0d584e77a00740c2a807025c01b65b330fba5a0e77815cccf0"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I191 and prior contracts",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "External preaccepted anchor/digest/purpose, no supplied-key self trust",
+      "result": "PASS_TRUST_BOUNDARY_SPEC_NOT_AUTHORITY_PROOF"
+    },
+    {
+      "id": "R02",
+      "scope": "Canonical accountable humans distinct from caller software, complete aliases/evidence",
+      "result": "PASS_DECLARED_IDENTITY_POLICY_NOT_IDENTITY_RESOLUTION"
+    },
+    {
+      "id": "R03",
+      "scope": "Eight S01 exclusions and additional R08/R01/R02 actor/key separation",
+      "result": "PASS_SEPARATION_PRESERVED_NOT_REAL_INDEPENDENCE"
+    },
+    {
+      "id": "R04",
+      "scope": "Six source/image mapping, full runtime/build/closure, no image self hash",
+      "result": "PASS_REQUIRED_MAPPING_NOT_MEASUREMENT"
+    },
+    {
+      "id": "R05",
+      "scope": "Caller/platform/domain/constructor/clock/global ledger bindings",
+      "result": "PASS_EXTERNAL_PREREQUISITES_NOT_BACKEND_PROOF"
+    },
+    {
+      "id": "R06",
+      "scope": "14 same-typed C fields plus exact C digest/constant/time/clock relations",
+      "result": "PASS_PROJECTION_CONTRACT_NOT_REAL_CONTEXT"
+    },
+    {
+      "id": "R07",
+      "scope": "One current external epoch/C mapping without new wire fields",
+      "result": "PASS_NO_HIDDEN_CHANNEL_AUTHORITY"
+    },
+    {
+      "id": "R08",
+      "scope": "All five record hashes and C digest inside common three-approval core",
+      "result": "PASS_SIGNATURE_COVERAGE_SPEC_NOT_CRYPTO_EXECUTION"
+    },
+    {
+      "id": "R09",
+      "scope": "16-node evidence order, genuine antecedents before C, claim after root",
+      "result": "PASS_DECLARED_ORDER_NO_PREDICTIVE_ACCEPTANCE"
+    },
+    {
+      "id": "R10",
+      "scope": "Per-record caps and conditional bundle221644 <=262144",
+      "result": "PASS_CONDITIONAL_SERIALIZATION_NOT_RESOURCE_FIT"
+    },
+    {
+      "id": "R11",
+      "scope": "Prior profile02/transports/outputs and numeric/admission state preserved",
+      "result": "PASS_NO_ACTIVE_CHANGE"
+    },
+    {
+      "id": "R12",
+      "scope": "Same actor, no actual anchors/identities/image/custody or resource acceptance",
+      "result": "PASS_PROVENANCE_AND_NONADMISSION_DISCLOSURE"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/rules"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/record_order"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95",
+      "json_pointer": "/$defs/custody_signed_core"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95",
+      "json_pointer": "/$defs/acceptance_record"
+    }
+  ],
+  "clarifications": [
+    "The three bundle approvals sign the common core and therefore its nested acceptance/C digest; acceptance_record itself has no standalone signature. No early independent acceptance is inferred from a future bundle.",
+    "Schemas are typed indices. Genuine proof bodies, competent acceptance, alias uniqueness, key purposes, record hashes, time/currentness and cross-record equality remain semantic conditions; hashes/shape alone establish none.",
+    "Per-record serialized caps must be enforced in addition to schema/codec. Placeholder widths are not actual evidence-fit tests; underlying proof bodies and per-attempt verification costs are not covered by the221644 index bound."
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "documentary_contract_consistent_under_external_custody_premises": true,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_actors_caller_image_or_anchors_supplied": false,
+    "actual_resource_or_900_fit_verified": false,
+    "F179_01_resolved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "caller_image_custody_contract_prepared": true,
+    "real_actor_or_caller_enrolled": false,
+    "actual_custody_bundle_or_anchor_created": false,
+    "actual_image_or_attestation_supplied": false,
+    "actual_trust_or_source_image_mapping_verified": false,
+    "adopted": false,
+    "implemented": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of identity/custody record semantics, external anchor/identity authority/protection-domain backend and complete C projection/unique mapping; no real person/service/key or custody accepted here.",
+    "Actual exact source-to-image/runtime/dependency/build evidence and platform enforcement/clock/epoch/global one-use custody; implement only in separately authorized scope and reject unsupported unchanged route.",
+    "Complete179/321/12/30, E01-E05/global resource and phase/heap/CPU/IO/Reader/900 requalification for caller/registry/crypto/receipt work, actual final E06 and root/payload/context/request/signatures.",
+    "Separate actual admission/execute decision after all evidence; custody signatures or schemas alone close no resources or D5."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I192-I191-CALLER-IMAGE-CUSTODY-REVIEW.md",
+      "docs/validation/D5-I192-I191-documentary-review.json",
+      "docs/validation/D5-I192-I191-source-reconstruction.json",
+      "docs/validation/D5-I192-audit.py",
+      "docs/validation/D5-I192-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I192-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary custody review; no product/component/crypto/image build/identity or protocol service execution.",
+    "over400_lines": true,
+    "reason": "Traceable schema/evidence/signature-coverage/projection and conditional byte-bound reconstruction with review/integrity records; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_enrollment_or_authority": true
+  }
+}
