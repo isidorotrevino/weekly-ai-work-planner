@@ -1,0 +1,233 @@
+{
+  "schema": "d5.i183-preparation-review.v1",
+  "increment": "I183",
+  "date": "2026-11-16",
+  "base_commit": "6b5de0b9b72f69fa97580a5fcc0ba35aca2c6018",
+  "status": "EXACT_SCHEMA_TRUST_CANDIDATE_PREPARED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-01",
+  "schema_pack": {
+    "path": "docs/validation/D5-I183-PGO181-SCHEMAS-CANDIDATE.json",
+    "sha256": "f30da2476c6ad6345fd68a3243d9edfad732e808ae5b7a6ee2e1f09a7a1ce113"
+  },
+  "profile": {
+    "path": "docs/validation/D5-I183-PGO181-TRUST-PROFILE-CANDIDATE.json",
+    "sha256": "42c3d76dd36eba26d23150e9ee5431e0e0744e65092974cd5db6321c779c26ad"
+  },
+  "checks": [
+    {
+      "schema": "registry",
+      "required_keys_checked": 12,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "capacity_contract",
+      "required_keys_checked": 11,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "resource_index",
+      "required_keys_checked": 10,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "source_basis",
+      "required_keys_checked": 13,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "component_manifest",
+      "required_keys_checked": 9,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "component_raw",
+      "required_keys_checked": 14,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "component_review",
+      "required_keys_checked": 14,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "component_seal",
+      "required_keys_checked": 3,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "authority_payload",
+      "required_keys_checked": 6,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "final_root",
+      "required_keys_checked": 4,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "trust_context",
+      "required_keys_checked": 18,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "runtime_request",
+      "required_keys_checked": 9,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "component_request",
+      "required_keys_checked": 9,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "worker_invocation",
+      "required_keys_checked": 6,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "worker_ready",
+      "required_keys_checked": 6,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "parent_release",
+      "required_keys_checked": 6,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    },
+    {
+      "schema": "capture_binding",
+      "required_keys_checked": 6,
+      "unknown_and_missing_keys_rejected": true,
+      "unique_family_discriminator": true
+    }
+  ],
+  "top_schemas": 17,
+  "definitions": 32,
+  "semantic_contracts": 14,
+  "input_pins": 706,
+  "preserved_published_files": 398,
+  "documentary_encoding_widths": {
+    "registry": 55325,
+    "capacity_contract": 2183,
+    "resource_index": 3743,
+    "source_basis": 55004,
+    "component_manifest": 1595,
+    "component_raw": 457,
+    "component_review": 714,
+    "component_seal": 1517,
+    "authority_payload": 55239,
+    "final_root": 2696,
+    "trust_context": 2655,
+    "runtime_request": 573,
+    "component_request": 662,
+    "worker_invocation": 408,
+    "worker_ready": 402,
+    "parent_release": 406,
+    "capture_binding": 422
+  },
+  "witness_scope": "Only ephemeral shape placeholders. No evidence/keys/signatures/PASS bodies emitted. Widths are neither all-valid-instance upper bounds nor resource/Reader fit proof; effective validity also requires per-body byte caps and semantic truth.",
+  "lexical_negative_cases": 14,
+  "schema_evaluator": "Small auditable interpreter for exact used keyword subset; not complete JSON Schema conformance or runtime/crypto implementation.",
+  "provenance": {
+    "preparer": "Same Codex assistant in same chat",
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false
+  },
+  "current_effect": {
+    "F179_01_solution_model_prepared": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "semantic_adoption": false,
+    "source_implementation_changed": false,
+    "contract_or_active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "pending_I175_bindings": 4,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "exact_schemas_prepared": true,
+    "trust_profile_prepared": true,
+    "active_schema_changed": false,
+    "trust_anchor_established": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of exact schemas, strict crypto profile and role/clock/caller trust custody; no material F179-01 closure by preparation.",
+    "Exact successor implementation/library selection, full enclosing capture-context/launch schemas and protocol control-flow proof in separately authorized scope.",
+    "Complete original scope/30-site and E01-E05 requalification including all new context/crypto/native/time/Reader/output work.",
+    "Actual accepted antecedent proofs, frozen component request/run/review/seal, authentic caller keys/context/runtime request, real payload/root signatures, final admission and any separate capture decision."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I183-PGO181-SCHEMAS-TRUST-CANDIDATE.md",
+      "docs/validation/D5-I183-PGO181-SCHEMAS-CANDIDATE.json",
+      "docs/validation/D5-I183-PGO181-TRUST-PROFILE-CANDIDATE.json",
+      "docs/validation/D5-I183-preparation-review.json",
+      "docs/validation/D5-I183-audit.py",
+      "docs/validation/D5-I183-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I183-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary schema/profile preparation only; no runtime implementation or execution.",
+    "over400_lines": true,
+    "reason": "Exact closed schemas, trust/semantic contracts, source pins and documentary audit preserved as one reviewable deliverable; overage reported."
+  }
+}
