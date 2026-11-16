@@ -1,0 +1,255 @@
+{
+  "schema": "d5.i185-preparation-review.v1",
+  "increment": "I185",
+  "date": "2026-11-16",
+  "base_commit": "a5c48bb713fb220d6b983176c3c1af75819d792f",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "status": "F183_01_DOCUMENTARY_REPAIR_PREPARED_IN_CANDIDATE_02_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "schema_pack": {
+    "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+    "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+  },
+  "profile": {
+    "path": "docs/validation/D5-I185-PGO181-TRUST-PROFILE-CANDIDATE-02.json",
+    "sha256": "5c52d746f5e6145eba5eb7f7e0fedf7428ffa0f36756901c25ed17ba0009c60f"
+  },
+  "exact_schema_delta": [
+    "/$defs/role_acceptance_scope/properties/documentary_preparers_sha256",
+    "/$defs/role_acceptance_scope/required",
+    "/$defs/trust_context/properties/documentary_preparers",
+    "/$defs/trust_context/required",
+    "/$defs/verifier_profile/properties/id/const",
+    "/$id",
+    "/title"
+  ],
+  "role_repair": {
+    "inherited_exclusions": [
+      [
+        "DOCUMENTARY_PREPARER",
+        "R03"
+      ],
+      [
+        "DOCUMENTARY_PREPARER",
+        "R06"
+      ],
+      [
+        "DOCUMENTARY_PREPARER",
+        "R08"
+      ],
+      [
+        "R03",
+        "R08"
+      ],
+      [
+        "R04",
+        "R05"
+      ],
+      [
+        "R04",
+        "R08"
+      ],
+      [
+        "R06",
+        "R08"
+      ],
+      [
+        "R07",
+        "R08"
+      ]
+    ],
+    "inherited_exclusion_count": 8,
+    "missing_inherited_exclusions": [],
+    "original_eight_symbolic_collisions": [
+      {
+        "inherited_exclusion": [
+          "DOCUMENTARY_PREPARER",
+          "R03"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "DOCUMENTARY_PREPARER",
+          "R06"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "DOCUMENTARY_PREPARER",
+          "R08"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "R03",
+          "R08"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "R04",
+          "R05"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "R04",
+          "R08"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "R06",
+          "R08"
+        ],
+        "symbolic_collision_rejected": true
+      },
+      {
+        "inherited_exclusion": [
+          "R07",
+          "R08"
+        ],
+        "symbolic_collision_rejected": true
+      }
+    ],
+    "I184_five_countermodels_now_rejected": true,
+    "second_preparer_collisions_rejected": 3,
+    "extra_source_author_collision_rejected": true,
+    "preparer_may_equal_source_author_without_role_waiver": true,
+    "unconstrained_R01_R02_overlap_not_accidentally_forbidden": true,
+    "distinct_key_predicate_preserved": true,
+    "canonical_identity_provenance_required_not_established": true
+  },
+  "mandatory_new_shapes_rejection_cases": 8,
+  "definitions": 32,
+  "schema_families": 17,
+  "input_pins": 717,
+  "prior_published_files_preserved": 409,
+  "in_memory_placeholder_widths": {
+    "registry": 55325,
+    "capacity_contract": 2183,
+    "resource_index": 3743,
+    "source_basis": 55004,
+    "component_manifest": 1595,
+    "component_raw": 457,
+    "component_review": 714,
+    "component_seal": 1517,
+    "authority_payload": 55239,
+    "final_root": 2794,
+    "trust_context": 6905,
+    "runtime_request": 573,
+    "component_request": 662,
+    "worker_invocation": 408,
+    "worker_ready": 402,
+    "parent_release": 406,
+    "capture_binding": 422
+  },
+  "width_scope": "In-memory structural data only, including16 maximum-length preparer entries; not authentic actors, provenance, keys, signatures, evidence or a global resource/Reader fit proof. Semantic identity/ordering/completeness must be independently established.",
+  "binding_review": {
+    "whole_context_digest_covers_preparer_provenance": true,
+    "explicit_list_digest_in_both_signed_cores": true,
+    "authentic_actor_alias_resolution_complete_scope_and_custody_required": true,
+    "candidate01_context_root_profile_not_accepted_by_candidate02_shapes": true,
+    "actual_trust_or_independence_established": false,
+    "no_implicit_extra_runtime_files": true
+  },
+  "F183_01": {
+    "candidate_gap_repaired": true,
+    "historical_finding_unchanged": true,
+    "separate_review_pending": true,
+    "independent_closure_accepted": false
+  },
+  "provenance": {
+    "preparer": "Same Codex assistant/chat; no actual role assignments made",
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false
+  },
+  "current_effect": {
+    "F179_01_solution_model_prepared": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "semantic_adoption": false,
+    "source_implementation_changed": false,
+    "contract_or_active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "pending_I175_bindings": 4,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "exact_schemas_prepared": true,
+    "trust_profile_prepared": true,
+    "active_schema_changed": false,
+    "trust_anchor_established": false,
+    "F183_01_candidate_repair_prepared": true,
+    "F183_01_independent_closure_accepted": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of exact schemas, strict crypto profile and role/clock/caller trust custody; no material F179-01 closure by preparation.",
+    "Exact successor implementation/library selection, full enclosing capture-context/launch schemas and protocol control-flow proof in separately authorized scope.",
+    "Complete original scope/30-site and E01-E05 requalification including all new context/crypto/native/time/Reader/output work.",
+    "Actual accepted antecedent proofs, frozen component request/run/review/seal, authentic caller keys/context/runtime request, real payload/root signatures, final admission and any separate capture decision."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I185-PGO181-SEPARATION-REPAIR-CANDIDATE.md",
+      "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+      "docs/validation/D5-I185-PGO181-TRUST-PROFILE-CANDIDATE-02.json",
+      "docs/validation/D5-I185-preparation-review.json",
+      "docs/validation/D5-I185-audit.py",
+      "docs/validation/D5-I185-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I185-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: candidate documentary repair only; no runtime implementation/product/component/crypto execution.",
+    "over400_lines": true,
+    "reason": "Complete versioned schema/profile contracts, bounded identity/provenance repair and reproducible documentary checks in one deliverable; overage reported."
+  }
+}
