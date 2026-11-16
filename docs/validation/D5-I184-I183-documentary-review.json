@@ -1,0 +1,255 @@
+{
+  "schema": "d5.i184-i183-documentary-review.v1",
+  "increment": "I184",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "ecd63ca9b6eb716031e2e30957f2c909f89f99df",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-01",
+  "status": "REQUIRES_REVISION_BLOCKING_DOCUMENTARY_SEPARATION_GAP_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I184-I183-source-reconstruction.json",
+    "sha256": "81b56777ba839aed6c0879d14df997d5f6c01cabb6077a1d16d2eb15c0cbb71c"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I183",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "findings": [
+    {
+      "id": "F183-01",
+      "priority": "P1",
+      "classification": "BLOCKING_DOCUMENTARY_CONTRACT_GAP",
+      "title": "Preserve the complete S01 independence matrix in the exact trust profile",
+      "evidence": [
+        {
+          "path": "docs/validation/D5-I179-S01-ROLES-SCOPE-GATES.json",
+          "sha256": "8557f1e0feccfe483c2d001844548fedc31620a54bff7be36a594264713c30ea",
+          "json_pointer": "/role_authority_validity_matrix"
+        },
+        {
+          "path": "docs/validation/D5-I183-PGO181-TRUST-PROFILE-CANDIDATE.json",
+          "sha256": "42c3d76dd36eba26d23150e9ee5431e0e0744e65092974cd5db6321c779c26ad",
+          "json_pointer": "/bootstrap/separation"
+        },
+        {
+          "path": "docs/validation/D5-I183-PGO181-SCHEMAS-CANDIDATE.json",
+          "sha256": "f30da2476c6ad6345fd68a3243d9edfad732e808ae5b7a6ee2e1f09a7a1ce113",
+          "json_pointer": "/$defs/trust_context/properties"
+        }
+      ],
+      "missing_disequalities": [
+        [
+          "DOCUMENTARY_PREPARER",
+          "R03"
+        ],
+        [
+          "DOCUMENTARY_PREPARER",
+          "R06"
+        ],
+        [
+          "DOCUMENTARY_PREPARER",
+          "R08"
+        ],
+        [
+          "R03",
+          "R08"
+        ],
+        [
+          "R06",
+          "R08"
+        ]
+      ],
+      "problem": "I183 states only part of the inherited separation matrix. It permits R08 to coincide with R03 or R06 under its explicit actor predicates and lacks a documentary-preparer identity distinct from source_author_id. The all8 roles accepted clause is not an exact import of the S01 exclusions. No current appointment or admission is asserted.",
+      "consequence": "A future verifier following only I183 explicit relations could accept overlapping primary/final review or self-review forbidden by S01. This blocks documentary acceptance of the candidate profile, not a finding of an executed bypass or real role collision.",
+      "required_revision": "Prepare a new versioned candidate preserving all8 inherited actor exclusions, or explicitly obtain competent versioned adjudication of a changed separation policy. Bind authentic documentary-preparer identity/provenance (not assumed equal to source author), include all predicates and negative symbolic cases, preserve key separation, and rebind the new pack/profile digests. Do not change old candidate/active flags or grant runtime permission.",
+      "closed": false,
+      "fix_applied": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "17 closed schema families/32 definitions and local acyclic refs",
+      "result": "PASS_DOCUMENTARY_STRUCTURE"
+    },
+    {
+      "id": "R02",
+      "scope": "Exact480 historical/six source sets and489/9/494 joins",
+      "result": "PASS_BINDING_SET_MODEL"
+    },
+    {
+      "id": "R03",
+      "scope": "BASIS/index exclude descendants; legacy CP07 absent;9 full predicates retained",
+      "result": "PASS_CLAIM_BOUNDARY"
+    },
+    {
+      "id": "R04",
+      "scope": "Root binds preceding hashes/profile/context/request; no self/back pin",
+      "result": "PASS_ROOT_CONTRACT_MODEL"
+    },
+    {
+      "id": "R05",
+      "scope": "Actual raw/review/seal and authentic separate component permission required",
+      "result": "PASS_DECLARED_EVIDENCE_REQUIREMENT_NOT_RUN"
+    },
+    {
+      "id": "R06",
+      "scope": "JCS ASCII/safe integer subset plus schema/cap/semantic predicates",
+      "result": "PASS_RESTRICTED_ENCODING_SPEC_NOT_GENERAL_CODEC_PROOF"
+    },
+    {
+      "id": "R07",
+      "scope": "Two pure Ed25519 role domains on same canonical core",
+      "result": "PASS_PROPOSED_SIGNATURE_SPEC_NOT_CRYPTO_PROOF"
+    },
+    {
+      "id": "R08",
+      "scope": "External trusted caller and accepted key/time/epoch/replay premises",
+      "result": "DECLARED_BUT_NOT_ESTABLISHED"
+    },
+    {
+      "id": "R09",
+      "scope": "Complete inherited S01 role independence",
+      "result": "FAIL_F183_01_FIVE_MISSING_EXCLUSIONS"
+    },
+    {
+      "id": "R10",
+      "scope": "Signature primitive/profile restrictions distinguished from RFC requirements",
+      "result": "PASS_DOCUMENTARY_ATTRIBUTION"
+    },
+    {
+      "id": "R11",
+      "scope": "Same496-path Reader; numeric limits/design arithmetic preserved",
+      "result": "PASS_CONDITIONAL_MODEL_NOT_ACTUAL_FIT"
+    },
+    {
+      "id": "R12",
+      "scope": "Width witnesses cannot establish every valid body/resource bound",
+      "result": "PASS_LIMITATION_DISCLOSED"
+    },
+    {
+      "id": "R13",
+      "scope": "New handshake fields and full enclosing context/launch format",
+      "result": "FRAGMENT_DEFINED_ENCLOSING_SCHEMAS_PENDING"
+    },
+    {
+      "id": "R14",
+      "scope": "Original179/321/12/30 scope and new costs",
+      "result": "FULL_REQUALIFICATION_PENDING"
+    },
+    {
+      "id": "R15",
+      "scope": "Same preparer/reviewer actor; no independent acceptance",
+      "result": "PASS_PROVENANCE_DISCLOSURE"
+    },
+    {
+      "id": "R16",
+      "scope": "No active changes, fake evidence or execution/admission",
+      "result": "PASS_PRESERVATION_ONLY"
+    }
+  ],
+  "verdict": {
+    "schema_structure_documentarily_consistent": true,
+    "trust_separation_complete": false,
+    "documentary_acceptance": false,
+    "candidate_requires_revision": true,
+    "blocking_documentary_findings": 1,
+    "adopted": false,
+    "implemented": false,
+    "implementation_ready": false,
+    "trust_anchor_established": false,
+    "successor_Reader_fit_verified": false,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false
+  },
+  "remaining_work": [
+    "Complete enclosing capture context/launch schemas (capture_binding alone is only a fragment).",
+    "Concrete trusted caller/custody/clock/replay implementation, key/library conformance and all resource/source/output requalification.",
+    "Actual named competent appointments, genuine antecedent acceptance, final E06 provenance and root/payload/request/signature evidence."
+  ],
+  "current_effect": {
+    "F179_01_solution_model_prepared": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "semantic_adoption": false,
+    "source_implementation_changed": false,
+    "contract_or_active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "pending_I175_bindings": 4,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "exact_schemas_prepared": true,
+    "trust_profile_prepared": true,
+    "active_schema_changed": false,
+    "trust_anchor_established": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I184-I183-SCHEMAS-TRUST-REVIEW.md",
+      "docs/validation/D5-I184-I183-documentary-review.json",
+      "docs/validation/D5-I184-I183-source-reconstruction.json",
+      "docs/validation/D5-I184-audit.py",
+      "docs/validation/D5-I184-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I184-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary contract review; no runtime changes or product/component/crypto execution.",
+    "over400_lines": true,
+    "reason": "Traceable Git/schema/role reconstruction, findings and preservation seal in one documentary review; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_adoption_or_authority": true
+  }
+}
