@@ -1,0 +1,203 @@
+{
+  "schema": "d5.i188-i187-documentary-review.v1",
+  "increment": "I188",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "aba30b317a820c63b8c4cf7c8664f97f2a874fd5",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "status": "CONTEXT_LAUNCH_DOCUMENTARY_CONTRACT_CONFIRMED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I188-I187-source-reconstruction.json",
+    "sha256": "4dce8e0d91ce4e12fbb3be8a9b482bbb29460d80495a450214f3ff83a0a93f29"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I187 and profile candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "Complete closed branches/finite maps and arrays/local acyclic refs",
+      "result": "PASS_DOCUMENTARY_STRUCTURE"
+    },
+    {
+      "id": "R02",
+      "scope": "Same canonical body for two physically charged copies",
+      "result": "PASS_PAIR_CONTRACT_NOT_WRITE_PROOF"
+    },
+    {
+      "id": "R03",
+      "scope": "Binding/owner and no-closure/publication flags in every branch including fallback",
+      "result": "PASS_NO_BINDING_ERASURE"
+    },
+    {
+      "id": "R04",
+      "scope": "Seven branch discriminators/priority and truthful worker/parent observations",
+      "result": "PASS_SPECIFICATION_NOT_CONTROL_FLOW_PROOF"
+    },
+    {
+      "id": "R05",
+      "scope": "wait return distinct from independently observed signed exit",
+      "result": "PASS_TAGGED_OBSERVATION_MODEL"
+    },
+    {
+      "id": "R06",
+      "scope": "Immutable first worker failure separated from parent artifact error",
+      "result": "PASS_DECLARED_DIAGNOSTIC_SCOPE"
+    },
+    {
+      "id": "R07",
+      "scope": "Pre-admission no-pair and missing/partial/mismatched/close failure",
+      "result": "PASS_FAIL_CLOSED_OUTPUT_CONTRACT"
+    },
+    {
+      "id": "R08",
+      "scope": "Body/pair/capture-package validation levels distinct",
+      "result": "PASS_NO_FAILURE_METADATA_PROMOTION"
+    },
+    {
+      "id": "R09",
+      "scope": "Independent55-definition bound10,798,483 and fallback2314/no-pair315",
+      "result": "PASS_STRUCTURAL_BYTE_PROOF_NOT_RESOURCE_FIT"
+    },
+    {
+      "id": "R10",
+      "scope": "Two copies and unique capped35-existing-member inventory, no self hash",
+      "result": "PASS_CONDITIONAL_PACKAGE_BUDGET"
+    },
+    {
+      "id": "R11",
+      "scope": "21 legacy fields/six AST anchors and complementary source-pinned output schema",
+      "result": "PASS_DECLARED_PROJECTION_SOURCE_IMPLEMENTATION_PENDING"
+    },
+    {
+      "id": "R12",
+      "scope": "Profile02, eight S01 exclusions,9 CP07 predicates and unchanged caps",
+      "result": "PRESERVED_NOT_ADOPTED"
+    },
+    {
+      "id": "R13",
+      "scope": "Same preparer/reviewer actor; no real signatures/roles/resources",
+      "result": "PASS_PROVENANCE_AND_LIMITS_DISCLOSURE"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-SCHEMAS-CANDIDATE.json",
+      "sha256": "04207cefc5c4398ebae8de0d7c159ecc3a3a9231c3be22281cf25ffb0b683303",
+      "json_pointer": "/$defs/final_record"
+    },
+    {
+      "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-SCHEMAS-CANDIDATE.json",
+      "sha256": "04207cefc5c4398ebae8de0d7c159ecc3a3a9231c3be22281cf25ffb0b683303",
+      "json_pointer": "/$defs/record_budget_fallback"
+    },
+    {
+      "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-CONTRACT-CANDIDATE.json",
+      "sha256": "a25499d1a55fff117002e38e93b21fa2a69e0835e31ff435a3384ebab4a0964a",
+      "json_pointer": "/validation_levels"
+    },
+    {
+      "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-CONTRACT-CANDIDATE.json",
+      "sha256": "a25499d1a55fff117002e38e93b21fa2a69e0835e31ff435a3384ebab4a0964a",
+      "json_pointer": "/rules"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "documentary_contract_consistent": true,
+    "adopted": false,
+    "implemented": false,
+    "implementation_control_flow_verified": false,
+    "independent_acceptance": false,
+    "actual_output_fit_verified": false,
+    "F179_01_resolved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "complete_context_launch_shapes_prepared": true,
+    "F183_01_documentary_repair_preserved": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "adopted": false,
+    "implemented": false,
+    "active_schema_changed": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "actual_output_fit_verified": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent adoption and independent acceptance; actual actor/caller/custody/key/clock/replay evidence remains absent.",
+    "Exact successor producer/consumer/guard/bootstrap transport/owner/IO/exception control flow and compiled output/profile packs, in separately authorized scope.",
+    "Full179/321/12/30 source scope and E01-E05 requalification with all snapshots/maps/encode/hash/dual writes/fallback costs inside phases; actual Reader/output/heap/CPU and900-second proof.",
+    "Actual final E06, payload/root/context/request/signatures and separate admission/execute decision; no positive evidence inferred from this review."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I188-I187-CONTEXT-LAUNCH-REVIEW.md",
+      "docs/validation/D5-I188-I187-documentary-review.json",
+      "docs/validation/D5-I188-I187-source-reconstruction.json",
+      "docs/validation/D5-I188-audit.py",
+      "docs/validation/D5-I188-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I188-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary output contract review; no runtime implementation/product/component/crypto execution.",
+    "over400_lines": true,
+    "reason": "Traceable schema DAG/independent width/branch/projection reconstruction and review seal as one documentary deliverable; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_or_authority": true
+  }
+}
