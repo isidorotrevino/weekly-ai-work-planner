@@ -1,0 +1,279 @@
+{
+  "schema": "d5.i200-i199-documentary-review.v1",
+  "increment": "I200",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "186c3f90722ad9c22220938da877fe9ea121be78",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE02",
+  "status": "CE02_DOCUMENTARY_REVIEW_REVISION_REQUIRED_EVIDENCE_MISSING_NOT_ADOPTED_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I200-I199-source-reconstruction.json",
+    "sha256": "acafe21fe93a0c6c8eca7e5b38ebb04580908f63f799716d911633eb3a5992a8",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I199 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [
+    {
+      "id": "F199-01",
+      "priority": "P2",
+      "status": "OPEN_DOCUMENTARY_REVISION_REQUIRED",
+      "blocks_documentary_confirmation": true,
+      "title": "Separate prior anchor policy/provisioning from later CE10 signed-core approvals",
+      "evidence": [
+        {
+          "path": "docs/validation/D5-I193-CE02-ANCHOR-PROVENANCE-CANDIDATE.json",
+          "sha256": "554f49f83449343ca0a507eb5f40f9de43ae34ba5a67507ac2dea5ec884b2ac0",
+          "json_pointer": "/evidence_requirements/7"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE02-ANCHOR-PROVENANCE-CANDIDATE.json",
+          "sha256": "554f49f83449343ca0a507eb5f40f9de43ae34ba5a67507ac2dea5ec884b2ac0",
+          "json_pointer": "/actual_anchor_state/actual_signature_or_custody_approvals"
+        },
+        {
+          "path": "docs/design/D5-I199-CE02-ANCHOR-PROVENANCE.md",
+          "sha256": "e28f69a9bf77b694c893aea92c2aa93d0790575545c5bb27add30a26aa87b506",
+          "json_pointer": ""
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/steps/1"
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/steps/9"
+        },
+        {
+          "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+          "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+          "json_pointer": "/rules/0"
+        },
+        {
+          "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+          "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+          "json_pointer": "/rules/10"
+        },
+        {
+          "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+          "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+          "json_pointer": "/record_order"
+        }
+      ],
+      "observed": {
+        "id": "F199-01",
+        "row_id": "AP08",
+        "source_step": "CE02",
+        "unsplit_requirement": "Genuine R01/R02/R08 approvals over the same signed core, exact independently selected profile/pack/contract/key-purpose bindings. No supplied C/bundle key bootstraps trust; no crypto here.",
+        "actual_bundle_approval_step": "CE10",
+        "CE10_depends_on_CE02": true,
+        "explicit_anchor_policy_vs_later_bundle_approval_split_present": false,
+        "cycle_only_if_AP08_is_read_as_CE02_actual_bundle_approval_gate": [
+          "CE02",
+          "CE10",
+          "CE02"
+        ],
+        "published_I193_dependency_graph_acyclic": true,
+        "actual_cycle_or_execution_observed": false
+      },
+      "impact": "AP08 places genuine R01/R02/R08 signed-core approvals among CE02 missing evidence requirements without a later-stage qualifier. I193 assigns those actual bundle approvals to CE10, which depends on CE02; I191 requires externally accepted anchors before the bundle. Reading AP08 as a CE02 closure requirement would reverse that dependency. This is an ambiguous documentary requirement, not an observed live cycle or execution.",
+      "requested_revision": "Keep authentic preexisting anchor provisioning, identity authority, externally expected digest/epochs and genuine competent prior acceptance at CE02. Separate the K11 purpose/domain/key/policy constraints needed now from actual bundle signed-core approval evidence due at CE10. Update AP08/table, the ambiguous approvals availability slot and per-step documentary audit. Do not remove genuine prior anchor acceptance or create a CE10 dossier/approval.",
+      "repair_proposal_not_applied": [
+        {
+          "proposed_id": "AP08-ANCHOR-POLICY",
+          "consumer_step": "CE02",
+          "kind": "PRIOR_EXTERNAL_ANCHOR_PROVISIONING_AND_APPROVAL_POLICY",
+          "requirement": "Require genuine independent anchor/identity-authority provisioning and prior acceptance, external expected digest/epochs and purpose/actor/key bindings; pin the exact role-domain/core/profile/pack/contract selection policy. No actual future CE10 bundle signature or approval is required to accept CE02 provenance.",
+          "actual_evidence_supplied": false,
+          "accepted": false,
+          "current_execution_or_contact_authorized": false
+        },
+        {
+          "proposed_id": "AP08-BUNDLE-APPROVAL",
+          "consumer_step": "CE10",
+          "kind": "DEFERRED_ACTUAL_BUNDLE_APPROVAL_EVIDENCE",
+          "requirement": "After authentic antecedents and exact C/core exist, require the real three R01/R02/R08 role-domain approvals over that same core, using independently accepted CE02 purpose/actor/key and exact policy pins. Neither these signatures nor their bundle may bootstrap CE02 trust.",
+          "actual_evidence_supplied": false,
+          "accepted": false,
+          "current_execution_or_contact_authorized": false
+        }
+      ],
+      "completion_checks": [
+        "CE02 retains all genuine prior provisioning/identity/acceptance evidence, without requiring a future CE10 signed-core approval.",
+        "Actual bundle approvals are explicitly deferred to CE10; the declared CE02/CE10 order remains acyclic and no supplied signature/hash/key becomes its own authority.",
+        "Separate prior acceptance availability from future bundle approvals; update the candidate table and check requirements by phase, not merely nonempty K-rule coverage.",
+        "All actual evidence/appointments/acceptance remain missing; no registry, key, signature, codec/crypto run, provider contact or active binding is created."
+      ],
+      "source_candidate_modified": false,
+      "competent_adoption": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Independent origin, expected digest/epoch and identity authority",
+      "result": "PASS_DECLARED_MISSING_EXTERNAL_EVIDENCE"
+    },
+    {
+      "id": "E02",
+      "scope": "Purpose/actor/key/currentness and prior provisioning versus future approvals",
+      "result": "PARTIAL_AP08_PHASE_AMBIGUITY"
+    },
+    {
+      "id": "E03",
+      "scope": "Complete actual referenced bodies, no private keys/generation",
+      "result": "PASS_MISSING_BODIES_NOT_PLACEHOLDER_RECORD"
+    },
+    {
+      "id": "A01",
+      "scope": "No self-signed/supplied-key/unknown-authority/currentness fallback",
+      "result": "PASS_DECLARED_REJECTION_POLICY_NOT_LIVE_VERIFICATION"
+    },
+    {
+      "id": "A02",
+      "scope": "Canonical schema/codec/cap65536 and prior acceptance/hash requirements",
+      "result": "PASS_NO_ACTUAL_BODY_OR_ACCEPTANCE_CLAIMED"
+    },
+    {
+      "id": "B01",
+      "scope": "I193 missing-evidence-only boundary and unsatisfied competent CE01 dependency",
+      "result": "PASS_NO_DEPENDENCY_OR_AUTHORITY_BYPASS"
+    },
+    {
+      "id": "K01",
+      "scope": "External accepted anchor/identity authority before registry/C/bundle",
+      "result": "PASS_TRUST_ORIGIN_BOUNDARY_NOT_AUTHORITY_PROOF"
+    },
+    {
+      "id": "K03",
+      "scope": "Complete sorted unique purpose/key/actor scope and all underlying proof bodies/costs",
+      "result": "PASS_DECLARED_COMPLETENESS_NOT_REAL_IDENTITY_OR_RESOURCE_PROOF"
+    },
+    {
+      "id": "K11",
+      "scope": "Prior anchor policy versus real common-core approvals belonging to CE10",
+      "result": "PARTIAL_F199_01_NO_ACTUAL_CYCLE_OBSERVED"
+    },
+    {
+      "id": "K13",
+      "scope": "3600 lifetime/5 clock error/known revocation/currentness",
+      "result": "PASS_DECLARED_TIME_RULE_NOT_FRESHNESS_PROOF"
+    },
+    {
+      "id": "K16",
+      "scope": "Registry cap differs from documentary wrapper; other caps/quotas unchanged",
+      "result": "PASS_DESIGN_LIMITS_NOT_ACTUAL_FIT"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 1,
+    "CE02_documentary_confirmation": false,
+    "revision_required": true,
+    "CE02_accepted": false,
+    "actual_anchor_registry_created": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE02_documentary_candidate_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE02_accepted": false,
+    "actual_CE01_dependency_satisfied": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "actual_anchor_registry_created": false,
+    "actual_trust_authority_enrolled": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE02_documentary_review_completed": true,
+    "CE02_documentary_confirmation": false,
+    "CE02_documentary_revision_required": true
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "The absence of actual anchors/providers/keys/authority/acceptance is correctly disclosed and remains an external prerequisite, not itself a new documentary defect.",
+    "The conditional cycle is a documentary counterexample only if AP08 is interpreted as an actual CE02 closure requirement. The published I193 graph is acyclic and no real action or live cycle was observed.",
+    "Registry codec/schema/crypto/provenance/currentness/resource verification were not run. Same assistant preparation/review is not competent or independent R01/R02/R08 acceptance."
+  ],
+  "next_scope": "Prepare a separately requested CE02 revision separating prior anchor policy/provisioning from deferred CE10 bundle approvals, then review that exact revision. Genuine external evidence and competent CE01/CE02 acceptance remain independently pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I200-I199-CE02-REVIEW.md",
+      "docs/validation/D5-I200-I199-documentary-review.json",
+      "docs/validation/D5-I200-I199-source-reconstruction.json",
+      "docs/validation/D5-I200-audit.py",
+      "docs/validation/D5-I200-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I200-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_WITH_OPEN_FINDING_F199_01",
+    "runtime_harness": "N/A: documentary JSON/Git/schema-fragment/dependency review; no product/components/crypto/registry codec/image/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "One pinned review unit with reverse coverage, precise phase finding, conditional dependency evidence and preservation checks; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
