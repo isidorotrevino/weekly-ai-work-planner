@@ -1,0 +1,202 @@
+{
+  "schema": "d5.i194-i193-documentary-review.v1",
+  "increment": "I194",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "ce5f5d9d099b152750659fd306fa9a157fea8904",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "plan_id": "PGO181-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN-01",
+  "status": "CUSTODY_EVIDENCE_PLAN_DOCUMENTARILY_CONFIRMED_NOT_ADOPTED_NOT_EXECUTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I194-I193-source-reconstruction.json",
+    "sha256": "f33ae6e5b9902c96d92fed87e459a029cd1adedf7d36da39bdf0bb6794fe7d71"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I193 and previous contracts",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "12 packets, explicit deliverables/evidence/roles/dependencies/rejection boundaries",
+      "result": "PASS_CONCRETE_DOCUMENTARY_PLAN"
+    },
+    {
+      "id": "R02",
+      "scope": "Eight schema families with exact fields/caps/pointers and final freeze step",
+      "result": "PASS_REVERSE_RECORD_COVERAGE"
+    },
+    {
+      "id": "R03",
+      "scope": "16 K-rules and seven global gates, exact bidirectional step incidence",
+      "result": "PASS_COMPLETE_CHECKLIST_COVERAGE"
+    },
+    {
+      "id": "R04",
+      "scope": "Provisional CE03 roster, CE08 complete freeze before CE09 C",
+      "result": "PASS_NO_EARLY_COMPLETENESS_OR_FORWARD_AUTH"
+    },
+    {
+      "id": "R05",
+      "scope": "CE11 independent of CE12 receipt; late actual claim needs separate prerequisites",
+      "result": "PASS_NO_PRELAUNCH_RECEIPT_CYCLE"
+    },
+    {
+      "id": "R06",
+      "scope": "No dossiers, actors, appointments, hashes or evidence accepted/created",
+      "result": "PASS_TRUTHFUL_CURRENT_PENDING_STATE"
+    },
+    {
+      "id": "R07",
+      "scope": "Producer separate from actual competent reviewer/acceptor; eight S01/custody rules preserved",
+      "result": "PASS_DECLARED_ROLE_POLICY_NOT_REAL_INDEPENDENCE"
+    },
+    {
+      "id": "R08",
+      "scope": "Refresh invalidates dependent candidate hashes; no current rebind or proof transfer",
+      "result": "PASS_FREEZE_FRESHNESS_IMPACT_CONTRACT"
+    },
+    {
+      "id": "R09",
+      "scope": "Complete source/image/runtime/E01-E05 and caps/900 evidence required, no counts/placeholders substitute",
+      "result": "PASS_RESOURCE_GATE_NOT_RESOURCE_PROOF"
+    },
+    {
+      "id": "R10",
+      "scope": "Plan does not authorize contact/build/probe/crypto/product/components/claim/worker or quotas",
+      "result": "PASS_AUTHORIZATION_BOUNDARY"
+    },
+    {
+      "id": "R11",
+      "scope": "Same preparer/reviewer actor; no competent adoption or acceptance",
+      "result": "PASS_PROVENANCE_DISCLOSURE"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/closure_boundaries"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/freeze_and_refresh"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/family_gates"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/contract_rule_gates"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "documentary_plan_consistent": true,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "F179_01_resolved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "evidence_plan_prepared": true,
+    "candidate_dossiers_created": 0,
+    "actual_external_record_families_accepted": 0,
+    "accepted_steps": 0,
+    "actual_actors_caller_image_or_anchors_supplied": false,
+    "current_execution_authorized": false,
+    "adopted": false,
+    "implemented": false,
+    "F183_01_documentary_repair_preserved": true,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "next_scope": "A separately requested CE01 documentary dossier is a possible next preparation. Keep every actual evidence/appointment/authorization gate pending until genuine competent external facts and review exist; no step automatically runs or accepts its dependencies.",
+  "limitations": [
+    "A complete evidence plan/checklist is not actual role/anchor/caller/image/platform/claim evidence or resource closure.",
+    "CE07 requires exact sources and complete genuine bounds/requalification; CE08 refresh must revisit any proof/review invalidated by changed authors/bytes/scopes, not merely recompute hashes.",
+    "CE12 is not a requirement for prelaunch custody acceptance and cannot be manufactured from schema. Actual final E06/root/Q/claim/worker actions remain separately authorized and currently absent."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I194-I193-CUSTODY-EVIDENCE-PLAN-REVIEW.md",
+      "docs/validation/D5-I194-I193-documentary-review.json",
+      "docs/validation/D5-I194-I193-source-reconstruction.json",
+      "docs/validation/D5-I194-audit.py",
+      "docs/validation/D5-I194-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I194-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary evidence-plan review; no product/component/crypto/image/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "Traceable reverse coverage/DFS/finalization/authorization review and preservation seal as one documentary unit; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
