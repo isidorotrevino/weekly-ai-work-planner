@@ -1,0 +1,210 @@
+{
+  "schema": "d5.i190-i189-documentary-review.v1",
+  "increment": "I190",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "400f99d70b0a52d55737b4c7aa343ff16321d9b7",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "contract_id": "PGO181-BOOTSTRAP-TWO-PIPE-CANDIDATE-01",
+  "status": "BOOTSTRAP_TRANSPORT_DOCUMENTARY_CONTRACT_CONFIRMED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I190-I189-source-reconstruction.json",
+    "sha256": "2b0b485e22723bf017c5761cb89d1eb2ac7417e689442cef7369f7cb2bb70472"
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I189 and prior candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false,
+    "custodian_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "Trust before mutable repository code; accepted image/source/loader/caller custody explicit",
+      "result": "PASS_BOUNDARY_SPEC_NOT_PLATFORM_ATTESTATION"
+    },
+    {
+      "id": "R02",
+      "scope": "Exclusive inherited endpoints and four fd roles; no authenticity inferred from descriptors",
+      "result": "PASS_OWNERSHIP_CONTRACT_NOT_OS_PROOF"
+    },
+    {
+      "id": "R03",
+      "scope": "Five exact schema refs, caps/LF/directions and no wrappers",
+      "result": "PASS_FRAMING_SPEC_NOT_PARSER_CONFORMANCE"
+    },
+    {
+      "id": "R04",
+      "scope": "C/Q/I prefix before root/READY; no down EOF wait after I",
+      "result": "PASS_DECLARED_ORDER"
+    },
+    {
+      "id": "R05",
+      "scope": "READY/EOF parent recheck RELEASE/EOF worker recheck before import",
+      "result": "PASS_GUARD_ORDER_NOT_EXECUTED_TRACE"
+    },
+    {
+      "id": "R06",
+      "scope": "Published11778 envelope and rejected-prefix/EOF probe arithmetic",
+      "result": "PASS_CONDITIONAL_RECEIVER_BOUND"
+    },
+    {
+      "id": "R07",
+      "scope": "Separate20-second origins, global counters and no per-frame resets",
+      "result": "PASS_DECLARED_REJECTION_POLICY_NOT_LATENCY_BOUND"
+    },
+    {
+      "id": "R08",
+      "scope": "One-use claim before paths/spawn; worker correlated with same claim; failures spent",
+      "result": "PASS_PERMISSION_MODEL_NOT_IMPLEMENTED_CUSTODY"
+    },
+    {
+      "id": "R09",
+      "scope": "Failure terminals, no new error frames/retries; diagnostics only on trusted owned channels",
+      "result": "PASS_FAIL_CLOSED_SPEC"
+    },
+    {
+      "id": "R10",
+      "scope": "I187 outputs and profile02/eight S01 exclusions/CP07 preserved",
+      "result": "PASS_NO_SCHEMA_OR_ADMISSION_CHANGE"
+    },
+    {
+      "id": "R11",
+      "scope": "All sources/runtime internals/two-process Reader/copy/crypto/IO resources still require proof",
+      "result": "OPEN_RESOURCE_AND_IMPLEMENTATION_WORK"
+    },
+    {
+      "id": "R12",
+      "scope": "Same preparer/reviewer actor; no genuine trust/custody/image supplied",
+      "result": "PASS_PROVENANCE_AND_NONADMISSION_DISCLOSURE"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.json",
+      "sha256": "018c01dc999ca48d92e691660b8b3d60dd326e6cfd44b6c5e5516cbba7f4f63a",
+      "json_pointer": "/trust_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.json",
+      "sha256": "018c01dc999ca48d92e691660b8b3d60dd326e6cfd44b6c5e5516cbba7f4f63a",
+      "json_pointer": "/framing"
+    },
+    {
+      "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.json",
+      "sha256": "018c01dc999ca48d92e691660b8b3d60dd326e6cfd44b6c5e5516cbba7f4f63a",
+      "json_pointer": "/one_use_and_permissions"
+    },
+    {
+      "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-GRAMMAR-CANDIDATE.json",
+      "sha256": "ace4ea8bbd177163a52ad800accf706292bfd5821ad2829694d2b7e93782d5dd",
+      "json_pointer": "/stream_eof"
+    },
+    {
+      "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-GRAMMAR-CANDIDATE.json",
+      "sha256": "ace4ea8bbd177163a52ad800accf706292bfd5821ad2829694d2b7e93782d5dd",
+      "json_pointer": "/transport_limits"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "documentary_contract_consistent_under_stated_platform_premises": true,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "trusted_image_or_caller_supplied": false,
+    "actual_runtime_security_or_progress_verified": false,
+    "F179_01_resolved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "bootstrap_transport_contract_prepared": true,
+    "F183_01_documentary_repair_preserved": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "adopted": false,
+    "implemented": false,
+    "trusted_entry_image_supplied": false,
+    "trust_anchor_established": false,
+    "independent_acceptance": false,
+    "active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of bootstrap/grammar/identity boundary and immutable trusted image route; actual caller/runtime/platform/key/clock/one-use provenance and role appointments are absent.",
+    "Separately authorized exact successor/bootstrap loader/channel/Reader/owner/exception/dual-output implementation, source-to-image mapping and dependency/CLI proof; no mutable-repository-first fallback.",
+    "Full179/321/12/30 scope and E01-E05 bounds including every IO attempt/clock/poll/bytewise parse/crypto/copy/startup/read/cleanup/write in all phases; actual service/heap/CPU/Reader/900 and final E06 evidence.",
+    "Actual context/request/root/payload/signatures, source/runtime trust and separate admission/execute decision; static state graph/wire arithmetic is no permission."
+  ],
+  "limitations": [
+    "Local23-node precedence and receiver-prefix arithmetic are not a joint concurrent-system model, parser implementation, cryptographic verification, real capability proof or general deadlock/security theorem.",
+    "A deadline/counter is a fail-closed policy. Spawn, library, IO and scheduler service still need exact platform/source phase bounds; no guaranteed20/900-second completion.",
+    "Malformed traffic prefix bound covers bytes actually consumed before terminal rejection. Arbitrary offered/queued bytes outside compliant sender/custody assumptions are not globally bounded by11778."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I190-I189-BOOTSTRAP-TRANSPORT-REVIEW.md",
+      "docs/validation/D5-I190-I189-documentary-review.json",
+      "docs/validation/D5-I190-I189-source-reconstruction.json",
+      "docs/validation/D5-I190-audit.py",
+      "docs/validation/D5-I190-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I190-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary bootstrap review; no product/component/crypto or protocol pipe/worker execution.",
+    "over400_lines": true,
+    "reason": "Traceable trust/order/control-width/rejected-prefix reconstruction and preservation seal in one documentary review; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_or_authority": true
+  }
+}
