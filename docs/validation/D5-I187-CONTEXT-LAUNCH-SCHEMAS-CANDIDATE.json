@@ -1,0 +1,4296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:d5:prp181:i187:context-launch-candidate:01",
+  "title": "Complete candidate02 context and external launch copy; definitions only, no authority or runtime records",
+  "$ref": "#/$defs/final_record",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "identity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "worker_invocation": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-worker-invocation.v3"
+        },
+        "message": {
+          "const": "INVOKE"
+        },
+        "root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "invocation_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_request_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema",
+        "message",
+        "root_sha256",
+        "invocation_id",
+        "trust_context_sha256",
+        "runtime_request_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "worker_ready": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-worker-ready.v3"
+        },
+        "message": {
+          "const": "READY"
+        },
+        "root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "invocation_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_request_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema",
+        "message",
+        "root_sha256",
+        "invocation_id",
+        "trust_context_sha256",
+        "runtime_request_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "parent_release": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-parent-release.v3"
+        },
+        "message": {
+          "const": "RELEASE"
+        },
+        "root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "invocation_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_request_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema",
+        "message",
+        "root_sha256",
+        "invocation_id",
+        "trust_context_sha256",
+        "runtime_request_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "capture_binding": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-capture-binding.v3"
+        },
+        "message": {
+          "const": "POST_ADMISSION_BINDING"
+        },
+        "root_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "invocation_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "trust_context_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "runtime_request_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema",
+        "message",
+        "root_sha256",
+        "invocation_id",
+        "trust_context_sha256",
+        "runtime_request_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "uuid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 192,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9_.-]*(/[A-Za-z0-9_][A-Za-z0-9_.-]*)*$"
+    },
+    "exit_code": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "sign": {
+              "const": "NONNEGATIVE"
+            },
+            "magnitude": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            }
+          },
+          "required": [
+            "sign",
+            "magnitude"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "sign": {
+              "const": "NEGATIVE"
+            },
+            "magnitude": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483648
+            }
+          },
+          "required": [
+            "sign",
+            "magnitude"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "exit_observation": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "NOT_RECORDED"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "RECORDED"
+            },
+            "value": {
+              "$ref": "#/$defs/exit_code"
+            }
+          },
+          "required": [
+            "status",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "digest_map": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/path"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/sha256"
+      },
+      "minProperties": 0,
+      "maxProperties": 4096
+    },
+    "runner_snapshot": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "files": {
+          "$ref": "#/$defs/digest_map"
+        },
+        "map_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "status",
+        "files",
+        "map_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "capture_snapshot": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "files": {
+          "type": "object",
+          "propertyNames": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/historical_path"
+              },
+              {
+                "enum": [
+                  "docs/validation/D5-PRP181-CAPACITY-CONTRACT.json",
+                  "docs/validation/D5-PRP181-CAPTURE-REGISTRY.json",
+                  "docs/validation/D5-PRP181-COMPONENTS-MANIFEST.json",
+                  "docs/validation/D5-PRP181-RESOURCE-INDEX.json",
+                  "docs/validation/D5-PRP181-SOURCE-BASIS-CERTIFICATE.json",
+                  "docs/validation/D5-PRP181-integrity.json",
+                  "docs/validation/D5-PRP181-results.json",
+                  "docs/validation/D5-PRP181-tests-raw.json",
+                  "testing/prospective_capture_joint_prp181/README.md",
+                  "testing/prospective_capture_joint_prp181/atomic.py",
+                  "testing/prospective_capture_joint_prp181/capture.py",
+                  "testing/prospective_capture_joint_prp181/run_joint_lab.py",
+                  "testing/prospective_capture_joint_prp181/test_joint_capture.py",
+                  "testing/prospective_capture_joint_prp181/worker.py"
+                ]
+              }
+            ]
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/sha256"
+          },
+          "minProperties": 494,
+          "maxProperties": 494
+        },
+        "map_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "status",
+        "files",
+        "map_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "historical_path": {
+      "enum": [
+        "HANDOFF-D5-I113.md",
+        "HANDOFF-D5-I84.md",
+        "docs/design/D5-AFTER-I86-CLOSURE-ROADMAP.md",
+        "docs/design/D5-I100-REMAINING-CAPACITY-COMPOSITION.md",
+        "docs/design/D5-I100-TRANSITIVE-ERROR-COSTS.md",
+        "docs/design/D5-I101-DR23-EVENT-BOUND.md",
+        "docs/design/D5-I102-CONTROLLED-FAILURE-EVENT-BOUNDS.md",
+        "docs/design/D5-I103-BUDGET-TEST-EVENT-BOUNDS.md",
+        "docs/design/D5-I104-PARENTAL-PROTOCOL-EVENT-BOUNDS.md",
+        "docs/design/D5-I105-HISTORY-CLEANUP-EVENT-BOUNDS.md",
+        "docs/design/D5-I106-HISTORICAL-COMPARISON-EVENT-BOUNDS.md",
+        "docs/design/D5-I107-RELATIONAL-TRANSITION-EVENT-BOUNDS.md",
+        "docs/design/D5-I108-GLOBAL-CAPACITY-FUNCTIONAL-READINESS.md",
+        "docs/design/D5-I109-UNIT-BOUNDARY-GLOBAL-EVENT-BOUNDS.md",
+        "docs/design/D5-I110-REGISTER-GLOBAL-EVENT-FRAME-BOUNDS.md",
+        "docs/design/D5-I111-OFFLINE-GLOBAL-EVENT-BOUNDS.md",
+        "docs/design/D5-I112-VOLATILE-RACE-GLOBAL-EVENT-BOUNDS.md",
+        "docs/design/D5-I113-GLOBAL-EVENT-SOURCE-ENVELOPE.md",
+        "docs/design/D5-I114-REFERENCES-AND-JOINT-BYTES.md",
+        "docs/design/D5-I115-JOINT-CAPACITY-PROPOSAL.md",
+        "docs/design/D5-I116-PJC115-SOURCE-GATE-REVIEW.md",
+        "docs/design/D5-I117-PJC115-R2-CAPACITY-REVIEW.md",
+        "docs/design/D5-I118-CP03-CP07-ENABLEMENT-REVIEW.md",
+        "docs/design/D5-I35-DURABLE-RELATIONAL-DESIGN.md",
+        "docs/design/D5-I35-DURABLE-RELATIONAL-REVIEW.md",
+        "docs/design/D5-I35-NEXT-CUT-SCOPE.md",
+        "docs/design/D5-I69-PROSPECTIVE-CAPTURE-DESIGN.md",
+        "docs/design/D5-I69-PROSPECTIVE-CAPTURE-REVIEW.md",
+        "docs/design/D5-I70-PROSPECTIVE-CAPTURE-LAB.md",
+        "docs/design/D5-I72-PAGED-CAPTURE-DESIGN.md",
+        "docs/design/D5-I72-PAGED-CAPTURE-REVIEW.md",
+        "docs/design/D5-I73-PAGED-CAPTURE-LAB.md",
+        "docs/design/D5-I75-TYPED-ADAPTER-DESIGN.md",
+        "docs/design/D5-I75-TYPED-ADAPTER-REVIEW.md",
+        "docs/design/D5-I76-TYPED-CAPTURE-LAB.md",
+        "docs/design/D5-I78-LATE-BINDING-DESIGN.md",
+        "docs/design/D5-I78-LATE-BINDING-REVIEW.md",
+        "docs/design/D5-I79-LATE-CAPTURE-LAB.md",
+        "docs/design/D5-I83-CAUSAL-CAPTURE-LAB.md",
+        "docs/design/D5-I84-PARENTAL-CAPTURE-DESIGN.md",
+        "docs/design/D5-I84-PARENTAL-CAPTURE-REVIEW.md",
+        "docs/design/D5-I85-PARENTAL-CAPTURE-LAB.md",
+        "docs/design/D5-I87-DOMAIN-WITNESS-DESIGN.md",
+        "docs/design/D5-I87-DOMAIN-WITNESS-REVIEW.md",
+        "docs/design/D5-I88-DOMAIN-CAPTURE-LAB.md",
+        "docs/design/D5-I88-NEXT-CAPTURE-PROPOSAL.md",
+        "docs/design/D5-I90-NULLABLE-SELECTOR-DESIGN.md",
+        "docs/design/D5-I90-NULLABLE-SELECTOR-REVIEW.md",
+        "docs/design/D5-I91-NEXT-CAPTURE-PROPOSAL.md",
+        "docs/design/D5-I91-SELECTOR-CAPTURE-LAB.md",
+        "docs/design/D5-I93-CAPACITY-DECISION.md",
+        "docs/design/D5-I94-CAPACITY-CONTRACT-DESIGN.md",
+        "docs/design/D5-I94-CAPACITY-CONTRACT-REVIEW.md",
+        "docs/design/D5-I95-CAPACITY-PLANNER-LAB.md",
+        "docs/design/D5-I96-REFERENCE-OBLIGATIONS.md",
+        "docs/design/D5-I96-SOURCE-CAPACITY-REVIEW.md",
+        "docs/design/D5-I97-REFERENCE-LOWER-BOUND.md",
+        "docs/design/D5-I97-RESOURCE-BOUND-REGISTER.md",
+        "docs/design/D5-I98-CAPACITY-COMPOSITION.md",
+        "docs/design/D5-I98-HELPER-UPPER-BOUNDS.md",
+        "docs/design/D5-I99-CALLBACK-AND-COMPOSITION-REGISTER.md",
+        "docs/design/D5-I99-PARENTAL-EXCEPTION-COSTS.md",
+        "docs/validation/D3-CLOSURE.json",
+        "docs/validation/D4-CLOSURE.json",
+        "docs/validation/D5-AFTER-I86-closure-roadmap.json",
+        "docs/validation/D5-CAPACITY-PLANNER-MANIFEST.json",
+        "docs/validation/D5-CAUSAL-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-DOMAIN-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-I100-integrity.json",
+        "docs/validation/D5-I100-source-function-closure.json",
+        "docs/validation/D5-I100-transitive-error-review.json",
+        "docs/validation/D5-I101-DR23-event-bound.json",
+        "docs/validation/D5-I101-integrity.json",
+        "docs/validation/D5-I102-controlled-failure-event-bounds.json",
+        "docs/validation/D5-I102-event-bound-coverage.json",
+        "docs/validation/D5-I102-integrity.json",
+        "docs/validation/D5-I103-budget-test-event-bounds.json",
+        "docs/validation/D5-I103-event-bound-coverage.json",
+        "docs/validation/D5-I103-integrity.json",
+        "docs/validation/D5-I104-event-bound-coverage.json",
+        "docs/validation/D5-I104-integrity.json",
+        "docs/validation/D5-I104-parental-protocol-event-bounds.json",
+        "docs/validation/D5-I104-prior-publication-context.json",
+        "docs/validation/D5-I105-event-bound-coverage.json",
+        "docs/validation/D5-I105-history-cleanup-event-bounds.json",
+        "docs/validation/D5-I105-integrity.json",
+        "docs/validation/D5-I106-event-bound-coverage.json",
+        "docs/validation/D5-I106-historical-comparison-event-bounds.json",
+        "docs/validation/D5-I106-historical-facade-source-review.json",
+        "docs/validation/D5-I106-integrity.json",
+        "docs/validation/D5-I107-event-bound-coverage.json",
+        "docs/validation/D5-I107-integrity.json",
+        "docs/validation/D5-I107-relational-transition-event-bounds.json",
+        "docs/validation/D5-I108-event-bound-coverage.json",
+        "docs/validation/D5-I108-final-T-R-event-bounds.json",
+        "docs/validation/D5-I108-global-capacity-functional-readiness.json",
+        "docs/validation/D5-I108-integrity.json",
+        "docs/validation/D5-I109-global-event-bound-coverage.json",
+        "docs/validation/D5-I109-integrity.json",
+        "docs/validation/D5-I109-unit-boundary-event-bounds.json",
+        "docs/validation/D5-I110-global-event-bound-coverage.json",
+        "docs/validation/D5-I110-integrity.json",
+        "docs/validation/D5-I110-register-comparison-event-bounds.json",
+        "docs/validation/D5-I111-global-event-bound-coverage.json",
+        "docs/validation/D5-I111-integrity.json",
+        "docs/validation/D5-I111-offline-model-event-bounds.json",
+        "docs/validation/D5-I111-prior-publication-context.json",
+        "docs/validation/D5-I112-global-event-bound-coverage.json",
+        "docs/validation/D5-I112-integrity.json",
+        "docs/validation/D5-I112-volatile-race-event-bounds.json",
+        "docs/validation/D5-I113-drive-global-event-bounds.json",
+        "docs/validation/D5-I113-global-event-bound-coverage.json",
+        "docs/validation/D5-I113-handoff-integrity.json",
+        "docs/validation/D5-I113-integrity.json",
+        "docs/validation/D5-I114-audit.py",
+        "docs/validation/D5-I114-integrity.json",
+        "docs/validation/D5-I114-joint-resource-envelope.json",
+        "docs/validation/D5-I114-reference-source-envelope.json",
+        "docs/validation/D5-I115-audit.py",
+        "docs/validation/D5-I115-integrity.json",
+        "docs/validation/D5-I115-joint-capacity-proposal.json",
+        "docs/validation/D5-I115-refined-reference-envelope.json",
+        "docs/validation/D5-I115-structural-byte-plan.json",
+        "docs/validation/D5-I116-PJC115-gate-review.json",
+        "docs/validation/D5-I116-audit.py",
+        "docs/validation/D5-I116-integrity.json",
+        "docs/validation/D5-I116-projection-row-envelopes.json",
+        "docs/validation/D5-I116-raw-context-envelopes.json",
+        "docs/validation/D5-I117-CP02-source-counterexample.json",
+        "docs/validation/D5-I117-PJC115-R2-design.json",
+        "docs/validation/D5-I117-audit.py",
+        "docs/validation/D5-I117-integrity.json",
+        "docs/validation/D5-I117-operand-envelope-progress.json",
+        "docs/validation/D5-I117-reader-capacity-design.json",
+        "docs/validation/D5-I118-CP03-source-disposition.json",
+        "docs/validation/D5-I118-CP07-binding-review.json",
+        "docs/validation/D5-I118-audit.py",
+        "docs/validation/D5-I118-gate-disposition.json",
+        "docs/validation/D5-I118-integrity.json",
+        "docs/validation/D5-I119-output-operand-envelopes.json",
+        "docs/validation/D5-I120-unit-operand-source-proof.json",
+        "docs/validation/D5-I122-atomicity-implementation.json",
+        "docs/validation/D5-I34-results.json",
+        "docs/validation/D5-I69-design-review.json",
+        "docs/validation/D5-I69-integrity.json",
+        "docs/validation/D5-I70-integrity.json",
+        "docs/validation/D5-I70-plan-context.json",
+        "docs/validation/D5-I70-plan-raw.json",
+        "docs/validation/D5-I70-results.json",
+        "docs/validation/D5-I70-results.md",
+        "docs/validation/D5-I70-tests-raw.json",
+        "docs/validation/D5-I71-P01-launch.json",
+        "docs/validation/D5-I71-P01/OWNER",
+        "docs/validation/D5-I71-P01/context.json",
+        "docs/validation/D5-I71-P01/runner-raw.json",
+        "docs/validation/D5-I71-P01/sidecar.json",
+        "docs/validation/D5-I71-P02-launch.json",
+        "docs/validation/D5-I71-P02/OWNER",
+        "docs/validation/D5-I71-P02/context.json",
+        "docs/validation/D5-I71-P02/runner-raw.json",
+        "docs/validation/D5-I71-P02/sidecar.json",
+        "docs/validation/D5-I71-P03-launch.json",
+        "docs/validation/D5-I71-P03/OWNER",
+        "docs/validation/D5-I71-P03/context.json",
+        "docs/validation/D5-I71-P03/runner-raw.json",
+        "docs/validation/D5-I71-P03/sidecar.json",
+        "docs/validation/D5-I71-P04-launch.json",
+        "docs/validation/D5-I71-P04/OWNER",
+        "docs/validation/D5-I71-P04/context.json",
+        "docs/validation/D5-I71-P04/runner-raw.json",
+        "docs/validation/D5-I71-P04/sidecar.json",
+        "docs/validation/D5-I71-P05-launch.json",
+        "docs/validation/D5-I71-P05/OWNER",
+        "docs/validation/D5-I71-P05/context.json",
+        "docs/validation/D5-I71-P05/runner-raw.json",
+        "docs/validation/D5-I71-P05/sidecar.json",
+        "docs/validation/D5-I71-P06-launch.json",
+        "docs/validation/D5-I71-P06/OWNER",
+        "docs/validation/D5-I71-P06/context.json",
+        "docs/validation/D5-I71-P06/runner-raw.json",
+        "docs/validation/D5-I71-P06/sidecar.json",
+        "docs/validation/D5-I71-P07-launch.json",
+        "docs/validation/D5-I71-P07/OWNER",
+        "docs/validation/D5-I71-P07/context.json",
+        "docs/validation/D5-I71-P07/runner-raw.json",
+        "docs/validation/D5-I71-P07/sidecar.json",
+        "docs/validation/D5-I71-P08-launch.json",
+        "docs/validation/D5-I71-P08/OWNER",
+        "docs/validation/D5-I71-P08/context.json",
+        "docs/validation/D5-I71-P08/runner-raw.json",
+        "docs/validation/D5-I71-P08/sidecar.json",
+        "docs/validation/D5-I71-P09-launch.json",
+        "docs/validation/D5-I71-P09/OWNER",
+        "docs/validation/D5-I71-P09/context.json",
+        "docs/validation/D5-I71-P09/runner-raw.json",
+        "docs/validation/D5-I71-P09/sidecar.json",
+        "docs/validation/D5-I71-P10-launch.json",
+        "docs/validation/D5-I71-P10/OWNER",
+        "docs/validation/D5-I71-P10/context.json",
+        "docs/validation/D5-I71-P10/runner-raw.json",
+        "docs/validation/D5-I71-P10/sidecar.json",
+        "docs/validation/D5-I71-capture-authorization.json",
+        "docs/validation/D5-I71-integrity.json",
+        "docs/validation/D5-I71-results.json",
+        "docs/validation/D5-I71-results.md",
+        "docs/validation/D5-I72-design-review.json",
+        "docs/validation/D5-I72-integrity.json",
+        "docs/validation/D5-I73-integrity.json",
+        "docs/validation/D5-I73-plan-context.json",
+        "docs/validation/D5-I73-plan-raw.json",
+        "docs/validation/D5-I73-results.json",
+        "docs/validation/D5-I73-results.md",
+        "docs/validation/D5-I73-tests-raw.json",
+        "docs/validation/D5-I74-P01-launch.json",
+        "docs/validation/D5-I74-P01/OWNER",
+        "docs/validation/D5-I74-P01/context.json",
+        "docs/validation/D5-I74-P01/event-0001.json",
+        "docs/validation/D5-I74-P01/event-0002.json",
+        "docs/validation/D5-I74-P01/event-0003.json",
+        "docs/validation/D5-I74-P01/runner-raw.json",
+        "docs/validation/D5-I74-P01/sidecar.json",
+        "docs/validation/D5-I74-capture-authorization.json",
+        "docs/validation/D5-I74-diagnosis.json",
+        "docs/validation/D5-I74-integrity.json",
+        "docs/validation/D5-I74-results.json",
+        "docs/validation/D5-I74-results.md",
+        "docs/validation/D5-I75-design-review.json",
+        "docs/validation/D5-I75-integrity.json",
+        "docs/validation/D5-I76-integrity.json",
+        "docs/validation/D5-I76-plan-context.json",
+        "docs/validation/D5-I76-plan-raw.json",
+        "docs/validation/D5-I76-results.json",
+        "docs/validation/D5-I76-results.md",
+        "docs/validation/D5-I76-tests-raw.json",
+        "docs/validation/D5-I77-P01-launch.json",
+        "docs/validation/D5-I77-P01/OWNER",
+        "docs/validation/D5-I77-P01/context.json",
+        "docs/validation/D5-I77-P01/runner-raw.json",
+        "docs/validation/D5-I77-P01/sidecar.json",
+        "docs/validation/D5-I77-capture-authorization.json",
+        "docs/validation/D5-I77-diagnosis.json",
+        "docs/validation/D5-I77-execution-context.json",
+        "docs/validation/D5-I77-integrity.json",
+        "docs/validation/D5-I77-results.json",
+        "docs/validation/D5-I77-results.md",
+        "docs/validation/D5-I78-design-review.json",
+        "docs/validation/D5-I78-integrity.json",
+        "docs/validation/D5-I79-integrity.json",
+        "docs/validation/D5-I79-plan-context.json",
+        "docs/validation/D5-I79-plan-raw.json",
+        "docs/validation/D5-I79-results.json",
+        "docs/validation/D5-I79-results.md",
+        "docs/validation/D5-I79-tests-raw.json",
+        "docs/validation/D5-I81-integrity.json",
+        "docs/validation/D5-I81-matrix.md",
+        "docs/validation/D5-I81-results.json",
+        "docs/validation/D5-I81-results.md",
+        "docs/validation/D5-I81-trace-review.json",
+        "docs/validation/D5-I82-design-review.json",
+        "docs/validation/D5-I82-integrity.json",
+        "docs/validation/D5-I83-integrity.json",
+        "docs/validation/D5-I83-plan-context.json",
+        "docs/validation/D5-I83-plan-raw.json",
+        "docs/validation/D5-I83-results.json",
+        "docs/validation/D5-I83-results.md",
+        "docs/validation/D5-I83-tests-raw.json",
+        "docs/validation/D5-I84-design-review.json",
+        "docs/validation/D5-I84-handoff-integrity.json",
+        "docs/validation/D5-I84-integrity.json",
+        "docs/validation/D5-I85-context.json",
+        "docs/validation/D5-I85-integrity.json",
+        "docs/validation/D5-I85-results.json",
+        "docs/validation/D5-I85-results.md",
+        "docs/validation/D5-I85-tests-raw.json",
+        "docs/validation/D5-I86-P01-launch.json",
+        "docs/validation/D5-I86-P01/OWNER",
+        "docs/validation/D5-I86-P01/context.json",
+        "docs/validation/D5-I86-P01/event-0001.json",
+        "docs/validation/D5-I86-P01/runner-raw.json",
+        "docs/validation/D5-I86-P01/sidecar.json",
+        "docs/validation/D5-I86-capture-authorization.json",
+        "docs/validation/D5-I86-external-context.json",
+        "docs/validation/D5-I86-integrity.json",
+        "docs/validation/D5-I86-launch-output.json",
+        "docs/validation/D5-I86-results.json",
+        "docs/validation/D5-I86-results.md",
+        "docs/validation/D5-I87-design-review.json",
+        "docs/validation/D5-I87-integrity.json",
+        "docs/validation/D5-I88-context.json",
+        "docs/validation/D5-I88-integrity.json",
+        "docs/validation/D5-I88-next-capture-integrity.json",
+        "docs/validation/D5-I88-next-capture-proposal.json",
+        "docs/validation/D5-I88-results.json",
+        "docs/validation/D5-I88-results.md",
+        "docs/validation/D5-I88-tests-raw.json",
+        "docs/validation/D5-I89-P01-launch.json",
+        "docs/validation/D5-I89-P01/OWNER",
+        "docs/validation/D5-I89-P01/context.json",
+        "docs/validation/D5-I89-P01/event-0001.json",
+        "docs/validation/D5-I89-P01/runner-raw.json",
+        "docs/validation/D5-I89-P01/sidecar.json",
+        "docs/validation/D5-I89-capture-authorization.json",
+        "docs/validation/D5-I89-external-context.json",
+        "docs/validation/D5-I89-integrity.json",
+        "docs/validation/D5-I89-launch-output.json",
+        "docs/validation/D5-I89-results.json",
+        "docs/validation/D5-I89-results.md",
+        "docs/validation/D5-I90-design-review.json",
+        "docs/validation/D5-I90-integrity.json",
+        "docs/validation/D5-I91-context.json",
+        "docs/validation/D5-I91-integrity.json",
+        "docs/validation/D5-I91-next-capture-integrity.json",
+        "docs/validation/D5-I91-next-capture-proposal.json",
+        "docs/validation/D5-I91-results.json",
+        "docs/validation/D5-I91-results.md",
+        "docs/validation/D5-I91-tests-raw.json",
+        "docs/validation/D5-I92-P01-launch.json",
+        "docs/validation/D5-I92-P01/OWNER",
+        "docs/validation/D5-I92-P01/context.json",
+        "docs/validation/D5-I92-P01/event-0001.json",
+        "docs/validation/D5-I92-P01/event-0002.json",
+        "docs/validation/D5-I92-P01/event-0003.json",
+        "docs/validation/D5-I92-P01/event-0004.json",
+        "docs/validation/D5-I92-P01/runner-raw.json",
+        "docs/validation/D5-I92-P01/sidecar.json",
+        "docs/validation/D5-I92-capture-authorization.json",
+        "docs/validation/D5-I92-external-context.json",
+        "docs/validation/D5-I92-integrity.json",
+        "docs/validation/D5-I92-launch-output.json",
+        "docs/validation/D5-I92-results.json",
+        "docs/validation/D5-I92-results.md",
+        "docs/validation/D5-I93-capacity-review.json",
+        "docs/validation/D5-I93-integrity.json",
+        "docs/validation/D5-I94-design-review.json",
+        "docs/validation/D5-I94-integrity.json",
+        "docs/validation/D5-I94-source-capacity-audit.json",
+        "docs/validation/D5-I95-context.json",
+        "docs/validation/D5-I95-integrity.json",
+        "docs/validation/D5-I95-results.json",
+        "docs/validation/D5-I95-results.md",
+        "docs/validation/D5-I95-tests-raw.json",
+        "docs/validation/D5-I96-integrity.json",
+        "docs/validation/D5-I96-reader-envelope.json",
+        "docs/validation/D5-I96-source-capacity-review.json",
+        "docs/validation/D5-I97-integrity.json",
+        "docs/validation/D5-I97-reference-lower-bound.json",
+        "docs/validation/D5-I97-resource-bounds.json",
+        "docs/validation/D5-I98-helper-upper-review.json",
+        "docs/validation/D5-I98-integrity.json",
+        "docs/validation/D5-I98-parental-helper-costs.json",
+        "docs/validation/D5-I99-integrity.json",
+        "docs/validation/D5-I99-parental-error-review.json",
+        "docs/validation/D5-I99-parental-exception-costs.json",
+        "docs/validation/D5-LATE-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-LOCAL-SYNTHETIC-ACCEPTANCE.json",
+        "docs/validation/D5-PAGED-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-PARENTAL-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-PROSPECTIVE-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-SELECTOR-CAPTURE-REGISTRY.json",
+        "docs/validation/D5-TYPED-CAPTURE-REGISTRY.json",
+        "source_ingest/__init__.py",
+        "source_ingest/__main__.py",
+        "source_ingest/adoption.py",
+        "source_ingest/batch_fixture.py",
+        "source_ingest/bootstrap.py",
+        "source_ingest/compare.py",
+        "source_ingest/durable_ambiguity_fixture.py",
+        "source_ingest/durable_relational_fixture.py",
+        "source_ingest/durable_store.py",
+        "source_ingest/durable_task_fixture.py",
+        "source_ingest/eligibility_fixture.py",
+        "source_ingest/incremental_fixture.py",
+        "source_ingest/isolated_local_edit.py",
+        "source_ingest/local_edit.py",
+        "source_ingest/local_reappearance.py",
+        "source_ingest/offline.py",
+        "source_ingest/plane_fixture.py",
+        "source_ingest/postgres.py",
+        "source_ingest/preview.py",
+        "source_ingest/reappearance.py",
+        "source_ingest/register.py",
+        "source_ingest/relational_planner.py",
+        "source_ingest/review.py",
+        "source_ingest/task_mapping.py",
+        "testing/D5/adoption_scenarios.py",
+        "testing/D5/bootstrap_scenarios.py",
+        "testing/D5/demo_durable_integration.py",
+        "testing/D5/demo_durable_relational.py",
+        "testing/D5/demo_offline_integration.py",
+        "testing/D5/demo_plane_reconciliation.py",
+        "testing/D5/demo_profiles_quotas.py",
+        "testing/D5/demo_register.py",
+        "testing/D5/demo_relational_batch.py",
+        "testing/D5/durable_support.py",
+        "testing/D5/fixtures/plan.md",
+        "testing/D5/fixtures/register-after.md",
+        "testing/D5/fixtures/register-before.md",
+        "testing/D5/fixtures/register-compat-after.md",
+        "testing/D5/fixtures/register-compat-before.md",
+        "testing/D5/isolated_local_edit_scenarios.py",
+        "testing/D5/local_edit_scenarios.py",
+        "testing/D5/local_reappearance_scenarios.py",
+        "testing/D5/mapping_scenarios.py",
+        "testing/D5/postgres_scenarios.py",
+        "testing/D5/reappearance_scenarios.py",
+        "testing/D5/relational_support.py",
+        "testing/D5/review_scenarios.py",
+        "testing/D5/run_adoption_lab.py",
+        "testing/D5/run_batch_lab.py",
+        "testing/D5/run_bootstrap_lab.py",
+        "testing/D5/run_durable_lab.py",
+        "testing/D5/run_eligibility_lab.py",
+        "testing/D5/run_incremental_lab.py",
+        "testing/D5/run_isolated_local_edit_lab.py",
+        "testing/D5/run_local_edit_lab.py",
+        "testing/D5/run_local_reappearance_lab.py",
+        "testing/D5/run_mapping_lab.py",
+        "testing/D5/run_plane_lab.py",
+        "testing/D5/run_postgres_lab.py",
+        "testing/D5/run_reappearance_lab.py",
+        "testing/D5/run_relational_durable_lab.py",
+        "testing/D5/run_review_lab.py",
+        "testing/D5/run_v30_lab.py",
+        "testing/D5/test_durable_integration.py",
+        "testing/D5/test_durable_relational.py",
+        "testing/D5/test_incremental_capture.py",
+        "testing/D5/test_local_preview.py",
+        "testing/D5/test_offline_integration.py",
+        "testing/D5/test_plane_reconciliation.py",
+        "testing/D5/test_postgres_adapter.py",
+        "testing/D5/test_profiles_quotas.py",
+        "testing/D5/test_register_comparison.py",
+        "testing/D5/test_register_compat.py",
+        "testing/D5/test_relational_batch.py",
+        "testing/D5/test_review_report.py",
+        "testing/D5/v30_scenarios.py",
+        "testing/prospective_capture/README.md",
+        "testing/prospective_capture/capture.py",
+        "testing/prospective_capture/run_capture_lab.py",
+        "testing/prospective_capture/test_prospective_capture.py",
+        "testing/prospective_capture/worker.py",
+        "testing/prospective_capture_capacity/README.md",
+        "testing/prospective_capture_capacity/capacity.py",
+        "testing/prospective_capture_capacity/run_capacity_lab.py",
+        "testing/prospective_capture_capacity/test_capacity.py",
+        "testing/prospective_capture_causal/README.md",
+        "testing/prospective_capture_causal/capture.py",
+        "testing/prospective_capture_causal/run_causal_lab.py",
+        "testing/prospective_capture_causal/test_causal_capture.py",
+        "testing/prospective_capture_causal/worker.py",
+        "testing/prospective_capture_domains/README.md",
+        "testing/prospective_capture_domains/capture.py",
+        "testing/prospective_capture_domains/run_domain_lab.py",
+        "testing/prospective_capture_domains/test_domain_capture.py",
+        "testing/prospective_capture_domains/worker.py",
+        "testing/prospective_capture_late/README.md",
+        "testing/prospective_capture_late/capture.py",
+        "testing/prospective_capture_late/run_late_lab.py",
+        "testing/prospective_capture_late/test_late_capture.py",
+        "testing/prospective_capture_late/worker.py",
+        "testing/prospective_capture_paged/README.md",
+        "testing/prospective_capture_paged/capture.py",
+        "testing/prospective_capture_paged/run_paged_lab.py",
+        "testing/prospective_capture_paged/test_paged_capture.py",
+        "testing/prospective_capture_paged/worker.py",
+        "testing/prospective_capture_parental/README.md",
+        "testing/prospective_capture_parental/capture.py",
+        "testing/prospective_capture_parental/run_parental_lab.py",
+        "testing/prospective_capture_parental/test_parental_capture.py",
+        "testing/prospective_capture_parental/worker.py",
+        "testing/prospective_capture_selectors/README.md",
+        "testing/prospective_capture_selectors/capture.py",
+        "testing/prospective_capture_selectors/run_selector_lab.py",
+        "testing/prospective_capture_selectors/test_selector_capture.py",
+        "testing/prospective_capture_selectors/worker.py",
+        "testing/prospective_capture_typed/README.md",
+        "testing/prospective_capture_typed/capture.py",
+        "testing/prospective_capture_typed/run_typed_lab.py",
+        "testing/prospective_capture_typed/test_typed_capture.py",
+        "testing/prospective_capture_typed/worker.py"
+      ]
+    },
+    "comparison": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "result": {
+          "enum": [
+            "MATCH",
+            "STALE_INPUTS",
+            "DOCUMENT_ONLY_CHANGE_REVIEW_PENDING"
+          ]
+        },
+        "added": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        },
+        "removed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        },
+        "changed_runtime": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        },
+        "changed_documentary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        }
+      },
+      "required": [
+        "status",
+        "result",
+        "added",
+        "removed",
+        "changed_runtime",
+        "changed_documentary"
+      ],
+      "additionalProperties": false
+    },
+    "matching_comparison": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "result": {
+          "const": "MATCH"
+        },
+        "added": {
+          "const": []
+        },
+        "removed": {
+          "const": []
+        },
+        "changed_runtime": {
+          "const": []
+        },
+        "changed_documentary": {
+          "const": []
+        }
+      },
+      "required": [
+        "status",
+        "result",
+        "added",
+        "removed",
+        "changed_runtime",
+        "changed_documentary"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "python": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[ -~]+$"
+        },
+        "implementation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[ -~]+$"
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[ -~]+$"
+        },
+        "release": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[ -~]+$"
+        },
+        "machine": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[ -~]+$"
+        },
+        "build": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "^[ -~]+$"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "optimize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "debug": {
+          "enum": [
+            false,
+            true
+          ]
+        }
+      },
+      "required": [
+        "python",
+        "implementation",
+        "platform",
+        "release",
+        "machine",
+        "build",
+        "optimize",
+        "debug"
+      ],
+      "additionalProperties": false
+    },
+    "worker_arguments": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "sidecar_fd": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "ready_fd": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "release_fd": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "directory_fd": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "lease": {
+          "$ref": "#/$defs/uuid"
+        }
+      },
+      "required": [
+        "status",
+        "scope",
+        "sidecar_fd",
+        "ready_fd",
+        "release_fd",
+        "directory_fd",
+        "lease"
+      ],
+      "additionalProperties": false
+    },
+    "invocation": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "command": {
+          "const": [
+            "python3",
+            "-B",
+            "-m",
+            "testing.prospective_capture_joint_prp181.worker",
+            "P01"
+          ]
+        },
+        "command_role": {
+          "const": "PUBLIC_LOGICAL_VECTOR_PREFIX_NORMALIZED"
+        },
+        "worker_arguments_observed": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/worker_arguments"
+            }
+          ]
+        },
+        "entrypoint_role": {
+          "const": "FIXED_MODULE_MAIN_NOT_SEPARATE_EXECVE"
+        },
+        "interpreter": {
+          "type": "object",
+          "properties": {
+            "basename": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[ -~]+$"
+            },
+            "path_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "normalization": {
+              "const": "PRIVATE_PREFIX_NOT_EMITTED"
+            }
+          },
+          "required": [
+            "basename",
+            "path_sha256",
+            "normalization"
+          ],
+          "additionalProperties": false
+        },
+        "worker_environment": {
+          "$ref": "#/$defs/environment"
+        },
+        "runner_context_role": {
+          "const": "RUNNER_DECLARATION_NOT_WORKER_ARGV"
+        }
+      },
+      "required": [
+        "status",
+        "command",
+        "command_role",
+        "worker_arguments_observed",
+        "entrypoint_role",
+        "interpreter",
+        "worker_environment",
+        "runner_context_role"
+      ],
+      "additionalProperties": false
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "lease": {
+          "$ref": "#/$defs/uuid"
+        },
+        "ownership": {
+          "const": "VERIFIED_OWNED_DIRECTORY"
+        }
+      },
+      "required": [
+        "lease",
+        "ownership"
+      ],
+      "additionalProperties": false
+    },
+    "process_identity": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "pid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "pgid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "start_new_session": {
+          "const": true
+        }
+      },
+      "required": [
+        "status",
+        "pid",
+        "pgid",
+        "start_new_session"
+      ],
+      "additionalProperties": false
+    },
+    "cleanup": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "result": {
+          "enum": [
+            "OWN_GROUP_GONE",
+            "BLOCKED_DESCENDANTS_UNCONFIRMED",
+            "BLOCKED_OWNERSHIP_UNCONFIRMED"
+          ]
+        },
+        "worker_exit": {
+          "$ref": "#/$defs/exit_observation"
+        }
+      },
+      "required": [
+        "status",
+        "result",
+        "worker_exit"
+      ],
+      "additionalProperties": false
+    },
+    "gone_cleanup": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "result": {
+          "const": "OWN_GROUP_GONE"
+        },
+        "worker_exit": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "RECORDED"
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "sign": {
+                  "const": "NONNEGATIVE"
+                },
+                "magnitude": {
+                  "const": 0
+                }
+              },
+              "required": [
+                "sign",
+                "magnitude"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "status",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "status",
+        "result",
+        "worker_exit"
+      ],
+      "additionalProperties": false
+    },
+    "failed_diagnostic": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "schema": {
+          "const": "d5.prp181-worker-diagnostic-record.v3"
+        },
+        "outcome": {
+          "const": "FAILED"
+        },
+        "phase": {
+          "enum": [
+            "AUTHORITY",
+            "CHANNELS",
+            "READY",
+            "RELEASE",
+            "RUNNER_INPUTS",
+            "RUNNER_IMPORT",
+            "TARGETS",
+            "RECORDER_INSTALL",
+            "ENTRYPOINT",
+            "FINALIZE",
+            "INPUTS_AFTER",
+            "AUTHORITY_AFTER",
+            "SIDECAR_WRITE"
+          ]
+        },
+        "code": {
+          "enum": [
+            "CLASS_MODULE_NOT_LOADED",
+            "CLASS_BINDING_CHANGED",
+            "STALE_CLASS_SOURCE",
+            "STALE_INPUTS",
+            "STALE_AUTHORITY",
+            "UNSUPPORTED_CLASS_BINDING",
+            "UNSUPPORTED_OBSERVER_API",
+            "UNSUPPORTED_OBSERVER_SIGNATURE",
+            "CONSTRUCTOR_OBSERVER_UNAVAILABLE",
+            "FIXTURE_MODULE_NOT_LOADED",
+            "INVALID_WORKER_CHANNEL",
+            "INVALID_DIRECTORY_OWNER",
+            "INVALID_WORKER_RELEASE",
+            "INVALID_WORKER_GROUP",
+            "UNEXPECTED_RUNNER_MODULE",
+            "STDLIB_BINDING_CHANGED",
+            "STDLIB_SOURCE_CHANGED",
+            "TYPED_PROJECTION_ERROR",
+            "ENTRYPOINT_EXCEPTION",
+            "RAW_UNAVAILABLE_OR_INVALID",
+            "RAW_FLUSH_ERROR",
+            "ENTRYPOINT_EXIT_MISMATCH",
+            "RAW_BUDGET",
+            "SIDECAR_BUDGET",
+            "PAGE_WRITE_ERROR",
+            "PAGE_FINALIZATION_ERROR",
+            "EVENT_SIZE_BUDGET",
+            "EVENT_TEST_BUDGET",
+            "EVENT_CAMPAIGN_BUDGET",
+            "PAGE_COUNT_BUDGET",
+            "PAGE_BYTES_BUDGET",
+            "PAGES_TOTAL_BUDGET",
+            "REFERENCE_BUDGET",
+            "FRAME_BUDGET",
+            "OPERAND_BUDGET",
+            "OPERAND_DEPTH",
+            "UNIQUE_BUDGET",
+            "READ_BUDGET",
+            "PATH_BUDGET",
+            "FILE_BUDGET",
+            "EXTERNAL_CAMPAIGN_TIMEOUT",
+            "SANITIZED_WORKER_ERROR",
+            "CAPTURE_INVALID",
+            "CAPTURE_INCOMPLETE"
+          ]
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "lease": {
+          "$ref": "#/$defs/uuid"
+        },
+        "pid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "pgid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "capture_run_id": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "RECORDED"
+                },
+                "value": {
+                  "$ref": "#/$defs/uuid"
+                }
+              },
+              "required": [
+                "status",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "schema",
+        "outcome",
+        "phase",
+        "code",
+        "scope",
+        "lease",
+        "pid",
+        "pgid",
+        "capture_run_id"
+      ],
+      "additionalProperties": false
+    },
+    "completed_diagnostic": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "schema": {
+          "const": "d5.prp181-worker-diagnostic-record.v3"
+        },
+        "outcome": {
+          "const": "COMPLETED"
+        },
+        "phase": {
+          "const": "COMPLETE"
+        },
+        "code": {
+          "const": "OK"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "lease": {
+          "$ref": "#/$defs/uuid"
+        },
+        "pid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "pgid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "capture_run_id": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "RECORDED"
+                },
+                "value": {
+                  "$ref": "#/$defs/uuid"
+                }
+              },
+              "required": [
+                "status",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "schema",
+        "outcome",
+        "phase",
+        "code",
+        "scope",
+        "lease",
+        "pid",
+        "pgid",
+        "capture_run_id"
+      ],
+      "additionalProperties": false
+    },
+    "diagnostic": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "NOT_RECORDED"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "$ref": "#/$defs/failed_diagnostic"
+        },
+        {
+          "$ref": "#/$defs/completed_diagnostic"
+        }
+      ]
+    },
+    "successful_diagnostic": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "schema": {
+          "const": "d5.prp181-worker-diagnostic-record.v3"
+        },
+        "outcome": {
+          "const": "COMPLETED"
+        },
+        "phase": {
+          "const": "COMPLETE"
+        },
+        "code": {
+          "const": "OK"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "lease": {
+          "$ref": "#/$defs/uuid"
+        },
+        "pid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "pgid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "capture_run_id": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "RECORDED"
+            },
+            "value": {
+              "$ref": "#/$defs/uuid"
+            }
+          },
+          "required": [
+            "status",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "status",
+        "schema",
+        "outcome",
+        "phase",
+        "code",
+        "scope",
+        "lease",
+        "pid",
+        "pgid",
+        "capture_run_id"
+      ],
+      "additionalProperties": false
+    },
+    "worker": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "NOT_STARTED_CONFIRMED",
+                    "IDENTITY_NOT_RECORDED"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/process_identity"
+            }
+          ]
+        },
+        "wait_outcome": {
+          "enum": [
+            "NOT_WAITED",
+            "WAIT_RETURNED_TRUE",
+            "WAIT_RETURNED_FALSE",
+            "WAIT_RAISED"
+          ]
+        },
+        "exit": {
+          "$ref": "#/$defs/exit_observation"
+        },
+        "diagnostic": {
+          "$ref": "#/$defs/diagnostic"
+        }
+      },
+      "required": [
+        "identity",
+        "wait_outcome",
+        "exit",
+        "diagnostic"
+      ],
+      "additionalProperties": false
+    },
+    "successful_worker": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "$ref": "#/$defs/process_identity"
+        },
+        "wait_outcome": {
+          "const": "WAIT_RETURNED_TRUE"
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "RECORDED"
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "sign": {
+                  "const": "NONNEGATIVE"
+                },
+                "magnitude": {
+                  "const": 0
+                }
+              },
+              "required": [
+                "sign",
+                "magnitude"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "status",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        "diagnostic": {
+          "$ref": "#/$defs/successful_diagnostic"
+        }
+      },
+      "required": [
+        "identity",
+        "wait_outcome",
+        "exit",
+        "diagnostic"
+      ],
+      "additionalProperties": false
+    },
+    "failed_worker": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "NOT_STARTED_CONFIRMED",
+                    "IDENTITY_NOT_RECORDED"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/process_identity"
+            }
+          ]
+        },
+        "wait_outcome": {
+          "enum": [
+            "NOT_WAITED",
+            "WAIT_RETURNED_TRUE",
+            "WAIT_RETURNED_FALSE",
+            "WAIT_RAISED"
+          ]
+        },
+        "exit": {
+          "$ref": "#/$defs/exit_observation"
+        },
+        "diagnostic": {
+          "$ref": "#/$defs/failed_diagnostic"
+        }
+      },
+      "required": [
+        "identity",
+        "wait_outcome",
+        "exit",
+        "diagnostic"
+      ],
+      "additionalProperties": false
+    },
+    "timed_out_worker": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "NOT_STARTED_CONFIRMED",
+                    "IDENTITY_NOT_RECORDED"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/process_identity"
+            }
+          ]
+        },
+        "wait_outcome": {
+          "const": "WAIT_RETURNED_FALSE"
+        },
+        "exit": {
+          "$ref": "#/$defs/exit_observation"
+        },
+        "diagnostic": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/completed_diagnostic"
+            }
+          ]
+        }
+      },
+      "required": [
+        "identity",
+        "wait_outcome",
+        "exit",
+        "diagnostic"
+      ],
+      "additionalProperties": false
+    },
+    "aborted_worker": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_STARTED_CONFIRMED",
+                "IDENTITY_NOT_RECORDED"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        "wait_outcome": {
+          "const": "NOT_WAITED"
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "NOT_RECORDED"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        "diagnostic": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "NOT_RECORDED"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "identity",
+        "wait_outcome",
+        "exit",
+        "diagnostic"
+      ],
+      "additionalProperties": false
+    },
+    "worker_invocation_receipt": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "message": {
+          "$ref": "#/$defs/worker_invocation"
+        },
+        "worker_identity": {
+          "$ref": "#/$defs/process_identity"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "worker_identity"
+      ],
+      "additionalProperties": false
+    },
+    "worker_ready_receipt": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "message": {
+          "$ref": "#/$defs/worker_ready"
+        },
+        "worker_identity": {
+          "$ref": "#/$defs/process_identity"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "worker_identity"
+      ],
+      "additionalProperties": false
+    },
+    "parent_release_receipt": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "message": {
+          "$ref": "#/$defs/parent_release"
+        },
+        "worker_identity": {
+          "$ref": "#/$defs/process_identity"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "worker_identity"
+      ],
+      "additionalProperties": false
+    },
+    "handshake": {
+      "type": "object",
+      "properties": {
+        "worker_invocation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/worker_invocation_receipt"
+            }
+          ]
+        },
+        "worker_ready": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/worker_ready_receipt"
+            }
+          ]
+        },
+        "parent_release": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "NOT_RECORDED"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "$ref": "#/$defs/parent_release_receipt"
+            }
+          ]
+        }
+      },
+      "required": [
+        "worker_invocation",
+        "worker_ready",
+        "parent_release"
+      ],
+      "additionalProperties": false
+    },
+    "complete_handshake": {
+      "type": "object",
+      "properties": {
+        "worker_invocation": {
+          "$ref": "#/$defs/worker_invocation_receipt"
+        },
+        "worker_ready": {
+          "$ref": "#/$defs/worker_ready_receipt"
+        },
+        "parent_release": {
+          "$ref": "#/$defs/parent_release_receipt"
+        }
+      },
+      "required": [
+        "worker_invocation",
+        "worker_ready",
+        "parent_release"
+      ],
+      "additionalProperties": false
+    },
+    "reader_receipt": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "input_paths": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "input_unique_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 134217728
+        },
+        "input_read_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 268435456
+        },
+        "completed_phases": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "BEFORE",
+              "AFTER",
+              "FINISH"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "evidence_unique_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 134217728
+        },
+        "evidence_read_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 297799680
+        }
+      },
+      "required": [
+        "status",
+        "input_paths",
+        "input_unique_bytes",
+        "input_read_bytes",
+        "completed_phases",
+        "evidence_unique_bytes",
+        "evidence_read_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "completed_reader_receipt": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "input_paths": {
+          "const": 496
+        },
+        "input_unique_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 134217728
+        },
+        "input_read_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 268435456
+        },
+        "completed_phases": {
+          "const": [
+            "BEFORE",
+            "AFTER",
+            "FINISH"
+          ]
+        },
+        "evidence_unique_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 134217728
+        },
+        "evidence_read_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 297799680
+        }
+      },
+      "required": [
+        "status",
+        "input_paths",
+        "input_unique_bytes",
+        "input_read_bytes",
+        "completed_phases",
+        "evidence_unique_bytes",
+        "evidence_read_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "page_validation": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "result": {
+          "const": "PAGE_BINDINGS_VERIFIED"
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        },
+        "events": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 131072
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 67108864
+        },
+        "causal": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "CAUSAL_TABLES_VERIFIED"
+            },
+            "rows": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 442305
+            }
+          },
+          "required": [
+            "status",
+            "rows"
+          ],
+          "additionalProperties": false
+        },
+        "causal_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 442305
+        }
+      },
+      "required": [
+        "status",
+        "result",
+        "pages",
+        "events",
+        "bytes",
+        "causal",
+        "causal_calls"
+      ],
+      "additionalProperties": false
+    },
+    "unaccepted_pages": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "NOT_ACCEPTED"
+        },
+        "reason": {
+          "enum": [
+            "WORKER_FAILURE",
+            "INCOMPLETE_CAPTURE",
+            "INVALID_PACKET",
+            "NOT_VALIDATED"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "artifact_inventory": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "OWNER"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4096
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "runner-raw.json"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 12582912
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "sidecar.json"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 35651584
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "enum": [
+                      "event-0001.json",
+                      "event-0002.json",
+                      "event-0003.json",
+                      "event-0004.json",
+                      "event-0005.json",
+                      "event-0006.json",
+                      "event-0007.json",
+                      "event-0008.json",
+                      "event-0009.json",
+                      "event-0010.json",
+                      "event-0011.json",
+                      "event-0012.json",
+                      "event-0013.json",
+                      "event-0014.json",
+                      "event-0015.json",
+                      "event-0016.json",
+                      "event-0017.json",
+                      "event-0018.json",
+                      "event-0019.json",
+                      "event-0020.json",
+                      "event-0021.json",
+                      "event-0022.json",
+                      "event-0023.json",
+                      "event-0024.json",
+                      "event-0025.json",
+                      "event-0026.json",
+                      "event-0027.json",
+                      "event-0028.json",
+                      "event-0029.json",
+                      "event-0030.json",
+                      "event-0031.json",
+                      "event-0032.json"
+                    ]
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2097152
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 35
+        },
+        "acceptance": {
+          "enum": [
+            "NOT_ACCEPTED",
+            "CONTENT_BINDINGS_VERIFIED"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "members",
+        "acceptance"
+      ],
+      "additionalProperties": false
+    },
+    "verified_inventory": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "RECORDED"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "OWNER"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4096
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "runner-raw.json"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 12582912
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "const": "sidecar.json"
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 35651584
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "enum": [
+                      "event-0001.json",
+                      "event-0002.json",
+                      "event-0003.json",
+                      "event-0004.json",
+                      "event-0005.json",
+                      "event-0006.json",
+                      "event-0007.json",
+                      "event-0008.json",
+                      "event-0009.json",
+                      "event-0010.json",
+                      "event-0011.json",
+                      "event-0012.json",
+                      "event-0013.json",
+                      "event-0014.json",
+                      "event-0015.json",
+                      "event-0016.json",
+                      "event-0017.json",
+                      "event-0018.json",
+                      "event-0019.json",
+                      "event-0020.json",
+                      "event-0021.json",
+                      "event-0022.json",
+                      "event-0023.json",
+                      "event-0024.json",
+                      "event-0025.json",
+                      "event-0026.json",
+                      "event-0027.json",
+                      "event-0028.json",
+                      "event-0029.json",
+                      "event-0030.json",
+                      "event-0031.json",
+                      "event-0032.json"
+                    ]
+                  },
+                  "sha256": {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2097152
+                  }
+                },
+                "required": [
+                  "name",
+                  "sha256",
+                  "bytes"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 35
+        },
+        "acceptance": {
+          "const": "CONTENT_BINDINGS_VERIFIED"
+        }
+      },
+      "required": [
+        "status",
+        "members",
+        "acceptance"
+      ],
+      "additionalProperties": false
+    },
+    "parent_error": {
+      "type": "object",
+      "properties": {
+        "phase": {
+          "enum": [
+            "NONE",
+            "PRE_ADMISSION",
+            "RESERVATION",
+            "OWNER",
+            "CHANNELS",
+            "SPAWN",
+            "READY",
+            "RELEASE",
+            "WAIT",
+            "CLEANUP",
+            "INPUTS_AFTER",
+            "AUTHORITY_AFTER",
+            "PACKET",
+            "PACKAGE",
+            "SERIALIZE",
+            "WRITE",
+            "CLOSE"
+          ]
+        },
+        "code": {
+          "enum": [
+            "NONE",
+            "NONZERO_EXIT",
+            "INCOMPLETE_CAPTURE",
+            "DESCENDANTS_UNCONFIRMED",
+            "INPUTS_DIFFER",
+            "RAW_EMPTY",
+            "FUNCTIONAL_RAW_NOT_ACCEPTED_WITH_FAILURE_ENVELOPE",
+            "RAW_UNAVAILABLE_OR_INVALID",
+            "SIDECAR_PARTIAL_OR_INVALID",
+            "INVALID_PACKET_BINDING",
+            "STALE_INPUTS",
+            "STALE_AUTHORITY",
+            "ROOT_EXPIRED",
+            "ROOT_UNSTABLE",
+            "ROOT_BINDING_MISMATCH",
+            "HANDSHAKE_REJECTED",
+            "EXTERNAL_CAMPAIGN_TIMEOUT",
+            "SPAWN_FAILED",
+            "CHANNEL_SETUP_FAILED",
+            "SANITIZED_LAUNCH_ERROR",
+            "PACKAGE_VALIDATION_ERROR",
+            "CONTEXT_BUDGET",
+            "SERIALIZATION_ERROR",
+            "OWNERSHIP_UNCONFIRMED",
+            "WRITE_OR_CLOSE_FAILED",
+            "OTHER_BLOCKING_CONDITION"
+          ]
+        },
+        "artifact_error_code": {
+          "enum": [
+            "NONE",
+            "NONZERO_EXIT",
+            "INCOMPLETE_CAPTURE",
+            "DESCENDANTS_UNCONFIRMED",
+            "INPUTS_DIFFER",
+            "RAW_EMPTY",
+            "FUNCTIONAL_RAW_NOT_ACCEPTED_WITH_FAILURE_ENVELOPE",
+            "RAW_UNAVAILABLE_OR_INVALID",
+            "SIDECAR_PARTIAL_OR_INVALID",
+            "INVALID_PACKET_BINDING",
+            "STALE_INPUTS",
+            "STALE_AUTHORITY",
+            "ROOT_EXPIRED",
+            "ROOT_UNSTABLE",
+            "ROOT_BINDING_MISMATCH",
+            "HANDSHAKE_REJECTED",
+            "EXTERNAL_CAMPAIGN_TIMEOUT",
+            "SPAWN_FAILED",
+            "CHANNEL_SETUP_FAILED",
+            "SANITIZED_LAUNCH_ERROR",
+            "PACKAGE_VALIDATION_ERROR",
+            "CONTEXT_BUDGET",
+            "SERIALIZATION_ERROR",
+            "OWNERSHIP_UNCONFIRMED",
+            "WRITE_OR_CLOSE_FAILED",
+            "OTHER_BLOCKING_CONDITION"
+          ]
+        }
+      },
+      "required": [
+        "phase",
+        "code",
+        "artifact_error_code"
+      ],
+      "additionalProperties": false
+    },
+    "record_trace": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "TRACE"
+        },
+        "capture_status": {
+          "const": "TRACE_CAPTURED_PENDING_SUFFICIENCY_REVIEW"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "$ref": "#/$defs/invocation"
+            },
+            "runner_inputs_before": {
+              "$ref": "#/$defs/runner_snapshot"
+            },
+            "runner_inputs_after": {
+              "$ref": "#/$defs/runner_snapshot"
+            },
+            "capture_inputs_before": {
+              "$ref": "#/$defs/capture_snapshot"
+            },
+            "capture_inputs_after": {
+              "$ref": "#/$defs/capture_snapshot"
+            },
+            "input_comparison": {
+              "$ref": "#/$defs/matching_comparison"
+            },
+            "worker": {
+              "$ref": "#/$defs/successful_worker"
+            },
+            "cleanup": {
+              "$ref": "#/$defs/gone_cleanup"
+            },
+            "handshake": {
+              "$ref": "#/$defs/complete_handshake"
+            },
+            "page_validation": {
+              "$ref": "#/$defs/page_validation"
+            },
+            "artifacts": {
+              "$ref": "#/$defs/verified_inventory"
+            },
+            "reader_accounting": {
+              "$ref": "#/$defs/completed_reader_receipt"
+            },
+            "package_validation": {
+              "const": "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+            },
+            "parent_error": {
+              "const": {
+                "phase": "NONE",
+                "code": "NONE",
+                "artifact_error_code": "NONE"
+              }
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_blocked": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "BLOCKED"
+        },
+        "capture_status": {
+          "const": "BLOCKED"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/invocation"
+                }
+              ]
+            },
+            "runner_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "runner_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "input_comparison": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/comparison"
+                }
+              ]
+            },
+            "worker": {
+              "$ref": "#/$defs/worker"
+            },
+            "cleanup": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/cleanup"
+                }
+              ]
+            },
+            "handshake": {
+              "$ref": "#/$defs/handshake"
+            },
+            "page_validation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/page_validation"
+                },
+                {
+                  "$ref": "#/$defs/unaccepted_pages"
+                }
+              ]
+            },
+            "artifacts": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/artifact_inventory"
+                }
+              ]
+            },
+            "reader_accounting": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/reader_receipt"
+                }
+              ]
+            },
+            "package_validation": {
+              "enum": [
+                "NOT_RECORDED",
+                "REJECTED",
+                "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+              ]
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_worker_failure": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "WORKER_FAILURE"
+        },
+        "capture_status": {
+          "const": "BLOCKED_WORKER_FAILURE"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/invocation"
+                }
+              ]
+            },
+            "runner_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "runner_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "input_comparison": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/comparison"
+                }
+              ]
+            },
+            "worker": {
+              "$ref": "#/$defs/failed_worker"
+            },
+            "cleanup": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/cleanup"
+                }
+              ]
+            },
+            "handshake": {
+              "$ref": "#/$defs/handshake"
+            },
+            "page_validation": {
+              "$ref": "#/$defs/unaccepted_pages"
+            },
+            "artifacts": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/artifact_inventory"
+                }
+              ]
+            },
+            "reader_accounting": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/reader_receipt"
+                }
+              ]
+            },
+            "package_validation": {
+              "enum": [
+                "NOT_RECORDED",
+                "REJECTED",
+                "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+              ]
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_timeout": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "TIMEOUT"
+        },
+        "capture_status": {
+          "const": "BLOCKED"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/invocation"
+                }
+              ]
+            },
+            "runner_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "runner_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "input_comparison": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/comparison"
+                }
+              ]
+            },
+            "worker": {
+              "$ref": "#/$defs/timed_out_worker"
+            },
+            "cleanup": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/cleanup"
+                }
+              ]
+            },
+            "handshake": {
+              "$ref": "#/$defs/handshake"
+            },
+            "page_validation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/page_validation"
+                },
+                {
+                  "$ref": "#/$defs/unaccepted_pages"
+                }
+              ]
+            },
+            "artifacts": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/artifact_inventory"
+                }
+              ]
+            },
+            "reader_accounting": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/reader_receipt"
+                }
+              ]
+            },
+            "package_validation": {
+              "enum": [
+                "NOT_RECORDED",
+                "REJECTED",
+                "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+              ]
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_launch_aborted": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "LAUNCH_ABORTED"
+        },
+        "capture_status": {
+          "const": "INVALID_CAPTURE"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/invocation"
+                }
+              ]
+            },
+            "runner_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "runner_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "input_comparison": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/comparison"
+                }
+              ]
+            },
+            "worker": {
+              "$ref": "#/$defs/aborted_worker"
+            },
+            "cleanup": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/cleanup"
+                }
+              ]
+            },
+            "handshake": {
+              "type": "object",
+              "properties": {
+                "worker_invocation": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                "worker_ready": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                "parent_release": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "worker_invocation",
+                "worker_ready",
+                "parent_release"
+              ],
+              "additionalProperties": false
+            },
+            "page_validation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/page_validation"
+                },
+                {
+                  "$ref": "#/$defs/unaccepted_pages"
+                }
+              ]
+            },
+            "artifacts": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/artifact_inventory"
+                }
+              ]
+            },
+            "reader_accounting": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/reader_receipt"
+                }
+              ]
+            },
+            "package_validation": {
+              "enum": [
+                "NOT_RECORDED",
+                "REJECTED",
+                "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+              ]
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_invalid": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "INVALID"
+        },
+        "capture_status": {
+          "const": "INVALID_CAPTURE"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "invocation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/invocation"
+                }
+              ]
+            },
+            "runner_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "runner_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/runner_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_before": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "capture_inputs_after": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/capture_snapshot"
+                }
+              ]
+            },
+            "input_comparison": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/comparison"
+                }
+              ]
+            },
+            "worker": {
+              "$ref": "#/$defs/worker"
+            },
+            "cleanup": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/cleanup"
+                }
+              ]
+            },
+            "handshake": {
+              "$ref": "#/$defs/handshake"
+            },
+            "page_validation": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/page_validation"
+                },
+                {
+                  "$ref": "#/$defs/unaccepted_pages"
+                }
+              ]
+            },
+            "artifacts": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/artifact_inventory"
+                }
+              ]
+            },
+            "reader_accounting": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "const": "NOT_RECORDED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/$defs/reader_receipt"
+                }
+              ]
+            },
+            "package_validation": {
+              "enum": [
+                "NOT_RECORDED",
+                "REJECTED",
+                "PLANNED_PAIR_WITHIN_LIMITS_EXISTING_MEMBERS_VERIFIED"
+              ]
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            }
+          },
+          "required": [
+            "invocation",
+            "runner_inputs_before",
+            "runner_inputs_after",
+            "capture_inputs_before",
+            "capture_inputs_after",
+            "input_comparison",
+            "worker",
+            "cleanup",
+            "handshake",
+            "page_validation",
+            "artifacts",
+            "reader_accounting",
+            "package_validation",
+            "parent_error"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "record_budget_fallback": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-context-launch.v3"
+        },
+        "output_contract_id": {
+          "const": "PGO181-CONTEXT-LAUNCH-CANDIDATE-01"
+        },
+        "profile_id": {
+          "const": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02"
+        },
+        "output_schema_pack_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scope": {
+          "const": "P01"
+        },
+        "capture_binding": {
+          "$ref": "#/$defs/capture_binding"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner"
+        },
+        "functional_execution": {
+          "const": "PGO181_AFTER_FULL_ADMISSION_AND_EXPLICIT_REQUEST"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "global_review": {
+          "const": "OPEN"
+        },
+        "publication_authorized": {
+          "const": false
+        },
+        "record_kind": {
+          "const": "BUDGET_FALLBACK"
+        },
+        "capture_status": {
+          "const": "INVALID_CAPTURE"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "enum": [
+                "CONTEXT_BUDGET",
+                "SERIALIZATION_ERROR",
+                "PACKAGE_VALIDATION_ERROR"
+              ]
+            },
+            "worker_diagnostic": {
+              "$ref": "#/$defs/diagnostic"
+            },
+            "parent_error": {
+              "$ref": "#/$defs/parent_error"
+            },
+            "omitted_sections": {
+              "const": [
+                "invocation",
+                "runner_inputs_before",
+                "runner_inputs_after",
+                "capture_inputs_before",
+                "capture_inputs_after",
+                "input_comparison",
+                "worker",
+                "cleanup",
+                "handshake",
+                "page_validation",
+                "artifacts",
+                "reader_accounting",
+                "package_validation"
+              ]
+            },
+            "acceptance": {
+              "const": "NOT_ACCEPTED"
+            }
+          },
+          "required": [
+            "reason",
+            "worker_diagnostic",
+            "parent_error",
+            "omitted_sections",
+            "acceptance"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "output_contract_id",
+        "profile_id",
+        "output_schema_pack_sha256",
+        "scope",
+        "capture_binding",
+        "owner",
+        "functional_execution",
+        "closure",
+        "D5_closed",
+        "global_review",
+        "publication_authorized",
+        "record_kind",
+        "capture_status",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "final_record": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/record_trace"
+        },
+        {
+          "$ref": "#/$defs/record_blocked"
+        },
+        {
+          "$ref": "#/$defs/record_worker_failure"
+        },
+        {
+          "$ref": "#/$defs/record_timeout"
+        },
+        {
+          "$ref": "#/$defs/record_launch_aborted"
+        },
+        {
+          "$ref": "#/$defs/record_invalid"
+        },
+        {
+          "$ref": "#/$defs/record_budget_fallback"
+        }
+      ]
+    },
+    "context_record": {
+      "$ref": "#/$defs/final_record"
+    },
+    "launch_record": {
+      "$ref": "#/$defs/final_record"
+    },
+    "no_pair_diagnostic": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "d5.prp181-no-pair-diagnostic.v3"
+        },
+        "status": {
+          "enum": [
+            "PRE_ADMISSION_REJECTED",
+            "OUTPUT_RESERVATION_FAILED",
+            "OUTPUT_PAIR_INCOMPLETE"
+          ]
+        },
+        "error": {
+          "$ref": "#/$defs/parent_error"
+        },
+        "closure": {
+          "const": false
+        },
+        "D5_closed": {
+          "const": false
+        },
+        "publication_authorized": {
+          "const": false
+        }
+      },
+      "required": [
+        "schema",
+        "status",
+        "error",
+        "closure",
+        "D5_closed",
+        "publication_authorized"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

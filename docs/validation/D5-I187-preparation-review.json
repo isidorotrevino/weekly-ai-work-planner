@@ -1,0 +1,246 @@
+{
+  "schema": "d5.i187-preparation-review.v1",
+  "increment": "I187",
+  "date": "2026-11-16",
+  "base_commit": "ade0fa496cba1507155c177daae4ae84af41b975",
+  "status": "COMPLETE_CONTEXT_LAUNCH_CONTRACT_PREPARED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "schema_pack": {
+    "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-SCHEMAS-CANDIDATE.json",
+    "sha256": "04207cefc5c4398ebae8de0d7c159ecc3a3a9231c3be22281cf25ffb0b683303"
+  },
+  "contract": {
+    "path": "docs/validation/D5-I187-CONTEXT-LAUNCH-CONTRACT-CANDIDATE.json",
+    "sha256": "a25499d1a55fff117002e38e93b21fa2a69e0835e31ff435a3384ebab4a0964a"
+  },
+  "input_pins": 728,
+  "prior_published_files_preserved": 420,
+  "definitions": 55,
+  "branches": [
+    {
+      "record_kind": "TRACE",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 4457699,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "BLOCKED",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 10798475,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "WORKER_FAILURE",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 10798372,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "TIMEOUT",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 10798440,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "LAUNCH_ABORTED",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 10795692,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "INVALID",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 10798483,
+      "placeholder_only": true
+    },
+    {
+      "record_kind": "BUDGET_FALLBACK",
+      "schema_unique": true,
+      "all_required_keys_checked": 15,
+      "wire_upper_bytes": 2314,
+      "placeholder_only": true
+    }
+  ],
+  "structural_wire_bound": {
+    "method": "Acyclic restricted-ASCII JCS schema recurrence; fixed literal/enum bytes,2*maxLength+2 per variable string, max cardinality maps/arrays and union maximum. No sampling or target execution.",
+    "all_full_branches_upper_bytes": 10798483,
+    "per_branch_upper_bytes": {
+      "TRACE": 4457699,
+      "BLOCKED": 10798475,
+      "WORKER_FAILURE": 10798372,
+      "TIMEOUT": 10798440,
+      "LAUNCH_ABORTED": 10795692,
+      "INVALID": 10798483,
+      "BUDGET_FALLBACK": 2314
+    },
+    "fallback_upper_bytes": 2314,
+    "no_pair_diagnostic_upper_bytes": 315,
+    "context_and_launch_cap_each": 12582912,
+    "unchanged_package_cap": 140513280,
+    "wire_only_not_transient_heap_CPU_actual_IO_or_output_fit": true
+  },
+  "negative_structural_cases": 124,
+  "legacy_fields_covered": [
+    "artifact_error_code",
+    "artifacts",
+    "capture_inputs_after",
+    "capture_inputs_before",
+    "capture_status",
+    "cleanup",
+    "closure",
+    "error_code",
+    "functional_execution",
+    "global_review",
+    "input_comparison",
+    "invocation",
+    "page_validation",
+    "publication_authorized",
+    "runner_inputs_after",
+    "runner_inputs_before",
+    "scope",
+    "timeout",
+    "worker_diagnostic",
+    "worker_diagnostic_status",
+    "worker_exit_code"
+  ],
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "invocation",
+      "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+      "line": 100,
+      "end_line": 101,
+      "AST_sha256": "47594544f4e9a628bea8124be62949458b5fbd030bbe2183bd3af36764f8a8a1"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "validate_pages",
+      "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+      "line": 802,
+      "end_line": 840,
+      "AST_sha256": "10697996c1f8a94cd367f4b38ea91493fff2daa88c2e1e606da2b8948868597c"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "invocation",
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+      "line": 210,
+      "end_line": 214,
+      "AST_sha256": "7f297bf2c512cb568de537cceb8f7dab6c152fe8ca926a18885c5ff1d153e67c"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "compare_inputs",
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+      "line": 449,
+      "end_line": 452,
+      "AST_sha256": "27c8418e931656736d029251ab0f0cb53bbf9647bf6b7407f3b4b1a2e4c2dad8"
+    },
+    {
+      "path": "testing/prospective_capture/capture.py",
+      "symbol": "stop_owned",
+      "sha256": "dd02aa54d9a06d56c7e658f363d54a9dd1f5ed3d515982d471a7d85ae5e3491e",
+      "line": 511,
+      "end_line": 521,
+      "AST_sha256": "312ae7bf7ffc9ff54500e702c8e9f29aaba8121b7c0c31891e9a4c2652e14c7f"
+    }
+  ],
+  "binding_preserved_in_every_record_and_fallback": true,
+  "identical_pair_and_partial_write_rejection_required": true,
+  "pre_admission_no_persistent_pair": true,
+  "actual_output_records_created": false,
+  "provenance": {
+    "preparer": "Same Codex assistant/chat; not an independent acceptor",
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false
+  },
+  "current_effect": {
+    "complete_context_launch_shapes_prepared": true,
+    "F183_01_documentary_repair_preserved": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "adopted": false,
+    "implemented": false,
+    "active_schema_changed": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "actual_output_fit_verified": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Review/adopt the full output contract, its branch priority/projection, body-width proof and source impact; no active change authorized.",
+    "Implement separately authorized successor/guard/bootstrap transport/output paths and exact codec, actual safe Reader and owner/write flow with both new pinned packs.",
+    "Requalify all179/321/12/30 original scopes, E01-E05 and every phase/heap/CPU/IO/metadata path, get actual final E06 and all custody/root/request/signature/admission evidence."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I187-CONTEXT-LAUNCH-SCHEMAS-CANDIDATE.md",
+      "docs/validation/D5-I187-CONTEXT-LAUNCH-SCHEMAS-CANDIDATE.json",
+      "docs/validation/D5-I187-CONTEXT-LAUNCH-CONTRACT-CANDIDATE.json",
+      "docs/validation/D5-I187-preparation-review.json",
+      "docs/validation/D5-I187-audit.py",
+      "docs/validation/D5-I187-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I187-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary schema preparation; no runtime sources/product/components/crypto execution.",
+    "over400_lines": true,
+    "reason": "Complete closed branch schemas, wire-size derivation, source projections and traceable integrity checks in one documentary deliverable; overage reported."
+  }
+}
