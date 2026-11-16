@@ -1,0 +1,728 @@
+{
+  "schema": "d5.i193-custody-evidence-checklist.v1",
+  "increment": "I193",
+  "date": "2026-11-16",
+  "base_commit": "24b1ce69e404add2eea97f061f377699eab1b85c",
+  "plan": {
+    "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+    "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e"
+  },
+  "status": "ALL_ACTUAL_EVIDENCE_PENDING_NOT_ADMITTED",
+  "family_gates": [
+    {
+      "id": "FAMILY-ANCHOR_REGISTRY",
+      "family": "anchor_registry",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/anchor_registry",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "authority_registry_id",
+        "authority_registry_epoch",
+        "keys",
+        "identity_authority_evidence",
+        "state"
+      ],
+      "candidate_step_ids": [
+        "CE02"
+      ],
+      "body_cap_bytes": 65536,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE02",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-ACTOR_REGISTRY",
+      "family": "actor_registry",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/actor_registry",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "registry_id",
+        "actors",
+        "documentary_preparation_records",
+        "completeness_evidence"
+      ],
+      "candidate_step_ids": [
+        "CE03",
+        "CE08"
+      ],
+      "body_cap_bytes": 98304,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE08",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-IMAGE_MANIFEST",
+      "family": "image_manifest",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/image_manifest",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "image_id",
+        "image_bytes_sha256",
+        "runtime_sha256",
+        "source_bindings",
+        "source_root_sha256",
+        "source_to_image",
+        "dependencies",
+        "complete_dependency_closure_evidence",
+        "build_recipe_sha256",
+        "build_toolchain_sha256",
+        "runtime_identity_evidence",
+        "protocol_schema_sha256",
+        "profile_sha256",
+        "output_schema_sha256",
+        "transport_contract_sha256",
+        "transport_grammar_sha256",
+        "coordinator_entry",
+        "worker_entry",
+        "entry_mode",
+        "immutable_entry_evidence",
+        "custody_schema_pack_sha256",
+        "custody_contract_sha256"
+      ],
+      "candidate_step_ids": [
+        "CE04",
+        "CE08"
+      ],
+      "body_cap_bytes": 98304,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE08",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-CALLER_IDENTITY",
+      "family": "caller_identity",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/caller_identity",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "caller_principal_id",
+        "accountable_requester_actor_id",
+        "actor_registry_sha256",
+        "image_manifest_sha256",
+        "protection_domain_id",
+        "process_constructor_id",
+        "constructor_evidence",
+        "caller_enrollment_evidence",
+        "permission"
+      ],
+      "candidate_step_ids": [
+        "CE05",
+        "CE08"
+      ],
+      "body_cap_bytes": 8192,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE08",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-PLATFORM_CUSTODY",
+      "family": "platform_custody",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/platform_custody",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "domain_id",
+        "caller_record_sha256",
+        "image_manifest_sha256",
+        "actor_registry_sha256",
+        "resource_scope_sha256",
+        "guarantees",
+        "clock",
+        "one_use",
+        "constructor_policy_evidence",
+        "protection_domain_evidence"
+      ],
+      "candidate_step_ids": [
+        "CE06",
+        "CE08"
+      ],
+      "body_cap_bytes": 16384,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE08",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-ACCEPTANCE_RECORD",
+      "family": "acceptance_record",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/acceptance_record",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "actor_registry_sha256",
+        "image_manifest_sha256",
+        "caller_record_sha256",
+        "platform_record_sha256",
+        "trust_context_sha256",
+        "roles",
+        "documentary_preparers",
+        "source_author_id",
+        "runtime_requester_id",
+        "issuer",
+        "acceptor",
+        "profile",
+        "proposal_scope",
+        "accepted_source_basis_sha256",
+        "accepted_resource_index_sha256",
+        "resource_scope_sha256",
+        "suite_scope_sha256",
+        "prior_basis_acceptance_evidence",
+        "prior_resource_acceptance_evidence",
+        "R01_runtime_acceptance_evidence",
+        "R02_platform_acceptance_evidence",
+        "R08_separate_acceptance_evidence",
+        "decision"
+      ],
+      "candidate_step_ids": [
+        "CE09"
+      ],
+      "body_cap_bytes": 16384,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE09",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-CUSTODY_BUNDLE",
+      "family": "custody_bundle",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/custody_bundle",
+      "required_top_level_fields": [
+        "schema",
+        "signed_core",
+        "approvals"
+      ],
+      "candidate_step_ids": [
+        "CE10"
+      ],
+      "body_cap_bytes": 262144,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": false,
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE10",
+      "acceptance_requires_final_step_and_dependencies": true
+    },
+    {
+      "id": "FAMILY-LAUNCH_RECEIPT",
+      "family": "launch_receipt",
+      "schema_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+        "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95"
+      },
+      "schema_pointer": "/$defs/launch_receipt",
+      "required_top_level_fields": [
+        "schema",
+        "record_id",
+        "configuration_epoch",
+        "validity",
+        "bundle_sha256",
+        "caller_principal_id",
+        "protection_domain_id",
+        "image_manifest_sha256",
+        "image_bytes_sha256",
+        "runtime_sha256",
+        "source_root_sha256",
+        "trust_context_sha256",
+        "runtime_request_sha256",
+        "invocation_id",
+        "ledger_domain_id",
+        "claim_id",
+        "claim_epoch",
+        "claim_status",
+        "constructor_id",
+        "constructor_evidence",
+        "role"
+      ],
+      "candidate_step_ids": [
+        "CE12"
+      ],
+      "body_cap_bytes": 8192,
+      "proof_obligation": "Actual canonical body/schema/cap plus genuine referenced evidence, identity/roles/custody/cross-record/time acceptance; hashes/shape or planned facts are insufficient.",
+      "conditional_after_launch": true,
+      "status": "DEFERRED_NOT_AUTHORIZED",
+      "actual_body_sha256": null,
+      "accepted": false,
+      "final_record_freeze_step": "CE12",
+      "acceptance_requires_final_step_and_dependencies": true
+    }
+  ],
+  "contract_rule_gates": [
+    {
+      "id": "RULE-K01",
+      "rule_id": "K01",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/0",
+      "candidate_step_ids": [
+        "CE01",
+        "CE02",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K02",
+      "rule_id": "K02",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/1",
+      "candidate_step_ids": [
+        "CE03",
+        "CE05",
+        "CE08",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K03",
+      "rule_id": "K03",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/2",
+      "candidate_step_ids": [
+        "CE02",
+        "CE03",
+        "CE08",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K04",
+      "rule_id": "K04",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/3",
+      "candidate_step_ids": [
+        "CE04",
+        "CE07",
+        "CE08",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K05",
+      "rule_id": "K05",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/4",
+      "candidate_step_ids": [
+        "CE04",
+        "CE07",
+        "CE08",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K06",
+      "rule_id": "K06",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/5",
+      "candidate_step_ids": [
+        "CE05",
+        "CE06",
+        "CE07",
+        "CE08",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K07",
+      "rule_id": "K07",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/6",
+      "candidate_step_ids": [
+        "CE04",
+        "CE05",
+        "CE06",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K08",
+      "rule_id": "K08",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/7",
+      "candidate_step_ids": [
+        "CE05",
+        "CE06",
+        "CE07",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K09",
+      "rule_id": "K09",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/8",
+      "candidate_step_ids": [
+        "CE05",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K10",
+      "rule_id": "K10",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/9",
+      "candidate_step_ids": [
+        "CE01",
+        "CE03",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K11",
+      "rule_id": "K11",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/10",
+      "candidate_step_ids": [
+        "CE02",
+        "CE09",
+        "CE10",
+        "CE11"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K12",
+      "rule_id": "K12",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/11",
+      "candidate_step_ids": [
+        "CE01",
+        "CE07",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11",
+        "CE12"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K13",
+      "rule_id": "K13",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/12",
+      "candidate_step_ids": [
+        "CE02",
+        "CE06",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11",
+        "CE12"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K14",
+      "rule_id": "K14",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/13",
+      "candidate_step_ids": [
+        "CE06",
+        "CE11",
+        "CE12"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K15",
+      "rule_id": "K15",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/14",
+      "candidate_step_ids": [
+        "CE01",
+        "CE04",
+        "CE05",
+        "CE06",
+        "CE07",
+        "CE10",
+        "CE11",
+        "CE12"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "RULE-K16",
+      "rule_id": "K16",
+      "contract_binding": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be"
+      },
+      "contract_rule_pointer": "/rules/15",
+      "candidate_step_ids": [
+        "CE01",
+        "CE02",
+        "CE03",
+        "CE04",
+        "CE06",
+        "CE07",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11",
+        "CE12"
+      ],
+      "status": "PENDING_EVIDENCE_NOT_EVALUATED",
+      "accepted": false
+    }
+  ],
+  "global_gates": [
+    {
+      "id": "G01",
+      "condition": "Real canonical appointments/competence, eight S01 exclusions and extra custody/root key separations; no self-review.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G02",
+      "condition": "No future bundle/signature/receipt substitutes for genuine antecedent authentication before C.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G03",
+      "condition": "Exact final source/runtime/image/proof scope and real record caps, complete E01-E05 and effective source/Reader/output/phase impact; no automatic proof transfer.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G04",
+      "condition": "Single current external epoch/C mapping and actual freshness/global one-use provenance, no new wire fields/files/helpers.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G05",
+      "condition": "CE11 prelaunch closure does not depend on CE12 or on executing a claim; actual receipt remains conditional and private.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G06",
+      "condition": "No runtime/product/components/image build/probe/signing/claim/provider contact/current rebind or quota change authorized by plan.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    },
+    {
+      "id": "G07",
+      "condition": "No PASS, accepted actor/custody/snapshot or hashes manufactured; no resource/admission/D5 closure from schema or planning status.",
+      "status": "PENDING_NOT_EVALUATED",
+      "accepted": false
+    }
+  ],
+  "prelaunch_families": [
+    "anchor_registry",
+    "actor_registry",
+    "image_manifest",
+    "caller_identity",
+    "platform_custody",
+    "acceptance_record",
+    "custody_bundle"
+  ],
+  "deferred_families": [
+    "launch_receipt"
+  ],
+  "accepted_family_count": 0,
+  "accepted_rule_count": 0,
+  "accepted_global_gate_count": 0,
+  "current_effect": {
+    "evidence_plan_prepared": true,
+    "candidate_dossiers_created": 0,
+    "actual_external_record_families_accepted": 0,
+    "accepted_steps": 0,
+    "actual_actors_caller_image_or_anchors_supplied": false,
+    "current_execution_authorized": false,
+    "adopted": false,
+    "implemented": false,
+    "F183_01_documentary_repair_preserved": true,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  }
+}
