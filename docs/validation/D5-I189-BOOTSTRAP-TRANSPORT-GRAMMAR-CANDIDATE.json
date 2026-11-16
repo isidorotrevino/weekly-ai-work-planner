@@ -1,0 +1,273 @@
+{
+  "schema": "d5.i189-bootstrap-transport-grammar-candidate.v1",
+  "increment": "I189",
+  "date": "2026-11-16",
+  "base_commit": "faed688f34e0cda165f7630ca0ccb1fea973f4c3",
+  "protocol": "PGO181-BOOTSTRAP-TWO-PIPE-CANDIDATE-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "status": "DOCUMENTARY_GRAMMAR_ONLY_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "frames": [
+    {
+      "id": "C",
+      "definition": "trust_context",
+      "direction": "PARENT_TO_WORKER",
+      "max_body_bytes": 8192,
+      "max_frame_bytes": 8193,
+      "schema_pack": {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+      },
+      "json_pointer": "/$defs/trust_context",
+      "prefix_or_extra_tag_on_wire": false,
+      "delimiter_hex": "0a",
+      "body_must_be_existing_exact_schema_and_canonical_codec": true
+    },
+    {
+      "id": "Q",
+      "definition": "runtime_request",
+      "direction": "PARENT_TO_WORKER",
+      "max_body_bytes": 2048,
+      "max_frame_bytes": 2049,
+      "schema_pack": {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+      },
+      "json_pointer": "/$defs/runtime_request",
+      "prefix_or_extra_tag_on_wire": false,
+      "delimiter_hex": "0a",
+      "body_must_be_existing_exact_schema_and_canonical_codec": true
+    },
+    {
+      "id": "I",
+      "definition": "worker_invocation",
+      "direction": "PARENT_TO_WORKER",
+      "max_body_bytes": 511,
+      "max_frame_bytes": 512,
+      "schema_pack": {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+      },
+      "json_pointer": "/$defs/worker_invocation",
+      "prefix_or_extra_tag_on_wire": false,
+      "delimiter_hex": "0a",
+      "body_must_be_existing_exact_schema_and_canonical_codec": true
+    },
+    {
+      "id": "A",
+      "definition": "worker_ready",
+      "direction": "WORKER_TO_PARENT",
+      "max_body_bytes": 511,
+      "max_frame_bytes": 512,
+      "schema_pack": {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+      },
+      "json_pointer": "/$defs/worker_ready",
+      "prefix_or_extra_tag_on_wire": false,
+      "delimiter_hex": "0a",
+      "body_must_be_existing_exact_schema_and_canonical_codec": true
+    },
+    {
+      "id": "L",
+      "definition": "parent_release",
+      "direction": "PARENT_TO_WORKER",
+      "max_body_bytes": 511,
+      "max_frame_bytes": 512,
+      "schema_pack": {
+        "path": "docs/validation/D5-I185-PGO181-SCHEMAS-CANDIDATE-02.json",
+        "sha256": "87d5590177894c52dc2f6481da661724a30f4e4ed22e15bc63eaed662386d81d"
+      },
+      "json_pointer": "/$defs/parent_release",
+      "prefix_or_extra_tag_on_wire": false,
+      "delimiter_hex": "0a",
+      "body_must_be_existing_exact_schema_and_canonical_codec": true
+    }
+  ],
+  "parent_to_worker_stream_before_ready": [
+    "C",
+    "Q",
+    "I"
+  ],
+  "parent_to_worker_stream_after_ready": [
+    "L"
+  ],
+  "worker_to_parent_stream": [
+    "A"
+  ],
+  "stream_eof": {
+    "A": "Worker closes its only ready/up writer immediately after complete A line; parent must verify EOF before L.",
+    "L": "Parent closes its only release/down writer immediately after complete L line; worker must verify EOF before functional import.",
+    "I": "No EOF is expected here: the down pipe must remain open for later L. Waiting for EOF before A is forbidden."
+  },
+  "parent_machine": {
+    "initial": "P_INIT",
+    "success": "P_RELEASED",
+    "failure": "P_FAIL_CLOSED",
+    "transitions": [
+      {
+        "state": "P_INIT",
+        "event": "AUTHENTIC_CONTEXT_REQUEST_AND_IMMUTABLE_ENTRY_ACCEPTED",
+        "next": "P_ROOT_CHECK"
+      },
+      {
+        "state": "P_ROOT_CHECK",
+        "event": "FULL_ROOT_ADMISSION_AND_SINGLE_USE_CLAIM_SUCCEEDED",
+        "next": "P_RESERVED"
+      },
+      {
+        "state": "P_RESERVED",
+        "event": "OWNED_PATHS_PIPES_AND_PROCESS_ESTABLISHED",
+        "next": "P_SEND_C"
+      },
+      {
+        "state": "P_SEND_C",
+        "event": "C_FULLY_WRITTEN",
+        "next": "P_SEND_Q"
+      },
+      {
+        "state": "P_SEND_Q",
+        "event": "Q_FULLY_WRITTEN",
+        "next": "P_SEND_I"
+      },
+      {
+        "state": "P_SEND_I",
+        "event": "I_FULLY_WRITTEN",
+        "next": "P_WAIT_A"
+      },
+      {
+        "state": "P_WAIT_A",
+        "event": "A_LINE_RECEIVED_AND_VALIDATED",
+        "next": "P_WAIT_A_EOF"
+      },
+      {
+        "state": "P_WAIT_A_EOF",
+        "event": "A_STREAM_EOF_CONFIRMED",
+        "next": "P_RECHECK"
+      },
+      {
+        "state": "P_RECHECK",
+        "event": "LIVE_ROOT_CONTEXT_REQUEST_OWNER_AND_PEER_RECHECKED",
+        "next": "P_SEND_L"
+      },
+      {
+        "state": "P_SEND_L",
+        "event": "L_FULLY_WRITTEN",
+        "next": "P_CLOSE_DOWN"
+      },
+      {
+        "state": "P_CLOSE_DOWN",
+        "event": "PARENT_DOWN_WRITE_CLOSED",
+        "next": "P_RELEASED"
+      }
+    ]
+  },
+  "worker_machine": {
+    "initial": "W_ENTRY",
+    "success": "W_RELEASED",
+    "failure": "W_FAIL_CLOSED",
+    "transitions": [
+      {
+        "state": "W_ENTRY",
+        "event": "ACCEPTED_IMMUTABLE_ENTRY_AND_EXCLUSIVE_CHANNELS_VERIFIED",
+        "next": "W_READ_C"
+      },
+      {
+        "state": "W_READ_C",
+        "event": "C_COMPLETE_CANONICAL_IN_CAP",
+        "next": "W_READ_Q"
+      },
+      {
+        "state": "W_READ_Q",
+        "event": "Q_COMPLETE_CANONICAL_IN_CAP",
+        "next": "W_READ_I"
+      },
+      {
+        "state": "W_READ_I",
+        "event": "I_COMPLETE_CANONICAL_IN_CAP",
+        "next": "W_ROOT_CHECK"
+      },
+      {
+        "state": "W_ROOT_CHECK",
+        "event": "AUTHENTIC_CALLER_DATA_AND_REAL_ROOT_FULLY_VALIDATED_WITH_SAME_LEDGER",
+        "next": "W_SEND_A"
+      },
+      {
+        "state": "W_SEND_A",
+        "event": "A_FULLY_WRITTEN",
+        "next": "W_CLOSE_UP"
+      },
+      {
+        "state": "W_CLOSE_UP",
+        "event": "WORKER_UP_WRITE_CLOSED",
+        "next": "W_WAIT_L"
+      },
+      {
+        "state": "W_WAIT_L",
+        "event": "L_COMPLETE_CANONICAL_IN_CAP",
+        "next": "W_WAIT_L_EOF"
+      },
+      {
+        "state": "W_WAIT_L_EOF",
+        "event": "L_STREAM_EOF_CONFIRMED",
+        "next": "W_RECHECK"
+      },
+      {
+        "state": "W_RECHECK",
+        "event": "LIVE_MATCHING_ROOT_CONTEXT_REQUEST_CHANNELS_AND_OWNER_RECHECKED",
+        "next": "W_RELEASED"
+      }
+    ]
+  },
+  "joint_precedence_edges": [
+    [
+      "P_SEND_I",
+      "W_ROOT_CHECK"
+    ],
+    [
+      "W_CLOSE_UP",
+      "P_RECHECK"
+    ],
+    [
+      "P_RECHECK",
+      "W_RECHECK"
+    ]
+  ],
+  "universal_rejections": [
+    "ABSENT_TRUSTED_CALLER_OR_MUTABLE_ENTRY",
+    "UNTRUSTED_OR_AMBIGUOUS_ENDPOINT_CUSTODY",
+    "BAD_DESCRIPTOR_ROLE_TYPE_OR_OWNER",
+    "EMPTY_BODY",
+    "OVER_CAP_BEFORE_DELIMITER",
+    "EOF_INSIDE_FRAME",
+    "MALFORMED_NONCANONICAL_OR_DUPLICATE_KEY_JSON",
+    "WRONG_SCHEMA_OR_FRAME_ORDER",
+    "UNKNOWN_OR_DIFFERENT_ROOT_CONTEXT_REQUEST_INVOCATION",
+    "EXPIRED_REVOKED_OR_UNCURRENT_TRUST",
+    "REPLAY_OR_DUPLICATE_USE",
+    "FAILED_SIGNATURE_OR_ROLE_SEPARATION",
+    "EXTRA_A_BYTES_BEFORE_EOF",
+    "EXTRA_L_BYTES_BEFORE_EOF",
+    "UNEXPECTED_DIRECTION_OR_DUPLICATE_FRAME",
+    "DEADLINE_OR_ATTEMPT_EXHAUSTED",
+    "EPIPE_OR_FATAL_IO",
+    "UNSUPPORTED_CLOCK_OR_PLATFORM_GUARANTEE"
+  ],
+  "any_failure_terminal_for_invocation": true,
+  "permissions": {
+    "parent_capture_path_reservation_after": "P_ROOT_CHECK admission and one-use claim success only",
+    "worker_READY_after": "W_ROOT_CHECK success only",
+    "worker_functional_import_after": "W_RELEASED only",
+    "current_execution_authorized": false
+  },
+  "transport_limits": {
+    "read_request_bytes": 1,
+    "write_request_bytes": 4096,
+    "max_io_or_readiness_attempts_per_endpoint": 65536,
+    "parent_total_handshake_seconds": 20,
+    "worker_total_handshake_seconds": 20,
+    "reset_deadline_per_frame": false,
+    "additional_repository_inputs": 0,
+    "additional_processes": 0,
+    "additional_control_pipes": 0
+  }
+}

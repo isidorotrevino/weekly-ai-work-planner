@@ -1,0 +1,213 @@
+{
+  "schema": "d5.i189-preparation-review.v1",
+  "increment": "I189",
+  "date": "2026-11-16",
+  "base_commit": "faed688f34e0cda165f7630ca0ccb1fea973f4c3",
+  "status": "BOOTSTRAP_TRANSPORT_CONTRACT_PREPARED_NOT_ADOPTED_NOT_IMPLEMENTED_NOT_ADMITTED",
+  "contract": {
+    "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.json",
+    "sha256": "018c01dc999ca48d92e691660b8b3d60dd326e6cfd44b6c5e5516cbba7f4f63a"
+  },
+  "grammar": {
+    "path": "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-GRAMMAR-CANDIDATE.json",
+    "sha256": "ace4ea8bbd177163a52ad800accf706292bfd5821ad2829694d2b7e93782d5dd"
+  },
+  "input_pins": 739,
+  "prior_published_files_preserved": 431,
+  "grammar_checks": {
+    "frame_count": 5,
+    "parent_states": 12,
+    "worker_states": 11,
+    "dependency_state_nodes": 23,
+    "parent_order": [
+      "P_INIT",
+      "P_ROOT_CHECK",
+      "P_RESERVED",
+      "P_SEND_C",
+      "P_SEND_Q",
+      "P_SEND_I",
+      "P_WAIT_A",
+      "P_WAIT_A_EOF",
+      "P_RECHECK",
+      "P_SEND_L",
+      "P_CLOSE_DOWN",
+      "P_RELEASED"
+    ],
+    "worker_order": [
+      "W_ENTRY",
+      "W_READ_C",
+      "W_READ_Q",
+      "W_READ_I",
+      "W_ROOT_CHECK",
+      "W_SEND_A",
+      "W_CLOSE_UP",
+      "W_WAIT_L",
+      "W_WAIT_L_EOF",
+      "W_RECHECK",
+      "W_RELEASED"
+    ],
+    "joint_acyclic_order": [
+      "P_INIT",
+      "W_ENTRY",
+      "P_ROOT_CHECK",
+      "W_READ_C",
+      "P_RESERVED",
+      "W_READ_Q",
+      "P_SEND_C",
+      "W_READ_I",
+      "P_SEND_Q",
+      "P_SEND_I",
+      "P_WAIT_A",
+      "W_ROOT_CHECK",
+      "P_WAIT_A_EOF",
+      "W_SEND_A",
+      "W_CLOSE_UP",
+      "P_RECHECK",
+      "W_WAIT_L",
+      "P_SEND_L",
+      "W_WAIT_L_EOF",
+      "P_CLOSE_DOWN",
+      "W_RECHECK",
+      "P_RELEASED",
+      "W_RELEASED"
+    ],
+    "guarded_order_exclusions": [
+      {
+        "case": "WORKER_READY_BEFORE_FULL_ROOT",
+        "ordering_required": true
+      },
+      {
+        "case": "PARENT_RELEASE_BEFORE_READY_EOF",
+        "ordering_required": true
+      },
+      {
+        "case": "FUNCTIONAL_IMPORT_BEFORE_RELEASE_EOF",
+        "ordering_required": true
+      },
+      {
+        "case": "CAPTURE_RESERVATION_BEFORE_ADMISSION",
+        "ordering_required": true
+      }
+    ],
+    "universal_failure_classes": 18,
+    "frame_caps_and_existing_schema_refs_exact": true,
+    "no_live_stream_parser_or_schedule_executed": true
+  },
+  "arithmetic": {
+    "parent_to_worker_bytes": 11266,
+    "worker_to_parent_bytes": 512,
+    "total_wire_bytes": 11778,
+    "endpoint_transferred_bytes_read_plus_write": 23556,
+    "progress_calls_plus_terminal_EOF_reads": 23558,
+    "max_attempts_both_endpoints": 131072,
+    "actual_IO_call_count_or_service_verified": false
+  },
+  "preservation": {
+    "profile02_and_output_bytes_unchanged": true,
+    "eight_S01_exclusions_and_F183_01_repair_preserved": true,
+    "no_extra_protocol_pipes_files_processes": true,
+    "actual_bootstrap_image_caller_clock_or_identity_verified": false,
+    "actual_resource_Reader_or_900_proof": false
+  },
+  "source_anchors": [
+    {
+      "path": "testing/prospective_capture_joint_i122/capture.py",
+      "symbol": "launch",
+      "sha256": "eb1b32ecd8fbc90b48000acf90c00e744e9c9b7fbf26cf62ff9b865e5907891a",
+      "line": 103,
+      "end_line": 177,
+      "AST_sha256": "e531bea666240f05b068cff74ccb05079cf35146ea213b155beae285da955089"
+    },
+    {
+      "path": "testing/prospective_capture_joint_i122/worker.py",
+      "symbol": "main",
+      "sha256": "a6e5be7a61bd6f0593459d640b2bd8842977379ca78fee5e04ea4b2c7798a985",
+      "line": 63,
+      "end_line": 94,
+      "AST_sha256": "013f812a49888244dd3580048db3229f8e4c31d98334657cb1557bff1b4dfbf4"
+    }
+  ],
+  "provenance": {
+    "preparer": "Same Codex assistant/chat; not a named independent approver",
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "independent_acceptance": false
+  },
+  "current_effect": {
+    "bootstrap_transport_contract_prepared": true,
+    "F183_01_documentary_repair_preserved": true,
+    "F179_01_resolved": false,
+    "S01_accepted": false,
+    "adopted": false,
+    "implemented": false,
+    "trusted_entry_image_supplied": false,
+    "trust_anchor_established": false,
+    "independent_acceptance": false,
+    "active_schema_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "remaining_work": [
+    "Competent review/adoption of bootstrap/grammar/identity boundary and immutable trusted image route; actual caller/runtime/platform/key/clock/one-use provenance and role appointments are absent.",
+    "Separately authorized exact successor/bootstrap loader/channel/Reader/owner/exception/dual-output implementation, source-to-image mapping and dependency/CLI proof; no mutable-repository-first fallback.",
+    "Full179/321/12/30 scope and E01-E05 bounds including every IO attempt/clock/poll/bytewise parse/crypto/copy/startup/read/cleanup/write in all phases; actual service/heap/CPU/Reader/900 and final E06 evidence.",
+    "Actual context/request/root/payload/signatures, source/runtime trust and separate admission/execute decision; static state graph/wire arithmetic is no permission."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.md",
+      "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-CONTRACT-CANDIDATE.json",
+      "docs/validation/D5-I189-BOOTSTRAP-TRANSPORT-GRAMMAR-CANDIDATE.json",
+      "docs/validation/D5-I189-preparation-review.json",
+      "docs/validation/D5-I189-audit.py",
+      "docs/validation/D5-I189-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I189-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary bootstrap/transport preparation; no product/component/crypto execution or protocol pipes/workers created.",
+    "over400_lines": true,
+    "reason": "Concrete ownership/framing/state/failure/cost contract, grammar, pins and audit in one documentary deliverable; overage reported."
+  }
+}
