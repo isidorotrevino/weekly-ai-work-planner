@@ -1,0 +1,240 @@
+{
+  "schema": "d5.i204-i203-documentary-review.v1",
+  "increment": "I204",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "cf293f90cac9ac510df59b7b3233f0e32aad1b59",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE03",
+  "status": "CE03_PROVISIONAL_DOCUMENTARILY_CONFIRMED_IDENTITIES_MISSING_NOT_FINALIZED_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I204-I203-source-reconstruction.json",
+    "sha256": "a2ff9fbc3907812c9ab6b7df522fad48225d64f6c61f1f27a2f5e30df089cee5",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I203 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Canonical human/organization/alias/competence/appointment intake",
+      "result": "PASS_REQUIREMENT_DECLARED_IDENTITIES_MISSING"
+    },
+    {
+      "id": "E02",
+      "scope": "Human versus software namespace and requester/source-author/all-preparer scope",
+      "result": "PASS_NO_SOFTWARE_OR_NAME_AS_AUTHENTICATED_HUMAN"
+    },
+    {
+      "id": "E03",
+      "scope": "Known documentary activity tracked provisionally; final authors/completeness deferred",
+      "result": "PASS_DOCUMENT_OBSERVATIONS_NOT_HUMAN_AUTHORSHIP"
+    },
+    {
+      "id": "A01",
+      "scope": "All8 S01 exclusions plus R08/source-author and root-key rules",
+      "result": "PASS_DECLARED_UNIVERSAL_POLICY_NOT_ACTUAL_IDENTITY_COMPARISON"
+    },
+    {
+      "id": "A02",
+      "scope": "Extra R08/R01/R02 human/key separation without blanket qualified R01/R02 prohibition",
+      "result": "PASS_SEPARATION_POLICY_NOT_REAL_INDEPENDENCE"
+    },
+    {
+      "id": "A03",
+      "scope": "No final registry hash/completeness while preparers/aliases/scope unknown",
+      "result": "PASS_CE03_PROVISIONAL_CE08_FINALIZATION"
+    },
+    {
+      "id": "B01",
+      "scope": "CE08 complete freeze/refresh before C, no future-author preapproval",
+      "result": "PASS_PHASE_BOUNDARY_NOT_ACTUAL_FREEZE_OR_REBIND"
+    },
+    {
+      "id": "K02",
+      "scope": "One canonical human under accepted authority, software separate and ambiguity rejected",
+      "result": "PASS_POLICY_NOT_IDENTITY_ENROLLMENT"
+    },
+    {
+      "id": "K03",
+      "scope": "Complete future preparation record bindings and bodies, no future C/root; partial current tracking honest",
+      "result": "PASS_ANTECEDENT_PREPARATION_POLICY_NOT_POSITIVE_RECORD"
+    },
+    {
+      "id": "K10",
+      "scope": "All role/preparer/author/key exclusions and phase-correct CE10 approvals retained",
+      "result": "PASS_SCOPE_PRESERVED_NOT_COMPETENT_ACCEPTANCE"
+    },
+    {
+      "id": "K16",
+      "scope": "Candidate schema/cap98304, no truncation or active quotas, future full-body checks at CE08",
+      "result": "PASS_DESIGN_LIMITS_NOT_REAL_FIT"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I193-CE03-HUMAN-IDENTITY-ROSTER-CANDIDATE.json",
+      "sha256": "625f7d9034b80126caadb85b132d60531e34ea15e208d2f4bd27f7d2e05b0c8f",
+      "json_pointer": "/identity_requirements"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE03-HUMAN-IDENTITY-ROSTER-CANDIDATE.json",
+      "sha256": "625f7d9034b80126caadb85b132d60531e34ea15e208d2f4bd27f7d2e05b0c8f",
+      "json_pointer": "/step_obligation_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE03-HUMAN-IDENTITY-ROSTER-CANDIDATE.json",
+      "sha256": "625f7d9034b80126caadb85b132d60531e34ea15e208d2f4bd27f7d2e05b0c8f",
+      "json_pointer": "/documentary_preparation_tracking"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE03-HUMAN-IDENTITY-ROSTER-CANDIDATE.json",
+      "sha256": "625f7d9034b80126caadb85b132d60531e34ea15e208d2f4bd27f7d2e05b0c8f",
+      "json_pointer": "/actual_identity_state"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/2"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/7"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/freeze_and_refresh"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/family_gates/1"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95",
+      "json_pointer": "/$defs/preparation_record"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/record_order"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE03_provisional_candidate_documentarily_confirmed": true,
+    "CE03_accepted": false,
+    "actual_registry_finalized": false,
+    "actual_actor_registry_created": false,
+    "actual_identity_or_separation_verified": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE03_provisional_documentary_candidate_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE03_accepted": false,
+    "actual_CE02_dependency_satisfied": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "actual_actor_enrolled": false,
+    "actual_actor_registry_created": false,
+    "actual_registry_finalized": false,
+    "actual_identity_or_separation_verified": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE03_documentary_review_completed": true,
+    "CE03_documentary_confirmation": true,
+    "CE03_documentary_revision_required": false,
+    "CE08_finalization_verified": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Exact CE03 documentary scope only: no actual human/organization/alias/role/appointment, authenticated authorship, positive registry/preparation record or competent acceptance.",
+    "Document hashes/metadata and self-declared assistant activity prove neither human identity nor complete preparer scope; CE08 must include actual later proof authors and refresh dependent reviews before C.",
+    "Same assistant preparation/review is not independent competent R06/R08 acceptance. Graph/schema-fragment checks are documentary; no product/component, registry codec, identity, crypto, image, claim or protocol execution.",
+    "CE01/CE02 competent adoption and all resource/atomicity/final-evidence/admission gates remain pending. No authority, enrollment, contact, quota or rebind follows."
+  ],
+  "next_scope": "CE03 can proceed as a documentarily reviewed provisional missing-identity dossier. A separately requested CE04 documentary preparation is possible; no source-to-image fact, runtime, author identity or build/enrollment/execution may be fabricated or inferred. CE08 finalization and actual competent prerequisites remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I204-I203-CE03-REVIEW.md",
+      "docs/validation/D5-I204-I203-documentary-review.json",
+      "docs/validation/D5-I204-I203-source-reconstruction.json",
+      "docs/validation/D5-I204-audit.py",
+      "docs/validation/D5-I204-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I204-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary JSON/Git/consumer/schema-fragment/dependency review; no product/components/identity/registry codec/crypto/image/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "One pinned review unit with provisional/final phase reconstruction, non-authorship and schema/separation checks, guard restoration and preservation evidence; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
