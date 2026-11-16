@@ -1,0 +1,249 @@
+{
+  "schema": "d5.i198-i197-documentary-review.v1",
+  "increment": "I198",
+  "date": "2026-11-16",
+  "timezone": "Europe/Madrid",
+  "base_commit": "21bee3e8629e5cd204603648419870feb14b7645",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "candidate_id": "CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE-02",
+  "step": "CE01",
+  "status": "CE01_CANDIDATE_02_DOCUMENTARILY_CONFIRMED_NOT_ADOPTED_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I198-I197-source-reconstruction.json",
+    "sha256": "58c84d1952118406f9f14c9174987690c7ab6bc2b678c532dd4ec32ca960e88e",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I197/I195 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [],
+  "finding_dispositions": [
+    {
+      "id": "F195-01",
+      "status": "DOCUMENTARY_REPAIR_CONFIRMED_FOR_CANDIDATE_02_ONLY",
+      "source_finding": {
+        "path": "docs/validation/D5-I196-I195-documentary-review.json",
+        "sha256": "17738f5f54f159b0e3cb7d935166c4495e9e14ad16eabaaf1c17ed3118f7fbc6",
+        "json_pointer": "/findings/0"
+      },
+      "candidate": {
+        "path": "docs/validation/D5-I197-CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE-02.json",
+        "sha256": "a732a0841ec3b4a4079121b79c13836c0ac5d2144d5002ac5b3eb882d16f9e70",
+        "json_pointer": ""
+      },
+      "historical_I196_open_finding_unchanged": true,
+      "historical_I197_pending_review_record_unchanged": true,
+      "documentary_resolution": true,
+      "competent_or_independent_accepted_closure": false,
+      "actual_CE01_acceptance": false,
+      "reason": "CE11 now requires a typed pending-final-route handoff, not actual completion; CE12 retains all five genuine receipt prerequisites with four before claim and claim/construction before receipt. No prerequisite was waived and no current permission or evidence was supplied.",
+      "evidence": [
+        {
+          "path": "docs/validation/D5-I197-CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE-02.json",
+          "sha256": "a732a0841ec3b4a4079121b79c13836c0ac5d2144d5002ac5b3eb882d16f9e70",
+          "json_pointer": "/external_evidence_requirements/8"
+        },
+        {
+          "path": "docs/validation/D5-I197-CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE-02.json",
+          "sha256": "a732a0841ec3b4a4079121b79c13836c0ac5d2144d5002ac5b3eb882d16f9e70",
+          "json_pointer": "/external_evidence_requirements/9"
+        },
+        {
+          "path": "docs/validation/D5-I197-CE01-SCOPE-AND-DECISION-BOUNDARY-CANDIDATE-02.json",
+          "sha256": "a732a0841ec3b4a4079121b79c13836c0ac5d2144d5002ac5b3eb882d16f9e70",
+          "json_pointer": "/step_obligation_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/steps/10"
+        },
+        {
+          "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+          "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+          "json_pointer": "/closure_boundaries"
+        },
+        {
+          "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+          "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+          "json_pointer": "/rules/11"
+        },
+        {
+          "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+          "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+          "json_pointer": "/record_order"
+        },
+        {
+          "path": "docs/validation/D5-I196-I195-documentary-review.json",
+          "sha256": "17738f5f54f159b0e3cb7d935166c4495e9e14ad16eabaaf1c17ed3118f7fbc6",
+          "json_pointer": "/findings/0"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Three CE01 evidence requirements and exact pinned I191/I192/profile02/output/transport inventory",
+      "result": "PASS_DOCUMENTARY_PINS_NOT_ACTUAL_EXTERNAL_EVIDENCE"
+    },
+    {
+      "id": "E02",
+      "scope": "Eight unassigned role scopes and producer/reviewer boundary",
+      "result": "PASS_DECLARED_POLICY_NOT_APPOINTMENTS"
+    },
+    {
+      "id": "E03",
+      "scope": "Ten actual-evidence requirements plus one documentary handoff; nine unrelated rows unchanged",
+      "result": "PASS_TRUTHFUL_MISSING_EVIDENCE_AND_TYPED_SPLIT"
+    },
+    {
+      "id": "A01",
+      "scope": "Four documentary permissions and14 denied action classes",
+      "result": "PASS_NO_EXECUTION_CONTACT_OR_QUOTA_AUTHORITY"
+    },
+    {
+      "id": "A02",
+      "scope": "Eight S01 exclusions, F183-01 and four custody actor/key separations",
+      "result": "PASS_PRESERVED_SCOPE_NOT_ACTUAL_INDEPENDENCE"
+    },
+    {
+      "id": "B01",
+      "scope": "No signed policy/role acceptance or competent R06/R08 decision",
+      "result": "PASS_NO_COMPETENT_ADOPTION"
+    },
+    {
+      "id": "K01",
+      "scope": "External preaccepted anchors required, no provider/actor/key selected",
+      "result": "PASS_REQUIREMENT_NOT_TRUST_PROOF"
+    },
+    {
+      "id": "K10",
+      "scope": "Complete preparer scope and all inherited/additional separations",
+      "result": "PASS_DECLARED_EXCLUSIONS_NOT_IDENTITY_PROOF"
+    },
+    {
+      "id": "K12",
+      "scope": "CE11 handoff separated from actual final work, claim and receipt phases; DFS agrees with I191",
+      "result": "PASS_F195_01_DOCUMENTARY_REPAIR_FOR_CANDIDATE_02"
+    },
+    {
+      "id": "K15",
+      "scope": "Full per-attempt verification/lookup/copies/native/IO costs still required in phase/resource composition",
+      "result": "PASS_INHERITED_OBLIGATION_NOT_RESOURCE_OR_900_PROOF"
+    },
+    {
+      "id": "K16",
+      "scope": "C/Q/I/A/L, pipes/operands, Reader/output/custody caps and numeric candidates unchanged",
+      "result": "PASS_DESIGN_LIMITS_NOT_ACTUAL_FIT"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE01_candidate_02_documentarily_confirmed": true,
+    "F195_01_documentary_repair_confirmed_for_candidate_02": true,
+    "F195_01_accepted_closure": false,
+    "CE01_accepted": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE01_documentary_candidate_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE01_accepted": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "adopted": false,
+    "implemented": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE01_candidate_02_prepared": true,
+    "F195_01_documentary_repair_prepared": true,
+    "F195_01_accepted_closure": false,
+    "CE01_documentary_confirmation": true,
+    "CE01_documentary_review_completed": true,
+    "F195_01_documentary_repair_confirmed_for_candidate_02": true,
+    "CE01_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Documentary confirmation is limited to exact candidate02 and F195-01 repair; no actual appointment, provider, identity, image/runtime/platform/resource/atomicity/claim evidence or accepted custody.",
+    "Phase DFS is a documentary partial-order check, not a full I181 replacement, executable protocol, service simulation or proof of actual operation.",
+    "The same assistant prepared/reviewed candidates. Competent R06 and separate R08 adoption/acceptance remain absent; no quota, rebind, authority, execution or D5 release follows."
+  ],
+  "next_scope": "CE01 candidate02 can proceed as a documentarily reviewed scope candidate. A separately requested CE02-ANCHOR intake/preparation is a possible next documentary task; no real provider contact, actor/key enrollment, evidence fabrication, cryptography or execution is authorized. All actual competent CE01 adoption remains pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I198-I197-CE01-02-REVIEW.md",
+      "docs/validation/D5-I198-I197-documentary-review.json",
+      "docs/validation/D5-I198-I197-source-reconstruction.json",
+      "docs/validation/D5-I198-audit.py",
+      "docs/validation/D5-I198-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I198-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary review/JSON/Git/graph mathematics; no product/component/crypto/image/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "One review unit: pinned reconstruction, reverse step coverage, phase/source DFS, precise finding disposition and preservation evidence; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
