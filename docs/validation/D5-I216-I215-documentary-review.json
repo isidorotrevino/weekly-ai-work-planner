@@ -1,0 +1,331 @@
+{
+  "schema": "d5.i216-i215-documentary-review.v1",
+  "increment": "I216",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "b098d19c639e39be6e2ccacde1227cd405bfd311",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE09",
+  "status": "CE09_DOCUMENTARY_BASELINE_CONFIRMED_C_ACCEPTANCE_MISSING_NOT_ACCEPTED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+    "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I216-I215-source-reconstruction.json",
+    "sha256": "90f49ac17133468af59ae1f8d090714cab74b920b8312cf27c225f97a9efaf56",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Exact unchanged roles/preparers/source/runtime/prior-scope projection",
+      "result": "14_TYPES_AND_6_TRANSITIVE_DEFINITIONS_PRESERVED_VALUES_MISSING"
+    },
+    {
+      "id": "E02",
+      "scope": "Canonical C digest/constants/conservative clock/contained current validity",
+      "result": "NO_ACTUAL_DIGEST_CLOCK_OR_INTERVAL_VERIFIED"
+    },
+    {
+      "id": "E03",
+      "scope": "Custody-only acceptance and five actual prior evidence references",
+      "result": "REQUIREMENTS_PRESERVED_BODIES_AND_COMPETENT_DECISIONS_MISSING"
+    },
+    {
+      "id": "A01",
+      "scope": "14 types plus digest/constant/time/clock/cross-record predicates and no extra C bundle hash",
+      "result": "PRESERVED_CLOSED_SCHEMAS_NO_POSITIVE_INSTANCE"
+    },
+    {
+      "id": "A02",
+      "scope": "No future bundle/root/E06 authentication or standalone acceptance signature",
+      "result": "INDIRECT_C_DIGEST_COVERAGE_DEFERRED_TO_CE10"
+    },
+    {
+      "id": "A03",
+      "scope": "No C wire/root/request emission pending genuine facts/review",
+      "result": "DOCUMENTARY_NEGATIVE_DOSSIER_ONLY"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K08",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/7"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/shared_type_projection"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/schema_obligations"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/projection_predicates"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/time_and_currentness_policy"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K10",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/9"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/role_scope_matrix"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/inherited_scope_boundaries"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/projection_predicates"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K11",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/10"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/signature_and_order_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/projection_predicates"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K12",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/phase_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/signature_and_order_policy"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K13",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/12"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/time_and_currentness_policy"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K16",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/schema_obligations"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/permission_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+          "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+          "json_pointer": "/current_effect"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "Shared type versus actual value",
+      "disposition": "15 property names overlap; schema differs.14 types and six transitive definitions match.13 accepted value projections remain missing; validity uses containment, not mandatory equal endpoints."
+    },
+    {
+      "id": "C02",
+      "subject": "C coverage in signed_core",
+      "disposition": "Closed signed_core embeds five records, including acceptance and its trust_context_sha256. C is bound indirectly through that exact digest; no new C body/member or standalone signature is added."
+    },
+    {
+      "id": "C03",
+      "subject": "Bundle validity wording",
+      "disposition": "Effective bundle currentness/validity derives from its five current record intervals, including acceptance; bundle has only schema/signed_core/approvals, with no standalone validity property. No new interval field is introduced."
+    },
+    {
+      "id": "C04",
+      "subject": "K12 digest signing wording",
+      "disposition": "Read with explicit I193 CE09 and closed acceptance schema: CE10 role-domain bundle approvals cover the exact C digest through acceptance. They cannot supply sole prior authentication or close missing resource evidence."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I215",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_R03_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE09_documentary_baseline_confirmed": true,
+    "CE09_accepted": false,
+    "actual_C_created": false,
+    "actual_C_emitted": false,
+    "actual_acceptance_record_created": false,
+    "actual_projection_verified": false,
+    "actual_prior_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE09_documentary_prepared": true,
+    "CE09_accepted": false,
+    "actual_dependency_satisfied": false,
+    "actual_C_created": false,
+    "actual_C_emitted": false,
+    "actual_acceptance_record_created": false,
+    "actual_projection_verified": false,
+    "actual_canonical_digest_verified": false,
+    "actual_prior_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE09_documentary_review_completed": true,
+    "CE09_documentary_confirmation": true,
+    "CE09_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "No actual C/acceptance, final CE08 records or competent acceptance, prior basis/resource/R01/R02/R08 evidence, real identities/keys/clock/validity or projected actual values.",
+    "Static type/field/signature coverage reconstruction is not positive schema/codec/crypto validation or a genuine independent review. No resource qualification, canonical positive digest,900-second proof, wire/request/root/bundle/claim issuance.",
+    "Same assistant remains outside competent independent R01/R02/R03/R06 review and separate R08 acceptance. Existing negative gates and no-admission state stay unchanged."
+  ],
+  "next_scope": "CE09 can serve as a documentarily reviewed missing-evidence baseline for separately requested CE10 preparation. All actual antecedents, projections, evidence and acceptances remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I216-I215-CE09-REVIEW.md",
+      "docs/validation/D5-I216-I215-documentary-review.json",
+      "docs/validation/D5-I216-I215-source-reconstruction.json",
+      "docs/validation/D5-I216-audit.py",
+      "docs/validation/D5-I216-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I216-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_C_AND_ACCEPTANCE_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/type/schema-fragment and antecedent review only; no product/components or positive protocol/crypto execution.",
+    "over400_lines": true,
+    "reason": "One CE09 review with independently reconstructed type/validity/digest coverage and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_C_emission_acceptance_or_admission": true
+  }
+}
