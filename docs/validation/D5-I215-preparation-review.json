@@ -1,0 +1,178 @@
+{
+  "schema": "d5.i215-preparation-review.v1",
+  "increment": "I215",
+  "date": "2026-11-17",
+  "base_commit": "4d005e0470ada3d1af1654973e15d595d5bb24f2",
+  "status": "PASS_STATIC_SOURCE_ONLY_C_AND_ACCEPTANCE_MISSING",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+    "sha256": "99cf2b08ce9bdea78570d748aee7e5bc581ae22f6371f45a45cefbb8664d97f9",
+    "json_pointer": ""
+  },
+  "plan": {
+    "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+    "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+    "json_pointer": "/steps/8"
+  },
+  "counts": {
+    "input_pins": 872,
+    "shared_type_fields": 14,
+    "shared_transitive_definitions": 6,
+    "C_top_level_fields": 19,
+    "acceptance_top_level_fields": 27,
+    "prior_acceptance_evidence_slots": 5,
+    "CE09_predicates": 10,
+    "deferred_CE10_predicates": 2,
+    "unassigned_role_slots": 5,
+    "later_dossiers_absent": 3,
+    "resource_obligations_closed": 0
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as prior candidates",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_acceptance": false,
+    "external_contacts_made": false
+  },
+  "source_reconstruction": {
+    "prior_I214_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_run": false,
+    "exact_CE09_historical_absence_guard": true,
+    "guard_restored_success_and_exception": true,
+    "no_reverse_future_bundle_root_receipt_dependency": true,
+    "shared_types_and_transitive_definitions_equal": true,
+    "validity_is_containment_not_forced_interval_equality": true,
+    "standalone_signature_not_added": true
+  },
+  "rejection_checks": [
+    {
+      "case": "positive_C_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_acceptance_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "standalone_acceptance_signature",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_C_bundle_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "interval_equality_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "nonconservative_clock_error",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_bundle_bootstrap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_E06_root_bootstrap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "caps_as_resource_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "document_closes_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "wire_or_root_issuance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "active_rebind",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "CE09_documentary_prepared": true,
+    "CE09_accepted": false,
+    "actual_dependency_satisfied": false,
+    "actual_C_created": false,
+    "actual_C_emitted": false,
+    "actual_acceptance_record_created": false,
+    "actual_projection_verified": false,
+    "actual_canonical_digest_verified": false,
+    "actual_prior_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Negative dossier only: no actual C/acceptance, final antecedent record freeze, competent dependency acceptance, genuine prior proof bodies, actors/keys, clock or validity.",
+    "Same assistant is not competent independent review or separate R08 acceptance. No actual canonical positive body/digest/schema/crypto verification, wire emission, request, bundle or final root.",
+    "Type equality is static schema evidence, not equality or acceptance of unknown actual values. C validity must be contained; acceptance is custody-only and has no standalone signature."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I215-CE09-EXACT-C-PROJECTION.md",
+      "docs/validation/D5-I193-CE09-EXACT-C-PROJECTION-CANDIDATE.json",
+      "docs/validation/D5-I215-audit.py",
+      "docs/validation/D5-I215-integrity.json",
+      "docs/validation/D5-I215-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I215-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_C_AND_ACCEPTANCE_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-fragment/type/phase checks; no product/components or positive codec/crypto execution.",
+    "over400_lines": true,
+    "reason": "One negative exact-C projection dossier with shared types, prior-evidence/predicate matrix and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_C_issuance_acceptance_or_admission": true
+  }
+}
