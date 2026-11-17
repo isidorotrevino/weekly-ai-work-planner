@@ -1,0 +1,180 @@
+{
+  "schema": "d5.i211-preparation-review.v1",
+  "increment": "I211",
+  "date": "2026-11-17",
+  "base_commit": "4c4e634da477ea3fd441dc5809f5d4bd4c5bdd38",
+  "status": "PASS_STATIC_SOURCE_ONLY_RESOURCE_EVIDENCE_MISSING",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+    "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+    "json_pointer": ""
+  },
+  "plan": {
+    "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+    "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+    "json_pointer": "/steps/6"
+  },
+  "counts": {
+    "input_pins": 852,
+    "historical_tasks": 20,
+    "obligations": 5,
+    "criteria": 20,
+    "heap_owners": 11,
+    "historical_cost_activities": 10,
+    "required_work_CPU_wall_upper_slots": 30,
+    "historical_process_phase_vectors": 20,
+    "pending_I177_bindings": 4,
+    "unassigned_review_roles": 3,
+    "later_dossiers_absent": 5,
+    "resource_obligations_closed": 0
+  },
+  "source_reconstruction": {
+    "exact_fixed_Git_blobs_verified": true,
+    "prior_I210_reconstruction_and_review_reproduced": true,
+    "exact_CE07_historical_absence_guard": true,
+    "guard_restored_after_success_and_exception": true,
+    "prior_publication_mains_run": false,
+    "historical_I132_outputs_present_not_new_proofs": true,
+    "original_E01_E05_and_all20_criterion_requirements_preserved": true,
+    "no_reverse_C_final_root_mapping_or_receipt_dependency": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as prior candidates",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "actual_provider_or_competent_acceptor": false,
+    "external_contacts_made": false
+  },
+  "rejection_checks": [
+    {
+      "case": "unknown_heap_as_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "counts_as_qualification",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "900_budget_as_guarantee",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "Reader_cap_as_heap_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "offline_verification_free",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "one_Reader_ledger",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_root_bootstraps_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "four_binding_body_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_qualification_PASS",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "documentary_closes_resource",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency_receipt",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "limitations": [
+    "Documentary consistency only; no genuine successor closure, heap, CPU, clock/service, compatibility, phase or prior BASIS/index proof accepted.",
+    "Historical ten cost activities require thirty work/CPU/wall upper values, not thirty independently qualified activities. Complete successor activity inventory remains missing.",
+    "Same assistant is not independent competent R03/R06/R08 review or separate acceptance. All CE04/CE05/CE06 competent prerequisites remain pending.",
+    "No product/component, qualification, platform/clock/ledger probe, codec/crypto, child process, provider contact or actual claim/receipt execution."
+  ],
+  "current_effect": {
+    "CE07_documentary_prepared": true,
+    "CE07_accepted": false,
+    "actual_dependency_satisfied": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "heap_capacity_verified": false,
+    "CPU_service_compatibility_verified": false,
+    "success_within900_verified": false,
+    "actual_prior_proofs_accepted": false,
+    "independent_acceptance": false,
+    "actual_qualification_PASS": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I211-CE07-RESOURCE-COMPATIBILITY-JOIN.md",
+      "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+      "docs/validation/D5-I211-audit.py",
+      "docs/validation/D5-I211-integrity.json",
+      "docs/validation/D5-I211-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I211-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_RESOURCE_EVIDENCE_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/phase reconstruction only; runtime and component execution forbidden.",
+    "over400_lines": true,
+    "reason": "One complete pinned negative CE07 join and reproducible source-only check; machine-readable matrices and inherited preservation exceed400 lines. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_acceptance_or_admission": true
+  }
+}
