@@ -1,0 +1,263 @@
+{
+  "schema": "d5.i210-i209-documentary-review.v1",
+  "increment": "I210",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "95fe546adece2cc362cec262e5ee7e7515b276e0",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE06",
+  "status": "CE06_DOCUMENTARY_BASELINE_CONFIRMED_PLATFORM_CLOCK_LEDGER_MISSING_NOT_FROZEN_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I210-I209-source-reconstruction.json",
+    "sha256": "b186ff5a0063dcd129105bea11cb638a942d4982870ef89fc9d3f99a18f1d711",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I209 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R02_R03_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Eight genuine same-scope platform guarantee bodies",
+      "result": "PASS_EXACT_SLOTS_REQUIRED_NOT_FLAGS_OR_HASHES_AS_PROOF"
+    },
+    {
+      "id": "E02",
+      "scope": "Accepted clock/monotonic/UTC error/currentness/revocation/validity",
+      "result": "PASS_MISSING_REAL_CLOCK_NOT_HOST_OR_CLIENT_DATE"
+    },
+    {
+      "id": "E03",
+      "scope": "One global atomic/durable namespace with high-water/rollback/crash/partial-state proof",
+      "result": "PASS_MECHANISM_REQUIREMENT_NOT_ACTUAL_INVOCATION"
+    },
+    {
+      "id": "A01",
+      "scope": "Same actor/image/caller/domain/resource scope and genuine antecedent authentication",
+      "result": "PASS_SCOPE_POLICY_NOT_PLATFORM_CUSTODY_ACCEPTANCE"
+    },
+    {
+      "id": "A02",
+      "scope": "No live claim/process/probe/replay/clock measurement in preparation",
+      "result": "PASS_NO_ACTIVE_QUALIFICATION"
+    },
+    {
+      "id": "A03",
+      "scope": "Absent durability/clock/enforcement pending; deadlines/counters not service or900 proof",
+      "result": "PASS_NO_POLICY_AS_PERFORMANCE_GUARANTEE"
+    },
+    {
+      "id": "B01",
+      "scope": "Only authentic available evidence; needed qualification separately authorized",
+      "result": "PASS_NO_PLATFORM_OR_LEDGER_FABRICATION"
+    },
+    {
+      "id": "K06",
+      "scope": "Prior actor/image/caller/platform facts before C/resource acceptance, no future-bundle bootstrap",
+      "result": "PASS_ANTECEDENTS_NOT_ACCEPTED_PLATFORM"
+    },
+    {
+      "id": "K07",
+      "scope": "Exact first-entry/domain/channel enforcement requirements and unchanged I189 scope",
+      "result": "PASS_REQUIREMENTS_NOT_MECHANISM_OR_ENDPOINT_PROOF"
+    },
+    {
+      "id": "K08",
+      "scope": "Same records/resource scope and conservative C clock/validity, with later projection",
+      "result": "PASS_CE08_CE09_BOUNDARIES_NOT_REAL_HASHES_OR_C"
+    },
+    {
+      "id": "K13",
+      "scope": "Strict<=3600 snapshots/<=5 error/current epoch/known revocation, no TOFU/stale fallback",
+      "result": "PASS_FRESHNESS_POLICY_NOT_ACTUAL_CURRENTNESS"
+    },
+    {
+      "id": "K14",
+      "scope": "Global across callers/domains/restarts, no free retry, one correlated invocation",
+      "result": "PASS_CE06_MECHANISM_VERSUS_DEFERRED_CE12_EVENT"
+    },
+    {
+      "id": "K15",
+      "scope": "All lookup/freshness/identity/crypto/copies/ledger/receipt/native/IO inside phases/global resources",
+      "result": "PASS_UNWAIVED_CE07_OBLIGATION_NOT_RESOURCE_PROOF"
+    },
+    {
+      "id": "K16",
+      "scope": "Cap16384/evidence indices distinct from proof/heap/CPU; no active quotas changed",
+      "result": "PASS_CANDIDATE_LIMITS_NOT_FIT_OR_ADMISSION"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/guarantee_evidence_inventory"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/clock_currentness_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/global_one_use_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/cross_record_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/step_obligation_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE06-PLATFORM-CLOCK-GLOBAL-LEDGER-CANDIDATE.json",
+      "sha256": "74880bcc3c297997a9f84a35c83b9e954cd2105cb8cb9254a4675fd588ab24b9",
+      "json_pointer": "/actual_platform_clock_ledger_state"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/5"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/closure_boundaries"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/family_gates/4"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95",
+      "json_pointer": "/$defs/platform_custody"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/record_order"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE06_documentary_baseline_confirmed": true,
+    "CE06_accepted": false,
+    "actual_platform_record_created": false,
+    "actual_platform_record_finalized": false,
+    "actual_guarantees_clock_or_global_ledger_verified": false,
+    "actual_claim_or_process_created": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE06_documentary_baseline_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE06_accepted": false,
+    "actual_CE05_dependency_satisfied": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "actual_platform_clock_or_ledger_selected": false,
+    "actual_guarantee_or_clock_verified": false,
+    "actual_global_atomicity_or_durability_verified": false,
+    "actual_claim_or_process_created": false,
+    "actual_platform_record_created": false,
+    "actual_platform_record_finalized": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE06_documentary_review_completed": true,
+    "CE06_documentary_confirmation": true,
+    "CE06_documentary_revision_required": false,
+    "actual_guarantees_clock_or_global_ledger_verified": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Exact documentary baseline only: no genuine platform/domain/enforcement/clock/currentness/revocation/epoch/global ledger body or acceptance; all eight guarantees still missing.",
+    "Global one-use, durable/high-water/restart/rollback rules describe required mechanism evidence, not an actual claim/receipt or proof that a service enforces them. No active qualification/probe run.",
+    "Same assistant preparation/review is not independent competent R02/R03/R06/R08 acceptance. Actual CE01-CE06 prerequisites and resources/final records/C/mapping/root/admission remain pending.",
+    "Client/host date and deadline/counter bounds are not trusted time, service or900-second evidence; no configuration, enrollment, execution, contact, authority/quota/rebind or D5 release follows."
+  ],
+  "next_scope": "CE06 can proceed as a documentarily reviewed missing-evidence baseline. A separately requested CE07 documentary preparation is possible, preserving every missing source/runtime/backend/resource premise and no actual qualification or PASS. All genuine competent decisions remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I210-I209-CE06-REVIEW.md",
+      "docs/validation/D5-I210-I209-documentary-review.json",
+      "docs/validation/D5-I210-I209-source-reconstruction.json",
+      "docs/validation/D5-I210-audit.py",
+      "docs/validation/D5-I210-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I210-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary JSON/Git/guarantee-clock-ledger-policy/schema-fragment/phase review; no platform selection/clock sampling/claim/replay/crash/restart/process/probe/product/components/crypto/codec execution.",
+    "over400_lines": true,
+    "reason": "One pinned eight-guarantee/clock/global-mechanism and phase review with independent antecedents, guard restoration and preservation evidence; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
