@@ -1,0 +1,388 @@
+{
+  "schema": "d5.i212-i211-documentary-review.v1",
+  "increment": "I212",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "3a65291e3dd02d68c964bbc868d7a9a38ef22713",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE07",
+  "status": "CE07_DOCUMENTARY_BASELINE_CONFIRMED_RESOURCE_COMPATIBILITY_MISSING_NOT_ACCEPTED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+    "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I212-I211-source-reconstruction.json",
+    "sha256": "f6e15e8203fae8d5f00a50f06ac5cb6df857cdb89b4305bdfb684d91ab8420db",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Exact effective closure and complete E01-E05 derivations",
+      "result": "PRESERVED_MISSING_NOT_REPLACED_BY_HISTORICAL_PINS"
+    },
+    {
+      "id": "E02",
+      "scope": "179/321/12/30 scope and new custody/bootstrap/output/failure paths",
+      "result": "REQUALIFICATION_REQUIRED_NOT_SOURCE_COUNTS_OR_TEN_TESTS"
+    },
+    {
+      "id": "E03",
+      "scope": "Whole heap, all30 groups, CPU/IO/service/clock and900 seconds",
+      "result": "UNKNOWN_BOUNDS_AND_CORRESPONDENCE_STAY_PENDING"
+    },
+    {
+      "id": "E04",
+      "scope": "Accepted prior BASIS/index proof scoped to final source/image/runtime",
+      "result": "NO_PREDICTIVE_FLAGS_OR_FUTURE_ROOT_BOOTSTRAP"
+    },
+    {
+      "id": "A01",
+      "scope": "No CP03/indices/widths/deadlines/test-count substitution",
+      "result": "PRESERVED_NO_RESOURCE_OR_ATOMICITY_PROMOTION"
+    },
+    {
+      "id": "A02",
+      "scope": "Every per-attempt machine cost inside phases and global join",
+      "result": "BOTH_READERS_DUAL_WRITES_CRYPTO_LEDGER_FAILURE_COSTS_REQUIRED"
+    },
+    {
+      "id": "A03",
+      "scope": "Genuine independent R03/R06 review and separate R08",
+      "result": "UNASSIGNED_NO_COMPETENT_ACCEPTANCE_OR_CLOSURE"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K04",
+      "rule": "image_manifest source_bindings and source_to_image have exactly six successor logical paths and equal actual source digests; source_root_sha256 == SHA256(JCS(source_bindings)). Each row maps actual source to actual authenticated image member/representation with complete evidence. README is DOCUMENT; no tests/runner are claimed loaded merely by membership. Exact interpreter/loader/stdlib/frozen/native/crypto closure is complete and authentic, with build/provenance evidence and stable mapping. Any repository helper must be in historical480 or six sources and properly charged; an extra/unbound dependency requires revised scope/budget. Image custody policy/schema digests must equal the externally selected exact I191 contract/schema and the bundle signed_core values; reviewed six-source code must implement those pinned policies. No image embeds its own output digest.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/3"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/requalification"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/E01_E05_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/dependency_gates"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K05",
+      "rule": "image_bytes_sha256 is a digest of final external image bytes, not a redefinition/substitute for runtime_sha256 or P02 exact runtime identity. runtime_sha256 must match the accepted full interpreter/stdlib/native/runtime evidence and C.proposal_scope.runtime_sha256. The image cannot embed its own future image/manifest/bundle digest; expected image identity is selected by external accepted custody. Image/build facts precede caller/platform/C/root evidence; no post-run predictive hash.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/4"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/requalification"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/accepted_prior_proof_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/historical_I132_task_join"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K06",
+      "rule": "caller_identity binds accountable requester, canonical actor registry, image manifest, protection domain and exact constructor. Only this accepted software principal may use that protection domain to deliver C/Q/create the correlated worker. A UID/name/PID/fd/env/module/hash assertion alone proves none of this. Platform record must bind the same caller/image/domain/registry and prove all8 guarantee evidence slots, clock and global one-use domain. No human appointment alone grants functional execution. Actor/image/caller/platform facts must be genuinely authenticated and accepted as antecedents before C or resource acceptance. Later bundle signatures only finalize their binding; they cannot be the sole forecast basis for those earlier facts. If prior authentication is missing, acceptance is blocked rather than borrowed from an unissued future bundle.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/5"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/dependency_gates"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/accepted_prior_proof_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/phase_boundary"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K08",
+      "rule": "All five bundle records share configuration_epoch and overlapping current validity. All record_hashes equal SHA256(JCS(the nested record)); cross-record actor/image/caller/platform digests agree. Acceptance exactly projects C: roles/preparers/author/requester/keys/profile/proposal scope/accepted basis/index/resource/suite/epoch; repository/root-path/offline-key-status remain exact profile02 constants; C.clock_error_seconds conservatively covers platform clock error <=5; C validity is contained in all relevant records/bundle acceptance. trust_context_sha256 == SHA256(JCS(that exact C)). A missing/changed C field, runtime/source or custody domain rejects. C.runtime_requester_id equals caller.accountable_requester_actor_id; C source/runtime/profile values match image actual accepted identities, C resource_scope matches platform and accepted prior resource scope, platform.domain_id equals caller.protection_domain_id, and acceptance role actors/keys match canonical registry and genuine appointments. C.repository_id/root_path/offline_key_status use the literal constants of the unchanged protocol schema, not caller-chosen aliases.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/7"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/accepted_prior_proof_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/phase_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/inherited_scope_boundaries"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K12",
+      "rule": "Enrollment/source/image evidence is antecedent; C is then frozen from accepted projections, acceptance record signs its exact digest, and external bundle/mapping can be accepted. Q binds that C and the actual payload; final root follows actual final E06/payload/Q and pins C/Q as profile02. Launch receipt follows full root admission and atomic one-use claim. No earlier record pins Q/root/receipt and no image embeds own manifest hash. This is an evidence-order model, not proof of actual enrollment/issuance.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/phase_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/I177_binding_reference"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/accepted_prior_proof_join"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K15",
+      "rule": "Anchor/actor/image/caller/platform/acceptance/bundle/receipt are external custody evidence records, not new repository Input Reader members or C/Q wire payloads. They may only enter the launch through independently accepted bounded caller memory/constructor custody. Per-attempt lookup, freshness, identity resolution, signature/measurement verification actually needed, copies/registry state/receipt work and native/IO must be included in launch/worker/finish/E01-E05 and global resource composition. Prior human enrollment/build facts are prerequisites, not permission to move required launch work outside t0. Additional bodies/files/network/helper mechanisms require explicit new bounds and reviewed graph/scope; no cost becomes free by calling it offline.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/14"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/per_attempt_cost_coverage"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/heap_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/work_join"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/time_join"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    },
+    {
+      "id": "K16",
+      "rule": "I191 serialized caps are proposed evidence-domain limits, not active quotas or universal heap/CPU guarantees: anchor registry<=65536, bundle<=262144, receipt<=8192. Also enforce all per-record/schema caps. No actual bundle/C/identity/image/service attestation exists here, no positive role/evidence is issued. Existing C8192/Q2048, I/A/L512 LF, two pipes, six argv operands, I187 output schemas and every numeric candidate are byte-for-byte preserved. Failure rejects without fake identity/measurement/context or changed authority/destination.",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/schema_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/inherited_scope_boundaries"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE07-RESOURCE-AND-COMPATIBILITY-JOIN-CANDIDATE.json",
+          "sha256": "9889627c7112fb279e64bd82a7c3306fc32e80db4ed70c0acc35e6e650e0f16d",
+          "json_pointer": "/current_effect"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_rule_satisfied": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "all30 work groups",
+      "disposition": "Ten activities x three scalar bounds and twenty process/phase vectors are historical references. I193 literal full-group requirement remains pending; no accepted successor inventory or reviewed correspondence."
+    },
+    {
+      "id": "C02",
+      "subject": "I132 output_created=false",
+      "disposition": "Historical planning metadata is preserved. All20 actual historical output bodies exist and are pinned; none is an accepted successor resource proof."
+    },
+    {
+      "id": "C03",
+      "subject": "Exact True wait_worker return",
+      "disposition": "tW stays at exact-True call return, not physical exit; source PFC still independently requires final success checks and successful finally. Budget arithmetic is not a900-second proof."
+    },
+    {
+      "id": "C04",
+      "subject": "Final scope versus later freeze",
+      "disposition": "Accepted antecedent proofs must cover exactly the later frozen scope. CE08/future C/root/mapping/receipt cannot supply their sole prior authentication; any change requires requalification and competent review."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I211",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R03_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE07_documentary_baseline_confirmed": true,
+    "CE07_accepted": false,
+    "actual_prior_proofs_accepted": false,
+    "actual_resource_derivations_verified": false,
+    "resource_obligations_closed": 0,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE07_documentary_prepared": true,
+    "CE07_accepted": false,
+    "actual_dependency_satisfied": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "heap_capacity_verified": false,
+    "CPU_service_compatibility_verified": false,
+    "success_within900_verified": false,
+    "actual_prior_proofs_accepted": false,
+    "independent_acceptance": false,
+    "actual_qualification_PASS": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE07_documentary_review_completed": true,
+    "CE07_documentary_confirmation": true,
+    "CE07_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Documentary confirmation only. All actual dependency acceptances, exact successor closure, complete heap/work/CPU/IO/service/clock/phase derivations, prior proof bodies and compatible scope are missing.",
+    "No resource or qualification PASS; E01-E05 remain open, E06 NOT_RUN, I122 IMPLEMENTED_NOT_ADMITTED, CP07 and correlated atomicity false, proposal and D5 not enabled.",
+    "No product/component execution, build/import/compile, probe, codec/crypto, claims, enrollment, actors/keys/signatures, contact, quota/reserve/active binding change or new positive record."
+  ],
+  "next_scope": "CE07 may serve as a documentarily reviewed missing-evidence baseline for a separately requested CE08 documentary preparation. No actual prerequisite, final freeze, acceptance or authorization is supplied.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I212-I211-CE07-REVIEW.md",
+      "docs/validation/D5-I212-I211-documentary-review.json",
+      "docs/validation/D5-I212-I211-source-reconstruction.json",
+      "docs/validation/D5-I212-audit.py",
+      "docs/validation/D5-I212-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I212-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_RESOURCE_EVIDENCE_MISSING",
+    "runtime_harness": "N/A: static documentary JSON/Git/hash/criterion/phase reconstruction; product and component execution forbidden.",
+    "over400_lines": true,
+    "reason": "One CE07 review with separately reconstructed requirements, costs, phases and immutable preservation; machine-readable pins exceed400 lines. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_acceptance_or_admission": true
+  }
+}
