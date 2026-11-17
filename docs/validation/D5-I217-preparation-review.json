@@ -1,0 +1,197 @@
+{
+  "schema": "d5.i217-preparation-review.v1",
+  "increment": "I217",
+  "date": "2026-11-17",
+  "base_commit": "bdb7f82f13dffc92a90b75d10efea8ca80a92177",
+  "status": "PASS_STATIC_SOURCE_ONLY_BUNDLE_APPROVALS_MAPPING_MISSING",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+    "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+    "json_pointer": ""
+  },
+  "plan": {
+    "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+    "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+    "json_pointer": "/steps/9"
+  },
+  "counts": {
+    "input_pins": 882,
+    "nested_record_families": 5,
+    "nested_top_level_fields": 88,
+    "bundle_fields": 3,
+    "signed_core_fields": 8,
+    "missing_role_approvals": 3,
+    "unaccepted_dependencies": 3,
+    "unassigned_role_slots": 4,
+    "later_dossiers_absent": 2,
+    "resource_obligations_closed": 0
+  },
+  "conditional_serialization_review": {
+    "source": {
+      "path": "docs/validation/D5-I192-I191-source-reconstruction.json",
+      "sha256": "38f98ae92fda1e0d584e77a00740c2a807025c01b65b330fba5a0e77815cccf0",
+      "json_pointer": "/serialized_bounds"
+    },
+    "raw_ASCII_schema_upper": 368348,
+    "assumed_nested_caps": {
+      "actor_registry": 98304,
+      "image_manifest": 98304,
+      "caller_identity": 8192,
+      "platform_custody": 16384,
+      "acceptance_record": 16384
+    },
+    "conditional_ASCII_upper": 221644,
+    "conditional_margin": 40500,
+    "actual_bodies_caps_encoding_or_fit_verified": false,
+    "complete_evidence_heap_CPU_IO_or_service_bound": false
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as prior candidates",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_acceptance": false,
+    "external_contacts_made": false
+  },
+  "source_reconstruction": {
+    "prior_I216_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_run": false,
+    "exact_CE10_historical_absence_guard": true,
+    "guard_restored_success_and_exception": true,
+    "no_reverse_root_receipt_dependency": true,
+    "global_mapping_not_partitioned_per_caller": true,
+    "I216_indirect_C_digest_and_no_standalone_bundle_validity_preserved": true
+  },
+  "rejection_checks": [
+    {
+      "case": "self_bootstrap_key",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_third_approval",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_NUL",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "mixed_signed_cores",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "waived_R08_separation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partitioned_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "conditional_bound_as_actual_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_proof_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_channel",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "active_crypto_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "documentary_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "CE10_documentary_prepared": true,
+    "CE10_accepted": false,
+    "actual_dependencies_satisfied": false,
+    "actual_bundle_created": false,
+    "actual_bundle_fit_verified": false,
+    "actual_approvals_created": 0,
+    "actual_signature_or_provenance_verified": false,
+    "actual_mapping_created": false,
+    "actual_mapping_uniqueness_verified": false,
+    "actual_anchor_registry_provisioned": false,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "No actual nested records, C, approvals, signature verification records, authentic external registry or global unique mapping. All competent dependencies and real evidence remain missing.",
+    "Conditional221644/margin40500 requires I192 encoding assumptions and mandatory nested caps; no actual size/fit, complete-evidence cost, resource or900-second proof is supplied.",
+    "Same assistant is not competent independent R01/R02/R06 review or separate R08 acceptance. No contact, enrollment, provisioning, signing/key generation, crypto verification or mapping service action is authorized."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I217-CE10-BUNDLE-APPROVAL-CURRENT-MAPPING.md",
+      "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+      "docs/validation/D5-I217-audit.py",
+      "docs/validation/D5-I217-integrity.json",
+      "docs/validation/D5-I217-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I217-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_BUNDLE_APPROVALS_MAPPING_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-bound/phase checks only; no product/components, positive codec/crypto, service, clock/ledger or process execution.",
+    "over400_lines": true,
+    "reason": "One negative bundle/approval/mapping dossier with exact caps, provenance and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_bundle_mapping_acceptance_or_admission": true
+  }
+}
