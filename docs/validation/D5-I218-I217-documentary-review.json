@@ -1,0 +1,428 @@
+{
+  "schema": "d5.i218-i217-documentary-review.v1",
+  "increment": "I218",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "0bcd5fc4a5d8c1a9a4cc336f50e16b7b514f2e81",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE10",
+  "status": "CE10_DOCUMENTARY_BASELINE_CONFIRMED_BUNDLE_APPROVALS_MAPPING_MISSING_NOT_ACCEPTED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+    "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I218-I217-source-reconstruction.json",
+    "sha256": "7c837c1725e5a22e043f9a4192b2888fb4bc3bdda6f4f19207088c8c10281565",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Five final records/canonical hashes and independent policy/schema/anchors",
+      "result": "REQUIREMENTS_PRESERVED_ACTUAL_RECORDS_REGISTRY_AND_ACCEPTANCE_MISSING"
+    },
+    {
+      "id": "E02",
+      "scope": "Three exact role-domain/NUL approvals over one complete core",
+      "result": "PRESERVED_NO_SIGNING_KEY_GENERATION_OR_CRYPTO_EXECUTION"
+    },
+    {
+      "id": "E03",
+      "scope": "One authoritative current epoch/C mapping across caller/image/domain/ledger",
+      "result": "GLOBAL_REQUIREMENT_NOT_PARTITIONED_OR_ACTUAL_SERVICE_PROOF"
+    },
+    {
+      "id": "E04",
+      "scope": "Nested caps/whole cap/evidence completeness/competent verification records",
+      "result": "CONDITIONAL221644_ONLY_NOT_ACTUAL_FIT_OR_COMPLETE_RESOURCE_PROOF"
+    },
+    {
+      "id": "A01",
+      "scope": "Purpose/canonical actors/keys/S01/additional R08 exclusions/no self-bootstrap",
+      "result": "PRESERVED_FOUR_UNASSIGNED_REVIEW_ROLES"
+    },
+    {
+      "id": "A02",
+      "scope": "Mandatory caps and I192 assumptions/margin",
+      "result": "MODEL_REPRODUCED_ALL_ACTUAL_ENCODING_CAPS_AND_SIZES_UNKNOWN"
+    },
+    {
+      "id": "A03",
+      "scope": "No new C/Q/file/pipe/helper/input/receipt channel; separate authority/costs",
+      "result": "NO_SERVICE_OR_CRYPTO_OR_PRODUCT_ACTION_AUTHORIZED"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K01",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/0"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/anchor_and_policy_selection"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/dependency_gates"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K03",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/2"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/nested_record_inventory"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/evidence_and_resource_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/inherited_scope_boundaries"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K08",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/7"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/nested_record_inventory"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/freshness_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/schema_obligations"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K09",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/8"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/current_mapping_requirements"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K10",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/9"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/signature_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/role_scope_matrix"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K11",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/10"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/signature_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/approval_inventory"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/anchor_and_policy_selection"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K12",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/phase_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/signature_policy"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K13",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/12"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/freshness_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/current_mapping_requirements"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K15",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/14"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/evidence_and_resource_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/phase_boundary"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K16",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/conditional_size_reference"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/permission_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE10-BUNDLE-APPROVAL-AND-CURRENT-MAPPING-CANDIDATE.json",
+          "sha256": "f463d222a317035bec4ce8726b169468ee4080011c2d254268d82d3033fe235b",
+          "json_pointer": "/current_effect"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "Three custody approvals versus root signatures",
+      "disposition": "R01/R02/R08 all approve one complete core under distinct role domains plus one NUL. Root two-signature policy remains separate. R01/R02 sharing is conditional; R08 remains distinct."
+    },
+    {
+      "id": "C02",
+      "subject": "Complete core and message exclusions",
+      "disposition": "No field is stripped from the closed eight-field signed_core. Excluded outer approvals/signatures, bundle own hash, Q/root/receipt are outside it. C remains bound indirectly by acceptance digest, not a new member."
+    },
+    {
+      "id": "C03",
+      "subject": "Conditional221644 and escaping",
+      "disposition": "Static I192 model only: nested terms218360 plus structure/approvals3284. Mandatory real caps and encoding/escaping assumptions remain unverified; neither raw368348 nor margin40500 is actual size, infeasibility or resource evidence."
+    },
+    {
+      "id": "C04",
+      "subject": "Global mapping",
+      "disposition": "Exactly one current mapping for each epoch/C digest across every approved caller/image/protection domain, tied to one global ledger domain. Per-caller uniqueness is insufficient; no backend, positive mapping schema, endpoint or configuration is selected."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I217",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE10_documentary_baseline_confirmed": true,
+    "CE10_accepted": false,
+    "actual_bundle_created": false,
+    "actual_approvals_created": 0,
+    "actual_mapping_created": false,
+    "actual_mapping_uniqueness_verified": false,
+    "actual_signature_or_provenance_verified": false,
+    "actual_bundle_fit_verified": false,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE10_documentary_prepared": true,
+    "CE10_accepted": false,
+    "actual_dependencies_satisfied": false,
+    "actual_bundle_created": false,
+    "actual_bundle_fit_verified": false,
+    "actual_approvals_created": 0,
+    "actual_signature_or_provenance_verified": false,
+    "actual_mapping_created": false,
+    "actual_mapping_uniqueness_verified": false,
+    "actual_anchor_registry_provisioned": false,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE10_documentary_review_completed": true,
+    "CE10_documentary_confirmation": true,
+    "CE10_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "No accepted CE02/CE08/CE09 prerequisites, five real nested records/C, actual approvals, external registry/keys/purposes, canonical bundle/bytes, verification records or globally unique current mapping.",
+    "Conditional serialization and source-only schema/domain/mapping review are not positive codec/crypto/provenance checks, actual fit, complete evidence/resource proof,900-second evidence or admission.",
+    "Same assistant is not competent independent review/separate R08 acceptance. No signing/key generation, crypto verification, registry/service/contact, product/component, quota/reserve/binding/authority/destination changes."
+  ],
+  "next_scope": "CE10 can serve as a documentarily reviewed missing-evidence baseline for separately requested CE11 preparation. No actual prelaunch gate, custody acceptance or execution authorization is supplied.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I218-I217-CE10-REVIEW.md",
+      "docs/validation/D5-I218-I217-documentary-review.json",
+      "docs/validation/D5-I218-I217-source-reconstruction.json",
+      "docs/validation/D5-I218-audit.py",
+      "docs/validation/D5-I218-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I218-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_BUNDLE_APPROVALS_MAPPING_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-envelope/domain and phase review only; no product/components, positive crypto/codec or service execution.",
+    "over400_lines": true,
+    "reason": "One CE10 review with independent approval/global-mapping/conditional-cap reconstruction and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_bundle_mapping_acceptance_or_admission": true
+  }
+}
