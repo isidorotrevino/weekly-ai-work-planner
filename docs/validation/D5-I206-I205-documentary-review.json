@@ -1,0 +1,252 @@
+{
+  "schema": "d5.i206-i205-documentary-review.v1",
+  "increment": "I206",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "240971a31dabb40d58fdc3c889583c3a6d6886ff",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE04",
+  "status": "CE04_DOCUMENTARY_BASELINE_CONFIRMED_SOURCE_IMAGE_RUNTIME_MISSING_NOT_FROZEN_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I206-I205-source-reconstruction.json",
+    "sha256": "973abc6178f0e5851109bac7702602ac5b4be24626344fdf8a381a9ac8893563",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I205 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Actual six successor bodies/source root, external image digest and separate runtime/P02 evidence",
+      "result": "PASS_DISTINCT_MISSING_FACTS_NOT_I122_TRANSFER"
+    },
+    {
+      "id": "E02",
+      "scope": "Six mappings, README DOCUMENT, full dependency/build/runtime/entry provenance",
+      "result": "PASS_COMPLETE_REQUIREMENT_NOT_ACTUAL_MAPPING_OR_CLOSURE"
+    },
+    {
+      "id": "E03",
+      "scope": "Exact seven policy pins and no own future image/manifest/bundle digest embedding",
+      "result": "PASS_DOCUMENTARY_POLICY_NOT_COMPILED_OR_EXTERNAL_IDENTITY_PROOF"
+    },
+    {
+      "id": "A01",
+      "scope": "Source-written/I122 not proof of changed successor;262144 ceiling not actual total",
+      "result": "PASS_NO_PROOF_TRANSFER_OR_ZERO_SUM_FOR_MISSING_SOURCES"
+    },
+    {
+      "id": "A02",
+      "scope": "README/full bodies, no128-dependency truncation or hidden scope/helper expansion",
+      "result": "PASS_REQUIRED_COMPLETENESS_NOT_MEMBERSHIP_OR_SIZE_PROOF"
+    },
+    {
+      "id": "A03",
+      "scope": "No build/import/measurement/code execution; provider facts must already genuinely exist",
+      "result": "PASS_MISSING_EVIDENCE_WITH_NO_CURRENT_ACTION"
+    },
+    {
+      "id": "B01",
+      "scope": "Successor/image absent, dependent competent CE03 acceptance pending",
+      "result": "PASS_NO_ARTIFACT_OR_DEPENDENCY_FABRICATION"
+    },
+    {
+      "id": "K04",
+      "scope": "Exact six rows and compiled policy/closure requirements",
+      "result": "PASS_DECLARED_BASELINE_NOT_IMPLEMENTATION_OR_LOAD_PROOF"
+    },
+    {
+      "id": "K05",
+      "scope": "Image bytes versus full runtime identity, external expected identity/no self embedding",
+      "result": "PASS_SEPARATE_COMMITMENTS_NOT_ACTUAL_IMAGE_OR_RUNTIME"
+    },
+    {
+      "id": "K07",
+      "scope": "Baseline entry versus deferred CE05 caller and CE06 complete enforcement",
+      "result": "PASS_PHASE_BOUNDARIES_NOT_CONSTRUCTOR_OR_PLATFORM_PROOF"
+    },
+    {
+      "id": "K15",
+      "scope": "All per-attempt lookup/freshness/identity/crypto/copies/native/IO inside phases/global resource join",
+      "result": "PASS_UNWAIVED_CE07_OBLIGATION_NOT_RESOURCE_OR_900_FIT"
+    },
+    {
+      "id": "K16",
+      "scope": "Caps98304/128 and other design limits unchanged; no active quota or positive manifest",
+      "result": "PASS_CANDIDATE_LIMITS_NOT_ACTUAL_FIT"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/source_to_image_missing_inventory"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/runtime_identity_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/compiled_policy_requirements"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/no_self_embedding_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/step_obligation_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE04-IMAGE-SOURCE-BASELINE-CANDIDATE.json",
+      "sha256": "63c8204f74b23563113628164d2227d3b01805f2afd50a90f0048a955fbc3439",
+      "json_pointer": "/actual_image_runtime_state"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/3"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/7"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/family_gates/2"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/record_order"
+    },
+    {
+      "path": "docs/validation/D5-I136-P02-documentary-review.json",
+      "sha256": "cfbb9402f7f3df774d8adb303ce0523ed36527df549e5e2feebceb6a0af825a3",
+      "json_pointer": "/decision"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE04_documentary_baseline_confirmed": true,
+    "CE04_accepted": false,
+    "actual_image_manifest_created": false,
+    "actual_manifest_finalized": false,
+    "actual_runtime_identity_verified": false,
+    "actual_compiled_policy_verified": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE04_documentary_baseline_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE04_accepted": false,
+    "actual_CE03_dependency_satisfied": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "actual_successor_source_created": false,
+    "actual_image_built_or_measured": false,
+    "actual_runtime_identity_verified": false,
+    "actual_image_manifest_created": false,
+    "actual_manifest_finalized": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE04_documentary_review_completed": true,
+    "CE04_documentary_confirmation": true,
+    "CE04_documentary_revision_required": false,
+    "CE08_finalization_verified": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Exact documentary baseline review only: no source/image/runtime/build/member mapping/compiled policy, accepted independent image selection, complete dependency body or final image manifest supplied.",
+    "The seventeen documentary sources and their hashes are not actual successor or provider evidence. Historical I122/P02 and the auditor host runtime qualify no successor scope.",
+    "Same assistant preparation/review is not competent independent R01/R06/R08 acceptance. Caller/platform/resources/final freeze and all actual CE01-CE04 prerequisites remain pending.",
+    "Client date2026-11-17 is documentary metadata, not trusted runtime clock/currentness evidence. No execution/build/import/measurement, contact/enrollment, authority, quota, rebind or D5 release follows."
+  ],
+  "next_scope": "CE04 can proceed as a documentarily reviewed missing-evidence baseline. A separately requested CE05 documentary preparation is possible; no caller/backend/domain may be invented, selected or enrolled, and no constructor/build/process/component action is authorized. All genuine prerequisites remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I206-I205-CE04-REVIEW.md",
+      "docs/validation/D5-I206-I205-documentary-review.json",
+      "docs/validation/D5-I206-I205-source-reconstruction.json",
+      "docs/validation/D5-I206-audit.py",
+      "docs/validation/D5-I206-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I206-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary JSON/Git/mapping/policy/schema-fragment/graph review; no source creation/build/import/measurement/product/components/crypto/codec/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "One pinned baseline/runtime-policy/phase review unit with precise no-proof-transfer scope, guard restoration and historical preservation; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
