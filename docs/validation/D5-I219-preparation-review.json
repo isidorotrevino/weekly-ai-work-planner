@@ -1,0 +1,182 @@
+{
+  "schema": "d5.i219-preparation-review.v1",
+  "increment": "I219",
+  "date": "2026-11-17",
+  "base_commit": "378939565177c09822ec158eae1b2f0dad03dedb",
+  "status": "PASS_STATIC_SOURCE_ONLY_PRELAUNCH_CHECKLIST_NOT_CLOSED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+    "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+    "json_pointer": ""
+  },
+  "plan": {
+    "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+    "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+    "json_pointer": "/steps/10"
+  },
+  "counts": {
+    "input_pins": 892,
+    "dependency_steps": 10,
+    "prelaunch_family_gates": 7,
+    "rule_gates": 16,
+    "global_gates": 7,
+    "prelaunch_gates_pending": 30,
+    "prelaunch_gates_accepted": 0,
+    "deferred_CE12_receipt_gate": 1,
+    "typed_evidence_reference_templates": 69,
+    "additional_review_topics": 8,
+    "unassigned_role_slots": 2,
+    "pending_I177_final_bindings": 4,
+    "later_dossiers_absent": 1,
+    "resource_obligations_closed": 0
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as earlier candidates",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_acceptance": false,
+    "external_contacts_made": false
+  },
+  "source_reconstruction": {
+    "prior_I218_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_run": false,
+    "exact_CE11_historical_absence_guard": true,
+    "guard_restored_success_and_exception": true,
+    "no_receipt_claim_spawn_or_final_route_completion_required_as_CE11_dependency": true,
+    "actual_CE01_CE10_custody_facts_still_required": true,
+    "CE12_preclaim_vs_receipt_only_split_preserved": true,
+    "static_reference_templates_not_actual_proof_inventory": true
+  },
+  "rejection_checks": [
+    {
+      "case": "receipt_as_CE11_precondition",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_route_as_CE11_precondition",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "claim_requires_itself",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_checklist_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "documents_as_accepted_proofs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "schema_signature_cap_as_truth",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_facts_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "current_run_command",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "capacity_certificate_promoted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed_by_document",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "execution_gate_release",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "CE11_documentary_prepared": true,
+    "CE11_accepted": false,
+    "actual_dependencies_satisfied": false,
+    "actual_prelaunch_checklist_closed": false,
+    "actual_prelaunch_evidence_accepted": 0,
+    "actual_handoff_accepted": false,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "actual_claim_spawn_or_receipt_created": false,
+    "actual_final_E06_payload_Q_root_or_admission_created": false,
+    "SOURCE_CAPACITY_VERIFIED_issued": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Negative closure disposition only: all30 prelaunch gates and ten competent prerequisite acceptances remain pending; no actual checklist closure or accepted handoff.",
+    "Static typed reference templates plus provided documentary sources are not actual proof bodies, complete instance references, author/provenance closure or independent review. No actual proof evaluated or rejected as invalid.",
+    "Same assistant is not competent independent R06 review or separate R08 acceptance. No product/component execution, claim/spawn/receipt, final route completion, authority issuance or gate release."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I219-CE11-PRELAUNCH-EVIDENCE-CLOSURE.md",
+      "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+      "docs/validation/D5-I219-audit.py",
+      "docs/validation/D5-I219-integrity.json",
+      "docs/validation/D5-I219-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I219-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_PRELAUNCH_CHECKLIST_NOT_CLOSED",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-reference/checklist/DAG reconstruction only; no product/components, crypto/codec, platform/service or process execution.",
+    "over400_lines": true,
+    "reason": "One negative prelaunch closure/handoff dossier with all31 original gate dispositions and proof-reference templates; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_prelaunch_acceptance_or_execution_authority": true
+  }
+}
