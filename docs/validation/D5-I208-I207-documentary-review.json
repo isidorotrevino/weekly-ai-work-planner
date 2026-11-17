@@ -1,0 +1,249 @@
+{
+  "schema": "d5.i208-i207-documentary-review.v1",
+  "increment": "I208",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "528f4ae4bae9ddcf5fe4ed55464962817610da68",
+  "proposal": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE05",
+  "status": "CE05_DOCUMENTARY_BASELINE_CONFIRMED_CALLER_CONSTRUCTOR_DOMAIN_MISSING_NOT_FROZEN_NOT_ACCEPTED_NOT_ADMITTED",
+  "reconstruction": {
+    "path": "docs/validation/D5-I208-I207-source-reconstruction.json",
+    "sha256": "b93027233c7849c87e74e68f0db5c50d898d8a087df46e61b49ddcffb108e6c3",
+    "json_pointer": ""
+  },
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I207 and earlier candidates",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Software principal/accountable human and genuine actor/image/domain/constructor enrollment",
+      "result": "PASS_REQUIRED_PROVENANCE_MISSING_NOT_IDENTITIES_OR_CAPABILITY"
+    },
+    {
+      "id": "E02",
+      "scope": "Concrete constructor/loader/privilege/isolation and exclusive I189 endpoint custody",
+      "result": "PASS_REQUIREMENT_NOT_MECHANISM_OR_RUNTIME_PROOF"
+    },
+    {
+      "id": "E03",
+      "scope": "fd/PID/UID/env/module/cwd assertions cannot select caller/image",
+      "result": "PASS_NO_SELF_ASSERTED_OR_MUTABLE_TRUST"
+    },
+    {
+      "id": "A01",
+      "scope": "Accountable requester and image/domain/constructor relations project to later exact C",
+      "result": "PASS_DECLARED_CE09_RELATIONS_NOT_REAL_C_OR_MAPPING"
+    },
+    {
+      "id": "A02",
+      "scope": "Additional backend mechanisms reject unchanged route or require versioned scope/cost review",
+      "result": "PASS_NO_IMPLICIT_CHANNEL_FD_ARGV_HELPER_OR_QUOTA_EXPANSION"
+    },
+    {
+      "id": "B01",
+      "scope": "No caller/backend selected/enrolled; CE04 competent dependency remains pending",
+      "result": "PASS_NO_INFRASTRUCTURE_OR_APPOINTMENT_FABRICATION"
+    },
+    {
+      "id": "K02",
+      "scope": "Canonical humans separate from software principal; all identity evidence required",
+      "result": "PASS_POLICY_NOT_ACTUAL_IDENTITY_RESOLUTION"
+    },
+    {
+      "id": "K06",
+      "scope": "Prior genuine caller/actor/image/domain/constructor facts not borrowed from future bundle",
+      "result": "PASS_ANTECEDENT_POLICY_NOT_ACCEPTED_CALLER_OR_EXECUTION"
+    },
+    {
+      "id": "K07",
+      "scope": "First-entry/loader/channel capability before untrusted code, no hidden transport",
+      "result": "PASS_CUSTODY_POLICY_NOT_PLATFORM_ENFORCEMENT_PROOF"
+    },
+    {
+      "id": "K08",
+      "scope": "Final record cross-relations/freeze/C projection remain CE08/CE09",
+      "result": "PASS_PHASE_BOUNDARIES_NOT_ACTUAL_C_OR_RECORD_HASHES"
+    },
+    {
+      "id": "K09",
+      "scope": "Unique current external mapping CE10 and intrinsic protected construction later",
+      "result": "PASS_NO_RETROSPECTIVE_TRUST_OR_WORKER_MAPPING_FRAME"
+    },
+    {
+      "id": "K15",
+      "scope": "Full lookup/freshness/identity/copies/crypto/native/IO/registry/receipt costs still inside phases/global join",
+      "result": "PASS_UNWAIVED_RESOURCE_OBLIGATION_NOT_HEAP_CPU_OR_900_PROOF"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/D5-I193-CE05-CALLER-CONSTRUCTOR-DOMAIN-CANDIDATE.json",
+      "sha256": "ad3ae48f556fb5627c69f906a6ebfc79e78ba512be041f7242f9cb745a966a10",
+      "json_pointer": "/identity_and_capability_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE05-CALLER-CONSTRUCTOR-DOMAIN-CANDIDATE.json",
+      "sha256": "ad3ae48f556fb5627c69f906a6ebfc79e78ba512be041f7242f9cb745a966a10",
+      "json_pointer": "/inherited_transport_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE05-CALLER-CONSTRUCTOR-DOMAIN-CANDIDATE.json",
+      "sha256": "ad3ae48f556fb5627c69f906a6ebfc79e78ba512be041f7242f9cb745a966a10",
+      "json_pointer": "/cross_record_and_mapping_policy"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE05-CALLER-CONSTRUCTOR-DOMAIN-CANDIDATE.json",
+      "sha256": "ad3ae48f556fb5627c69f906a6ebfc79e78ba512be041f7242f9cb745a966a10",
+      "json_pointer": "/step_obligation_boundary"
+    },
+    {
+      "path": "docs/validation/D5-I193-CE05-CALLER-CONSTRUCTOR-DOMAIN-CANDIDATE.json",
+      "sha256": "ad3ae48f556fb5627c69f906a6ebfc79e78ba512be041f7242f9cb745a966a10",
+      "json_pointer": "/actual_caller_state"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/steps/4"
+    },
+    {
+      "path": "docs/validation/D5-I193-CALLER-IMAGE-CUSTODY-EVIDENCE-PLAN.json",
+      "sha256": "74385f4e248b0faa8e02e8a1739acd72bb2cf1d85ed938b5907cf6b8c833956e",
+      "json_pointer": "/closure_boundaries"
+    },
+    {
+      "path": "docs/validation/D5-I193-CUSTODY-EVIDENCE-CHECKLIST.json",
+      "sha256": "9d3f14c02c99e9b4959795d88964e48b8e1018b61fa2e42ed232c49e64518c10",
+      "json_pointer": "/family_gates/3"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-SCHEMAS-CANDIDATE.json",
+      "sha256": "90eea2ec09c0fe8c5729feb96c0d456c742ac3f86f97c34b490a6dabf7177c95",
+      "json_pointer": "/$defs/caller_identity"
+    },
+    {
+      "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+      "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+      "json_pointer": "/record_order"
+    }
+  ],
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE05_documentary_baseline_confirmed": true,
+    "CE05_accepted": false,
+    "actual_caller_identity_record_created": false,
+    "actual_caller_record_finalized": false,
+    "actual_caller_or_backend_selected": false,
+    "actual_capability_or_functional_permission_issued": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "actual_evidence_accepted": 0,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE05_documentary_baseline_prepared": true,
+    "candidate_dossiers_prepared_this_increment": 1,
+    "CE05_accepted": false,
+    "actual_CE04_dependency_satisfied": false,
+    "actual_accepted_steps": 0,
+    "actual_external_evidence_accepted": 0,
+    "actual_caller_or_backend_selected": false,
+    "actual_caller_or_actor_enrolled": false,
+    "actual_constructor_or_channel_created": false,
+    "actual_caller_identity_record_created": false,
+    "actual_caller_record_finalized": false,
+    "actual_claim_or_worker_created": false,
+    "actual_functional_execution_permitted": false,
+    "adopted": false,
+    "implemented": false,
+    "independent_acceptance": false,
+    "S01_accepted": false,
+    "F179_01_resolved": false,
+    "product_or_components_executed": false,
+    "active_schema_changed": false,
+    "quotas_changed": false,
+    "rebind_applied": false,
+    "resource_obligations_closed": 0,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE05_documentary_review_completed": true,
+    "CE05_documentary_confirmation": true,
+    "CE05_documentary_revision_required": false,
+    "actual_capability_or_functional_permission_issued": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "Exact documentary caller baseline only: no principal/requester/constructor/domain/endpoints/enrollment, capability, actual record, C/mapping, claim or worker supplied or accepted.",
+    "I189/schema/permission literals, descriptor counts and document hashes are requirements, not process-origin evidence or functional execution authority. No probe or identity resolution performed.",
+    "Same assistant preparation/review is not independent competent R01/R02/R06/R08 acceptance. All CE01-CE05 competent prerequisites, platform/resources/freeze/final evidence/admission remain pending.",
+    "No selection/enrollment/contact, build/import/measurement/process/component/crypto/codec/claim execution, authority/quota/rebind or D5 release follows."
+  ],
+  "next_scope": "CE05 can proceed as a documentarily reviewed missing-caller baseline. A separately requested CE06 documentary preparation is possible; do not invent platform/clock/ledger guarantees or run probes/claim/replay/process work. All authentic evidence and competent acceptances remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I208-I207-CE05-REVIEW.md",
+      "docs/validation/D5-I208-I207-documentary-review.json",
+      "docs/validation/D5-I208-I207-source-reconstruction.json",
+      "docs/validation/D5-I208-audit.py",
+      "docs/validation/D5-I208-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I208-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY",
+    "runtime_harness": "N/A: documentary JSON/Git/capability-policy/transport/schema-fragment/phase review; no backend selection/enrollment/process/probe/product/components/crypto/codec/claim/protocol execution.",
+    "over400_lines": true,
+    "reason": "One pinned identity/capability/transport/phase review unit with independent antecedent checks, restored historical guard and preservation evidence; overage reported."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_adoption_acceptance_or_authority": true
+  }
+}
