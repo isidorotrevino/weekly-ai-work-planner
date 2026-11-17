@@ -1,0 +1,403 @@
+{
+  "schema": "d5.i214-i213-documentary-review.v1",
+  "increment": "I214",
+  "date": "2026-11-17",
+  "timezone": "Europe/Madrid",
+  "base_commit": "2184e26e22a5ea94cf9d158f4ca9e1917745a275",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE08",
+  "status": "CE08_DOCUMENTARY_BASELINE_CONFIRMED_FINAL_RECORDS_MISSING_NOT_FROZEN_NOT_ACCEPTED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+    "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I214-I213-source-reconstruction.json",
+    "sha256": "ccfd3947c33c32ba028a782e4c736b45d073e746697715dfe7c07cdda02155af",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Full contributor/alias/competence scope including CE07 proof authors",
+      "result": "PRESERVED_NOT_ACTUAL_AUTHOR_COMPLETENESS"
+    },
+    {
+      "id": "E02",
+      "scope": "Registry then image then caller then platform, actual antecedents before C",
+      "result": "PRESERVED_NO_FUTURE_BUNDLE_AUTHENTICATION"
+    },
+    {
+      "id": "E03",
+      "scope": "Genuine complete bodies, canonical hashes, six-source/runtime mapping and policy constants",
+      "result": "SCHEMAS_AND_REQUIREMENTS_PINNED_ACTUAL_BODIES_MISSING"
+    },
+    {
+      "id": "E04",
+      "scope": "Actual sha/size/provider/custody/reviewer freeze inventory",
+      "result": "61_TOP_LEVEL_SLOTS_MISSING_NOT_POSITIVE_NULL_RECORDS"
+    },
+    {
+      "id": "A01",
+      "scope": "I191 antecedent DAG and prior authentication",
+      "result": "ACYCLIC_REQUIREMENT_NOT_ACCEPTED_ENROLLMENT"
+    },
+    {
+      "id": "A02",
+      "scope": "CE03 provisional; authors/body/scope changes invalidate downstream hashes and reviews",
+      "result": "PRESERVED_CE02_REFRESH_FOR_ANCHOR_OR_KEY_CHANGE"
+    },
+    {
+      "id": "A03",
+      "scope": "Complete sorted unique preparers/actors/keys/dependencies in typed caps",
+      "result": "LIMITS_PRESERVED_ACTUAL_COUNTS_UNKNOWN_NO_TRIMMING"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K02",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/1"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/contributor_closure"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/identity_and_separation_policy"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K03",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/2"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/contributor_closure"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/typed_array_limits"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K04",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/3"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/source_runtime_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/policy_constant_bindings"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K05",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/4"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/source_runtime_policy"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K06",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/5"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/dependency_gates"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/antecedent_and_hash_policy"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K08",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/7"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/antecedent_and_hash_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/phase_boundary"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K10",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/9"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/identity_and_separation_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/inherited_scope_boundaries"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K12",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/phase_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/antecedent_and_hash_policy"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K13",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/12"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/freshness_policy"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K16",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/freeze_inventory"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/typed_array_limits"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE08-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+          "sha256": "22e4595823c320ce576ff14ed70909f1a02ae08e6c349ac5a05e75753392cd38",
+          "json_pointer": "/permission_boundary"
+        }
+      ],
+      "requirement_preserved": true,
+      "actual_competent_acceptance": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "61 slots",
+      "disposition": "Counts top-level required fields only:8/26/13/14. Nested contracts and evidence bodies remain required; this is not a complete proof-body count or validation result."
+    },
+    {
+      "id": "C02",
+      "subject": "Author closure and later contributors",
+      "disposition": "CE03 provisional intake cannot finalize the actor scope before genuine CE07 authors are known. New contribution or changed accepted scope invalidates dependent candidates and requires fresh review; no future author is preapproved."
+    },
+    {
+      "id": "C03",
+      "subject": "Conditional freeze order",
+      "disposition": "Genuine prior authentication and same-scope accepted resource proofs are missing. Four-record order specifies antecedents; future C/bundle/root/receipt cannot be their sole forecast authentication."
+    },
+    {
+      "id": "C04",
+      "subject": "Separation and key reuse",
+      "disposition": "Preserve all S01/source-author/root-key exclusions and R08 separation from R01/R02. No blanket R01/R02 separation is added; shared identity/key is conditional on genuine competence, allowed purpose bindings and separate role-domain approvals."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I213",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_R03_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE08_documentary_baseline_confirmed": true,
+    "CE08_accepted": false,
+    "actual_antecedent_records_created": 0,
+    "actual_antecedent_records_frozen": 0,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE08_documentary_prepared": true,
+    "CE08_accepted": false,
+    "actual_dependency_satisfied": false,
+    "actual_antecedent_records_created": 0,
+    "actual_antecedent_records_frozen": 0,
+    "actual_evidence_accepted": 0,
+    "actual_contributor_completeness_verified": false,
+    "actual_full_evidence_closure_verified": false,
+    "actual_canonical_hashes_caps_or_currentness_verified": false,
+    "actual_prior_proofs_accepted": false,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE08_documentary_review_completed": true,
+    "CE08_documentary_confirmation": true,
+    "CE08_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "No accepted CE02-CE07 dependencies or actual final four record bodies, contributor/preparer/key completeness, evidence-body closure, source/image/runtime, caller/platform identity or current snapshot.",
+    "No actual freeze, positive schema/canonical/crypto validation, resource qualification, accepted prior BASIS/index proof or900-second evidence. Same assistant is not competent independent acceptance.",
+    "No product/component, build/import/compile, probe/clock/ledger, claim/process, enrollment/signature/contact, quota/reserve/binding/authority/destination or active contract change."
+  ],
+  "next_scope": "CE08 is a documentarily reviewed missing-evidence baseline for a separately requested CE09 documentary preparation. All actual freeze and acceptance prerequisites remain pending.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I214-I213-CE08-REVIEW.md",
+      "docs/validation/D5-I214-I213-documentary-review.json",
+      "docs/validation/D5-I214-I213-source-reconstruction.json",
+      "docs/validation/D5-I214-audit.py",
+      "docs/validation/D5-I214-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I214-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_FINAL_RECORDS_MISSING",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-fragment/antecedent review; no product/components or positive codec/crypto execution.",
+    "over400_lines": true,
+    "reason": "One CE08 review with source pins, independent field/constant/author/DAG reconstruction and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_freeze_acceptance_or_admission": true
+  }
+}
