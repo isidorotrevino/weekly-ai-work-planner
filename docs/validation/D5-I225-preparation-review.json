@@ -1,0 +1,157 @@
+{
+  "schema": "d5.i225-preparation-review.v1",
+  "increment": "I225",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "90fefb86ddd4566e5d9eb83edbedd2e0f5982117",
+  "status": "PASS_STATIC_SOURCE_ONLY_W01_ENTRY_AUTHORITY_MISSING_NOT_ACCEPTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+    "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/0"
+  },
+  "latest_plan_review": {
+    "path": "docs/validation/D5-I224-I223-documentary-review.json",
+    "sha256": "664baaf52cbcffe528c42033d568eeb279422d786aab989a9e95703158ba5f78",
+    "json_pointer": ""
+  },
+  "counts": {
+    "input_pins": 922,
+    "logical_successor_paths": 6,
+    "policy_documents": 8,
+    "numeric_candidates": 24,
+    "protocol_output_envelopes": 12,
+    "custody_record_caps": 8,
+    "guard_policy_obligations": 32,
+    "phase_intervals": 3,
+    "normative_markers": 4,
+    "missing_entry_authority_slots": 3,
+    "documentary_action_classes": 4,
+    "unauthorized_operational_action_classes": 8,
+    "exit_predicates_pending": 3,
+    "work_packages_accepted": 0,
+    "resource_obligations_closed": 0
+  },
+  "source_reconstruction": {
+    "I224_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_run": false,
+    "prior_Path_exists_method_restored": true,
+    "no_new_historical_presence_projection_added": true,
+    "known_document_hashes_distinguished_from_missing_successor_runtime_image_hashes": true,
+    "exact_caps_guards_markers_policy_versions_and_exclusions_preserved": true,
+    "genuine_W01_entry_authority_not_borrowed_from_future_W02": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I223/I224",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "rejection_checks": [
+    {
+      "case": "premature_W01_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_entry_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_W02_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predictive_source_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_source_presence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "image_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "applied_numeric_quota",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "900_budget_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_channel",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "execution_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed_by_scope",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_documentary_prepared": true,
+    "W01_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_logical_scope_accepted": false,
+    "actual_effective_source_scope_frozen": false,
+    "actual_real_evidence_package_created": false,
+    "actual_scope_provider_or_reviewer_assigned": false,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "limitations": [
+    "Logical scope and authority-boundary wrapper only; no actual W01 scope provider/competent R06/R08 appointment or acceptance supplied. SD01 remains active.",
+    "All six successor source bodies and real digests/runtime/image/loader/caller/platform/ledger facts remain missing. Document pins and candidate budgets/guards are not source qualification or capacity/900 proof.",
+    "Same assistant is not competent independent R06 review or separate R08 acceptance. No positive W01 evidence package, active scope freeze, implementation/execution/verification/contact/quota change is performed."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I225-W01-TARGET-SCOPE-AUTHORITY.md",
+      "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+      "docs/validation/D5-I225-audit.py",
+      "docs/validation/D5-I225-integrity.json",
+      "docs/validation/D5-I225-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I225-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W01_ENTRY_AUTHORITY_MISSING_NOT_ACCEPTED",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/policy/cap/guard/authority reconstruction only; no product/components, build/import/compile, positive codec/crypto, platform/service/clock/ledger or process execution.",
+    "over400_lines": true,
+    "reason": "One W01 negative scope/authority dossier with exact policy/cap/guard/phase and missing-authority ledgers plus immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_actual_scope_acceptance_or_execution_authority": true
+  }
+}
