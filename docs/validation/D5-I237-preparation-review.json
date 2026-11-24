@@ -1,0 +1,234 @@
+{
+  "schema": "d5.i237-preparation-review.v1",
+  "increment": "I237",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "ca16f4a34a839e2fe16692508f53fee0e0835f74",
+  "status": "PASS_STATIC_SOURCE_ONLY_W07_WORK_CPU_UNITS_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W07-SUCCESSOR-WORK-CPU-UNITS-CANDIDATE.json",
+    "sha256": "64a27cc64fc1fa3124608d9f292713c9563f4478f89ef09be9c76829df4653ef",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/6"
+  },
+  "counts": {
+    "input_pins": 982,
+    "historical_activities": 10,
+    "historical_scalar_slots": 30,
+    "historical_process_phase_vectors": 20,
+    "historical_compatibility_joins": 20,
+    "latency_owner_requirements": 10,
+    "phase_category_requirements": 9,
+    "per_attempt_cost_families": 7,
+    "unassigned_review_roles": 3,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I236_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W07_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "count_equivalence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_group_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_upper_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_compatibility",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_route",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_rate",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_latency_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "naive_division",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_rate_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_sum_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_service",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unproved_overlap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "abstract_count_as_seconds",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_noncopy_tail",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_Reader",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_new_path",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "offline_free",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "worker_all_Tworker",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "physical_exit_as_tW",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "finish_as_tF",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_CPU_budget",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "candidate_as_proved_inequality",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_final_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_benchmark",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W07_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I235/I236",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W01-W06 remain unaccepted and SD01 active. W07 is negative documentary preparation, not a successor work inventory, full bound, unit-compatibility/service/WCET proof or actual accepted package.",
+    "Ten historical activities/thirty scalar upper slots/twenty process-phase vectors do not establish all30 successor groups. Actual complete mapping, work/CPU/wait/wall/native/transitive cost, compatible units/rates/windows/backlog and derivations remain absent.",
+    "W04 service is not attested; no service/WCET route is selected. W06 memory and W07 work feed W08/W09 without extra budgets, quota/reserve transfers, success900 or E01-E05 acceptance. Final route and CE12 stay separate.",
+    "Same assistant checks do not satisfy independent R03/R06 review or separate R08 acceptance. No product/component execution, import/compile/test discovery, experimental WCET, benchmarks, schedule/service/platform sampling or probes occur."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I237-W07-SUCCESSOR-WORK-CPU-UNITS.md",
+      "docs/validation/D5-I223-W07-SUCCESSOR-WORK-CPU-UNITS-CANDIDATE.json",
+      "docs/validation/D5-I237-audit.py",
+      "docs/validation/D5-I237-integrity.json",
+      "docs/validation/D5-I237-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I237-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W07_WORK_CPU_UNITS_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/activity/vector/unit/phase checks only; no product/components imports/build/compile/test discovery/tests/benchmarks, experimental WCET/CPU/IO/service/platform/clock/schedule sampling/probes, codec/crypto positives, ledger/claim/process/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W07 negative work/CPU/unit dossier with exact activity/scalar/vector/join/latency requirements, conversion/phase/handoff rules, pins/checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_work_WCET_service_attestation_or_execution_authority": true
+  }
+}
