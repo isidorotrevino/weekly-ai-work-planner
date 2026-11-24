@@ -1,0 +1,438 @@
+{
+  "schema": "d5.i232-i231-documentary-review.v1",
+  "increment": "I232",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "50bc209cba4f825aa5e9719ed9f6f10be0c7d1b2",
+  "status": "PASS_STATIC_SOURCE_ONLY_W04_REVIEW_CALLER_PLATFORM_SERVICE_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+    "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I232-I231-source-reconstruction.json",
+    "sha256": "82028ef26dcbf4e20af844c3cbf3508f427bfa330222eb5428507b727a7967c1",
+    "json_pointer": ""
+  },
+  "verdict": "W04_DOCUMENTARY_CALLER_PLATFORM_SERVICE_BOUNDARIES_CONSISTENT_REAL_EVIDENCE_MISSING_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "Three I223 W04 deliverables/exits and exact dependency/authority/rejection clauses",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "W01-W03 unaccepted, SD01 active and no future authority bootstrap",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/dependency_gate"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "Human requester/software caller and four genuine review roles remain unassigned",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/role_scope_matrix"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "Caller custody and bootstrap-only policy do not grant functional permission",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/caller_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "Eight exact platform guarantee slots remain without proof or verification",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/platform_policy/guarantee_evidence_inventory"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "Clock error/lifetime/currentness/revocation requirements retained without host/zero inference",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/platform_policy/clock_currentness"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "Global atomic/durable/high-water/rollback/crash one-use mechanism is not actual claim",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/platform_policy/global_one_use"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "23 exact requirements map to13 W04 and10 deferred rows; two CE12 references outside prelaunch",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/requirement_phase_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "Eight historical P03 reference categories do not attest successor service/capacity",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/service_evidence_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "Requested/committed/native/GC/process scope metrics distinct from RSS, reservation and quotas",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/heap_metric_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "Compatible work/service units, service curve or justified WCET remain missing",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/actual_service_state"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "Eight exact delay requirements remain unproved; no unknown-zero or unproved overlap subtraction",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/delay_requirements"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "Candidate heap/time budgets preserve exact True wait return/finally without reserve transfer or900 proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/candidate_budgets"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "Five exact schemas and8192/16384 candidate body caps are not positive records or resource guarantees",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/schema_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "Genuine antecedents before W09; later freeze/C/mapping/CE12 do not back-authenticate or add reverse dependency",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/phase_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "All per-attempt costs inside phases/resources; no helpers/probes/execution/quota authority",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/authority_and_costs"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC17",
+      "criterion": "Three exits, actual evidence and separate competent decisions remain pending",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC18",
+      "criterion": "Historical certificate, inherited constraints, deferred CE12 and no actual gate/resource/D5 promotion",
+      "subject": {
+        "path": "docs/validation/D5-I223-W04-CALLER-PLATFORM-SERVICE-CANDIDATE.json",
+        "sha256": "8823276188d13420108ab93b1c7f9d14f3085b03d39e0576faa1e6c7bfd60d0a",
+        "json_pointer": "/preserved_scope_and_gates"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 957,
+    "criteria": 18,
+    "requirements": 23,
+    "W04_rows": 13,
+    "deferred_rows": 10,
+    "CE12_rows": 2,
+    "guarantees": 8,
+    "service_categories": 8,
+    "delay_requirements": 8,
+    "schemas": 5,
+    "unassigned_review_roles": 4,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Authority and actual identities",
+      "disposition": "W01-W04 remain unaccepted and SD01 active. Caller identities, appointments, fd/PID/UID/hash/frame/READY/signature or policy literals do not alone grant origin, capability or functional execution. Same assistant review is not competent R02 attestation, independent R03/R06 or separate R08 acceptance."
+    },
+    {
+      "id": "N02",
+      "subject": "Availability/service versus candidate budgets",
+      "disposition": "Requested/committed/native/allocator/GC/process metrics and actual lower availability bounds need genuine exact-platform authority/evidence. Budgets, reservations, RSS, quotas, frequency/watchdog/deadline and unknowns do not supply capacity, compatible service curve/WCET, bounded delays or successful900 proof. W04 service facts are not complete program work/heap/phase fit."
+    },
+    {
+      "id": "N03",
+      "subject": "Global mechanism versus actual claim",
+      "disposition": "Eight guarantees, accepted clock/epoch/currentness and globally shared durable/high-water/rollback/crash one-use mechanism remain genuine evidence requirements. No host-clock/zero-error, per-caller namespace, free retry or mechanism-as-claim is accepted. Actual claim/construction/receipt remains CE12, not a prerequisite to its own mechanism evidence."
+    },
+    {
+      "id": "N04",
+      "subject": "Phase and antecedent boundaries",
+      "disposition": "23 rows map to13 W04 and10 deferred rows including two CE12 references outside prelaunch. Genuine baseline actor/image/caller/platform/capacity/service and proof authors/bodies must precede W09 acceptance. W10 reconciles the same accepted facts; C/W11, mapping/W12 or later signatures cannot retroactively authenticate them or create a reverse baseline dependency."
+    },
+    {
+      "id": "N05",
+      "subject": "Transport, costs and final route",
+      "disposition": "I189 transport and full per-attempt lookup/freshness/identity/crypto/measurement/copies/clock/ledger/registry/receipt/native/IO costs remain bounded inside phases/resources. No new route/helper/authority/active quota or reserve is granted. CE11/prelaunch does not depend on a future CE12 receipt; final E06/Q/root/admission/claim/events remain separate and unperformed."
+    }
+  ],
+  "source_replay": {
+    "I231_candidate_and_preparation_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "identifier_permission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "selected_caller",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "guarantee_flag",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "clock_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "host_clock",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partitioned_ledger",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "waived_durability",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_retry",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "live_probe",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "mechanism_as_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_capacity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_rate",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_delay_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_WCET",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "RSS_as_heap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "watchdog_as_service",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "wrong_tW",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "cap_as_service",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "forecast_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "service_as_program_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_channel",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_cost",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W04_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_caller_platform_capacity_service_clock_or_global_ledger_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W04_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I231",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R02_attestation": false,
+    "competent_R03_resource_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W04 review complete. Positive progress stays stopped at SD01 pending genuine authority, accepted dependencies and actual caller/platform/capacity/service/clock/global mechanism evidence; no operational work or provider contact initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I232-I231-W04-REVIEW.md",
+      "docs/validation/D5-I232-I231-documentary-review.json",
+      "docs/validation/D5-I232-I231-source-reconstruction.json",
+      "docs/validation/D5-I232-audit.py",
+      "docs/validation/D5-I232-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I232-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W04_REVIEW_CALLER_PLATFORM_SERVICE_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/role/policy/phase comparisons only; no product/components imports/build/compile/tests/benchmarks, codec/crypto positives, sampling/probes/measurement of platform/clock/ledger/services, endpoints/processes/claim/replay/crash/restart/signing/keygen/enrollment/provisioning/contact.",
+    "over400_lines": true,
+    "reason": "One W04 review with exact input pins, independent semantic comparisons, phase mapping, negative checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_platform_selection_capacity_attestation_claim_or_execution_authority": true
+  }
+}
