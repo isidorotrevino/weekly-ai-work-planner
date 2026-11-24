@@ -1,0 +1,203 @@
+{
+  "schema": "d5.i233-preparation-review.v1",
+  "increment": "I233",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "b7865813ecebe5f8461d794a54eb29edc13baa74",
+  "status": "PASS_STATIC_SOURCE_ONLY_W05_REQUALIFICATION_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+    "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/4"
+  },
+  "counts": {
+    "input_pins": 962,
+    "historical_operand_obligations": 179,
+    "historical_roots": 321,
+    "historical_root_groups": 12,
+    "historical_atomic_sites": 30,
+    "policy_obligations": 38,
+    "new_path_family_requirements": 12,
+    "schema_fragments": 12,
+    "resource_consumers": 3,
+    "unassigned_role_slots": 5,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I232_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W05_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "counts_as_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_case_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "root_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_atomicity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "code_as_atomicity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_complete_coverage",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_failure_path",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "qualification_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_test_run",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "ten_tests_as_suite",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "request_collapse",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_proof_record",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "truncated_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "group_count_collapse",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_E06_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_input",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W05_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_successor_operand_root_atomicity_route_or_resource_evidence_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I231/I232",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R04_execution_custody": false,
+    "competent_R05_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W01-W04 remain unaccepted and SD01 active; W05 is a negative requirement dossier, not a successor census, source proof, qualification result or real accepted package.",
+    "All179/321/12/30 rows are exact historical references and new-scope obligations. Actual successor mappings, sources/runtime/platform/caller/ledger/crypto closure, complete paths, authors, proof bodies and independent decisions remain absent.",
+    "W05 feeds memory/work/phase evidence W06-W08. W09 accepts joint BASIS/index/atomicity/resource evidence; no accepted E01-E05 flags or reverse W05 dependency are manufactured. Final qualification/E06/Q/root/claim/receipt remain separate.",
+    "Same assistant checks do not satisfy competent R03/R05/R06 or separate R08; no R04 custody/run exists. No source implementation, execution/import/compile/test discovery, positive codec/crypto or platform/clock/ledger probe is performed."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I233-W05-SUCCESSOR-REQUALIFICATION.md",
+      "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+      "docs/validation/D5-I233-audit.py",
+      "docs/validation/D5-I233-integrity.json",
+      "docs/validation/D5-I233-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I233-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W05_REQUALIFICATION_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/policy/historical-inventory checks only; no product/components imports/build/compile/tests/benchmarks, codec/crypto positives, scheduler/platform/clock/ledger/claim/process/replay/crash/restart/probes/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W05 negative requalification dossier with exact historical obligations, new-path/policy requirements, handoffs, pins/checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_qualification_source_proof_or_execution_authority": true
+  }
+}
