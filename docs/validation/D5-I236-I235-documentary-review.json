@@ -1,0 +1,456 @@
+{
+  "schema": "d5.i236-i235-documentary-review.v1",
+  "increment": "I236",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "47f5708a62ce4b9c43ce5cfa38aa6c660e26aac9",
+  "status": "PASS_STATIC_SOURCE_ONLY_W06_REVIEW_HEAP_LIFETIMES_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+    "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I236-I235-source-reconstruction.json",
+    "sha256": "1b7164a674aeb17e17fbedf3d5d1a687b761f9577e55a8f938e8daf9f7a8aaab",
+    "json_pointer": ""
+  },
+  "verdict": "W06_DOCUMENTARY_HEAP_LIFETIME_ROLLUP_PHASE_BOUNDARIES_CONSISTENT_COMPLETE_SUCCESSOR_MEMORY_PROOF_MISSING_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "Exact three W06 deliverables/exits and authority/rejection clauses",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "W03-W05 unaccepted and SD01 active; no authority or independent roles supplied",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/dependency_gate"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "Eleven exact owners/tasks/metrics/units and candidate budgets with unknown successor bounds",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/owner_derivation_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "132 exact historical classes retained as coverage requirements, not successor allocations",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/historical_allocation_class_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "All55 unordered owner pairs and110 historical directions retained, none resolved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/owner_overlap_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "Historical partial H04/H08/H09/H10 models do not prove whole bound, slack or infeasibility",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/inherited_reference_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "Requested/committed/overhead versus RSS/stacks/other mappings kept in distinct domains",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/heap_metric_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "H02 parent remains inside worker; coordinator/children/native/process composition not silently omitted",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/heap_metric_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "Eight lifetime families require complete rejected/success/retained paths without GC/reuse shortcut",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/lifetime_and_peak_contract"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "Eight new memory families and full W05 closure require real allocation mapping",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/new_successor_memory_requirements"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "Aliases require identity/lifetime/domain evidence; only complete ownership or explicit conservative overcount",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/lifetime_and_peak_contract"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "Requested rollup terms unknown; reserve comparison is budget accounting, not allocation",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/requested_rollup"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "Committed/H11 needs same-domain/state correspondence; no independent peak subtraction or borrowing",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/committed_rollup"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "11/12GiB candidate identities and full reserve rules preserved without transfers or capacity claims",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/candidate_budget_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "W04 lower availability and matching remain unknown; no quota increase or zero-capacity inference",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/availability_and_fit"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "W06 memory feeds W08/W09 without W07 CPU/900/full E01-E05 closure or reverse dependency",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/phase_handoff"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC17",
+      "criterion": "Genuine baseline/authors/bodies before W09; W10 only reconciles accepted facts and invalidates changes",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/phase_handoff"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC18",
+      "criterion": "No profiling/sampling/execution authority; every required allocation/native/lifetime cost remains included",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/authority_and_costs"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC19",
+      "criterion": "Three exits and actual R03/R08 decisions remain unaccepted",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC20",
+      "criterion": "No positive heap/record/resource/gate/D5 promotion; inherited certificate and CE12 preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+        "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+        "json_pointer": "/preserved_scope_and_gates"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 977,
+    "criteria": 20,
+    "owners": 11,
+    "historical_classes": 132,
+    "pairs": 55,
+    "directions": 110,
+    "new_memory_families": 8,
+    "lifetime_phase_families": 8,
+    "unassigned_review_roles": 2,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Historical coverage versus actual memory proof",
+      "disposition": "Eleven owners,132 classes,55 pairs/110 directions and eight new families remain requirements, not complete successor allocation inventory or accepted bounds. H04 partial model is neither complete upper nor minimum demand/infeasibility proof; H08/H09/H10 payload terms and historical dossiers do not transfer as complete heap/slack."
+    },
+    {
+      "id": "N02",
+      "subject": "Metrics, process scope and lifetime coverage",
+      "disposition": "Requested live heap, committed allocator backing and H11 overhead require exact same-domain/state coverage, distinct from RSS/stacks/other mappings. H02 suite parent remains inside worker; coordinator/children/native/private/process overlaps need separate composition. No GC/reuse/nonoverlap shortcut, alias discount, witness merge or omitted rejected-prefix cost is justified."
+    },
+    {
+      "id": "N03",
+      "subject": "Budget arithmetic versus rollup and availability",
+      "disposition": "Known owner budgets plus832MiB reserve give11GiB requested, then1GiB H11 gives12GiB committed as candidate identities only. All real sums, fits/slack and independent W04 availability remain unknown. Remaining reserve is budget accounting, not physical usage/capacity. No peak subtraction, H11 borrowing, quota increase or zero-capacity/infeasibility inference is permitted."
+    },
+    {
+      "id": "N04",
+      "subject": "Handoffs and antecedent authentication",
+      "disposition": "W03-W05/SD01 remain blocking. W06 supplies memory derivations to W08/W09, not W07 CPU, successful900 or whole E01-E05 acceptance. No reverse baseline dependency on later acceptance/freeze/C/mapping/E06/root/claim is added. Genuine authors/bodies/scope precede W09; W10 reconciles the same accepted facts and changes invalidate affected bounds."
+    },
+    {
+      "id": "N05",
+      "subject": "Authority and independent acceptance",
+      "disposition": "No profiling/sampling/introspection, product/component execution, helpers/inputs/channels, crypto/probes/services/contact or quota/reserve change is authorized. All required per-attempt allocation/native/lifetime work stays in full composition. Same assistant checks do not provide competent independent R03 review or separate R08 acceptance; CE12 and final route remain deferred."
+    }
+  ],
+  "source_replay": {
+    "I235_candidate_and_preparation_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W06_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_bound",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_size",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_pair_resolution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partial_as_infeasibility",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "generational_shortcut",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "RSS_payload_as_heap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "H02_reclassification",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "joint_host_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "immediate_release",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_original_child",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "alias_discount",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_as_complete_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_sum_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_requested_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_slack",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_committed_bound",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "peak_subtraction",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_as_capacity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_capacity_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_to_force_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "heap_as_all_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "forecast_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_profiling",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W06_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_owner_heap_lifetime_rollup_capacity_or_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_heap_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W06_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I235",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W06 review complete. Positive progress stays stopped at SD01 pending genuine authority, accepted dependencies and complete exact-scope owner/lifetime/overlap/rollup/capacity evidence; no measurement or operational work initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I236-I235-W06-REVIEW.md",
+      "docs/validation/D5-I236-I235-documentary-review.json",
+      "docs/validation/D5-I236-I235-source-reconstruction.json",
+      "docs/validation/D5-I236-audit.py",
+      "docs/validation/D5-I236-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I236-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W06_REVIEW_HEAP_LIFETIMES_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/owner/class/pair/budget/phase comparisons only; no product/components imports/build/compile/test discovery/tests/benchmarks, heap sampling/profiling/getsizeof/introspection, codec/crypto positives, clock/ledger/claim/process/probes/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W06 review with exact pins, independently checked owners/classes/all55 pairs, metric/lifetime/rollup/capacity comparisons, negative checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_heap_capacity_attestation_or_execution_authority": true
+  }
+}
