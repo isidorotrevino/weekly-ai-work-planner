@@ -1,0 +1,282 @@
+{
+  "schema": "d5.i223-preparation-review.v1",
+  "increment": "I223",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "643a5f290e4dfdc1a937727d01515c0a5778febf",
+  "status": "PASS_STATIC_SOURCE_ONLY_REAL_EVIDENCE_CLOSURE_PLAN_NOT_ADMITTED",
+  "plan": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": ""
+  },
+  "counts": {
+    "input_pins": 912,
+    "work_packages": 13,
+    "gate_categories": {
+      "FAMILY": 7,
+      "RULE": 16,
+      "GLOBAL": 7
+    },
+    "prelaunch_gates": 30,
+    "resource_obligations": 5,
+    "resource_criteria": 20,
+    "heap_owners": 11,
+    "historical_work_activities": 10,
+    "work_CPU_wall_upper_slots": 30,
+    "historical_I132_outputs": 20,
+    "stop_decision_points": 8,
+    "currently_missing_successor_sources": 6,
+    "prelaunch_gates_accepted": 0,
+    "resource_obligations_closed": 0
+  },
+  "dependency_review": {
+    "graph": {
+      "W01": [],
+      "W02": [
+        "W01"
+      ],
+      "W03": [
+        "W01",
+        "W02"
+      ],
+      "W04": [
+        "W02",
+        "W03"
+      ],
+      "W05": [
+        "W03",
+        "W04"
+      ],
+      "W06": [
+        "W03",
+        "W04",
+        "W05"
+      ],
+      "W07": [
+        "W03",
+        "W04",
+        "W05"
+      ],
+      "W08": [
+        "W04",
+        "W05",
+        "W06",
+        "W07"
+      ],
+      "W09": [
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08"
+      ],
+      "W10": [
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09"
+      ],
+      "W11": [
+        "W09",
+        "W10"
+      ],
+      "W12": [
+        "W02",
+        "W04",
+        "W10",
+        "W11"
+      ],
+      "W13": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W12"
+      ]
+    },
+    "topological_order": [
+      "W01",
+      "W02",
+      "W03",
+      "W04",
+      "W05",
+      "W06",
+      "W07",
+      "W08",
+      "W09",
+      "W10",
+      "W11",
+      "W12",
+      "W13"
+    ],
+    "evidence_waves": [
+      [
+        "W01"
+      ],
+      [
+        "W02"
+      ],
+      [
+        "W03"
+      ],
+      [
+        "W04"
+      ],
+      [
+        "W05"
+      ],
+      [
+        "W06",
+        "W07"
+      ],
+      [
+        "W08"
+      ],
+      [
+        "W09"
+      ],
+      [
+        "W10"
+      ],
+      [
+        "W11"
+      ],
+      [
+        "W12"
+      ],
+      [
+        "W13"
+      ]
+    ],
+    "heap_and_work_branches_parallel_after_W05": true,
+    "W09_no_future_freeze_bundle_as_sole_authentication": true,
+    "gate_receipt_and_final_execution_excluded_from_new_prelaunch_prerequisites": true,
+    "no_time_or_provider_guarantee": true
+  },
+  "source_review": {
+    "I222_reconstruction_and_documentary_review_reproduced": true,
+    "prior_publication_mains_run": false,
+    "prior_Path_exists_method_restored": true,
+    "no_new_historical_presence_projection_added": true,
+    "all30_original_prelaunch_gates_and20_criteria_exactly_bound": true,
+    "old_I132_negative_outputs_preserved_not_transferred": true,
+    "all_existing_candidates_caps_guards_and_negative_flags_unchanged": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as prior documentary candidates",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_acceptance": false,
+    "external_contacts_made": false
+  },
+  "rejection_checks": [
+    {
+      "case": "missing_gate",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "receipt_as_prelaunch_target",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_criterion",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unassigned_roles_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "documents_as_actual_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_heap_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "900_budget_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_increase_to_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "execution_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_bundle_prior_auth",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed_by_plan",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "closure_plan_prepared": true,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_accepted": 0,
+    "prelaunch_gates_pending": 30,
+    "resource_obligations_closed": 0,
+    "resource_criteria_accepted": 0,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "limitations": [
+    "Plan only:13 packages define genuine evidence/owner/reviewer/entry-exit/rejection contracts. No provider/person/appointment or package accepted, no proof body created or resource/gate closed.",
+    "Six successor sources and actual image/runtime/platform/service/capacity/clock/ledger evidence remain absent. Any necessary implementation/qualification/build/probe/signing/service/contact needs separate exact authority; no commands supplied.",
+    "Same assistant is not competent independent review or separate R08 acceptance. Closing future prelaunch/resource dispositions would not release execution, change active flags, accept root/claim/receipt or close D5."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I223-REAL-EVIDENCE-CLOSURE-PLAN.md",
+      "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+      "docs/validation/D5-I223-audit.py",
+      "docs/validation/D5-I223-integrity.json",
+      "docs/validation/D5-I223-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I223-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_REAL_EVIDENCE_CLOSURE_PLAN_NOT_ADMITTED",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/gate/criterion/DAG and negative-policy checks only; no product/components, positive crypto/codec, platform/service, claims or process execution.",
+    "over400_lines": true,
+    "reason": "One actionable real-evidence closure plan with13 package contracts,30 gates,20 criteria,11 owners,10 activities and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_actual_evidence_acceptance_or_execution_authority": true
+  }
+}
