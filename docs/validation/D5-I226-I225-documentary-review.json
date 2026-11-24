@@ -1,0 +1,349 @@
+{
+  "schema": "d5.i226-i225-documentary-review.v1",
+  "increment": "I226",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "0150290fbb217f47f5bc3601dc3312d1a5e6b44a",
+  "status": "PASS_STATIC_SOURCE_ONLY_W01_REVIEW_ENTRY_AUTHORITY_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+    "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I226-I225-source-reconstruction.json",
+    "sha256": "6f39b087e823bc787b397dfe44055caeec80878a7002d050e78bfc42488a41a9",
+    "json_pointer": ""
+  },
+  "verdict": "W01_DOCUMENTARY_SCOPE_AND_AUTHORITY_BOUNDARY_CONSISTENT_ENTRY_AUTHORITY_MISSING_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "W01 three deliverables, three exit predicates, rejection/authority clauses exactly bind I223",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "Exactly six absent successor paths; no predicted digests, loaded mapping or hidden helper",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/logical_source_scope"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "Complete logical environment closure; image and runtime identities separate, facts missing",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/effective_environment_scope"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "Caller/platform guarantees and globally shared ledger/mapping remain unproved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/caller_platform_ledger_scope"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "Eight exact document versions/hashes do not attest runtime or image identity",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/policy_version_inventory"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "24 numeric and12 protocol candidates preserved without application or conditional-fit promotion",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/numeric_candidate_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "Eight custody caps and complete candidate heap/reserves remain unproved and unallocated",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/heap_scope_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "60/750/60+30 and exact-True wait return/finally markers preserved without success proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/phase_marker_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "32 exact profile/transport/CP07 guards and unchanged route/output bindings",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/guard_obligation_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "179/321/12/30 and all new paths/costs require successor qualification",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/source_requalification_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "Three genuine entry-authority slots absent; W02 cannot bootstrap W01; SD01 active",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/entry_authority_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "Four documentary actions separated from eight unauthorized operational classes",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/action_authority_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "Eight S01 and extra custody exclusions plus inherited certificate state preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/inherited_scope_boundaries"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "Three exits pending: documentary coverage is not authentic scope acceptance",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "Prelaunch/resource handoff excludes final-route execution and keeps CE12 deferred",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/handoff_and_deferred_scope"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "Changed facts require impact/revalidation; no current authority, resource or D5 promotion",
+      "subject": {
+        "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+        "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+        "json_pointer": "/change_control"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 927,
+    "criteria": 16,
+    "successor_paths": 6,
+    "policies": 8,
+    "numeric_candidates": 24,
+    "protocol_candidates": 12,
+    "custody_caps": 8,
+    "guard_obligations": 32,
+    "missing_entry_authorities": 3,
+    "documentary_actions": 4,
+    "unauthorized_operational_classes": 8,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Entry authority versus preparation",
+      "disposition": "W01 dossier preparation/review/publication is allowed documentary work. Actual W01 acceptance still requires genuine preexisting scope authority, competent R06 and separate R08. SD01 remains active; no W02 appointments or future bundle supplies sole forecast authority."
+    },
+    {
+      "id": "N02",
+      "subject": "Logical scope versus effective freeze",
+      "disposition": "Six paths and policy documents define a target only. Missing source/image/runtime/loader/caller/platform/clock/ledger facts remain unknown; W03/W04 must genuinely supply and qualify them under separate authority. Changes require impact and revalidation, not automatic proof transfer."
+    },
+    {
+      "id": "N03",
+      "subject": "Exits and resources",
+      "disposition": "Documentary separation and absent execution authority are consistent statements, while the three exit predicates remain unaccepted as a package. Caps, guards, phases and historical counts are requirements, not real heap/CPU/service/900 proof or accepted capacity."
+    },
+    {
+      "id": "N04",
+      "subject": "Handoff and reviewer independence",
+      "disposition": "Prelaunch/resource evidence remains separate from final E06/Q/root/claim/receipt. CE12 stays deferred. Same assistant preparation and methodological review do not satisfy genuine independent R06 or separate R08 acceptance."
+    }
+  ],
+  "source_replay": {
+    "I225_candidate_and_preparation_review_reproduced": true,
+    "publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "predictive_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_presence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "image_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partitioned_ledger",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "active_quota",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "conditional_as_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_900_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "wrong_tW",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_channel",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_W02_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "SD01_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "operation_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exclusion_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_documentary_prepared": true,
+    "W01_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_logical_scope_accepted": false,
+    "actual_effective_source_scope_frozen": false,
+    "actual_real_evidence_package_created": false,
+    "actual_scope_provider_or_reviewer_assigned": false,
+    "actual_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W01_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I225",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W01 review complete. Positive package progress stays blocked at SD01 pending genuine entry scope/reviewer authority and accepted scope; no nomination/contact or operational work is initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I226-I225-W01-REVIEW.md",
+      "docs/validation/D5-I226-I225-documentary-review.json",
+      "docs/validation/D5-I226-I225-source-reconstruction.json",
+      "docs/validation/D5-I226-audit.py",
+      "docs/validation/D5-I226-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I226-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W01_REVIEW_ENTRY_AUTHORITY_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/policy/authority comparisons only; no product/components imports/build/compile/tests/benchmarks, crypto/codec positives, probes, clock/ledger/claim/process or service execution.",
+    "over400_lines": true,
+    "reason": "One documentary review with complete source pins, semantic comparisons, negative checks and preservation seal; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_scope_adoption_or_execution_authority": true
+  }
+}
