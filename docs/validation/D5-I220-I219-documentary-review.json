@@ -1,0 +1,408 @@
+{
+  "schema": "d5.i220-i219-documentary-review.v1",
+  "increment": "I220",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "bcbde60f040c5baf99240491540df74d1b2501cd",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE11",
+  "status": "CE11_DOCUMENTARY_BASELINE_CONFIRMED_PRELAUNCH_CHECKLIST_HANDOFF_NOT_ACCEPTED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+    "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I220-I219-source-reconstruction.json",
+    "sha256": "24bd6a4be6212962e9b8a3a758a256fc21a1a2a7831c5c0ffaee4e2b93d9b3eb",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Seven prelaunch families,16 rules and all reference dispositions in exact scope",
+      "result": "NEGATIVE_MATRIX_PRESERVED_30_GATES_NOT_CLOSED"
+    },
+    {
+      "id": "E02",
+      "scope": "Competent separate review of identities/anchors/image/backend/C/mapping/proofs/impacts",
+      "result": "REQUIREMENTS_VISIBLE_NO_ACTUAL_ACCEPTANCE_OR_INDEPENDENT_REVIEW"
+    },
+    {
+      "id": "E03",
+      "scope": "Explicit handoff of existing final E06/payload/Q/root/admission route",
+      "result": "PENDING_ROUTE_AND_FOUR_BINDINGS_WITHOUT_RUN_COMMAND_OR_AUTHORITY"
+    },
+    {
+      "id": "A01",
+      "scope": "No launch receipt, actual claim or spawn to accept prelaunch custody facts",
+      "result": "CE01_REPAIRED_BOUNDARY_PRESERVED_NO_RECEIPT_CYCLE"
+    },
+    {
+      "id": "A02",
+      "scope": "Custody disposition never flips flags, closes D5 or authorizes execution",
+      "result": "NO_ADMISSION_OR_GATE_RELEASE"
+    },
+    {
+      "id": "A03",
+      "scope": "Missing roles/runtime/providers/proofs remain pending; schema/signature/caps not truth",
+      "result": "DOCUMENTS_AND_TEMPLATES_NOT_ACTUAL_PROOF_BODIES"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K01",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/0"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/0"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K02",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/1"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/1"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K03",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/2"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/2"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K04",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/3"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/3"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K05",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/4"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/4"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K06",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/5"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/5"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K07",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/6"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/6"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K08",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/7"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/7"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K09",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/8"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/8"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K10",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/9"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/9"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K11",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/10"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/10"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K12",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/11"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K13",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/12"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/12"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K14",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/13"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/13"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K15",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/14"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/14"
+      },
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K16",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "disposition": {
+        "path": "docs/validation/D5-I193-CE11-PRELAUNCH-EVIDENCE-CLOSURE-REVIEW-CANDIDATE.json",
+        "sha256": "bf69c24f4d92b6a64d08f291a5580ffa267db7e610e9001e0c1fe660ad3ab534",
+        "json_pointer": "/rule_gate_dispositions/15"
+      },
+      "actual_competent_acceptance": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "Checklist scope",
+      "disposition": "31 original gates are tracked:30 prelaunch obligations remain unaccepted and one receipt family is deferred. A complete negative disposition table is not an actual closed checklist."
+    },
+    {
+      "id": "C02",
+      "subject": "69 templates and empty rejection list",
+      "disposition": "Template paths include array wildcards and repeated nested bundle declarations, not actual or unique proof bodies. No real proof evaluated or rejected here does not mean approval; actual reference/author/body completeness remains unknown."
+    },
+    {
+      "id": "C03",
+      "subject": "Handoff versus completion",
+      "disposition": "CE11 requires genuine CE01-CE10 facts/reviews. It hands off pending final route obligations without requiring final E06/payload/Q/root/admission or claim/receipt/spawn completion as an additional CE11 prerequisite."
+    },
+    {
+      "id": "C04",
+      "subject": "Claim and review scopes",
+      "disposition": "Source CE01 assigns R06/R08 prelaunch review and R04/R05/R07/R08 deferred final-route review scopes without naming actual people. Four prerequisites precede claim; actual claim/construction is necessary before receipt, not before itself. No authorization is supplied."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I219",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE11_documentary_baseline_confirmed": true,
+    "CE11_accepted": false,
+    "actual_prelaunch_checklist_closed": false,
+    "actual_handoff_accepted": false,
+    "actual_prelaunch_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "execution_authorized": false,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE11_documentary_prepared": true,
+    "CE11_accepted": false,
+    "actual_dependencies_satisfied": false,
+    "actual_prelaunch_checklist_closed": false,
+    "actual_prelaunch_evidence_accepted": 0,
+    "actual_handoff_accepted": false,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "actual_claim_spawn_or_receipt_created": false,
+    "actual_final_E06_payload_Q_root_or_admission_created": false,
+    "SOURCE_CAPACITY_VERIFIED_issued": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE11_documentary_review_completed": true,
+    "CE11_documentary_confirmation": true,
+    "CE11_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "All30 actual prelaunch gates, ten competent prerequisite acceptances, providers/roles/source/runtime/backend/proof bodies and complete real reference inventory remain pending. Checklist and handoff are not accepted.",
+    "Same assistant is not competent independent R06 review or separate R08 acceptance. Static schema/reference/checklist/dependency confirmation does not close E01-E05, D5 or grant execution.",
+    "No product/components, build/import/compile, crypto/codec, platform/clock/ledger/service probe, claim/spawn/receipt, provider contact, final E06/payload/Q/root issuance, quotas/reserves or active bindings/authority/destination changes."
+  ],
+  "next_scope": "CE11 is a documentarily reviewed negative baseline for separately requested CE12 documentary preparation only. Actual closure, handoff, final-route prerequisites and execution authority remain absent.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I220-I219-CE11-REVIEW.md",
+      "docs/validation/D5-I220-I219-documentary-review.json",
+      "docs/validation/D5-I220-I219-source-reconstruction.json",
+      "docs/validation/D5-I220-audit.py",
+      "docs/validation/D5-I220-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I220-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_PRELAUNCH_CHECKLIST_NOT_CLOSED",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/checklist/schema-reference and handoff graph checks only; no product/components or runtime claim/spawn/codec/crypto execution.",
+    "over400_lines": true,
+    "reason": "One CE11 review with independent31-gate/69-template/handoff reconstruction and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_prelaunch_acceptance_or_execution_authority": true
+  }
+}
