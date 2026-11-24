@@ -1,0 +1,405 @@
+{
+  "schema": "d5.i238-documentary-review.v1",
+  "increment": "I238",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7360aec9aeefc1660c17a7afda09b718a606970f",
+  "status": "PASS_STATIC_SOURCE_ONLY_W07_REVIEW_WORK_CPU_UNITS_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W07-SUCCESSOR-WORK-CPU-UNITS-CANDIDATE.json",
+    "sha256": "64a27cc64fc1fa3124608d9f292713c9563f4478f89ef09be9c76829df4653ef",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I238-I237-source-reconstruction.json",
+    "sha256": "05a1eba9a2641861d4263eaf814085badd1dfcf42f9bb9716a5fa40690b12012",
+    "json_pointer": ""
+  },
+  "verdict": "DOCUMENTARY_REQUIREMENTS_CONSISTENT_NO_NEW_DEFECT_FOUND_REAL_W07_EVIDENCE_MISSING_NOT_ADMITTED",
+  "findings": [],
+  "counts": {
+    "input_pins": 987,
+    "historical_activities": 10,
+    "historical_scalar_slots": 30,
+    "historical_process_phase_vectors": 20,
+    "historical_compatibility_joins": 20,
+    "latency_owner_requirements": 10,
+    "phase_category_requirements": 9,
+    "per_attempt_cost_families": 7,
+    "unassigned_review_roles": 3,
+    "pending_exits": 3,
+    "review_criteria": 23
+  },
+  "criteria": [
+    {
+      "id": "RV01",
+      "criterion": "Exact W07 deliverables, dependency gate, exit predicates and future experimental authority",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV02",
+      "criterion": "R03/R06 requirements and separate R08 acceptance remain unassigned",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV03",
+      "criterion": "Ten historical activities match I130 and I223 without successor equivalence",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV04",
+      "criterion": "Thirty scalar slots are ten work/CPU/wall triplets, all unknown",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV05",
+      "criterion": "Twenty P06 vectors retain exact group/process/phase requirements",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV06",
+      "criterion": "Twenty P07 compatibility joins match all twenty vectors without qualified units",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV07",
+      "criterion": "Ten latency owners and nine phase/category requirements remain unproved",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV08",
+      "criterion": "I193 all30 requirement remains; no predictive group IDs or reduced scope",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV09",
+      "criterion": "Complete W05 original/native/transitive/failure work coverage required",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV10",
+      "criterion": "Conditional I124 counts do not supply successor instructions, seconds or infeasibility",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV11",
+      "criterion": "Service and exact-platform WCET are conditional alternatives, neither selected",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV12",
+      "criterion": "Compatible units, arrivals, backlog, concurrency and service-window theorem required",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV13",
+      "criterion": "CPU execution, summed CPU, waiting and elapsed wall remain distinct",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV14",
+      "criterion": "No overlap subtraction, free unknown latency or budget-derived service",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV15",
+      "criterion": "Seven per-attempt families include both Readers, verification, frames and dual output",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV16",
+      "criterion": "File-byte envelopes and snapshots do not prove all IO, CPU or fresh reads",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV17",
+      "criterion": "Missing W04 service and complete whole-work bounds remain missing",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV18",
+      "criterion": "I130 tR/tW/tF intervals preserve early worker work, reap observation and successful finally",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV19",
+      "criterion": "C10 stays within phase composition; candidate 600/90/60 and 60/750/60 are not proofs",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV20",
+      "criterion": "Thirty-second reserve remains unassigned, with no transfers or extra per-group budget",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV21",
+      "criterion": "W06 and W07 are parallel inputs to W08; memory/cache/interference assumptions need reconciliation",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV22",
+      "criterion": "W08 success900, W09 joint acceptance and W10/final trust phases remain separate",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV23",
+      "criterion": "Inherited scope exclusions, negative gates, CE12 boundary and no-execution authority retained",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    }
+  ],
+  "documentary_clarifications": [
+    "Ten historical activities / thirty scalar slots / twenty vectors do not satisfy all30 successor coverage. Genuine complete correspondence remains absent.",
+    "Work counts become time only through a complete applicable service theorem or justified exact-platform WCET; summed CPU does not bound wall by itself.",
+    "Both Readers, freshness/crypto/identity, frame failures, native/GC/destruction and successful dual writes remain charged per attempt; unknown is not zero.",
+    "tR is parent RELEASE close; earlier post-receipt worker work belongs to Tpre. tW is exact True wait_worker return; tF includes successful finally. No extra CPU600 or reserve credit.",
+    "W06 and W07 feed W08 in parallel. Their memory/cache/load/interference premises require genuine reconciliation; W07 does not qualify W04 service, prove900 or accept E01-E05.",
+    "SD01 and all genuine appointments/evidence/acceptances remain open. Future freeze, bundle, Q/root/claim/receipt cannot substitute antecedent authority or evidence."
+  ],
+  "source_reconstruction": {
+    "primary_source_checks": true,
+    "I237_candidate_and_preparation_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "inherited_I237_rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W07_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "count_equivalence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_group_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_upper_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_compatibility",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_route",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_rate",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_latency_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "naive_division",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_rate_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_sum_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_service",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unproved_overlap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "abstract_count_as_seconds",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_noncopy_tail",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_Reader",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_new_path",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "offline_free",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "worker_all_Tworker",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "physical_exit_as_tW",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "finish_as_tF",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_CPU_budget",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "candidate_as_proved_inequality",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_final_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_benchmark",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "additional_I238_rejection_checks": [
+    {
+      "case": "scalar_kind_relabel",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "vector_drop",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "latency_owner_drop",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_WCET_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "arrivals_premise_dropped",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "native_closure_dropped",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "bytes_as_all_IO",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "C10_extra_budget",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "borrowed_memory_premises",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "freeze_change_no_invalidation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W07_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W07_documentary_reviewed": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I237",
+    "methodological_documentary_review_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "No complete successor activity/process inventory, all30 correspondence, work/CPU/wait/wall upper, compatible unit, qualified service or WCET proof exists in this dossier.",
+    "All three W07 exits remain unaccepted; SD01 active, zero accepted real packages, zero closed prelaunch gates and zero closed E01-E05 obligations.",
+    "Static audit checks documents, metadata and documentary rejection cases only; it neither executes nor measures product or components."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I238-I237-W07-REVIEW.md",
+      "docs/validation/D5-I238-I237-documentary-review.json",
+      "docs/validation/D5-I238-I237-source-reconstruction.json",
+      "docs/validation/D5-I238-audit.py",
+      "docs/validation/D5-I238-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I238-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W07_REVIEW_WORK_CPU_UNITS_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: only own documentary JSON/Git/hash/source-pointer checks and in-memory document mutations. No product/components, imports, compile, discovery/tests, benchmarks, experimental WCET, service/clock/CPU/IO sampling or probes.",
+    "over400_lines": true,
+    "reason": "One review unit with primary-source reconstruction, pinned inputs, negative cases and integrity preservation. Overage declared; no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_resource_attestation_acceptance_or_execution_authority": true
+  }
+}
