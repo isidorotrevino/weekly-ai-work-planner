@@ -1,0 +1,297 @@
+{
+  "schema": "d5.i239-preparation-review.v1",
+  "increment": "I239",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "7722e3ed2b5965ff0043583efbbe3b05ffe7719f",
+  "status": "PASS_STATIC_SOURCE_ONLY_W08_PHASE_BOUNDS_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W08-SUCCESSOR-PHASE-BOUNDS-CANDIDATE.json",
+    "sha256": "5d502c94cb8ffd677a84990abb0f7ea8d17f1692e151b0a6f1a72659553ba9cf",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/7"
+  },
+  "counts": {
+    "input_pins": 992,
+    "marker_requirements": 4,
+    "phase_requirements": 3,
+    "historical_vector_references": 20,
+    "historical_compatibility_references": 20,
+    "unsatisfied_conditional_premises": 7,
+    "unassigned_review_roles": 3,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I238_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "formal_algebra": {
+    "marker_order": [
+      "t0",
+      "tR",
+      "tW",
+      "tF"
+    ],
+    "phase_difference_coefficients": [
+      [
+        -1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        1
+      ]
+    ],
+    "telescoped_coefficients": [
+      -1,
+      0,
+      0,
+      1
+    ],
+    "symbolic_identity": "(tR-t0)+(tW-tR)+(tF-tW)=tF-t0",
+    "formal_identity_verified": true,
+    "actual_marker_order_or_nonnegativity_verified": false,
+    "actual_complete_temporal_coverage_verified": false,
+    "actual_successful_execution_existence_or_liveness_verified": false
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W08_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "old_anchor_successor_binding",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_timestamp",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_clock",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "clock_sampling",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "formal_algebra_as_order",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_phase_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_premise",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "ten_as_all30",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_Reader_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "borrowed_memory_premises",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "pre_tR_worker_gap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_to_wait_gap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "finally_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_C10",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "True_as_success",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "later_validation_tW",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "timeout_as_success",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_marker_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "vacuous_liveness",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "failure_deadline",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "failure_heap_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_CPU600",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_payment_unknown",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_sum_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_success900",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "nested_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "watchdog_guarantee",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_W09",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_final_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_execution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_documentary_prepared": true,
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I237/I238",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W04/W05/W06/W07 remain unaccepted; SD01 active. W08 is a negative documentary dossier, not complete successor phase bounds or actual evidence package.",
+    "Historical I130 markers/P08 algebra and W07 vectors are requirements only. No genuine source/runtime/clock/service/unit/heap/work/latency/liveness premise or phase bound is supplied.",
+    "870+30=900 conserves candidate arithmetic only. No missing upper paid by reserve, budget change, extra CPU600, success guarantee or infeasibility conclusion.",
+    "Same-assistant preparation is not independent R03/R06 review or separate R08 acceptance. No product/components run, imports, compile/tests, clock/probe/benchmark or platform/service sampling."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I239-W08-SUCCESSOR-PHASE-BOUNDS.md",
+      "docs/validation/D5-I223-W08-SUCCESSOR-PHASE-BOUNDS-CANDIDATE.json",
+      "docs/validation/D5-I239-audit.py",
+      "docs/validation/D5-I239-integrity.json",
+      "docs/validation/D5-I239-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I239-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W08_PHASE_BOUNDS_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/marker/phase/unit/algebra and in-memory document checks only. No target imports/compile/discovery/tests/runs, experimental WCET, clock/CPU/IO/service/schedule/platform sampling/probes or external services/contact.",
+    "over400_lines": true,
+    "reason": "One W08 negative phase-bound dossier with exact requirements, pins, conditional algebra, rejection cases and preservation. Overage declared; no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_temporal_service_attestation_acceptance_or_execution_authority": true
+  }
+}
