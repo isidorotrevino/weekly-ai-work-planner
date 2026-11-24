@@ -1,0 +1,375 @@
+{
+  "schema": "d5.i228-i227-documentary-review.v1",
+  "increment": "I228",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "4a6f0613d583de09d4aca0c3f4e7ecc4b21a3410",
+  "status": "PASS_STATIC_SOURCE_ONLY_W02_REVIEW_PEOPLE_ANCHORS_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+    "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I228-I227-source-reconstruction.json",
+    "sha256": "6a505ab655f610329a833cbf91df3677c840b7d1e9cb6e14e7b3de2d86a3f448",
+    "json_pointer": ""
+  },
+  "verdict": "W02_DOCUMENTARY_PEOPLE_ANCHORS_PHASE_BOUNDARIES_CONSISTENT_W01_BLOCKED_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "Three deliverables/exits and exact I223 W02 contract retained",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "W01 unaccepted and SD01 active; no future W02 authority bootstrap",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/dependency_gate"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "Eight role scopes and five additional subject categories unassigned; no person-count inference",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/role_scope_matrix"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "19 exact requirements mapped to17 W02, one W10 and one W12 obligations",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/evidence_requirement_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "Genuine prior independent anchor provisioning/acceptance remains required; no self trust",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/anchor_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "CE10/W12 approvals deferred but not waived; no retrospective anchor authentication",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/anchor_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "Canonical-human/alias/competence policy distinct from software caller; no future-author preapproval",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/identity_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "All14 separation rules retained as unverified policy; qualified R01/R02 overlap allowed",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/separation_matrix"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "Seven exact schemas and two candidate registry caps; no active quota or fit proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/schema_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "Assistant activity is not authenticated human/preparation record; no future-hash cycle",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/preparation_tracking"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "W02 provisional; genuine W05-W08 authors/bodies before W09; W10 only reconciles accepted facts",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/phase_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "Known costs remain in full resource composition; no offline zero-cost inference",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/costs_and_authority"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "No contact/enrollment/key/signing/probe/execution authority created",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/costs_and_authority"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "Three exit predicates remain unaccepted without genuine evidence/review",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "Historical certificate, inherited caps and deferred private CE12 preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/preserved_scope_and_gates"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "No actual accepted package/registry/anchor/resource/gate/authority/D5 promotion",
+      "subject": {
+        "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+        "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+        "json_pointer": "/current_effect"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 937,
+    "criteria": 16,
+    "roles": 8,
+    "additional_subject_categories": 5,
+    "requirements": 19,
+    "W02_requirements": 17,
+    "W10_requirements": 1,
+    "W12_requirements": 1,
+    "separation_rules": 14,
+    "schemas": 7,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Preparation versus genuine entry authority",
+      "disposition": "W02 documentary preparation/review/publication does not accept W01/W02 or bypass SD01. Genuine entry scope authority and competent separate decisions remain missing; future W02 appointments/bundle cannot be their sole forecast authority."
+    },
+    {
+      "id": "N02",
+      "subject": "Anchor policy versus later approvals",
+      "disposition": "Prior external origin/provisioning/acceptance, independently expected digest/epoch, authenticated bindings and evidence remain W02 requirements. CE10/W12 actual common-core approvals remain required later and cannot bootstrap their own anchors. Their absence is not an extra premature W02 dependency."
+    },
+    {
+      "id": "N03",
+      "subject": "Provisional intake versus final freeze",
+      "disposition": "W02 does not require W10 final completeness. Every actual proof author/body and baseline fact must nevertheless be authenticated before W09 acceptance. W10 reconciles the same accepted facts; changed contributors/identities/bodies/epoch/key/policy/scope invalidate affected proofs and require renewed review."
+    },
+    {
+      "id": "N04",
+      "subject": "Canonical humans and actual evidence",
+      "disposition": "Eight roles/five subject categories are requirements, not thirteen people. All preparers, aliases and source-author/root-key/custody exclusions apply over authenticated humans/keys. Qualified R01/R02 overlap remains allowed. Assistant/Git labels, document hashes, caps, schemas and status flags do not supply human identity, independence, real registry evidence or capacity."
+    },
+    {
+      "id": "N05",
+      "subject": "Costs and final route",
+      "disposition": "Per-attempt custody work remains inside the complete resource/phase join. No new Reader/channel/helper/output or active quota/reserve is authorized. CE12 remains private/deferred and final E06/Q/root/admission/claim/receipt are separate from prelaunch evidence. Same assistant checks do not provide independent R06 or separate R08 acceptance."
+    }
+  ],
+  "source_replay": {
+    "I227_candidate_and_preparation_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "W01_SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_entry_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_role_identity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "wrong_phase_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_anchor",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "prior_acceptance_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_approval",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "anchor_self_bootstrap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "later_approval_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "human_software_collapse",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_author_preapproval",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_separation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_overlap_ban",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "cap_as_active_quota",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "preparation_cycle",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authors",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "forecast_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_cost",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W02_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_people_anchors_appointments_or_key_bindings_accepted": false,
+    "actual_real_evidence_package_created": false,
+    "actor_registry_finalized": false,
+    "anchor_registry_provisioned": false,
+    "positive_I191_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W02_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I227",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W02 review complete; positive progress remains stopped at SD01 pending genuine entry authority and accepted W01/W02 evidence. No contact, nomination, enrollment, provisioning, signing or operational work is initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I228-I227-W02-REVIEW.md",
+      "docs/validation/D5-I228-I227-documentary-review.json",
+      "docs/validation/D5-I228-I227-source-reconstruction.json",
+      "docs/validation/D5-I228-audit.py",
+      "docs/validation/D5-I228-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I228-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W02_REVIEW_PEOPLE_ANCHORS_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/role/policy/phase comparisons only; no product/components, imports/build/compile/tests/benchmarks, codec/crypto positives, probes/clock/ledger/claim/process/service/signing/keygen/enrollment/provisioning/contact.",
+    "over400_lines": true,
+    "reason": "One review unit with immutable source pins, phase/identity/anchor comparisons, negative checks and preservation seal; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_identity_enrollment_scope_adoption_or_execution_authority": true
+  }
+}
