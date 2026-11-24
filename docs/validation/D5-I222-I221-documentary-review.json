@@ -1,0 +1,303 @@
+{
+  "schema": "d5.i222-i221-documentary-review.v1",
+  "increment": "I222",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "d73176516f3cde2ea36ffd9b3a597eb68b0daa37",
+  "proposal_id": "PGO181-SPLIT-ROOT-01",
+  "profile_id": "PGO181-TRUST-ED25519-JCS-CANDIDATE-02",
+  "step": "CE12",
+  "status": "CE12_DOCUMENTARY_BASELINE_CONFIRMED_DEFERRED_NOT_AUTHORIZED_NO_ACTUAL_CLAIM_OR_RECEIPT",
+  "candidate": {
+    "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+    "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I222-I221-source-reconstruction.json",
+    "sha256": "f5c9cfa0c7aa66682c4074ef7a49e2c8557cc5b2c6c824307c16957e5d99182f",
+    "json_pointer": ""
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "E01",
+      "scope": "Actual receipt only after separate authority/full final Q/root/admission and real claim/construction",
+      "result": "FOUR_PRECLAIM_PLUS_ONE_PRERECEIPT_SPLIT_PRESERVED_ALL_MISSING"
+    },
+    {
+      "id": "E02",
+      "scope": "Real applicable failure/partial/spent-state evidence; no planned CLAIMED assertion",
+      "result": "SIX_OBLIGATIONS_NOT_OBSERVED_INCIDENTS_OR_SIMULATED_TRANSITIONS"
+    },
+    {
+      "id": "E03",
+      "scope": "Private receipt, no new channel/output/authority, block replay/expiry/unknown",
+      "result": "PRESERVED_GLOBAL_USE_AND_NO_FREE_RETRY"
+    },
+    {
+      "id": "A01",
+      "scope": "Genuine final E06/payload/Q/root/admission and separate execution authority",
+      "result": "NONE_CREATED_OR_GRANTED"
+    },
+    {
+      "id": "A02",
+      "scope": "No CE11 dependency on CE12; no retrospective trust/resources or self-authorizing claim",
+      "result": "ACYCLIC_CONDITIONAL_ORDER_NOT_RUNTIME_EVENT"
+    },
+    {
+      "id": "A03",
+      "scope": "Keep DEFERRED_NOT_AUTHORIZED with unavailable actual hashes/statuses",
+      "result": "NO_POSITIVE_RECEIPT_OR_CLAIM_PROCESS_EXECUTION"
+    }
+  ],
+  "contract_rule_review": [
+    {
+      "id": "K12",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/11"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/event_order_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/external_prerequisite_dispositions"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K13",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/12"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/time_and_currentness_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/global_one_use_policy"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K14",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/13"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/global_one_use_policy"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/failure_and_spent_state_obligations"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/actual_event_state"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K15",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/14"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/privacy_and_resource_boundary"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    },
+    {
+      "id": "K16",
+      "source": {
+        "path": "docs/validation/D5-I191-CALLER-IMAGE-CUSTODY-CONTRACT-CANDIDATE.json",
+        "sha256": "e31d30815d6c839235184e43206952e4e2c8adc407692ec11851ebbe1ca672be",
+        "json_pointer": "/rules/15"
+      },
+      "candidate_sections": [
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/receipt_schema_obligations"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/permission_boundary"
+        },
+        {
+          "path": "docs/validation/D5-I193-CE12-CONDITIONAL-ACTUAL-CLAIM-RECEIPT-CANDIDATE.json",
+          "sha256": "0835df740c87b8438e6496c87f624164ecc3548b36c57230a5fba72e8cb5eabe",
+          "json_pointer": "/current_effect"
+        }
+      ],
+      "documentary_requirement_preserved": true,
+      "actual_competent_acceptance": false
+    }
+  ],
+  "documentary_clarifications": [
+    {
+      "id": "C01",
+      "subject": "Schema const and actual event",
+      "disposition": "Positive claim_status belongs to the schema requirement only. Every actual receipt/claim body, tuple, ID, hash, epoch and status remains missing. No accepted positive I191 receipt is instantiated."
+    },
+    {
+      "id": "C02",
+      "subject": "Failure coverage where applicable",
+      "disposition": "Six failure/spent-state topics describe required mechanism/outcome evidence, not six incidents that must be provoked. No real transition evaluated; local absence does not prove global unspent state or permit retry."
+    },
+    {
+      "id": "C03",
+      "subject": "Receipt meaning",
+      "disposition": "A future genuine receipt records actual accepted claim/protected construction for one correlated invocation. It does not prove successful capture, replace resource/provenance proof, grant authority or authorize its own claim."
+    },
+    {
+      "id": "C04",
+      "subject": "Documentary cycle versus actual closure",
+      "disposition": "The12 I193 slots now have prepared dossiers and this review completes their documentary review cycle. Actual plan acceptances remain0,30 prelaunch gates remain pending, E01-E05 remain open and D5/IR03/admission are unchanged."
+    }
+  ],
+  "provenance": {
+    "reviewer": "Same Codex assistant/chat that prepared I221",
+    "methodological_reconstruction_separate": true,
+    "actor_independent": false,
+    "organizationally_independent": false,
+    "competent_R01_R02_R06_review": false,
+    "separate_R08_acceptance": false,
+    "independent_acceptance": false
+  },
+  "verdict": {
+    "new_blocking_documentary_findings": 0,
+    "CE12_documentary_baseline_confirmed": true,
+    "status": "DEFERRED_NOT_AUTHORIZED",
+    "CE12_accepted": false,
+    "actual_claim_created": false,
+    "actual_protected_construction_or_worker_created": false,
+    "actual_receipt_created": false,
+    "actual_claim_or_receipt_status_available": false,
+    "actual_event_evidence_accepted": 0,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "current_execution_authorized": false,
+    "product_or_components_executed": 0
+  },
+  "current_effect": {
+    "CE12_documentary_prepared": true,
+    "CE12_accepted": false,
+    "actual_dependency_satisfied": false,
+    "current_execution_authorized": false,
+    "actual_claim_created": false,
+    "actual_protected_construction_or_worker_created": false,
+    "actual_receipt_created": false,
+    "actual_claim_status_available": false,
+    "actual_receipt_status_available": false,
+    "actual_event_evidence_accepted": 0,
+    "actual_failures_or_spent_states_verified": false,
+    "independent_acceptance": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "rebind_applied": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "CE12_documentary_review_completed": true,
+    "CE12_documentary_confirmation": true,
+    "CE12_documentary_revision_required": false
+  },
+  "decision": {
+    "candidate_plan_prior_packages_and_source_bytes_preserved": true,
+    "numeric_candidates_unchanged": true,
+    "P0_D1_D4_I1_I20_A52_unchanged": true,
+    "global_gaps_and_real_obligations_pending": true,
+    "I86_I89_I92_not_resumed": true,
+    "complete_work_groups_verified": false,
+    "heap_fit_verified": false,
+    "actual_capacity_or_service_verified": false,
+    "actual_unboundedness_or_infeasibility_proved": false,
+    "resource_obligations_closed": 0,
+    "product_or_components_executed": false,
+    "source_implementation_changed": false,
+    "product_quotas_changed": false,
+    "reserve_transfers_applied": false,
+    "resources_reserved": false,
+    "runtime_or_platform_sampled": false,
+    "capture_inputs_rebound": false,
+    "authority_or_destination_created": false,
+    "certificate_unchanged": "IMPLEMENTED_NOT_ADMITTED",
+    "issue_SOURCE_CAPACITY_VERIFIED": false,
+    "proposal_enabled": false,
+    "capture_enabled": false,
+    "D5_closed": false,
+    "H07_closed": false,
+    "IR03": "NOT_READY",
+    "providers_credentials_consumption_activation_promotion_deployment_D6": false,
+    "complete_compatibility_verified": false,
+    "complete_phase_bounds_verified": false,
+    "resource_bundle_binding_verified": false,
+    "complete_E01_E05_resource_closure_verified": false
+  },
+  "E06": {
+    "status": "SEPARATE_PENDING_NOT_RUN",
+    "components_executed": 0,
+    "execution_authorized": false
+  },
+  "limitations": [
+    "No actual CE11 acceptance, functional authorization, final E06/payload/Q/root/admission, global backend/claim, protected construction, worker, applicable failure evidence or private receipt.",
+    "Static schemas/21-field/envelope2702/cap8192/policy and order checks are not positive codec/crypto, actual state transitions, record fit, real independent provenance review, complete resources or900-second proof.",
+    "Same assistant is not competent independent review or separate R08 acceptance. No execution, provider contact, quota/reserve/binding/authority/destination or active platform/service change."
+  ],
+  "next_scope": "I193 documentary preparation/review cycle is recorded through CE12. Actual closure requires genuine external facts/independent acceptances, complete resource/source evidence and separately authorized final-route/event work; no authority or new paper iteration is automatically created.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I222-I221-CE12-REVIEW.md",
+      "docs/validation/D5-I222-I221-documentary-review.json",
+      "docs/validation/D5-I222-I221-source-reconstruction.json",
+      "docs/validation/D5-I222-audit.py",
+      "docs/validation/D5-I222-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I222-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_CE12_DEFERRED_NOT_AUTHORIZED",
+    "runtime_harness": "N/A: documentary JSON/Git/hash/schema-envelope/order/global-use and failure-policy checks only; no product/components, actual claim/replay/crash/restart/process/codec/crypto execution.",
+    "over400_lines": true,
+    "reason": "One CE12 review with independent schema/order/global-spent-state reconstruction and immutable preservation; overage reported. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_is_not_actual_claim_receipt_or_execution_authority": true
+  }
+}
