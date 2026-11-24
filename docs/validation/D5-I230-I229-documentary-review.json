@@ -1,0 +1,391 @@
+{
+  "schema": "d5.i230-i229-documentary-review.v1",
+  "increment": "I230",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "2d22dd23247c019389f7af6d42a16646588055bc",
+  "status": "PASS_STATIC_SOURCE_ONLY_W03_REVIEW_SOURCES_IMAGE_RUNTIME_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+    "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I230-I229-source-reconstruction.json",
+    "sha256": "6f04ca462559212a36c903f7c5af1c7b876d8f74fff9d4fc0a904e177742912f",
+    "json_pointer": ""
+  },
+  "verdict": "W03_DOCUMENTARY_SOURCE_IMAGE_RUNTIME_AND_PHASE_BOUNDARIES_CONSISTENT_EVIDENCE_MISSING_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "I223 W03 three deliverables/exits and authority/rejection clauses exact",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "W01/W02 unaccepted and SD01 active; preparation grants no authority",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/dependency_gate"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "Six exact absent sources; README DOCUMENT; membership does not prove load",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/source_to_image_missing_inventory"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "Unknown source totals not zero;262144 candidate ceiling and historical480/six helper scope preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/source_scope_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "Image bytes and full runtime identities distinct; historical/auditor environment not target evidence",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/runtime_identity_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "Eight complete-closure requirement categories retain unknown genuine inventories/provenance/equivalence",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/closure_requirement_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "Ten exact requirements: six baseline and four correctly deferred references",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/image_source_requirement_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "Seven document policy hashes do not prove actual compiled selection/implementation",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/compiled_policy_requirements"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "No own future image/manifest/bundle digest embedding; external image identity still missing",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/no_self_embedding_policy"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "Six schemas,1-128 dependencies and98304 manifest cap are candidates, not body/fit proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/schema_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "Baseline first entry does not discharge caller/constructor/platform enforcement",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/phase_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "Baseline/authors/proofs before W09; W10 reconciles same facts without forecast authority or reverse dependency",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/phase_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "Missing artifacts do not authorize implementation/build/measurement/execution; full per-attempt cost remains charged",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/authority_and_costs"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "R01/R06/R08 unassigned and three exits unaccepted without real evidence",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "K04/K05/K07/K15/K16, inherited certificate/caps and deferred CE12 preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/preserved_scope_and_gates"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "No real package/source/image/runtime/resource/admission/D5 promotion",
+      "subject": {
+        "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+        "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+        "json_pointer": "/current_effect"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 947,
+    "criteria": 16,
+    "source_paths": 6,
+    "closure_categories": 8,
+    "requirements": 10,
+    "baseline_requirements": 6,
+    "deferred_requirements": 4,
+    "policies": 7,
+    "schemas": 6,
+    "unassigned_review_roles": 3,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Negative dossier and authority",
+      "disposition": "W01/W02 and SD01 remain blocking. W03 review is documentary only and creates no sources/image/runtime, trusted baseline or accepted real evidence package. Missing sources do not authorize implementation/build/measurement/import/qualification."
+    },
+    {
+      "id": "N02",
+      "subject": "Different identity and evidence commitments",
+      "disposition": "Actual six-source digests, source-root/mapping, final external image bytes, complete runtime/P02 identity, compiled policy selection and implemented semantics need distinct genuine evidence. Document hashes, schema constants, historical I122/P02/P03 or auditor environment do not substitute for them."
+    },
+    {
+      "id": "N03",
+      "subject": "Baseline versus enforcement and resources",
+      "disposition": "IM01-IM06 are baseline; IM07/IM08 remain caller/platform W04 obligations, IM09 spans W05-W09 qualification/resources and IM10 belongs to W10 freeze. Baseline immutable first entry does not prove actual constructor/enforcement. No reverse acceptance dependency or implicit downstream acceptance is added."
+    },
+    {
+      "id": "N04",
+      "subject": "Antecedent authentication and freeze",
+      "disposition": "Actual baseline actor/image/caller/platform facts and complete proof authors/bodies must be authenticated before W09 resource acceptance. W10 reconciles the same accepted facts, not forecast authority; changes invalidate affected hashes/reviews and require requalification. No active refresh/rebind is applied."
+    },
+    {
+      "id": "N05",
+      "subject": "Costs, final route and independent roles",
+      "disposition": "Per-attempt verification/lookup/freshness/copies/registry/receipt/native/IO remains in complete phases/resources; caps or offline labels do not prove capacity/900. CE12 and final E06/Q/root/claim remain separate and unperformed. Same assistant review is not R01 attestation, independent R06 or separate R08 acceptance."
+    }
+  ],
+  "source_replay": {
+    "I229_candidate_and_preparation_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predictive_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_presence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "README_representation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "membership_as_load",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_bytes_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "image_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "auditor_as_target",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "phase_mapping",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "pin_as_compiled",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_embedding",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hash_as_implementation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "baseline_as_enforcement",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "forecast_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_implementation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_route",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_cost",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_or_capacity_promotion",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W03_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_sources_image_runtime_or_policy_implementation_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W03_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I229",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R01_attestation": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W03 review complete. Positive progress remains stopped at SD01 pending genuine authority, accepted dependencies and actual source/image/runtime evidence; no implementation, contact or operational work initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I230-I229-W03-REVIEW.md",
+      "docs/validation/D5-I230-I229-documentary-review.json",
+      "docs/validation/D5-I230-I229-source-reconstruction.json",
+      "docs/validation/D5-I230-audit.py",
+      "docs/validation/D5-I230-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I230-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W03_REVIEW_SOURCES_IMAGE_RUNTIME_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/policy/path-presence comparisons only; no product/components imports/build/compile/tests/benchmarks, codec/crypto positives, target/image/runtime/platform measurement, probes/clock/ledger/claim/processes/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W03 review unit with complete source pins, semantic comparisons, phase mapping, negative checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_baseline_adoption_implementation_build_or_execution_authority": true
+  }
+}
