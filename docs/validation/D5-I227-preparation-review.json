@@ -1,0 +1,170 @@
+{
+  "schema": "d5.i227-preparation-review.v1",
+  "increment": "I227",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "a715fb2310ce12f9bc3f29719e59f90b4917e20e",
+  "status": "PASS_STATIC_SOURCE_ONLY_W02_PEOPLE_ANCHORS_MISSING_W01_BLOCKED_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+    "sha256": "9971e7a50beb1ec59312aaeefd4a2a2d5758d3afe8db024716fe1495b147a037",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/1"
+  },
+  "counts": {
+    "input_pins": 932,
+    "roles": 8,
+    "additional_subject_categories": 5,
+    "evidence_requirements": 19,
+    "prior_or_provisional_requirements": 17,
+    "deferred_CE10_W12_approval_requirements": 1,
+    "deferred_CE08_W10_freeze_requirements": 1,
+    "separation_rules": 14,
+    "schema_fragments": 7,
+    "pending_exit_predicates": 3
+  },
+  "source_reconstruction": {
+    "I226_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "W01_or_SD01_bypassed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W02_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_human",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_anchor_digest",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_approvals",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_bootstrap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "prior_acceptance_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "human_software_collapsed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_author_preapproval",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_author_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_separation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_overlap_ban",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "preparation_cycle",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "execution_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W02_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_people_anchors_appointments_or_key_bindings_accepted": false,
+    "actual_real_evidence_package_created": false,
+    "actor_registry_finalized": false,
+    "anchor_registry_provisioned": false,
+    "positive_I191_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I225/I226",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W01 remains unaccepted and SD01 active. W02 is negative documentary preparation only; no positive dependency progress or actual evidence package.",
+    "No genuine humans/organizations/aliases/competence/appointments/anchors/keys/epochs/clock/revocation/proof bodies or independent decisions supplied. No real I191 record or registry is generated.",
+    "CE03 intake is provisional; actual W05-W08 authors must be authenticated before W09 acceptance. W10 final freeze only reconciles genuine facts and cannot provide forecast prior authority. CE10/W12 actual approvals are deferred and cannot bootstrap anchors.",
+    "Same assistant preparation and checks are not competent independent R06 review or separate R08 acceptance."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I227-W02-PEOPLE-AND-ANCHORS.md",
+      "docs/validation/D5-I223-W02-PEOPLE-AND-ANCHORS-CANDIDATE.json",
+      "docs/validation/D5-I227-audit.py",
+      "docs/validation/D5-I227-integrity.json",
+      "docs/validation/D5-I227-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I227-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W02_PEOPLE_ANCHORS_MISSING_W01_BLOCKED_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/role/policy checks only; no product/components, registry codec/crypto positives, execution/build/import/compile/tests/probes/clock/ledger/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W02 negative evidence dossier with source pins, role/separation/phase matrices, preservation and documentary checks; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_actual_identity_or_scope_acceptance_or_execution_authority": true
+  }
+}
