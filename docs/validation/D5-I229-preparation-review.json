@@ -1,0 +1,186 @@
+{
+  "schema": "d5.i229-preparation-review.v1",
+  "increment": "I229",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "dd241bbec9bedcc19349f04cd685187d150b08c8",
+  "status": "PASS_STATIC_SOURCE_ONLY_W03_SOURCES_IMAGE_RUNTIME_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+    "sha256": "6fedca86e4823b3daf2880199e61da3733278cbd1a9e6c8b6bcc6f1aab8f955d",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/2"
+  },
+  "counts": {
+    "input_pins": 942,
+    "source_paths": 6,
+    "closure_categories": 8,
+    "image_requirements": 10,
+    "baseline_requirements": 6,
+    "deferred_requirements": 4,
+    "policy_pins": 7,
+    "schema_fragments": 6,
+    "unassigned_role_slots": 3,
+    "pending_exit_predicates": 3
+  },
+  "source_reconstruction": {
+    "I228_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W03_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predictive_source_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_source_presence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "README_not_document",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "membership_as_load",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_bytes_as_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "image_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "auditor_runtime_as_target",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "document_pin_as_compiled",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_embedding",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "policy_hash_as_implementation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "baseline_as_platform",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "forecast_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_implementation_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_cost",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "execution_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W03_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_sources_image_runtime_or_policy_implementation_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I227/I228",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R01_attestation": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W01/W02 unaccepted and SD01 active; W03 is documentary missing-evidence preparation only, not actual source/image/runtime material or a real accepted package.",
+    "All source/image/runtime/build/dependency/mapping/external-policy-selection facts remain unavailable. P02/P03 historic dossiers and document pins do not qualify the successor or current auditor environment.",
+    "Caller/platform/resource qualification and final freeze remain separate. Actual baseline and proof authors/bodies must be authenticated before W09; W10 cannot retroactively authenticate them.",
+    "Same assistant checks do not provide competent R01 attestation, independent R06 review or separate R08 acceptance. No implementation, build, measurement, execution, signing, service or contact is performed."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I229-W03-SOURCES-IMAGE-RUNTIME.md",
+      "docs/validation/D5-I223-W03-SOURCES-IMAGE-RUNTIME-CANDIDATE.json",
+      "docs/validation/D5-I229-audit.py",
+      "docs/validation/D5-I229-integrity.json",
+      "docs/validation/D5-I229-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I229-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W03_SOURCES_IMAGE_RUNTIME_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/policy/path-presence checks only; no product/components imports/build/compile/tests/benchmarks, positive codec/crypto, image/runtime/platform measurement, clocks/ledger/claim/processes/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One negative W03 source/image/runtime dossier with exact pins, closure/mapping/phase matrices, documentary checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_baseline_acceptance_or_implementation_build_or_execution_authority": true
+  }
+}
