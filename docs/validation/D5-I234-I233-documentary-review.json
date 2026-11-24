@@ -1,0 +1,432 @@
+{
+  "schema": "d5.i234-i233-documentary-review.v1",
+  "increment": "I234",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "6a3f27548896147fe9e17b669f59a6d601baae98",
+  "status": "PASS_STATIC_SOURCE_ONLY_W05_REVIEW_REQUALIFICATION_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+    "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I234-I233-source-reconstruction.json",
+    "sha256": "fa405ea5debf4c86d8d3ed41f498e69f60b905bd9b8a39177bafa74022a79292",
+    "json_pointer": ""
+  },
+  "verdict": "W05_DOCUMENTARY_REQUALIFICATION_OBLIGATIONS_AND_PHASE_BOUNDARIES_CONSISTENT_SUCCESSOR_PROOF_MISSING_NOT_ACCEPTED",
+  "findings": [],
+  "finding_count": 0,
+  "criteria": [
+    {
+      "id": "RC01",
+      "criterion": "Exact three I223 W05 deliverables/exits and authority/rejection clauses",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/work_package_binding"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC02",
+      "criterion": "W03/W04 unaccepted and SD01 active; five review/custody roles unassigned",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/dependency_gate"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC03",
+      "criterion": "179 exact I120 operand obligations link to I119 census without successor mapping/proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/historical_operand_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC04",
+      "criterion": "321 exact historical roots and12 groups partition the historical indices only",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/historical_group_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC05",
+      "criterion": "30 exact I122 sites and draft/publication/alias/charge reasoning do not prove successor atomicity",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/historical_atomicity_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC06",
+      "criterion": "Historical CP03, lexical reachability, source-written repair and ten tests do not transfer",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/inherited_scope_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC07",
+      "criterion": "38 exact profile/custody/transport policy obligations preserved as requirements",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/policy_obligation_ledger"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC08",
+      "criterion": "12 route families require all new success/failure/transitive/process paths; not complete code census",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/new_path_family_requirements"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC09",
+      "criterion": "12 exact schema fragments are policy, not positive proof/BASIS/index/output records",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/schema_obligations"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC10",
+      "criterion": "Any prior qualification requires genuine exact separate permission/custody/provenance; none run",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/qualification_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC11",
+      "criterion": "W05 contributes derivations; W09 joint BASIS/index/atomicity/resource acceptance not advanced or reverse dependency",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/basis_index_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC12",
+      "criterion": "W06 memory/lifetimes handoff remains without actual allocation proof",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/resource_handoff/0"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC13",
+      "criterion": "W07 work/units/all30 correspondence distinct from12 root groups/30 sites and old counts",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/resource_handoff/1"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC14",
+      "criterion": "W08 exact True wait return/finally/service/900 handoff remains unproved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/resource_handoff/2"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC15",
+      "criterion": "Both Reader ledgers and all per-attempt costs in full scope; unknowns not zero",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/cost_and_scope_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC16",
+      "criterion": "Actual baseline/authors/bodies before W09; future E06/root/bundle/freeze not sole antecedent",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/phase_and_authority_boundary"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC17",
+      "criterion": "Three exits and genuine independent reviews remain pending; no actual package or records",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/exit_predicate_dispositions"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    },
+    {
+      "id": "RC18",
+      "criterion": "No quota/resource/execution/gate/D5 promotion; inherited certificate and deferred CE12 preserved",
+      "subject": {
+        "path": "docs/validation/D5-I223-W05-SUCCESSOR-REQUALIFICATION-CANDIDATE.json",
+        "sha256": "99ace6d2850b75d1df3221b6cc0c16147dda0c13dd9bc035edafed931591c59e",
+        "json_pointer": "/preserved_scope_and_gates"
+      },
+      "result": "DOCUMENTARY_CONSISTENCY_CONFIRMED_NOT_REAL_ACCEPTANCE"
+    }
+  ],
+  "counts": {
+    "input_pins": 967,
+    "criteria": 18,
+    "historical_operands": 179,
+    "historical_roots": 321,
+    "historical_root_groups": 12,
+    "historical_atomic_sites": 30,
+    "policy_obligations": 38,
+    "new_path_families": 12,
+    "schema_fragments": 12,
+    "resource_consumers": 3,
+    "unassigned_role_slots": 5,
+    "pending_exits": 3
+  },
+  "documentary_clarifications": [
+    {
+      "id": "N01",
+      "subject": "Historical obligations versus successor proof",
+      "disposition": "179/321/12/30 are exact historical reference obligations with null successor mapping/derivation/acceptance. Lexical reachability, inherited CP03, source-written atomicity, ten test names or typed flags do not recertify the successor. New closure/routes may require additional obligations; old counts are not an exhaustive new code census."
+    },
+    {
+      "id": "N02",
+      "subject": "Policy families and complete coverage",
+      "disposition": "38 policy rows,12 route families and12 schema fragments are requirements, not actual complete code/path/test inventories or emitted positive records. All effective success/failure/rejection/timeout/cleanup/fallback/transitive/guard/process/native/crypto/Reader/output work needs genuine source mapping, assumptions and complete proof bodies."
+    },
+    {
+      "id": "N03",
+      "subject": "W05 handoff and W09 joint acceptance",
+      "disposition": "W05 contributes source/operand/atomicity/coverage derivations for W06 allocations/lifetimes, W07 complete work/units/all30 correspondence and W08 phases/service. W09 performs joint genuine BASIS/index/atomicity/scope/resource acceptance after W06-W08. No accepted E01-E05 flag or reverse W05 dependency is created. Root groups, atomic sites and all30 work groups remain distinct."
+    },
+    {
+      "id": "N04",
+      "subject": "Qualification, final route and provenance",
+      "disposition": "Prior qualification is usable only if genuine exact separate permission and R04 custody/R05 separate review/R06 provenance exist; none are supplied or executed. Final E06 is distinct and deferred. Binding order manifest then final raw/review/seal then payload/Q/root does not require a future root to authenticate an antecedent run. No future freeze/bundle/root/final result is sole prior proof."
+    },
+    {
+      "id": "N05",
+      "subject": "Authority, resources and independence",
+      "disposition": "W03/W04 unaccepted and SD01 active; all real authors/baselines/bodies must be authenticated before W09. Both Readers and all per-attempt costs remain in complete resource/phase composition; no unknown zero, hidden helper/read, quota/reserve change or proof of successful900. Same assistant checks do not provide competent independent R03/R05/R06, R04 run custody or separate R08 acceptance."
+    }
+  ],
+  "source_replay": {
+    "I233_candidate_and_preparation_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W05_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "counts_as_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "lexical_as_value",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_case",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "root_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_atomicity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "code_as_atomicity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_coverage",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_failure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "qualification_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_run",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "ten_tests_as_suite",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "request_collapse",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_request",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_proof_record",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "truncated_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "group_collapse",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_final_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_as_antecedent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_input",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_effect",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W05_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_successor_operand_root_atomicity_route_or_resource_evidence_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W05_documentary_reviewed": true
+  },
+  "provenance": {
+    "preparer_and_reviewer": "Same Codex assistant/chat as I233",
+    "methodological_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R04_execution_custody": false,
+    "competent_R05_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts": false
+  },
+  "next_step": "Documentary W05 review complete. Positive progress remains stopped at SD01 pending genuine authority, accepted W03/W04 baseline and complete successor proof/qualification evidence; no implementation, qualification, contact or operational work initiated.",
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I234-I233-W05-REVIEW.md",
+      "docs/validation/D5-I234-I233-documentary-review.json",
+      "docs/validation/D5-I234-I233-source-reconstruction.json",
+      "docs/validation/D5-I234-audit.py",
+      "docs/validation/D5-I234-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I234-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W05_REVIEW_REQUALIFICATION_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/historical-inventory/policy/phase comparisons only; no product/components imports/build/compile/test discovery/tests/benchmarks, codec/crypto positives, scheduler/platform/clock/ledger/claim/process/replay/crash/restart/probes/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W05 review with exact pins, independently checked historical references and group partition, policy/phase/handoff comparisons, negative checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_qualification_source_proof_or_execution_authority": true
+  }
+}
