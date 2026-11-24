@@ -1,0 +1,219 @@
+{
+  "schema": "d5.i235-preparation-review.v1",
+  "increment": "I235",
+  "date": "2026-11-24",
+  "timezone": "Europe/Madrid",
+  "base_commit": "78e5eac02d31c97fd611f66d050938825073bae9",
+  "status": "PASS_STATIC_SOURCE_ONLY_W06_HEAP_LIFETIMES_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+    "sha256": "222e3e4edbb3260dd4db51c6ecd114e127b8d1c2bc357bf338fc7f22e09eb900",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/5"
+  },
+  "counts": {
+    "input_pins": 972,
+    "owner_requirements": 11,
+    "historical_allocation_classes": 132,
+    "owner_pairs": 55,
+    "historical_directed_boundaries": 110,
+    "new_memory_families": 8,
+    "lifetime_phase_families": 8,
+    "unassigned_review_roles": 2,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I234_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "dependency_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W06_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "budget_as_bound",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_object_size",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_pair_resolution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partial_as_infeasibility",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "generational_shortcut",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "RSS_or_payload_as_heap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "H02_as_coordinator",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unproved_joint_host_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "immediate_release",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_original_child",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "alias_discount",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_as_complete_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_sum_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_requested_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_committed_bound",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "peak_subtraction",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_as_capacity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_capacity_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_to_force_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "heap_as_all_resources",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_profiling",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W06_documentary_prepared": true,
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_owner_heap_lifetime_rollup_capacity_or_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_heap_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY"
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I233/I234",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W01-W05 remain unaccepted and SD01 active. W06 is a negative memory requirement dossier, not actual allocation traces/complete owner bounds or an accepted package.",
+    "Eleven historical owners,132 classes and55 pairs/110 directed references are coverage obligations, not a complete successor inventory. Exact allocations, object sizes/cardinality/lifetimes/native/GC/allocator mapping, joint process scope and all proof bodies/authors remain absent.",
+    "Requested/committed sums, fits/slack and W04 actual availability stay unknown. Candidate11/12GiB and832MiB/1GiB reserves/overhead are not measured demand/capacity; no reserve transfer. H04 partial model proves neither whole upper nor minimum demand/infeasibility.",
+    "W06 feeds memory evidence to W08/W09 without CPU/service/900/E01-E05 closure or a reverse dependency. Same assistant checks do not provide independent R03 review or separate R08 acceptance."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I235-W06-SUCCESSOR-HEAP-LIFETIMES.md",
+      "docs/validation/D5-I223-W06-SUCCESSOR-HEAP-LIFETIMES-CANDIDATE.json",
+      "docs/validation/D5-I235-audit.py",
+      "docs/validation/D5-I235-integrity.json",
+      "docs/validation/D5-I235-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I235-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W06_HEAP_LIFETIMES_MISSING_SD01_ACTIVE_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/owner/class/pair/budget checks only; no product/components imports/build/compile/test discovery/tests/benchmarks, heap sampling/profiling/introspection, codec/crypto positives, clock/ledger/claim/process/probe/signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W06 negative heap/lifetime dossier with exact owner/class/pair obligations, successor families, rollup rules, pins/checks and preservation; overage declared. No PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_heap_capacity_attestation_or_execution_authority": true
+  }
+}
