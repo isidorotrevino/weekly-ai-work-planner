@@ -1,0 +1,278 @@
+{
+  "schema": "d5.i243-preparation-review.v1",
+  "increment": "I243",
+  "date": "2026-11-25",
+  "timezone": "Europe/Madrid",
+  "base_commit": "e9a8c2e3f77b866e15c88bbf7aefae5239a199eb",
+  "status": "PASS_STATIC_SOURCE_ONLY_W10_FINAL_ANTECEDENTS_MISSING_NOT_FROZEN_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W10-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+    "sha256": "10b55594c9a1f7ebb31b3b65df8fb10f7e58ec6758d554acf1be06a09fb3afc9",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/9"
+  },
+  "counts": {
+    "input_pins": 1012,
+    "antecedent_record_requirements": 4,
+    "required_top_level_field_slots": 61,
+    "nested_schema_requirements": 8,
+    "contract_rules": 10,
+    "inherited_freeze_policies": 6,
+    "W09_reconciliation_requirements": 10,
+    "separation_requirements": 14,
+    "unassigned_review_roles": 5,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I242_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W10_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_authors",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_intake_completeness",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "truncated_arrays",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "software_as_human",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "synthetic_preparer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_record_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_body_size_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "slot_as_positive_record",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "record_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "record_cap_as_quota",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "cap_as_completeness",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_count_as_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unavailable_body",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_snapshot",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "DAG_as_actual_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predicted_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "image_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_source_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "membership_as_loaded",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "named_policy_as_implemented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "cross_hash_mismatch_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "host_date_as_runtime",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "plan_extends_expiry",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "clock_snapshot_creation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unchecked_reconciliation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "retroactive_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "backward_acceptance_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "silent_hash_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_rebind",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_new_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "Reader_heap_scope_omission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_root_as_antecedent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_C_or_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_build_execution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_sampling",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W10_documentary_prepared": true,
+    "W10_accepted": false,
+    "actual_final_antecedents_created_authenticated_or_frozen": false
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I241/I242",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R01_review": false,
+    "competent_R02_review": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W02-W09 remain unaccepted; SD01 active. W10 is a negative documentary specification, not actual final records, immutable snapshots, authentic identities or accepted freeze.",
+    "All four bodies,61 fields, nested evidence closures, real authors, bytes/hashes/caps/epoch/validity/custody/reviews and10 reconciliations remain missing. Serialized caps and documentary DAG prove no resource or currentness guarantee.",
+    "W10 may not retroactively authenticate W09 or transfer proofs after changed facts. Later C/bundle/mapping/gates/E06/root/claim/receipt remain separate; no refresh or active rebind applied.",
+    "Same-assistant preparation is not competent R01/R02/R03/R06 review or separate R08 acceptance. No build/enrollment/signing/product/components/crypto/codec/probes or measurements; no quotas/reserves/bindings change."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I243-W10-FINAL-ANTECEDENT-FREEZE.md",
+      "docs/validation/D5-I223-W10-FINAL-ANTECEDENT-FREEZE-CANDIDATE.json",
+      "docs/validation/D5-I243-audit.py",
+      "docs/validation/D5-I243-integrity.json",
+      "docs/validation/D5-I243-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I243-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W10_FINAL_ANTECEDENTS_MISSING_NOT_FROZEN_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/schema/field/DAG/role/scope checks and in-memory document mutations only. No target import/compile/discovery/tests/runs/build, positive crypto/codec, signing/keygen/enrollment/provisioning, clock/CPU/IO/service/platform/ledger/claim/replay/process sampling/probes or contacts.",
+    "over400_lines": true,
+    "reason": "One W10 negative freeze dossier with exact record/schema/policy requirements, reconciliation, pins, rejection checks and preservation. Overage declared; no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_actual_freeze_identity_attestation_acceptance_or_execution_authority": true
+  }
+}
