@@ -1,0 +1,770 @@
+{
+  "schema": "d5.i252-documentary-review.v1",
+  "increment": "I252",
+  "date": "2026-11-25",
+  "timezone": "Europe/Madrid",
+  "base_commit": "6520ef6ecb4083b96ba00126c75eb3bd815c8451",
+  "status": "PASS_STATIC_SOURCE_ONLY_I251_ACQUISITION_PLAN_REVIEW_GENUINE_EVIDENCE_AND_ACCEPTANCE_PENDING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I251-GENUINE-EVIDENCE-ACQUISITION-PLAN.json",
+    "sha256": "6e6b44d8ee4a4c3964a6ed4004b91fa22528190e68492d8b5d951ba8b8cd48fa",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I252-I251-source-reconstruction.json",
+    "sha256": "44538a154512d2e9a3f4ab9d228f061ec169c7d6bacfd82465c7b79586e65686",
+    "json_pointer": ""
+  },
+  "verdict": "NO_NEW_DOCUMENTARY_DEFECT_FOUND_ACQUISITION_PLAN_CONSISTENT_GENUINE_EVIDENCE_AND_ACCEPTANCE_NOT_OBTAINED",
+  "findings": [],
+  "criteria": [
+    {
+      "id": "RV01",
+      "criterion": "Eight finite lots cover all thirteen W packages exactly once with eight unsent requests and seven genuine milestones.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV02",
+      "criterion": "Every primary review role, separate R08, deliverable and rejection requirement remains bound to I223 and W checklists.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV03",
+      "criterion": "Independent transitive graph check preserves all W edges including internal A05 and A07 order without backward authentication.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV04",
+      "criterion": "A01 needs genuine preexisting scope/reviewer authority, never future A02 appointments or A07 signatures as its sole basis.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV05",
+      "criterion": "A02 is provisional identity intake, retaining all exclusions and qualified R01/R02 overlap, not final author completeness.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV06",
+      "criterion": "A03 distinguishes existing qualified genuine six-source/image/runtime material from separately authorized missing implementation/build/qualification.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV07",
+      "criterion": "A04 requires enforceable exact caller/platform/capacity/service/clock/global-ledger premises before expensive derived proofs.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV08",
+      "criterion": "W05 successor 179/321/12/30 and new routes need requalification; historical CP03 and written atomicity do not transfer.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV09",
+      "criterion": "W06 requires all eleven heap/lifetime owners, overhead, compatible availability and real fit; budgets/reserves are not evidence.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV10",
+      "criterion": "W07 requires all thirty work groups, compatible CPU/IO/service units and full global costs, not ten activities or scalar counts.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV11",
+      "criterion": "W08 keeps t0/tR/exact-True tW/tF, successful cleanup and 60/750/60+30 with service/liveness proof, not watchdog success.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV12",
+      "criterion": "A06 preserves five obligations/twenty criteria and seven index proof kinds plus separate BASIS review, with authentic authors/baseline before W09.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV13",
+      "criterion": "A07 final freeze reconciles the same prior facts; changed scope/authority invalidates affected A01-A08 without retrospective acceptance.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV14",
+      "criterion": "W10-W12 retain complete roster/caps, exact C and acceptance, three same-core domain approvals and intrinsic global mapping.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV15",
+      "criterion": "Thirty gate mappings preserve every exact producer and close-only-if; W13 is current output, not its own accepted predecessor.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV16",
+      "criterion": "Five resource rows preserve complete exact requirements and producer lots; no partial positive becomes joint closure.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV17",
+      "criterion": "Mandatory returns include complete bodies, provenance, all assumptions, canonical roles, independent decisions and currentness.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV18",
+      "criterion": "Unknown actual material/reference inventory remains null; templates, hashes, flags, signatures and budgets do not establish truth.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV19",
+      "criterion": "Thirteen future operational action classes remain unauthorized; no selected people, contact channels, delivery facts or dates are invented.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV20",
+      "criterion": "Four preclaim prerequisites and actual claim/construction before private receipt remain separate from prelaunch acceptance.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV21",
+      "criterion": "Both Readers, new paths and failures retain complete global heap/work/IO/crypto/service/phase costs and unchanged reserves.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV22",
+      "criterion": "SD01 and eight stop rules preserve no admission without asserting global material absence or infeasibility.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV23",
+      "criterion": "Actual external evidence, canonical appointments, eligible independent review and acceptance remain absent despite publication.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV24",
+      "criterion": "I122/CP07/component/PJC115-R2/D5/IR03 negative state is preserved with no authority, destination, quota or runtime changes.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    }
+  ],
+  "independent_reconstruction": {
+    "lot_to_work_packages": {
+      "A01": [
+        "W01"
+      ],
+      "A02": [
+        "W02"
+      ],
+      "A03": [
+        "W03"
+      ],
+      "A04": [
+        "W04"
+      ],
+      "A05": [
+        "W05",
+        "W06",
+        "W07",
+        "W08"
+      ],
+      "A06": [
+        "W09"
+      ],
+      "A07": [
+        "W10",
+        "W11",
+        "W12"
+      ],
+      "A08": [
+        "W13"
+      ]
+    },
+    "lot_graph": {
+      "A01": [],
+      "A02": [
+        "A01"
+      ],
+      "A03": [
+        "A01",
+        "A02"
+      ],
+      "A04": [
+        "A02",
+        "A03"
+      ],
+      "A05": [
+        "A03",
+        "A04"
+      ],
+      "A06": [
+        "A02",
+        "A03",
+        "A04",
+        "A05"
+      ],
+      "A07": [
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "A08": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ]
+    },
+    "gate_producer_lots": {
+      "FAMILY-ANCHOR_REGISTRY": [
+        "A02"
+      ],
+      "FAMILY-ACTOR_REGISTRY": [
+        "A02",
+        "A07"
+      ],
+      "FAMILY-IMAGE_MANIFEST": [
+        "A03",
+        "A07"
+      ],
+      "FAMILY-CALLER_IDENTITY": [
+        "A04",
+        "A07"
+      ],
+      "FAMILY-PLATFORM_CUSTODY": [
+        "A04",
+        "A06",
+        "A07"
+      ],
+      "FAMILY-ACCEPTANCE_RECORD": [
+        "A06",
+        "A07"
+      ],
+      "FAMILY-CUSTODY_BUNDLE": [
+        "A02",
+        "A07"
+      ],
+      "RULE-K01": [
+        "A02",
+        "A07"
+      ],
+      "RULE-K02": [
+        "A02",
+        "A07"
+      ],
+      "RULE-K03": [
+        "A02",
+        "A05",
+        "A07"
+      ],
+      "RULE-K04": [
+        "A03",
+        "A05",
+        "A07"
+      ],
+      "RULE-K05": [
+        "A03",
+        "A07"
+      ],
+      "RULE-K06": [
+        "A04",
+        "A06",
+        "A07"
+      ],
+      "RULE-K07": [
+        "A04",
+        "A05"
+      ],
+      "RULE-K08": [
+        "A07"
+      ],
+      "RULE-K09": [
+        "A07"
+      ],
+      "RULE-K10": [
+        "A02",
+        "A07"
+      ],
+      "RULE-K11": [
+        "A07"
+      ],
+      "RULE-K12": [
+        "A05",
+        "A06",
+        "A07",
+        "A08"
+      ],
+      "RULE-K13": [
+        "A02",
+        "A04",
+        "A07",
+        "A08"
+      ],
+      "RULE-K14": [
+        "A04",
+        "A05",
+        "A07"
+      ],
+      "RULE-K15": [
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "RULE-K16": [
+        "A01",
+        "A03",
+        "A07",
+        "A08"
+      ],
+      "G01": [
+        "A02",
+        "A07",
+        "A08"
+      ],
+      "G02": [
+        "A02",
+        "A03",
+        "A04",
+        "A06",
+        "A07",
+        "A08"
+      ],
+      "G03": [
+        "A01",
+        "A03",
+        "A05",
+        "A06",
+        "A07",
+        "A08"
+      ],
+      "G04": [
+        "A04",
+        "A07",
+        "A08"
+      ],
+      "G05": [
+        "A08"
+      ],
+      "G06": [
+        "A01",
+        "A08"
+      ],
+      "G07": [
+        "A01",
+        "A06",
+        "A08"
+      ]
+    },
+    "resource_producer_lots": {
+      "E01": [
+        "A01",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "E02": [
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "E03": [
+        "A03",
+        "A05",
+        "A06"
+      ],
+      "E04": [
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "E05": [
+        "A04",
+        "A05",
+        "A06"
+      ]
+    },
+    "next_unsent_request": "RQ01",
+    "next_after_genuine_A01_acceptance": "RQ02",
+    "actual_material_packages": 0,
+    "actual_lots_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0
+  },
+  "counts": {
+    "input_pins": 1057,
+    "acquisition_lots": 8,
+    "unsent_requests": 8,
+    "work_packages": 13,
+    "milestones": 7,
+    "prelaunch_gates": 30,
+    "resource_obligations": 5,
+    "resource_criteria": 20,
+    "review_criteria": 24,
+    "future_authority_requirements": 13,
+    "actual_material_packages": 0,
+    "actual_lots_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0
+  },
+  "inherited_I251_rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "material_as_obtained",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "draft_sent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "draft_not_draft",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_provider",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_acceptor",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_delivery",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "completion_guarantee",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "lot_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_A02_as_entry_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_service_premises_skipped",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reverse_heap_work_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_author_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "freeze_as_prior_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "silent_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_accepted_predecessor",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "entry_self_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_material_fetch",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "synthetic_source_substitute",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "document_template_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_value_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "new_runtime_schema",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_contact_handoff",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_operation_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reference_closure_verified",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "workflow_as_actual_decision",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "gate_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "resource_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "more_documentary_passes_as_material",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "calendar_guarantee",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "global_infeasibility_from_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_external_evidence_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_route_as_prelaunch_precondition",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_route_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_contact",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_provisioning_crypto",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_product_run",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_active_configuration",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "additional_I252_rejection_checks": [
+    {
+      "case": "lot_omission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "lot_dependency_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "work_coverage_duplicated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "primary_reviewer_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "separate_role_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "request_sent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_granted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "fabricated_provider",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "fabricated_duration",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "package_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "coverage_source_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "gate_omission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "producer_lot_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "close_predicate_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "resource_omission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "resource_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_before_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A02_authority_skipped",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "milestone_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_operation_authorized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "inventory_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "genuine_review_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "deferred_receipt_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_applied",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_promoted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "assistant_as_independent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "clarifications": [
+    "Review is methodological by the same assistant; no R06 or R08 decision, canonical appointment, material delivery or actual acceptance is made.",
+    "Next real input is preexisting scope/reviewer authority for RQ01, then RQ02 only after genuine A01 acceptance. Requests remain local unsent drafts with no recipient or contact authority.",
+    "A03 qualified existing artifacts and A04 enforceable platform premises are early feasibility decisions; missing material requires exact separate scope/authority, never synthetic evidence or an implicit run.",
+    "Seven index proof kinds are E01-E05,CP03,ATOMICITY; BASIS has a separate R06 basis review. The A06 wording does not collapse BASIS into an eighth index proof or waive it.",
+    "All actual authors and baseline facts must already be authenticated before A06/W09. A07 final freeze reconciles identical facts and cannot retroactively provide their sole authority.",
+    "Thirty prelaunch gates and five resource obligations remain pending; CE12 and final execution authority remain separately deferred. Another documentary PASS is no substitute for genuine material."
+  ],
+  "source_reconstruction": {
+    "primary_source_checks": true,
+    "I251_candidate_and_preparation_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W10_accepted": false,
+    "actual_final_antecedents_created_authenticated_or_frozen": false,
+    "W11_accepted": false,
+    "actual_exact_C_or_custody_acceptance_projected_created_or_issued": false,
+    "W12_accepted": false,
+    "actual_bundle_approvals_global_mapping_or_intrinsic_constructor_verified_or_created": false,
+    "W13_accepted": false,
+    "actual_prelaunch_checklist_or_handoff_closed_or_execution_released": false,
+    "I251_acquisition_plan_and_unsent_drafts_prepared": true,
+    "actual_material_obtained_or_independent_acceptance_or_lot_completion": false,
+    "provider_contact_or_nomination_done": false,
+    "actual_sources_implementation_or_build_created": false,
+    "actual_acquisition_lots_accepted": 0,
+    "I251_acquisition_plan_documentary_reviewed": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I251",
+    "documentary_review_only": true,
+    "actor_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I252-I251-GENUINE-EVIDENCE-PLAN-REVIEW.md",
+      "docs/validation/D5-I252-I251-documentary-review.json",
+      "docs/validation/D5-I252-I251-source-reconstruction.json",
+      "docs/validation/D5-I252-audit.py",
+      "docs/validation/D5-I252-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I252-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_I251_ACQUISITION_PLAN_REVIEW_GENUINE_EVIDENCE_AND_ACCEPTANCE_PENDING_NOT_ADMITTED",
+    "runtime_harness": "N/A: source-only documentary JSON/Git/hash/graph/roles/coverage checks and in-memory documentary mutations. No product/component import, compilation, execution, discovery, tests, build, benchmark, crypto, signing, provisioning, contact, platform/clock/ledger/CPU/IO/endpoint probes or active configuration.",
+    "over400_lines": true,
+    "reason": "Single review unit with source pins, primary reconstruction, rejection checks and preservation; overage declared, no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_evidence_acceptance_authority_execution_or_D5_closure": true
+  }
+}
