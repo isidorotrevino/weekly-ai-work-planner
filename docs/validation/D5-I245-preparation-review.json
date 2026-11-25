@@ -1,0 +1,285 @@
+{
+  "schema": "d5.i245-preparation-review.v1",
+  "increment": "I245",
+  "date": "2026-11-25",
+  "timezone": "Europe/Madrid",
+  "base_commit": "cb96bff2667d476f19b1ddf8c2b24883b12cadbf",
+  "status": "PASS_STATIC_SOURCE_ONLY_W11_C_ACCEPTANCE_AND_ACCEPTED_FACTS_MISSING_NOT_ADMITTED",
+  "candidate": {
+    "path": "docs/validation/D5-I223-W11-EXACT-C-ACCEPTANCE-CANDIDATE.json",
+    "sha256": "92c556ee8e96de87648c6de67030d46859ce2a9b97601cdc734e204db71d2bf6",
+    "json_pointer": ""
+  },
+  "work_package": {
+    "path": "docs/validation/D5-I223-PRELAUNCH-RESOURCE-CLOSURE-PLAN.json",
+    "sha256": "89f8988e4324c0dcd718780c7bb550227e6f030c7a7b93bd3afca9506fb9d7c6",
+    "json_pointer": "/work_packages/10"
+  },
+  "counts": {
+    "input_pins": 1022,
+    "C_field_requirements": 19,
+    "acceptance_field_requirements": 27,
+    "shared_types": 14,
+    "exact_value_projections": 13,
+    "validity_containment_requirements": 1,
+    "shared_transitive_definitions": 6,
+    "antecedent_hash_requirements": 4,
+    "prior_acceptance_evidences": 5,
+    "predicate_requirements": 12,
+    "W11_predicates": 10,
+    "W12_deferred_predicates": 2,
+    "contract_rules": 6,
+    "unassigned_review_roles": 5,
+    "pending_exits": 3
+  },
+  "source_reconstruction": {
+    "I244_reconstruction_and_review_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W11_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reviews_as_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_identity_roster",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "truncated_preparers",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_C_body",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_C_size_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "C_cap_as_quota",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "schema_constant_as_C_fact",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "type_match_as_value_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_projection",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "validity_forced_equal",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_containment",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "nonconservative_clock",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "constants_as_evidence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_bundle_hash_in_C",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "custody_as_resource_admission",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predicted_antecedent_hash",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "prior_evidence_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predicate_verified",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partial_C_digest",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "standalone_acceptance_signature",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "extra_C_in_signed_core",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_bundle_validity",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_bundle_as_prior_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_selected_anchor",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "requester_domain_mismatch",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "runtime_scope_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unchecked_value_provenance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "automatic_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_rebind",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "free_projection_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "serialized_cap_as_resource_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_root_as_antecedent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "backward_W12_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_wire_C_or_root",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_codec_or_product_execution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_clock_probe",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W10_accepted": false,
+    "actual_final_antecedents_created_authenticated_or_frozen": false,
+    "W11_documentary_prepared": true,
+    "W11_accepted": false,
+    "actual_exact_C_or_custody_acceptance_projected_created_or_issued": false
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I243/I244",
+    "documentary_preparer_only": true,
+    "actor_independent": false,
+    "competent_R01_review": false,
+    "competent_R02_review": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W09/W10 remain unaccepted, actual prior proofs and final frozen records missing, SD01 active. No positive C or custody acceptance is instantiated, issued or accepted.",
+    "Fourteen type equalities and six transitive definitions are static requirements only. Thirteen exact value projections, validity containment,46 body fields, four antecedent hashes and five prior evidences lack actual complete bodies and competent decisions.",
+    "Acceptance has no standalone signature; future CE10 covers its exact C digest indirectly and cannot supply sole prior authentication. No extra C/bundle-validity field is defined. Host/client time is not trusted runtime evidence.",
+    "Same-assistant preparation is not independent competent review or R08 acceptance. No positive codec/crypto/C issuance, product/components/build/probes or clock/platform/service selection, quota/reserve/binding changes."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I245-W11-EXACT-C-ACCEPTANCE.md",
+      "docs/validation/D5-I223-W11-EXACT-C-ACCEPTANCE-CANDIDATE.json",
+      "docs/validation/D5-I245-audit.py",
+      "docs/validation/D5-I245-integrity.json",
+      "docs/validation/D5-I245-preparation-review.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I245-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W11_C_ACCEPTANCE_AND_ACCEPTED_FACTS_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/schema/type-reference/projection/scope and in-memory document checks only. No target import/compile/discovery/tests/runs/build, positive codec/crypto, signing/keygen/enrollment/provisioning, clock/CPU/IO/service/platform/ledger/claim/replay/process sampling/probes or contacts.",
+    "over400_lines": true,
+    "reason": "One W11 negative C/acceptance dossier with exact schemas/type/value/proof/predicate requirements, pins, rejection checks and preservation. Overage declared; no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_C_issuance_custody_acceptance_resource_admission_or_execution_authority": true
+  }
+}
