@@ -1,0 +1,747 @@
+{
+  "schema": "d5.i256-documentary-review.v1",
+  "increment": "I256",
+  "date": "2026-11-25",
+  "timezone": "Europe/Madrid",
+  "base_commit": "b01db76fdfaf658fc899c24b7f188f19757a03db",
+  "status": "PASS_STATIC_SOURCE_ONLY_A02_RQ02_REVIEW_A01_UNACCEPTED_PEOPLE_ANCHORS_AND_GENUINE_DECISIONS_PENDING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I251-A02-RQ02-PEOPLE-APPOINTMENTS-ANCHORS-CANDIDATE.json",
+    "sha256": "0bdfc3348a9a5b8a479991912978173914294037a8bf2f05e2e60ee374dc226f",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I256-I255-source-reconstruction.json",
+    "sha256": "0dceb95613b9d11844460dd99a66b8560efbd7dac9435844cc28e5cab0553a37",
+    "json_pointer": ""
+  },
+  "verdict": "NO_NEW_DOCUMENTARY_DEFECT_FOUND_CONDITIONAL_A02_RQ02_CONSISTENT_GENUINE_PEOPLE_ANCHORS_AND_ACCEPTANCE_MISSING",
+  "findings": [],
+  "criteria": [
+    {
+      "id": "RV01",
+      "criterion": "A02/RQ02 preserves exact I251 lot,W02 requirements,A01 dependency and current negative predecessor state.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV02",
+      "criterion": "Preparing documents is authorized without sending or starting positive intake; I253/I254 PASS does not accept A01.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV03",
+      "criterion": "Eight roles preserve exact decision/competence scopes,appointments,purpose/key requirements and unknown actual people.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV04",
+      "criterion": "Five subject categories cover source authors,all preparers,requester,proof authors/providers and custodians/signatories.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV05",
+      "criterion": "Canonical humans/organizations/aliases/collisions require genuine authority; software principal,assistant or Git labels are not human identities.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV06",
+      "criterion": "Competence and genuine appointment are scope/validity bound; authors/providers do not automatically become R03/R06/R08.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV07",
+      "criterion": "Fourteen identity/key separation requirements remain exact; R01/R02 qualified overlap and separate role-domain approvals retain their proper phase.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV08",
+      "criterion": "Independent anchor origin,provisioning,prior acceptance and external expected digest/epochs/policy preexist supplied registry bytes.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV09",
+      "criterion": "Repo,C,bundle,root,supplied key,self-signature,TOFU,stale cache or hidden fetch cannot bootstrap trust.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV10",
+      "criterion": "Purpose/key_id uniqueness and sorting,canonical actors,three domains and one NUL remain exact policy,not actual signatures.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV11",
+      "criterion": "Closed schemas and proposed registry caps remain requirements with no trimming or cap-to-fit/resource proof inference.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV12",
+      "criterion": "Trusted interval/currentness/epoch/revocation rules are preserved; host date is not freshness and offline status promises no instantaneous revocation.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV13",
+      "criterion": "Nineteen requirements are traced directly to normative sources; seventeen apply now and two remain deferred.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV14",
+      "criterion": "AP08 anchor policy/provisioning/acceptance is prior; AP08 actual same-core three-role bundle approvals belong to W12 and cannot authenticate own anchors.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV15",
+      "criterion": "IR01-IR08 identity intake is provisional; IR09 complete final actors/preparers/registry belongs to W10,without future-author preapproval.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV16",
+      "criterion": "Known authors/bodies and baseline authentication precede W09; W10 final freeze cannot authenticate resources retrospectively.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV17",
+      "criterion": "Historical source metadata is frozen provenance,not current dossier absence or actual approval; existing CE dossiers supply no genuine material.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV18",
+      "criterion": "Six returns and fourteen criteria cover all three W02 deliverables/exits with IT01 authority and IT06 genuine primary/separate decisions.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV19",
+      "criterion": "Own documentary contribution tracking creates no enrolled human,authorship proof,positive preparation record or final preparer completeness.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV20",
+      "criterion": "Preparation records retain genuine contribution/profile/schema requirements and no backpins to C/acceptance/bundle/future root.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV21",
+      "criterion": "Complete evidence inventory,reference instances,bytes/digests/provenance/assumptions/currentness/reviews remain required; templates/hashes/flags are not truth.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV22",
+      "criterion": "Zero actual supplied/rejected/evaluated material and null inventory do not establish acceptance or global absence/infeasibility.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV23",
+      "criterion": "Both Readers and global resource joins retain all lookup/crypto/native/IO/registry/receipt/failure costs,unchanged quotas and reserves.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV24",
+      "criterion": "Changed identity,alias,author,body,epoch/key/policy/revocation invalidates affected reviews without automatic appointment/proof transfer or active rebind.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV25",
+      "criterion": "A03/RQ03 remains stopped,requiring genuine A01 and A02 first; no contact or downstream acceptance is authorized.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV26",
+      "criterion": "CE12 remains deferred and final execution is not a new prelaunch condition; four preclaim prerequisites then actual claim/construction precede receipt.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV27",
+      "criterion": "Same assistant review is not genuine competent R06 or separate R08 acceptance and creates no authority or operational action.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV28",
+      "criterion": "I122/CP07/component/PJC115-R2/D5/IR03 negative state remains intact without product/component execution or quota change.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    }
+  ],
+  "independent_reconstruction": {
+    "role_decision_scopes": {
+      "R01": [
+        "RUNTIME_ATTESTATION"
+      ],
+      "R02": [
+        "PLATFORM_ATTESTATION"
+      ],
+      "R03": [
+        "RESOURCE_ACCEPTANCE"
+      ],
+      "R04": [
+        "QUALIFYING_COMPONENT_EXECUTION",
+        "FINAL_COMPONENT_EXECUTION"
+      ],
+      "R05": [
+        "COMPONENT_EVIDENCE_ACCEPTANCE"
+      ],
+      "R06": [
+        "S01_SCOPE_ADOPTION",
+        "PACKAGING_REVIEW"
+      ],
+      "R07": [
+        "AUTHORITY_ISSUANCE"
+      ],
+      "R08": [
+        "SEPARATE_ADMISSION_ACCEPTANCE"
+      ]
+    },
+    "subject_categories": [
+      "SOURCE_AUTHORS",
+      "DOCUMENTARY_PREPARERS",
+      "REQUESTER",
+      "PROOF_AUTHORS_AND_PROVIDERS",
+      "CUSTODY_SIGNATORIES"
+    ],
+    "active_requirement_to_returns": {
+      "AP01": [
+        "IT01",
+        "IT04"
+      ],
+      "AP02": [
+        "IT04"
+      ],
+      "AP03": [
+        "IT02",
+        "IT03"
+      ],
+      "AP04": [
+        "IT03",
+        "IT04"
+      ],
+      "AP05": [
+        "IT06"
+      ],
+      "AP06": [
+        "IT04"
+      ],
+      "AP07": [
+        "IT04"
+      ],
+      "AP08-ANCHOR-POLICY": [
+        "IT04"
+      ],
+      "AP09": [
+        "IT04",
+        "IT06"
+      ],
+      "IR01": [
+        "IT02"
+      ],
+      "IR02": [
+        "IT02"
+      ],
+      "IR03": [
+        "IT03"
+      ],
+      "IR04": [
+        "IT02"
+      ],
+      "IR05": [
+        "IT02",
+        "IT03"
+      ],
+      "IR06": [
+        "IT05"
+      ],
+      "IR07": [
+        "IT05"
+      ],
+      "IR08": [
+        "IT02",
+        "IT05"
+      ]
+    },
+    "deferred_consumers": {
+      "AP08-BUNDLE-APPROVAL": {
+        "step": "CE10",
+        "work": "W12"
+      },
+      "IR09": {
+        "step": "CE08",
+        "work": "W10"
+      }
+    },
+    "criterion_to_returns": {
+      "AC01": [
+        "IT01"
+      ],
+      "AC02": [
+        "IT01",
+        "IT04"
+      ],
+      "AC03": [
+        "IT02"
+      ],
+      "AC04": [
+        "IT03"
+      ],
+      "AC05": [
+        "IT04"
+      ],
+      "AC06": [
+        "IT03",
+        "IT04"
+      ],
+      "AC07": [
+        "IT04"
+      ],
+      "AC08": [
+        "IT04"
+      ],
+      "AC09": [
+        "IT03",
+        "IT05"
+      ],
+      "AC10": [
+        "IT02",
+        "IT05"
+      ],
+      "AC11": [
+        "IT02",
+        "IT05"
+      ],
+      "AC12": [
+        "IT04",
+        "IT06"
+      ],
+      "AC13": [
+        "IT06"
+      ],
+      "AC14": [
+        "IT01",
+        "IT05",
+        "IT06"
+      ]
+    },
+    "all_W02_deliverables_and_exits_pending": true,
+    "A01_W01_unaccepted_SD01_active": true,
+    "actual_people_anchors_or_appointments_accepted": 0,
+    "actual_received_bodies": 0,
+    "actual_competent_primary_or_separate_decisions": 0
+  },
+  "counts": {
+    "input_pins": 1077,
+    "roles": 8,
+    "subject_categories": 5,
+    "evidence_requirements": 19,
+    "active_A02_requirements": 17,
+    "deferred_requirements": 2,
+    "separation_requirements": 14,
+    "requested_returns": 6,
+    "acceptance_criteria": 14,
+    "W02_deliverables": 3,
+    "W02_exits": 3,
+    "review_criteria": 28,
+    "actual_people_or_anchors_accepted": 0,
+    "actual_received_bodies": 0,
+    "actual_lots_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0
+  },
+  "inherited_I255_rejection_checks": [
+    {
+      "case": "A01_promoted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W01_promoted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "SD01_bypassed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "documentary_pass_as_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_intake_started",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "request_sent",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_granted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "recipient_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "material_received",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "human_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "appointment_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "role_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "category_complete",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "proof_body_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_metadata_as_current_presence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_bootstrap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "prior_anchor_acceptance_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "bundle_approval_as_prior_anchor",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_roster_required_early",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_authors_preapproved",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "host_date_as_freshness",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "crypto_check_performed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "assistant_human_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "full_preparers_claimed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "preparation_record_backpin",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "inventory_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reference_costs_free",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_increased",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A03_started",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_snapshot_created",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_execution_precondition",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "silent_acceptance_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "active_rebind",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A02_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "independent_assistant",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "additional_I256_rejection_checks": [
+    {
+      "case": "A01_promoted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "predecessor_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_granted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "role_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "competence_scope_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "human_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "category_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "category_finalized",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "normative_requirement_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "prior_anchor_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "bundle_approval_required_early",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_roster_required_early",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "identity_requirement_return_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_metadata_as_current",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_bootstrap_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "expected_digest_self_selected",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "domain_separator_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "trusted_clock_error_expanded",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "separation_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "qualified_overlap_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_authentication_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "preparer_identity_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_backpin_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "return_group_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "deliverable_review_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_omitted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_coverage_reduced",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reference_inventory_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "resource_costs_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A03_dependency_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "claim_as_own_precondition",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "acceptance_transferred",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A02_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "clarifications": [
+    "A01/W01 remains unaccepted and SD01 active. User requested documentary preparation/review of a conditional draft; this never sends RQ02 or starts positive A02 intake.",
+    "External expected digest/epochs/policy and genuine prior anchor acceptance cannot be derived from supplied registry bytes,C,bundle,root or self-signature. Actual CE10/W12 approvals remain later consumers.",
+    "Seventeen requirements apply to provisional A02: nine prior anchor/policy requirements and eight identity requirements. AP08-BUNDLE-APPROVAL is deferred W12; IR09 final completeness is deferred W10.",
+    "Known authors/bodies and baseline facts must already be authentic before W09. W10 final freeze reconciles identical facts without retroactive authority or automatic transfer.",
+    "Eight roles/five subject categories/fourteen separations are requirements for genuine humans,competence,appointments and purpose keys; this assistant,Git labels,distinct strings or hashes establish none of them.",
+    "Historical source flags about dossier creation remain frozen provenance,not current absence. Existing CE dossiers are documentary and cannot substitute for real bodies,appointments,signatures or decisions.",
+    "Final snapshots/C/bundle/currentness are checked at their own real boundaries under separate authority; date of review and offline status do not establish fresh trusted state or instantaneous revocation.",
+    "A03/RQ03 only becomes a possible next consideration after genuine A01 and A02 acceptance under its own limits. This review provides no contact,crypto,enrollment,execution or D5 release authority."
+  ],
+  "source_reconstruction": {
+    "primary_source_checks": true,
+    "I255_candidate_and_preparation_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W10_accepted": false,
+    "actual_final_antecedents_created_authenticated_or_frozen": false,
+    "W11_accepted": false,
+    "actual_exact_C_or_custody_acceptance_projected_created_or_issued": false,
+    "W12_accepted": false,
+    "actual_bundle_approvals_global_mapping_or_intrinsic_constructor_verified_or_created": false,
+    "W13_accepted": false,
+    "actual_prelaunch_checklist_or_handoff_closed_or_execution_released": false,
+    "I251_acquisition_plan_and_unsent_drafts_prepared": true,
+    "actual_material_obtained_or_independent_acceptance_or_lot_completion": false,
+    "provider_contact_or_nomination_done": false,
+    "actual_sources_implementation_or_build_created": false,
+    "actual_acquisition_lots_accepted": 0,
+    "A01_RQ01_documentary_prepared": true,
+    "A01_accepted": false,
+    "RQ01_sent": false,
+    "actual_A01_authority_scope_or_review_records_created": false,
+    "A02_RQ02_documentary_prepared": true,
+    "A02_accepted": false,
+    "RQ02_sent": false,
+    "actual_people_anchors_appointments_or_key_bindings_accepted": false,
+    "actor_registry_finalized": false,
+    "anchor_registry_provisioned": false,
+    "actual_A02_intake_progress_or_review_records_created": false,
+    "A02_RQ02_documentary_reviewed": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I255",
+    "documentary_review_only": true,
+    "actor_independent": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "A01/W01 and A02/W02 remain unaccepted; SD01 active,RQ02 unsent,zero material/people/anchors/appointments accepted.",
+    "No real independent R06/R08 review or canonical identity,authority,anchor provisioning,registry/snapshot/crypto validation is created. M01/M02 remain pending.",
+    "Thirty gates,E01-E05 and D5 remain open. No product/component run,build,probe,contact,signing,configuration,claim,receipt,quota,reserve,binding or active authority/destination change."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I256-I255-A02-RQ02-REVIEW.md",
+      "docs/validation/D5-I256-I255-documentary-review.json",
+      "docs/validation/D5-I256-I255-source-reconstruction.json",
+      "docs/validation/D5-I256-audit.py",
+      "docs/validation/D5-I256-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I256-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_A02_RQ02_REVIEW_A01_UNACCEPTED_PEOPLE_ANCHORS_AND_GENUINE_DECISIONS_PENDING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/pointer/role/requirement/phase checks and in-memory documentary mutations only. No target import/compile/discovery/tests/execution/build/benchmark/crypto/signing/keygen/enrollment/provisioning/contacts/platform/clock/CPU/IO/ledger/process/endpoint probes or configuration.",
+    "over400_lines": true,
+    "reason": "One A02/RQ02 review with primary-source reconstruction,pins,rejection checks and preservation; overage declared,no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_evidence_people_anchor_authority_acceptance_execution_or_D5_closure": true
+  }
+}
