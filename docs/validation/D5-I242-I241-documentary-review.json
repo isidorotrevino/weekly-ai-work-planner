@@ -1,0 +1,484 @@
+{
+  "schema": "d5.i242-documentary-review.v1",
+  "increment": "I242",
+  "date": "2026-11-25",
+  "timezone": "Europe/Madrid",
+  "base_commit": "981d32ac412b515388117e2a626d5b6530693b5e",
+  "status": "PASS_STATIC_SOURCE_ONLY_W09_REVIEW_JOINT_EVIDENCE_MISSING_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I223-W09-E01-E05-INTEGRATION-CANDIDATE.json",
+    "sha256": "f77c07dd5cfbef25c75fe88a38d04b622bb1eeba3d2ce8d902cf331ebeb693a5",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I242-I241-source-reconstruction.json",
+    "sha256": "6f77f289e784db8f070ae1dd2f68366addf0417a84c2c0bf42c3317a8f3dd3c7",
+    "json_pointer": ""
+  },
+  "verdict": "DOCUMENTARY_REQUIREMENTS_CONSISTENT_NO_NEW_DEFECT_FOUND_REAL_JOINT_ACCEPTANCE_MISSING_NOT_ADMITTED",
+  "findings": [],
+  "counts": {
+    "input_pins": 1007,
+    "resource_obligations": 5,
+    "criteria_to_revalidate": 20,
+    "criteria_per_obligation": 4,
+    "prior_proof_kind_requirements": 7,
+    "custody_rules": 7,
+    "profile_proof_rules": 4,
+    "separation_requirements": 14,
+    "S01_exclusions": 8,
+    "extra_custody_separations": 4,
+    "source_premise_links": 15,
+    "unassigned_review_roles": 3,
+    "pending_exits": 3,
+    "review_criteria": 27
+  },
+  "criteria": [
+    {
+      "id": "RV01",
+      "criterion": "W09 contract, seven dependency requirements, three exits, rejection and future-authority boundaries match I223",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV02",
+      "criterion": "SD01 and W01-W08 nonacceptance remain active; preparation does not accept a dependency",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV03",
+      "criterion": "R03/R06 primary roles and separate R08 have no assigned competent independent decisions",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV04",
+      "criterion": "W02 exact identity policy retains fourteen separation requirements and eight S01 exclusions",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV05",
+      "criterion": "Four extra custody separations and qualified R01/R02 overlap are preserved without extra blanket exclusion",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV06",
+      "criterion": "All actual authors/providers/preparers require prior enrollment/authentication; provisional intake is not final completeness",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV07",
+      "criterion": "Six mandatory body/provenance/scope/unit/validity fields remain missing and document hashes are not evidence",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV08",
+      "criterion": "Five obligations link exact I223 and CE07 requirements, remain unaccepted and unclosed",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV09",
+      "criterion": "Twenty unique criteria partition four per obligation and retain exact I131/I223/CE07 references",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV10",
+      "criterion": "Every criterion requires successor applicability and full evidence without historical result transfer",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV11",
+      "criterion": "Seven I191 custody rules and four profile rules match exact source text and hashes",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV12",
+      "criterion": "Seven proof kinds are requirements only, not actual accepted proof records",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV13",
+      "criterion": "E01-E05 proof reviews require R03; CP03/ATOMICITY and BASIS require R06 with real accepted review IDs",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV14",
+      "criterion": "Registry/contract/index/BASIS domains, exact actual bytes/source/runtime scope and no future backpins are preserved",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV15",
+      "criterion": "Self-contained 32768 proof-fit requirement rejects truncation and hidden extra reads",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV16",
+      "criterion": "Historical CP03, written atomicity, certificates, tests and flags do not transfer successor acceptance",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV17",
+      "criterion": "Fifteen source premise links preserve pending W03-W08 scope/atomicity/heap/work/service/phase states",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV18",
+      "criterion": "Same-scope memory/cache/allocator/load/clock/service-unit/validity assumptions require genuine reconciliation",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV19",
+      "criterion": "Eleven-owner heap fit/capacity and all30 successor work remain unproved and unreduced",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV20",
+      "criterion": "Both Readers, global costs, original/native/transitive/failure/traceback scope remain required",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV21",
+      "criterion": "Pre-tR worker work, exit-to-exact-True tW observation, successful finally to tF and liveness remain required",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV22",
+      "criterion": "No CPU-as-wall, unproved overlap deduction, missing-as-zero, watchdog success or all-failure deadline inference",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV23",
+      "criterion": "Exact candidate heap/time/nested reserve rules are conserved without transfers, quotas or capacity attestations",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV24",
+      "criterion": "No partial positive or documentary PASS becomes joint E01-E05 closure",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV25",
+      "criterion": "Baseline and real authors/bodies precede acceptance; W10/CE10 cannot supply sole retrospective authentication",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV26",
+      "criterion": "W10 change invalidation and later C/bundle/gates/E06/root/claim/receipt boundaries remain separate",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV27",
+      "criterion": "Four final bindings, inherited exclusions/CE12 and no-execution authority remain negative",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    }
+  ],
+  "documentary_clarifications": [
+    "All five obligations and twenty criteria require genuine exact-successor evidence and fresh applicability review; reference/documentary/resource classifications transfer no closure.",
+    "Seven proof kinds are requirements only. E01-E05 review IDs must resolve to genuine R03 reviews; CP03/ATOMICITY/BASIS require R06, with separate R08 acceptance and all identity exclusions.",
+    "Complete actual bodies, bytes/hashes, author/provider/custody, units, all assumptions and validity remain missing. 32768 fit is a requirement, not a proved serialized proof size; no truncation or hidden reads.",
+    "W02 is provisional. Actual authors and baseline actor/image/caller/platform facts require prior authentication before W09 acceptance; W10 final freeze and CE10 approvals cannot supply sole forecast authority.",
+    "W03-W08 remain unaccepted. Same-scope heap/work/service/phase assumptions, all30 coverage, both Readers and full original/native/failure/cleanup costs require genuine integrated derivations.",
+    "Candidate resource/reserve arithmetic supplies no fit/capacity/service/success900; no partial positive joins close E01-E05. Later C/bundle/gates/E06/payload/Q/root/claim/receipt remain separate."
+  ],
+  "source_reconstruction": {
+    "primary_source_checks": true,
+    "I241_candidate_and_preparation_reproduced": true,
+    "prior_publication_mains_called": false,
+    "prior_Path_exists_restored": true,
+    "no_new_presence_projection": true
+  },
+  "inherited_I241_rejection_checks": [
+    {
+      "case": "SD01_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W09_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "provisional_actor_freeze",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "missing_author_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "self_review_as_independence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_R08_decision",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "body_missing_bypass",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "template_as_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "obligation_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "obligation_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_as_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unknown_bound_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_proof_body",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "proof_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "proof_truncation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "hidden_extra_reads",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "legacy_CP03_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_E06_as_prior_proof",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_index_record",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "unreconciled_premises",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "heap_budget_as_fit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "ten_as_all30",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_failure_heap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "omitted_Reader_costs",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "CPU_as_wall",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "temporal_gap",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "watchdog_as_success",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "partial_positive_closure",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reserve_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "quota_change",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_baseline_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "late_proof_author_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "backward_freeze_dependency",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "future_bundle_as_authentication",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "silent_proof_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "actual_rebind",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "final_artifact_created",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_execution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "exit_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "additional_I242_rejection_checks": [
+    {
+      "case": "obligation_drop",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_duplicate",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "historical_result_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "criterion_scope_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "proof_role_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "basis_reviewer_substitution",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "proof_rule_truncation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "S01_exclusion_drop",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "blanket_R01_R02_separation",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_body_inventory",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "invented_BASIS_body",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "wrong_premise_link",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "nested_reserve_credit",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "premature_later_gate_acceptance",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "implicit_operational_crypto",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_documentary_prepared": true,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W09_documentary_reviewed": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I241",
+    "methodological_documentary_review_only": true,
+    "actor_independent": false,
+    "competent_R03_review": false,
+    "competent_R06_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "W09 is not an actual competent independent joint decision or accepted resource package. All five obligations, twenty criteria, seven proof records, actual BASIS/index and three exits remain unaccepted.",
+    "SD01 active; zero accepted real packages, zero closed prelaunch gates and zero closed E01-E05 obligations. No actual bounds, capacity, service, success900 or infeasibility is proved.",
+    "Same-assistant checks do not meet genuine R03/R06 independence or R08 acceptance; documentary publication authorizes no product/component execution or quota change."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I242-I241-W09-REVIEW.md",
+      "docs/validation/D5-I242-I241-documentary-review.json",
+      "docs/validation/D5-I242-I241-source-reconstruction.json",
+      "docs/validation/D5-I242-audit.py",
+      "docs/validation/D5-I242-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I242-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_W09_REVIEW_JOINT_EVIDENCE_MISSING_NOT_ADMITTED",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/source-pointer/criterion/role/phase/reserve and in-memory document checks only. No target imports/compile/discovery/tests/runs, experimental WCET, clock/CPU/IO/service/platform/schedule sampling/probes, actual codec/crypto/ledger/claim, signing/keygen/enrollment/provisioning/services/contact.",
+    "over400_lines": true,
+    "reason": "One W09 review with primary-source reconstruction, pinned inputs, negative cases and integrity preservation. Overage declared; no PR requested."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_E01_E05_or_BASIS_index_acceptance_or_execution_authority": true
+  }
+}
