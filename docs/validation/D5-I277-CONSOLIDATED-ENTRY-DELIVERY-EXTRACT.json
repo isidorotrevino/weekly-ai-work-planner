@@ -1,0 +1,139 @@
+{
+  "lot_id": "A01",
+  "request_id": "RQ01",
+  "return_key": "A01/RT01",
+  "first_handoff_source": {
+    "path": "docs/validation/D5-I251-GENUINE-EVIDENCE-ACQUISITION-PLAN.json",
+    "sha256": "6e6b44d8ee4a4c3964a6ed4004b91fa22528190e68492d8b5d951ba8b8cd48fa",
+    "json_pointer": "/first_handoff"
+  },
+  "exact_first_handoff": {
+    "next_request_draft_ids": [
+      "RQ01"
+    ],
+    "after_genuine_A01_acceptance_request_draft_ids": [
+      "RQ02"
+    ],
+    "required_first_material": "Preexisting project/scope/reviewer entry authority and genuine identity/competence/appointment/anchor evidence; none supplied.",
+    "next_early_feasibility_request_draft_ids": [
+      "RQ03",
+      "RQ04"
+    ],
+    "no_real_handoff_contact_or_nomination_done": true,
+    "all_recipient_persons_addresses_channels_and_contact_authority": null,
+    "existing_reviewed_dossiers_are_requirements_not_new_external_proof": true
+  },
+  "entry_source": {
+    "path": "docs/validation/D5-I251-A01-RQ01-ENTRY-AUTHORITY-SCOPE-CANDIDATE.json",
+    "sha256": "e8857aee11a63c38b3ab5560d6085fc415a69e7fe4b7e8e03aa4f7de56e05587",
+    "json_pointer": "/entry_gate"
+  },
+  "exact_entry_boundary": {
+    "source": {
+      "path": "docs/validation/D5-I223-W01-TARGET-SCOPE-AUTHORITY-CANDIDATE.json",
+      "sha256": "6bd3a96960247d4ca2e81e52afd61082f26d721831b9a31a813c1a492f439705",
+      "json_pointer": "/entry_authority_boundary"
+    },
+    "exact_boundary": {
+      "source": {
+        "path": "docs/validation/D5-I224-I223-documentary-review.json",
+        "sha256": "664baaf52cbcffe528c42033d568eeb279422d786aab989a9e95703158ba5f78",
+        "json_pointer": "/documentary_clarifications/0"
+      },
+      "W01_no_predecessor_does_not_mean_self_authorized": true,
+      "independently_authentic_preexisting_scope_and_reviewer_authority_required_at_entry": true,
+      "future_W02_appointments_or_future_bundle_not_sole_forecast_authority": true,
+      "current_user_request_authorizes_docs_audit_commit_push_not_canonical_role_or_scope_adoption": true,
+      "no_implicit_nomination_contact_enrollment_or_signing": true,
+      "actual_entry_authority_verified": false,
+      "SD01_stop_active": true,
+      "logical_scope_documentation_is_not_authoritative_scope_acceptance_or_effective_source_freeze": true
+    },
+    "SD01_stop_active": true,
+    "actual_entry_authority": null,
+    "actual_authority_verified": false,
+    "actual_scope_accepted": false,
+    "no_future_W02_appointment_A07_bundle_or_root_as_sole_entry_authority": true,
+    "no_A01_self_authorization_from_empty_predecessor_list_or_this_user_document_request": true,
+    "W02_identity_requirements_used_as_eligibility_criteria_not_future_W02_acceptance_precondition": true
+  },
+  "required_entry_evidence": [
+    {
+      "id": "EA01",
+      "subject": "Real maintainer/accountable human authority for logical target scope",
+      "required_role": "SCOPE_AUTHORITY",
+      "source": {
+        "path": "docs/validation/D5-I251-A01-RQ01-ENTRY-AUTHORITY-SCOPE-CANDIDATE.json",
+        "sha256": "e8857aee11a63c38b3ab5560d6085fc415a69e7fe4b7e8e03aa4f7de56e05587",
+        "json_pointer": "/authority_evidence_requests/0"
+      },
+      "mandatory_material_fields": [
+        "canonical human and complete aliases",
+        "competence and appointment under preexisting authority",
+        "authority issuer and independently authentic delegation/provenance chain",
+        "exact scope and allowed/denied actions",
+        "validity/currentness/revocation",
+        "complete available body inventory, immutable locator, bytes/digest, author/provider/custody",
+        "real primary review and separate decision bodies"
+      ],
+      "actual_genuine_body_or_authority": null,
+      "accepted": false
+    },
+    {
+      "id": "EA02",
+      "subject": "Genuine competent primary reviewer R06",
+      "required_role": "R06",
+      "source": {
+        "path": "docs/validation/D5-I251-A01-RQ01-ENTRY-AUTHORITY-SCOPE-CANDIDATE.json",
+        "sha256": "e8857aee11a63c38b3ab5560d6085fc415a69e7fe4b7e8e03aa4f7de56e05587",
+        "json_pointer": "/authority_evidence_requests/1"
+      },
+      "mandatory_material_fields": [
+        "canonical human and complete aliases",
+        "competence and appointment under preexisting authority",
+        "authority issuer and independently authentic delegation/provenance chain",
+        "exact scope and allowed/denied actions",
+        "validity/currentness/revocation",
+        "complete available body inventory, immutable locator, bytes/digest, author/provider/custody",
+        "real primary review and separate decision bodies"
+      ],
+      "actual_genuine_body_or_authority": null,
+      "accepted": false
+    },
+    {
+      "id": "EA03",
+      "subject": "Genuine separate acceptor R08",
+      "required_role": "R08",
+      "source": {
+        "path": "docs/validation/D5-I251-A01-RQ01-ENTRY-AUTHORITY-SCOPE-CANDIDATE.json",
+        "sha256": "e8857aee11a63c38b3ab5560d6085fc415a69e7fe4b7e8e03aa4f7de56e05587",
+        "json_pointer": "/authority_evidence_requests/2"
+      },
+      "mandatory_material_fields": [
+        "canonical human and complete aliases",
+        "competence and appointment under preexisting authority",
+        "authority issuer and independently authentic delegation/provenance chain",
+        "exact scope and allowed/denied actions",
+        "validity/currentness/revocation",
+        "complete available body inventory, immutable locator, bytes/digest, author/provider/custody",
+        "real primary review and separate decision bodies"
+      ],
+      "actual_genuine_body_or_authority": null,
+      "accepted": false
+    }
+  ],
+  "all_A01_return_keys": [
+    "A01/RT01",
+    "A01/RT02",
+    "A01/RT03",
+    "A01/RT04",
+    "A01/RT05"
+  ],
+  "no_A01_self_authorization_or_future_A02_bundle_forecast_authority": true,
+  "no_external_contact_fetch_or_verification_service_authorized": true,
+  "W02_eligibility_requirements_not_backward_W02_acceptance_dependency": true,
+  "SD01_stop_active": true,
+  "actual_entry_authority_scope_primary_or_separate_acceptance": null,
+  "RQ01_sent": false,
+  "RQ02_or_downstream_enabled": false
+}
