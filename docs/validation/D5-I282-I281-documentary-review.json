@@ -1,0 +1,631 @@
+{
+  "schema": "d5.i282-documentary-review.v1",
+  "increment": "I282",
+  "date": "2026-11-27",
+  "timezone": "Europe/Madrid",
+  "base_commit": "d0e77ada36f884afa0b5d8e6ed9389a0740ec716",
+  "status": "PASS_STATIC_SOURCE_ONLY_DB01_IDENTIFICATION_PLAN_REVIEW_UNVERIFIED_LEADS_NOT_AUTHORITY_OR_CONTACT_PERMISSION_NOT_ADMITTED",
+  "subject": {
+    "path": "docs/validation/D5-I281-DB01-ISSUER-SOURCE-IDENTIFICATION-PLAN.json",
+    "sha256": "1607063b8aee290f2172d679f175cbf32e5a3abc08b6d3c56efdfceb34b7d777",
+    "json_pointer": ""
+  },
+  "reconstruction": {
+    "path": "docs/validation/D5-I282-I281-source-reconstruction.json",
+    "sha256": "116a6e9979adca4049817bcead9ab451e059e4d2f7c57f2eccc2292bd591e3ce",
+    "json_pointer": ""
+  },
+  "verdict": "NO_NEW_DOCUMENTARY_DEFECT_FOUND_UNVERIFIED_LEADS_AND_UNEXECUTED_ROUTES_NOT_GENUINE_ISSUER_OR_AUTHORITY",
+  "findings": [],
+  "criteria": [
+    {
+      "id": "RV01",
+      "criterion": "I281 preserves exact DB01/I277 and I279 reentry requirement with I280 frozen review baseline,not authority creation.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV02",
+      "criterion": "Current gap remains issuer/source missing,SD01 active,DB01 unsatisfied,DB02-DB12 pending,RQ01 unsent and RQ02 disabled.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV03",
+      "criterion": "Seven pinned local sources are static reads only with limited read scope,not a genuine preexisting authority dossier or effective environment proof.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV04",
+      "criterion": "Public Git remote/account is an unverified navigation hint,not a canonical human,owner mandate or nominated issuer.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV05",
+      "criterion": "Collective copyright/license/maintainer labels do not establish project-human identity or DB01 documentary-contact faculty.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV06",
+      "criterion": "Selected versioned CODEOWNERS/GOVERNANCE/MAINTAINERS screen is finite historical filename observation,not exhaustive search or global authority absence.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV07",
+      "criterion": "Four prioritized source classes retain existing governance/delegation,organizational faculty,identity/appointment and independent chain/currentness provenance.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV08",
+      "criterion": "Source supplier roles are descriptive,unassigned,locations/access/availability unknown,no queried/accepted source.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV09",
+      "criterion": "Eight IP IDs/titles/dependencies retain actionable conditional actions,expected material outputs and explicit stop/failure rules.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV10",
+      "criterion": "All eight steps unexecuted/no named accountable person/source/body/decision or completion,distinct from already performed limited static reads.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV11",
+      "criterion": "First human input asks existing context/record/custodian/access/provenance/faculty/gaps,not generic blank authorization or nomination.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV12",
+      "criterion": "Existing legitimately supplied records may be considered as unverified leads without first accepting DB01,no circular proof/contact grant.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV13",
+      "criterion": "External inquiry/search/private access requires its own independent exact source/actor/channel/purpose/data/cost/access authority,not missing DB01/I277 grant.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV14",
+      "criterion": "Without that independent basis,stop external route and seek legitimately supplied existing reference;plan itself grants no contact/fetch/service/private access.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV15",
+      "criterion": "Unverified candidate claims do not become canonical issuer;ambiguity/service accounts/names without source remain unsupported.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV16",
+      "criterion": "Preexisting full delegation/mandate/appointment chain and explicit documentary-contact faculty needed,no retroactive authority from newly created declaration.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV17",
+      "criterion": "Future governance creation,if needed,is separate prospective work under own authority,not performed or proof of former DB01 faculty here.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV18",
+      "criterion": "Genuine available complete bodies/locators/bytes/digests/author/provider/custody/all antecedents/scope/validity/revocation required,no hash/self-assertion/host date as authority.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV19",
+      "criterion": "Competent own-scope genuine review and reasons remain required,no same-assistant PASS or metadata as decision.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV20",
+      "criterion": "All14 exclusions/current preparers remain applicable,without backward W02 acceptance/full future roster/CE10 or blanket R01/R02 rules.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV21",
+      "criterion": "No actual candidate records/inventory/human/source/review supplied,candidate inventory unknown and genuine verifications zero.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV22",
+      "criterion": "DB01 alone cannot satisfy DB02-DB12,grant delivery/EA authority,accept RT01/A01 or enable RQ02,no new A09/RT/prelaunch acceptance phase.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV23",
+      "criterion": "Exact I277 payload/limits and all other bindings unchanged;changed source/actor/body/scope/epoch/policy/validity invalidates affected A01-A08 before progress,no automatic transfer.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV24",
+      "criterion": "Existing gap/reentry five information groups complete,not replaced by plan steps or new documentary criteria.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV25",
+      "criterion": "SECURITY/CONTRIBUTING custody/publication rules retain no credentials/private bodies/transcripts/unreviewed logs or auto-publication of incoming evidence.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV26",
+      "criterion": "Raw/canonical/signature claims and authorized operative verification remain distinct,no positive codec/crypto/signing/keygen or probes.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV27",
+      "criterion": "Global publication scanner exit1/same37 baseline(two personal path locations,35 large historical files) disclosed,not global PASS;new files require clear configured patterns.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV28",
+      "criterion": "Baseline warnings do not justify modifying frozen historical artifacts or expose matching values;publication hygiene no authority proof or exhaustive scanner.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV29",
+      "criterion": "Both Readers/global reference costs,caps/guards/outputs/quotas/reserves unchanged,no hidden/free inputs or resource guarantee.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV30",
+      "criterion": "CE12 private deferred,no final event as new entry/prelaunch condition;claim not own precondition/no free retry,final route separately authorized.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV31",
+      "criterion": "No genuine source acquired,issuer verified,authority grant or acceptance;all A01-A08/30 gates/E01-E05/PJC115-R2/D5 remain open.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    },
+    {
+      "id": "RV32",
+      "criterion": "No product/components/build/qualification/execution/enrollment/provision/configuration/probe/contact or active binding/authority/destination/certificate change from plan/publication.",
+      "result": "PASS_DOCUMENTARY_REQUIREMENT_ONLY"
+    }
+  ],
+  "independent_reconstruction": {
+    "source_route_classes": [
+      "Existing project governance/mandate/scope decision or appointment/delegation records",
+      "Existing maintainer/owner organizational delegation and communication-authority scope",
+      "Identity/role directory and appointment references, if applicable under own access authority",
+      "Independent provenance,currentness/revocation and delegation-chain antecedents"
+    ],
+    "step_titles": [
+      "Obtain project context and authorized source pointers",
+      "Build a finite authorized documentary search list",
+      "Select existing-material or separately authorized inquiry route",
+      "Separate unverified candidates from canonical issuers",
+      "Obtain the full preexisting authority source and chain",
+      "Review identity,faculty and current scope under own authority",
+      "Reconcile DB01 only and dependent invalidations",
+      "Return to the existing I277 authorization boundary"
+    ],
+    "all_steps_unexecuted": true,
+    "local_static_source_count": 7,
+    "remote_hint_not_canonical_identity": true,
+    "finite_marker_screen_not_global_absence": true,
+    "supplied_leads_do_not_require_DB01_already_accepted": true,
+    "external_inquiry_needs_independent_exact_authority": true,
+    "actual_canonical_candidates": null,
+    "actual_genuine_issuer_or_source": null,
+    "DB01_resolution_not_full_authorization": true,
+    "publication_global_returncode": 1,
+    "publication_baseline_findings": 37,
+    "actual_external_searches": 0,
+    "actual_contacts": 0,
+    "actual_genuine_acceptances": 0
+  },
+  "counts": {
+    "input_pins": 1215,
+    "preserved_published_files": 900,
+    "local_static_sources": 7,
+    "source_routes": 4,
+    "unexecuted_plan_steps": 8,
+    "first_input_fields": 5,
+    "reentry_material_groups": 5,
+    "review_criteria": 32,
+    "global_publication_baseline_findings": 37,
+    "actual_external_searches": 0,
+    "actual_contacts": 0,
+    "actual_private_records_accessed": 0,
+    "actual_genuine_issuers_or_sources_verified": 0,
+    "actual_grants_or_acceptances": 0
+  },
+  "inherited_I281_rejection_checks": [
+    {
+      "case": "Git_handle_as_human",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "local_read_as_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "filename_screen_as_global_absence",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_location_invented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_queried",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "step_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "operator_invented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "step_executed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "step_completed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_body_created",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "first_input_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reentry_source_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "circular_search_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "external_contact_granted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "new_paper_as_preexisting",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "contact_count",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "candidate_fabricated",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "inventory_as_zero",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "candidate_verified",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "DB01_as_full_grant",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "new_A09_phase",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "positive_DB01",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "auto_publish_private_body",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "global_scanner_false_PASS",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "baseline_hidden",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "scope_transfer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "W02_backward",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "A01_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "D5_closed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "assistant_authorizer",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "additional_I282_rejection_checks": [
+    {
+      "case": "DB01_reassigned",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "metadata_as_human",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "global_absence_claim",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "route_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_class_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_availability_invented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "route_accepted",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "step_order_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "dependency_skipped",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "step_stop_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "output_removed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "first_input_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "context_as_received",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "reentry_replaced",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "independent_inquiry_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "no_basis_route_enabled",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "retroactive_authority_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "private_access_performed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "candidate_identity_invented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "source_digest_invented",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "own_review_created",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "completion_faculty_waived",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "payload_limit_change_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "publication_private_data_allowed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "raw_hash_as_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "baseline_counts_changed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "inherited_boundary_missing",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "external_progress_claimed",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    },
+    {
+      "case": "assistant_review_authority",
+      "result": "REJECTED_DOCUMENTARY_MUTATION_IN_MEMORY"
+    }
+  ],
+  "clarifications": [
+    "Seven static document reads and one public Git-account metadata hint are bounded local observations,not canonical human identity,preexisting delegation or DB01 faculty. Collective notices/license/maintainer titles cannot appoint an issuer.",
+    "Finite marker screen belongs to its recorded commit and selected versioned paths,not an exhaustive authority search or proof of global absence/infeasibility.",
+    "Existing legitimately supplied material can be proposed as an unverified lead before DB01 accepted. External inquiry requires its own independent exact access/contact basis,not borrowing missing DB01/I277 delivery grant;without it,stop external route and seek an existing locally supplied reference.",
+    "All8 steps/4 source routes remain unexecuted and unassigned,no candidate/body/authority/source acquired or review created. Newly creating governance would be separate prospective work,never automatic proof of preexisting faculty.",
+    "Genuine issuer/source/identity/faculty/scope/currentness and competent own-scope review remain necessary for DB01. DB02-DB12,RT02-RT05/full A01 and genuine R06/R08 decisions stay pending,no delivery or RQ02 enablement from plan.",
+    "Global publication checker remains exit1 with the same37 preexisting location/category findings. New I282 files must be clear of configured patterns;this is no global PASS,exhaustive secret scan or authority evidence.",
+    "Historical files,exact I277 payload/limits and all negative state preserved. No historical audit chain rerun,only I281 focused check and local source/byte/hash reconciliation.",
+    "SD01/no admission and CE12/private receipt separately deferred,no final event new entry/prelaunch condition or automatic certificate/PJC115-R2/D5 release."
+  ],
+  "method": {
+    "independent_route_step_access_reentry_source_checks": true,
+    "I281_plan_and_focused_check_reproduced": true,
+    "earlier_historical_audits_rerun": false,
+    "prior_publication_mains_called": false,
+    "required_publication_result": "GLOBAL_EXIT1_SAME37_BASELINE_AND_NEW_I282_CONFIGURED_PATTERNS_CLEAR"
+  },
+  "current_effect": {
+    "W01_accepted": false,
+    "W02_accepted": false,
+    "W03_accepted": false,
+    "W04_accepted": false,
+    "W05_accepted": false,
+    "W06_accepted": false,
+    "W07_accepted": false,
+    "actual_entry_authority_verified": false,
+    "actual_complete_successor_work_CPU_wait_units_service_WCET_or_phase_fit_verified": false,
+    "actual_real_evidence_package_created": false,
+    "positive_I191_or_BASIS_index_work_proof_record_created": false,
+    "actual_evidence_accepted": 0,
+    "work_packages_accepted": 0,
+    "prelaunch_gates_closed": 0,
+    "resource_obligations_closed": 0,
+    "independent_acceptance": false,
+    "source_implementation_changed": false,
+    "product_or_components_executed": false,
+    "quotas_changed": false,
+    "reserves_changed": false,
+    "resource_reservations_created": false,
+    "rebind_applied": false,
+    "authority_or_destination_created": false,
+    "actual_claim_worker_or_receipt_created": false,
+    "execution_authorized": false,
+    "proposal_enabled": false,
+    "D5_closed": false,
+    "IR03": "NOT_READY",
+    "W08_accepted": false,
+    "actual_complete_phase_bounds_or_success900_verified": false,
+    "W09_accepted": false,
+    "actual_E01_E05_joint_BASIS_index_scope_and_atomicity_acceptance": false,
+    "W10_accepted": false,
+    "actual_final_antecedents_created_authenticated_or_frozen": false,
+    "W11_accepted": false,
+    "actual_exact_C_or_custody_acceptance_projected_created_or_issued": false,
+    "W12_accepted": false,
+    "actual_bundle_approvals_global_mapping_or_intrinsic_constructor_verified_or_created": false,
+    "W13_accepted": false,
+    "actual_prelaunch_checklist_or_handoff_closed_or_execution_released": false,
+    "I251_acquisition_plan_and_unsent_drafts_prepared": true,
+    "actual_material_obtained_or_independent_acceptance_or_lot_completion": false,
+    "provider_contact_or_nomination_done": false,
+    "actual_sources_implementation_or_build_created": false,
+    "actual_acquisition_lots_accepted": 0,
+    "A01_RQ01_documentary_prepared": true,
+    "A01_accepted": false,
+    "RQ01_sent": false,
+    "actual_A01_authority_scope_or_review_records_created": false,
+    "A02_RQ02_documentary_prepared": true,
+    "A02_accepted": false,
+    "RQ02_sent": false,
+    "actual_people_anchors_appointments_or_key_bindings_accepted": false,
+    "actor_registry_finalized": false,
+    "anchor_registry_provisioned": false,
+    "actual_A02_intake_progress_or_review_records_created": false,
+    "A03_RQ03_documentary_prepared": true,
+    "A03_accepted": false,
+    "RQ03_sent": false,
+    "actual_sources_image_runtime_or_build_provenance_accepted": false,
+    "actual_source_implementation_build_or_qualification_created": false,
+    "actual_A03_intake_progress_or_review_records_created": false,
+    "A04_RQ04_documentary_prepared": true,
+    "A04_accepted": false,
+    "RQ04_sent": false,
+    "actual_caller_platform_capacity_service_clock_or_ledger_guarantees_accepted": false,
+    "actual_backend_selected_or_platform_probed": false,
+    "actual_A04_intake_progress_or_review_records_created": false,
+    "A05_RQ05_documentary_prepared": true,
+    "A05_accepted": false,
+    "RQ05_sent": false,
+    "actual_complete_W05_W08_derivations_or_independent_acceptance_created": false,
+    "actual_A05_intake_progress_or_qualification_performed": false,
+    "A06_RQ06_documentary_prepared": true,
+    "A06_accepted": false,
+    "RQ06_sent": false,
+    "actual_independent_joint_E01_E05_BASIS_index_acceptance_created": false,
+    "actual_A06_intake_progress_or_review_records_created": false,
+    "A07_RQ07_documentary_prepared": true,
+    "A07_accepted": false,
+    "RQ07_sent": false,
+    "actual_final_records_C_acceptance_bundle_approvals_or_mapping_created": false,
+    "actual_A07_intake_progress_or_review_records_created": false,
+    "A08_RQ08_documentary_prepared": true,
+    "A08_accepted": false,
+    "RQ08_sent": false,
+    "actual_genuine_prelaunch_gate_resource_or_aggregate_decisions_created": false,
+    "actual_A08_intake_progress_or_review_records_created": false,
+    "A01_A08_consolidated_documentary_handoff_prepared": true,
+    "actual_consolidated_handoff_delivery_or_intake_progress": false,
+    "actual_new_genuine_evidence_or_authority_or_acceptance_created": false,
+    "RQ01_RT01_focused_documentary_request_prepared": true,
+    "RQ01_RT01_request_sent": false,
+    "actual_RT01_authority_eligibility_intake_or_acceptance_created": false,
+    "RQ01_RT01_empty_documentary_reception_package_prepared": true,
+    "actual_RQ01_RT01_delivery_intake_evidence_store_or_genuine_acceptance_created": false,
+    "RQ01_RT01_empty_reception_package_documentary_handoff_prepared": true,
+    "actual_RQ01_RT01_handoff_dispatch_delivery_or_genuine_acceptance_created": false,
+    "RQ01_RT01_documentary_delivery_authorization_request_prepared": true,
+    "actual_delivery_authority_request_sent_grant_dispatch_or_genuine_acceptance_created": false,
+    "RQ01_RT01_documentary_delivery_authorization_request_reviewed": true,
+    "DB01_issuer_unidentified_conversation_gap_recorded": true,
+    "actual_positive_authorization_contact_delivery_intake_or_acceptance_progress": false,
+    "DB01_user_reported_gap_and_reentry_documentary_reviewed": true,
+    "DB01_issuer_source_identification_plan_documentary_prepared": true,
+    "actual_external_issuer_search_contact_source_acquisition_or_positive_authorization_progress": false,
+    "DB01_issuer_source_identification_plan_documentary_reviewed": true
+  },
+  "provenance": {
+    "identity": "Same Codex assistant/chat as I281/I279",
+    "documentary_review_only": true,
+    "actor_independent": false,
+    "competent_authorizing_or_primary_role_review": false,
+    "separate_R08_acceptance": false,
+    "external_contacts_made": false
+  },
+  "limitations": [
+    "Issuer/source/context/custodian and own inquiry/access authority still missing,no plan steps executed,SD01 active,request/handoff unsent and DB01/A01 not accepted.",
+    "All A01-A08,30 gates,E01-E05/20 criteria,PJC115-R2/D5 open. Documentary quote/hash/JSON/metadata/mutation PASS gives no genuine authority,eligibility,capacity,service or900 fit.",
+    "No external search/fetch/contact/private access,product/component execution,positive protocol codec/crypto/signing/keygen/enrollment/provision/configuration/probe or quota/reserve/binding/authority/destination/certificate change."
+  ],
+  "work_unit": {
+    "rollback_files": [
+      "docs/design/D5-I282-I281-ISSUER-IDENTIFICATION-PLAN-REVIEW.md",
+      "docs/validation/D5-I282-I281-documentary-review.json",
+      "docs/validation/D5-I282-I281-source-reconstruction.json",
+      "docs/validation/D5-I282-audit.py",
+      "docs/validation/D5-I282-integrity.json"
+    ],
+    "verification_command": "python3 docs/validation/D5-I282-audit.py",
+    "expected_result": "PASS_STATIC_SOURCE_ONLY_DB01_IDENTIFICATION_PLAN_REVIEW_UNVERIFIED_LEADS_NOT_AUTHORITY_OR_CONTACT_PERMISSION_NOT_ADMITTED",
+    "over400_lines": true,
+    "reason": "One issuer/source-plan review with independent route/step/control reconstruction,pins,rejection checks,publication baseline and preservation; overage declared,no PR requested.",
+    "runtime_harness": "N/A: own documentary JSON/Git/hash/pointer checks,static source reconciliation,stdlib publication hygiene and in-memory mutations only; no target import,compile,discovery,tests,execution,build,benchmark,positive protocol codec,crypto,signing,keygen,enrollment,contacts,provision,configuration or platform/clock/CPU/IO/ledger/process/endpoint/replay/crash/restart probes."
+  },
+  "publication": {
+    "commit_and_push_requested": true,
+    "publication_not_external_search_contact_nomination_genuine_authority_grant_dispatch_acceptance_execution_or_D5_closure": true
+  }
+}
